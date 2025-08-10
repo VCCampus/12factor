@@ -78,6 +78,16 @@ export default function QuizPage() {
   
   // Always declare all hooks at the top level
   const [questions] = useState<Question[]>(() => {
+    // Fisher-Yates shuffle algorithm for better randomization
+    const shuffle = <T,>(array: T[]): T[] => {
+      const arr = [...array];
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    };
+    
     const generateQuestions = (): Question[] => {
       const questionTypes: Question[] = [];
       
@@ -189,10 +199,10 @@ export default function QuizPage() {
           tQuiz('wrongAnswers.2')
         ];
         
-        const options = [
+        const options = shuffle([
           principleTranslation.concept,
           ...wrongAnswers
-        ].sort(() => Math.random() - 0.5);
+        ]);
         
         const correctIndex = options.findIndex(opt => opt === principleTranslation.concept);
         
@@ -310,20 +320,28 @@ export default function QuizPage() {
       ];
       
       // Generate 3 scenario questions from different scenarios
-      const shuffledScenarios = [...scenarios].sort(() => Math.random() - 0.5);
+      const shuffledScenarios = shuffle(scenarios);
       shuffledScenarios.slice(0, 3).forEach((scenario, index) => {
-        const options = [
-          tQuiz(`principleOptions.${scenario.correctPrinciple}`),
+        const correctAnswer = tQuiz(`principleOptions.${scenario.correctPrinciple}`);
+        const allOptions = [
           tQuiz('principleOptions.humanInLoop'),
           tQuiz('principleOptions.chunkedWork'),
           tQuiz('principleOptions.parallelFlow'),
           tQuiz('principleOptions.contextHygiene'),
-          tQuiz('principleOptions.singleSource')
-        ].filter((opt, idx, arr) => arr.indexOf(opt) === idx) // Remove duplicates
-          .sort(() => Math.random() - 0.5)
-          .slice(0, 4); // Keep only 4 options
+          tQuiz('principleOptions.singleSource'),
+          tQuiz('principleOptions.cognitiveLoadBudget'),
+          tQuiz('principleOptions.flowProtection'),
+          tQuiz('principleOptions.reproducibleSessions'),
+          tQuiz('principleOptions.restReflection'),
+          tQuiz('principleOptions.skillParity'),
+          tQuiz('principleOptions.cultureOfCuriosity')
+        ].filter(opt => opt !== correctAnswer); // Remove correct answer from pool
         
-        const correctIndex = options.indexOf(tQuiz(`principleOptions.${scenario.correctPrinciple}`));
+        // Select 3 random wrong answers and add the correct one
+        const wrongOptions = shuffle(allOptions).slice(0, 3);
+        const options = shuffle([correctAnswer, ...wrongOptions]);
+        
+        const correctIndex = options.indexOf(correctAnswer);
         
         questionTypes.push({
           id: 11 + index,
@@ -347,8 +365,8 @@ export default function QuizPage() {
           ? '完成以下句子：AI 协作时代的编程方法论包含 ___ 个阶段和 ___ 个原则。'
           : 'Complete the sentence: The AI collaboration era programming methodology includes ___ stages and ___ principles.',
         type: 'fill-blank',
-        blanks: locale === 'zh' ? ['四', '十二'] : ['four', 'twelve'],
-        correct: locale === 'zh' ? ['四', '十二'] : ['four', 'twelve'],
+        blanks: locale === 'zh' ? ['4', '12'] : ['4', '12'],
+        correct: locale === 'zh' ? ['4', '12'] : ['4', '12'],
         principleId: 1,
         difficulty: 'easy'
       });
@@ -379,7 +397,7 @@ export default function QuizPage() {
         'Focus on a single tech stack to become a domain expert'
       ];
       
-      const shuffledCuriosityOptions = curiosityOptions.sort(() => Math.random() - 0.5);
+      const shuffledCuriosityOptions = shuffle(curiosityOptions);
       const correctCuriosityIndex = shuffledCuriosityOptions.indexOf(
         locale === 'zh' 
           ? '持续学习和探索新的AI工具和方法，保持开放心态'
@@ -412,7 +430,7 @@ export default function QuizPage() {
         'Avoid task switching, focus on completing one large task'
       ];
       
-      const shuffledChunkedOptions = chunkedWorkOptions.sort(() => Math.random() - 0.5);
+      const shuffledChunkedOptions = shuffle(chunkedWorkOptions);
       const correctChunkedIndex = shuffledChunkedOptions.indexOf(
         locale === 'zh'
           ? '将大任务分解成小块，逐步完成并验证'
@@ -456,13 +474,13 @@ export default function QuizPage() {
         scenario: locale === 'zh'
           ? '连续工作数小时后，你发现自己的判断力下降，频繁出错，创造力也明显减退。'
           : 'After working continuously for hours, you notice declining judgment, frequent errors, and reduced creativity.',
-        options: [
+        options: shuffle([
           tQuiz('principleOptions.restReflection'),
           tQuiz('principleOptions.cognitiveLoadBudget'),
           tQuiz('principleOptions.flowProtection'),
           tQuiz('principleOptions.skillParity')
-        ].sort(() => Math.random() - 0.5),
-        correct: 0, // Will be recalculated after shuffle
+        ]),
+        correct: -1, // Will be recalculated after shuffle
         principleId: 10,
         stage: 4,
         difficulty: 'medium'
@@ -473,7 +491,7 @@ export default function QuizPage() {
       lastQuestion.correct = lastQuestion.options!.indexOf(tQuiz('principleOptions.restReflection'));
       
       // Shuffle questions to add variety while keeping a good mix
-      const shuffled = questionTypes.sort(() => Math.random() - 0.5);
+      const shuffled = shuffle(questionTypes);
       
       // Ensure we have a good mix of different types and difficulties
       // Return 12 questions from the pool of 20
@@ -749,7 +767,7 @@ export default function QuizPage() {
       <div className="min-h-screen bg-white">
         {/* Hero Section for Results */}
         <div className="hero-gradient relative overflow-hidden">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-32 sm:pb-24">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-40 sm:pb-32">
             <div className="max-w-5xl mx-auto text-center">
               <h1 className="hero-text text-white mb-8">
                 {tQuiz('quizComplete')}
@@ -759,7 +777,7 @@ export default function QuizPage() {
                 {tQuiz('modeResults', { mode: quizMode.charAt(0).toUpperCase() + quizMode.slice(1) })}
               </p>
               
-              <div className="flex flex-wrap gap-4 justify-center">
+              <div className="flex flex-wrap gap-4 justify-center mb-16">
                 <Link
                   href="/principles"
                   locale={locale}
@@ -780,7 +798,7 @@ export default function QuizPage() {
           </div>
           
           {/* Scroll Down Arrow */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
             <button
               onClick={() => {
                 document.getElementById('results-content')?.scrollIntoView({ behavior: 'smooth' });
