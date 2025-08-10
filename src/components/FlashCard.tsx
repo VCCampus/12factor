@@ -34,10 +34,10 @@ export default function FlashCard({
   };
 
   const stageColors = {
-    1: 'from-green-100 to-green-200',
-    2: 'from-green-100 to-green-200', 
-    3: 'from-green-100 to-green-200',
-    4: 'from-green-100 to-green-200'
+    1: 'from-[#95a76f]/20 to-[#95a76f]/30',
+    2: 'from-[#95a76f]/25 to-[#95a76f]/35', 
+    3: 'from-[#95a76f]/30 to-[#95a76f]/40',
+    4: 'from-[#95a76f]/35 to-[#95a76f]/45'
   };
 
   return (
@@ -53,7 +53,7 @@ export default function FlashCard({
         >
           {/* Front of card */}
           <div className="absolute inset-0 backface-hidden">
-            <div className={`h-full bg-gradient-to-br ${stageColors[principle.stage as keyof typeof stageColors]} rounded-xl shadow-2xl p-8 text-stone-800 flex flex-col justify-center`}>
+            <div className={`h-full bg-gradient-to-br ${stageColors[principle.stage as keyof typeof stageColors]} backdrop-blur-sm rounded-xl shadow-2xl p-8 text-stone-800 flex flex-col justify-center border border-[#95a76f]/20`}>
               <div className="text-center">
                 <div className="text-sm opacity-70 mb-2 font-medium">
                   {tFlash('stage')} {principle.stage}
@@ -73,16 +73,16 @@ export default function FlashCard({
 
           {/* Back of card */}
           <div className="absolute inset-0 backface-hidden" style={{ transform: 'rotateY(180deg)' }}>
-            <div className="h-full bg-stone-50 dark:bg-stone-800 rounded-xl shadow-2xl p-8 flex flex-col justify-center border border-stone-200 dark:border-stone-700">
+            <div className="h-full bg-gradient-to-br from-stone-50 to-[#95a76f]/10 dark:from-stone-800 dark:to-[#95a76f]/20 rounded-xl shadow-2xl p-8 flex flex-col justify-center border border-[#95a76f]/30 dark:border-[#95a76f]/40">
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-lg font-semibold text-green-700 dark:text-green-400 mb-3">
+                  <h3 className="text-lg font-semibold text-[#95a76f] dark:text-[#95a76f]/90 mb-3">
                     {t('practices')}
                   </h3>
                   <ul className="space-y-2">
                     {(messages.quiz?.[principle.messageKey]?.practices || []).map((practice: string, index: number) => (
                       <li key={index} className="flex items-start text-stone-700 dark:text-stone-300">
-                        <span className="text-green-600 mr-3 mt-1">✓</span>
+                        <span className="text-[#95a76f] mr-3 mt-1">✓</span>
                         <span className="text-sm">{practice}</span>
                       </li>
                     ))}
@@ -131,7 +131,7 @@ export default function FlashCard({
             disabled={!isFlipped}
             className={`px-6 py-3 rounded-full transition-all duration-200 font-medium shadow-lg ${
               isFlipped
-                ? 'bg-green-700 hover:bg-stone-900 text-white cursor-pointer'
+                ? 'bg-[#95a76f] hover:bg-[#95a76f]/90 text-white cursor-pointer'
                 : 'bg-gray-300 text-gray-500 cursor-not-allowed opacity-50'
             }`}
           >

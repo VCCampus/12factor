@@ -212,7 +212,7 @@ export default function FlashcardsPage() {
               </div>
               <div className="w-full bg-stone-200 rounded-full h-3">
                 <div 
-                  className="bg-gradient-to-r from-green-500 to-green-600 h-3 rounded-full transition-all duration-300 shadow-lg"
+                  className="bg-gradient-to-r from-[#95a76f] to-[#95a76f]/80 h-3 rounded-full transition-all duration-300 shadow-lg"
                   style={{ width: `${((currentIndex + 1) / principles.length) * 100}%` }}
                 />
               </div>
@@ -250,8 +250,8 @@ export default function FlashcardsPage() {
                 !isFlipped
                   ? 'bg-gray-200 text-gray-400 cursor-not-allowed opacity-50'
                   : currentProgress?.status === 'mastered'
-                  ? 'bg-green-700 text-white shadow-lg transform scale-105'
-                  : 'bg-green-100 hover:bg-green-200 text-green-800 hover:shadow-md cursor-pointer'
+                  ? 'bg-[#95a76f] text-white shadow-lg transform scale-105'
+                  : 'bg-[#95a76f]/20 hover:bg-[#95a76f]/30 text-[#95a76f] hover:shadow-md cursor-pointer'
               }`}
             >
               {t('mastered')}

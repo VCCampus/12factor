@@ -225,35 +225,35 @@ export default function QuizPage() {
         {
           principleId: 4,
           statement: locale === 'zh' 
-            ? 'Human-in-the-Loop原则要求人类验证所有AI生成的输出'
+            ? '人类在环 (Human-in-the-Loop) 原则要求人类验证所有AI生成的输出'
             : 'Human-in-the-Loop principle requires human validation of all AI outputs',
           isTrue: true
         },
         {
           principleId: 5,
           statement: locale === 'zh'
-            ? 'Chunked Work建议将所有任务合并在一个大型会话中完成'
+            ? '任务块化 (Chunked Work) 建议将所有任务合并在一个大型会话中完成'
             : 'Chunked Work suggests completing all tasks in one large session',
           isTrue: false
         },
         {
           principleId: 7,
           statement: locale === 'zh'
-            ? 'Cognitive Load Budget原则建议同时处理尽可能多的信息'
+            ? '负载预算 (Cognitive Load Budget) 原则建议同时处理尽可能多的信息'
             : 'Cognitive Load Budget principle suggests processing as much information as possible simultaneously',
           isTrue: false
         },
         {
           principleId: 9,
           statement: locale === 'zh'
-            ? 'Reproducible Sessions确保AI协作可以被重现和验证'
+            ? '可复现性 (Reproducible Sessions) 确保AI协作可以被重现和验证'
             : 'Reproducible Sessions ensures AI collaboration can be reproduced and verified',
           isTrue: true
         },
         {
           principleId: 10,
           statement: locale === 'zh'
-            ? 'Rest & Reflection原则认为持续工作才能保持高效率'
+            ? '休息反思 (Rest & Reflection) 原则认为持续工作才能保持高效率'
             : 'Rest & Reflection principle believes continuous work maintains high efficiency',
           isTrue: false
         }
@@ -375,7 +375,7 @@ export default function QuizPage() {
       questionTypes.push({
         id: 15,
         text: locale === 'zh'
-          ? 'Parallel Flow原则建议___处理多个任务，而不是___完成。'
+          ? '并行流动 (Parallel Flow) 原则建议___处理多个任务，而不是___完成。'
           : 'Parallel Flow principle suggests ___ handling multiple tasks, rather than ___ completion.',
         type: 'fill-blank',
         blanks: locale === 'zh' ? ['并行', '顺序'] : ['parallel', 'sequential'],
@@ -407,7 +407,7 @@ export default function QuizPage() {
       questionTypes.push({
         id: 16,
         text: locale === 'zh'
-          ? 'Culture of Curiosity原则的核心理念是什么？'
+          ? '好奇文化 (Culture of Curiosity) 原则的核心理念是什么？'
           : 'What is the core concept of the Culture of Curiosity principle?',
         type: 'single-choice',
         options: shuffledCuriosityOptions,
@@ -440,7 +440,7 @@ export default function QuizPage() {
       questionTypes.push({
         id: 17,
         text: locale === 'zh'
-          ? 'Chunked Work原则建议如何处理复杂任务？'
+          ? '任务块化 (Chunked Work) 原则建议如何处理复杂任务？'
           : 'How does the Chunked Work principle suggest handling complex tasks?',
         type: 'single-choice',
         options: shuffledChunkedOptions,
@@ -454,7 +454,7 @@ export default function QuizPage() {
       questionTypes.push({
         id: 18,
         text: locale === 'zh'
-          ? 'Flow Protection原则鼓励随时接受打断以保持团队协作'
+          ? '流保护罩 (Flow Protection) 原则鼓励随时接受打断以保持团队协作'
           : 'Flow Protection principle encourages accepting interruptions anytime to maintain team collaboration',
         type: 'true-false',
         options: [locale === 'zh' ? '正确' : 'True', locale === 'zh' ? '错误' : 'False'],
