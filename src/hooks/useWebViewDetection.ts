@@ -2,6 +2,13 @@
 
 import { useEffect, useState } from 'react';
 
+// Extend Navigator interface for iOS standalone property
+declare global {
+  interface Navigator {
+    standalone?: boolean;
+  }
+}
+
 export function useWebViewDetection() {
   const [isWebView, setIsWebView] = useState(false);
 
