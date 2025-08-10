@@ -237,7 +237,15 @@
       "contextHygiene": "上下文洁净 (Context Hygiene)",
       "singleSource": "单一真源 (Single Source of Truth)",
       "chunkedWork": "分块工作 (Chunked Work)",
-      "humanInLoop": "人在回路 (Human-in-the-Loop)"
+      "humanInLoop": "人在回路 (Human-in-the-Loop)",
+      "promptFirst": "提示优先 (Prompt First)",
+      "parallelFlow": "并行流 (Parallel Flow)",
+      "cognitiveLoadBudget": "认知负荷预算 (Cognitive Load Budget)",
+      "flowProtection": "心流保护 (Flow Protection)",
+      "reproducibleSessions": "可重现会话 (Reproducible Sessions)",
+      "restReflection": "休息与反思 (Rest & Reflection)",
+      "skillParity": "技能平等 (Skill Parity)",
+      "cultureOfCuriosity": "好奇文化 (Culture of Curiosity)"
     },
     "principle1": {
       "name": "单一真源 (Single Source of Truth)",

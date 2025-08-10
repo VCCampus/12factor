@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import { principles } from '@/data/principles';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowLeftIcon, ChevronDownIcon } from '@heroicons/react/24/outline';
 
 interface Question {
@@ -66,6 +66,7 @@ export default function QuizPage() {
   const t = useTranslations();
   const tQuiz = useTranslations('quiz');
   const locale = useLocale() as 'en' | 'zh';
+  const shouldReduceMotion = useReducedMotion();
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<(number | string | string[])[]>([]);
   const [selectedAnswer, setSelectedAnswer] = useState<number | string | string[] | null>(null);
@@ -108,10 +109,75 @@ export default function QuizPage() {
           'Keep all historical conversations for complete context',
           'Include entire codebase in every conversation',
           'Mix contexts from multiple tasks for efficiency'
+        ],
+        6: locale === 'zh' ? [
+          '按顺序逐个完成任务以确保质量',
+          '等待一个任务完成后再开始下一个',
+          '避免同时处理多个任务以减少错误'
+        ] : [
+          'Complete tasks sequentially to ensure quality',
+          'Wait for one task to finish before starting another',
+          'Avoid handling multiple tasks simultaneously to reduce errors'
+        ],
+        7: locale === 'zh' ? [
+          '最大化信息输入以提高决策质量',
+          '尽可能多地处理任务以提高效率',
+          '增加认知负荷以锻炼大脑能力'
+        ] : [
+          'Maximize information input to improve decision quality',
+          'Process as many tasks as possible to increase efficiency',
+          'Increase cognitive load to exercise brain capacity'
+        ],
+        8: locale === 'zh' ? [
+          '随时接受中断以保持灵活性',
+          '多任务处理以提高生产力',
+          '保持持续可用以响应紧急需求'
+        ] : [
+          'Accept interruptions anytime to maintain flexibility',
+          'Multitask to increase productivity',
+          'Stay continuously available for urgent needs'
+        ],
+        9: locale === 'zh' ? [
+          '只记录成功的结果，忽略过程细节',
+          '依赖记忆而不是文档记录',
+          '每次使用不同的方法以保持创新'
+        ] : [
+          'Only record successful results, ignore process details',
+          'Rely on memory rather than documentation',
+          'Use different methods each time to maintain innovation'
+        ],
+        10: locale === 'zh' ? [
+          '通过延长工作时间提高产出',
+          '消除所有休息以最大化效率',
+          '保持高强度工作以快速完成项目'
+        ] : [
+          'Increase output by extending work hours',
+          'Eliminate all breaks to maximize efficiency',
+          'Maintain high-intensity work to complete projects quickly'
+        ],
+        11: locale === 'zh' ? [
+          '让专家处理所有AI相关任务',
+          '保持技能差异以明确分工',
+          '只培训部分核心成员使用AI'
+        ] : [
+          'Let experts handle all AI-related tasks',
+          'Maintain skill gaps for clear division of labor',
+          'Only train core members to use AI'
+        ],
+        12: locale === 'zh' ? [
+          '坚持使用已熟悉的工具，避免频繁更换',
+          '等待技术成熟后再学习，降低学习成本',
+          '专注于单一技术栈，成为领域专家'
+        ] : [
+          'Stick to familiar tools and avoid frequent changes',
+          'Wait for technology to mature before learning to reduce costs',
+          'Focus on a single tech stack to become a domain expert'
         ]
       };
       
-      principles.slice(0, 3).forEach((principle, index) => {
+      // Select more principles for single choice questions
+      const singleChoicePrinciples = [1, 2, 3, 6, 11, 12].map(id => principles.find(p => p.id === id)!);
+      singleChoicePrinciples.forEach((principle, index) => {
         const principleTranslation = {
           name: tQuiz(`principle${principle.id}.name`),
           concept: tQuiz(`principle${principle.id}.concept`)
@@ -159,13 +225,34 @@ export default function QuizPage() {
             ? 'Chunked Work建议将所有任务合并在一个大型会话中完成'
             : 'Chunked Work suggests completing all tasks in one large session',
           isTrue: false
+        },
+        {
+          principleId: 7,
+          statement: locale === 'zh'
+            ? 'Cognitive Load Budget原则建议同时处理尽可能多的信息'
+            : 'Cognitive Load Budget principle suggests processing as much information as possible simultaneously',
+          isTrue: false
+        },
+        {
+          principleId: 9,
+          statement: locale === 'zh'
+            ? 'Reproducible Sessions确保AI协作可以被重现和验证'
+            : 'Reproducible Sessions ensures AI collaboration can be reproduced and verified',
+          isTrue: true
+        },
+        {
+          principleId: 10,
+          statement: locale === 'zh'
+            ? 'Rest & Reflection原则认为持续工作才能保持高效率'
+            : 'Rest & Reflection principle believes continuous work maintains high efficiency',
+          isTrue: false
         }
       ];
       
       trueFalseStatements.forEach((stmt, index) => {
         const principle = principles.find(p => p.id === stmt.principleId)!;
         questionTypes.push({
-          id: index + 3,
+          id: index + singleChoicePrinciples.length,
           text: stmt.statement,
           type: 'true-false',
           options: [locale === 'zh' ? '正确' : 'True', locale === 'zh' ? '错误' : 'False'],
@@ -176,33 +263,86 @@ export default function QuizPage() {
         });
       });
       
-      // Scenario-based questions
-      const scenarioOptions = [
-        tQuiz('principleOptions.humanInLoop'),
-        tQuiz('principleOptions.chunkedWork'),
-        tQuiz('principleOptions.contextHygiene'),
-        tQuiz('principleOptions.singleSource')
+      // Scenario-based questions - covering more principles
+      const scenarios = [
+        {
+          text: locale === 'zh'
+            ? '你正在与AI合作开发一个复杂功能，但发现AI生成的代码有很多问题需要修复。'
+            : 'You are collaborating with AI to develop a complex feature, but find many issues in the AI-generated code that need fixing.',
+          correctPrinciple: 'humanInLoop',
+          principleId: 4
+        },
+        {
+          text: locale === 'zh'
+            ? '你发现自己在处理多个复杂任务时感到压力很大，难以集中注意力。'
+            : 'You find yourself stressed handling multiple complex tasks and struggling to focus.',
+          correctPrinciple: 'cognitiveLoadBudget',
+          principleId: 7
+        },
+        {
+          text: locale === 'zh'
+            ? '团队成员经常被各种会议和消息打断，导致编程效率低下。'
+            : 'Team members are frequently interrupted by meetings and messages, leading to low programming efficiency.',
+          correctPrinciple: 'flowProtection',
+          principleId: 8
+        },
+        {
+          text: locale === 'zh'
+            ? '团队中有些人熟悉AI工具，有些人不熟悉，导致协作困难。'
+            : 'Some team members are familiar with AI tools while others are not, causing collaboration difficulties.',
+          correctPrinciple: 'skillParity',
+          principleId: 11
+        },
+        {
+          text: locale === 'zh'
+            ? '你成功使用AI解决了一个难题，但不确定如何让团队其他人也能重现这个成功。'
+            : 'You successfully used AI to solve a difficult problem, but unsure how to help others reproduce this success.',
+          correctPrinciple: 'reproducibleSessions',
+          principleId: 9
+        },
+        {
+          text: locale === 'zh'
+            ? '你的项目文档分散在多个地方：README、Wiki、评论、Slack，团队经常找不到需要的信息。'
+            : 'Your project documentation is scattered across README, Wiki, comments, and Slack, team often can\'t find needed information.',
+          correctPrinciple: 'singleSource',
+          principleId: 1
+        }
       ];
       
-      questionTypes.push({
-        id: 5,
-        text: locale === 'zh'
-          ? '在AI协作过程中遇到以下场景时，应该采用哪个原则？'
-          : 'When facing the following scenario in AI collaboration, which principle should you apply?',
-        type: 'scenario',
-        scenario: locale === 'zh'
-          ? '你正在与AI合作开发一个复杂功能，但发现AI生成的代码有很多问题需要修复。'
-          : 'You are collaborating with AI to develop a complex feature, but find many issues in the AI-generated code that need fixing.',
-        options: scenarioOptions,
-        correct: 0, // Human-in-the-Loop is now at index 0
-        principleId: 4, // Human-in-the-Loop principle ID
-        stage: 2,
-        difficulty: 'hard'
+      // Generate 3 scenario questions from different scenarios
+      const shuffledScenarios = [...scenarios].sort(() => Math.random() - 0.5);
+      shuffledScenarios.slice(0, 3).forEach((scenario, index) => {
+        const options = [
+          tQuiz(`principleOptions.${scenario.correctPrinciple}`),
+          tQuiz('principleOptions.humanInLoop'),
+          tQuiz('principleOptions.chunkedWork'),
+          tQuiz('principleOptions.parallelFlow'),
+          tQuiz('principleOptions.contextHygiene'),
+          tQuiz('principleOptions.singleSource')
+        ].filter((opt, idx, arr) => arr.indexOf(opt) === idx) // Remove duplicates
+          .sort(() => Math.random() - 0.5)
+          .slice(0, 4); // Keep only 4 options
+        
+        const correctIndex = options.indexOf(tQuiz(`principleOptions.${scenario.correctPrinciple}`));
+        
+        questionTypes.push({
+          id: 11 + index,
+          text: locale === 'zh'
+            ? '在AI协作过程中遇到以下场景时，应该采用哪个原则？'
+            : 'When facing the following scenario in AI collaboration, which principle should you apply?',
+          type: 'scenario',
+          scenario: scenario.text,
+          options,
+          correct: correctIndex,
+          principleId: scenario.principleId,
+          stage: Math.ceil(scenario.principleId / 3),
+          difficulty: 'hard'
+        });
       });
       
       // Fill in the blank questions
       questionTypes.push({
-        id: 6,
+        id: 14,
         text: locale === 'zh'
           ? '完成以下句子：AI 协作时代的编程方法论包含 ___ 个阶段和 ___ 个原则。'
           : 'Complete the sentence: The AI collaboration era programming methodology includes ___ stages and ___ principles.',
@@ -213,7 +353,131 @@ export default function QuizPage() {
         difficulty: 'easy'
       });
       
-      return questionTypes;
+      // Add more fill-blank questions
+      questionTypes.push({
+        id: 15,
+        text: locale === 'zh'
+          ? 'Parallel Flow原则建议___处理多个任务，而不是___完成。'
+          : 'Parallel Flow principle suggests ___ handling multiple tasks, rather than ___ completion.',
+        type: 'fill-blank',
+        blanks: locale === 'zh' ? ['并行', '顺序'] : ['parallel', 'sequential'],
+        correct: locale === 'zh' ? ['并行', '顺序'] : ['parallel', 'sequential'],
+        principleId: 6,
+        difficulty: 'easy'
+      });
+      
+      // Restore Culture of Curiosity single-choice question
+      const curiosityOptions = locale === 'zh' ? [
+        '持续学习和探索新的AI工具和方法，保持开放心态',
+        '坚持使用已熟悉的工具，避免频繁更换',
+        '等待技术成熟后再学习，降低学习成本',
+        '专注于单一技术栈，成为领域专家'
+      ] : [
+        'Continuously learn and explore new AI tools and methods with an open mindset',
+        'Stick to familiar tools and avoid frequent changes',
+        'Wait for technology to mature before learning to reduce costs',
+        'Focus on a single tech stack to become a domain expert'
+      ];
+      
+      const shuffledCuriosityOptions = curiosityOptions.sort(() => Math.random() - 0.5);
+      const correctCuriosityIndex = shuffledCuriosityOptions.indexOf(
+        locale === 'zh' 
+          ? '持续学习和探索新的AI工具和方法，保持开放心态'
+          : 'Continuously learn and explore new AI tools and methods with an open mindset'
+      );
+      
+      questionTypes.push({
+        id: 16,
+        text: locale === 'zh'
+          ? 'Culture of Curiosity原则的核心理念是什么？'
+          : 'What is the core concept of the Culture of Curiosity principle?',
+        type: 'single-choice',
+        options: shuffledCuriosityOptions,
+        correct: correctCuriosityIndex,
+        principleId: 12,
+        stage: 4,
+        difficulty: 'medium'
+      });
+      
+      // Add single-choice question for Chunked Work (principle 5)
+      const chunkedWorkOptions = locale === 'zh' ? [
+        '将大任务分解成小块，逐步完成并验证',
+        '一次性完成所有工作以保持连贯性',
+        '尽可能延长单次工作时间以提高效率',
+        '避免任务切换，专注完成一个大任务'
+      ] : [
+        'Break large tasks into small chunks, complete and verify incrementally',
+        'Complete all work at once to maintain coherence',
+        'Extend single work sessions as long as possible for efficiency',
+        'Avoid task switching, focus on completing one large task'
+      ];
+      
+      const shuffledChunkedOptions = chunkedWorkOptions.sort(() => Math.random() - 0.5);
+      const correctChunkedIndex = shuffledChunkedOptions.indexOf(
+        locale === 'zh'
+          ? '将大任务分解成小块，逐步完成并验证'
+          : 'Break large tasks into small chunks, complete and verify incrementally'
+      );
+      
+      questionTypes.push({
+        id: 17,
+        text: locale === 'zh'
+          ? 'Chunked Work原则建议如何处理复杂任务？'
+          : 'How does the Chunked Work principle suggest handling complex tasks?',
+        type: 'single-choice',
+        options: shuffledChunkedOptions,
+        correct: correctChunkedIndex,
+        principleId: 5,
+        stage: 2,
+        difficulty: 'medium'
+      });
+      
+      // Add True/False question for Flow Protection (principle 8)
+      questionTypes.push({
+        id: 18,
+        text: locale === 'zh'
+          ? 'Flow Protection原则鼓励随时接受打断以保持团队协作'
+          : 'Flow Protection principle encourages accepting interruptions anytime to maintain team collaboration',
+        type: 'true-false',
+        options: [locale === 'zh' ? '正确' : 'True', locale === 'zh' ? '错误' : 'False'],
+        correct: 1, // False
+        principleId: 8,
+        stage: 3,
+        difficulty: 'easy'
+      });
+      
+      // Add scenario question for Rest & Reflection (principle 10)
+      questionTypes.push({
+        id: 19,
+        text: locale === 'zh'
+          ? '在AI协作过程中遇到以下场景时，应该采用哪个原则？'
+          : 'When facing the following scenario in AI collaboration, which principle should you apply?',
+        type: 'scenario',
+        scenario: locale === 'zh'
+          ? '连续工作数小时后，你发现自己的判断力下降，频繁出错，创造力也明显减退。'
+          : 'After working continuously for hours, you notice declining judgment, frequent errors, and reduced creativity.',
+        options: [
+          tQuiz('principleOptions.restReflection'),
+          tQuiz('principleOptions.cognitiveLoadBudget'),
+          tQuiz('principleOptions.flowProtection'),
+          tQuiz('principleOptions.skillParity')
+        ].sort(() => Math.random() - 0.5),
+        correct: 0, // Will be recalculated after shuffle
+        principleId: 10,
+        stage: 4,
+        difficulty: 'medium'
+      });
+      
+      // Fix the correct answer index for the Rest & Reflection scenario
+      const lastQuestion = questionTypes[questionTypes.length - 1];
+      lastQuestion.correct = lastQuestion.options!.indexOf(tQuiz('principleOptions.restReflection'));
+      
+      // Shuffle questions to add variety while keeping a good mix
+      const shuffled = questionTypes.sort(() => Math.random() - 0.5);
+      
+      // Ensure we have a good mix of different types and difficulties
+      // Return 12 questions from the pool of 20
+      return shuffled.slice(0, 12);
     };
     return generateQuestions();
   });
@@ -321,7 +585,7 @@ export default function QuizPage() {
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <div className="hero-gradient relative overflow-hidden">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-32">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-32 sm:pb-24">
             <div className="max-w-5xl">
               <h1 className="hero-text text-white mb-8">
                 {tQuiz('chooseChallenge')}
@@ -360,7 +624,7 @@ export default function QuizPage() {
               className="group flex flex-col items-center text-white/70 hover:text-white transition-all duration-300 hover:scale-110"
               aria-label="Scroll to quiz modes"
             >
-              <div className="text-sm font-medium mb-2 opacity-80 group-hover:opacity-100">
+              <div className="text-xs sm:text-sm font-medium mb-2 opacity-80 group-hover:opacity-100 whitespace-nowrap px-2">
                 {tQuiz('chooseMode')}
               </div>
               <div className="w-10 h-10 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/20 group-hover:border-white/50 transition-all duration-300">
@@ -384,7 +648,8 @@ export default function QuizPage() {
             
             <div className="grid md:grid-cols-2 gap-8">
               <motion.div
-                whileHover={{ scale: 1.02 }}
+                whileHover={shouldReduceMotion ? {} : { scale: 1.02 }}
+                whileTap={shouldReduceMotion ? {} : { scale: 0.98 }}
                 className="modern-card cursor-pointer group hover:shadow-2xl transition-all duration-300"
                 onClick={() => startQuiz('normal')}
               >
@@ -405,7 +670,8 @@ export default function QuizPage() {
               </motion.div>
               
               <motion.div
-                whileHover={{ scale: 1.02 }}
+                whileHover={shouldReduceMotion ? {} : { scale: 1.02 }}
+                whileTap={shouldReduceMotion ? {} : { scale: 0.98 }}
                 className="modern-card cursor-pointer group hover:shadow-2xl transition-all duration-300"
                 onClick={() => startQuiz('timed')}
               >
@@ -426,7 +692,8 @@ export default function QuizPage() {
               </motion.div>
               
               <motion.div
-                whileHover={{ scale: 1.02 }}
+                whileHover={shouldReduceMotion ? {} : { scale: 1.02 }}
+                whileTap={shouldReduceMotion ? {} : { scale: 0.98 }}
                 className="modern-card cursor-pointer group hover:shadow-2xl transition-all duration-300"
                 onClick={() => startQuiz('challenge')}
               >
@@ -447,7 +714,8 @@ export default function QuizPage() {
               </motion.div>
               
               <motion.div
-                whileHover={{ scale: 1.02 }}
+                whileHover={shouldReduceMotion ? {} : { scale: 1.02 }}
+                whileTap={shouldReduceMotion ? {} : { scale: 0.98 }}
                 className="modern-card cursor-pointer group hover:shadow-2xl transition-all duration-300"
                 onClick={() => startQuiz('adaptive')}
               >
@@ -481,7 +749,7 @@ export default function QuizPage() {
       <div className="min-h-screen bg-white">
         {/* Hero Section for Results */}
         <div className="hero-gradient relative overflow-hidden">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-32">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-32 sm:pb-24">
             <div className="max-w-5xl text-center">
               <h1 className="hero-text text-white mb-8">
                 {tQuiz('quizComplete')}
@@ -520,7 +788,7 @@ export default function QuizPage() {
               className="group flex flex-col items-center text-white/70 hover:text-white transition-all duration-300 hover:scale-110"
               aria-label="Scroll to results"
             >
-              <div className="text-sm font-medium mb-2 opacity-80 group-hover:opacity-100">
+              <div className="text-xs sm:text-sm font-medium mb-2 opacity-80 group-hover:opacity-100 whitespace-nowrap px-2">
                 {tQuiz('viewResults')}
               </div>
               <div className="w-10 h-10 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/20 group-hover:border-white/50 transition-all duration-300">
@@ -534,8 +802,9 @@ export default function QuizPage() {
         <div id="results-content" className="py-32 bg-white">
           <div className="max-w-2xl mx-auto px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.3, ease: "easeOut" }}
               className="modern-card text-center"
             >
             <div className="mb-8">
@@ -760,9 +1029,11 @@ export default function QuizPage() {
           {/* Question */}
           <motion.div
             key={currentQuestion}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.2, ease: "easeOut" }}
             className="modern-card"
+            style={{ transform: 'translateZ(0)', willChange: 'opacity' }}
           >
             <div className="flex justify-between items-start mb-8">
               <h2 className="text-xl font-medium text-stone-900 leading-relaxed">

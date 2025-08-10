@@ -237,7 +237,15 @@
       "contextHygiene": "Context Hygiene",
       "singleSource": "Single Source of Truth",
       "chunkedWork": "Chunked Work",
-      "humanInLoop": "Human-in-the-Loop"
+      "humanInLoop": "Human-in-the-Loop",
+      "promptFirst": "Prompt First",
+      "parallelFlow": "Parallel Flow",
+      "cognitiveLoadBudget": "Cognitive Load Budget",
+      "flowProtection": "Flow Protection",
+      "reproducibleSessions": "Reproducible Sessions",
+      "restReflection": "Rest & Reflection",
+      "skillParity": "Skill Parity",
+      "cultureOfCuriosity": "Culture of Curiosity"
     },
     "principle1": {
       "name": "Single Source of Truth",

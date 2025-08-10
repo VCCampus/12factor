@@ -34,7 +34,7 @@ function PrinciplesContent() {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <div className="hero-gradient relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-32 sm:pb-24">
           <div className="max-w-5xl">
             {stageFilter && (
               <Link
@@ -88,7 +88,7 @@ function PrinciplesContent() {
             className="group flex flex-col items-center text-white/70 hover:text-white transition-all duration-300 hover:scale-110"
             aria-label={stageFilter ? "Scroll to stage content" : "Scroll to learning paths"}
           >
-            <div className="text-sm font-medium mb-2 opacity-80 group-hover:opacity-100">
+            <div className="text-xs sm:text-sm font-medium mb-2 opacity-80 group-hover:opacity-100 whitespace-nowrap px-2">
               {stageFilter ? t('viewPrinciples') : t('chooseLearningPath')}
             </div>
             <div className="w-10 h-10 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/20 group-hover:border-white/50 transition-all duration-300">
