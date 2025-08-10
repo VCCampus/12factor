@@ -18,41 +18,43 @@ const notoSansSC = Noto_Sans_SC({
   subsets: ['latin'],
 });
 
-export const metadata: Metadata = {
-  metadataBase: new URL('https://12factor.me'),
-  icons: {
-    icon: [
-      { url: '/favicon.png', sizes: '32x32', type: 'image/png' },
-      { url: '/favicon.svg', type: 'image/svg+xml' },
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    metadataBase: new URL('https://12factor.me'),
+    icons: {
+      icon: [
+        { url: '/favicon.png', sizes: '32x32', type: 'image/png' },
+        { url: '/favicon.svg', type: 'image/svg+xml' },
+      ],
+      apple: '/favicon.png',
+    },
+    // Additional metadata for better SEO and social sharing
+    keywords: [
+      '12Factor',
+      'programming methodology',
+      'AI collaboration',
+      'software development',
+      'coding principles',
+      'development practices',
+      'interactive learning',
+      'programming education'
     ],
-    apple: '/favicon.png',
-  },
-  // Additional metadata for better SEO and social sharing
-  keywords: [
-    '12Factor',
-    'programming methodology',
-    'AI collaboration',
-    'software development',
-    'coding principles',
-    'development practices',
-    'interactive learning',
-    'programming education'
-  ],
-  authors: [{ name: 'wquguru', url: 'https://twitter.com/wquguru' }],
-  creator: 'wquguru',
-  publisher: '12Factor.me',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    authors: [{ name: 'wquguru', url: 'https://twitter.com/wquguru' }],
+    creator: 'wquguru',
+    publisher: '12Factor.me',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
     },
-  },
-};
+  };
+}
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({locale}));
