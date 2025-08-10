@@ -15,8 +15,8 @@ export default function SocialShare({ className = '' }: SocialShareProps) {
   
   const shareUrl = typeof window !== 'undefined' ? window.location.href : 'https://12factor.me';
   const shareText = locale === 'zh' 
-    ? '发现了一个很棒的AI协作时代编程方法论学习平台！12Factor.me - 四阶段十二原则编程方法论'
-    : 'Discover the Four-Stage Twelve-Principle programming methodology for the AI collaboration era! 12Factor.me';
+    ? '发现了一个很棒的AI协作时代Vibe Coding10倍工程效率方法论学习平台！12Factor.me - 四阶段十二原则编程方法论'
+    : 'Discover the Four-Stage Twelve-Principle Vibe Coding programming methodology for 10x engineering efficiency! 12Factor.me';
 
   useEffect(() => {
     // 检测是否为移动端
@@ -39,7 +39,7 @@ export default function SocialShare({ className = '' }: SocialShareProps) {
   const handleNativeShare = async () => {
     try {
       await navigator.share({
-        title: locale === 'zh' ? '12Factor.me - 四阶段十二原则编程方法论' : '12Factor.me - Four-Stage Twelve-Principle Programming Methodology',
+        title: locale === 'zh' ? '12Factor.me - 四阶段十二原则 Vibe Coding 10 倍工程效率方法论' : '12Factor.me - Four-Stage Twelve-Principle Vibe Coding Methodology for 10x Engineering Efficiency',
         text: shareText,
         url: shareUrl,
       });

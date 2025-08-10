@@ -27,8 +27,8 @@ export function generateMetadata({
   const defaultImage = isZh ? '/og-image-zh.png' : '/og-image.png';
   const selectedImage = image || defaultImage;
   
-  // Convert relative image path to absolute URL
-  const absoluteImageUrl = selectedImage.startsWith('http') ? selectedImage : `${baseUrl}${selectedImage}`;
+  // Convert relative image path to absolute URL (use www subdomain to avoid redirect)
+  const absoluteImageUrl = selectedImage.startsWith('http') ? selectedImage : `https://www.12factor.me${selectedImage}`;
   
   // Enhanced titles and descriptions for social sharing
   const enhancedTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
@@ -56,7 +56,7 @@ export function generateMetadata({
       locale: ogLocale,
       type: 'website',
     },
-    // Twitter Card metadata
+    // Twitter Card metadata - ensure all required fields
     twitter: {
       card: 'summary_large_image',
       title: enhancedTitle,
