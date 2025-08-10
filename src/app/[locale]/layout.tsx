@@ -5,6 +5,7 @@ import { routing } from '@/i18n/routing';
 import { notFound } from 'next/navigation';
 import Navigation from '@/components/Navigation';
 import GitHubCorner from '@/components/GitHubCorner';
+import { WebViewProvider } from '@/providers/WebViewProvider';
 import '../globals.css';
 import type { Metadata } from 'next';
 
@@ -80,11 +81,13 @@ export default async function LocaleLayout({
     <html lang={locale}>
       <body className={`${inter.variable} ${notoSansSC.variable} font-sans`}>
         <NextIntlClientProvider messages={messages} locale={locale}>
-          <div className="min-h-screen bg-white dark:bg-gray-900">
-            <Navigation />
-            <GitHubCorner />
-            <main>{children}</main>
-          </div>
+          <WebViewProvider>
+            <div className="min-h-screen bg-white dark:bg-gray-900">
+              <Navigation />
+              <GitHubCorner />
+              <main>{children}</main>
+            </div>
+          </WebViewProvider>
         </NextIntlClientProvider>
       </body>
     </html>

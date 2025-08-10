@@ -14,7 +14,6 @@ export default function FlashcardsPage() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [progress, setProgress] = useState<UserProgress[]>([]);
   const [isFlipped, setIsFlipped] = useState(false);
-  const [cardStates, setCardStates] = useState<{ [key: number]: boolean }>({});
 
   const currentPrinciple = principles[currentIndex];
 
@@ -36,11 +35,7 @@ export default function FlashcardsPage() {
       localStorage.setItem('flashcard-progress', JSON.stringify(initialProgress));
     }
 
-    // Load card states
-    const savedCardStates = localStorage.getItem('flashcard-states');
-    if (savedCardStates) {
-      setCardStates(JSON.parse(savedCardStates));
-    }
+    // Removed loading card states - we want to always start with card front
 
     // Load current index
     const savedCurrentIndex = localStorage.getItem('flashcard-current-index');
@@ -49,10 +44,11 @@ export default function FlashcardsPage() {
     }
   }, []);
 
-  // Update current card flip state and save to localStorage
+  // Update current card flip state when changing cards
   useEffect(() => {
-    setIsFlipped(cardStates[currentIndex] || false);
-  }, [currentIndex, cardStates]);
+    // Always start with the front of the card when changing to a different card
+    setIsFlipped(false);
+  }, [currentIndex]);
 
   // Save current index to localStorage
   useEffect(() => {
@@ -84,13 +80,7 @@ export default function FlashcardsPage() {
   };
 
   const handleFlip = () => {
-    const newFlipped = !isFlipped;
-    setIsFlipped(newFlipped);
-    
-    // Save card state to localStorage
-    const newCardStates = { ...cardStates, [currentIndex]: newFlipped };
-    setCardStates(newCardStates);
-    localStorage.setItem('flashcard-states', JSON.stringify(newCardStates));
+    setIsFlipped(!isFlipped);
   };
 
   const handleMarkMastered = () => {

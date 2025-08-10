@@ -595,6 +595,8 @@ export default function QuizPage() {
     if (mode === 'timed') {
       setTimeLeft(30);
     }
+    // Scroll to top when starting quiz to ensure content is visible
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   // Quiz mode selection screen

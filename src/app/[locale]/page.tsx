@@ -1,6 +1,7 @@
 import { Link } from '@/i18n/routing';
 import { BookOpenIcon, ChartBarIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
 import DynamicTitle from '@/components/DynamicTitle';
+import UptimeDisplay from '@/components/UptimeDisplay';
 import { getTranslations } from 'next-intl/server';
 import { generateMetadata as generateMetadataUtil, defaultMetadata } from '@/lib/metadata';
 import type { Metadata } from 'next';
@@ -373,7 +374,7 @@ export default async function HomePage({
               <div className="w-8 h-8 bg-stone-900 rounded-lg flex items-center justify-center">
                 <div className="w-4 h-4 border-2 border-white rounded"></div>
               </div>
-              <span className="text-stone-600 font-medium">{tCommon('footer.copyright')}, {new Date().getFullYear()}</span>
+              <UptimeDisplay />
             </div>
             <div className="text-stone-500 text-sm">
               <a href="https://twitter.com/wquguru" target="_blank" rel="noopener noreferrer" className="hover:text-stone-700 transition-colors">

@@ -34,10 +34,30 @@ body {
 
 .preserve-3d {
   transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
 }
 
 .backface-hidden {
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* WebView-specific styles for better compatibility */
+@supports not (transform-style: preserve-3d) {
+  .preserve-3d {
+    transform-style: flat;
+  }
+  
+  .backface-hidden {
+    backface-visibility: visible;
+  }
+}
+
+/* Additional WebView compatibility */
+.webview-compat {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: opacity, transform;
 }
 
 /* Smooth scrolling */

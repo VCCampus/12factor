@@ -117,10 +117,10 @@ function PrinciplesContent() {
             <>
               <div className="mb-16">
                 <h2 className="text-6xl md:text-7xl font-light text-stone-900 mb-8 leading-tight">
-                  {t('stagePrinciplesTitle', { stage: stageFilter })}
+                  {t(`stage${stageFilter}Title`)}
                 </h2>
                 <p className="text-lg text-stone-600 max-w-3xl font-light leading-relaxed">
-                  {t('stagePrinciplesDescription')}
+                  {t(`stage${stageFilter}Description`)}
                 </p>
               </div>
 

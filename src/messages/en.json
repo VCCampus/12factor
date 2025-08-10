@@ -32,7 +32,7 @@
       "statsMethodology": "Four-Stage Methodology"
     },
     "benefits": {
-      "title": "We have cracked the code.",
+      "title": "We have cracked the code for 10x engineering efficiency.",
       "subtitle": "12Factor provides real methodological insights, without the cognitive overload.",
       "aiCollaboration": {
         "title": "Master AI Collaboration",
@@ -129,6 +129,14 @@
     "chooseLearningPathDescription": "Master all 12 principles through our structured four-stage approach. Select a stage to explore its principles in detail.",
     "stagePrinciplesTitle": "Stage {stage} Principles",
     "stagePrinciplesDescription": "Dive deep into the principles of this methodology stage.",
+    "stage1Title": "Prepare: Build a Solid Foundation",
+    "stage1Description": "Establish clear information sources, optimize prompts, and maintain clean contexts.",
+    "stage2Title": "Execute: Efficient Collaboration Flow",
+    "stage2Description": "Human-AI collaborative decisions, chunked execution, and parallel processing.",
+    "stage3Title": "Collaborate: Team Synergy Optimization",
+    "stage3Description": "Manage cognitive load, protect flow states, and ensure reproducible sessions.",
+    "stage4Title": "Iterate: Continuous Growth",
+    "stage4Description": "Rest and reflection, skill parity, and a culture of curiosity.",
     "viewPrinciples": "View Principles",
     "principlesCount": "principles",
     "principle1": {
