@@ -1,0 +1,393 @@
+{
+  "common": {
+    "title": "12Factor.me - Vibe Coding 10x Engineer",
+    "subtitle": "Four Stages × Twelve Principles for 10x Engineering Efficiency",
+    "language": "Language",
+    "home": "Home",
+    "principles": "Principles",
+    "flashcards": "Flashcards",
+    "quiz": "Quiz",
+    "progress": "Progress",
+    "learnMore": "Learn More",
+    "languageLabels": {
+      "chinese": "中文",
+      "english": "English"
+    },
+    "github": "GitHub",
+    "footer": {
+      "copyright": "12Factor",
+      "author": "@wquguru",
+      "license": "MIT License"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "12 Vibe Coding Factors",
+      "titleAlt": "10x Engineer Efficiency",
+      "subtitle": "Four-Stage Twelve-Principle methodology provides real insights for 10x engineering efficiency, without the complexity overload.",
+      "cta": "Study Principles",
+      "ctaSecondary": "Practice with Flashcards",
+      "statsNumber": "12",
+      "statsCore": "Core Principles", 
+      "statsMethodology": "Four-Stage Methodology"
+    },
+    "benefits": {
+      "title": "We have cracked the code.",
+      "subtitle": "12Factor provides real methodological insights, without the cognitive overload.",
+      "aiCollaboration": {
+        "title": "Master AI Collaboration",
+        "description": "Learn systematic approaches to working with AI tools, revealing key opportunities for enhanced productivity and code quality."
+      },
+      "developmentFlow": {
+        "title": "Control Your Development Flow",
+        "description": "Manage and track your coding workflow, ensuring consistent performance and streamlined collaboration patterns."
+      },
+      "communication": {
+        "title": "Bridge Human-AI Communication", 
+        "description": "Master effective prompting techniques for clear AI communication and enhanced development collaboration."
+      },
+      "progress": {
+        "title": "Achieve 10x Engineering Efficiency",
+        "description": "Master the synergy between 12Factor methodology and Vibe Coding practices to unlock unprecedented development productivity and code quality."
+      }
+    },
+    "bigPicture": {
+      "title": "See the Big Picture",
+      "subtitle": "12Factor turns complex development methodologies into clear, actionable principles that show you exactly how to improve your AI collaboration workflow.",
+      "step1": {
+        "title": "Master Principles in Minutes",
+        "description": "No more endless documentation searches."
+      },
+      "step2": {
+        "title": "Get Everyone on the Same Page", 
+        "description": "Share consistent AI collaboration patterns with your team."
+      },
+      "step3": {
+        "title": "Make Learning Interactive",
+        "description": "Gamified flashcards and quizzes keep your team engaged."
+      },
+      "step4": {
+        "title": "Your Development Snapshot",
+        "description": "Get a quick, clear overview of your team's AI collaboration maturity."
+      },
+      "cta": "Study Principles"
+    },
+    "learningPath": {
+      "title": "Four-Stage Learning Path",
+      "subtitle": "Master AI collaboration through a systematic four-stage approach designed for modern developers.",
+      "prepare": {
+        "title": "Prepare",
+        "description": "Single Source of Truth, Prompt First, Context Hygiene - Establish the foundation for effective AI collaboration."
+      },
+      "execute": {
+        "title": "Execute", 
+        "description": "Human-in-the-Loop, Chunked Work, Parallel Flow - Implement systematic development processes."
+      },
+      "collaborate": {
+        "title": "Collaborate",
+        "description": "Cognitive Load Budget, Flow Protection, Reproducible Sessions - Optimize team collaboration patterns."
+      },
+      "iterate": {
+        "title": "Iterate",
+        "description": "Rest & Reflection, Skill Parity, Culture of Curiosity - Continuous improvement and learning."
+      }
+    },
+    "journey": {
+      "title": "Start Your Journey",
+      "subtitle": "Begin mastering AI collaboration with our free, open-source learning platform designed by developers, for developers.",
+      "step1": {
+        "title": "Learn the Principles",
+        "description": "Explore the 12 fundamental principles through interactive content and real-world examples."
+      },
+      "step2": {
+        "title": "Practice & Test", 
+        "description": "Use flashcards and quizzes to reinforce your understanding and track your progress."
+      },
+      "step3": {
+        "title": "Apply in Practice",
+        "description": "Implement the methodology in your development workflow and share knowledge with your team."
+      },
+      "ctaPrimary": "Study Principles",
+      "ctaSecondary": "Practice with Flashcards"
+    }
+  },
+  "principles": {
+    "title": "12 Principles",
+    "stage": "Stage",
+    "concept": "Concept",
+    "practices": "Practices",
+    "antiPatterns": "Anti-patterns",
+    "backToStages": "Back to Stages",
+    "fallbackTitle": "Master the Principles",
+    "fallbackDescription": "Explore the complete Four-Stage Twelve-Principle methodology for effective 10x engineering efficiency.",
+    "stageLabel": "Stage Principles",
+    "coreLabel": "Core Principles",
+    "practiceWithFlashcards": "Practice with Flashcards",
+    "takeQuiz": "Take Quiz",
+    "fourStageMethodology": "Four-Stage Methodology",
+    "chooseLearningPath": "Choose Your Learning Path",
+    "chooseLearningPathDescription": "Master all 12 principles through our structured four-stage approach. Select a stage to explore its principles in detail.",
+    "stagePrinciplesTitle": "Stage {stage} Principles",
+    "stagePrinciplesDescription": "Dive deep into the principles of this methodology stage.",
+    "viewPrinciples": "View Principles",
+    "principlesCount": "principles",
+    "principle1": {
+      "name": "Single Source of Truth",
+      "concept": "Information dispersion equals context confusion; both AI and humans may misjudge.",
+      "practices": [
+        "Centralize all requirements, designs, and context in one documentation hub (Notion / Confluence / GitHub Wiki)",
+        "For AI, directly reference this single source rather than ad-hoc copy-pasting"
+      ],
+      "antiPatterns": [
+        "Team members maintaining different document versions, causing inconsistent AI responses"
+      ]
+    },
+    "principle2": {
+      "name": "Prompt First",
+      "concept": "Prompts are the new generation of design documents.",
+      "practices": [
+        "Write prompts before tasks begin, clarifying inputs, outputs, style, and constraints",
+        "Teams reuse validated prompt templates"
+      ],
+      "antiPatterns": [
+        "Immediately asking AI to write code, resulting in wrong direction and rework"
+      ]
+    }
+  },
+  "flashcards": {
+    "title": "Interactive Learning",
+    "subtitle": "Master the 12 principles through engaging flashcards that help reinforce your understanding of AI collaboration methodology.",
+    "studyPrinciples": "Study Principles",
+    "takeQuiz": "Take Quiz",
+    "progress": "Progress",
+    "of": "of",
+    "practiceSession": "Practice Session",
+    "practiceDescription": "Review each principle carefully and test your understanding with interactive flashcards.",
+    "startPracticing": "Start Practicing",
+    "learningProgress": "Learning Progress",
+    "flip": "Tap to flip",
+    "next": "Next",
+    "previous": "Previous",
+    "mastered": "Mastered",
+    "needsReview": "Needs Review",
+    "showAnswer": "Show Answer",
+    "quickJump": "Quick Jump",
+    "quickJumpDescription": "Navigate to any principle",
+    "statusNew": "New",
+    "statusLearning": "Learning",
+    "statusDone": "Done",
+    "statusReview": "Review",
+    "stage": "Stage",
+    "flipBack": "Tap to flip back",
+    "principleOf": "Principle {current} of {total}"
+  },
+  "quiz": {
+    "title": "Quiz",
+    "question": "Question",
+    "submit": "Submit",
+    "next": "Next Question",
+    "results": "Results",
+    "score": "Your Score",
+    "retry": "Try Again",
+    "chooseChallenge": "Choose Your Challenge",
+    "selectModeDescription": "Select a quiz mode to test your 12Factor knowledge and track your learning progress through different challenge levels.",
+    "quizModes": "Quiz Modes",
+    "chooseChallengeLevel": "Choose the perfect challenge level that matches your learning goals and time availability.",
+    "chooseMode": "Choose Mode",
+    "viewResults": "View Results",
+    "normalMode": "Normal Mode",
+    "normalModeSubtitle": "No time limit • All question types",
+    "normalModeDescription": "Take your time to carefully consider each question. Perfect for learning and building confidence.",
+    "timedMode": "Timed Mode",
+    "timedModeSubtitle": "30s per question • Pressure testing",
+    "timedModeDescription": "Race against the clock! 30 seconds per question to test your quick thinking and recall.",
+    "challengeMode": "Challenge Mode",
+    "challengeModeSubtitle": "Hard questions • Streak multiplier",
+    "challengeModeDescription": "Harder questions and scenarios. Build up your streak for bonus points and advanced learning.",
+    "adaptiveMode": "Adaptive Mode",
+    "adaptiveModeSubtitle": "AI-powered difficulty • Personalized",
+    "adaptiveModeDescription": "Questions adapt to your performance. Get harder as you improve for optimal learning.",
+    "quizComplete": "Quiz Complete!",
+    "modeResults": "{mode} Mode Results",
+    "performanceSummary": "Your Performance Summary",
+    "excellent": "Excellent!",
+    "goodJob": "Good job!",
+    "keepLearning": "Keep learning!",
+    "maxStreak": "Max Streak: {streak} questions in a row!",
+    "challengeBonus": "Challenge bonus: +{points} points",
+    "backToModes": "Back to Quiz Modes",
+    "modeLabel": "{mode} Mode",
+    "interactiveQuiz": "Interactive Quiz",
+    "questionCount": "Question {current} of {total}",
+    "scenario": "Scenario",
+    "questionType": "{type} Question",
+    "nextQuestion": "Next Question",
+    "submitQuiz": "Submit Quiz",
+    "difficulty": {
+      "easy": "easy",
+      "medium": "medium", 
+      "hard": "hard"
+    },
+    "wrongAnswers": [
+      "This is a wrong answer",
+      "This is also wrong", 
+      "Another wrong option"
+    ],
+    "principleOptions": {
+      "contextHygiene": "Context Hygiene",
+      "singleSource": "Single Source of Truth",
+      "chunkedWork": "Chunked Work",
+      "humanInLoop": "Human-in-the-Loop"
+    },
+    "principle1": {
+      "name": "Single Source of Truth",
+      "concept": "Information dispersion equals context confusion; both AI and humans may misjudge.",
+      "practices": [
+        "Centralize all requirements, designs, and context in one documentation hub (Notion / Confluence / GitHub Wiki)",
+        "For AI, directly reference this single source rather than ad-hoc copy-pasting"
+      ],
+      "antiPatterns": [
+        "Team members maintaining different document versions, causing inconsistent AI responses"
+      ]
+    },
+    "principle2": {
+      "name": "Prompt First",
+      "concept": "Prompts are the new generation of design documents.",
+      "practices": [
+        "Write prompts before tasks begin, clarifying inputs, outputs, style, and constraints",
+        "Teams reuse validated prompt templates"
+      ],
+      "antiPatterns": [
+        "Immediately asking AI to write code, resulting in wrong direction and rework"
+      ]
+    },
+    "principle3": {
+      "name": "Context Hygiene",
+      "concept": "Clean context enables more precise AI performance.",
+      "practices": [
+        "Start independent sessions for each new task to avoid old content interference",
+        "Regularly summarize current status in one sentence to help AI \"align context\""
+      ],
+      "antiPatterns": [
+        "Mixing conversations from three days ago with today's tasks"
+      ]
+    },
+    "principle4": {
+      "name": "Human-in-the-Loop",
+      "concept": "AI produces quickly, but only humans can grasp direction and business judgment.",
+      "practices": [
+        "AI provides drafts, humans handle key decisions and risk management",
+        "Perform logic validation for important features before merging code"
+      ],
+      "antiPatterns": [
+        "Accepting AI output wholesale without any review"
+      ]
+    },
+    "principle5": {
+      "name": "Chunked Work",
+      "concept": "Break large tasks into small chunks for easier iteration and correction.",
+      "practices": [
+        "Control tasks to small scope completable in 10-30 minutes",
+        "Immediately validate results after each chunk"
+      ],
+      "antiPatterns": [
+        "Having AI write 5000 lines at once, making debugging impossible"
+      ]
+    },
+    "principle6": {
+      "name": "Parallel Flow",
+      "concept": "While AI works, humans do low-switching-cost side tasks to maintain continuous rhythm.",
+      "practices": [
+        "Prepare a \"side task list\" including documentation, small fixes, code reviews",
+        "When waiting for AI, avoid high cognitive load tasks to prevent switching overhead"
+      ],
+      "antiPatterns": [
+        "Browsing social media while waiting for AI, breaking rhythm"
+      ]
+    },
+    "principle7": {
+      "name": "Cognitive Load Budget",
+      "concept": "Human attention is a scarce resource.",
+      "practices": [
+        "Set daily time limits for AI collaboration",
+        "Schedule deep review tasks during peak mental hours"
+      ],
+      "antiPatterns": [
+        "Working with AI all day long, becoming completely exhausted by evening"
+      ]
+    },
+    "principle8": {
+      "name": "Flow Protection",
+      "concept": "Once high-focus flow is interrupted, recovery cost is extremely high.",
+      "practices": [
+        "Set focused time blocks (e.g., 90 minutes), blocking notifications and interruptions",
+        "Batch AI interactions within focus flow rather than scattered triggers"
+      ],
+      "antiPatterns": [
+        "Coding while replying to WeChat and reading AI output, causing cliff-like efficiency drop"
+      ]
+    },
+    "principle9": {
+      "name": "Reproducible Sessions",
+      "concept": "Collaborative processes must be traceable to enable continuous optimization.",
+      "practices": [
+        "Save prompts, AI versions, and change reasons to code or knowledge base",
+        "Can replay generation process when bugs occur"
+      ],
+      "antiPatterns": [
+        "No record of AI generation history, unable to trace error causes"
+      ]
+    },
+    "principle10": {
+      "name": "Rest & Reflection",
+      "concept": "Post-sprint retrospection enables faster running.",
+      "practices": [
+        "Spend 5 minutes after sprint reviewing AI output vs expectations",
+        "Update prompt templates and accumulate \"pitfall records\""
+      ],
+      "antiPatterns": [
+        "Continuous sprinting without summarizing accumulated errors"
+      ]
+    },
+    "principle11": {
+      "name": "Skill Parity",
+      "concept": "AI is a magnifying glass that amplifies both abilities and shortcomings.",
+      "practices": [
+        "Continuously learn domain knowledge and code review skills",
+        "Maintain independent judgment ability for AI output"
+      ],
+      "antiPatterns": [
+        "Complete dependency on AI, losing manual abilities and technical insights"
+      ]
+    },
+    "principle12": {
+      "name": "Culture of Curiosity",
+      "concept": "Curiosity drives exploration and prevents \"blind faith in AI\".",
+      "practices": [
+        "When facing AI answers, first ask \"why\", then ask \"can it be better\"",
+        "Team shares AI usage experiences and improvement ideas"
+      ],
+      "antiPatterns": [
+        "Accepting AI solutions wholesale without ever questioning"
+      ]
+    },
+    "stages": {
+      "stage1": {
+        "name": "Prepare",
+        "description": "Establish clear information architecture and context environment"
+      },
+      "stage2": {
+        "name": "Execute", 
+        "description": "Efficiently collaborate to complete specific tasks"
+      },
+      "stage3": {
+        "name": "Collaborate",
+        "description": "Manage cognitive load and workflow in collaborative processes"
+      },
+      "stage4": {
+        "name": "Iterate",
+        "description": "Continuously learn and improve collaborative patterns"
+      }
+    }
+  }
+}

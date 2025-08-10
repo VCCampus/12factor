@@ -1,0 +1,296 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+  --primary-green: #7c8c5d;
+  --secondary-green: #a4b67a;
+  --accent-green: #b8c896;
+  --neutral-light: #f7f8f7;
+  --neutral-medium: #e8ebe8;
+  --neutral-dark: #2d3025;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0f0f0f;
+    --foreground: #f0f0f0;
+    --primary-green: #9bb070;
+    --secondary-green: #b8c896;
+    --accent-green: #c9d4a8;
+    --neutral-light: #1a1d17;
+    --neutral-medium: #242620;
+    --neutral-dark: #f7f8f7;
+  }
+}
+
+body {
+  font-family: var(--font-inter), var(--font-noto-sans-sc), system-ui, sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+.focus\:outline-blue {
+  @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+}
+
+/* Custom scrollbar */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(156, 163, 175, 0.5) transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(156, 163, 175, 0.5);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(156, 163, 175, 0.7);
+}
+
+/* Typography System - inspired by Area design */
+.display-xl {
+  font-size: clamp(4rem, 8vw, 8rem);
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+}
+
+.display-lg {
+  font-size: clamp(3rem, 6vw, 6rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+}
+
+.heading-xl {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+/* Modern card design */
+.modern-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(124, 140, 93, 0.1);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(124, 140, 93, 0.1);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.modern-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(124, 140, 93, 0.15);
+  border-color: rgba(124, 140, 93, 0.2);
+}
+
+@media (prefers-color-scheme: dark) {
+  .modern-card {
+    background: rgba(26, 29, 23, 0.9);
+    border-color: rgba(155, 176, 112, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+  
+  .modern-card:hover {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    border-color: rgba(155, 176, 112, 0.3);
+  }
+}
+
+/* Area-inspired gradient backgrounds */
+.hero-gradient {
+  background: linear-gradient(135deg, #f7f8f7 0%, #e8ebe8 100%);
+}
+
+@media (prefers-color-scheme: dark) {
+  .hero-gradient {
+    background: linear-gradient(135deg, #1a1d17 0%, #242620 100%);
+  }
+}
+
+/* Animation for page transitions */
+.page-transition {
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Button styles inspired by Area */
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-weight: 600;
+  padding: 16px 32px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(124, 140, 93, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(124, 140, 93, 0.4);
+}
+
+/* Stats/metrics display */
+.metric-display {
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--accent-green) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Enhanced card shadows */
+.card-shadow {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.card-shadow:hover {
+  box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Area-inspired Design System */
+:root {
+  --primary-green: #7c8c5d;
+  --secondary-green: #a4b67a;
+  --accent-green: #b8c896;
+  --light-green: #f3f5f0;
+  --neutral-light: #f7f8f7;
+  --neutral-medium: #e8ebe8;
+  --neutral-dark: #2d3025;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-green: #9bb070;
+    --secondary-green: #b8c896;
+    --accent-green: #c9d4a8;
+    --light-green: #1a1d17;
+    --neutral-light: #1a1d17;
+    --neutral-medium: #242620;
+    --neutral-dark: #f7f8f7;
+  }
+}
+
+/* Hero Section Styles */
+.hero-gradient {
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+}
+
+/* Large Typography */
+.hero-text {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+/* Button Styles */
+.btn-primary {
+  background-color: var(--primary-green);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-primary:hover {
+  background-color: var(--neutral-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.btn-secondary {
+  background-color: var(--light-green);
+  color: var(--primary-green);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid var(--primary-green);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-green);
+  color: white;
+}
+
+/* Modern Cards */
+.modern-card {
+  background: white;
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid var(--neutral-medium);
+}
+
+.modern-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Stats Display */
+.stat-number {
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--primary-green);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 1.125rem;
+  color: var(--neutral-dark);
+  font-weight: 500;
+}
+
+/* Feature Grid */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
