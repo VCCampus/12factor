@@ -750,7 +750,7 @@ export default function QuizPage() {
         {/* Hero Section for Results */}
         <div className="hero-gradient relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-32 sm:pb-24">
-            <div className="max-w-5xl text-center">
+            <div className="max-w-5xl mx-auto text-center">
               <h1 className="hero-text text-white mb-8">
                 {tQuiz('quizComplete')}
               </h1>
