@@ -229,9 +229,9 @@
       "hard": "困难"
     },
     "wrongAnswers": [
-      "这是一个错误选项",
-      "这同样是错误的",
-      "另一个错误答案"
+      "在多个来源存储上下文以最大化灵活性",
+      "让AI处理所有决策，无需人工干预",
+      "专注于在单个会话中完成所有工作"
     ],
     "principleOptions": {
       "contextHygiene": "上下文洁净 (Context Hygiene)",

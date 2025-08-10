@@ -10,7 +10,7 @@ import { ArrowLeftIcon, ChevronDownIcon } from '@heroicons/react/24/outline';
 interface Question {
   id: number;
   text: string;
-  type: 'multiple-choice' | 'true-false' | 'scenario' | 'drag-drop' | 'fill-blank';
+  type: 'single-choice' | 'true-false' | 'scenario' | 'drag-drop' | 'fill-blank';
   options?: string[];
   correct: number | string | string[];
   principleId: number;
@@ -80,17 +80,49 @@ export default function QuizPage() {
     const generateQuestions = (): Question[] => {
       const questionTypes: Question[] = [];
       
-      // Multiple choice questions
+      // Single choice questions with principle-specific wrong answers
+      const principleWrongAnswers: Record<number, string[]> = {
+        1: locale === 'zh' ? [
+          '在多个来源分散存储上下文以提高灵活性',
+          '让每个团队成员维护自己的项目文档版本',
+          '同时使用多个代码仓库来管理同一项目'
+        ] : [
+          'Store context across multiple sources for flexibility',
+          'Let each team member maintain their own version of docs',
+          'Use multiple code repositories for the same project'
+        ],
+        2: locale === 'zh' ? [
+          '先编写代码，然后让AI生成文档',
+          '完成所有功能后再考虑提示工程',
+          '直接从实现细节开始，逐步推导需求'
+        ] : [
+          'Write code first, then let AI generate documentation',
+          'Complete all features before considering prompt engineering',
+          'Start with implementation details and derive requirements'
+        ],
+        3: locale === 'zh' ? [
+          '保留所有历史对话以获得完整上下文',
+          '在每次对话中包含整个代码库',
+          '混合多个任务的上下文以提高效率'
+        ] : [
+          'Keep all historical conversations for complete context',
+          'Include entire codebase in every conversation',
+          'Mix contexts from multiple tasks for efficiency'
+        ]
+      };
+      
       principles.slice(0, 3).forEach((principle, index) => {
-        const wrongAnswers = [
-          tQuiz('wrongAnswers.0'),
-          tQuiz('wrongAnswers.1'), 
-          tQuiz('wrongAnswers.2')
-        ];
         const principleTranslation = {
           name: tQuiz(`principle${principle.id}.name`),
           concept: tQuiz(`principle${principle.id}.concept`)
         };
+        
+        const wrongAnswers = principleWrongAnswers[principle.id] || [
+          tQuiz('wrongAnswers.0'),
+          tQuiz('wrongAnswers.1'), 
+          tQuiz('wrongAnswers.2')
+        ];
+        
         const options = [
           principleTranslation.concept,
           ...wrongAnswers
@@ -103,7 +135,7 @@ export default function QuizPage() {
           text: locale === 'zh' 
             ? `什么是"${principleTranslation.name}"的核心理念？`
             : `What is the core concept of "${principleTranslation.name}"?`,
-          type: 'multiple-choice',
+          type: 'single-choice',
           options,
           correct: correctIndex,
           principleId: principle.id,
@@ -112,20 +144,32 @@ export default function QuizPage() {
         });
       });
       
-      // True/False questions
-      principles.slice(3, 5).forEach((principle, index) => {
-        const principleTranslation = {
-          name: tQuiz(`principle${principle.id}.name`),
-          concept: tQuiz(`principle${principle.id}.concept`)
-        };
+      // True/False questions with both true and false statements
+      const trueFalseStatements = [
+        {
+          principleId: 4,
+          statement: locale === 'zh' 
+            ? 'Human-in-the-Loop原则要求人类验证所有AI生成的输出'
+            : 'Human-in-the-Loop principle requires human validation of all AI outputs',
+          isTrue: true
+        },
+        {
+          principleId: 5,
+          statement: locale === 'zh'
+            ? 'Chunked Work建议将所有任务合并在一个大型会话中完成'
+            : 'Chunked Work suggests completing all tasks in one large session',
+          isTrue: false
+        }
+      ];
+      
+      trueFalseStatements.forEach((stmt, index) => {
+        const principle = principles.find(p => p.id === stmt.principleId)!;
         questionTypes.push({
           id: index + 3,
-          text: locale === 'zh'
-            ? `"${principleTranslation.name}"强调${principleTranslation.concept.slice(0, 20)}...`
-            : `"${principleTranslation.name}" emphasizes ${principleTranslation.concept.slice(0, 20)}...`,
+          text: stmt.statement,
           type: 'true-false',
           options: [locale === 'zh' ? '正确' : 'True', locale === 'zh' ? '错误' : 'False'],
-          correct: 0,
+          correct: stmt.isTrue ? 0 : 1,
           principleId: principle.id,
           stage: principle.stage,
           difficulty: 'easy'
@@ -133,6 +177,13 @@ export default function QuizPage() {
       });
       
       // Scenario-based questions
+      const scenarioOptions = [
+        tQuiz('principleOptions.humanInLoop'),
+        tQuiz('principleOptions.chunkedWork'),
+        tQuiz('principleOptions.contextHygiene'),
+        tQuiz('principleOptions.singleSource')
+      ];
+      
       questionTypes.push({
         id: 5,
         text: locale === 'zh'
@@ -142,14 +193,9 @@ export default function QuizPage() {
         scenario: locale === 'zh'
           ? '你正在与AI合作开发一个复杂功能，但发现AI生成的代码有很多问题需要修复。'
           : 'You are collaborating with AI to develop a complex feature, but find many issues in the AI-generated code that need fixing.',
-        options: [
-          tQuiz('principleOptions.chunkedWork'),
-          tQuiz('principleOptions.humanInLoop'),
-          tQuiz('principleOptions.contextHygiene'),
-          tQuiz('principleOptions.singleSource')
-        ],
-        correct: 0,
-        principleId: 5,
+        options: scenarioOptions,
+        correct: 0, // Human-in-the-Loop is now at index 0
+        principleId: 4, // Human-in-the-Loop principle ID
         stage: 2,
         difficulty: 'hard'
       });
@@ -553,7 +599,7 @@ export default function QuizPage() {
   // Render different question types
   const renderQuestion = () => {
     switch (question.type) {
-      case 'multiple-choice':
+      case 'single-choice':
         return (
           <div className="space-y-3">
             {question.options?.map((option, index) => (

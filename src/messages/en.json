@@ -229,9 +229,9 @@
       "hard": "hard"
     },
     "wrongAnswers": [
-      "This is a wrong answer",
-      "This is also wrong", 
-      "Another wrong option"
+      "Store context across multiple sources to maximize flexibility",
+      "Let AI handle all decisions without human intervention",
+      "Focus on completing all work in a single session"
     ],
     "principleOptions": {
       "contextHygiene": "Context Hygiene",
