@@ -24,7 +24,7 @@ export function generateMetadata({
   const ogLocale = isZh ? 'zh_CN' : 'en_US';
   
   // Choose image based on locale if not explicitly provided
-  const defaultImage = isZh ? '/og-image-zh.svg' : '/og-image.svg';
+  const defaultImage = isZh ? '/og-image-zh.png' : '/og-image.png';
   const selectedImage = image || defaultImage;
   
   // Convert relative image path to absolute URL
