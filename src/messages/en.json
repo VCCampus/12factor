@@ -139,6 +139,8 @@
     "stage4Description": "Rest and reflection, skill parity, and a culture of curiosity.",
     "viewPrinciples": "View Principles",
     "principlesCount": "principles",
+    "previousStage": "Previous Stage",
+    "nextStage": "Next Stage",
     "principle1": {
       "name": "Single Source of Truth",
       "concept": "Information dispersion equals context confusion; both AI and humans may misjudge.",

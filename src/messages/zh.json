@@ -139,6 +139,8 @@
     "stage4Description": "适时休息反思，保持技能同步，培养好奇心文化。",
     "viewPrinciples": "查看原则",
     "principlesCount": "项原则",
+    "previousStage": "上一阶段",
+    "nextStage": "下一阶段",
     "principle1": {
       "name": "单一真源 (Single Source of Truth)",
       "concept": "信息分散会导致上下文混乱，容易造成人机双方的误判。",

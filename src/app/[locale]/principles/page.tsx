@@ -2,7 +2,7 @@
 import { useTranslations, useMessages } from 'next-intl';
 import { principles, stages } from '@/data/principles';
 import { Link } from '@/i18n/routing';
-import { ArrowLeftIcon, ChevronDownIcon } from '@heroicons/react/24/outline';
+import { ArrowLeftIcon, ChevronDownIcon, ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 import { useParams, useSearchParams } from 'next/navigation';
 import { Suspense } from 'react';
 
@@ -13,6 +13,7 @@ function PrinciplesContent() {
   const stage = searchParams.get('stage');
   const t = useTranslations('principles');
   const tQuiz = useTranslations('quiz');
+  const tFlashcards = useTranslations('flashcards');
   const messages = useMessages() as {
     quiz?: Record<string, {
       name?: string;
@@ -186,6 +187,43 @@ function PrinciplesContent() {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Stage Navigation */}
+          <div className="mt-16 flex justify-between items-center gap-4">
+            {stageFilter > 1 ? (
+              <Link
+                href={{
+                  pathname: '/principles',
+                  query: { stage: stageFilter - 1 }
+                }}
+                locale={locale}
+                className="inline-flex items-center px-3 py-2 sm:px-6 sm:py-3 text-sm sm:text-base rounded-full border bg-white border-stone-300 text-stone-700 hover:bg-stone-100 hover:border-stone-400 hover:text-stone-800 transition-colors"
+              >
+                <ChevronLeftIcon className="h-4 w-4 sm:h-5 sm:w-5 mr-1 sm:mr-2 inline-block flex-shrink-0" />
+                <span className="hidden sm:inline">{t('previousStage')}</span>
+                <span className="sm:hidden">{tFlashcards('previous')}</span>
+              </Link>
+            ) : (
+              <div />
+            )}
+            
+            {stageFilter < 4 ? (
+              <Link
+                href={{
+                  pathname: '/principles',
+                  query: { stage: stageFilter + 1 }
+                }}
+                locale={locale}
+                className="inline-flex items-center px-3 py-2 sm:px-6 sm:py-3 text-sm sm:text-base rounded-full border bg-white border-stone-300 text-stone-700 hover:bg-stone-100 hover:border-stone-400 hover:text-stone-800 ml-auto transition-colors"
+              >
+                <span className="hidden sm:inline">{t('nextStage')}</span>
+                <span className="sm:hidden">{tFlashcards('next')}</span>
+                <ChevronRightIcon className="h-4 w-4 sm:h-5 sm:w-5 ml-1 sm:ml-2 inline-block flex-shrink-0" />
+              </Link>
+            ) : (
+              <div />
+            )}
           </div>
             </>
           ) : (
