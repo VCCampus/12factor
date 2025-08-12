@@ -5,6 +5,7 @@ import { Link, usePathname } from '@/i18n/routing';
 import { useState, useEffect, useRef } from 'react';
 import { ChevronDownIcon, GlobeAltIcon } from '@heroicons/react/24/outline';
 import SocialShare from './SocialShare';
+import ThemeToggle from './ThemeToggle';
 
 export default function Navigation() {
   const locale = useLocale();
@@ -34,13 +35,13 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="bg-white/80 backdrop-blur-lg border-b border-stone-200/50 sticky top-0 z-50">
+    <nav className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg border-b border-gray-200/50 dark:border-gray-700/50 sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center">
-            <Link href="/" className="flex items-center gap-2 text-xl font-medium text-stone-900 hover:text-stone-700 transition-colors">
-              <div className="w-8 h-8 bg-stone-900 rounded-lg flex items-center justify-center">
-                <div className="w-4 h-4 border-2 border-white rounded"></div>
+            <Link href="/" className="flex items-center gap-2 text-xl font-medium text-gray-900 dark:text-gray-100 hover:text-gray-700 dark:hover:text-gray-300 transition-colors">
+              <div className="w-8 h-8 bg-gray-900 dark:bg-gray-100 rounded-lg flex items-center justify-center">
+                <div className="w-4 h-4 border-2 border-white dark:border-gray-900 rounded"></div>
               </div>
               12Factor
             </Link>
@@ -51,7 +52,7 @@ export default function Navigation() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors"
+                className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
               >
                 {item.name}
               </Link>
@@ -64,7 +65,7 @@ export default function Navigation() {
               href="https://github.com/wquguru/12factor"
               target="_blank"
               rel="noopener noreferrer"
-              className="lg:hidden flex items-center text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors group"
+              className="lg:hidden flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors group"
               aria-label="Star on GitHub"
             >
               <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -76,18 +77,18 @@ export default function Navigation() {
             <div className="relative" ref={langMenuRef}>
               <button
                 onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
-                className="flex items-center text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors"
+                className="flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
               >
                 <GlobeAltIcon className="h-4 w-4 mr-2" />
                 {locale === 'zh' ? t('languageLabels.chinese') : t('languageLabels.english')}
                 <ChevronDownIcon className="h-4 w-4 ml-1" />
               </button>
               {isLangMenuOpen && (
-                <div className="absolute right-0 mt-2 w-40 bg-white rounded-2xl shadow-xl border border-stone-200 z-50">
+                <div className="absolute right-0 mt-2 w-40 bg-white dark:bg-gray-900 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 z-50">
                   <Link
                     href={pathname}
                     locale="en"
-                    className="block px-4 py-3 text-sm text-stone-700 hover:bg-stone-50 rounded-t-2xl transition-colors"
+                    className="block px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-t-2xl transition-colors"
                     onClick={() => setIsLangMenuOpen(false)}
                   >
                     {t('languageLabels.english')}
@@ -95,7 +96,7 @@ export default function Navigation() {
                   <Link
                     href={pathname}
                     locale="zh"
-                    className="block px-4 py-3 text-sm text-stone-700 hover:bg-stone-50 rounded-b-2xl transition-colors"
+                    className="block px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-b-2xl transition-colors"
                     onClick={() => setIsLangMenuOpen(false)}
                   >
                     {t('languageLabels.chinese')}
@@ -103,6 +104,8 @@ export default function Navigation() {
                 </div>
               )}
             </div>
+            
+            <ThemeToggle />
             
             <SocialShare />
           </div>

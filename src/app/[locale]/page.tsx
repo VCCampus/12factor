@@ -32,7 +32,7 @@ export default async function HomePage({
   const tCommon = await getTranslations({locale, namespace: 'common'});
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-gray-900">
       {/* Hero Section */}
       <div className="hero-gradient relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-32">
@@ -56,7 +56,7 @@ export default async function HomePage({
               <Link
                 href="/flashcards"
                 locale={locale}
-                className="btn-secondary bg-white/10 border-white/30 text-white hover:bg-white hover:text-gray-900"
+                className="btn-secondary bg-white/10 dark:bg-gray-800/50 border-white/30 dark:border-gray-600 text-white dark:text-gray-200 hover:bg-white dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-gray-100"
               >
                 {t('hero.ctaSecondary')}
               </Link>
@@ -75,13 +75,13 @@ export default async function HomePage({
       </div>
 
       {/* Benefits Section */}
-      <div className="py-32 bg-white">
+      <div className="py-32 bg-white dark:bg-gray-900">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="mb-20">
-            <h2 className="text-6xl md:text-7xl font-light text-stone-900 mb-8 leading-tight">
+            <h2 className="text-6xl md:text-7xl font-light text-stone-900 dark:text-gray-100 mb-8 leading-tight">
               {t('benefits.title')}
             </h2>
-            <p className="text-lg text-stone-600 max-w-2xl font-light leading-relaxed">
+            <p className="text-lg text-stone-600 dark:text-gray-400 max-w-2xl font-light leading-relaxed">
               {t('benefits.subtitle')}
             </p>
           </div>
@@ -89,58 +89,58 @@ export default async function HomePage({
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
             <div>
               <div className="mb-6">
-                <div className="w-12 h-12 bg-stone-900 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-stone-900 dark:bg-gray-700 rounded-lg flex items-center justify-center mb-4">
                   <BookOpenIcon className="h-6 w-6 text-white" />
                 </div>
               </div>
-              <h3 className="text-xl font-medium text-stone-900 mb-4">
+              <h3 className="text-xl font-medium text-stone-900 dark:text-gray-100 mb-4">
                 {t('benefits.aiCollaboration.title')}
               </h3>
-              <p className="text-stone-600 leading-relaxed text-sm">
+              <p className="text-stone-600 dark:text-gray-400 leading-relaxed text-sm">
                 {t('benefits.aiCollaboration.description')}
               </p>
             </div>
 
             <div>
               <div className="mb-6">
-                <div className="w-12 h-12 bg-stone-900 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-stone-900 dark:bg-gray-700 rounded-lg flex items-center justify-center mb-4">
                   <div className="w-6 h-6 rounded-full border-2 border-white"></div>
                 </div>
               </div>
-              <h3 className="text-xl font-medium text-stone-900 mb-4">
+              <h3 className="text-xl font-medium text-stone-900 dark:text-gray-100 mb-4">
                 {t('benefits.developmentFlow.title')}
               </h3>
-              <p className="text-stone-600 leading-relaxed text-sm">
+              <p className="text-stone-600 dark:text-gray-400 leading-relaxed text-sm">
                 {t('benefits.developmentFlow.description')}
               </p>
             </div>
 
             <div>
               <div className="mb-6">
-                <div className="w-12 h-12 bg-stone-900 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-stone-900 dark:bg-gray-700 rounded-lg flex items-center justify-center mb-4">
                   <div className="w-6 h-6 flex items-center justify-center">
                     <div className="w-4 h-1 bg-white rounded"></div>
                   </div>
                 </div>
               </div>
-              <h3 className="text-xl font-medium text-stone-900 mb-4">
+              <h3 className="text-xl font-medium text-stone-900 dark:text-gray-100 mb-4">
                 {t('benefits.communication.title')}
               </h3>
-              <p className="text-stone-600 leading-relaxed text-sm">
+              <p className="text-stone-600 dark:text-gray-400 leading-relaxed text-sm">
                 {t('benefits.communication.description')}
               </p>
             </div>
 
             <div>
               <div className="mb-6">
-                <div className="w-12 h-12 bg-stone-900 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-stone-900 dark:bg-gray-700 rounded-lg flex items-center justify-center mb-4">
                   <ChartBarIcon className="h-6 w-6 text-white" />
                 </div>
               </div>
-              <h3 className="text-xl font-medium text-stone-900 mb-4">
+              <h3 className="text-xl font-medium text-stone-900 dark:text-gray-100 mb-4">
                 {t('benefits.progress.title')}
               </h3>
-              <p className="text-stone-600 leading-relaxed text-sm">
+              <p className="text-stone-600 dark:text-gray-400 leading-relaxed text-sm">
                 {t('benefits.progress.description')}
               </p>
             </div>
@@ -149,54 +149,54 @@ export default async function HomePage({
       </div>
 
       {/* Big Picture Section */}
-      <div className="py-32 bg-stone-50">
+      <div className="py-32 bg-stone-50 dark:bg-gray-800">
         <div className="max-w-6xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="text-5xl md:text-6xl font-light text-stone-900 mb-12 leading-tight">
+            <h2 className="text-5xl md:text-6xl font-light text-stone-900 dark:text-gray-100 mb-12 leading-tight">
               {t('bigPicture.title')}
             </h2>
-            <p className="text-lg text-stone-600 mb-16 leading-relaxed font-light">
+            <p className="text-lg text-stone-600 dark:text-gray-400 mb-16 leading-relaxed font-light">
               {t('bigPicture.subtitle')}
             </p>
             
             <div className="space-y-8">
               <div className="flex items-start gap-4">
-                <div className="bg-stone-200 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
-                  <span className="text-stone-700 font-medium text-sm">01</span>
+                <div className="bg-stone-200 dark:bg-gray-700 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
+                  <span className="text-stone-700 dark:text-gray-300 font-medium text-sm">01</span>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-stone-900 mb-2">{t('bigPicture.step1.title')}</h3>
-                  <p className="text-stone-600 text-sm">{t('bigPicture.step1.description')}</p>
+                  <h3 className="text-lg font-medium text-stone-900 dark:text-gray-100 mb-2">{t('bigPicture.step1.title')}</h3>
+                  <p className="text-stone-600 dark:text-gray-400 text-sm">{t('bigPicture.step1.description')}</p>
                 </div>
               </div>
               
               <div className="flex items-start gap-4">
-                <div className="bg-stone-200 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
-                  <span className="text-stone-700 font-medium text-sm">02</span>
+                <div className="bg-stone-200 dark:bg-gray-700 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
+                  <span className="text-stone-700 dark:text-gray-300 font-medium text-sm">02</span>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-stone-900 mb-2">{t('bigPicture.step2.title')}</h3>
-                  <p className="text-stone-600 text-sm">{t('bigPicture.step2.description')}</p>
+                  <h3 className="text-lg font-medium text-stone-900 dark:text-gray-100 mb-2">{t('bigPicture.step2.title')}</h3>
+                  <p className="text-stone-600 dark:text-gray-400 text-sm">{t('bigPicture.step2.description')}</p>
                 </div>
               </div>
               
               <div className="flex items-start gap-4">
-                <div className="bg-stone-200 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
-                  <span className="text-stone-700 font-medium text-sm">03</span>
+                <div className="bg-stone-200 dark:bg-gray-700 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
+                  <span className="text-stone-700 dark:text-gray-300 font-medium text-sm">03</span>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-stone-900 mb-2">{t('bigPicture.step3.title')}</h3>
-                  <p className="text-stone-600 text-sm">{t('bigPicture.step3.description')}</p>
+                  <h3 className="text-lg font-medium text-stone-900 dark:text-gray-100 mb-2">{t('bigPicture.step3.title')}</h3>
+                  <p className="text-stone-600 dark:text-gray-400 text-sm">{t('bigPicture.step3.description')}</p>
                 </div>
               </div>
               
               <div className="flex items-start gap-4">
-                <div className="bg-stone-200 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
-                  <span className="text-stone-700 font-medium text-sm">04</span>
+                <div className="bg-stone-200 dark:bg-gray-700 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
+                  <span className="text-stone-700 dark:text-gray-300 font-medium text-sm">04</span>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-stone-900 mb-2">{t('bigPicture.step4.title')}</h3>
-                  <p className="text-stone-600 text-sm">{t('bigPicture.step4.description')}</p>
+                  <h3 className="text-lg font-medium text-stone-900 dark:text-gray-100 mb-2">{t('bigPicture.step4.title')}</h3>
+                  <p className="text-stone-600 dark:text-gray-400 text-sm">{t('bigPicture.step4.description')}</p>
                 </div>
               </div>
             </div>
@@ -205,7 +205,7 @@ export default async function HomePage({
               <Link
                 href="/principles"
                 locale={locale}
-                className="inline-flex items-center px-8 py-3 bg-green-100 hover:bg-green-200 text-green-800 font-medium rounded-full transition-all duration-200 text-sm"
+                className="inline-flex items-center px-8 py-3 bg-green-100 dark:bg-green-900/30 hover:bg-green-200 dark:hover:bg-green-900/40 text-green-800 dark:text-green-400 font-medium rounded-full transition-all duration-200 text-sm"
               >
                 {t('bigPicture.cta')}
               </Link>
@@ -213,19 +213,19 @@ export default async function HomePage({
           </div>
           
           <div className="relative">
-            <div className="aspect-square bg-gradient-to-br from-amber-100 via-stone-200 to-amber-200 rounded-3xl flex items-center justify-center">
+            <div className="aspect-square bg-gradient-to-br from-amber-100 via-stone-200 to-amber-200 dark:from-gray-700 dark:via-gray-800 dark:to-gray-700 rounded-3xl flex items-center justify-center">
               <div className="grid grid-cols-2 gap-4 p-12">
-                <div className="bg-white/80 backdrop-blur rounded-2xl p-6 aspect-square flex items-center justify-center">
-                  <div className="w-full h-16 bg-stone-300 rounded-lg"></div>
+                <div className="bg-white/80 dark:bg-gray-900/60 backdrop-blur rounded-2xl p-6 aspect-square flex items-center justify-center">
+                  <div className="w-full h-16 bg-stone-300 dark:bg-gray-600 rounded-lg"></div>
                 </div>
-                <div className="bg-white/60 backdrop-blur rounded-2xl p-6 aspect-square flex items-center justify-center">
-                  <div className="w-full h-12 bg-stone-300 rounded-lg"></div>
+                <div className="bg-white/60 dark:bg-gray-900/40 backdrop-blur rounded-2xl p-6 aspect-square flex items-center justify-center">
+                  <div className="w-full h-12 bg-stone-300 dark:bg-gray-600 rounded-lg"></div>
                 </div>
-                <div className="bg-white/60 backdrop-blur rounded-2xl p-6 aspect-square flex items-center justify-center">
-                  <div className="w-full h-20 bg-stone-300 rounded-lg"></div>
+                <div className="bg-white/60 dark:bg-gray-900/40 backdrop-blur rounded-2xl p-6 aspect-square flex items-center justify-center">
+                  <div className="w-full h-20 bg-stone-300 dark:bg-gray-600 rounded-lg"></div>
                 </div>
-                <div className="bg-white/80 backdrop-blur rounded-2xl p-6 aspect-square flex items-center justify-center">
-                  <div className="w-full h-8 bg-stone-300 rounded-lg"></div>
+                <div className="bg-white/80 dark:bg-gray-900/60 backdrop-blur rounded-2xl p-6 aspect-square flex items-center justify-center">
+                  <div className="w-full h-8 bg-stone-300 dark:bg-gray-600 rounded-lg"></div>
                 </div>
               </div>
             </div>
@@ -234,13 +234,13 @@ export default async function HomePage({
       </div>
 
       {/* Four Stages Learning Path */}
-      <div className="py-32 bg-white">
+      <div className="py-32 bg-white dark:bg-gray-900">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className="text-6xl md:text-7xl font-light text-stone-900 mb-8 leading-tight">
+            <h2 className="text-6xl md:text-7xl font-light text-stone-900 dark:text-gray-100 mb-8 leading-tight">
               {t('learningPath.title')}
             </h2>
-            <p className="text-lg text-stone-600 max-w-3xl mx-auto font-light leading-relaxed">
+            <p className="text-lg text-stone-600 dark:text-gray-400 max-w-3xl mx-auto font-light leading-relaxed">
               {t('learningPath.subtitle')}
             </p>
           </div>
@@ -249,13 +249,13 @@ export default async function HomePage({
             <div className="space-y-12">
               <div className="flex gap-6">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center">
-                    <span className="text-green-700 font-semibold">1</span>
+                  <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-2xl flex items-center justify-center">
+                    <span className="text-green-700 dark:text-green-400 font-semibold">1</span>
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-xl font-medium text-stone-900 mb-3">{t('learningPath.prepare.title')}</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed">
+                  <h3 className="text-xl font-medium text-stone-900 dark:text-gray-100 mb-3">{t('learningPath.prepare.title')}</h3>
+                  <p className="text-stone-600 dark:text-gray-400 text-sm leading-relaxed">
                     {t('learningPath.prepare.description')}
                   </p>
                 </div>
@@ -263,13 +263,13 @@ export default async function HomePage({
               
               <div className="flex gap-6">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center">
-                    <span className="text-green-700 font-semibold">2</span>
+                  <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-2xl flex items-center justify-center">
+                    <span className="text-green-700 dark:text-green-400 font-semibold">2</span>
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-xl font-medium text-stone-900 mb-3">{t('learningPath.execute.title')}</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed">
+                  <h3 className="text-xl font-medium text-stone-900 dark:text-gray-100 mb-3">{t('learningPath.execute.title')}</h3>
+                  <p className="text-stone-600 dark:text-gray-400 text-sm leading-relaxed">
                     {t('learningPath.execute.description')}
                   </p>
                 </div>
@@ -279,13 +279,13 @@ export default async function HomePage({
             <div className="space-y-12">
               <div className="flex gap-6">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center">
-                    <span className="text-green-700 font-semibold">3</span>
+                  <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-2xl flex items-center justify-center">
+                    <span className="text-green-700 dark:text-green-400 font-semibold">3</span>
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-xl font-medium text-stone-900 mb-3">{t('learningPath.collaborate.title')}</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed">
+                  <h3 className="text-xl font-medium text-stone-900 dark:text-gray-100 mb-3">{t('learningPath.collaborate.title')}</h3>
+                  <p className="text-stone-600 dark:text-gray-400 text-sm leading-relaxed">
                     {t('learningPath.collaborate.description')}
                   </p>
                 </div>
@@ -293,13 +293,13 @@ export default async function HomePage({
               
               <div className="flex gap-6">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center">
-                    <span className="text-green-700 font-semibold">4</span>
+                  <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-2xl flex items-center justify-center">
+                    <span className="text-green-700 dark:text-green-400 font-semibold">4</span>
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-xl font-medium text-stone-900 mb-3">{t('learningPath.iterate.title')}</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed">
+                  <h3 className="text-xl font-medium text-stone-900 dark:text-gray-100 mb-3">{t('learningPath.iterate.title')}</h3>
+                  <p className="text-stone-600 dark:text-gray-400 text-sm leading-relaxed">
                     {t('learningPath.iterate.description')}
                   </p>
                 </div>
@@ -310,36 +310,36 @@ export default async function HomePage({
       </div>
 
       {/* Learning Journey Section */}
-      <div className="py-32 bg-stone-50">
+      <div className="py-32 bg-stone-50 dark:bg-gray-800">
         <div className="max-w-6xl mx-auto px-6 lg:px-8 text-center">
-          <h2 className="text-6xl md:text-7xl font-light text-stone-900 mb-8 leading-tight">
+          <h2 className="text-6xl md:text-7xl font-light text-stone-900 dark:text-gray-100 mb-8 leading-tight">
             {t('journey.title')}
           </h2>
-          <p className="text-lg text-stone-600 mb-24 max-w-3xl mx-auto font-light leading-relaxed">
+          <p className="text-lg text-stone-600 dark:text-gray-400 mb-24 max-w-3xl mx-auto font-light leading-relaxed">
             {t('journey.subtitle')}
           </p>
           
           <div className="grid md:grid-cols-3 gap-16">
             <div className="text-center">
-              <div className="text-8xl font-light text-stone-300 mb-8">01</div>
-              <h3 className="text-2xl font-medium text-stone-900 mb-6">{t('journey.step1.title')}</h3>
-              <p className="text-stone-600 leading-relaxed">
+              <div className="text-8xl font-light text-stone-300 dark:text-gray-600 mb-8">01</div>
+              <h3 className="text-2xl font-medium text-stone-900 dark:text-gray-100 mb-6">{t('journey.step1.title')}</h3>
+              <p className="text-stone-600 dark:text-gray-400 leading-relaxed">
                 {t('journey.step1.description')}
               </p>
             </div>
             
             <div className="text-center">
-              <div className="text-8xl font-light text-stone-300 mb-8">02</div>
-              <h3 className="text-2xl font-medium text-stone-900 mb-6">{t('journey.step2.title')}</h3>
-              <p className="text-stone-600 leading-relaxed">
+              <div className="text-8xl font-light text-stone-300 dark:text-gray-600 mb-8">02</div>
+              <h3 className="text-2xl font-medium text-stone-900 dark:text-gray-100 mb-6">{t('journey.step2.title')}</h3>
+              <p className="text-stone-600 dark:text-gray-400 leading-relaxed">
                 {t('journey.step2.description')}
               </p>
             </div>
             
             <div className="text-center">
-              <div className="text-8xl font-light text-stone-300 mb-8">03</div>
-              <h3 className="text-2xl font-medium text-stone-900 mb-6">{t('journey.step3.title')}</h3>
-              <p className="text-stone-600 leading-relaxed">
+              <div className="text-8xl font-light text-stone-300 dark:text-gray-600 mb-8">03</div>
+              <h3 className="text-2xl font-medium text-stone-900 dark:text-gray-100 mb-6">{t('journey.step3.title')}</h3>
+              <p className="text-stone-600 dark:text-gray-400 leading-relaxed">
                 {t('journey.step3.description')}
               </p>
             </div>
@@ -358,7 +358,7 @@ export default async function HomePage({
             <Link
               href="/flashcards" 
               locale={locale}
-              className="inline-flex items-center px-8 py-4 border-2 border-stone-300 text-stone-700 hover:border-stone-400 hover:text-stone-900 font-medium rounded-full transition-all duration-200 text-sm"
+              className="inline-flex items-center px-8 py-4 border-2 border-stone-300 dark:border-gray-600 text-stone-700 dark:text-gray-300 hover:border-stone-400 dark:hover:border-gray-500 hover:text-stone-900 dark:hover:text-gray-200 font-medium rounded-full transition-all duration-200 text-sm"
             >
               {t('journey.ctaSecondary')}
             </Link>
@@ -367,11 +367,11 @@ export default async function HomePage({
       </div>
 
       {/* Footer */}
-      <footer className="py-16 bg-white border-t border-stone-200">
+      <footer className="py-16 bg-white dark:bg-gray-900 border-t border-stone-200 dark:border-gray-700">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-stone-900 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-stone-900 dark:bg-gray-700 rounded-lg flex items-center justify-center">
                 <div className="w-4 h-4 border-2 border-white rounded"></div>
               </div>
               <UptimeDisplay />

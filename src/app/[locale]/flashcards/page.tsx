@@ -120,7 +120,7 @@ export default function FlashcardsPage() {
   const currentProgress = progress.find(p => p.principleId === currentPrinciple.id);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-gray-900">
       {/* Hero Section */}
       <div className="hero-gradient relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-32 sm:pb-24">
@@ -137,7 +137,7 @@ export default function FlashcardsPage() {
               <Link
                 href="/principles"
                 locale={locale}
-                className="btn-secondary bg-white/10 border-white/30 text-white hover:bg-white hover:text-gray-900"
+                className="btn-secondary bg-white/10 dark:bg-gray-800/50 border-white/30 dark:border-gray-600 text-white dark:text-gray-200 hover:bg-white dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-gray-100"
               >
                 {t('studyPrinciples')}
               </Link>
@@ -145,7 +145,7 @@ export default function FlashcardsPage() {
               <Link
                 href="/quiz"
                 locale={locale}
-                className="btn-secondary bg-white/10 border-white/30 text-white hover:bg-white hover:text-gray-900"
+                className="btn-secondary bg-white/10 dark:bg-gray-800/50 border-white/30 dark:border-gray-600 text-white dark:text-gray-200 hover:bg-white dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-gray-100"
               >
                 {t('takeQuiz')}
               </Link>
@@ -182,15 +182,15 @@ export default function FlashcardsPage() {
       </div>
 
       {/* Main Content */}
-      <div id="practice-content" className="py-32 bg-white">
+      <div id="practice-content" className="py-32 bg-white dark:bg-gray-900">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
 
           {/* Progress Section */}
           <div className="mb-16">
-            <h2 className="text-6xl md:text-7xl font-light text-stone-900 mb-8 leading-tight">
+            <h2 className="text-6xl md:text-7xl font-light text-stone-900 dark:text-gray-100 mb-8 leading-tight">
               {t('practiceSession')}
             </h2>
-            <p className="text-lg text-stone-600 max-w-3xl font-light leading-relaxed mb-8">
+            <p className="text-lg text-stone-600 dark:text-gray-400 max-w-3xl font-light leading-relaxed mb-8">
               {t('practiceDescription')}
             </p>
             

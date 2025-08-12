@@ -32,7 +32,7 @@ function PrinciplesContent() {
 
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-gray-900">
       {/* Hero Section */}
       <div className="hero-gradient relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-32 sm:pb-24">
@@ -63,7 +63,7 @@ function PrinciplesContent() {
               <Link
                 href="/flashcards"
                 locale={locale}
-                className="btn-secondary bg-white/10 border-white/30 text-white hover:bg-white hover:text-gray-900"
+                className="btn-secondary bg-white/10 dark:bg-gray-800/50 border-white/30 dark:border-gray-600 text-white dark:text-gray-200 hover:bg-white dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-gray-100"
               >
                 {t('practiceWithFlashcards')}
               </Link>
@@ -71,7 +71,7 @@ function PrinciplesContent() {
               <Link
                 href="/quiz"
                 locale={locale}
-                className="btn-secondary bg-white/10 border-white/30 text-white hover:bg-white hover:text-gray-900"
+                className="btn-secondary bg-white/10 dark:bg-gray-800/50 border-white/30 dark:border-gray-600 text-white dark:text-gray-200 hover:bg-white dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-gray-100"
               >
                 {t('takeQuiz')}
               </Link>
@@ -111,16 +111,16 @@ function PrinciplesContent() {
       </div>
 
       {/* Main Content */}
-      <div id="stage-content" className="py-32 bg-white">
+      <div id="stage-content" className="py-32 bg-white dark:bg-gray-900">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
 
           {stageFilter ? (
             <>
               <div className="mb-16">
-                <h2 className="text-6xl md:text-7xl font-light text-stone-900 mb-8 leading-tight">
+                <h2 className="text-6xl md:text-7xl font-light text-stone-900 dark:text-gray-100 mb-8 leading-tight">
                   {t(`stage${stageFilter}Title`)}
                 </h2>
-                <p className="text-lg text-stone-600 max-w-3xl font-light leading-relaxed">
+                <p className="text-lg text-stone-600 dark:text-gray-400 max-w-3xl font-light leading-relaxed">
                   {t(`stage${stageFilter}Description`)}
                 </p>
               </div>
@@ -134,52 +134,52 @@ function PrinciplesContent() {
               >
                 <div className="flex items-start justify-between mb-6">
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center">
-                      <span className="text-green-700 font-semibold">{principle.id}</span>
+                    <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-2xl flex items-center justify-center">
+                      <span className="text-green-700 dark:text-green-400 font-semibold">{principle.id}</span>
                     </div>
-                    <div className="text-sm text-stone-500 font-medium">
+                    <div className="text-sm text-stone-500 dark:text-gray-500 font-medium">
                       {t('stage')} {principle.stage}
                     </div>
                   </div>
                 </div>
 
-                <h3 className="text-xl font-medium text-stone-900 mb-4 leading-tight">
+                <h3 className="text-xl font-medium text-stone-900 dark:text-gray-100 mb-4 leading-tight">
                   {tQuiz(`${principle.messageKey}.name`)}
                 </h3>
 
                 <div className="space-y-6">
                   <div>
-                    <h4 className="font-medium text-stone-700 mb-3 text-sm uppercase tracking-wide">
+                    <h4 className="font-medium text-stone-700 dark:text-gray-300 mb-3 text-sm uppercase tracking-wide">
                       {t('concept')}
                     </h4>
-                    <p className="text-stone-600 text-sm leading-relaxed">
+                    <p className="text-stone-600 dark:text-gray-400 text-sm leading-relaxed">
                       {tQuiz(`${principle.messageKey}.concept`)}
                     </p>
                   </div>
 
                   <div>
-                    <h4 className="font-medium text-stone-700 mb-3 text-sm uppercase tracking-wide">
+                    <h4 className="font-medium text-stone-700 dark:text-gray-300 mb-3 text-sm uppercase tracking-wide">
                       {t('practices')}
                     </h4>
                     <ul className="space-y-2">
                       {(messages.quiz?.[principle.messageKey]?.practices || []).map((practice: string, index: number) => (
                         <li key={index} className="flex items-start gap-2">
                           <div className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                          <span className="text-stone-600 text-sm leading-relaxed">{practice}</span>
+                          <span className="text-stone-600 dark:text-gray-400 text-sm leading-relaxed">{practice}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
                   <div>
-                    <h4 className="font-medium text-stone-700 mb-3 text-sm uppercase tracking-wide">
+                    <h4 className="font-medium text-stone-700 dark:text-gray-300 mb-3 text-sm uppercase tracking-wide">
                       {t('antiPatterns')}
                     </h4>
                     <ul className="space-y-2">
                       {(messages.quiz?.[principle.messageKey]?.antiPatterns || []).map((pattern: string, index: number) => (
                         <li key={index} className="flex items-start gap-2">
                           <div className="w-1.5 h-1.5 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
-                          <span className="text-stone-600 text-sm leading-relaxed">{pattern}</span>
+                          <span className="text-stone-600 dark:text-gray-400 text-sm leading-relaxed">{pattern}</span>
                         </li>
                       ))}
                     </ul>
@@ -198,7 +198,7 @@ function PrinciplesContent() {
                   query: { stage: stageFilter - 1 }
                 }}
                 locale={locale}
-                className="inline-flex items-center px-3 py-2 sm:px-6 sm:py-3 text-sm sm:text-base rounded-full border bg-white border-stone-300 text-stone-700 hover:bg-stone-100 hover:border-stone-400 hover:text-stone-800 transition-colors"
+                className="inline-flex items-center px-3 py-2 sm:px-6 sm:py-3 text-sm sm:text-base rounded-full border bg-white dark:bg-gray-800 border-stone-300 dark:border-gray-600 text-stone-700 dark:text-gray-300 hover:bg-stone-100 dark:hover:bg-gray-700 hover:border-stone-400 dark:hover:border-gray-500 hover:text-stone-800 dark:hover:text-gray-200 transition-colors"
               >
                 <ChevronLeftIcon className="h-4 w-4 sm:h-5 sm:w-5 mr-1 sm:mr-2 inline-block flex-shrink-0" />
                 <span className="hidden sm:inline">{t('previousStage')}</span>
@@ -229,10 +229,10 @@ function PrinciplesContent() {
           ) : (
             <>
               <div id="learning-paths" className="text-center mb-20">
-                <h2 className="text-6xl md:text-7xl font-light text-stone-900 mb-8 leading-tight">
+                <h2 className="text-6xl md:text-7xl font-light text-stone-900 dark:text-gray-100 mb-8 leading-tight">
                   {t('chooseLearningPath')}
                 </h2>
-                <p className="text-lg text-stone-600 max-w-3xl mx-auto font-light leading-relaxed">
+                <p className="text-lg text-stone-600 dark:text-gray-400 max-w-3xl mx-auto font-light leading-relaxed">
                   {t('chooseLearningPathDescription')}
                 </p>
               </div>
@@ -249,15 +249,15 @@ function PrinciplesContent() {
                     className="modern-card group hover:shadow-2xl transition-all duration-300 cursor-pointer"
                   >
                     <div className="flex items-center gap-4 mb-6">
-                      <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center group-hover:bg-green-200 transition-colors">
-                        <span className="text-green-700 font-bold text-xl">{stage.id}</span>
+                      <div className="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-2xl flex items-center justify-center group-hover:bg-green-200 dark:group-hover:bg-green-900/40 transition-colors">
+                        <span className="text-green-700 dark:text-green-400 font-bold text-xl">{stage.id}</span>
                       </div>
                       <div>
-                        <h3 className="text-2xl font-medium text-stone-900 mb-1">{tQuiz(`${stage.messageKey}.name`)}</h3>
-                        <div className="text-sm text-green-600 font-medium">{stage.principles.length} {t('principlesCount')}</div>
+                        <h3 className="text-2xl font-medium text-stone-900 dark:text-gray-100 mb-1">{tQuiz(`${stage.messageKey}.name`)}</h3>
+                        <div className="text-sm text-green-600 dark:text-green-400 font-medium">{stage.principles.length} {t('principlesCount')}</div>
                       </div>
                     </div>
-                    <p className="text-stone-600 text-sm leading-relaxed">
+                    <p className="text-stone-600 dark:text-gray-400 text-sm leading-relaxed">
                       {tQuiz(`${stage.messageKey}.description`)}
                     </p>
                   </Link>
