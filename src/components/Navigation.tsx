@@ -86,7 +86,7 @@ export default function Navigation() {
               {isLangMenuOpen && (
                 <div className="absolute right-0 mt-2 w-40 bg-white dark:bg-gray-900 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 z-50">
                   <Link
-                    href={pathname}
+                    href={pathname || '/'}
                     locale="en"
                     className="block px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-t-2xl transition-colors"
                     onClick={() => setIsLangMenuOpen(false)}
@@ -94,7 +94,7 @@ export default function Navigation() {
                     {t('languageLabels.english')}
                   </Link>
                   <Link
-                    href={pathname}
+                    href={pathname || '/'}
                     locale="zh"
                     className="block px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-b-2xl transition-colors"
                     onClick={() => setIsLangMenuOpen(false)}
@@ -105,7 +105,9 @@ export default function Navigation() {
               )}
             </div>
             
-            <ThemeToggle />
+            <div className="hidden sm:block">
+              <ThemeToggle />
+            </div>
             
             <SocialShare />
           </div>

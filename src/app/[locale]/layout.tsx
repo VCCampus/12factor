@@ -83,23 +83,16 @@ export default async function LocaleLayout({
   const themeClass = getThemeClass(theme);
 
   return (
-    <html lang={locale} className={themeClass} suppressHydrationWarning>
-      <head>
-        <ThemeScript />
-      </head>
-      <body className={`${inter.variable} ${notoSansSC.variable} font-sans`}>
-        <NextIntlClientProvider messages={messages} locale={locale}>
-          <ThemeProvider>
-            <WebViewProvider>
-              <div className="min-h-screen bg-white dark:bg-gray-900">
-                <Navigation />
-                <GitHubCorner />
-                <main>{children}</main>
-              </div>
-            </WebViewProvider>
-          </ThemeProvider>
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider messages={messages} locale={locale}>
+      <ThemeProvider>
+        <WebViewProvider>
+          <div className="min-h-screen bg-white dark:bg-gray-900">
+            <Navigation />
+            <GitHubCorner />
+            <main>{children}</main>
+          </div>
+        </WebViewProvider>
+      </ThemeProvider>
+    </NextIntlClientProvider>
   );
 }
