@@ -36,9 +36,31 @@ export function generateMetadata({
     ? `${description} | Vibe Coding 编程方法论，10x Engineering 效率提升，AI协作时代的交互式学习平台。`
     : `${description} | Vibe Coding methodology for 10x Engineering efficiency. Interactive AI collaboration platform with gamified learning.`;
 
+  // SEO-optimized keywords based on locale
+  const keywords = isZh
+    ? ['Vibe Coding', '10x Engineering', 'AI编程', '编程方法论', '开发效率', '提示词工程', 'AI协作', '程序员生产力', '12Factor', 'ChatGPT编程', 'Claude编程', 'Copilot最佳实践']
+    : ['Vibe Coding', '10x Engineering', 'AI programming', 'developer productivity', 'programming methodology', 'prompt engineering', 'AI collaboration', 'coding efficiency', '12Factor', 'ChatGPT coding', 'Claude programming', 'Copilot best practices'];
+
   return {
     title: enhancedTitle,
     description: socialDescription,
+    keywords: keywords,
+    authors: [{ name: 'wquguru', url: 'https://twitter.com/wquguru' }],
+    creator: 'wquguru',
+    publisher: '12Factor.me',
+    robots: {
+      index: true,
+      follow: true,
+      nocache: false,
+      googleBot: {
+        index: true,
+        follow: true,
+        noimageindex: false,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
     // Open Graph metadata for Facebook, LinkedIn, etc.
     openGraph: {
       title: enhancedTitle,

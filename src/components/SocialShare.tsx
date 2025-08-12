@@ -2,7 +2,6 @@
 
 import { useLocale } from 'next-intl';
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
 
 interface SocialShareProps {
   className?: string;
@@ -129,23 +128,13 @@ export default function SocialShare({ className = '' }: SocialShareProps) {
           className="p-2 text-stone-600 hover:text-stone-900 hover:bg-stone-100 rounded-full transition-all duration-200"
           title={`Share on ${platform.name}`}
         >
-          {platform.iconType === 'svg' ? (
-            <svg 
-              className="w-5 h-5" 
-              fill="currentColor" 
-              viewBox="0 0 24 24"
-            >
-              <path d={platform.iconPath} />
-            </svg>
-          ) : (
-            <Image
-              src={platform.iconSrc}
-              alt={platform.name}
-              width={20}
-              height={20}
-              className="w-5 h-5"
-            />
-          )}
+          <svg 
+            className="w-5 h-5" 
+            fill="currentColor" 
+            viewBox="0 0 24 24"
+          >
+            <path d={platform.iconPath} />
+          </svg>
         </button>
       ))}
     </div>
