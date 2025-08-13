@@ -1,6 +1,7 @@
 import { Inter, Noto_Sans_SC } from 'next/font/google';
 import ThemeScript from './[locale]/theme-script';
 import { cookies } from 'next/headers';
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -29,6 +30,7 @@ export default async function RootLayout({
       </head>
       <body className={`${inter.variable} ${notoSansSC.variable} font-sans`}>
         {children}
+        <Analytics />
       </body>
     </html>
   );
