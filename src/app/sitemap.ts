@@ -1,63 +1,63 @@
 import { MetadataRoute } from 'next';
-// import { principles } from '@/data/principles'; // Will be used when individual principle pages are implemented
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://12factor.me';
   const currentDate = new Date();
   
-  // Base pages for each locale
-  const basePages = ['', '/principles', '/flashcards', '/quiz'];
+  const pages = [
+    { path: '', priority: 1.0, changeFrequency: 'weekly' as const },
+    { path: '/principles', priority: 0.9, changeFrequency: 'weekly' as const },
+    { path: '/flashcards', priority: 0.8, changeFrequency: 'monthly' as const },
+    { path: '/quiz', priority: 0.8, changeFrequency: 'monthly' as const }
+  ];
   
-  // Generate URLs for all locales and pages
   const urls: MetadataRoute.Sitemap = [];
   
-  // Add home page for default locale (en)
-  urls.push({
-    url: baseUrl,
-    lastModified: currentDate,
-    changeFrequency: 'weekly',
-    priority: 1.0,
-    alternates: {
-      languages: {
-        en: baseUrl,
-        zh: `${baseUrl}/zh`,
-      },
-    },
-  });
-  
-  // Add other pages for all locales
-  basePages.slice(1).forEach(page => {
-    // English version
+  pages.forEach(({ path, priority, changeFrequency }) => {
+    if (path === '') {
+      // Home page (redirects to /en)
+      urls.push({
+        url: baseUrl,
+        lastModified: currentDate,
+        changeFrequency,
+        priority,
+        alternates: {
+          languages: {
+            en: `${baseUrl}/en`,
+            zh: `${baseUrl}/zh`,
+          },
+        },
+      });
+    } else {
+      // English pages
+      urls.push({
+        url: `${baseUrl}/en${path}`,
+        lastModified: currentDate,
+        changeFrequency,
+        priority,
+        alternates: {
+          languages: {
+            en: `${baseUrl}/en${path}`,
+            zh: `${baseUrl}/zh${path}`,
+          },
+        },
+      });
+    }
+    
+    // Chinese pages (always with /zh prefix)
     urls.push({
-      url: `${baseUrl}${page}`,
+      url: `${baseUrl}/zh${path}`,
       lastModified: currentDate,
-      changeFrequency: page === '/principles' ? 'weekly' : 'monthly',
-      priority: page === '/principles' ? 0.9 : 0.8,
+      changeFrequency,
+      priority,
       alternates: {
         languages: {
-          en: `${baseUrl}${page}`,
-          zh: `${baseUrl}/zh${page}`,
+          en: path === '' ? `${baseUrl}/en` : `${baseUrl}/en${path}`,
+          zh: `${baseUrl}/zh${path}`,
         },
       },
     });
   });
-  
-  // Individual principle pages - commented out until implemented
-  // principles.forEach((principle) => {
-  //   const principleSlug = principle.title.en.toLowerCase().replace(/\s+/g, '-');
-  //   urls.push({
-  //     url: `${baseUrl}/principles/${principleSlug}`,
-  //     lastModified: currentDate,
-  //     changeFrequency: 'monthly',
-  //     priority: 0.7,
-  //     alternates: {
-  //       languages: {
-  //         en: `${baseUrl}/principles/${principleSlug}`,
-  //         zh: `${baseUrl}/zh/principles/${principleSlug}`,
-  //       },
-  //     },
-  //   });
-  // });
   
   return urls;
 }
