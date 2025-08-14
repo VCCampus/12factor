@@ -1,26 +1,13 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
-import { Inter, Noto_Sans_SC } from 'next/font/google';
 import { routing } from '@/i18n/routing';
 import { notFound } from 'next/navigation';
 import Navigation from '@/components/Navigation';
 import GitHubCorner from '@/components/GitHubCorner';
 import { WebViewProvider } from '@/providers/WebViewProvider';
 import { ThemeProvider } from '@/providers/ThemeProvider';
-import ThemeScript from './theme-script';
-import { getThemeFromCookies, getThemeClass } from '@/lib/theme';
 import '../globals.css';
 import type { Metadata } from 'next';
-
-const inter = Inter({
-  variable: '--font-inter',
-  subsets: ['latin'],
-});
-
-const notoSansSC = Noto_Sans_SC({
-  variable: '--font-noto-sans-sc',
-  subsets: ['latin'],
-});
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -79,8 +66,6 @@ export default async function LocaleLayout({
   }
 
   const messages = await getMessages({ locale });
-  const theme = await getThemeFromCookies();
-  const themeClass = getThemeClass(theme);
 
   return (
     <NextIntlClientProvider messages={messages} locale={locale}>

@@ -523,6 +523,8 @@ export default function QuizPage() {
               setCurrentQuestion(currentQuestion + 1);
               setSelectedAnswer(null);
               setTimeLeft(30); // Reset timer for next question
+              // Scroll to top when auto-submitting in timed mode
+              window.scrollTo({ top: 0, behavior: 'smooth' });
             } else {
               setShowResults(true);
             }
@@ -554,6 +556,8 @@ export default function QuizPage() {
         if (quizMode === 'timed') {
           setTimeLeft(30); // Reset timer for next question
         }
+        // Scroll to top when moving to next question
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       } else {
         setShowResults(true);
       }
@@ -1021,11 +1025,11 @@ export default function QuizPage() {
       </div>
 
       {/* Main Quiz Content */}
-      <div className="py-16">
+      <div className="py-8">
         <div className="max-w-2xl mx-auto px-6 lg:px-8">
 
           {/* Progress bar */}
-          <div className="mb-12">
+          <div className="mb-6">
             <div className="w-full bg-stone-200 dark:bg-gray-700 rounded-full h-3">
               <div 
                 className={`h-3 rounded-full transition-all duration-300 shadow-sm ${
