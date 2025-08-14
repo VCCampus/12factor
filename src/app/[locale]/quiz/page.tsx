@@ -78,6 +78,11 @@ export default function QuizPage() {
   
   // Always declare all hooks at the top level
   const [questions] = useState<Question[]>(() => {
+    // Helper function to remove trailing periods from text
+    const removePeriods = (text: string): string => {
+      return text.replace(/[。.]$/, '');
+    };
+    
     // Fisher-Yates shuffle algorithm for better randomization
     const shuffle = <T,>(array: T[]): T[] => {
       const arr = [...array];
@@ -199,12 +204,16 @@ export default function QuizPage() {
           tQuiz('wrongAnswers.2')
         ];
         
+        // Remove trailing periods from all options
+        const cleanedConcept = removePeriods(principleTranslation.concept);
+        const cleanedWrongAnswers = wrongAnswers.map(answer => removePeriods(answer));
+        
         const options = shuffle([
-          principleTranslation.concept,
-          ...wrongAnswers
+          cleanedConcept,
+          ...cleanedWrongAnswers
         ]);
         
-        const correctIndex = options.findIndex(opt => opt === principleTranslation.concept);
+        const correctIndex = options.findIndex(opt => opt === cleanedConcept);
         
         questionTypes.push({
           id: index,
@@ -322,7 +331,7 @@ export default function QuizPage() {
       // Generate 3 scenario questions from different scenarios
       const shuffledScenarios = shuffle(scenarios);
       shuffledScenarios.slice(0, 3).forEach((scenario, index) => {
-        const correctAnswer = tQuiz(`principleOptions.${scenario.correctPrinciple}`);
+        const correctAnswer = removePeriods(tQuiz(`principleOptions.${scenario.correctPrinciple}`));
         const allOptions = [
           tQuiz('principleOptions.humanInLoop'),
           tQuiz('principleOptions.chunkedWork'),
@@ -335,7 +344,7 @@ export default function QuizPage() {
           tQuiz('principleOptions.restReflection'),
           tQuiz('principleOptions.skillParity'),
           tQuiz('principleOptions.cultureOfCuriosity')
-        ].filter(opt => opt !== correctAnswer); // Remove correct answer from pool
+        ].map(opt => removePeriods(opt)).filter(opt => opt !== correctAnswer); // Remove correct answer from pool
         
         // Select 3 random wrong answers and add the correct one
         const wrongOptions = shuffle(allOptions).slice(0, 3);
@@ -397,12 +406,14 @@ export default function QuizPage() {
         'Focus on a single tech stack to become a domain expert'
       ];
       
-      const shuffledCuriosityOptions = shuffle(curiosityOptions);
-      const correctCuriosityIndex = shuffledCuriosityOptions.indexOf(
+      const cleanedCuriosityOptions = curiosityOptions.map(opt => removePeriods(opt));
+      const shuffledCuriosityOptions = shuffle(cleanedCuriosityOptions);
+      const correctCuriosityAnswer = removePeriods(
         locale === 'zh' 
           ? '持续学习和探索新的AI工具和方法，保持开放心态'
           : 'Continuously learn and explore new AI tools and methods with an open mindset'
       );
+      const correctCuriosityIndex = shuffledCuriosityOptions.indexOf(correctCuriosityAnswer);
       
       questionTypes.push({
         id: 16,
@@ -430,12 +441,14 @@ export default function QuizPage() {
         'Avoid task switching, focus on completing one large task'
       ];
       
-      const shuffledChunkedOptions = shuffle(chunkedWorkOptions);
-      const correctChunkedIndex = shuffledChunkedOptions.indexOf(
+      const cleanedChunkedOptions = chunkedWorkOptions.map(opt => removePeriods(opt));
+      const shuffledChunkedOptions = shuffle(cleanedChunkedOptions);
+      const correctChunkedAnswer = removePeriods(
         locale === 'zh'
           ? '将大任务分解成小块，逐步完成并验证'
           : 'Break large tasks into small chunks, complete and verify incrementally'
       );
+      const correctChunkedIndex = shuffledChunkedOptions.indexOf(correctChunkedAnswer);
       
       questionTypes.push({
         id: 17,
@@ -479,7 +492,7 @@ export default function QuizPage() {
           tQuiz('principleOptions.cognitiveLoadBudget'),
           tQuiz('principleOptions.flowProtection'),
           tQuiz('principleOptions.skillParity')
-        ]),
+        ].map(opt => removePeriods(opt))),
         correct: -1, // Will be recalculated after shuffle
         principleId: 10,
         stage: 4,
@@ -488,7 +501,7 @@ export default function QuizPage() {
       
       // Fix the correct answer index for the Rest & Reflection scenario
       const lastQuestion = questionTypes[questionTypes.length - 1];
-      lastQuestion.correct = lastQuestion.options!.indexOf(tQuiz('principleOptions.restReflection'));
+      lastQuestion.correct = lastQuestion.options!.indexOf(removePeriods(tQuiz('principleOptions.restReflection')));
       
       // Shuffle questions to add variety while keeping a good mix
       const shuffled = shuffle(questionTypes);
