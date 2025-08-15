@@ -7,6 +7,8 @@
     "principles": "Principles",
     "flashcards": "Flashcards",
     "quiz": "Quiz",
+    "promptEngineering": "Prompt Engineering",
+    "more": "More",
     "progress": "Progress",
     "learnMore": "Learn More",
     "languageLabels": {
@@ -405,6 +407,91 @@
       "stage4": {
         "name": "Iterate",
         "description": "Continuously learn and improve collaborative patterns"
+      }
+    }
+  },
+  "promptEngineering": {
+    "title": "Prompt Engineering Mastery",
+    "description": "Learn practical prompt engineering techniques through interactive lessons and hands-on exercises",
+    "startLearning": "Start Learning",
+    "viewLessons": "View Lessons",
+    "lessonsLabel": "Lessons",
+    "interactiveLearning": "Interactive Learning",
+    "learningPath": "Learning Path",
+    "learningPathDescription": "Master prompt engineering through structured lessons and practical exercises",
+    "backToLessons": "Back to Lessons",
+    "lesson": "Lesson",
+    "chapter": "Chapter",
+    "theory": "Theory",
+    "examples": "Examples",
+    "exercises": "Exercises",
+    "practicalExamples": "Practical Examples",
+    "practiceExercises": "Practice Exercises",
+    "prerequisites": "Prerequisites",
+    "exercise": "Exercise",
+    "instructions": "Instructions",
+    "hints": "Hints",
+    "showHints": "Show Hints",
+    "hideHints": "Hide Hints",
+    "yourPrompt": "Your Prompt",
+    "enterPromptHere": "Enter your prompt here...",
+    "checkAnswer": "Check Answer",
+    "reset": "Reset",
+    "exerciseCompleted": "Exercise completed!",
+    "exerciseCorrect": "Great! Your prompt works correctly.",
+    "exerciseIncorrect": "Not quite right. Try refining your prompt.",
+    "validationError": "Error validating your prompt.",
+    "tryAgainWithHints": "Try again or check the hints for guidance.",
+    "previousLesson": "Previous Lesson",
+    "nextLesson": "Next Lesson",
+    "stage1": {
+      "name": "Fundamentals",
+      "description": "Master the basics of clear and effective prompt communication"
+    },
+    "stage2": {
+      "name": "Intermediate",
+      "description": "Learn structured prompting and output formatting techniques"
+    },
+    "stage3": {
+      "name": "Advanced", 
+      "description": "Explore complex prompting strategies and reasoning techniques"
+    },
+    "stage4": {
+      "name": "Practical",
+      "description": "Apply prompt engineering in real-world scenarios and workflows"
+    },
+    "lesson1": {
+      "title": "Basic Prompt Structure",
+      "summary": "Learn the fundamental elements of effective prompt design and clear communication with AI systems."
+    },
+    "lesson2": {
+      "title": "Being Clear and Direct",
+      "summary": "Eliminate ambiguity and get precise responses by being specific about your requirements."
+    },
+    "lesson3": {
+      "title": "Role Prompting",
+      "summary": "Assign specific roles and perspectives to improve response quality and consistency."
+    },
+    "lesson4": {
+      "title": "Data/Instruction Separation",
+      "summary": "Use clear delimiters to separate data from instructions for better prompt clarity."
+    },
+    "lesson5": {
+      "title": "Output Formatting",
+      "summary": "Specify exact output formats to get structured, consistent responses."
+    },
+    "lesson6": {
+      "title": "Step-by-Step Thinking",
+      "summary": "Leverage chain-of-thought prompting for better reasoning and problem-solving."
+    },
+    "course": {
+      "fundamentals": {
+        "title": "Fundamentals Course",
+        "summary": "Master the basics of prompt engineering and clear AI communication"
+      },
+      "advanced": {
+        "title": "Advanced Course", 
+        "summary": "Complex prompting strategies and reasoning techniques"
       }
     }
   }

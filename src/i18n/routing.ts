@@ -17,6 +17,14 @@ export const routing = defineRouting({
     '/quiz': {
       en: '/quiz',
       zh: '/quiz'
+    },
+    '/prompt-engineering': {
+      en: '/prompt-engineering',
+      zh: '/prompt-engineering'
+    },
+    '/prompt-engineering/[course]': {
+      en: '/prompt-engineering/[course]',
+      zh: '/prompt-engineering/[course]'
     }
   }
 });

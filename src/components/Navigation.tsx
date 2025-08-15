@@ -6,12 +6,16 @@ import { useState, useEffect, useRef } from 'react';
 import { ChevronDownIcon, GlobeAltIcon } from '@heroicons/react/24/outline';
 import SocialShare from './SocialShare';
 import ThemeToggle from './ThemeToggle';
+import PromptEngineeringDropdown from './PromptEngineeringDropdown';
+import MobilePromptEngineeringMenu from './MobilePromptEngineeringMenu';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 export default function Navigation() {
   const locale = useLocale();
   const pathname = usePathname();
   const t = useTranslations('common');
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const langMenuRef = useRef<HTMLDivElement>(null);
 
 
@@ -22,17 +26,46 @@ export default function Navigation() {
       }
     }
 
+    function handleEscape(event: KeyboardEvent) {
+      if (event.key === 'Escape') {
+        setIsMobileMenuOpen(false);
+        setIsLangMenuOpen(false);
+      }
+    }
+
     document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('keydown', handleEscape);
+    
+    // Prevent body scroll when mobile menu is open
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'unset';
     };
-  }, []);
+  }, [isMobileMenuOpen]);
 
   const navigationItems = [
     { name: t('principles'), href: '/principles' as const },
     { name: t('flashcards'), href: '/flashcards' as const },
     { name: t('quiz'), href: '/quiz' as const }
   ];
+
+  // Function to safely map dynamic routes back to their base routes
+  const getNavigableHref = (currentPath: string): "/" | "/principles" | "/flashcards" | "/quiz" | "/prompt-engineering" => {
+    if (currentPath.startsWith('/prompt-engineering/')) {
+      return '/prompt-engineering';
+    }
+    if (currentPath === '/principles' || currentPath === '/flashcards' || currentPath === '/quiz' || currentPath === '/prompt-engineering') {
+      return currentPath as "/" | "/principles" | "/flashcards" | "/quiz" | "/prompt-engineering";
+    }
+    return '/';
+  };
 
   return (
     <nav className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg border-b border-gray-200/50 dark:border-gray-700/50 sticky top-0 z-50">
@@ -57,9 +90,25 @@ export default function Navigation() {
                 {item.name}
               </Link>
             ))}
+            <PromptEngineeringDropdown />
           </div>
 
-          <div className="flex items-center space-x-6">
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="p-2 rounded-lg text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              aria-label="Toggle menu"
+            >
+              {isMobileMenuOpen ? (
+                <XMarkIcon className="h-6 w-6" />
+              ) : (
+                <Bars3Icon className="h-6 w-6" />
+              )}
+            </button>
+          </div>
+
+          <div className="hidden md:flex items-center space-x-6">
             {/* GitHub Button - Mobile/Tablet only */}
             <a
               href="https://github.com/wquguru/12factor"
@@ -86,7 +135,7 @@ export default function Navigation() {
               {isLangMenuOpen && (
                 <div className="absolute right-0 mt-2 w-40 bg-white dark:bg-gray-900 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 z-50">
                   <Link
-                    href={pathname || '/'}
+                    href={getNavigableHref(pathname)}
                     locale="en"
                     className="block px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-t-2xl transition-colors"
                     onClick={() => setIsLangMenuOpen(false)}
@@ -94,7 +143,7 @@ export default function Navigation() {
                     {t('languageLabels.english')}
                   </Link>
                   <Link
-                    href={pathname || '/'}
+                    href={getNavigableHref(pathname)}
                     locale="zh"
                     className="block px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-b-2xl transition-colors"
                     onClick={() => setIsLangMenuOpen(false)}
@@ -112,6 +161,76 @@ export default function Navigation() {
             <SocialShare />
           </div>
         </div>
+        
+        {/* Mobile menu overlay */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden absolute inset-x-0 top-full bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 shadow-xl z-40">
+            <div className="max-w-6xl mx-auto">
+              {/* Regular navigation items */}
+              {navigationItems.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="block px-6 py-4 text-base font-medium text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-800 border-b border-gray-200 dark:border-gray-700 transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
+              
+              {/* Prompt Engineering expandable menu */}
+              <MobilePromptEngineeringMenu onLinkClick={() => setIsMobileMenuOpen(false)} />
+              
+              {/* Language and theme controls */}
+              <div className="px-6 py-4 bg-gray-50 dark:bg-gray-800 flex items-center justify-between">
+                <div className="flex items-center space-x-4">
+                  <button
+                    onClick={() => {
+                      setIsLangMenuOpen(!isLangMenuOpen);
+                    }}
+                    className="flex items-center text-sm font-medium text-gray-600 dark:text-gray-400"
+                  >
+                    <GlobeAltIcon className="h-4 w-4 mr-2" />
+                    {locale === 'zh' ? '中文' : 'English'}
+                    <ChevronDownIcon className="h-4 w-4 ml-1" />
+                  </button>
+                  
+                  <ThemeToggle />
+                </div>
+                
+                <SocialShare />
+              </div>
+              
+              {/* Language selector for mobile */}
+              {isLangMenuOpen && (
+                <div className="bg-gray-100 dark:bg-gray-700">
+                  <Link
+                    href={getNavigableHref(pathname)}
+                    locale="en"
+                    className="block px-8 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600"
+                    onClick={() => {
+                      setIsLangMenuOpen(false);
+                      setIsMobileMenuOpen(false);
+                    }}
+                  >
+                    English
+                  </Link>
+                  <Link
+                    href={getNavigableHref(pathname)}
+                    locale="zh"
+                    className="block px-8 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600"
+                    onClick={() => {
+                      setIsLangMenuOpen(false);
+                      setIsMobileMenuOpen(false);
+                    }}
+                  >
+                    中文
+                  </Link>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );

@@ -7,6 +7,8 @@
     "principles": "原则",
     "flashcards": "闪卡",
     "quiz": "测验",
+    "promptEngineering": "提示工程",
+    "more": "更多",
     "progress": "进度",
     "learnMore": "了解更多",
     "languageLabels": {
@@ -405,6 +407,95 @@
       "stage4": {
         "name": "迭代",
         "description": "持续学习和改进协作模式"
+      }
+    }
+  },
+  "promptEngineering": {
+    "title": "提示工程精通",
+    "description": "通过互动课程和实践练习学习实用的提示工程技术",
+    "startLearning": "开始学习",
+    "viewLessons": "查看课程",
+    "lessonsLabel": "课程",
+    "interactiveLearning": "互动学习",
+    "learningPath": "学习路径",
+    "learningPathDescription": "通过结构化课程和实践练习掌握提示工程",
+    "backToLessons": "返回课程",
+    "lesson": "课程",
+    "chapter": "章节",
+    "theory": "理论",
+    "examples": "示例",
+    "exercises": "练习",
+    "practicalExamples": "实践示例",
+    "practiceExercises": "练习题",
+    "prerequisites": "前置要求",
+    "exercise": "练习",
+    "instructions": "说明",
+    "hints": "提示",
+    "showHints": "显示提示",
+    "hideHints": "隐藏提示",
+    "yourPrompt": "你的提示",
+    "enterPromptHere": "在这里输入你的提示...",
+    "checkAnswer": "检查答案",
+    "reset": "重置",
+    "exerciseCompleted": "练习完成！",
+    "exerciseCorrect": "很好！你的提示正确工作了。",
+    "exerciseIncorrect": "不太对。试试改进你的提示。",
+    "validationError": "验证你的提示时出错。",
+    "tryAgainWithHints": "再试一次或查看提示指导。",
+    "previousLesson": "上一课",
+    "nextLesson": "下一课",
+    "practiceExercise": "实践练习",
+    "nextCourse": "下一课程",
+    "stage1": {
+      "name": "基础",
+      "description": "掌握清晰有效的提示交流基础"
+    },
+    "stage2": {
+      "name": "中级",
+      "description": "学习结构化提示和输出格式化技术"
+    },
+    "stage3": {
+      "name": "高级",
+      "description": "探索复杂的提示策略和推理技术"
+    },
+    "stage4": {
+      "name": "实践",
+      "description": "在真实场景和工作流中应用提示工程"
+    },
+    "lesson1": {
+      "title": "基本提示结构",
+      "summary": "学习有效提示设计的基本要素和与AI系统的清晰交流。"
+    },
+    "lesson2": {
+      "title": "清晰直接",
+      "summary": "通过明确需求消除歧义，获得精确的回复。"
+    },
+    "lesson3": {
+      "title": "角色提示",
+      "summary": "分配特定角色和视角来改善回复质量和一致性。"
+    },
+    "lesson4": {
+      "title": "数据/指令分离",
+      "summary": "使用清晰的分隔符将数据与指令分离，提高提示清晰度。"
+    },
+    "lesson5": {
+      "title": "输出格式化",
+      "summary": "指定确切的输出格式以获得结构化、一致的回复。"
+    },
+    "lesson6": {
+      "title": "逐步思考",
+      "summary": "利用思维链提示来改善推理和问题解决。"
+    },
+    "integratedCourse": "综合课程",
+    "courseOverview": "课程概览",
+    "course": {
+      "fundamentals": {
+        "title": "基础课程",
+        "summary": "掌握提示工程基础和清晰的AI沟通技巧"
+      },
+      "advanced": {
+        "title": "高级课程",
+        "summary": "复杂提示策略和推理技术"
       }
     }
   }
