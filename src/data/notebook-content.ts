@@ -44,119 +44,103 @@ export const notebookLessons: NotebookLesson[] = [
     interactiveExamples: [
       {
         id: 'chapter1-basic-structure',
-        title: '1章练习：数到三 (API结构)',
-        description: '学习正确的Messages API格式。这是最基础的练习，确保你理解如何构建有效的提示。',
+        title: 'practiceExercises.fundamentals.chapter1BasicStructure.title',
+        description: 'practiceExercises.fundamentals.chapter1BasicStructure.description',
         userPrompt: 'Count to three',
-        expectedOutput: '包含1、2、3的回应，格式清晰。',
-        hints: [
-          '直接说出你的需求："数到三"',
-          '使用简单清晰的指令',
-          '避免不必要的复杂性'
-        ],
+        expectedOutput: 'practiceExercises.fundamentals.chapter1BasicStructure.expectedOutput',
+        hints: 'practiceExercises.fundamentals.chapter1BasicStructure.hints',
         variations: [
           {
-            name: '直接指令',
+            name: 'practiceExercises.fundamentals.chapter1BasicStructure.variations.directInstruction.name',
             prompt: 'Count to three',
-            explanation: '最简单直接的方式'
+            explanation: 'practiceExercises.fundamentals.chapter1BasicStructure.variations.directInstruction.explanation'
           },
           {
-            name: '明确格式',
+            name: 'practiceExercises.fundamentals.chapter1BasicStructure.variations.clearFormat.name',
             prompt: 'Please count from 1 to 3, one number per line.',
-            explanation: '指定了输出格式'
+            explanation: 'practiceExercises.fundamentals.chapter1BasicStructure.variations.clearFormat.explanation'
           },
           {
-            name: '中文指令',
+            name: 'practiceExercises.fundamentals.chapter1BasicStructure.variations.chineseInstruction.name',
             prompt: '请从1数到3。',
-            explanation: '测试中文指令'
+            explanation: 'practiceExercises.fundamentals.chapter1BasicStructure.variations.chineseInstruction.explanation'
           }
         ]
       },
       {
         id: 'chapter1-system-prompt',
-        title: '1章练习：3岁小孩角色 (System Prompt)',
-        description: '体验 system prompt 的威力。通过角色设定，让Claude的回应风格彻底改变。',
+        title: 'practiceExercises.fundamentals.chapter1SystemPrompt.title',
+        description: 'practiceExercises.fundamentals.chapter1SystemPrompt.description',
         systemPrompt: 'You are a 3 year old child. Respond with the excitement, curiosity, and simple language that a 3-year-old would use.',
         userPrompt: 'How big is the sky?',
-        expectedOutput: '像3岁孩子一样的兴奋回应，可能包含笑声、简单词汇和天真的表达。',
-        hints: [
-          '想想3岁孩子如何说话：兴奋、好奇、词汇简单',
-          '可以加入一些孩子气的表达如 "soo big" 或 "giggles"',
-          'System prompt 定义了AI的整个"人格"'
-        ],
+        expectedOutput: 'practiceExercises.fundamentals.chapter1SystemPrompt.expectedOutput',
+        hints: 'practiceExercises.fundamentals.chapter1SystemPrompt.hints',
         variations: [
           {
-            name: '无System Prompt',
+            name: 'practiceExercises.fundamentals.chapter1SystemPrompt.variations.noSystemPrompt.name',
             prompt: 'How big is the sky?',
-            explanation: '不设置System Prompt，看看默认回应'
+            explanation: 'practiceExercises.fundamentals.chapter1SystemPrompt.variations.noSystemPrompt.explanation'
           },
           {
-            name: '严格科学家',
+            name: 'practiceExercises.fundamentals.chapter1SystemPrompt.variations.strictScientist.name',
             prompt: 'How big is the sky?',
-            explanation: 'System: "You are a strict physicist. Give precise scientific answers."'
+            explanation: 'practiceExercises.fundamentals.chapter1SystemPrompt.variations.strictScientist.explanation'
           },
           {
-            name: '友好老师',
+            name: 'practiceExercises.fundamentals.chapter1SystemPrompt.variations.friendlyTeacher.name',
             prompt: 'How big is the sky?',
-            explanation: 'System: "You are a friendly teacher explaining to children."'
+            explanation: 'practiceExercises.fundamentals.chapter1SystemPrompt.variations.friendlyTeacher.explanation'
           }
         ]
       },
       {
         id: 'chapter2-spanish',
-        title: '2章练习：西班牙语回应 (清晰指令)',
-        description: '学习如何给出明确指令控制输出语言。这个练习显示API能够精确按照你的要求执行。',
+        title: 'practiceExercises.fundamentals.chapter2Spanish.title',
+        description: 'practiceExercises.fundamentals.chapter2Spanish.description',
         systemPrompt: 'Please respond in Spanish.',
         userPrompt: 'Hello Claude, how are you?',
-        expectedOutput: '用西班牙语回应，包含 "Hola" 等西班牙语问候词。',
-        hints: [
-          '直接在System Prompt中说明语言要求',
-          '可以说 "Please respond in Spanish" 或 "Responde en español"',
-          '观察 Claude 如何完全切换语言'
-        ],
+        expectedOutput: 'practiceExercises.fundamentals.chapter2Spanish.expectedOutput',
+        hints: 'practiceExercises.fundamentals.chapter2Spanish.hints',
         variations: [
           {
-            name: '中文回应',
+            name: 'practiceExercises.fundamentals.chapter2Spanish.variations.chineseResponse.name',
             prompt: 'Hello Claude, how are you?',
-            explanation: 'System: "请用中文回应"'
+            explanation: 'practiceExercises.fundamentals.chapter2Spanish.variations.chineseResponse.explanation'
           },
           {
-            name: '法语回应',
+            name: 'practiceExercises.fundamentals.chapter2Spanish.variations.frenchResponse.name',
             prompt: 'Hello Claude, how are you?',
-            explanation: 'System: "Répondez en français, s\'il vous plaît"'
+            explanation: 'practiceExercises.fundamentals.chapter2Spanish.variations.frenchResponse.explanation'
           },
           {
-            name: '双语回应',
+            name: 'practiceExercises.fundamentals.chapter2Spanish.variations.bilingualResponse.name',
             prompt: 'Hello Claude, how are you?',
-            explanation: 'System: "Respond in both English and Spanish"'
+            explanation: 'practiceExercises.fundamentals.chapter2Spanish.variations.bilingualResponse.explanation'
           }
         ]
       },
       {
         id: 'chapter2-basketball',
-        title: '2章练习：只要一个名字 (精确格式)',
-        description: '学习如何给出极具体的格式要求。这个练习教你如何获得精确控制的输出。',
+        title: 'practiceExercises.fundamentals.chapter2Basketball.title',
+        description: 'practiceExercises.fundamentals.chapter2Basketball.description',
         userPrompt: 'Who is the best basketball player of all time? Give me only the name, no other text.',
-        expectedOutput: '只有一个球员的名字，没有其他任何文字或解释。',
-        hints: [
-          '要非常具体地说明格式要求',
-          '明确说明不要解释或其他内容',
-          '强制Claude做出选择，不允许说"这很难选择"'
-        ],
+        expectedOutput: 'practiceExercises.fundamentals.chapter2Basketball.expectedOutput',
+        hints: 'practiceExercises.fundamentals.chapter2Basketball.hints',
         variations: [
           {
-            name: '允许解释',
+            name: 'practiceExercises.fundamentals.chapter2Basketball.variations.withExplanation.name',
             prompt: 'Who is the best basketball player of all time?',
-            explanation: '不限制格式，看看默认回应'
+            explanation: 'practiceExercises.fundamentals.chapter2Basketball.variations.withExplanation.explanation'
           },
           {
-            name: '要求理由',
-            prompt: 'Who is the best basketball player of all time? Give only the name and one reason.',
-            explanation: '允许一个理由但仍然控制格式'
-          },
-          {
-            name: '列表格式',
+            name: 'practiceExercises.fundamentals.chapter2Basketball.variations.top3List.name',
             prompt: 'List the top 3 basketball players of all time. Format: 1. Name 2. Name 3. Name',
-            explanation: '指定精确的列表格式'
+            explanation: 'practiceExercises.fundamentals.chapter2Basketball.variations.top3List.explanation'
+          },
+          {
+            name: 'practiceExercises.fundamentals.chapter2Basketball.variations.specificFormat.name',
+            prompt: 'Who is the best basketball player of all time? Give only the name and one reason.',
+            explanation: 'practiceExercises.fundamentals.chapter2Basketball.variations.specificFormat.explanation'
           }
         ]
       },

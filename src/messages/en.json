@@ -444,6 +444,7 @@
     "tryAgainWithHints": "Try again or check the hints for guidance.",
     "previousLesson": "Previous Lesson",
     "nextLesson": "Next Lesson",
+    "practiceExercise": "Practice Exercise",
     "stage1": {
       "name": "Fundamentals",
       "description": "Master the basics of clear and effective prompt communication"
@@ -494,11 +495,39 @@
         "summary": "Complex prompting strategies and reasoning techniques"
       }
     },
+    "nextCourse": "Next Course",
     "integratedCourse": "Integrated Course",
     "courseOverview": "Course Overview",
     "sections": "sections",
     "previousCourse": "Previous Course",
     "clickToStartPractice": "Click the editor below to start practice",
+    "learningMode": "Learning Mode",
+    "practiceMode": "Practice Mode",
+    "learningContent": "Learning Content",
+    "interactiveExercise": "Interactive Exercise",
+    "promptExamples": "Prompt Examples",
+    "practicalExercises": "Practical Exercises",
+    "exercises": "exercises",
+    "previous": "Previous",
+    "next": "Next",
+    "showHints": "Show Hints",
+    "hideHints": "Hide Hints",
+    "learningTips": "Learning Tips",
+    "tryDifferentVariations": "Try Different Prompt Variations",
+    "editPrompt": "Edit Prompt",
+    "systemPrompt": "System Prompt",
+    "systemPromptPlaceholder": "Set AI's role and behavior rules...",
+    "userPrompt": "User Prompt", 
+    "userPromptPlaceholder": "Enter your question or instruction...",
+    "runPrompt": "Run Prompt",
+    "running": "Running...",
+    "reset": "Reset",
+    "aiResponse": "AI Response",
+    "goodPromptQuality": "Good prompt quality",
+    "canImprove": "Can improve",
+    "aiThinking": "AI is thinking...",
+    "clickRunPrompt": "Click \"Run Prompt\" to see AI response",
+    "expectedOutput": "Expected Output Example",
     "fundamentals": {
       "title": "Fundamentals Course",
       "theory": "Comprehensive step-by-step guide to mastering Claude's best prompt engineering practices. Learn three core skills: API structure, clear communication, and role assignment.",
@@ -613,6 +642,106 @@
             "instructions": "Get Claude to solve a complex problem using explicit step-by-step reasoning",
             "template": "Solve this step by step, showing your work: [Your problem]",
             "hints": ["Ask for explicit reasoning", "Request step-by-step breakdown", "Look for logical connectors"]
+          }
+        }
+      }
+    },
+    "practiceExercises": {
+      "fundamentals": {
+        "chapter1BasicStructure": {
+          "title": "Chapter 1 Exercise: Count to Three (API Structure)",
+          "description": "Learn the correct Messages API format. This is the most basic exercise to ensure you understand how to construct effective prompts.",
+          "expectedOutput": "Response containing 1, 2, 3 with clear formatting.",
+          "hints": [
+            "State your request directly: \"Count to three\"",
+            "Use simple clear instructions",
+            "Avoid unnecessary complexity"
+          ],
+          "variations": {
+            "directInstruction": {
+              "name": "Direct Instruction",
+              "explanation": "The simplest direct approach"
+            },
+            "clearFormat": {
+              "name": "Clear Format",
+              "explanation": "Specified output format"
+            },
+            "chineseInstruction": {
+              "name": "Chinese Instruction",
+              "explanation": "Test Chinese instructions"
+            }
+          }
+        },
+        "chapter1SystemPrompt": {
+          "title": "Chapter 1 Exercise: 3-Year-Old Child Role (System Prompt)",
+          "description": "Experience the power of system prompts. Through role setting, completely change Claude's response style.",
+          "expectedOutput": "Excited response like a 3-year-old child, may include laughter, simple vocabulary and innocent expressions.",
+          "hints": [
+            "Think about how 3-year-olds speak: excited, curious, simple vocabulary",
+            "Can add childlike expressions like \"soo big\" or \"giggles\"",
+            "System prompt defines the entire \"personality\" of the AI"
+          ],
+          "variations": {
+            "noSystemPrompt": {
+              "name": "No System Prompt",
+              "explanation": "No System Prompt set, see default response"
+            },
+            "strictScientist": {
+              "name": "Strict Scientist",
+              "explanation": "System: \"You are a strict physicist. Give precise scientific answers.\""
+            },
+            "friendlyTeacher": {
+              "name": "Friendly Teacher",
+              "explanation": "System: \"You are a friendly teacher explaining to children.\""
+            }
+          }
+        },
+        "chapter2Spanish": {
+          "title": "Chapter 2 Exercise: Spanish Response (Clear Instructions)",
+          "description": "Learn how to give clear instructions to control output language. This exercise shows the API can execute precisely according to your requirements.",
+          "expectedOutput": "Respond in Spanish, including Spanish greeting words like \"Hola\".",
+          "hints": [
+            "Directly state language requirements in System Prompt",
+            "Can say \"Please respond in Spanish\" or \"Responde en español\"",
+            "Observe how Claude completely switches languages"
+          ],
+          "variations": {
+            "chineseResponse": {
+              "name": "Chinese Response",
+              "explanation": "System: \"Please respond in Chinese\""
+            },
+            "frenchResponse": {
+              "name": "French Response",
+              "explanation": "System: \"Répondez en français, s'il vous plaît\""
+            },
+            "bilingualResponse": {
+              "name": "Bilingual Response",
+              "explanation": "System: \"Respond in both English and Spanish\""
+            }
+          }
+        },
+        "chapter2Basketball": {
+          "title": "Chapter 2 Exercise: Just One Name (Precise Format)",
+          "description": "Learn how to give extremely specific format requirements. This exercise teaches you how to get precisely controlled output.",
+          "expectedOutput": "Only one player's name, no other text or explanation.",
+          "hints": [
+            "Be very specific about format requirements",
+            "Clearly state no explanations or other content",
+            "Force Claude to make a choice"
+          ],
+          "variations": {
+            "withExplanation": {
+              "name": "With Explanation",
+              "explanation": "Allow Claude to explain the choice"
+            },
+            "top3List": {
+              "name": "Top 3 List",
+              "explanation": "Ask for top 3 players instead"
+            },
+            "specificFormat": {
+              "name": "Specific Format",
+              "explanation": "\"Answer format: Name: [Player Name]\""
+            }
           }
         }
       }

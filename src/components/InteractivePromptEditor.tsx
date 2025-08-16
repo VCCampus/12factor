@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 import { 
   PlayIcon, 
   ArrowPathIcon, 
@@ -29,6 +30,7 @@ interface InteractivePromptEditorProps {
 }
 
 export default function InteractivePromptEditor({ example }: InteractivePromptEditorProps) {
+  const t = useTranslations('promptEngineering');
   const [systemPrompt, setSystemPrompt] = useState(example.systemPrompt || '');
   const [userPrompt, setUserPrompt] = useState(example.userPrompt);
   const [currentOutput, setCurrentOutput] = useState('');
@@ -37,11 +39,11 @@ export default function InteractivePromptEditor({ example }: InteractivePromptEd
   const [selectedVariation, setSelectedVariation] = useState<number | null>(null);
   const [analysisResult, setAnalysisResult] = useState<'good' | 'needs-improvement' | null>(null);
 
-  // 模拟AI响应生成器
+  // AI response generator (mock)
   const generateMockResponse = (system: string, user: string): string => {
     const prompt = (system + ' ' + user).toLowerCase();
     
-    // 基础问候响应
+    // Basic greeting responses
     if (prompt.includes('hello') || prompt.includes('hi') || prompt.includes('how are you') || prompt.includes('你好')) {
       if (prompt.includes('formal') || prompt.includes('good morning')) {
         return "Good morning! I'm functioning optimally today, thank you for asking. I'm Claude, an AI assistant, and I'm ready to help you with any questions or tasks you may have. How may I assist you today?";
@@ -54,7 +56,7 @@ export default function InteractivePromptEditor({ example }: InteractivePromptEd
       }
     }
     
-    // 编程变量相关
+    // Programming variables related
     if (prompt.includes('variable') && prompt.includes('programming')) {
       if (prompt.includes('mentor') || prompt.includes('friendly')) {
         return "Great question! Think of a variable like a labeled box 📦. Just like you might have a box labeled 'toys' where you store your toys, in programming, a variable is a named container that stores data.\n\nFor example, you might create a variable called 'age' and store the number 25 in it. Later, you can look in that box (use the variable) or put something new in it (change the value).\n\nVariables are super helpful because instead of remembering numbers or text throughout your code, you just remember the easy name you gave to the box!";
@@ -67,7 +69,7 @@ export default function InteractivePromptEditor({ example }: InteractivePromptEd
       }
     }
     
-    // 狗相关的总结
+    // Dog-related summaries
     if (prompt.includes('dogs') || prompt.includes('dog')) {
       if (prompt.includes('golden retriever') && prompt.includes('150')) {
         return "Golden Retrievers are among the most beloved family dogs, known for their gentle, friendly temperament and exceptional patience with children. These medium to large-sized dogs are highly intelligent, making them easy to train and eager to please their families. Originally bred as hunting companions, they retain high energy levels and require regular exercise - daily walks and active play sessions keep them healthy and happy. Their calm, loyal nature combined with natural protective instincts makes them excellent family pets, though their friendly disposition means they're more likely to welcome intruders with wagging tails than guard against them.";
@@ -78,11 +80,11 @@ export default function InteractivePromptEditor({ example }: InteractivePromptEd
       }
     }
     
-    // 默认响应
+    // Default response
     return "I understand you'd like me to help with that. Could you provide a bit more specific information about what you're looking for? I'm here to assist with a wide range of topics and tasks.";
   };
 
-  // 分析提示词质量
+  // Analyze prompt quality
   const analyzePrompt = (system: string, user: string): 'good' | 'needs-improvement' => {
     const totalLength = system.length + user.length;
     const hasSpecificInstructions = user.includes('specific') || user.includes('详细') || user.includes('列出');
@@ -99,7 +101,7 @@ export default function InteractivePromptEditor({ example }: InteractivePromptEd
     setIsRunning(true);
     setCurrentOutput('');
     
-    // 模拟API调用延迟
+    // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 1500));
     
     const response = generateMockResponse(systemPrompt, userPrompt);
@@ -142,7 +144,7 @@ export default function InteractivePromptEditor({ example }: InteractivePromptEd
             className="flex items-center gap-2 px-3 py-1.5 text-sm text-[#98a971] hover:bg-[#98a971]/10 rounded-lg transition-colors"
           >
             <LightBulbIcon className="h-4 w-4" />
-            {showHints ? '隐藏提示' : '显示提示'}
+            {showHints ? t('hideHints') : t('showHints')}
           </button>
         </div>
       </div>
@@ -152,7 +154,7 @@ export default function InteractivePromptEditor({ example }: InteractivePromptEd
         {showHints && (
           <div className="mb-6 p-4 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700 rounded-lg">
             <h4 className="text-sm font-medium text-yellow-800 dark:text-yellow-200 mb-3">
-              💡 学习提示
+              💡 {t('learningTips')}
             </h4>
             <ul className="space-y-2">
               {example.hints.map((hint, index) => (
@@ -168,7 +170,7 @@ export default function InteractivePromptEditor({ example }: InteractivePromptEd
         {/* Prompt Variations */}
         <div className="mb-6">
           <h4 className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3">
-            📝 尝试不同的提示词变体
+            📝 {t('tryDifferentVariations')}
           </h4>
           <div className="grid gap-2 md:grid-cols-2">
             {example.variations.map((variation, index) => (
@@ -193,18 +195,18 @@ export default function InteractivePromptEditor({ example }: InteractivePromptEd
           {/* Input */}
           <div className="space-y-4">
             <h4 className="text-sm font-medium text-gray-900 dark:text-gray-100">
-              🎯 编辑提示词
+              🎯 {t('editPrompt')}
             </h4>
             
             {/* System Prompt */}
             <div>
               <label className="block text-xs font-medium text-gray-700 dark:text-gray-300 mb-2">
-                系统提示 (System Prompt)
+                {t('systemPrompt')}
               </label>
               <textarea
                 value={systemPrompt}
                 onChange={(e) => setSystemPrompt(e.target.value)}
-                placeholder="设定AI的角色和行为规则..."
+                placeholder={t('systemPromptPlaceholder')}
                 className="w-full h-20 px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-[#98a971] focus:border-transparent resize-none"
               />
             </div>
@@ -212,12 +214,12 @@ export default function InteractivePromptEditor({ example }: InteractivePromptEd
             {/* User Prompt */}
             <div>
               <label className="block text-xs font-medium text-gray-700 dark:text-gray-300 mb-2">
-                用户提示 (User Prompt)
+                {t('userPrompt')}
               </label>
               <textarea
                 value={userPrompt}
                 onChange={(e) => setUserPrompt(e.target.value)}
-                placeholder="输入你的问题或指令..."
+                placeholder={t('userPromptPlaceholder')}
                 className="w-full h-24 px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-[#98a971] focus:border-transparent resize-none"
               />
             </div>
@@ -234,14 +236,14 @@ export default function InteractivePromptEditor({ example }: InteractivePromptEd
                 ) : (
                   <PlayIcon className="h-4 w-4" />
                 )}
-                {isRunning ? '运行中...' : '运行提示'}
+                {isRunning ? t('running') : t('runPrompt')}
               </button>
               
               <button
                 onClick={resetToExample}
                 className="px-4 py-2 text-gray-600 dark:text-gray-400 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-sm"
               >
-                重置
+                {t('reset')}
               </button>
             </div>
           </div>
@@ -250,7 +252,7 @@ export default function InteractivePromptEditor({ example }: InteractivePromptEd
           <div>
             <div className="flex items-center justify-between mb-2">
               <h4 className="text-sm font-medium text-gray-900 dark:text-gray-100">
-                🤖 AI 响应
+                🤖 {t('aiResponse')}
               </h4>
               {analysisResult && (
                 <div className={`flex items-center gap-1 px-2 py-1 rounded-full text-xs ${
@@ -263,7 +265,7 @@ export default function InteractivePromptEditor({ example }: InteractivePromptEd
                   ) : (
                     <ExclamationTriangleIcon className="h-3 w-3" />
                   )}
-                  {analysisResult === 'good' ? '提示词质量好' : '可以改进'}
+                  {analysisResult === 'good' ? t('goodPromptQuality') : t('canImprove')}
                 </div>
               )}
             </div>
@@ -273,7 +275,7 @@ export default function InteractivePromptEditor({ example }: InteractivePromptEd
                 <div className="flex items-center justify-center h-full">
                   <div className="flex items-center gap-3 text-gray-500 dark:text-gray-400">
                     <ArrowPathIcon className="h-5 w-5 animate-spin" />
-                    <span className="text-sm">AI 正在思考...</span>
+                    <span className="text-sm">{t('aiThinking')}</span>
                   </div>
                 </div>
               ) : currentOutput ? (
@@ -282,7 +284,7 @@ export default function InteractivePromptEditor({ example }: InteractivePromptEd
                 </div>
               ) : (
                 <div className="flex items-center justify-center h-full text-gray-400 dark:text-gray-500 text-sm">
-                  点击&ldquo;运行提示&rdquo;查看AI响应
+                  {t('clickRunPrompt')}
                 </div>
               )}
             </div>
@@ -292,7 +294,7 @@ export default function InteractivePromptEditor({ example }: InteractivePromptEd
         {/* Expected Output */}
         <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg">
           <h4 className="text-sm font-medium text-blue-800 dark:text-blue-200 mb-2">
-            🎯 期望输出示例
+            🎯 {t('expectedOutput')}
           </h4>
           <p className="text-sm text-blue-700 dark:text-blue-300 leading-relaxed">
             {example.expectedOutput}

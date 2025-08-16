@@ -35,24 +35,101 @@ export default function CoursePage() {
       example.title.includes(`${index + 1}章`)
     ).length || 0;
     
+    // Resolve examples from translation key
+    let resolvedExamples: string[] = [];
+    try {
+      // Try to get examples as an array from translations
+      const examplesKey = section.examples as string;
+      const examplesData = t.raw(examplesKey);
+      if (Array.isArray(examplesData)) {
+        resolvedExamples = examplesData;
+      } else if (typeof examplesData === 'string') {
+        resolvedExamples = [examplesData];
+      } else {
+        // Fallback to the key itself if translation fails
+        resolvedExamples = [examplesKey];
+      }
+    } catch {
+      // Fallback to the key itself if translation fails
+      resolvedExamples = [section.examples as string];
+    }
+    
+    // Process exercises to resolve hints translation keys
+    const processedExercises = section.exercises?.map(exercise => {
+      let resolvedHints: string[] = [];
+      try {
+        const hintsKey = exercise.hints as string;
+        const hintsData = t.raw(hintsKey);
+        if (Array.isArray(hintsData)) {
+          resolvedHints = hintsData;
+        } else if (typeof hintsData === 'string') {
+          resolvedHints = [hintsData];
+        } else {
+          resolvedHints = [hintsKey];
+        }
+      } catch {
+        resolvedHints = [exercise.hints as string];
+      }
+      
+      return {
+        ...exercise,
+        instructions: t(exercise.instructions),
+        template: t(exercise.template),
+        hints: resolvedHints
+      };
+    }) || [];
+    
     return {
       id: `section-${index}`,
-      title: section.title,
-      theory: section.theory,
-      examples: section.examples,
-      exercises: section.exercises,
+      title: t(section.title),
+      theory: t(section.theory),
+      examples: resolvedExamples,
+      exercises: processedExercises,
       practiceCount: sectionPracticeCount
     };
   }) || [];
 
   // Prepare practice content from notebook lessons
-  const practiceContent = notebookLesson?.interactiveExamples?.map(example => ({
-    id: example.id,
-    title: example.title,
-    description: example.description || '点击下方编辑器开始练习',
-    variants: example.variations || [],
-    expectedOutput: example.expectedOutput || ''
-  })) || [];
+  const practiceContent = notebookLesson?.interactiveExamples?.map(example => {
+    // Resolve translation keys for practice content
+    const resolveTranslationKey = (key: string): string => {
+      try {
+        return t(key);
+      } catch {
+        return key;
+      }
+    };
+
+    const resolveHintsArray = (hints: string | string[]): string[] => {
+      if (Array.isArray(hints)) {
+        return hints;
+      }
+      try {
+        const hintsData = t.raw(hints);
+        if (Array.isArray(hintsData)) {
+          return hintsData;
+        }
+        return [hints];
+      } catch {
+        return [hints];
+      }
+    };
+
+    const resolvedVariations = example.variations?.map(variation => ({
+      name: resolveTranslationKey(variation.name),
+      prompt: variation.prompt,
+      explanation: resolveTranslationKey(variation.explanation)
+    })) || [];
+
+    return {
+      id: example.id,
+      title: resolveTranslationKey(example.title),
+      description: resolveTranslationKey(example.description) || t('clickToStartPractice'),
+      variants: resolvedVariations,
+      expectedOutput: resolveTranslationKey(example.expectedOutput) || '',
+      hints: resolveHintsArray(example.hints || [])
+    };
+  }) || [];
 
   const handleNext = useCallback(() => {
     const maxIndex = currentMode === 'practice' ? practiceContent.length - 1 : learningContent.length - 1;
@@ -196,7 +273,7 @@ export default function CoursePage() {
                     className="flex items-center gap-3 px-6 py-3 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-[#98a971]/30 dark:hover:border-[#98a971]/30 hover:shadow-md transition-all"
                   >
                     <ArrowLeftIcon className="h-4 w-4 text-gray-600 dark:text-gray-400" />
-                    <span className="text-gray-700 dark:text-gray-300">上一课程</span>
+                    <span className="text-gray-700 dark:text-gray-300">{t('previousCourse')}</span>
                   </Link>
                 )}
                 
@@ -216,7 +293,7 @@ export default function CoursePage() {
                     locale={locale}
                     className="flex items-center gap-3 px-6 py-3 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-[#98a971]/30 dark:hover:border-[#98a971]/30 hover:shadow-md transition-all"
                   >
-                    <span className="text-gray-700 dark:text-gray-300">下一课程</span>
+                    <span className="text-gray-700 dark:text-gray-300">{t('nextCourse')}</span>
                     <ArrowLeftIcon className="h-4 w-4 text-gray-600 dark:text-gray-400 rotate-180" />
                   </Link>
                 )}

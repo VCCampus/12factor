@@ -72,12 +72,6 @@ export default function PromptEngineeringPage() {
       {/* Main Content */}
       <div id="lessons-content" className="py-20 bg-white dark:bg-gray-900">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-light text-stone-900 dark:text-gray-100 mb-6 leading-tight">
-              课程列表
-            </h2>
-          </div>
-          
           <div className="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
             {promptLessons.map((course, index) => {
               const getCourseTitle = (id: string) => {

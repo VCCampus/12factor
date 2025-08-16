@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { ChevronLeftIcon, ChevronRightIcon, BookOpenIcon, BeakerIcon } from '@heroicons/react/24/outline';
+import { useTranslations } from 'next-intl';
 import InteractivePromptEditor from './InteractivePromptEditor';
 
 interface LearningContent {
@@ -24,11 +25,11 @@ interface PracticeContent {
   description: string;
   variants: Array<{
     name: string;
-    description: string;
-    systemPrompt?: string;
-    userPrompt?: string;
+    prompt: string;
+    explanation: string;
   }>;
   expectedOutput: string;
+  hints?: string[];
 }
 
 interface LearningCardProps {
@@ -55,6 +56,7 @@ export default function LearningCard({
   canGoNext,
   canGoPrev
 }: LearningCardProps) {
+  const t = useTranslations('promptEngineering');
   const mode = currentMode;
 
   const currentLearningItem = learningContent[currentIndex];
@@ -78,7 +80,7 @@ export default function LearningCard({
             }`}
           >
             <BookOpenIcon className="h-4 w-4" />
-            学习模式
+            {t('learningMode')}
           </button>
           <button
             onClick={() => onModeChange?.('practice')}
@@ -89,7 +91,7 @@ export default function LearningCard({
             }`}
           >
             <BeakerIcon className="h-4 w-4" />
-            练习模式
+            {t('practiceMode')}
           </button>
         </div>
       </div>
@@ -110,7 +112,7 @@ export default function LearningCard({
                 <h2 className="text-2xl font-medium text-gray-900 dark:text-gray-100 mb-2">
                   {currentLearningItem.title}
                 </h2>
-                <p className="text-sm text-[#98a971] font-medium">学习内容</p>
+                <p className="text-sm text-[#98a971] font-medium">{t('learningContent')}</p>
               </div>
             </div>
 
@@ -126,7 +128,7 @@ export default function LearningCard({
             {/* Examples Section */}
             <div className="mb-6">
               <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100 mb-4">
-                提示示例
+                {t('promptExamples')}
               </h3>
               <div className="space-y-3">
                 {currentLearningItem.examples.map((example, exIndex) => (
@@ -143,7 +145,7 @@ export default function LearningCard({
             {currentLearningItem.practiceCount && currentLearningItem.practiceCount > 0 && (
               <div className="border-t border-gray-200 dark:border-gray-600 pt-6">
                 <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100 mb-4">
-                  实践练习 ({currentLearningItem.practiceCount}个)
+                  {t('practicalExercises')} ({currentLearningItem.practiceCount} {t('exercises')})
                 </h3>
                 <div className="space-y-4">
                   {currentLearningItem.exercises?.map((exercise) => (
@@ -199,7 +201,7 @@ export default function LearningCard({
                 <h2 className="text-2xl font-medium text-gray-900 dark:text-gray-100 mb-2">
                   {currentPracticeItem.title}
                 </h2>
-                <p className="text-sm text-[#98a971] font-medium">交互式练习</p>
+                <p className="text-sm text-[#98a971] font-medium">{t('interactiveExercise')}</p>
               </div>
             </div>
 
@@ -219,11 +221,11 @@ export default function LearningCard({
                 systemPrompt: '',
                 userPrompt: 'Enter your prompt here...',
                 expectedOutput: currentPracticeItem.expectedOutput,
-                hints: [],
+                hints: currentPracticeItem.hints || [],
                 variations: currentPracticeItem.variants?.map(variant => ({
                   name: variant.name,
-                  prompt: variant.userPrompt || '',
-                  explanation: variant.description
+                  prompt: variant.prompt || '',
+                  explanation: variant.explanation
                 })) || []
               }} 
             />
@@ -243,7 +245,7 @@ export default function LearningCard({
               }`}
             >
               <ChevronLeftIcon className="h-4 w-4" />
-              上一个
+              {t('previous')}
             </button>
 
             <div className="flex items-center gap-2">
@@ -261,7 +263,7 @@ export default function LearningCard({
                   : 'text-gray-400 cursor-not-allowed'
               }`}
             >
-              下一个
+              {t('next')}
               <ChevronRightIcon className="h-4 w-4" />
             </button>
           </div>

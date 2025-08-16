@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
-import { promptLessons, promptStages } from '@/data/prompt-lessons';
+import { promptLessons } from '@/data/prompt-lessons';
 
 export default function PromptEngineeringDropdown() {
   const [isOpen, setIsOpen] = useState(false);
