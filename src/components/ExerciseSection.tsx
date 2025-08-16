@@ -82,14 +82,14 @@ export default function ExerciseSection({ exercise, exerciseNumber }: ExerciseSe
       </div>
 
       {/* Hints */}
-      {showHints && exercise.hints.length > 0 && (
+      {showHints && exercise.hints && (Array.isArray(exercise.hints) ? exercise.hints.length > 0 : exercise.hints.length > 0) && (
         <div className="mb-6 p-4 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700 rounded-lg">
           <h5 className="text-sm font-medium text-yellow-800 dark:text-yellow-200 mb-3 flex items-center gap-2">
             <LightBulbIcon className="h-4 w-4" />
             {t('hints')}
           </h5>
           <ul className="space-y-2">
-            {exercise.hints.map((hint, index) => (
+            {(Array.isArray(exercise.hints) ? exercise.hints : [exercise.hints]).map((hint, index) => (
               <li key={index} className="flex items-start gap-2">
                 <div className="w-1.5 h-1.5 bg-yellow-600 dark:bg-yellow-400 rounded-full mt-2 flex-shrink-0"></div>
                 <span className="text-yellow-700 dark:text-yellow-200 text-sm">{hint}</span>

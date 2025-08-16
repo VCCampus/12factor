@@ -142,7 +142,7 @@ export default function LearningCard({
             </div>
 
             {/* Exercises Section */}
-            {currentLearningItem.practiceCount && currentLearningItem.practiceCount > 0 && (
+            {!!(currentLearningItem.practiceCount && currentLearningItem.practiceCount > 0) && (
               <div className="border-t border-gray-200 dark:border-gray-600 pt-6">
                 <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100 mb-4">
                   {t('practicalExercises')} ({currentLearningItem.practiceCount} {t('exercises')})

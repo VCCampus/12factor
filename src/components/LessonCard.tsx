@@ -71,7 +71,7 @@ export default function LessonCard({ lesson }: LessonCardProps) {
               {t('practicalExamples')}
             </h3>
             <div className="space-y-4">
-              {lesson.content.examples?.map((example, index) => (
+              {(Array.isArray(lesson.content.examples) ? lesson.content.examples : lesson.content.examples ? [lesson.content.examples] : [])?.map((example, index) => (
                 <div
                   key={index}
                   className="bg-stone-50 dark:bg-gray-800 rounded-lg p-4 border border-stone-200 dark:border-gray-700"

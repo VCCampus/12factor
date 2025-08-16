@@ -48,7 +48,11 @@ export const notebookLessons: NotebookLesson[] = [
         description: 'practiceExercises.fundamentals.chapter1BasicStructure.description',
         userPrompt: 'Count to three',
         expectedOutput: 'practiceExercises.fundamentals.chapter1BasicStructure.expectedOutput',
-        hints: 'practiceExercises.fundamentals.chapter1BasicStructure.hints',
+        hints: [
+          'practiceExercises.fundamentals.chapter1BasicStructure.hints.0',
+          'practiceExercises.fundamentals.chapter1BasicStructure.hints.1',
+          'practiceExercises.fundamentals.chapter1BasicStructure.hints.2'
+        ],
         variations: [
           {
             name: 'practiceExercises.fundamentals.chapter1BasicStructure.variations.directInstruction.name',
@@ -74,7 +78,11 @@ export const notebookLessons: NotebookLesson[] = [
         systemPrompt: 'You are a 3 year old child. Respond with the excitement, curiosity, and simple language that a 3-year-old would use.',
         userPrompt: 'How big is the sky?',
         expectedOutput: 'practiceExercises.fundamentals.chapter1SystemPrompt.expectedOutput',
-        hints: 'practiceExercises.fundamentals.chapter1SystemPrompt.hints',
+        hints: [
+          'practiceExercises.fundamentals.chapter1SystemPrompt.hints.0',
+          'practiceExercises.fundamentals.chapter1SystemPrompt.hints.1',
+          'practiceExercises.fundamentals.chapter1SystemPrompt.hints.2'
+        ],
         variations: [
           {
             name: 'practiceExercises.fundamentals.chapter1SystemPrompt.variations.noSystemPrompt.name',
@@ -100,7 +108,11 @@ export const notebookLessons: NotebookLesson[] = [
         systemPrompt: 'Please respond in Spanish.',
         userPrompt: 'Hello Claude, how are you?',
         expectedOutput: 'practiceExercises.fundamentals.chapter2Spanish.expectedOutput',
-        hints: 'practiceExercises.fundamentals.chapter2Spanish.hints',
+        hints: [
+          'practiceExercises.fundamentals.chapter2Spanish.hints.0',
+          'practiceExercises.fundamentals.chapter2Spanish.hints.1',
+          'practiceExercises.fundamentals.chapter2Spanish.hints.2'
+        ],
         variations: [
           {
             name: 'practiceExercises.fundamentals.chapter2Spanish.variations.chineseResponse.name',
@@ -125,7 +137,11 @@ export const notebookLessons: NotebookLesson[] = [
         description: 'practiceExercises.fundamentals.chapter2Basketball.description',
         userPrompt: 'Who is the best basketball player of all time? Give me only the name, no other text.',
         expectedOutput: 'practiceExercises.fundamentals.chapter2Basketball.expectedOutput',
-        hints: 'practiceExercises.fundamentals.chapter2Basketball.hints',
+        hints: [
+          'practiceExercises.fundamentals.chapter2Basketball.hints.0',
+          'practiceExercises.fundamentals.chapter2Basketball.hints.1',
+          'practiceExercises.fundamentals.chapter2Basketball.hints.2'
+        ],
         variations: [
           {
             name: 'practiceExercises.fundamentals.chapter2Basketball.variations.withExplanation.name',
@@ -146,61 +162,61 @@ export const notebookLessons: NotebookLesson[] = [
       },
       {
         id: 'chapter2-long-story',
-        title: '2章练习：写长故事 (明确要求)',
-        description: '学习如何通过明确的长度要求控制输出。这个练习展示了给出具体指标的重要性。',
+        title: 'practiceExercises.fundamentals.chapter2LongStory.title',
+        description: 'practiceExercises.fundamentals.chapter2LongStory.description',
         userPrompt: 'Write a story that is at least 800 words long about a robot learning to paint.',
-        expectedOutput: '一个至少800字的关于机器人学画画的故事，情节丰富，描述详细。',
+        expectedOutput: 'practiceExercises.fundamentals.chapter2LongStory.expectedOutput',
         hints: [
-          '明确要求故事长度：至少800字',
-          '给出具体的故事题材和主题',
-          '要求详细描述和情节发展',
-          '可以要求包含对话和场景描写'
+          'practiceExercises.fundamentals.chapter2LongStory.hints.0',
+          'practiceExercises.fundamentals.chapter2LongStory.hints.1',
+          'practiceExercises.fundamentals.chapter2LongStory.hints.2',
+          'practiceExercises.fundamentals.chapter2LongStory.hints.3'
         ],
         variations: [
           {
-            name: '无长度要求',
+            name: 'practiceExercises.fundamentals.chapter2LongStory.variations.noLength.name',
             prompt: 'Write a story about a robot learning to paint.',
-            explanation: '不指定长度，看看默认的故事长度'
+            explanation: 'practiceExercises.fundamentals.chapter2LongStory.variations.noLength.explanation'
           },
           {
-            name: '明确字数要求',
+            name: 'practiceExercises.fundamentals.chapter2LongStory.variations.exactWordCount.name',
             prompt: 'Write exactly a 800-word story about a robot learning to paint. Include dialogue and detailed descriptions.',
-            explanation: '指定确切字数并要求特定元素'
+            explanation: 'practiceExercises.fundamentals.chapter2LongStory.variations.exactWordCount.explanation'
           },
           {
-            name: '更长的故事',
+            name: 'practiceExercises.fundamentals.chapter2LongStory.variations.longerStory.name',
             prompt: 'Write a detailed story of at least 1000 words about a robot learning to paint, including character development and multiple scenes.',
-            explanation: '要求更长篇幅和更复杂结构'
+            explanation: 'practiceExercises.fundamentals.chapter2LongStory.variations.longerStory.explanation'
           }
         ]
       },
       {
         id: 'chapter3-math-logic',
-        title: '3章练习：数学错误检查 (角色分配)',
-        description: '体验角色分配对逻辑推理的影响。通过给Claude分配专家角色，提高其在特定领域的表现。',
+        title: 'practiceExercises.fundamentals.chapter3MathLogic.title',
+        description: 'practiceExercises.fundamentals.chapter3MathLogic.description',
         systemPrompt: 'You are a strict math teacher. Carefully check each step of mathematical calculations for errors.',
         userPrompt: 'Is this equation solved correctly?\n\n2x - 3 = 9\n2x = 6\nx = 3',
-        expectedOutput: '指出这个数学错误：2x = 9 + 3 = 12，不是6。',
+        expectedOutput: 'practiceExercises.fundamentals.chapter3MathLogic.expectedOutput',
         hints: [
-          '给Claude分配数学老师或逻辑专家角色',
-          '要求仔细检查每一步计算',
-          '强调找出错误而不是简单评价'
+          'practiceExercises.fundamentals.chapter3MathLogic.hints.0',
+          'practiceExercises.fundamentals.chapter3MathLogic.hints.1',
+          'practiceExercises.fundamentals.chapter3MathLogic.hints.2'
         ],
         variations: [
           {
-            name: '无角色设定',
+            name: 'practiceExercises.fundamentals.chapter3MathLogic.variations.noRole.name',
             prompt: 'Is this equation solved correctly?\n\n2x - 3 = 9\n2x = 6\nx = 3',
-            explanation: '不设置专门角色，看看默认表现'
+            explanation: 'practiceExercises.fundamentals.chapter3MathLogic.variations.noRole.explanation'
           },
           {
-            name: '逻辑专家',
+            name: 'practiceExercises.fundamentals.chapter3MathLogic.variations.logicExpert.name',
             prompt: 'Is this equation solved correctly?\n\n2x - 3 = 9\n2x = 6\nx = 3',
-            explanation: 'System: "You are a logic expert. Analyze step by step."'
+            explanation: 'practiceExercises.fundamentals.chapter3MathLogic.variations.logicExpert.explanation'
           },
           {
-            name: '学生角色',
+            name: 'practiceExercises.fundamentals.chapter3MathLogic.variations.studentRole.name',
             prompt: 'Is this equation solved correctly?\n\n2x - 3 = 9\n2x = 6\nx = 3',
-            explanation: 'System: "You are a student learning math. Show your thinking."'
+            explanation: 'practiceExercises.fundamentals.chapter3MathLogic.variations.studentRole.explanation'
           }
         ]
       }

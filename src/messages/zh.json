@@ -7,7 +7,7 @@
     "principles": "原则",
     "flashcards": "闪卡",
     "quiz": "测验",
-    "promptEngineering": "提示工程 (Prompt Engineering)",
+    "promptEngineering": "提示工程",
     "more": "更多",
     "progress": "进度",
     "learnMore": "了解更多",
@@ -46,7 +46,7 @@
       },
       "communication": {
         "title": "搭建人机沟通之桥",
-        "description": "掌握高效的提示词 (Prompting) 技巧，实现清晰的 AI 指令沟通，强化开发协作效率。"
+        "description": "掌握高效的提示词技巧，实现清晰的 AI 指令沟通，强化开发协作效率。"
       },
       "progress": {
         "title": "达成 10x 工程师效率",
@@ -411,96 +411,96 @@
     }
   },
   "promptEngineering": {
-    "title": "提示工程精通 (Prompt Engineering Mastery)",
-    "description": "通过互动课程和实践练习学习实用的提示工程技术 (Prompt Engineering)",
+    "title": "提示工程精通",
+    "description": "通过互动课程和实践练习学习实用的提示工程技术",
     "startLearning": "开始学习",
     "viewLessons": "查看课程",
     "lessonsLabel": "课程",
-    "interactiveLearning": "互动学习 (Interactive Learning)",
-    "learningPath": "学习路径 (Learning Path)",
-    "learningPathDescription": "通过结构化课程和实践练习掌握提示工程 (Prompt Engineering)",
+    "interactiveLearning": "互动学习",
+    "learningPath": "学习路径",
+    "learningPathDescription": "通过结构化课程和实践练习掌握提示工程",
     "backToLessons": "返回课程",
     "lesson": "课程",
     "chapter": "章节",
-    "theory": "理论 (Theory)",
-    "examples": "示例 (Examples)",
-    "exercises": "练习 (Exercises)",
-    "practicalExamples": "实践示例 (Practical Examples)",
-    "practiceExercises": "练习题 (Practice Exercises)",
-    "prerequisites": "前置要求 (Prerequisites)",
+    "theory": "理论",
+    "examples": "示例",
+    "exercises": "练习",
+    "practicalExamples": "实践示例",
+    "practiceExercises": "练习题",
+    "prerequisites": "前置要求",
     "exercise": "练习",
     "instructions": "说明",
     "hints": "提示",
     "showHints": "显示提示",
     "hideHints": "隐藏提示",
-    "yourPrompt": "你的提示词 (Your Prompt)",
-    "enterPromptHere": "在这里输入你的提示词 (Prompt)...",
+    "yourPrompt": "你的提示词",
+    "enterPromptHere": "在这里输入你的提示词...",
     "checkAnswer": "检查答案",
     "reset": "重置",
     "exerciseCompleted": "练习完成！",
-    "exerciseCorrect": "很好！你的提示词 (Prompt) 正确工作了。",
-    "exerciseIncorrect": "不太对。试试改进你的提示词 (Prompt)。",
-    "validationError": "验证你的提示词 (Prompt) 时出错。",
-    "tryAgainWithHints": "再试一次或查看提示 (Hints) 指导。",
+    "exerciseCorrect": "很好！你的提示词正确工作了。",
+    "exerciseIncorrect": "不太对。试试改进你的提示词。",
+    "validationError": "验证你的提示词时出错。",
+    "tryAgainWithHints": "再试一次或查看提示指导。",
     "previousLesson": "上一课",
     "nextLesson": "下一课",
-    "practiceExercise": "实践练习 (Practice Exercise)",
-    "nextCourse": "下一课程 (Next Course)",
+    "practiceExercise": "实践练习",
+    "nextCourse": "下一课程",
     "stage1": {
-      "name": "基础 (Fundamentals)",
-      "description": "掌握清晰有效的提示词 (Prompt) 交流基础"
+      "name": "基础",
+      "description": "掌握清晰有效的提示词交流基础"
     },
     "stage2": {
-      "name": "中级 (Intermediate)",
-      "description": "学习结构化提示词 (Structured Prompting) 和输出格式化 (Output Formatting) 技术"
+      "name": "中级",
+      "description": "学习结构化提示词和输出格式化技术"
     },
     "stage3": {
-      "name": "高级 (Advanced)",
-      "description": "探索复杂的提示策略 (Prompting Strategies) 和推理技术 (Reasoning Techniques)"
+      "name": "高级",
+      "description": "探索复杂的提示策略和推理技术"
     },
     "stage4": {
-      "name": "实践 (Practical)",
-      "description": "在真实场景和工作流 (Workflow) 中应用提示工程 (Prompt Engineering)"
+      "name": "实践",
+      "description": "在真实场景和工作流中应用提示工程"
     },
     "lesson1": {
-      "title": "基本提示结构 (Basic Prompt Structure)",
-      "summary": "学习有效提示词 (Prompt) 设计的基本要素和与AI系统的清晰交流。"
+      "title": "基本提示结构",
+      "summary": "学习有效提示词设计的基本要素和与AI系统的清晰交流。"
     },
     "lesson2": {
-      "title": "清晰直接 (Being Clear and Direct)",
+      "title": "清晰直接",
       "summary": "通过明确需求消除歧义，获得精确的回复。"
     },
     "lesson3": {
-      "title": "角色提示 (Role Prompting)",
+      "title": "角色提示",
       "summary": "分配特定角色和视角来改善回复质量和一致性。"
     },
     "lesson4": {
-      "title": "数据/指令分离 (Data/Instruction Separation)",
-      "summary": "使用清晰的分隔符 (Delimiters) 将数据与指令分离，提高提示词 (Prompt) 清晰度。"
+      "title": "数据/指令分离",
+      "summary": "使用清晰的分隔符将数据与指令分离，提高提示词清晰度。"
     },
     "lesson5": {
-      "title": "输出格式化 (Output Formatting)",
+      "title": "输出格式化",
       "summary": "指定确切的输出格式以获得结构化、一致的回复。"
     },
     "lesson6": {
-      "title": "逐步思考 (Step-by-Step Thinking)",
-      "summary": "利用思维链提示 (Chain-of-Thought Prompting) 来改善推理和问题解决。"
+      "title": "逐步思考",
+      "summary": "利用思维链提示来改善推理和问题解决。"
     },
-    "integratedCourse": "综合课程 (Integrated Course)",
-    "courseOverview": "课程概览 (Course Overview)",
+    "integratedCourse": "综合课程",
+    "courseOverview": "课程概览",
     "course": {
       "fundamentals": {
-        "title": "基础课程 (Fundamentals Course)",
-        "summary": "学习提示工程 (Prompt Engineering) 的基本概念和核心原理"
+        "title": "基础课程",
+        "summary": "学习提示工程的基本概念和核心原理"
       },
       "advanced": {
-        "title": "高级课程 (Advanced Course)",
-        "summary": "复杂提示策略 (Prompting Strategies) 和推理技术 (Reasoning Techniques)"
+        "title": "高级课程",
+        "summary": "复杂提示策略和推理技术"
       }
     },
     "nextCourse": "下一课程",
-    "sections": "章节 (Sections)",
-    "previousCourse": "上一课程 (Previous Course)",
+    "sections": "章节",
+    "previousCourse": "上一课程",
     "clickToStartPractice": "点击下方编辑器开始练习",
     "learningMode": "学习模式",
     "practiceMode": "练习模式", 
@@ -509,16 +509,16 @@
     "promptExamples": "提示示例",
     "practicalExercises": "实践练习",
     "exercises": "个",
-    "previous": "上一个",
-    "next": "下一个",
+    "previous": "上一项",
+    "next": "下一项",
     "showHints": "显示提示",
     "hideHints": "隐藏提示",
     "learningTips": "学习提示",
     "tryDifferentVariations": "尝试不同的提示词变体",
     "editPrompt": "编辑提示词",
-    "systemPrompt": "系统提示 (System Prompt)",
+    "systemPrompt": "系统提示",
     "systemPromptPlaceholder": "设定AI的角色和行为规则...",
-    "userPrompt": "用户提示 (User Prompt)",
+    "userPrompt": "用户提示",
     "userPromptPlaceholder": "输入你的问题或指令...",
     "runPrompt": "运行提示",
     "running": "运行中...",
@@ -582,18 +582,18 @@
       },
       "chapter3": {
         "title": "第三章：角色分配",
-        "theory": "给Claude分配具体角色能显著提升表现。角色设定可以改变回应风格、语调和专业程度。",
+        "theory": "给Claude分配具体角色能显著提升表现。角色设定可以改变回应风格、语调和专业程度。体验角色分配对逻辑推理的影响。通过给Claude分配专家角色，提高其在特定领域的表现。",
         "examples": [
           "❌ 无角色: '滑板运动怎么样？'",
           "✅ 猫的角色: system='你是一只猫' → 会从猫的视角回答",
           "❌ 逻辑错误: Jack看Anne，Anne看George，Jack已婚George未婚，已婚者在看未婚者吗？",
-          "✅ 逻辑专家: system='你是逻辑推理专家' → 正确分析这个问题"
+          "✅ 逻辑推理专家: system='你是逻辑推理专家' → 正确分析这个问题"
         ],
         "exercises": {
           "mathCorrection": {
             "instructions": "让Claude发现这个数学错误：2x-3=9, 2x=6, x=3",
             "template": "这个方程解得对吗？\n\n2x - 3 = 9\n2x = 6\nx = 3",
-            "hints": ["给Claude分配数学老师或逻辑专家角色", "要求仔细检查每一步", "强调找出错误"]
+            "hints": ["给Claude分配数学老师或逻辑推理专家角色", "要求仔细检查每一步", "强调找出错误"]
           }
         }
       }
@@ -650,7 +650,7 @@
     "practiceExercises": {
       "fundamentals": {
         "chapter1BasicStructure": {
-          "title": "第一章练习：数到三 (API结构)",
+          "title": "第一章练习：数到三（API结构）",
           "description": "学习正确的Messages API格式。这是最基础的练习，确保你理解如何构建有效的提示。",
           "expectedOutput": "包含1、2、3的回应，格式清晰。",
           "hints": [
@@ -674,7 +674,7 @@
           }
         },
         "chapter1SystemPrompt": {
-          "title": "第一章练习：3岁小孩角色 (System Prompt)",
+          "title": "第一章练习：3岁小孩角色（系统提示）",
           "description": "体验 system prompt 的威力。通过角色设定，让Claude的回应风格彻底改变。",
           "expectedOutput": "像3岁孩子一样的兴奋回应，可能包含笑声、简单词汇和天真的表达。",
           "hints": [
@@ -698,7 +698,7 @@
           }
         },
         "chapter2Spanish": {
-          "title": "第二章练习：西班牙语回应 (清晰指令)",
+          "title": "第二章练习：西班牙语回应（清晰指令）",
           "description": "学习如何给出明确指令控制输出语言。这个练习显示API能够精确按照你的要求执行。",
           "expectedOutput": "用西班牙语回应，包含 \"Hola\" 等西班牙语问候词。",
           "hints": [
@@ -722,7 +722,7 @@
           }
         },
         "chapter2Basketball": {
-          "title": "第二章练习：只要一个名字 (精确格式)",
+          "title": "第二章练习：只要一个名字（精确格式）",
           "description": "学习如何给出极具体的格式要求。这个练习教你如何获得精确控制的输出。",
           "expectedOutput": "只有一个球员的名字，没有其他任何文字或解释。",
           "hints": [
@@ -742,6 +742,59 @@
             "specificFormat": {
               "name": "特定格式",
               "explanation": "\"回答格式：姓名：[球员姓名]\""
+            }
+          }
+        },
+        "chapter2LongStory": {
+          "title": "第二章练习：写长故事（明确要求）",
+          "description": "学习如何通过明确的长度要求控制输出。这个练习展示了给出具体指标的重要性。",
+          "expectedOutput": "一个至少800字的关于机器人学画画的故事，情节丰富，描述详细。",
+          "hints": [
+            "明确要求故事长度：至少800字",
+            "给出具体的故事题材和主题",
+            "要求详细描述和情节发展",
+            "可以要求包含对话和场景描写"
+          ],
+          "variations": {
+            "noLength": {
+              "name": "无长度要求",
+              "explanation": "不指定长度，看看默认的故事长度"
+            },
+            "exactWordCount": {
+              "name": "明确字数要求",
+              "explanation": "指定确切字数并要求特定元素"
+            },
+            "longerStory": {
+              "name": "更长的故事",
+              "explanation": "要求更长篇幅和更复杂结构"
+            }
+          }
+        },
+        "chapter3MathLogic": {
+          "title": "第三章练习：数学错误检查（角色分配）",
+          "description": "体验角色分配对逻辑推理的影响。通过给Claude分配专家角色，提高其在特定领域的表现。",
+          "expectedOutput": "发现数学错误：从2x-3=9到2x=6的步骤是错误的，正确应该是2x=12。",
+          "hints": [
+            "给Claude分配数学老师或逻辑推理专家角色",
+            "要求仔细检查每一步计算",
+            "强调找出错误所在"
+          ],
+          "variations": {
+            "noRole": {
+              "name": "无角色设定",
+              "explanation": "不设定特定角色，看看基础表现"
+            },
+            "mathTeacher": {
+              "name": "数学老师角色",
+              "explanation": "设定为数学老师，强调教学和错误检查"
+            },
+            "logicExpert": {
+              "name": "逻辑推理专家",
+              "explanation": "设定为逻辑推理专家，专注于逻辑分析"
+            },
+            "studentRole": {
+              "name": "学生角色",
+              "explanation": "设定为学习数学的学生，展示思考过程"
             }
           }
         }

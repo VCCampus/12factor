@@ -57,24 +57,37 @@ export default function CoursePage() {
     // Process exercises to resolve hints translation keys
     const processedExercises = section.exercises?.map(exercise => {
       let resolvedHints: string[] = [];
-      try {
-        const hintsKey = exercise.hints as string;
-        const hintsData = t.raw(hintsKey);
-        if (Array.isArray(hintsData)) {
-          resolvedHints = hintsData;
-        } else if (typeof hintsData === 'string') {
-          resolvedHints = [hintsData];
+      
+      // Check if exercise.hints is an array of translation keys or content
+      if (Array.isArray(exercise.hints)) {
+        // If it's an array, check if the first item looks like a translation key
+        const firstHint = exercise.hints[0];
+        if (firstHint && firstHint.includes('.')) {
+          // Looks like translation keys, resolve each one
+          resolvedHints = exercise.hints.map(hint => {
+            try {
+              return t(hint);
+            } catch {
+              return hint; // Fallback to the key itself
+            }
+          });
         } else {
-          resolvedHints = [hintsKey];
+          // Already translated content, use as is
+          resolvedHints = exercise.hints;
         }
-      } catch {
-        resolvedHints = [exercise.hints as string];
+      } else if (typeof exercise.hints === 'string') {
+        // Single hint (either key or content)
+        try {
+          resolvedHints = [t(exercise.hints)];
+        } catch {
+          resolvedHints = [exercise.hints];
+        }
       }
       
       return {
         ...exercise,
         instructions: t(exercise.instructions),
-        template: t(exercise.template),
+        template: exercise.template ? t(exercise.template) : '',
         hints: resolvedHints
       };
     }) || [];
@@ -102,14 +115,21 @@ export default function CoursePage() {
 
     const resolveHintsArray = (hints: string | string[]): string[] => {
       if (Array.isArray(hints)) {
-        return hints;
+        // If hints is an array of translation keys, resolve each one
+        return hints.map(hint => {
+          try {
+            return t(hint);
+          } catch {
+            return hint; // Fallback to the key itself if translation fails
+          }
+        });
       }
       try {
         const hintsData = t.raw(hints);
         if (Array.isArray(hintsData)) {
           return hintsData;
         }
-        return [hints];
+        return [t(hints)]; // Single hint should also be translated
       } catch {
         return [hints];
       }

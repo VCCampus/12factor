@@ -743,6 +743,59 @@
               "explanation": "\"Answer format: Name: [Player Name]\""
             }
           }
+        },
+        "chapter2LongStory": {
+          "title": "Chapter 2 Exercise: Write Long Story (Clear Requirements)",
+          "description": "Learn how to control output through clear length requirements. This exercise demonstrates the importance of giving specific metrics.",
+          "expectedOutput": "A story of at least 800 words about a robot learning to paint, with rich plot and detailed descriptions.",
+          "hints": [
+            "Clearly specify story length: at least 800 words",
+            "Provide specific story themes and topics",
+            "Request detailed descriptions and plot development",
+            "Can require inclusion of dialogue and scene descriptions"
+          ],
+          "variations": {
+            "noLength": {
+              "name": "No Length Requirement",
+              "explanation": "Don't specify length, see default story length"
+            },
+            "exactWordCount": {
+              "name": "Exact Word Count",
+              "explanation": "Specify exact word count and require specific elements"
+            },
+            "longerStory": {
+              "name": "Longer Story",
+              "explanation": "Request longer length and more complex structure"
+            }
+          }
+        },
+        "chapter3MathLogic": {
+          "title": "Chapter 3 Exercise: Math Error Check (Role Assignment)",
+          "description": "Experience the impact of role assignment on logical reasoning. Improve Claude's performance in specific domains by assigning expert roles.",
+          "expectedOutput": "Discover the math error: the step from 2x-3=9 to 2x=6 is wrong, it should be 2x=12.",
+          "hints": [
+            "Assign Claude a math teacher or logical reasoning expert role",
+            "Request careful checking of each calculation step",
+            "Emphasize finding where the error is"
+          ],
+          "variations": {
+            "noRole": {
+              "name": "No Role Setting",
+              "explanation": "Don't set specific role, see baseline performance"
+            },
+            "mathTeacher": {
+              "name": "Math Teacher Role",
+              "explanation": "Set as math teacher, emphasize teaching and error checking"
+            },
+            "logicExpert": {
+              "name": "Logic Reasoning Expert",
+              "explanation": "Set as logic reasoning expert, focus on logical analysis"
+            },
+            "studentRole": {
+              "name": "Student Role",
+              "explanation": "Set as a student learning math, show thinking process"
+            }
+          }
         }
       }
     }
