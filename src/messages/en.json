@@ -496,6 +496,126 @@
     },
     "integratedCourse": "Integrated Course",
     "courseOverview": "Course Overview",
-    "sections": "sections"
+    "sections": "sections",
+    "previousCourse": "Previous Course",
+    "clickToStartPractice": "Click the editor below to start practice",
+    "fundamentals": {
+      "title": "Fundamentals Course",
+      "theory": "Comprehensive step-by-step guide to mastering Claude's best prompt engineering practices. Learn three core skills: API structure, clear communication, and role assignment.",
+      "chapter1": {
+        "title": "Chapter 1: Basic Prompt Structure",
+        "theory": "Learn the required parameters of the Messages API: model, max_tokens, messages array. Master the user/assistant conversation format and correct usage of system prompts.",
+        "examples": [
+          "✅ Correct format: {role: 'user', content: 'Hi Claude, how are you?'}",
+          "❌ Wrong format: {Hi Claude, how are you?} - missing role and content fields",
+          "✅ System prompt: 'You are a logical reasoning expert who specializes in solving complex logical problems'"
+        ],
+        "exercises": {
+          "countToThree": {
+            "instructions": "Use the correct user/assistant format to have Claude count to three",
+            "template": "[Replace this text]",
+            "hints": ["State your request directly", "Use simple clear instructions", "Avoid unnecessary complexity"]
+          },
+          "systemPromptChild": {
+            "instructions": "Modify the SYSTEM_PROMPT to make Claude respond like a 3-year-old child",
+            "template": "SYSTEM_PROMPT = '[Replace this text]'",
+            "hints": ["Think about how 3-year-olds speak", "Use simple vocabulary and expressions", "Add childlike language features"]
+          }
+        }
+      },
+      "chapter2": {
+        "title": "Chapter 2: Being Clear and Direct",
+        "theory": "Claude needs clear instructions. Follow the golden rule: if you show your prompt to a colleague and they're confused, Claude will be confused too.",
+        "examples": [
+          "❌ Vague: 'Write a haiku about robots'",
+          "✅ Clear: 'Write a haiku about robots, skip the preamble and go straight to the poem'",
+          "❌ Vague: 'Who is the best basketball player of all time?'",
+          "✅ Force choice: 'Who is the best basketball player of all time? While there are different opinions, if you had to choose one, who would it be?'"
+        ],
+        "exercises": {
+          "spanishResponse": {
+            "instructions": "Modify the SYSTEM_PROMPT to make Claude respond in Spanish",
+            "template": "SYSTEM_PROMPT = '[Replace this text]'",
+            "hints": ["Tell Claude directly which language to use", "You can specify language requirements in the system prompt"]
+          },
+          "onePlayerOnly": {
+            "instructions": "Have Claude respond with only one player's name, no other text or punctuation",
+            "template": "[Replace this text]",
+            "hints": ["Be very specific about format requirements", "Clearly state no explanations or other content", "Force Claude to make a choice"]
+          },
+          "longStory": {
+            "instructions": "Write a story of 800+ words",
+            "template": "[Replace this text]",
+            "hints": ["Clearly specify story length", "You can provide specific story themes", "Request detailed descriptions and plot development"]
+          }
+        }
+      },
+      "chapter3": {
+        "title": "Chapter 3: Assigning Roles (Role Prompting)",
+        "theory": "Assigning specific roles to Claude can significantly improve performance. Role setting can change response style, tone, and level of expertise.",
+        "examples": [
+          "❌ No role: 'What about skateboarding?'",
+          "✅ Cat role: system='You are a cat' → will answer from a cat's perspective",
+          "❌ Logic error: Jack looks at Anne, Anne looks at George, Jack is married George is unmarried, is a married person looking at an unmarried person?",
+          "✅ Logic expert: system='You are a logical reasoning expert' → correctly analyzes this problem"
+        ],
+        "exercises": {
+          "mathCorrection": {
+            "instructions": "Have Claude find the math error: 2x-3=9, 2x=6, x=3",
+            "template": "Is this equation solved correctly?\n\n2x - 3 = 9\n2x = 6\nx = 3",
+            "hints": ["Assign Claude a math teacher or logic expert role", "Request careful checking of each step", "Emphasize finding the error"]
+          }
+        }
+      }
+    },
+    "advanced": {
+      "title": "Advanced Course",
+      "theory": "Advanced prompt engineering techniques: Data Separation, Output Formatting, and Chain-of-Thought Reasoning. These methods unlock Claude's full analytical potential.",
+      "dataSeparation": {
+        "title": "Data Separation Techniques",
+        "theory": "Use XML tags, Markdown sections, or clear delimiters to separate data from instructions. This prevents confusion and improves processing accuracy.",
+        "examples": [
+          "Mixed: 'Summarize this: AI is transforming industries by automating tasks'",
+          "Separated: 'Analyze the following text:\\n\\n<content>\\nAI is transforming industries\\n</content>\\n\\nProvide a 2-sentence summary.'"
+        ],
+        "exercises": {
+          "adv1": {
+            "instructions": "Use XML tags to separate data when analyzing text structure",
+            "template": "Analyze the grammar of this sentence:\\n\\n<sentence>\\n[Your sentence]\\n</sentence>",
+            "hints": ["Use clear XML delimiters", "Keep instructions separate from data", "Be specific about analysis type"]
+          }
+        }
+      },
+      "outputFormatting": {
+        "title": "Output Formatting Control",
+        "theory": "Control Claude's response format through clear templates, examples, and structural requirements. Consistent formatting enables automation and integration.",
+        "examples": [
+          "Unformatted: 'List programming languages'",
+          "Formatted: 'List 3 languages using this format:\\n1. **Language**: Description\\n2. **Language**: Description'"
+        ],
+        "exercises": {
+          "adv2": {
+            "instructions": "Get Claude to provide exactly 3 items in a specific numbered format",
+            "template": "Give me 3 productivity tips in this exact format:\\n[Define your format]",
+            "hints": ["Specify exact formatting requirements", "Use templates as examples", "Be explicit about structure"]
+          }
+        }
+      },
+      "chainOfThought": {
+        "title": "Chain-of-Thought Reasoning",
+        "theory": "Unlock Claude's analytical capabilities by requiring step-by-step reasoning. This technique significantly improves complex problem solving and ensures logical transparency.",
+        "examples": [
+          "Direct: 'What's 25% of 80?'",
+          "Chain-of-thought: 'Calculate 25% of 80. Show each step of your calculation with explanations.'"
+        ],
+        "exercises": {
+          "adv3": {
+            "instructions": "Get Claude to solve a complex problem using explicit step-by-step reasoning",
+            "template": "Solve this step by step, showing your work: [Your problem]",
+            "hints": ["Ask for explicit reasoning", "Request step-by-step breakdown", "Look for logical connectors"]
+          }
+        }
+      }
+    }
   }
 }

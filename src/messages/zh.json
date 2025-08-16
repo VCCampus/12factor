@@ -7,7 +7,7 @@
     "principles": "原则",
     "flashcards": "闪卡",
     "quiz": "测验",
-    "promptEngineering": "提示工程",
+    "promptEngineering": "提示工程 (Prompt Engineering)",
     "more": "更多",
     "progress": "进度",
     "learnMore": "了解更多",
@@ -411,93 +411,213 @@
     }
   },
   "promptEngineering": {
-    "title": "提示工程精通",
-    "description": "通过互动课程和实践练习学习实用的提示工程技术",
+    "title": "提示工程精通 (Prompt Engineering Mastery)",
+    "description": "通过互动课程和实践练习学习实用的提示工程技术 (Prompt Engineering)",
     "startLearning": "开始学习",
     "viewLessons": "查看课程",
     "lessonsLabel": "课程",
-    "interactiveLearning": "互动学习",
-    "learningPath": "学习路径",
-    "learningPathDescription": "通过结构化课程和实践练习掌握提示工程",
+    "interactiveLearning": "互动学习 (Interactive Learning)",
+    "learningPath": "学习路径 (Learning Path)",
+    "learningPathDescription": "通过结构化课程和实践练习掌握提示工程 (Prompt Engineering)",
     "backToLessons": "返回课程",
     "lesson": "课程",
     "chapter": "章节",
-    "theory": "理论",
-    "examples": "示例",
-    "exercises": "练习",
-    "practicalExamples": "实践示例",
-    "practiceExercises": "练习题",
-    "prerequisites": "前置要求",
+    "theory": "理论 (Theory)",
+    "examples": "示例 (Examples)",
+    "exercises": "练习 (Exercises)",
+    "practicalExamples": "实践示例 (Practical Examples)",
+    "practiceExercises": "练习题 (Practice Exercises)",
+    "prerequisites": "前置要求 (Prerequisites)",
     "exercise": "练习",
     "instructions": "说明",
     "hints": "提示",
     "showHints": "显示提示",
     "hideHints": "隐藏提示",
-    "yourPrompt": "你的提示",
-    "enterPromptHere": "在这里输入你的提示...",
+    "yourPrompt": "你的提示词 (Your Prompt)",
+    "enterPromptHere": "在这里输入你的提示词 (Prompt)...",
     "checkAnswer": "检查答案",
     "reset": "重置",
     "exerciseCompleted": "练习完成！",
-    "exerciseCorrect": "很好！你的提示正确工作了。",
-    "exerciseIncorrect": "不太对。试试改进你的提示。",
-    "validationError": "验证你的提示时出错。",
-    "tryAgainWithHints": "再试一次或查看提示指导。",
+    "exerciseCorrect": "很好！你的提示词 (Prompt) 正确工作了。",
+    "exerciseIncorrect": "不太对。试试改进你的提示词 (Prompt)。",
+    "validationError": "验证你的提示词 (Prompt) 时出错。",
+    "tryAgainWithHints": "再试一次或查看提示 (Hints) 指导。",
     "previousLesson": "上一课",
     "nextLesson": "下一课",
-    "practiceExercise": "实践练习",
-    "nextCourse": "下一课程",
+    "practiceExercise": "实践练习 (Practice Exercise)",
+    "nextCourse": "下一课程 (Next Course)",
     "stage1": {
-      "name": "基础",
-      "description": "掌握清晰有效的提示交流基础"
+      "name": "基础 (Fundamentals)",
+      "description": "掌握清晰有效的提示词 (Prompt) 交流基础"
     },
     "stage2": {
-      "name": "中级",
-      "description": "学习结构化提示和输出格式化技术"
+      "name": "中级 (Intermediate)",
+      "description": "学习结构化提示词 (Structured Prompting) 和输出格式化 (Output Formatting) 技术"
     },
     "stage3": {
-      "name": "高级",
-      "description": "探索复杂的提示策略和推理技术"
+      "name": "高级 (Advanced)",
+      "description": "探索复杂的提示策略 (Prompting Strategies) 和推理技术 (Reasoning Techniques)"
     },
     "stage4": {
-      "name": "实践",
-      "description": "在真实场景和工作流中应用提示工程"
+      "name": "实践 (Practical)",
+      "description": "在真实场景和工作流 (Workflow) 中应用提示工程 (Prompt Engineering)"
     },
     "lesson1": {
-      "title": "基本提示结构",
-      "summary": "学习有效提示设计的基本要素和与AI系统的清晰交流。"
+      "title": "基本提示结构 (Basic Prompt Structure)",
+      "summary": "学习有效提示词 (Prompt) 设计的基本要素和与AI系统的清晰交流。"
     },
     "lesson2": {
-      "title": "清晰直接",
+      "title": "清晰直接 (Being Clear and Direct)",
       "summary": "通过明确需求消除歧义，获得精确的回复。"
     },
     "lesson3": {
-      "title": "角色提示",
+      "title": "角色提示 (Role Prompting)",
       "summary": "分配特定角色和视角来改善回复质量和一致性。"
     },
     "lesson4": {
-      "title": "数据/指令分离",
-      "summary": "使用清晰的分隔符将数据与指令分离，提高提示清晰度。"
+      "title": "数据/指令分离 (Data/Instruction Separation)",
+      "summary": "使用清晰的分隔符 (Delimiters) 将数据与指令分离，提高提示词 (Prompt) 清晰度。"
     },
     "lesson5": {
-      "title": "输出格式化",
+      "title": "输出格式化 (Output Formatting)",
       "summary": "指定确切的输出格式以获得结构化、一致的回复。"
     },
     "lesson6": {
-      "title": "逐步思考",
-      "summary": "利用思维链提示来改善推理和问题解决。"
+      "title": "逐步思考 (Step-by-Step Thinking)",
+      "summary": "利用思维链提示 (Chain-of-Thought Prompting) 来改善推理和问题解决。"
     },
-    "integratedCourse": "综合课程",
-    "courseOverview": "课程概览",
+    "integratedCourse": "综合课程 (Integrated Course)",
+    "courseOverview": "课程概览 (Course Overview)",
     "course": {
       "fundamentals": {
-        "title": "基础课程",
-        "summary": "学习提示工程的基本概念和核心原理"
+        "title": "基础课程 (Fundamentals Course)",
+        "summary": "学习提示工程 (Prompt Engineering) 的基本概念和核心原理"
       },
       "advanced": {
-        "title": "高级课程",
-        "summary": "复杂提示策略和推理技术"
+        "title": "高级课程 (Advanced Course)",
+        "summary": "复杂提示策略 (Prompting Strategies) 和推理技术 (Reasoning Techniques)"
       }
     },
-    "sections": "章节"
+    "sections": "章节 (Sections)",
+    "previousCourse": "上一课程 (Previous Course)",
+    "clickToStartPractice": "点击下方编辑器开始练习",
+    "fundamentals": {
+      "title": "基础课程",
+      "theory": "掌握Claude最佳提示工程的全面分步指南。学习API结构、清晰沟通、角色分配三大核心技能。",
+      "chapter1": {
+        "title": "第一章：基本提示结构",
+        "theory": "学习Messages API的必需参数：model、max_tokens、messages数组。掌握user/assistant对话格式和系统提示的正确使用。",
+        "examples": [
+          "✅ 正确格式: {role: 'user', content: 'Hi Claude, how are you?'}",
+          "❌ 错误格式: {Hi Claude, how are you?} - 缺少role和content字段",
+          "✅ 系统提示: '你是一个逻辑推理专家，专门解决复杂逻辑问题'"
+        ],
+        "exercises": {
+          "countToThree": {
+            "instructions": "使用正确的user/assistant格式，让Claude数到三",
+            "template": "[Replace this text]",
+            "hints": ["直接说出你的需求", "使用简单清晰的指令", "避免不必要的复杂性"]
+          },
+          "systemPromptChild": {
+            "instructions": "修改系统提示让Claude像3岁小孩一样回应",
+            "template": "系统提示 = '[Replace this text]'",
+            "hints": ["想想3岁孩子如何说话", "使用简单词汇和表达", "加入孩子气的语言特征"]
+          }
+        }
+      },
+      "chapter2": {
+        "title": "第二章：清晰直接",
+        "theory": "Claude需要明确指令。遵循黄金法则：把你的提示词给同事看，如果他们困惑，Claude也会困惑。",
+        "examples": [
+          "❌ 模糊: '写一首关于机器人的俳句'",
+          "✅ 明确: '写一首关于机器人的俳句，跳过前言直接进入诗歌'",
+          "❌ 模糊: '谁是史上最佳篮球运动员？'",
+          "✅ 强制选择: '谁是史上最佳篮球运动员？虽然有不同观点，但如果你必须选择一个，会是谁？'"
+        ],
+        "exercises": {
+          "spanishResponse": {
+            "instructions": "修改系统提示让Claude用西班牙语回答",
+            "template": "系统提示 = '[Replace this text]'",
+            "hints": ["直接告诉Claude使用哪种语言", "可以在系统提示中指定语言要求"]
+          },
+          "onePlayerOnly": {
+            "instructions": "让Claude只回答一个球员的名字，没有其他文字或标点",
+            "template": "[Replace this text]",
+            "hints": ["要非常具体地说明格式要求", "明确说明不要解释或其他内容", "强制Claude做出选择"]
+          },
+          "longStory": {
+            "instructions": "写一个800字以上的故事",
+            "template": "[Replace this text]",
+            "hints": ["明确要求故事长度", "可以给出具体的故事题材", "要求详细描述和情节发展"]
+          }
+        }
+      },
+      "chapter3": {
+        "title": "第三章：角色分配",
+        "theory": "给Claude分配具体角色能显著提升表现。角色设定可以改变回应风格、语调和专业程度。",
+        "examples": [
+          "❌ 无角色: '滑板运动怎么样？'",
+          "✅ 猫的角色: system='你是一只猫' → 会从猫的视角回答",
+          "❌ 逻辑错误: Jack看Anne，Anne看George，Jack已婚George未婚，已婚者在看未婚者吗？",
+          "✅ 逻辑专家: system='你是逻辑推理专家' → 正确分析这个问题"
+        ],
+        "exercises": {
+          "mathCorrection": {
+            "instructions": "让Claude发现这个数学错误：2x-3=9, 2x=6, x=3",
+            "template": "这个方程解得对吗？\n\n2x - 3 = 9\n2x = 6\nx = 3",
+            "hints": ["给Claude分配数学老师或逻辑专家角色", "要求仔细检查每一步", "强调找出错误"]
+          }
+        }
+      }
+    },
+    "advanced": {
+      "title": "高级课程",
+      "theory": "高级提示工程技术：数据分离、输出格式化和思维链推理。这些方法释放Claude的全部分析潜力。",
+      "dataSeparation": {
+        "title": "数据分离技术",
+        "theory": "使用XML标签、Markdown部分或清晰分隔符将数据与指令分离。这可以防止混淆并提高处理准确性。",
+        "examples": [
+          "混合: 'Summarize this: AI is transforming industries by automating tasks'",
+          "分离: 'Analyze the following text:\\n\\n<content>\\nAI is transforming industries\\n</content>\\n\\nProvide a 2-sentence summary.'"
+        ],
+        "exercises": {
+          "adv1": {
+            "instructions": "使用XML标签在分析文本结构时分离数据",
+            "template": "分析这个句子的语法：\\n\\n<sentence>\\n[你的句子]\\n</sentence>",
+            "hints": ["使用清晰的XML分隔符", "保持指令与数据分离", "明确分析类型"]
+          }
+        }
+      },
+      "outputFormatting": {
+        "title": "输出格式控制",
+        "theory": "通过明确的模板、示例和结构要求控制Claude的响应格式。一致的格式化可以实现自动化和集成。",
+        "examples": [
+          "无格式: 'List programming languages'",
+          "有格式: 'List 3 languages using this format:\\n1. **Language**: Description\\n2. **Language**: Description'"
+        ],
+        "exercises": {
+          "adv2": {
+            "instructions": "让Claude以特定编号格式提供恰好3个项目",
+            "template": "给我3个生产力技巧，使用这个确切格式：\\n[定义你的格式]",
+            "hints": ["指定确切的格式要求", "使用模板作为示例", "明确结构要求"]
+          }
+        }
+      },
+      "chainOfThought": {
+        "title": "思维链推理",
+        "theory": "通过要求逐步推理释放Claude的分析能力。这种技术显著改善复杂问题解决并确保逻辑透明。",
+        "examples": [
+          "直接: 'What's 25% of 80?'",
+          "思维链: 'Calculate 25% of 80. Show each step of your calculation with explanations.'"
+        ],
+        "exercises": {
+          "adv3": {
+            "instructions": "让Claude使用明确的逐步推理解决复杂问题",
+            "template": "逐步解决这个问题，展示你的工作过程：[你的问题]",
+            "hints": ["要求明确的推理", "请求逐步分解", "寻找逻辑连接词"]
+          }
+        }
+      }
+    }
   }
 }

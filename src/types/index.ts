@@ -23,13 +23,13 @@ export interface ExerciseData {
   instructions: string;
   template?: string;
   expectedPattern?: string;
-  hints: string[];
+  hints: string | string[];
 }
 
 export interface CourseSection {
   title: string;
   theory: string;
-  examples: string[];
+  examples: string | string[];
   exercises?: ExerciseData[];
 }
 
@@ -40,7 +40,7 @@ export interface PromptLesson {
   messageKey: string;
   content: {
     theory: string;
-    examples?: string[];
+    examples?: string | string[];
     exercises?: ExerciseData[];
     sections?: CourseSection[];
   };
