@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useTranslations } from 'next-intl';
 import { promptLessons } from '@/data/prompt-lessons';
 import { Link } from '@/i18n/routing';
@@ -11,6 +11,7 @@ import { notFound } from 'next/navigation';
 
 export default function CoursePage() {
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
+  const [currentMode, setCurrentMode] = useState<'learning' | 'practice'>('learning');
   const params = useParams();
   const locale = params.locale as string;
   const courseSlug = params.course as string;
@@ -27,14 +28,22 @@ export default function CoursePage() {
   const prevCourse = courseIndex > 0 ? promptLessons[courseIndex - 1] : null;
   const nextCourse = courseIndex < promptLessons.length - 1 ? promptLessons[courseIndex + 1] : null;
 
-  // Prepare learning content
-  const learningContent = course.content.sections?.map((section, index) => ({
-    id: `section-${index}`,
-    title: section.title,
-    theory: section.theory,
-    examples: section.examples,
-    exercises: section.exercises
-  })) || [];
+  // Prepare learning content - sync with practice content
+  const learningContent = course.content.sections?.map((section, index) => {
+    // Find matching interactive examples for this section from notebook content
+    const sectionPracticeCount = notebookLesson?.interactiveExamples?.filter(example => 
+      example.title.includes(`${index + 1}章`)
+    ).length || 0;
+    
+    return {
+      id: `section-${index}`,
+      title: section.title,
+      theory: section.theory,
+      examples: section.examples,
+      exercises: section.exercises,
+      practiceCount: sectionPracticeCount
+    };
+  }) || [];
 
   // Prepare practice content from notebook lessons
   const practiceContent = notebookLesson?.interactiveExamples?.map(example => ({
@@ -45,17 +54,42 @@ export default function CoursePage() {
     expectedOutput: example.expectedOutput || ''
   })) || [];
 
-  const handleNext = () => {
-    if (currentCardIndex < learningContent.length - 1) {
+  const handleNext = useCallback(() => {
+    const maxIndex = currentMode === 'practice' ? practiceContent.length - 1 : learningContent.length - 1;
+    if (currentCardIndex < maxIndex) {
       setCurrentCardIndex(currentCardIndex + 1);
     }
-  };
+  }, [currentCardIndex, currentMode, practiceContent.length, learningContent.length]);
 
-  const handlePrev = () => {
+  const handlePrev = useCallback(() => {
     if (currentCardIndex > 0) {
       setCurrentCardIndex(currentCardIndex - 1);
     }
+  }, [currentCardIndex]);
+
+  const handleModeChange = (newMode: 'learning' | 'practice') => {
+    setCurrentMode(newMode);
+    // Reset to first item when switching modes
+    setCurrentCardIndex(0);
   };
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'ArrowLeft') {
+        event.preventDefault();
+        handlePrev();
+      } else if (event.key === 'ArrowRight') {
+        event.preventDefault();
+        handleNext();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [handleNext, handlePrev]);
 
   const getCourseIcon = (courseId: string) => {
     switch (courseId) {
@@ -139,9 +173,11 @@ export default function CoursePage() {
               learningContent={learningContent}
               practiceContent={practiceContent}
               currentIndex={currentCardIndex}
+              currentMode={currentMode}
               onNext={handleNext}
               onPrev={handlePrev}
-              canGoNext={currentCardIndex < learningContent.length - 1}
+              onModeChange={handleModeChange}
+              canGoNext={currentCardIndex < (currentMode === 'practice' ? practiceContent.length - 1 : learningContent.length - 1)}
               canGoPrev={currentCardIndex > 0}
             />
           )}

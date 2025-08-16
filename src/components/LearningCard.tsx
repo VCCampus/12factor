@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import React from 'react';
 import { ChevronLeftIcon, ChevronRightIcon, BookOpenIcon, BeakerIcon } from '@heroicons/react/24/outline';
 import InteractivePromptEditor from './InteractivePromptEditor';
 
@@ -15,6 +15,7 @@ interface LearningContent {
     template?: string;
     hints: string[];
   }>;
+  practiceCount?: number;
 }
 
 interface PracticeContent {
@@ -34,27 +35,34 @@ interface LearningCardProps {
   learningContent: LearningContent[];
   practiceContent: PracticeContent[];
   currentIndex: number;
+  currentMode?: 'learning' | 'practice';
   onNext: () => void;
   onPrev: () => void;
+  onModeChange?: (mode: 'learning' | 'practice') => void;
   canGoNext: boolean;
   canGoPrev: boolean;
 }
 
-type Mode = 'learning' | 'practice';
 
 export default function LearningCard({
   learningContent,
   practiceContent,
   currentIndex,
+  currentMode = 'learning',
   onNext,
   onPrev,
+  onModeChange,
   canGoNext,
   canGoPrev
 }: LearningCardProps) {
-  const [mode, setMode] = useState<Mode>('learning');
+  const mode = currentMode;
 
   const currentLearningItem = learningContent[currentIndex];
   const currentPracticeItem = practiceContent[currentIndex];
+  
+  // Use practice content length for practice mode navigation
+  const totalItems = mode === 'practice' ? practiceContent.length : learningContent.length;
+
 
   return (
     <div className="max-w-4xl mx-auto">
@@ -62,7 +70,7 @@ export default function LearningCard({
       <div className="flex justify-center mb-8">
         <div className="bg-gray-100 dark:bg-gray-800 rounded-xl p-2 flex gap-2">
           <button
-            onClick={() => setMode('learning')}
+            onClick={() => onModeChange?.('learning')}
             className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all ${
               mode === 'learning'
                 ? 'bg-white dark:bg-gray-700 shadow-sm text-[#98a971]'
@@ -73,7 +81,7 @@ export default function LearningCard({
             学习模式
           </button>
           <button
-            onClick={() => setMode('practice')}
+            onClick={() => onModeChange?.('practice')}
             className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all ${
               mode === 'practice'
                 ? 'bg-white dark:bg-gray-700 shadow-sm text-[#98a971]'
@@ -87,7 +95,10 @@ export default function LearningCard({
       </div>
 
       {/* Card Container */}
-      <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
+      <div 
+        id="learning-card"
+        className="bg-white dark:bg-gray-800 rounded-3xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden"
+      >
         {mode === 'learning' && currentLearningItem && (
           <div className="p-8">
             {/* Learning Content Header */}
@@ -129,19 +140,19 @@ export default function LearningCard({
             </div>
 
             {/* Exercises Section */}
-            {currentLearningItem.exercises && currentLearningItem.exercises.length > 0 && (
+            {currentLearningItem.practiceCount && currentLearningItem.practiceCount > 0 && (
               <div className="border-t border-gray-200 dark:border-gray-600 pt-6">
                 <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100 mb-4">
-                  实践练习 ({currentLearningItem.exercises.length}个)
+                  实践练习 ({currentLearningItem.practiceCount}个)
                 </h3>
                 <div className="space-y-4">
-                  {currentLearningItem.exercises.map((exercise) => (
+                  {currentLearningItem.exercises?.map((exercise) => (
                     <div key={exercise.id} className="bg-[#98a971]/5 dark:bg-[#98a971]/10 rounded-xl p-6 border border-[#98a971]/20">
                       <div className="flex items-center gap-2 mb-4">
                         <h5 className="font-medium text-[#98a971] text-lg">
                           {exercise.instructions}
                         </h5>
-                        {exercise.hints.length > 0 && (
+                        {exercise.hints && exercise.hints.length > 0 && (
                           <div className="relative group">
                             <button className="text-[#98a971] hover:text-[#98a971]/80 transition-colors">
                               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
@@ -237,7 +248,7 @@ export default function LearningCard({
 
             <div className="flex items-center gap-2">
               <span className="text-sm text-gray-600 dark:text-gray-400">
-                {currentIndex + 1} / {learningContent.length}
+                {currentIndex + 1} / {totalItems}
               </span>
             </div>
 
