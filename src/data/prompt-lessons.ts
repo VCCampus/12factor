@@ -1,58 +1,81 @@
 import { PromptLesson } from '@/types';
 
 export const promptLessons: PromptLesson[] = [
-  // Integrated Fundamentals Course
+  // Integrated Fundamentals Course - Chapter Based on Anthropic ipynb
   {
     id: 'fundamentals',
     chapter: 1,
     type: 'course',
     messageKey: 'promptFundamentals',
     content: {
-      theory: "Master the essential foundations of prompt engineering: proper API structure, clear communication, and role-based prompting. These three principles form the backbone of effective AI interaction.",
+      theory: "掌握Claude最佳提示工程的全面分步指南。学习API结构、清晰沟通、角色分配三大核心技能。",
       sections: [
         {
-          title: "API Structure & Basic Prompting",
-          theory: "Every effective prompt requires proper structure. Learn the Messages API format, understand required parameters, and master the art of clear instruction.",
+          title: "Chapter 1: Basic Prompt Structure",
+          theory: "学习Messages API的必需参数：model、max_tokens、messages数组。掌握user/assistant对话格式和system prompt的正确使用。",
           examples: [
-            "Basic: 'Hi Claude, how are you?'",
-            "Structured: Use proper user/assistant message format with clear max_tokens and temperature settings"
+            "✅ 正确格式: {role: 'user', content: 'Hi Claude, how are you?'}",
+            "❌ 错误格式: {Hi Claude, how are you?} - 缺少role和content字段",
+            "✅ System Prompt: '你是一个逻辑推理专家，专门解决复杂逻辑问题'"
           ],
           exercises: [{
-            id: "fund_1",
-            instructions: "Create a properly formatted prompt that gets Claude to count from 1 to 3",
-            template: "Write your prompt with proper API structure",
+            id: "count_to_three",
+            instructions: "使用正确的user/assistant格式，让Claude数到三",
+            template: "[Replace this text]",
             expectedPattern: ".*1.*2.*3.*",
-            hints: ["Use clear, direct instructions", "Specify the exact task", "Avoid unnecessary complexity"]
+            hints: ["直接说出你的需求", "使用简单清晰的指令", "避免不必要的复杂性"]
+          }, {
+            id: "system_prompt_child",
+            instructions: "修改SYSTEM_PROMPT让Claude像3岁小孩一样回应", 
+            template: "SYSTEM_PROMPT = '[Replace this text]'",
+            expectedPattern: ".*(giggles|soo).*",
+            hints: ["想想3岁孩子如何说话", "使用简单词汇和表达", "加入孩子气的语言特征"]
           }]
         },
         {
-          title: "Clear & Direct Communication",
-          theory: "Claude responds best to explicit instructions. Eliminate ambiguity by stating exactly what you want, when you want it, and how you want it formatted.",
+          title: "Chapter 2: Being Clear and Direct",
+          theory: "Claude需要明确指令。遵循黄金法则：把你的提示给同事看，如果他们困惑，Claude也会困惑。",
           examples: [
-            "Vague: 'Help me with my code'",
-            "Clear: 'Review this Python function for bugs and suggest specific improvements for readability and performance'"
+            "❌ 模糊: '写一首关于机器人的俳句'", 
+            "✅ 明确: '写一首关于机器人的俳句，跳过前言直接进入诗歌'",
+            "❌ 模糊: '谁是史上最佳篮球运动员？'",
+            "✅ 强制选择: '谁是史上最佳篮球运动员？虽然有不同观点，但如果你必须选择一个，会是谁？'"
           ],
           exercises: [{
-            id: "fund_2",
-            instructions: "Get Claude to write exactly one player's name with no other text",
-            template: "Who is the best basketball player? [Add your specific instructions]",
-            expectedPattern: "^[A-Za-z\\s]+$",
-            hints: ["Be extremely specific about format", "Use explicit constraints", "Ask for exactly what you want"]
+            id: "spanish_response",
+            instructions: "修改SYSTEM_PROMPT让Claude用西班牙语回答",
+            template: "SYSTEM_PROMPT = '[Replace this text]'",
+            expectedPattern: ".*hola.*",
+            hints: ["直接告诉Claude使用哪种语言", "可以在系统提示中指定语言要求"]
+          }, {
+            id: "one_player_only",
+            instructions: "让Claude只回答一个球员的名字，没有其他文字或标点",
+            template: "[Replace this text]",
+            expectedPattern: "^Michael Jordan$",
+            hints: ["要非常具体地说明格式要求", "明确说明不要解释或其他内容", "强制Claude做出选择"]
+          }, {
+            id: "long_story",
+            instructions: "写一个800字以上的故事",
+            template: "[Replace this text]",
+            expectedPattern: ".*",
+            hints: ["明确要求故事长度", "可以给出具体的故事题材", "要求详细描述和情节发展"]
           }]
         },
         {
-          title: "Role-Based Prompting",
-          theory: "Assign Claude specific expertise or perspective to dramatically improve response quality and consistency. Always define the role before giving the task.",
+          title: "Chapter 3: Assigning Roles (Role Prompting)",
+          theory: "给Claude分配具体角色能显著提升表现。角色设定可以改变回应风格、语调和专业程度。",
           examples: [
-            "Basic: 'Explain machine learning'",
-            "Role-based: 'You are a senior data scientist. Explain machine learning trade-offs to a product manager making technical decisions'"
+            "❌ 无角色: '滑板运动怎么样？'",
+            "✅ 猫的角色: system='你是一只猫' → 会从猫的视角回答",
+            "❌ 逻辑错误: Jack看Anne，Anne看George，Jack已婚George未婚，已婚者在看未婚者吗？",
+            "✅ 逻辑专家: system='你是逻辑推理专家' → 正确分析这个问题"
           ],
           exercises: [{
-            id: "fund_3",
-            instructions: "Get Claude to act as a specific expert and provide detailed feedback",
-            template: "You are a [specific role]. [Your detailed task]",
-            expectedPattern: ".*(analysis|review|recommendation|assessment).*",
-            hints: ["Choose a relevant expert role", "Provide clear context", "Ask for specific deliverables"]
+            id: "math_correction",
+            instructions: "让Claude发现这个数学错误：2x-3=9, 2x=6, x=3",
+            template: "这个方程解得对吗？\n\n2x - 3 = 9\n2x = 6\nx = 3",
+            expectedPattern: ".*(incorrect|not correct).*",
+            hints: ["给Claude分配数学老师或逻辑专家角色", "要求仔细检查每一步", "强调找出错误"]
           }]
         }
       ]

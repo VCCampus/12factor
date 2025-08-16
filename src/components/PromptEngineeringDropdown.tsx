@@ -39,123 +39,171 @@ export default function PromptEngineeringDropdown() {
 
       {isOpen && (
         <div 
-          className="absolute left-0 mt-2 w-72 bg-white dark:bg-gray-900 rounded-xl shadow-2xl border border-[#98a971]/20 dark:border-[#98a971]/30 z-50 overflow-hidden backdrop-blur-sm"
+          className="absolute left-0 mt-2 w-[720px] bg-white dark:bg-gray-900 rounded-xl shadow-2xl border border-gray-200/50 dark:border-gray-700/50 z-50 overflow-hidden backdrop-blur-sm"
           onMouseLeave={() => setIsOpen(false)}
         >
-          {/* Prompt Engineering Section Header */}
-          <div className="px-5 py-3 bg-[#98a971]/5 dark:bg-[#98a971]/10">
-            <div className="flex items-center gap-3">
-              <div className="w-6 h-6 bg-[#98a971]/20 rounded-md flex items-center justify-center">
-                <span className="text-sm">📖</span>
+          {/* Multi-column layout similar to reference image */}
+          <div className="grid grid-cols-3 divide-x divide-gray-200/50 dark:divide-gray-700/50">
+            
+            {/* First Column - Prompt Engineering */}
+            <div className="p-6">
+              <div className="mb-4">
+                <h3 className="text-sm font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wide mb-4">
+                  {t('promptEngineering')}
+                </h3>
               </div>
-              <span className="text-xs font-semibold text-[#98a971] uppercase tracking-wide">
-                {t('promptEngineering')}
-              </span>
+              
+              {/* Overview Link */}
+              <Link
+                href="/prompt-engineering"
+                locale={locale}
+                className="block mb-3 group"
+                onClick={() => setIsOpen(false)}
+              >
+                <div className="text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:text-[#98a971] transition-colors">
+                  {tPE('learningPath')}
+                </div>
+                <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                  {tPE('learningPathDescription')}
+                </div>
+              </Link>
+
+              {/* Course Links */}
+              {promptLessons.map((course) => {
+                const getCourseTitle = (id: string) => {
+                  switch (id) {
+                    case 'fundamentals':
+                      return tPE('course.fundamentals.title');
+                    case 'advanced':
+                      return tPE('course.advanced.title');
+                    default:
+                      return 'Course';
+                  }
+                };
+
+                const getCourseSummary = (id: string) => {
+                  switch (id) {
+                    case 'fundamentals':
+                      return tPE('course.fundamentals.summary');
+                    case 'advanced':
+                      return tPE('course.advanced.summary');
+                    default:
+                      return '';
+                  }
+                };
+
+                return (
+                  <Link
+                    key={course.id}
+                    href={{
+                      pathname: '/prompt-engineering/[course]',
+                      params: { course: course.id.toString() }
+                    }}
+                    locale={locale}
+                    className="block mb-3 group"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    <div className="text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:text-[#98a971] transition-colors">
+                      {getCourseTitle(course.id as string)}
+                    </div>
+                    <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                      {getCourseSummary(course.id as string).substring(0, 60)}...
+                    </div>
+                  </Link>
+                );
+              })}
             </div>
-          </div>
-          
-          {/* Overview Link */}
-          <div className="py-1">
-            <Link
-              href="/prompt-engineering"
-              locale={locale}
-              className="block px-5 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-[#98a971]/5 dark:hover:bg-[#98a971]/10 hover:text-[#98a971] dark:hover:text-[#98a971] transition-all duration-200"
-              onClick={() => setIsOpen(false)}
-            >
-              <div className="flex items-center gap-3">
-                <div className="w-7 h-7 bg-[#98a971]/10 border border-[#98a971]/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <span className="text-[#98a971] text-xs font-bold">📚</span>
-                </div>
-                <div className="min-w-0 flex-1">
-                  <div className="font-medium truncate leading-tight">{tPE('learningPath')}</div>
-                  <div className="text-xs text-gray-500 dark:text-gray-400 truncate mt-0.5 leading-tight">
-                    {tPE('learningPathDescription')}
-                  </div>
-                </div>
+
+            {/* Second Column - 12Factor Principles */}
+            <div className="p-6">
+              <div className="mb-4">
+                <h3 className="text-sm font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wide mb-4">
+                  12Factor 方法论
+                </h3>
               </div>
-            </Link>
-          </div>
-
-          {/* Stage Groups */}
-          {promptStages.slice(0, 2).map((stage) => (
-            <div key={stage.id} className="border-b border-[#98a971]/10 dark:border-[#98a971]/20 last:border-b-0">
-              {/* Stage Header */}
-              <div className="px-5 py-3 bg-[#98a971]/5 dark:bg-[#98a971]/10">
-                <div className="flex items-center gap-3">
-                  <div className="w-6 h-6 bg-[#98a971]/20 rounded-md flex items-center justify-center">
-                    <span className="text-sm">{stage.id === 1 ? '🎯' : '🚀'}</span>
-                  </div>
-                  <span className="text-xs font-semibold text-[#98a971] uppercase tracking-wide">
-                    {tPE(`stage${stage.id}.name`)}
-                  </span>
+              
+              <Link
+                href="/principles"
+                locale={locale}
+                className="block mb-3 group"
+                onClick={() => setIsOpen(false)}
+              >
+                <div className="text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:text-[#98a971] transition-colors">
+                  {t('principles')}
                 </div>
-              </div>
+                <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                  学习12个核心原则和最佳实践
+                </div>
+              </Link>
 
-              {/* Courses in Stage */}
-              <div className="py-1">
-                {stage.lessons.map((courseId) => {
-                  const course = promptLessons.find(l => l.id === courseId);
-                  if (!course) return null;
+              <Link
+                href="/flashcards"
+                locale={locale}
+                className="block mb-3 group"
+                onClick={() => setIsOpen(false)}
+              >
+                <div className="text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:text-[#98a971] transition-colors">
+                  {t('flashcards')}
+                </div>
+                <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                  通过互动卡片巩固学习内容
+                </div>
+              </Link>
 
-                  const getCourseTitle = (id: string) => {
-                    switch (id) {
-                      case 'fundamentals':
-                        return tPE('course.fundamentals.title');
-                      case 'advanced':
-                        return tPE('course.advanced.title');
-                      default:
-                        return 'Course';
-                    }
-                  };
-
-                  const getCourseSummary = (id: string) => {
-                    switch (id) {
-                      case 'fundamentals':
-                        return tPE('course.fundamentals.summary');
-                      case 'advanced':
-                        return tPE('course.advanced.summary');
-                      default:
-                        return '';
-                    }
-                  };
-
-                  return (
-                    <Link
-                      key={course.id}
-                      href={{
-                        pathname: '/prompt-engineering/[course]',
-                        params: { course: course.id.toString() }
-                      }}
-                      locale={locale}
-                      className="block px-5 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-[#98a971]/5 dark:hover:bg-[#98a971]/10 hover:text-[#98a971] dark:hover:text-[#98a971] transition-all duration-200"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      <div className="flex items-center gap-3">
-                        <div className="w-7 h-7 bg-[#98a971]/10 border border-[#98a971]/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                          <span className="text-[#98a971] text-xs font-bold">
-                            {stage.id}
-                          </span>
-                        </div>
-                        <div className="min-w-0 flex-1">
-                          <div className="font-medium truncate leading-tight">
-                            {getCourseTitle(course.id as string)}
-                          </div>
-                          <div className="text-xs text-gray-500 dark:text-gray-400 truncate mt-0.5 leading-tight">
-                            {getCourseSummary(course.id as string).substring(0, 40)}...
-                          </div>
-                        </div>
-                      </div>
-                    </Link>
-                  );
-                })}
-              </div>
+              <Link
+                href="/quiz"
+                locale={locale}
+                className="block mb-3 group"
+                onClick={() => setIsOpen(false)}
+              >
+                <div className="text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:text-[#98a971] transition-colors">
+                  {t('quiz')}
+                </div>
+                <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                  测试你对12Factor原则的理解
+                </div>
+              </Link>
             </div>
-          ))}
 
-          {/* Coming Soon Footer */}
-          <div className="px-5 py-4 bg-[#98a971]/5 dark:bg-[#98a971]/10 text-center">
-            <div className="text-xs text-[#98a971]/70 dark:text-[#98a971]/80 font-medium">
-              高级 & 实践课程即将推出 🚧
+            {/* Third Column - Resources */}
+            <div className="p-6">
+              <div className="mb-4">
+                <h3 className="text-sm font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wide mb-4">
+                  资源
+                </h3>
+              </div>
+              
+              <a
+                href="https://github.com/wquguru/12factor"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block mb-3 group"
+              >
+                <div className="text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:text-[#98a971] transition-colors">
+                  GitHub 仓库
+                </div>
+                <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                  查看源代码和贡献项目
+                </div>
+              </a>
+
+              <div className="block mb-3 group">
+                <div className="text-sm font-medium text-gray-500 dark:text-gray-400">
+                  API 文档
+                </div>
+                <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                  即将推出
+                </div>
+              </div>
+
+              <div className="block mb-3 group">
+                <div className="text-sm font-medium text-gray-500 dark:text-gray-400">
+                  社区论坛
+                </div>
+                <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                  即将推出
+                </div>
+              </div>
             </div>
           </div>
         </div>

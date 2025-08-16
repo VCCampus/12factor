@@ -1,6 +1,6 @@
 'use client';
 import { useTranslations } from 'next-intl';
-import { promptLessons, promptStages } from '@/data/prompt-lessons';
+import { promptLessons } from '@/data/prompt-lessons';
 import { Link } from '@/i18n/routing';
 import { useParams } from 'next/navigation';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
@@ -70,120 +70,79 @@ export default function PromptEngineeringPage() {
       </div>
 
       {/* Main Content */}
-      <div id="lessons-content" className="py-32 bg-white dark:bg-gray-900">
+      <div id="lessons-content" className="py-20 bg-white dark:bg-gray-900">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-6xl md:text-7xl font-light text-stone-900 dark:text-gray-100 mb-8 leading-tight">
-              {t('learningPath')}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-light text-stone-900 dark:text-gray-100 mb-6 leading-tight">
+              课程列表
             </h2>
-            <p className="text-lg text-stone-600 dark:text-gray-400 max-w-3xl mx-auto font-light leading-relaxed">
-              {t('learningPathDescription')}
-            </p>
-            
-            {/* Progress Overview */}
-            <div className="flex justify-center mt-12">
-              <div className="bg-stone-50 dark:bg-gray-800 rounded-2xl p-6 border border-stone-200 dark:border-gray-700">
-                <div className="flex items-center gap-8">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-[#98a971]">{promptStages.length}</div>
-                    <div className="text-sm text-stone-600 dark:text-gray-400">阶段</div>
-                  </div>
-                  <div className="w-px h-8 bg-stone-300 dark:bg-gray-600"></div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-[#98a971]">{promptLessons.length}</div>
-                    <div className="text-sm text-stone-600 dark:text-gray-400">课程</div>
-                  </div>
-                  <div className="w-px h-8 bg-stone-300 dark:bg-gray-600"></div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-[#98a971]">∞</div>
-                    <div className="text-sm text-stone-600 dark:text-gray-400">实践</div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
           
-          {promptStages.map((stage) => (
-            <div key={stage.id} className="mb-16">
-              <div className="mb-8">
-                <h3 className="text-3xl font-medium text-stone-900 dark:text-gray-100 mb-4">
-                  {t(`stage${stage.id}.name`)}
-                </h3>
-                <p className="text-lg text-stone-600 dark:text-gray-400 max-w-2xl">
-                  {t(`stage${stage.id}.description`)}
-                </p>
-              </div>
+          <div className="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
+            {promptLessons.map((course, index) => {
+              const getCourseTitle = (id: string) => {
+                switch (id) {
+                  case 'fundamentals':
+                    return t('course.fundamentals.title');
+                  case 'advanced':
+                    return t('course.advanced.title');
+                  default:
+                    return 'Course';
+                }
+              };
+
+              const getCourseSummary = (id: string) => {
+                switch (id) {
+                  case 'fundamentals':
+                    return t('course.fundamentals.summary');
+                  case 'advanced':
+                    return t('course.advanced.summary');
+                  default:
+                    return '';
+                }
+              };
+
+              const getSectionCount = () => {
+                return course.content.sections?.length || 0;
+              };
               
-              <div className="grid gap-6 md:grid-cols-2">
-                {stage.lessons.map((courseId) => {
-                  const course = promptLessons.find(l => l.id === courseId);
-                  if (!course) return null;
-                  
-                  const getCourseTitle = (id: string) => {
-                    switch (id) {
-                      case 'fundamentals':
-                        return t('course.fundamentals.title');
-                      case 'advanced':
-                        return t('course.advanced.title');
-                      default:
-                        return 'Course';
-                    }
-                  };
-
-                  const getCourseSummary = (id: string) => {
-                    switch (id) {
-                      case 'fundamentals':
-                        return t('course.fundamentals.summary');
-                      case 'advanced':
-                        return t('course.advanced.summary');
-                      default:
-                        return '';
-                    }
-                  };
-
-                  const getSectionCount = () => {
-                    return course.content.sections?.length || 0;
-                  };
-                  
-                  return (
-                    <Link
-                      key={course.id}
-                      href={{
-                        pathname: '/prompt-engineering/[course]',
-                        params: { course: course.id.toString() }
-                      }}
-                      locale={locale}
-                      className="modern-card group hover:shadow-2xl transition-all duration-300 cursor-pointer"
-                    >
-                      <div className="flex items-start justify-between mb-6">
-                        <div className="flex items-center gap-3">
-                          <div className="w-14 h-14 bg-[#98a971]/10 border border-[#98a971]/20 rounded-2xl flex items-center justify-center">
-                            <span className="text-[#98a971] font-bold text-lg">{stage.id}</span>
-                          </div>
-                          <div className="text-sm text-[#98a971] font-medium uppercase tracking-wide">
-                            {t('integratedCourse')}
-                          </div>
-                        </div>
+              return (
+                <Link
+                  key={course.id}
+                  href={{
+                    pathname: '/prompt-engineering/[course]',
+                    params: { course: course.id.toString() }
+                  }}
+                  locale={locale}
+                  className="modern-card group hover:shadow-2xl transition-all duration-300 cursor-pointer"
+                >
+                  <div className="flex items-start justify-between mb-6">
+                    <div className="flex items-center gap-3">
+                      <div className="w-14 h-14 bg-[#98a971]/10 border border-[#98a971]/20 rounded-2xl flex items-center justify-center">
+                        <span className="text-[#98a971] font-bold text-lg">{index + 1}</span>
                       </div>
-
-                      <h4 className="text-xl font-medium text-stone-900 dark:text-gray-100 mb-4 leading-tight">
-                        {getCourseTitle(course.id as string)}
-                      </h4>
-
-                      <p className="text-stone-600 dark:text-gray-400 text-sm leading-relaxed mb-4">
-                        {getCourseSummary(course.id as string)}
-                      </p>
-                      
-                      <div className="flex items-center gap-2 text-xs text-[#98a971]">
-                        <div className="w-2 h-2 bg-[#98a971] rounded-full"></div>
-                        {getSectionCount()} {t('sections')}
+                      <div className="text-sm text-[#98a971] font-medium uppercase tracking-wide">
+                        {t('integratedCourse')}
                       </div>
-                    </Link>
-                  );
-                })}
-              </div>
-            </div>
-          ))}
+                    </div>
+                  </div>
+
+                  <h4 className="text-xl font-medium text-stone-900 dark:text-gray-100 mb-4 leading-tight">
+                    {getCourseTitle(course.id as string)}
+                  </h4>
+
+                  <p className="text-stone-600 dark:text-gray-400 text-sm leading-relaxed mb-4">
+                    {getCourseSummary(course.id as string)}
+                  </p>
+                  
+                  <div className="flex items-center gap-2 text-xs text-[#98a971]">
+                    <div className="w-2 h-2 bg-[#98a971] rounded-full"></div>
+                    {getSectionCount()} {t('sections')}
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>

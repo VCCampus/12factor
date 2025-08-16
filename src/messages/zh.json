@@ -491,12 +491,13 @@
     "course": {
       "fundamentals": {
         "title": "基础课程",
-        "summary": "掌握提示工程基础和清晰的AI沟通技巧"
+        "summary": "学习提示工程的基本概念和核心原理"
       },
       "advanced": {
         "title": "高级课程",
         "summary": "复杂提示策略和推理技术"
       }
-    }
+    },
+    "sections": "章节"
   }
 }

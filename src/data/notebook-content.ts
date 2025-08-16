@@ -38,148 +38,225 @@ export interface NotebookLesson {
 export const notebookLessons: NotebookLesson[] = [
   {
     id: 'fundamentals',
-    title: '基本提示结构',
-    description: '学习有效提示设计的基本要素和与AI系统的清晰交流。',
-    examples: [
-      {
-        id: 'simple-greeting',
-        title: '简单问候示例',
-        code: `# Prompt
-PROMPT = "Hi Claude, how are you?"
-
-# Print Claude's response
-print(get_completion(PROMPT))`,
-        explanation: '这是最基本的提示格式，直接向Claude提出简单问题。',
-        language: 'python'
-      },
-      {
-        id: 'factual-question',
-        title: '事实性问题',
-        code: `# Prompt
-PROMPT = "What year was Celine Dion born in?"
-
-# Print Claude's response
-print(get_completion(PROMPT))`,
-        explanation: '向Claude询问具体的事实信息，这类问题通常能获得准确的回答。',
-        language: 'python'
-      },
-      {
-        id: 'system-prompt-example',
-        title: '系统提示示例',
-        code: `# System prompt
-SYSTEM_PROMPT = "Your answer should always be a series of critical thinking questions that further the conversation (do not provide answers to your questions). Do not actually answer the user question."
-
-# Prompt
-PROMPT = "Why is the sky blue?"
-
-# Print Claude's response
-print(get_completion(PROMPT, SYSTEM_PROMPT))`,
-        explanation: '系统提示用于为Claude提供上下文、指令和指导原则，可以显著改善Claude的表现。',
-        language: 'python'
-      }
-    ],
+    title: 'Prompt Engineering Fundamentals',
+    description: '基于Anthropic官方教程的完整提示工程基础课程。从API结构到角色分配，每个概念都有实际练习。',
+    examples: [],
     interactiveExamples: [
       {
-        id: 'basic-greeting',
-        title: '基础对话练习',
-        description: '学习如何与AI进行简单有效的对话。尝试不同的问候方式，观察AI的响应变化。',
-        userPrompt: 'Hi Claude, how are you?',
-        expectedOutput: '友好、专业的问候回复，可能包含自我介绍和询问如何帮助用户。',
+        id: 'chapter1-basic-structure',
+        title: '1章练习：数到三 (API结构)',
+        description: '学习正确的Messages API格式。这是最基础的练习，确保你理解如何构建有效的提示。',
+        userPrompt: 'Count to three',
+        expectedOutput: '包含1、2、3的回应，格式清晰。',
         hints: [
-          '简单直接的问候通常能获得友好的回应',
-          '观察AI如何保持专业性的同时展现友善',
-          '尝试不同语言的问候看看效果'
+          '直接说出你的需求："数到三"',
+          '使用简单清晰的指令',
+          '避免不必要的复杂性'
         ],
         variations: [
           {
-            name: '正式问候',
-            prompt: 'Good morning, Claude. I hope you are functioning well today.',
-            explanation: '使用更正式的语言风格'
+            name: '直接指令',
+            prompt: 'Count to three',
+            explanation: '最简单直接的方式'
           },
           {
-            name: '随意问候', 
-            prompt: 'Hey there! What\'s up?',
-            explanation: '使用更随意、轻松的语调'
+            name: '明确格式',
+            prompt: 'Please count from 1 to 3, one number per line.',
+            explanation: '指定了输出格式'
           },
           {
-            name: '中文问候',
-            prompt: '你好，Claude！很高兴认识你。',
-            explanation: '测试中文对话能力'
+            name: '中文指令',
+            prompt: '请从1数到3。',
+            explanation: '测试中文指令'
           }
         ]
       },
       {
-        id: 'role-assignment',
-        title: '角色分配练习',
-        description: '通过系统提示为AI分配特定角色，观察这如何影响其回应风格和内容。',
-        systemPrompt: 'You are a friendly and knowledgeable coding mentor who explains concepts in simple terms.',
-        userPrompt: 'What is a variable in programming?',
-        expectedOutput: '以导师身份解释编程变量概念，使用简单易懂的语言，可能包含类比和例子。',
+        id: 'chapter1-system-prompt',
+        title: '1章练习：3岁小孩角色 (System Prompt)',
+        description: '体验 system prompt 的威力。通过角色设定，让Claude的回应风格彻底改变。',
+        systemPrompt: 'You are a 3 year old child. Respond with the excitement, curiosity, and simple language that a 3-year-old would use.',
+        userPrompt: 'How big is the sky?',
+        expectedOutput: '像3岁孩子一样的兴奋回应，可能包含笑声、简单词汇和天真的表达。',
         hints: [
-          '系统提示定义了AI的"人格"和专业背景',
-          '观察有无系统提示时回答的差异',
-          '尝试不同的角色设定看效果'
+          '想想3岁孩子如何说话：兴奋、好奇、词汇简单',
+          '可以加入一些孩子气的表达如 "soo big" 或 "giggles"',
+          'System prompt 定义了AI的整个"人格"'
         ],
         variations: [
           {
-            name: '移除角色',
-            prompt: 'What is a variable in programming?',
-            explanation: '移除系统提示，看看回答如何变化'
+            name: '无System Prompt',
+            prompt: 'How big is the sky?',
+            explanation: '不设置System Prompt，看看默认回应'
           },
           {
-            name: '专家角色',
-            prompt: 'What is a variable in programming?',
-            explanation: '设置系统提示为"高级软件工程师"'
+            name: '严格科学家',
+            prompt: 'How big is the sky?',
+            explanation: 'System: "You are a strict physicist. Give precise scientific answers."'
           },
           {
-            name: '初学者角色',
-            prompt: 'What is a variable in programming?',
-            explanation: '设置系统提示为"给5岁小孩解释的老师"'
+            name: '友好老师',
+            prompt: 'How big is the sky?',
+            explanation: 'System: "You are a friendly teacher explaining to children."'
           }
         ]
       },
       {
-        id: 'clear-instructions',
-        title: '清晰指令练习',
-        description: '比较模糊指令和明确指令的效果差异，学习如何写出更精确的提示词。',
-        userPrompt: 'Write a summary about dogs.',
-        expectedOutput: '关于狗的简单总结，但可能内容比较宽泛，缺乏针对性。',
+        id: 'chapter2-spanish',
+        title: '2章练习：西班牙语回应 (清晰指令)',
+        description: '学习如何给出明确指令控制输出语言。这个练习显示API能够精确按照你的要求执行。',
+        systemPrompt: 'Please respond in Spanish.',
+        userPrompt: 'Hello Claude, how are you?',
+        expectedOutput: '用西班牙语回应，包含 "Hola" 等西班牙语问候词。',
         hints: [
-          '模糊的指令往往得到模糊的回答',
-          '明确指定长度、重点、目标受众能获得更好的结果',
-          '提供具体的结构要求会让输出更有条理'
+          '直接在System Prompt中说明语言要求',
+          '可以说 "Please respond in Spanish" 或 "Responde en español"',
+          '观察 Claude 如何完全切换语言'
         ],
         variations: [
           {
-            name: '模糊指令',
-            prompt: 'Tell me about dogs.',
-            explanation: '非常宽泛的请求'
+            name: '中文回应',
+            prompt: 'Hello Claude, how are you?',
+            explanation: 'System: "请用中文回应"'
           },
           {
-            name: '具体指令',
-            prompt: 'Write a 150-word summary about Golden Retrievers, focusing on their temperament and suitability as family pets.',
-            explanation: '明确了犬种、字数、重点内容'
+            name: '法语回应',
+            prompt: 'Hello Claude, how are you?',
+            explanation: 'System: "Répondez en français, s\'il vous plaît"'
           },
           {
-            name: '结构化指令',
-            prompt: 'Create a structured overview of Labrador Retrievers including: 1) Physical characteristics 2) Personality traits 3) Exercise needs 4) Grooming requirements. Keep each section to 2-3 sentences.',
-            explanation: '提供了清晰的结构和长度要求'
+            name: '双语回应',
+            prompt: 'Hello Claude, how are you?',
+            explanation: 'System: "Respond in both English and Spanish"'
+          }
+        ]
+      },
+      {
+        id: 'chapter2-basketball',
+        title: '2章练习：只要一个名字 (精确格式)',
+        description: '学习如何给出极具体的格式要求。这个练习教你如何获得精确控制的输出。',
+        userPrompt: 'Who is the best basketball player of all time? Give me only the name, no other text.',
+        expectedOutput: '只有一个球员的名字，没有其他任何文字或解释。',
+        hints: [
+          '要非常具体地说明格式要求',
+          '明确说明不要解释或其他内容',
+          '强制Claude做出选择，不允许说"这很难选择"'
+        ],
+        variations: [
+          {
+            name: '允许解释',
+            prompt: 'Who is the best basketball player of all time?',
+            explanation: '不限制格式，看看默认回应'
+          },
+          {
+            name: '要求理由',
+            prompt: 'Who is the best basketball player of all time? Give only the name and one reason.',
+            explanation: '允许一个理由但仍然控制格式'
+          },
+          {
+            name: '列表格式',
+            prompt: 'List the top 3 basketball players of all time. Format: 1. Name 2. Name 3. Name',
+            explanation: '指定精确的列表格式'
+          }
+        ]
+      },
+      {
+        id: 'chapter2-long-story',
+        title: '2章练习：写长故事 (明确要求)',
+        description: '学习如何通过明确的长度要求控制输出。这个练习展示了给出具体指标的重要性。',
+        userPrompt: 'Write a story that is at least 800 words long about a robot learning to paint.',
+        expectedOutput: '一个至少800字的关于机器人学画画的故事，情节丰富，描述详细。',
+        hints: [
+          '明确要求故事长度：至少800字',
+          '给出具体的故事题材和主题',
+          '要求详细描述和情节发展',
+          '可以要求包含对话和场景描写'
+        ],
+        variations: [
+          {
+            name: '无长度要求',
+            prompt: 'Write a story about a robot learning to paint.',
+            explanation: '不指定长度，看看默认的故事长度'
+          },
+          {
+            name: '明确字数要求',
+            prompt: 'Write exactly a 800-word story about a robot learning to paint. Include dialogue and detailed descriptions.',
+            explanation: '指定确切字数并要求特定元素'
+          },
+          {
+            name: '更长的故事',
+            prompt: 'Write a detailed story of at least 1000 words about a robot learning to paint, including character development and multiple scenes.',
+            explanation: '要求更长篇幅和更复杂结构'
+          }
+        ]
+      },
+      {
+        id: 'chapter3-math-logic',
+        title: '3章练习：数学错误检查 (角色分配)',
+        description: '体验角色分配对逻辑推理的影响。通过给Claude分配专家角色，提高其在特定领域的表现。',
+        systemPrompt: 'You are a strict math teacher. Carefully check each step of mathematical calculations for errors.',
+        userPrompt: 'Is this equation solved correctly?\n\n2x - 3 = 9\n2x = 6\nx = 3',
+        expectedOutput: '指出这个数学错误：2x = 9 + 3 = 12，不是6。',
+        hints: [
+          '给Claude分配数学老师或逻辑专家角色',
+          '要求仔细检查每一步计算',
+          '强调找出错误而不是简单评价'
+        ],
+        variations: [
+          {
+            name: '无角色设定',
+            prompt: 'Is this equation solved correctly?\n\n2x - 3 = 9\n2x = 6\nx = 3',
+            explanation: '不设置专门角色，看看默认表现'
+          },
+          {
+            name: '逻辑专家',
+            prompt: 'Is this equation solved correctly?\n\n2x - 3 = 9\n2x = 6\nx = 3',
+            explanation: 'System: "You are a logic expert. Analyze step by step."'
+          },
+          {
+            name: '学生角色',
+            prompt: 'Is this equation solved correctly?\n\n2x - 3 = 9\n2x = 6\nx = 3',
+            explanation: 'System: "You are a student learning math. Show your thinking."'
           }
         ]
       }
     ],
     exercises: [
       {
-        title: '数到三',
-        instruction: '使用正确的用户/助手格式，编辑提示让Claude数到三。',
-        template: '[Replace this text]',
-        hints: ['使用简单直接的指令', '确保语言清晰明确']
+        title: 'Chapter 1.1: 数到三 (Counting to Three)',
+        instruction: '使用正确的user/assistant格式，编辑PROMPT让Claude数到三。输出必须包吧1、2、3。',
+        template: 'PROMPT = "[Replace this text]"\n\nresponse = get_completion(PROMPT)\nprint(response)',
+        hints: ['直接说“数到三”或“Count to three”', '使用简单直接的指令', '避免不必要的复杂性']
       },
       {
-        title: '系统提示练习',
-        instruction: '修改系统提示让Claude像3岁小孩一样回应。',
-        template: '[Replace this text]',
-        hints: ['考虑3岁孩子的语言特点', '使用简单的词汇和表达方式']
+        title: 'Chapter 1.2: 3岁小孩角色 (3-Year-Old Child)',
+        instruction: '修改SYSTEM_PROMPT让Claude像3岁小孩一样回应。正确的回应应包含"giggles"或"soo"等孩子气的表达。',
+        template: 'SYSTEM_PROMPT = "[Replace this text]"\n\nPROMPT = "How big is the sky?"\n\nresponse = get_completion(PROMPT, SYSTEM_PROMPT)\nprint(response)',
+        hints: ['说明你是一个3岁小孩', '要求使用兴奋、好奇和简单的语言', '加入孩子气的表达方式']
+      },
+      {
+        title: 'Chapter 2.1: 西班牙语回应 (Spanish Response)',
+        instruction: '修改SYSTEM_PROMPT让Claude用西班牙语回答。正确的回应应包含"hola"。',
+        template: 'SYSTEM_PROMPT = "[Replace this text]"\n\nPROMPT = "Hello Claude, how are you?"\n\nresponse = get_completion(PROMPT, SYSTEM_PROMPT)\nprint(response)',
+        hints: ['直接说明语言要求', '可以说"Please respond in Spanish"', '简单直接的指令最有效']
+      },
+      {
+        title: 'Chapter 2.2: 只要一个名字 (One Player Only)',
+        instruction: '修改PROMPT让Claude不要犹豫，只回答一个球员的名字，没有其他文字或标点。正确答案应该是"Michael Jordan"。',
+        template: 'PROMPT = "[Replace this text]"\n\nresponse = get_completion(PROMPT)\nprint(response)',
+        hints: ['要非常具体地说明格式要求', '明确说明不要解释或其他内容', '强制要求做出选择']
+      },
+      {
+        title: 'Chapter 2.3: 长故事 (Write a Long Story)',
+        instruction: '修改PROMPT让Claude写一个800字以上的故事。如果回应超过800字，练习就算正确。',
+        template: 'PROMPT = "[Replace this text]"\n\nresponse = get_completion(PROMPT)\nprint(response)\nprint(f"\nWord count: {len(response.split())}")\nprint(f"Exercise correct: {len(response.split()) >= 800}")',
+        hints: ['明确要求故事长度', '可以给出具体的故事题材', '要求详细描述和情节发展']
+      },
+      {
+        title: 'Chapter 3.1: 数学错误检查 (Math Correction)',
+        instruction: '修改PROMPT和/或SYSTEM_PROMPT让Claude将解题过程评价为“incorrect”而不是正确。这个方程的第二步有明显错误。',
+        template: 'SYSTEM_PROMPT = ""  # 你可以修改这个\n\nPROMPT = """Is this equation solved correctly below?\n\n2x - 3 = 9\n2x = 6\nx = 3"""\n\nresponse = get_completion(PROMPT, SYSTEM_PROMPT)\nprint(response)',
+        hints: ['给Claude分配数学老师或逻辑专家角色', '要求仔细检查每一步', '强调找出错误的重要性']
       }
     ]
   },
@@ -187,45 +264,13 @@ print(get_completion(PROMPT, SYSTEM_PROMPT))`,
     id: 'clear-and-direct',
     title: '清晰直接',
     description: '通过明确需求消除歧义，获得精确的回复。',
-    examples: [
-      {
-        id: 'vague-vs-specific',
-        title: '模糊vs具体的提示对比',
-        code: `# 模糊的提示
-PROMPT_VAGUE = "Tell me about dogs"
-
-# 具体的提示
-PROMPT_SPECIFIC = "Write a 200-word summary about Golden Retrievers, focusing on their temperament, exercise needs, and suitability as family pets"
-
-print("模糊提示结果:")
-print(get_completion(PROMPT_VAGUE))
-print("\\n具体提示结果:")
-print(get_completion(PROMPT_SPECIFIC))`,
-        explanation: '具体的提示能够获得更精准和有用的回答，而模糊的提示往往导致不够聚焦的回复。',
-        language: 'python'
-      }
-    ]
+    examples: []
   },
   {
     id: 'role-prompting',
     title: '角色提示',
     description: '分配特定角色和视角来改善回复质量和一致性。',
-    examples: [
-      {
-        id: 'expert-role',
-        title: '专家角色示例',
-        code: `# System prompt with role assignment
-SYSTEM_PROMPT = "You are a senior software engineer with 10 years of experience in Python development. Provide technical advice in a professional yet approachable manner."
-
-# Prompt
-PROMPT = "What are the best practices for handling exceptions in Python?"
-
-# Print Claude's response
-print(get_completion(PROMPT, SYSTEM_PROMPT))`,
-        explanation: '通过分配专家角色，Claude能够提供更专业和有针对性的建议。',
-        language: 'python'
-      }
-    ]
+    examples: []
   }
 ];
 

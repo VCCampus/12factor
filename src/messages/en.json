@@ -487,12 +487,15 @@
     "course": {
       "fundamentals": {
         "title": "Fundamentals Course",
-        "summary": "Master the basics of prompt engineering and clear AI communication"
+        "summary": "Learn fundamental concepts and core principles of prompt engineering"
       },
       "advanced": {
         "title": "Advanced Course", 
         "summary": "Complex prompting strategies and reasoning techniques"
       }
-    }
+    },
+    "integratedCourse": "Integrated Course",
+    "courseOverview": "Course Overview",
+    "sections": "sections"
   }
 }
