@@ -1,8 +1,8 @@
 import { getTranslations } from 'next-intl/server';
 import { getAllCourses } from '@/data/courses';
 import { Link } from '@/i18n/routing';
-import { ChevronDownIcon } from '@heroicons/react/24/outline';
 import { generateMetadata as generateMetadataUtil, defaultMetadata } from '@/lib/metadata';
+import ScrollDownButton from '@/components/ScrollDownButton';
 import type { Metadata } from 'next';
 
 export async function generateMetadata({
@@ -60,20 +60,7 @@ export default async function PromptEngineeringPage({
         
         {/* Scroll Down Arrow */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-          <button
-            onClick={() => {
-              document.getElementById('lessons-content')?.scrollIntoView({ behavior: 'smooth' });
-            }}
-            className="group flex flex-col items-center text-white/70 hover:text-white transition-all duration-300 hover:scale-110"
-            aria-label="Scroll to lessons"
-          >
-            <div className="text-xs sm:text-sm font-medium mb-2 opacity-80 group-hover:opacity-100 whitespace-nowrap px-2">
-              {t('viewLessons')}
-            </div>
-            <div className="w-10 h-10 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/20 group-hover:border-white/50 transition-all duration-300">
-              <ChevronDownIcon className="h-5 w-5 animate-bounce" />
-            </div>
-          </button>
+          <ScrollDownButton targetId="lessons-content" label={t('viewLessons')} />
         </div>
         
         {/* Stats Overlay */}

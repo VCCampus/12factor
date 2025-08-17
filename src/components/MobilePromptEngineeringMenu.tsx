@@ -59,6 +59,8 @@ export default function MobilePromptEngineeringMenu({ onLinkClick }: MobilePromp
               switch (id) {
                 case 'fundamentals':
                   return tPE('course.fundamentals.title');
+                case 'intermediate':
+                  return tPE('course.intermediate.title');
                 case 'advanced':
                   return tPE('course.advanced.title');
                 default:
@@ -70,6 +72,8 @@ export default function MobilePromptEngineeringMenu({ onLinkClick }: MobilePromp
               switch (id) {
                 case 'fundamentals':
                   return tPE('course.fundamentals.summary');
+                case 'intermediate':
+                  return tPE('course.intermediate.summary');
                 case 'advanced':
                   return tPE('course.advanced.summary');
                 default:

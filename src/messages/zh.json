@@ -504,6 +504,10 @@
       "fundamentals": {
         "title": "基础课程",
         "summary": "学习提示工程的基本概念和核心原理"
+      },
+      "intermediate": {
+        "title": "中级课程",
+        "summary": "掌握数据分离、输出格式化和系统性思考的高级技术"
       }
     },
     "nextCourse": "下一课程",
@@ -916,9 +920,353 @@
         "hint2": "实验不同的专业水平",
         "hint3": "注意角色背景如何塑造回答"
       }
-    },
-    "rateLimitError": "请求频率过高，请稍等片刻后重试。",
-    "serviceUnavailableError": "服务暂时不可用，请稍后重试。",
-    "generalError": "处理请求时发生错误，请重试。"
-  }
+    }
+  },
+  "courses": {
+    "intermediate": {
+      "title": "中级提示工程",
+      "summary": "掌握数据分离、输出格式化和系统性思考的高级技术",
+      "sections": {
+        "dataInstructions": {
+          "title": "数据与指令分离",
+          "theory": "学习如何通过清晰分离指令和可变数据来创建可重用的提示模板。本章涵盖XML标签的使用、f-string模板化，以及安全有效处理用户输入的最佳实践。",
+          "examples": [
+            "使用f-string进行变量替换创建动态提示",
+            "使用XML标签清晰分离数据和指令",
+            "通过提供适当边界处理混乱或不清晰的输入"
+          ]
+        },
+        "formatting": {
+          "title": "格式化输出与Claude对话",
+          "theory": "掌握控制和格式化AI输出的技术。学习如何使用XML标签、JSON格式化和预填充来获得您需要的确切响应格式。",
+          "examples": [
+            "在XML标签中格式化输出以便于解析",
+            "使用预填充来指导响应生成",
+            "为结构化数据强制JSON输出"
+          ]
+        },
+        "thinking": {
+          "title": "预知能力（逐步思考）",
+          "theory": "通过实施思维链提示来提高AI准确性。学习如何为复杂问题构建推理过程和使用逐步思考。",
+          "examples": [
+            "引导AI通过明确的推理步骤",
+            "使用XML标记的思考部分进行组织",
+            "应用多角度分析以做出更好的决策"
+          ]
+        },
+        "examples": {
+          "title": "使用示例（少样本提示）",
+          "theory": "利用示例的力量来指导AI行为。学习如何选择有效的示例，正确格式化它们，并使用少样本提示获得一致的结果。",
+          "examples": [
+            "选择最佳示例进行指导",
+            "格式化示例以获得最大影响",
+            "在不同领域应用示例"
+          ]
+        }
+      }
+    }
+  },
+  "practiceExercises": {
+    "intermediate": {
+      "chapter4Haiku": {
+        "title": "俳句模板练习",
+        "description": "创建一个可重用的提示模板，为任何主题生成俳句",
+        "expectedOutput": "一首提到指定主题的俳句",
+        "hints": {
+          "0": "在提示模板中使用{TOPIC}作为占位符",
+          "1": "确保要求俳句格式",
+          "2": "使用不同主题测试以验证模板工作"
+        },
+        "variations": {
+          "simple": {
+            "name": "简单提示",
+            "explanation": "不使用模板变量的直接方法"
+          },
+          "template": {
+            "name": "模板方法",
+            "explanation": "使用变量替换实现可重用性"
+          }
+        }
+      },
+      "chapter4DogXML": {
+        "title": "XML标签分离",
+        "description": "通过使用XML标签将问题从周围文本中分离来修复混乱的提示",
+        "expectedOutput": "关于狗是否为棕色的清晰答案",
+        "hints": {
+          "0": "将实际问题包装在XML标签中",
+          "1": "这有助于AI专注于重要内容",
+          "2": "比较使用和不使用XML标签的结果"
+        },
+        "variations": {
+          "noXML": {
+            "name": "不使用XML标签",
+            "explanation": "看看混乱的文本如何困惑AI"
+          },
+          "clearFormat": {
+            "name": "清晰格式",
+            "explanation": "具有清晰边界的结构良好的提示"
+          }
+        }
+      },
+      "chapter5Curry": {
+        "title": "响应预填充",
+        "description": "使用预填充引导Claude向特定篮球运动员倾斜",
+        "expectedOutput": "支持斯蒂芬·库里为最佳球员的论证",
+        "hints": {
+          "0": "用关于库里的部分文本开始Claude的响应",
+          "1": "这种技术为Claude'说话'来引导方向",
+          "2": "预填充应该感觉自然地继续"
+        },
+        "variations": {
+          "noPrefill": {
+            "name": "无预填充",
+            "explanation": "没有指导的标准响应"
+          },
+          "curryPrefill": {
+            "name": "库里预填充",
+            "explanation": "引导响应朝向斯蒂芬·库里"
+          }
+        }
+      },
+      "chapter5TwoHaikus": {
+        "title": "多重输出格式化",
+        "description": "格式化输出以包含两个具有清晰边界的单独俳句",
+        "expectedOutput": "关于猫的两首不同俳句，每首都在自己的标签中",
+        "hints": {
+          "0": "明确要求两首俳句",
+          "1": "使用XML标签分离每首俳句",
+          "2": "确保格式一致"
+        },
+        "variations": {
+          "oneHaiku": {
+            "name": "单首俳句",
+            "explanation": "标准单首俳句请求"
+          },
+          "numbered": {
+            "name": "编号格式",
+            "explanation": "使用编号标签进行组织"
+          }
+        }
+      },
+      "chapter6EmailClass": {
+        "title": "逐步邮件分类",
+        "description": "通过让AI逐步思考过程来分类邮件",
+        "expectedOutput": "带有可见推理过程的分类",
+        "hints": {
+          "0": "要求AI显示其思考过程",
+          "1": "使用XML标签组织推理",
+          "2": "系统地思考每个类别"
+        },
+        "variations": {
+          "noThinking": {
+            "name": "直接分类",
+            "explanation": "没有推理的即时分类"
+          },
+          "detailedThinking": {
+            "name": "详细分析",
+            "explanation": "全面的逐步分析"
+          }
+        }
+      },
+      "chapter6EmailFormatted": {
+        "title": "格式化分类输出",
+        "description": "以特定XML格式获取分类结果",
+        "expectedOutput": "包装在答案标签中的分类字母",
+        "hints": {
+          "0": "使用XML标签指定确切的输出格式",
+          "1": "只要求字母，没有其他内容",
+          "2": "如需要使用预填充来强制格式"
+        },
+        "variations": {
+          "withExplanation": {
+            "name": "带解释",
+            "explanation": "包含分类推理"
+          },
+          "xmlOnly": {
+            "name": "仅XML格式",
+            "explanation": "严格格式要求"
+          }
+        }
+      },
+      "chapter7EmailExamples": {
+        "title": "少样本邮件分类",
+        "description": "使用示例教导AI如何一致地分类邮件",
+        "expectedOutput": "遵循示例模式的正确分类",
+        "hints": {
+          "0": "提供2-3个清晰的分类示例",
+          "1": "显示您想要的确切格式",
+          "2": "包含不同类别的示例"
+        },
+        "variations": {
+          "noExamples": {
+            "name": "无示例",
+            "explanation": "没有指导示例的分类"
+          },
+          "moreExamples": {
+            "name": "扩展示例",
+            "explanation": "多个示例以获得更好的指导"
+          }
+        }
+      }
+    }
+  },
+  "playground": {
+    "intermediate": {
+      "dataInstructionSeparation": {
+        "title": "数据与指令分离",
+        "examples": {
+          "animalSounds": {
+            "name": "动物声音生成器",
+            "description": "创建用于生成动物声音的模板",
+            "variations": {
+              "withXML": {
+                "name": "使用XML标签",
+                "explanation": "使用XML边界进行清晰分离"
+              },
+              "template": {
+                "name": "模板变量",
+                "explanation": "使用变量替换模式"
+              }
+            }
+          },
+          "emailRewrite": {
+            "name": "邮件重写模板",
+            "description": "用于以不同风格重写邮件的模板",
+            "variations": {
+              "noXML": {
+                "name": "不使用XML",
+                "explanation": "看看不清晰的边界如何影响结果"
+              },
+              "formal": {
+                "name": "正式风格",
+                "explanation": "专业邮件重写模板"
+              }
+            }
+          }
+        },
+        "hints": {
+          "0": "使用XML标签清晰分离数据和指令",
+          "1": "创建带有变量占位符的可重用模板",
+          "2": "使用不同输入测试模板以验证一致性"
+        }
+      },
+      "outputFormatting": {
+        "title": "输出格式化控制",
+        "examples": {
+          "haikuXML": {
+            "name": "XML格式化俳句",
+            "description": "使用XML标签控制俳句输出格式",
+            "variations": {
+              "prefilled": {
+                "name": "预填充开头",
+                "explanation": "使用预填充开始XML标签"
+              },
+              "json": {
+                "name": "JSON格式",
+                "explanation": "将俳句结构化为JSON对象"
+              }
+            }
+          },
+          "emailStyle": {
+            "name": "风格化邮件输出",
+            "description": "使用动态XML标签格式化邮件重写",
+            "variations": {
+              "formal": {
+                "name": "正式风格",
+                "explanation": "专业邮件格式化"
+              },
+              "casual": {
+                "name": "休闲风格",
+                "explanation": "非正式邮件格式化"
+              }
+            }
+          }
+        },
+        "hints": {
+          "0": "使用XML标签清晰地构建输出",
+          "1": "将预填充与格式规范结合",
+          "2": "尝试不同的输出结构"
+        }
+      },
+      "stepByStepThinking": {
+        "title": "思维链推理",
+        "examples": {
+          "movieReview": {
+            "name": "电影评论分析",
+            "description": "通过逐步推理分析情感",
+            "variations": {
+              "noThinking": {
+                "name": "直接分析",
+                "explanation": "即时情感判断"
+              },
+              "brainstorm": {
+                "name": "头脑风暴过程",
+                "explanation": "显示详细思考过程"
+              }
+            }
+          },
+          "factChecking": {
+            "name": "事实验证",
+            "description": "通过系统推理验证事实",
+            "variations": {
+              "direct": {
+                "name": "直接答案",
+                "explanation": "没有研究的即时响应"
+              },
+              "detailed": {
+                "name": "研究过程",
+                "explanation": "显示研究和验证步骤"
+              }
+            }
+          }
+        },
+        "hints": {
+          "0": "要求AI明确显示其推理过程",
+          "1": "使用XML标签组织思考步骤",
+          "2": "比较有无逐步分析的结果"
+        }
+      },
+      "fewShotExamples": {
+        "title": "示例驱动提示",
+        "examples": {
+          "parentBot": {
+            "name": "家长响应机器人",
+            "description": "使用示例创建一致的育儿响应",
+            "variations": {
+              "noExample": {
+                "name": "仅基于角色",
+                "explanation": "使用系统提示而不使用示例"
+              },
+              "multipleExamples": {
+                "name": "多个示例",
+                "explanation": "几个示例以获得更好的一致性"
+              }
+            }
+          },
+          "dataExtraction": {
+            "name": "结构化数据提取",
+            "description": "使用示例格式化提取信息",
+            "variations": {
+              "noFormat": {
+                "name": "非结构化输出",
+                "explanation": "自由形式数据提取"
+              },
+              "jsonFormat": {
+                "name": "JSON结构",
+                "explanation": "结构化JSON输出格式"
+              }
+            }
+          }
+        },
+        "hints": {
+          "0": "选择清晰代表所需输出的示例",
+          "1": "使用2-3个示例获得最佳结果",
+          "2": "在所有示例中保持一致的格式"
+        }
+      }
+    }
+  },
+  "rateLimitError": "请求频率过高，请稍等片刻后重试。",
+  "serviceUnavailableError": "服务暂时不可用，请稍后重试。",
+  "generalError": "处理请求时发生错误，请重试。"
 }

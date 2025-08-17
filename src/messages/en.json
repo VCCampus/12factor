@@ -501,6 +501,10 @@
       "fundamentals": {
         "title": "Fundamentals Course",
         "summary": "Learn fundamental concepts and core principles of prompt engineering"
+      },
+      "intermediate": {
+        "title": "Intermediate Course",
+        "summary": "Master advanced techniques for data separation, output formatting, and systematic thinking"
       }
     },
     "nextCourse": "Next Course",
@@ -883,9 +887,353 @@
         "hint2": "Experiment with different expertise levels",
         "hint3": "Notice how role context shapes responses"
       }
-    },
-    "rateLimitError": "Rate limit exceeded. Please wait a moment and try again.",
-    "serviceUnavailableError": "Service temporarily unavailable. Please try again later.",
-    "generalError": "An error occurred while processing your request. Please try again."
-  }
+    }
+  },
+  "courses": {
+    "intermediate": {
+      "title": "Intermediate Prompt Engineering",
+      "summary": "Master advanced techniques for data separation, output formatting, and systematic thinking",
+      "sections": {
+        "dataInstructions": {
+          "title": "Separating Data from Instructions",
+          "theory": "Learn how to create reusable prompt templates by cleanly separating instructions from variable data. This chapter covers the use of XML tags, f-string templating, and best practices for handling user input safely and effectively.",
+          "examples": [
+            "Create dynamic prompts with variable substitution using f-strings",
+            "Use XML tags to clearly separate data from instructions",
+            "Handle messy or unclear input by providing proper boundaries"
+          ]
+        },
+        "formatting": {
+          "title": "Formatting Output & Speaking for Claude",
+          "theory": "Master techniques for controlling and formatting AI output. Learn how to use XML tags, JSON formatting, and prefilling to get exactly the response format you need.",
+          "examples": [
+            "Format output in XML tags for easy parsing",
+            "Use prefilling to guide response generation",
+            "Enforce JSON output for structured data"
+          ]
+        },
+        "thinking": {
+          "title": "Precognition (Thinking Step by Step)",
+          "theory": "Improve AI accuracy by implementing chain-of-thought prompting. Learn how to structure reasoning processes and use step-by-step thinking for complex problems.",
+          "examples": [
+            "Guide AI through explicit reasoning steps",
+            "Use XML-tagged thinking sections for organization",
+            "Apply multi-perspective analysis for better decisions"
+          ]
+        },
+        "examples": {
+          "title": "Using Examples (Few-Shot Prompting)",
+          "theory": "Leverage the power of examples to guide AI behavior. Learn how to select effective examples, format them properly, and use few-shot prompting for consistent results.",
+          "examples": [
+            "Choose optimal examples for guidance",
+            "Format examples for maximum impact",
+            "Apply examples across different domains"
+          ]
+        }
+      }
+    }
+  },
+  "practiceExercises": {
+    "intermediate": {
+      "chapter4Haiku": {
+        "title": "Haiku Template Exercise",
+        "description": "Create a reusable prompt template for generating haikus about any topic",
+        "expectedOutput": "A haiku that mentions the specified topic",
+        "hints": {
+          "0": "Use {TOPIC} as a placeholder in your prompt template",
+          "1": "Make sure to ask for a haiku format",
+          "2": "Test with different topics to verify the template works"
+        },
+        "variations": {
+          "simple": {
+            "name": "Simple Prompt",
+            "explanation": "Direct approach without template variables"
+          },
+          "template": {
+            "name": "Template Approach",
+            "explanation": "Using variable substitution for reusability"
+          }
+        }
+      },
+      "chapter4DogXML": {
+        "title": "XML Tag Separation",
+        "description": "Fix a messy prompt by using XML tags to separate the question from surrounding text",
+        "expectedOutput": "A clear answer about dogs being brown",
+        "hints": {
+          "0": "Wrap the actual question in XML tags",
+          "1": "This helps AI focus on what's important",
+          "2": "Compare the results with and without XML tags"
+        },
+        "variations": {
+          "noXML": {
+            "name": "Without XML Tags",
+            "explanation": "See how messy text confuses the AI"
+          },
+          "clearFormat": {
+            "name": "Clean Format",
+            "explanation": "Well-structured prompt with clear boundaries"
+          }
+        }
+      },
+      "chapter5Curry": {
+        "title": "Response Prefilling",
+        "description": "Use prefilling to guide Claude toward a specific basketball player",
+        "expectedOutput": "An argument for Stephen Curry as the best player",
+        "hints": {
+          "0": "Start Claude's response with partial text about Curry",
+          "1": "This technique 'speaks for Claude' to guide direction",
+          "2": "The prefill should feel natural to continue"
+        },
+        "variations": {
+          "noPrefill": {
+            "name": "No Prefilling",
+            "explanation": "Standard response without guidance"
+          },
+          "curryPrefill": {
+            "name": "Curry Prefill",
+            "explanation": "Guide response toward Stephen Curry"
+          }
+        }
+      },
+      "chapter5TwoHaikus": {
+        "title": "Multiple Output Formatting",
+        "description": "Format output to contain two separate haikus with clear boundaries",
+        "expectedOutput": "Two distinct haikus about cats, each in its own tags",
+        "hints": {
+          "0": "Ask for two haikus explicitly",
+          "1": "Use XML tags to separate each haiku",
+          "2": "Make sure the format is consistent"
+        },
+        "variations": {
+          "oneHaiku": {
+            "name": "Single Haiku",
+            "explanation": "Standard single haiku request"
+          },
+          "numbered": {
+            "name": "Numbered Format",
+            "explanation": "Use numbered tags for organization"
+          }
+        }
+      },
+      "chapter6EmailClass": {
+        "title": "Step-by-Step Email Classification",
+        "description": "Classify emails by having AI think through the process step by step",
+        "expectedOutput": "Classification with visible reasoning process",
+        "hints": {
+          "0": "Ask AI to show its thinking process",
+          "1": "Use XML tags to organize the reasoning",
+          "2": "Think through each category systematically"
+        },
+        "variations": {
+          "noThinking": {
+            "name": "Direct Classification",
+            "explanation": "Immediate classification without reasoning"
+          },
+          "detailedThinking": {
+            "name": "Detailed Analysis",
+            "explanation": "Comprehensive step-by-step analysis"
+          }
+        }
+      },
+      "chapter6EmailFormatted": {
+        "title": "Formatted Classification Output",
+        "description": "Get classification results in a specific XML format",
+        "expectedOutput": "Classification letter wrapped in answer tags",
+        "hints": {
+          "0": "Specify exact output format with XML tags",
+          "1": "Ask for just the letter, nothing else",
+          "2": "Use prefilling if needed to enforce format"
+        },
+        "variations": {
+          "withExplanation": {
+            "name": "With Explanation",
+            "explanation": "Include reasoning with classification"
+          },
+          "xmlOnly": {
+            "name": "XML Format Only",
+            "explanation": "Strict format requirements"
+          }
+        }
+      },
+      "chapter7EmailExamples": {
+        "title": "Few-Shot Email Classification",
+        "description": "Use examples to teach AI how to classify emails consistently",
+        "expectedOutput": "Correct classification following example patterns",
+        "hints": {
+          "0": "Provide 2-3 clear examples of classifications",
+          "1": "Show the exact format you want",
+          "2": "Include examples for different categories"
+        },
+        "variations": {
+          "noExamples": {
+            "name": "No Examples",
+            "explanation": "Classification without guidance examples"
+          },
+          "moreExamples": {
+            "name": "Extended Examples",
+            "explanation": "Multiple examples for better guidance"
+          }
+        }
+      }
+    }
+  },
+  "playground": {
+    "intermediate": {
+      "dataInstructionSeparation": {
+        "title": "Data & Instruction Separation",
+        "examples": {
+          "animalSounds": {
+            "name": "Animal Sound Generator",
+            "description": "Create a template for generating animal sounds",
+            "variations": {
+              "withXML": {
+                "name": "With XML Tags",
+                "explanation": "Clear separation using XML boundaries"
+              },
+              "template": {
+                "name": "Template Variables",
+                "explanation": "Using variable substitution patterns"
+              }
+            }
+          },
+          "emailRewrite": {
+            "name": "Email Rewriting Template",
+            "description": "Template for rewriting emails in different styles",
+            "variations": {
+              "noXML": {
+                "name": "Without XML",
+                "explanation": "See how unclear boundaries affect results"
+              },
+              "formal": {
+                "name": "Formal Style",
+                "explanation": "Professional email rewriting template"
+              }
+            }
+          }
+        },
+        "hints": {
+          "0": "Use XML tags to clearly separate data from instructions",
+          "1": "Create reusable templates with variable placeholders",
+          "2": "Test templates with different inputs to verify consistency"
+        }
+      },
+      "outputFormatting": {
+        "title": "Output Formatting Control",
+        "examples": {
+          "haikuXML": {
+            "name": "XML-Formatted Haikus",
+            "description": "Control haiku output format with XML tags",
+            "variations": {
+              "prefilled": {
+                "name": "Prefilled Opening",
+                "explanation": "Use prefilling to start the XML tag"
+              },
+              "json": {
+                "name": "JSON Format",
+                "explanation": "Structure haiku as JSON object"
+              }
+            }
+          },
+          "emailStyle": {
+            "name": "Styled Email Output",
+            "description": "Format email rewrites with dynamic XML tags",
+            "variations": {
+              "formal": {
+                "name": "Formal Style",
+                "explanation": "Professional email formatting"
+              },
+              "casual": {
+                "name": "Casual Style",
+                "explanation": "Informal email formatting"
+              }
+            }
+          }
+        },
+        "hints": {
+          "0": "Use XML tags to structure output clearly",
+          "1": "Combine prefilling with format specifications",
+          "2": "Experiment with different output structures"
+        }
+      },
+      "stepByStepThinking": {
+        "title": "Chain-of-Thought Reasoning",
+        "examples": {
+          "movieReview": {
+            "name": "Movie Review Analysis",
+            "description": "Analyze sentiment with step-by-step reasoning",
+            "variations": {
+              "noThinking": {
+                "name": "Direct Analysis",
+                "explanation": "Immediate sentiment judgment"
+              },
+              "brainstorm": {
+                "name": "Brainstorming Process",
+                "explanation": "Show detailed thinking process"
+              }
+            }
+          },
+          "factChecking": {
+            "name": "Fact Verification",
+            "description": "Verify facts through systematic reasoning",
+            "variations": {
+              "direct": {
+                "name": "Direct Answer",
+                "explanation": "Immediate response without research"
+              },
+              "detailed": {
+                "name": "Research Process",
+                "explanation": "Show research and verification steps"
+              }
+            }
+          }
+        },
+        "hints": {
+          "0": "Ask AI to show its reasoning process explicitly",
+          "1": "Use XML tags to organize thinking steps",
+          "2": "Compare results with and without step-by-step analysis"
+        }
+      },
+      "fewShotExamples": {
+        "title": "Example-Driven Prompting",
+        "examples": {
+          "parentBot": {
+            "name": "Parent Response Bot",
+            "description": "Use examples to create consistent parenting responses",
+            "variations": {
+              "noExample": {
+                "name": "Role-Based Only",
+                "explanation": "Using system prompt without examples"
+              },
+              "multipleExamples": {
+                "name": "Multiple Examples",
+                "explanation": "Several examples for better consistency"
+              }
+            }
+          },
+          "dataExtraction": {
+            "name": "Structured Data Extraction",
+            "description": "Extract information using example formatting",
+            "variations": {
+              "noFormat": {
+                "name": "Unstructured Output",
+                "explanation": "Free-form data extraction"
+              },
+              "jsonFormat": {
+                "name": "JSON Structure",
+                "explanation": "Structured JSON output format"
+              }
+            }
+          }
+        },
+        "hints": {
+          "0": "Choose examples that represent the desired output clearly",
+          "1": "Use 2-3 examples for best results",
+          "2": "Maintain consistent formatting across all examples"
+        }
+      }
+    }
+  },
+  "rateLimitError": "Rate limit exceeded. Please wait a moment and try again.",
+  "serviceUnavailableError": "Service temporarily unavailable. Please try again later.",
+  "generalError": "An error occurred while processing your request. Please try again."
 }
