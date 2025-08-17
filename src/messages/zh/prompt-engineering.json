@@ -272,7 +272,7 @@
       "summary": "掌握数据分离、输出格式化和系统性思考的高级技术",
       "sections": {
         "dataInstructions": {
-          "title": "数据与指令分离",
+          "title": "第四章：数据与指令分离",
           "theory": "学习如何通过清晰分离指令和可变数据来创建可重用的提示模板。本章涵盖XML标签的使用、f-string模板化，以及安全有效处理用户输入的最佳实践。",
           "examples": [
             "使用f-string进行变量替换创建动态提示",
@@ -292,7 +292,7 @@
           }
         },
         "formatting": {
-          "title": "格式化输出与Claude对话",
+          "title": "第五章：格式化输出与Claude对话",
           "theory": "掌握控制和格式化AI输出的技术。学习如何使用XML标签、JSON格式化和预填充来获得您需要的确切响应格式。",
           "examples": [
             "在XML标签中格式化输出以便于解析",
@@ -312,7 +312,7 @@
           }
         },
         "thinking": {
-          "title": "预知能力（逐步思考）",
+          "title": "第六章：预知能力（逐步思考）",
           "theory": "通过实施思维链提示来提高AI准确性。学习如何为复杂问题构建推理过程和使用逐步思考。",
           "examples": [
             "引导AI通过明确的推理步骤",
@@ -332,7 +332,7 @@
           }
         },
         "examples": {
-          "title": "使用示例（少样本提示）",
+          "title": "第七章：使用示例（少样本提示）",
           "theory": "利用示例的力量来指导AI行为。学习如何选择有效的示例，正确格式化它们，并使用少样本提示获得一致的结果。",
           "examples": [
             "选择最佳示例进行指导",
@@ -496,7 +496,7 @@
     },
     "intermediate": {
       "chapter4Haiku": {
-        "title": "俳句模板练习",
+        "title": "第四章练习：俳句模板练习",
         "description": "创建一个可重用的提示模板，为任何主题生成俳句",
         "expectedOutput": "一首提到指定主题的俳句",
         "hints": {
@@ -516,7 +516,7 @@
         }
       },
       "chapter4DogXML": {
-        "title": "XML标签分离",
+        "title": "第四章练习：XML标签分离",
         "description": "通过使用XML标签将问题从周围文本中分离来修复混乱的提示",
         "expectedOutput": "关于狗是否为棕色的清晰答案",
         "hints": {
@@ -536,7 +536,7 @@
         }
       },
       "chapter5Curry": {
-        "title": "响应预填充",
+        "title": "第五章练习：响应预填充",
         "description": "使用预填充引导Claude向特定篮球运动员倾斜",
         "expectedOutput": "支持斯蒂芬·库里为最佳球员的论证",
         "hints": {
@@ -556,7 +556,7 @@
         }
       },
       "chapter5TwoHaikus": {
-        "title": "多重输出格式化",
+        "title": "第五章练习：多重输出格式化",
         "description": "格式化输出以包含两个具有清晰边界的单独俳句",
         "expectedOutput": "关于猫的两首不同俳句，每首都在自己的标签中",
         "hints": {
@@ -576,7 +576,7 @@
         }
       },
       "chapter6EmailClass": {
-        "title": "逐步邮件分类",
+        "title": "第六章练习：逐步邮件分类",
         "description": "通过让AI逐步思考过程来分类邮件",
         "expectedOutput": "带有可见推理过程的分类",
         "hints": {
@@ -596,7 +596,7 @@
         }
       },
       "chapter6EmailFormatted": {
-        "title": "格式化分类输出",
+        "title": "第六章练习：格式化分类输出",
         "description": "以特定XML格式获取分类结果",
         "expectedOutput": "包装在答案标签中的分类字母",
         "hints": {
@@ -616,7 +616,7 @@
         }
       },
       "chapter7EmailExamples": {
-        "title": "少样本邮件分类",
+        "title": "第七章练习：少样本邮件分类",
         "description": "使用示例教导AI如何一致地分类邮件",
         "expectedOutput": "遵循示例模式的正确分类",
         "hints": {
@@ -744,7 +744,7 @@
     },
     "intermediate": {
       "dataInstructionSeparation": {
-        "title": "数据与指令分离",
+        "title": "第四章 Playground：数据与指令分离",
         "examples": {
           "animalSounds": {
             "name": "动物声音生成器",
@@ -782,7 +782,7 @@
         }
       },
       "outputFormatting": {
-        "title": "输出格式化控制",
+        "title": "第五章 Playground：输出格式化控制",
         "examples": {
           "haikuXML": {
             "name": "XML格式化俳句",
@@ -820,7 +820,7 @@
         }
       },
       "stepByStepThinking": {
-        "title": "思维链推理",
+        "title": "第六章 Playground：思维链推理",
         "examples": {
           "movieReview": {
             "name": "电影评论分析",
@@ -858,7 +858,7 @@
         }
       },
       "fewShotExamples": {
-        "title": "示例驱动提示",
+        "title": "第七章 Playground：示例驱动提示",
         "examples": {
           "parentBot": {
             "name": "家长响应机器人",
