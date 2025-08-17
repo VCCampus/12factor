@@ -2,87 +2,73 @@ import { CourseContent } from '../types';
 
 export const fundamentalsContent: CourseContent = {
   id: 'fundamentals',
-  title: 'fundamentals.title',
-  summary: 'fundamentals.summary',
+  title: 'courses.fundamentals.title',
+  summary: 'courses.fundamentals.summary',
   icon: 'book',
   sections: [
     {
-      id: 'chapter1',
-      title: 'fundamentals.chapter1.title',
-      theory: 'fundamentals.chapter1.theory',
-      messageRules: 'fundamentals.chapter1.messageRules',
-      systemPrompts: 'fundamentals.chapter1.systemPrompts',
-      messageFormatting: 'fundamentals.chapter1.messageFormatting',
-      multiTurnConversations: 'fundamentals.chapter1.multiTurnConversations',
-      whySystemPrompts: 'fundamentals.chapter1.whySystemPrompts',
-      examples: 'fundamentals.chapter1.examples',
-      exercises: [
-        {
-          id: "count_to_three",
-          instructions: 'fundamentals.chapter1.exercises.countToThree.instructions',
-          template: 'fundamentals.chapter1.exercises.countToThree.template',
-          expectedPattern: ".*1.*2.*3.*",
-          hints: 'fundamentals.chapter1.exercises.countToThree.hints'
-        },
-        {
-          id: "system_prompt_child",
-          instructions: 'fundamentals.chapter1.exercises.systemPromptChild.instructions',
-          template: 'fundamentals.chapter1.exercises.systemPromptChild.template',
-          expectedPattern: ".*(giggles|soo).*",
-          hints: 'fundamentals.chapter1.exercises.systemPromptChild.hints'
-        }
+      id: 'basicStructure',
+      title: 'courses.fundamentals.sections.basicStructure.title',
+      theory: 'courses.fundamentals.sections.basicStructure.theory',
+      examples: [
+        'courses.fundamentals.sections.basicStructure.examples.0',
+        'courses.fundamentals.sections.basicStructure.examples.1',
+        'courses.fundamentals.sections.basicStructure.examples.2'
+      ],
+      keyTechniques: [
+        'Messages API parameters: model, max_tokens, messages',
+        'User/Assistant conversation format',
+        'System prompt configuration',
+        'Message alternation rules'
+      ],
+      commonPitfalls: [
+        'Not alternating user/assistant messages',
+        'Starting with assistant message instead of user',
+        'Mixing system prompt with conversation messages'
       ]
     },
     {
-      id: 'chapter2',
-      title: 'fundamentals.chapter2.title',
-      theory: 'fundamentals.chapter2.theory',
-      directCommunication: 'fundamentals.chapter2.directCommunication',
-      specificityMatters: 'fundamentals.chapter2.specificityMatters',
-      goldenRule: 'fundamentals.chapter2.goldenRule',
-      forcedChoices: 'fundamentals.chapter2.forcedChoices',
-      examples: 'fundamentals.chapter2.examples',
-      exercises: [
-        {
-          id: "spanish_response",
-          instructions: 'fundamentals.chapter2.exercises.spanishResponse.instructions',
-          template: 'fundamentals.chapter2.exercises.spanishResponse.template',
-          expectedPattern: ".*hola.*",
-          hints: 'fundamentals.chapter2.exercises.spanishResponse.hints'
-        },
-        {
-          id: "one_player_only",
-          instructions: 'fundamentals.chapter2.exercises.onePlayerOnly.instructions',
-          template: 'fundamentals.chapter2.exercises.onePlayerOnly.template',
-          expectedPattern: "^Michael Jordan$",
-          hints: 'fundamentals.chapter2.exercises.onePlayerOnly.hints'
-        },
-        {
-          id: "long_story",
-          instructions: 'fundamentals.chapter2.exercises.longStory.instructions',
-          template: 'fundamentals.chapter2.exercises.longStory.template',
-          expectedPattern: ".*",
-          hints: 'fundamentals.chapter2.exercises.longStory.hints'
-        }
+      id: 'clearCommunication',
+      title: 'courses.fundamentals.sections.clearCommunication.title',
+      theory: 'courses.fundamentals.sections.clearCommunication.theory',
+      examples: [
+        'courses.fundamentals.sections.clearCommunication.examples.0',
+        'courses.fundamentals.sections.clearCommunication.examples.1',
+        'courses.fundamentals.sections.clearCommunication.examples.2',
+        'courses.fundamentals.sections.clearCommunication.examples.3'
+      ],
+      keyTechniques: [
+        'Direct and specific instructions',
+        'Format constraints and requirements',
+        'Forcing specific choices when needed',
+        'The colleague test for clarity'
+      ],
+      commonPitfalls: [
+        'Being too vague or ambiguous',
+        'Not specifying output format',
+        'Allowing AI to avoid making choices'
       ]
     },
     {
-      id: 'chapter3',
-      title: 'fundamentals.chapter3.title',
-      theory: 'fundamentals.chapter3.theory',
-      roleContext: 'fundamentals.chapter3.roleContext',
-      roleEffects: 'fundamentals.chapter3.roleEffects',
-      rolePromptLocation: 'fundamentals.chapter3.rolePromptLocation',
-      detailMatters: 'fundamentals.chapter3.detailMatters',
-      examples: 'fundamentals.chapter3.examples',
-      exercises: [
-        {
-          id: "math_correction",
-          instructions: 'fundamentals.chapter3.exercises.mathCorrection.instructions',
-          template: 'fundamentals.chapter3.exercises.mathCorrection.template',
-          expectedPattern: ".*(incorrect|not correct).*",
-          hints: 'fundamentals.chapter3.exercises.mathCorrection.hints'
-        }
+      id: 'rolePrompting',
+      title: 'courses.fundamentals.sections.rolePrompting.title',
+      theory: 'courses.fundamentals.sections.rolePrompting.theory',
+      examples: [
+        'courses.fundamentals.sections.rolePrompting.examples.0',
+        'courses.fundamentals.sections.rolePrompting.examples.1',
+        'courses.fundamentals.sections.rolePrompting.examples.2',
+        'courses.fundamentals.sections.rolePrompting.examples.3'
+      ],
+      keyTechniques: [
+        'Assigning specific roles and personas',
+        'Providing detailed role context',
+        'Using roles to improve domain expertise',
+        'Setting roles in system prompts'
+      ],
+      commonPitfalls: [
+        'Using roles without sufficient context',
+        'Not being specific about role expertise',
+        'Forgetting to set appropriate tone with role'
       ]
     }
   ]

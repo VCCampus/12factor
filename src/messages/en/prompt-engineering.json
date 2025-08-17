@@ -15,159 +15,6 @@
     "examples": "Examples",
     "exercises": "exercises",
     "practicalExamples": "Practical Examples",
-    "practiceExercises": {
-      "fundamentals": {
-        "chapter1BasicStructure": {
-          "title": "Chapter 1 Exercise: Count to Three (API Structure)",
-          "description": "Learn the correct Messages API format. This is the most basic exercise to ensure you understand how to construct effective prompts.",
-          "expectedOutput": "Response containing 1, 2, 3 with clear formatting.",
-          "hints": [
-            "State your request directly: \"Count to three\"",
-            "Use simple clear instructions",
-            "Avoid unnecessary complexity"
-          ],
-          "variations": {
-            "directInstruction": {
-              "name": "Direct Instruction",
-              "explanation": "The simplest direct approach"
-            },
-            "clearFormat": {
-              "name": "Clear Format",
-              "explanation": "Specified output format"
-            },
-            "chineseInstruction": {
-              "name": "Chinese Instruction",
-              "explanation": "Test Chinese instructions"
-            }
-          }
-        },
-        "chapter1SystemPrompt": {
-          "title": "Chapter 1 Exercise: 3-Year-Old Child Role (System Prompt)",
-          "description": "Experience the power of system prompts. Through role setting, completely change Claude's response style.",
-          "expectedOutput": "Excited response like a 3-year-old child, may include laughter, simple vocabulary and innocent expressions.",
-          "hints": [
-            "Think about how 3-year-olds speak: excited, curious, simple vocabulary",
-            "Can add childlike expressions like \"soo big\" or \"giggles\"",
-            "System prompt defines the entire \"personality\" of the AI"
-          ],
-          "variations": {
-            "noSystemPrompt": {
-              "name": "No System Prompt",
-              "explanation": "No System Prompt set, see default response"
-            },
-            "strictScientist": {
-              "name": "Strict Scientist",
-              "explanation": "System: \"You are a strict physicist. Give precise scientific answers.\""
-            },
-            "friendlyTeacher": {
-              "name": "Friendly Teacher",
-              "explanation": "System: \"You are a friendly teacher explaining to children.\""
-            }
-          }
-        },
-        "chapter2Spanish": {
-          "title": "Chapter 2 Exercise: Spanish Response (Clear Instructions)",
-          "description": "Learn how to give clear instructions to control output language. This exercise shows the API can execute precisely according to your requirements.",
-          "expectedOutput": "Respond in Spanish, including Spanish greeting words like \"Hola\".",
-          "hints": [
-            "Directly state language requirements in System Prompt",
-            "Can say \"Please respond in Spanish\" or \"Responde en español\"",
-            "Observe how Claude completely switches languages"
-          ],
-          "variations": {
-            "chineseResponse": {
-              "name": "Chinese Response",
-              "explanation": "System: \"Please respond in Chinese\""
-            },
-            "frenchResponse": {
-              "name": "French Response",
-              "explanation": "System: \"Répondez en français, s'il vous plaît\""
-            },
-            "bilingualResponse": {
-              "name": "Bilingual Response",
-              "explanation": "System: \"Respond in both English and Spanish\""
-            }
-          }
-        },
-        "chapter2Basketball": {
-          "title": "Chapter 2 Exercise: Just One Name (Precise Format)",
-          "description": "Learn how to give extremely specific format requirements. This exercise teaches you how to get precisely controlled output.",
-          "expectedOutput": "Only one player's name, no other text or explanation.",
-          "hints": [
-            "Be very specific about format requirements",
-            "Clearly state no explanations or other content",
-            "Force Claude to make a choice"
-          ],
-          "variations": {
-            "withExplanation": {
-              "name": "With Explanation",
-              "explanation": "Allow Claude to explain the choice"
-            },
-            "top3List": {
-              "name": "Top 3 List",
-              "explanation": "Ask for top 3 players instead"
-            },
-            "specificFormat": {
-              "name": "Specific Format",
-              "explanation": "\"Answer format: Name: [Player Name]\""
-            }
-          }
-        },
-        "chapter2LongStory": {
-          "title": "Chapter 2 Exercise: Write Long Story (Clear Requirements)",
-          "description": "Learn how to control output through clear length requirements. This exercise demonstrates the importance of giving specific metrics.",
-          "expectedOutput": "A story of at least 800 words about a robot learning to paint, with rich plot and detailed descriptions.",
-          "hints": [
-            "Clearly specify story length: at least 800 words",
-            "Provide specific story themes and topics",
-            "Request detailed descriptions and plot development",
-            "Can require inclusion of dialogue and scene descriptions"
-          ],
-          "variations": {
-            "noLength": {
-              "name": "No Length Requirement",
-              "explanation": "Don't specify length, see default story length"
-            },
-            "exactWordCount": {
-              "name": "Exact Word Count",
-              "explanation": "Specify exact word count and require specific elements"
-            },
-            "longerStory": {
-              "name": "Longer Story",
-              "explanation": "Request longer length and more complex structure"
-            }
-          }
-        },
-        "chapter3MathLogic": {
-          "title": "Chapter 3 Exercise: Math Error Check (Role Assignment)",
-          "description": "Experience the impact of role assignment on logical reasoning. Improve Claude's performance in specific domains by assigning expert roles.",
-          "expectedOutput": "Discover the math error: the step from 2x-3=9 to 2x=6 is wrong, it should be 2x=12.",
-          "hints": [
-            "Assign Claude a math teacher or logical reasoning expert role",
-            "Request careful checking of each calculation step",
-            "Emphasize finding where the error is"
-          ],
-          "variations": {
-            "noRole": {
-              "name": "No Role Setting",
-              "explanation": "Don't set specific role, see baseline performance"
-            },
-            "mathTeacher": {
-              "name": "Math Teacher Role",
-              "explanation": "Set as math teacher, emphasize teaching and error checking"
-            },
-            "logicExpert": {
-              "name": "Logic Reasoning Expert",
-              "explanation": "Set as logic reasoning expert, focus on logical analysis"
-            },
-            "studentRole": {
-              "name": "Student Role",
-              "explanation": "Set as a student learning math, show thinking process"
-            }
-          }
-        }
-      }
-    },
     "prerequisites": "Prerequisites",
     "exercise": "Exercise",
     "instructions": "Instructions",
@@ -267,225 +114,103 @@
     "canImprove": "Output can improve",
     "aiThinking": "AI is thinking...",
     "clickRunPrompt": "Click \"Run Prompt\" to see AI response",
-    "fundamentals": {
-      "title": "Fundamentals Course",
-      "theory": "Comprehensive step-by-step guide to mastering Claude's best prompt engineering practices. Learn three core skills: API structure, clear communication, and role assignment.",
-      "chapter1": {
-        "title": "Chapter 1: Basic Prompt Structure",
-        "theory": "Learn the required parameters of the Messages API: model, max_tokens, messages array. Master the user/assistant conversation format and correct usage of system prompts.",
-        "messageRules": {
-          "title": "Message Alternation Rule",
-          "content": "User and Assistant messages MUST alternate, and messages MUST start with a User turn."
-        },
-        "systemPrompts": {
-          "title": "System Prompts",
-          "content": "You can use a system prompt to give AI models instructions and guidelines. A system prompt is a way to provide context, instructions, and guidelines before presenting a question or task in the User turn. Structurally, system prompts exist separately from the list of User & Assistant messages, and thus belong in a separate \"system prompt\" parameter."
-        },
-        "messageFormatting": {
-          "title": "Message Formatting",
-          "content": "When using message APIs, be sure to demarcate messages by inserting a newline between each message (a message is a single User or Assistant turn). If you fail to do so, the AI will not return an error, but will consider everything not separated by a newline as part of a single message."
-        },
-        "multiTurnConversations": {
-          "title": "Multi-turn Conversations",
-          "content": "You can have multiple \"User:\" / \"Assistant:\" pairs in a prompt (as if simulating a multi-turn conversation). You can also put words into an ending \"Assistant:\" message for the AI to continue from where you left off."
-        },
-        "whySystemPrompts": {
-          "title": "Why use system prompts?",
-          "content": "A well-written system prompt can improve AI performance in a variety of ways, such as increasing the AI's ability to follow rules and instructions."
-        },
-        "examples": [
-          "✅ Correct format: {role: 'user', content: 'Hi Claude, how are you?'}",
-          "❌ Wrong format: {Hi Claude, how are you?} - missing role and content fields",
-          "✅ System prompt: 'You are a logical reasoning expert who specializes in solving complex logical problems'"
-        ],
-        "exercises": {
-          "countToThree": {
-            "instructions": "Use the correct user/assistant format to have Claude count to three",
-            "template": "[Replace this text]",
-            "hints": [
-              "State your request directly",
-              "Use simple clear instructions",
-              "Avoid unnecessary complexity"
-            ]
-          },
-          "systemPromptChild": {
-            "instructions": "Modify the SYSTEM_PROMPT to make Claude respond like a 3-year-old child",
-            "template": "SYSTEM_PROMPT = '[Replace this text]'",
-            "hints": [
-              "Think about how 3-year-olds speak",
-              "Use simple vocabulary and expressions",
-              "Add childlike language features"
-            ]
-          }
-        }
-      },
-      "chapter2": {
-        "title": "Chapter 2: Being Clear and Direct",
-        "theory": "Claude needs clear instructions. Follow the golden rule: if you show your prompt to a colleague and they're confused, Claude will be confused too.",
-        "examples": [
-          "❌ Vague: 'Write a haiku about robots'",
-          "✅ Clear: 'Write a haiku about robots, skip the preamble and go straight to the poem'",
-          "❌ Vague: 'Who is the best basketball player of all time?'",
-          "✅ Force choice: 'Who is the best basketball player of all time? While there are different opinions, if you had to choose one, who would it be?'"
-        ],
-        "exercises": {
-          "spanishResponse": {
-            "instructions": "Modify the SYSTEM_PROMPT to make Claude respond in Spanish",
-            "template": "SYSTEM_PROMPT = '[Replace this text]'",
-            "hints": [
-              "Tell Claude directly which language to use",
-              "You can specify language requirements in the system prompt"
-            ]
-          },
-          "onePlayerOnly": {
-            "instructions": "Have Claude respond with only one player's name, no other text or punctuation",
-            "template": "[Replace this text]",
-            "hints": [
-              "Be very specific about format requirements",
-              "Clearly state no explanations or other content",
-              "Force Claude to make a choice"
-            ]
-          },
-          "longStory": {
-            "instructions": "Write a story of 800+ words",
-            "template": "[Replace this text]",
-            "hints": [
-              "Clearly specify story length",
-              "You can provide specific story themes",
-              "Request detailed descriptions and plot development"
-            ]
-          }
-        }
-      },
-      "chapter3": {
-        "title": "Chapter 3: Assigning Roles (Role Prompting)",
-        "theory": "Assigning specific roles to Claude can significantly improve performance. Role setting can change response style, tone, and level of expertise.",
-        "examples": [
-          "❌ No role: 'What about skateboarding?'",
-          "✅ Cat role: system='You are a cat' → will answer from a cat's perspective",
-          "❌ Logic error: Jack looks at Anne, Anne looks at George, Jack is married George is unmarried, is a married person looking at an unmarried person?",
-          "✅ Logic expert: system='You are a logical reasoning expert' → correctly analyzes this problem"
-        ],
-        "exercises": {
-          "mathCorrection": {
-            "instructions": "Have Claude find the math error: 2x-3=9, 2x=6, x=3",
-            "template": "Is this equation solved correctly?\n\n2x - 3 = 9\n2x = 6\nx = 3",
-            "hints": [
-              "Assign Claude a math teacher or logic expert role",
-              "Request careful checking of each step",
-              "Emphasize finding the error"
-            ]
-          }
-        }
-      }
-    },
-    "playground": {
-      "chapter1": {
-        "title": "Chapter 1 Playground: Basic Structure & System Prompts",
-        "creativeCounting": {
-          "name": "Creative Counting",
-          "description": "Experiment with different ways to count - try making it fun!",
-          "variations": {
-            "basic": "Basic Creative",
-            "basicExplanation": "Simple creative counting approach",
-            "storytelling": "Story Format",
-            "storytellingExplanation": "Count by embedding numbers in a narrative",
-            "poetic": "Poetic Style",
-            "poeticExplanation": "Use rhymes and poetic language for counting",
-            "withContext": "Educational Context",
-            "withContextExplanation": "Add educational context with system prompt"
-          }
-        },
-        "systemPromptExperiment": {
-          "name": "System Prompt Structure",
-          "description": "Learn how system prompts guide AI behavior and response style",
-          "variations": {
-            "basic": "No System Prompt",
-            "basicExplanation": "Standard AI response without system guidance",
-            "structured": "Structured Request",
-            "structuredExplanation": "System prompt requesting clear structure",
-            "detailed": "Detailed Instructions",
-            "detailedExplanation": "System prompt asking for detailed scientific explanation",
-            "simple": "Simplicity Request",
-            "simpleExplanation": "System prompt requesting simple language"
-          }
-        },
-        "hint1": "Try different creative approaches to basic tasks",
-        "hint2": "Experiment with various system prompt structures",
-        "hint3": "Notice how system prompts change AI response style"
-      },
-      "chapter2": {
-        "title": "Chapter 2 Playground: Clear Communication",
-        "languageExperiment": {
-          "name": "Language Choice",
-          "description": "Explore how AI chooses languages and explains decisions",
-          "variations": {
-            "basic": "Open Choice",
-            "basicExplanation": "AI chooses any language and explains why",
-            "specific": "Specific Language",
-            "specificExplanation": "Request a specific language with cultural context",
-            "comparative": "Language Comparison",
-            "comparativeExplanation": "Compare greetings across multiple languages",
-            "contextual": "Business Context",
-            "contextualExplanation": "Professional greeting with business context"
-          }
-        },
-        "formatExperiment": {
-          "name": "Format Styles",
-          "description": "Try different formatting approaches for lists and structure",
-          "variations": {
-            "basic": "Flexible Format",
-            "basicExplanation": "AI chooses formatting style freely",
-            "numbered": "Numbered List",
-            "numberedExplanation": "Specific numbered list with explanations",
-            "detailed": "Detailed Descriptions",
-            "detailedExplanation": "Rich descriptions with reasons",
-            "creative": "Creative Format",
-            "creativeExplanation": "Creative presentation like poem or story"
-          }
-        },
-        "hint1": "Be specific about your requirements",
-        "hint2": "Try different output formats",
-        "hint3": "Experiment with explicit vs implicit instructions"
-      },
-      "chapter3": {
-        "title": "Chapter 3 Playground: Role Prompting",
-        "roleComparison": {
-          "name": "Role Comparison",
-          "description": "Compare responses from different professional perspectives",
-          "variations": {
-            "basic": "No Role Context",
-            "basicExplanation": "General AI response without specific professional role",
-            "conservative": "Conservative Advisor",
-            "conservativeExplanation": "Risk-averse financial advisor perspective",
-            "aggressive": "Tech-Savvy Advisor",
-            "aggressiveExplanation": "Digital asset specialist with growth focus",
-            "balanced": "Certified Planner",
-            "balancedExplanation": "Objective analysis from certified financial planner"
-          }
-        },
-        "expertiseExperiment": {
-          "name": "Expertise Levels",
-          "description": "See how different expertise levels affect explanations",
-          "variations": {
-            "basic": "General Response",
-            "basicExplanation": "Standard AI explanation without expertise role",
-            "professor": "Academic Professor",
-            "professorExplanation": "Data science professor making topics accessible",
-            "beginner": "Beginner Tutor",
-            "beginnerExplanation": "Tutor specialized in teaching absolute beginners",
-            "practical": "Industry Expert",
-            "practicalExplanation": "Working data scientist showing real applications"
-          }
-        },
-        "hint1": "Try contrasting professional roles",
-        "hint2": "Experiment with different expertise levels",
-        "hint3": "Notice how role context shapes responses"
-      }
-    },
     "coreConceptsTitle": "Core Concepts"
   },
   "courses": {
+    "fundamentals": {
+      "title": "Fundamentals Course",
+      "summary": "Comprehensive step-by-step guide to mastering Claude's best prompt engineering practices. Learn three core skills: API structure, clear communication, and role assignment.",
+      "sections": {
+        "basicStructure": {
+          "title": "Chapter 1: Basic Prompt Structure",
+          "theory": "Learn the required parameters of the Messages API: model, max_tokens, messages array. Master the user/assistant conversation format and correct usage of system prompts.\n\n**Message Alternation Rule**\nUser and Assistant messages MUST alternate, and messages MUST start with a User turn.\n\n**System Prompts**\nYou can use a system prompt to give AI models instructions and guidelines. A system prompt is a way to provide context, instructions, and guidelines before presenting a question or task in the User turn. Structurally, system prompts exist separately from the list of User & Assistant messages, and thus belong in a separate \"system prompt\" parameter.\n\n**Message Formatting**\nWhen using message APIs, be sure to demarcate messages by inserting a newline between each message (a message is a single User or Assistant turn). If you fail to do so, the AI will not return an error, but will consider everything not separated by a newline as part of a single message.\n\n**Multi-turn Conversations**\nYou can have multiple \"User:\" / \"Assistant:\" pairs in a prompt (as if simulating a multi-turn conversation). You can also put words into an ending \"Assistant:\" message for the AI to continue from where you left off.\n\n**Why use system prompts?**\nA well-written system prompt can improve AI performance in a variety of ways, such as increasing the AI's ability to follow rules and instructions.",
+          "examples": [
+            "Correct format: role='user', content='Hi Claude, how are you?'",
+            "Wrong format: Missing role and content fields",
+            "System prompt: You are a logical reasoning expert who specializes in solving complex logical problems"
+          ],
+          "exercises": {
+            "countToThree": {
+              "instructions": "Use the correct user/assistant format to have Claude count to three",
+              "template": "[Replace this text]",
+              "hints": [
+                "State your request directly",
+                "Use simple clear instructions",
+                "Avoid unnecessary complexity"
+              ]
+            },
+            "systemPromptChild": {
+              "instructions": "Modify the SYSTEM_PROMPT to make Claude respond like a 3-year-old child",
+              "template": "SYSTEM_PROMPT = '[Replace this text]'",
+              "hints": [
+                "Think about how 3-year-olds speak",
+                "Use simple vocabulary and expressions",
+                "Add childlike language features"
+              ]
+            }
+          }
+        },
+        "clearCommunication": {
+          "title": "Chapter 2: Being Clear and Direct",
+          "theory": "Claude needs clear instructions. Follow the golden rule: if you show your prompt to a colleague and they're confused, Claude will be confused too.",
+          "examples": [
+            "Vague: Write a haiku about robots",
+            "Clear: Write a haiku about robots, skip the preamble and go straight to the poem",
+            "Vague: Who is the best basketball player of all time?",
+            "Force choice: Who is the best basketball player of all time? While there are different opinions, if you had to choose one, who would it be?"
+          ],
+          "exercises": {
+            "spanishResponse": {
+              "instructions": "Modify the SYSTEM_PROMPT to make Claude respond in Spanish",
+              "template": "SYSTEM_PROMPT = '[Replace this text]'",
+              "hints": [
+                "Tell Claude directly which language to use",
+                "You can specify language requirements in the system prompt"
+              ]
+            },
+            "onePlayerOnly": {
+              "instructions": "Have Claude respond with only one player's name, no other text or punctuation",
+              "template": "[Replace this text]",
+              "hints": [
+                "Be very specific about format requirements",
+                "Clearly state no explanations or other content",
+                "Force Claude to make a choice"
+              ]
+            },
+            "longStory": {
+              "instructions": "Write a story of 800+ words",
+              "template": "[Replace this text]",
+              "hints": [
+                "Clearly specify story length",
+                "You can provide specific story themes",
+                "Request detailed descriptions and plot development"
+              ]
+            }
+          }
+        },
+        "rolePrompting": {
+          "title": "Chapter 3: Assigning Roles (Role Prompting)",
+          "theory": "Assigning specific roles to Claude can significantly improve performance. Role setting can change response style, tone, and level of expertise.",
+          "examples": [
+            "No role: What about skateboarding?",
+            "Cat role: system='You are a cat' will answer from a cat's perspective",
+            "Logic error: Jack looks at Anne, Anne looks at George, Jack is married George is unmarried, is a married person looking at an unmarried person?",
+            "Logic expert: system='You are a logical reasoning expert' correctly analyzes this problem"
+          ],
+          "exercises": {
+            "mathCorrection": {
+              "instructions": "Have Claude find the math error: 2x-3=9, 2x=6, x=3",
+              "template": "Is this equation solved correctly?\n\n2x - 3 = 9\n2x = 6\nx = 3",
+              "hints": [
+                "Assign Claude a math teacher or logic expert role",
+                "Request careful checking of each step",
+                "Emphasize finding the error"
+              ]
+            }
+          }
+        }
+      }
+    },
     "intermediate": {
       "title": "Intermediate Prompt Engineering",
       "summary": "Master advanced techniques for data separation, output formatting, and systematic thinking",
@@ -530,6 +255,145 @@
     }
   },
   "practiceExercises": {
+    "fundamentals": {
+      "chapter1BasicStructure": {
+        "title": "Chapter 1 Exercise: Count to Three (API Structure)",
+        "description": "Learn the correct Messages API format. This is the most basic exercise to ensure you understand how to construct effective prompts.",
+        "expectedOutput": "A response containing 1, 2, 3 with clear formatting.",
+        "hints": {
+          "0": "State your requirement directly: 'Count to three'",
+          "1": "Use simple, clear instructions",
+          "2": "Avoid unnecessary complexity"
+        },
+        "variations": {
+          "directInstruction": {
+            "name": "Direct Instruction",
+            "explanation": "The simplest, most direct approach"
+          },
+          "clearFormat": {
+            "name": "Clear Format",
+            "explanation": "Specifies the output format"
+          }
+        }
+      },
+      "chapter1SystemPrompt": {
+        "title": "Chapter 1 Exercise: 3-Year-Old Role (System Prompt)",
+        "description": "Experience the power of system prompts. Through role assignment, completely change Claude's response style.",
+        "expectedOutput": "An excited response like a 3-year-old child, possibly with laughter, simple vocabulary, and innocent expressions.",
+        "hints": {
+          "0": "Think about how a 3-year-old talks: excited, curious, simple vocabulary",
+          "1": "You can add childish expressions like 'soo big' or 'giggles'",
+          "2": "The system prompt defines the AI's entire 'personality'"
+        },
+        "variations": {
+          "noSystemPrompt": {
+            "name": "No System Prompt",
+            "explanation": "No system prompt set, see the default response"
+          },
+          "strictScientist": {
+            "name": "Strict Scientist",
+            "explanation": "System: 'You are a strict physicist. Give precise scientific answers.'"
+          },
+          "friendlyTeacher": {
+            "name": "Friendly Teacher",
+            "explanation": "System: 'You are a friendly teacher explaining to children.'"
+          }
+        }
+      },
+      "chapter2Spanish": {
+        "title": "Chapter 2 Exercise: Spanish Response (Clear Instructions)",
+        "description": "Learn how to give clear instructions to control output language. This exercise shows that the API can precisely follow your requirements.",
+        "expectedOutput": "A response in Spanish, including Spanish greetings like 'Hola'.",
+        "hints": {
+          "0": "Directly state the language requirement in the prompt",
+          "1": "You can say 'Please respond in Spanish' or 'Responde en español'",
+          "2": "Observe how AI completely switches languages"
+        },
+        "variations": {
+          "frenchResponse": {
+            "name": "French Response",
+            "explanation": "Request response in French"
+          },
+          "bilingualResponse": {
+            "name": "Bilingual Response",
+            "explanation": "Request response in both English and Spanish"
+          }
+        }
+      },
+      "chapter2Basketball": {
+        "title": "Chapter 2 Exercise: Just One Name (Precise Format)",
+        "description": "Learn how to give extremely specific format requirements. This exercise teaches you how to get precisely controlled output.",
+        "expectedOutput": "Just one player's name, no other text or explanation.",
+        "hints": {
+          "0": "Be very specific about format requirements",
+          "1": "Clearly state no explanations or other content",
+          "2": "Force AI to make a choice"
+        },
+        "variations": {
+          "withExplanation": {
+            "name": "With Explanation",
+            "explanation": "Allow Claude to explain the choice"
+          },
+          "top3List": {
+            "name": "Top 3 List",
+            "explanation": "Request top 3 players instead of one"
+          },
+          "specificFormat": {
+            "name": "Specific Format",
+            "explanation": "Request name with one reason"
+          }
+        }
+      },
+      "chapter2LongStory": {
+        "title": "Chapter 2 Exercise: Write Long Story (Clear Requirements)",
+        "description": "Learn how to control output length through clear requirements. This exercise demonstrates the importance of providing specific metrics.",
+        "expectedOutput": "A story of at least 800 words about a robot learning to paint, with rich plot and detailed descriptions.",
+        "hints": {
+          "0": "Clearly request story length: at least 800 words",
+          "1": "Provide specific story topic and theme",
+          "2": "Request detailed descriptions and plot development",
+          "3": "Can request inclusion of dialogue and scene descriptions"
+        },
+        "variations": {
+          "noLength": {
+            "name": "No Length Requirement",
+            "explanation": "Don't specify length, see default story length"
+          },
+          "exactWordCount": {
+            "name": "Exact Word Count",
+            "explanation": "Specify exact word count and request specific elements"
+          },
+          "longerStory": {
+            "name": "Longer Story",
+            "explanation": "Request longer length and more complex structure"
+          }
+        }
+      },
+      "chapter3MathLogic": {
+        "title": "Chapter 3 Exercise: Math Error Check (Role Assignment)",
+        "description": "Experience how role assignment affects logical reasoning. By assigning Claude an expert role, improve its performance in specific domains.",
+        "expectedOutput": "Find the math error: The step from 2x-3=9 to 2x=6 is wrong, it should be 2x=12.",
+        "hints": {
+          "0": "Assign Claude a math teacher or logic expert role",
+          "1": "Request careful checking of each calculation step",
+          "2": "Emphasize finding where the error is"
+        },
+        "variations": {
+          "noRole": {
+            "name": "No Role Set",
+            "explanation": "No specific role set, see basic performance"
+          },
+          "logicExpert": {
+            "name": "Logic Expert",
+            "explanation": "Set as logic reasoning expert, focus on logical analysis"
+          },
+          "studentRole": {
+            "name": "Student Role",
+            "explanation": "Set as a student learning math, show thinking process"
+          }
+        }
+      }
+    },
     "intermediate": {
       "chapter4Haiku": {
         "title": "Haiku Template Exercise",
@@ -674,6 +538,110 @@
     }
   },
   "playground": {
+    "fundamentals": {
+      "basicStructure": {
+        "title": "Chapter 1 Playground: Basic Structure & System Prompts",
+        "creativeCounting": {
+          "name": "Creative Counting",
+          "description": "Experiment with different ways to count - try making it fun!",
+          "variations": {
+            "basic": "Basic Creative",
+            "basicExplanation": "Simple creative counting approach",
+            "storytelling": "Story Format",
+            "storytellingExplanation": "Count by embedding numbers in a narrative",
+            "poetic": "Poetic Style",
+            "poeticExplanation": "Use rhymes and poetic language for counting",
+            "withContext": "Educational Context",
+            "withContextExplanation": "Add educational context with system prompt"
+          }
+        },
+        "systemPromptExperiment": {
+          "name": "System Prompt Structure",
+          "description": "Learn how system prompts guide AI behavior and response style",
+          "variations": {
+            "basic": "No System Prompt",
+            "basicExplanation": "Standard AI response without system guidance",
+            "structured": "Structured Request",
+            "structuredExplanation": "System prompt requesting clear structure",
+            "detailed": "Detailed Instructions",
+            "detailedExplanation": "System prompt asking for detailed scientific explanation",
+            "simple": "Simplicity Request",
+            "simpleExplanation": "System prompt requesting simple language"
+          }
+        },
+        "hint1": "Try different creative approaches to basic tasks",
+        "hint2": "Experiment with various system prompt structures",
+        "hint3": "Notice how system prompts change AI response style"
+      },
+      "clearCommunication": {
+        "title": "Chapter 2 Playground: Clear Communication",
+        "languageExperiment": {
+          "name": "Language Choice",
+          "description": "Explore how AI chooses languages and explains decisions",
+          "variations": {
+            "basic": "Open Choice",
+            "basicExplanation": "AI chooses any language and explains why",
+            "specific": "Specific Language",
+            "specificExplanation": "Request a specific language with cultural context",
+            "comparative": "Language Comparison",
+            "comparativeExplanation": "Compare greetings across multiple languages",
+            "contextual": "Business Context",
+            "contextualExplanation": "Professional greeting with business context"
+          }
+        },
+        "formatExperiment": {
+          "name": "Format Styles",
+          "description": "Try different formatting approaches for lists and structure",
+          "variations": {
+            "basic": "Flexible Format",
+            "basicExplanation": "AI chooses formatting style freely",
+            "numbered": "Numbered List",
+            "numberedExplanation": "Specific numbered list with explanations",
+            "detailed": "Detailed Descriptions",
+            "detailedExplanation": "Rich descriptions with reasons",
+            "creative": "Creative Format",
+            "creativeExplanation": "Creative presentation like poem or story"
+          }
+        },
+        "hint1": "Be specific about your requirements",
+        "hint2": "Try different output formats",
+        "hint3": "Experiment with explicit vs implicit instructions"
+      },
+      "rolePrompting": {
+        "title": "Chapter 3 Playground: Role Prompting",
+        "roleComparison": {
+          "name": "Role Comparison",
+          "description": "Compare responses from different professional perspectives",
+          "variations": {
+            "basic": "No Role Context",
+            "basicExplanation": "General AI response without specific professional role",
+            "conservative": "Conservative Advisor",
+            "conservativeExplanation": "Risk-averse financial advisor perspective",
+            "aggressive": "Tech-Savvy Advisor",
+            "aggressiveExplanation": "Digital asset specialist with growth focus",
+            "balanced": "Certified Planner",
+            "balancedExplanation": "Objective analysis from certified financial planner"
+          }
+        },
+        "expertiseExperiment": {
+          "name": "Expertise Levels",
+          "description": "See how different expertise levels affect explanations",
+          "variations": {
+            "basic": "General Response",
+            "basicExplanation": "Standard AI explanation without expertise role",
+            "professor": "Academic Professor",
+            "professorExplanation": "Data science professor making topics accessible",
+            "beginner": "Beginner Tutor",
+            "beginnerExplanation": "Tutor specialized in teaching absolute beginners",
+            "practical": "Industry Expert",
+            "practicalExplanation": "Working data scientist showing real applications"
+          }
+        },
+        "hint1": "Try contrasting professional roles",
+        "hint2": "Experiment with different expertise levels",
+        "hint3": "Notice how role context shapes responses"
+      }
+    },
     "intermediate": {
       "dataInstructionSeparation": {
         "title": "Data & Instruction Separation",

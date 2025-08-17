@@ -11,70 +11,70 @@ export const promptLessons: PromptLesson[] = [
       theory: 'fundamentals.theory',
       sections: [
         {
-          title: 'fundamentals.chapter1.title',
-          theory: 'fundamentals.chapter1.theory',
-          messageRules: 'fundamentals.chapter1.messageRules',
-          systemPrompts: 'fundamentals.chapter1.systemPrompts',
-          messageFormatting: 'fundamentals.chapter1.messageFormatting',
-          multiTurnConversations: 'fundamentals.chapter1.multiTurnConversations',
-          whySystemPrompts: 'fundamentals.chapter1.whySystemPrompts',
-          examples: 'fundamentals.chapter1.examples',
+          title: 'fundamentals.sections.basicStructure.title',
+          theory: 'fundamentals.sections.basicStructure.theory',
+          messageRules: 'fundamentals.sections.basicStructure.messageRules',
+          systemPrompts: 'fundamentals.sections.basicStructure.systemPrompts',
+          messageFormatting: 'fundamentals.sections.basicStructure.messageFormatting',
+          multiTurnConversations: 'fundamentals.sections.basicStructure.multiTurnConversations',
+          whySystemPrompts: 'fundamentals.sections.basicStructure.whySystemPrompts',
+          examples: 'fundamentals.sections.basicStructure.examples',
           exercises: [{
             id: "count_to_three",
-            instructions: 'fundamentals.chapter1.exercises.countToThree.instructions',
-            template: 'fundamentals.chapter1.exercises.countToThree.template',
+            instructions: 'fundamentals.sections.basicStructure.exercises.countToThree.instructions',
+            template: 'fundamentals.sections.basicStructure.exercises.countToThree.template',
             expectedPattern: ".*1.*2.*3.*",
-            hints: 'fundamentals.chapter1.exercises.countToThree.hints'
+            hints: 'fundamentals.sections.basicStructure.exercises.countToThree.hints'
           }, {
             id: "system_prompt_child",
-            instructions: 'fundamentals.chapter1.exercises.systemPromptChild.instructions',
-            template: 'fundamentals.chapter1.exercises.systemPromptChild.template',
+            instructions: 'fundamentals.sections.basicStructure.exercises.systemPromptChild.instructions',
+            template: 'fundamentals.sections.basicStructure.exercises.systemPromptChild.template',
             expectedPattern: ".*(giggles|soo).*",
-            hints: 'fundamentals.chapter1.exercises.systemPromptChild.hints'
+            hints: 'fundamentals.sections.basicStructure.exercises.systemPromptChild.hints'
           }]
         },
         {
-          title: 'fundamentals.chapter2.title',
-          theory: 'fundamentals.chapter2.theory',
-          directCommunication: 'fundamentals.chapter2.directCommunication',
-          specificityMatters: 'fundamentals.chapter2.specificityMatters',
-          goldenRule: 'fundamentals.chapter2.goldenRule',
-          forcedChoices: 'fundamentals.chapter2.forcedChoices',
-          examples: 'fundamentals.chapter2.examples',
+          title: 'fundamentals.sections.clearCommunication.title',
+          theory: 'fundamentals.sections.clearCommunication.theory',
+          directCommunication: 'fundamentals.sections.clearCommunication.directCommunication',
+          specificityMatters: 'fundamentals.sections.clearCommunication.specificityMatters',
+          goldenRule: 'fundamentals.sections.clearCommunication.goldenRule',
+          forcedChoices: 'fundamentals.sections.clearCommunication.forcedChoices',
+          examples: 'fundamentals.sections.clearCommunication.examples',
           exercises: [{
             id: "spanish_response",
-            instructions: 'fundamentals.chapter2.exercises.spanishResponse.instructions',
-            template: 'fundamentals.chapter2.exercises.spanishResponse.template',
+            instructions: 'fundamentals.sections.clearCommunication.exercises.spanishResponse.instructions',
+            template: 'fundamentals.sections.clearCommunication.exercises.spanishResponse.template',
             expectedPattern: ".*hola.*",
-            hints: 'fundamentals.chapter2.exercises.spanishResponse.hints'
+            hints: 'fundamentals.sections.clearCommunication.exercises.spanishResponse.hints'
           }, {
             id: "one_player_only",
-            instructions: 'fundamentals.chapter2.exercises.onePlayerOnly.instructions',
-            template: 'fundamentals.chapter2.exercises.onePlayerOnly.template',
+            instructions: 'fundamentals.sections.clearCommunication.exercises.onePlayerOnly.instructions',
+            template: 'fundamentals.sections.clearCommunication.exercises.onePlayerOnly.template',
             expectedPattern: "^Michael Jordan$",
-            hints: 'fundamentals.chapter2.exercises.onePlayerOnly.hints'
+            hints: 'fundamentals.sections.clearCommunication.exercises.onePlayerOnly.hints'
           }, {
             id: "long_story",
-            instructions: 'fundamentals.chapter2.exercises.longStory.instructions',
-            template: 'fundamentals.chapter2.exercises.longStory.template',
+            instructions: 'fundamentals.sections.clearCommunication.exercises.longStory.instructions',
+            template: 'fundamentals.sections.clearCommunication.exercises.longStory.template',
             expectedPattern: ".*",
-            hints: 'fundamentals.chapter2.exercises.longStory.hints'
+            hints: 'fundamentals.sections.clearCommunication.exercises.longStory.hints'
           }]
         },
         {
-          title: 'fundamentals.chapter3.title',
-          theory: 'fundamentals.chapter3.theory',
-          roleContext: 'fundamentals.chapter3.roleContext',
-          roleEffects: 'fundamentals.chapter3.roleEffects',
-          rolePromptLocation: 'fundamentals.chapter3.rolePromptLocation',
-          detailMatters: 'fundamentals.chapter3.detailMatters',
-          examples: 'fundamentals.chapter3.examples',
+          title: 'fundamentals.sections.rolePrompting.title',
+          theory: 'fundamentals.sections.rolePrompting.theory',
+          roleContext: 'fundamentals.sections.rolePrompting.roleContext',
+          roleEffects: 'fundamentals.sections.rolePrompting.roleEffects',
+          rolePromptLocation: 'fundamentals.sections.rolePrompting.rolePromptLocation',
+          detailMatters: 'fundamentals.sections.rolePrompting.detailMatters',
+          examples: 'fundamentals.sections.rolePrompting.examples',
           exercises: [{
             id: "math_correction",
-            instructions: 'fundamentals.chapter3.exercises.mathCorrection.instructions',
-            template: 'fundamentals.chapter3.exercises.mathCorrection.template',
+            instructions: 'fundamentals.sections.rolePrompting.exercises.mathCorrection.instructions',
+            template: 'fundamentals.sections.rolePrompting.exercises.mathCorrection.template',
             expectedPattern: ".*(incorrect|not correct).*",
-            hints: 'fundamentals.chapter3.exercises.mathCorrection.hints'
+            hints: 'fundamentals.sections.rolePrompting.exercises.mathCorrection.hints'
           }]
         }
       ]

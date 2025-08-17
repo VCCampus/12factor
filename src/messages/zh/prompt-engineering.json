@@ -15,159 +15,6 @@
     "examples": "示例",
     "exercises": "个",
     "practicalExamples": "实践示例",
-    "practiceExercises": {
-      "fundamentals": {
-        "chapter1BasicStructure": {
-          "title": "第一章练习：数到三（API结构）",
-          "description": "学习正确的Messages API格式。这是最基础的练习，确保你理解如何构建有效的提示。",
-          "expectedOutput": "包含1、2、3的回应，格式清晰。",
-          "hints": [
-            "直接说出你的需求：\"数到三\"",
-            "使用简单清晰的指令",
-            "避免不必要的复杂性"
-          ],
-          "variations": {
-            "directInstruction": {
-              "name": "直接指令",
-              "explanation": "最简单直接的方式"
-            },
-            "clearFormat": {
-              "name": "明确格式",
-              "explanation": "指定了输出格式"
-            },
-            "chineseInstruction": {
-              "name": "中文指令",
-              "explanation": "测试中文指令"
-            }
-          }
-        },
-        "chapter1SystemPrompt": {
-          "title": "第一章练习：3岁小孩角色（系统提示）",
-          "description": "体验 system prompt 的威力。通过角色设定，让Claude的回应风格彻底改变。",
-          "expectedOutput": "像3岁孩子一样的兴奋回应，可能包含笑声、简单词汇和天真的表达。",
-          "hints": [
-            "想想3岁孩子如何说话：兴奋、好奇、词汇简单",
-            "可以加入一些孩子气的表达如 \"soo big\" 或 \"giggles\"",
-            "System prompt 定义了AI的整个\"人格\""
-          ],
-          "variations": {
-            "noSystemPrompt": {
-              "name": "无System Prompt",
-              "explanation": "不设置System Prompt，看看默认回应"
-            },
-            "strictScientist": {
-              "name": "严格科学家",
-              "explanation": "System: \"你是一个严格的物理学家。给出精确的科学答案。\""
-            },
-            "friendlyTeacher": {
-              "name": "友好老师",
-              "explanation": "System: \"你是一个友好的老师，向孩子们解释。\""
-            }
-          }
-        },
-        "chapter2Spanish": {
-          "title": "第二章练习：西班牙语回应（清晰指令）",
-          "description": "学习如何给出明确指令控制输出语言。这个练习显示API能够精确按照你的要求执行。",
-          "expectedOutput": "用西班牙语回应，包含 \"Hola\" 等西班牙语问候词。",
-          "hints": [
-            "直接在System Prompt中说明语言要求",
-            "可以说 \"Please respond in Spanish\" 或 \"Responde en español\"",
-            "观察 AI 如何完全切换语言"
-          ],
-          "variations": {
-            "chineseResponse": {
-              "name": "中文回应",
-              "explanation": "System: \"请用中文回应\""
-            },
-            "frenchResponse": {
-              "name": "法语回应",
-              "explanation": "System: \"Répondez en français, s'il vous plaît\""
-            },
-            "bilingualResponse": {
-              "name": "双语回应",
-              "explanation": "System: \"用英文和西班牙语回应\""
-            }
-          }
-        },
-        "chapter2Basketball": {
-          "title": "第二章练习：只要一个名字（精确格式）",
-          "description": "学习如何给出极具体的格式要求。这个练习教你如何获得精确控制的输出。",
-          "expectedOutput": "只有一个球员的名字，没有其他任何文字或解释。",
-          "hints": [
-            "要非常具体地说明格式要求",
-            "明确说明不要解释或其他内容",
-            "强制AI做出选择"
-          ],
-          "variations": {
-            "withExplanation": {
-              "name": "带解释",
-              "explanation": "允许Claude解释选择"
-            },
-            "top3List": {
-              "name": "前3名列表",
-              "explanation": "要求前3名球员而不是一个"
-            },
-            "specificFormat": {
-              "name": "特定格式",
-              "explanation": "\"回答格式：姓名：[球员姓名]\""
-            }
-          }
-        },
-        "chapter2LongStory": {
-          "title": "第二章练习：写长故事（明确要求）",
-          "description": "学习如何通过明确的长度要求控制输出。这个练习展示了给出具体指标的重要性。",
-          "expectedOutput": "一个至少800字的关于机器人学画画的故事，情节丰富，描述详细。",
-          "hints": [
-            "明确要求故事长度：至少800字",
-            "给出具体的故事题材和主题",
-            "要求详细描述和情节发展",
-            "可以要求包含对话和场景描写"
-          ],
-          "variations": {
-            "noLength": {
-              "name": "无长度要求",
-              "explanation": "不指定长度，看看默认的故事长度"
-            },
-            "exactWordCount": {
-              "name": "明确字数要求",
-              "explanation": "指定确切字数并要求特定元素"
-            },
-            "longerStory": {
-              "name": "更长的故事",
-              "explanation": "要求更长篇幅和更复杂结构"
-            }
-          }
-        },
-        "chapter3MathLogic": {
-          "title": "第三章练习：数学错误检查（角色分配）",
-          "description": "体验角色分配对逻辑推理的影响。通过给Claude分配专家角色，提高其在特定领域的表现。",
-          "expectedOutput": "发现数学错误：从2x-3=9到2x=6的步骤是错误的，正确应该是2x=12。",
-          "hints": [
-            "给Claude分配数学老师或逻辑推理专家角色",
-            "要求仔细检查每一步计算",
-            "强调找出错误所在"
-          ],
-          "variations": {
-            "noRole": {
-              "name": "无角色设定",
-              "explanation": "不设定特定角色，看看基础表现"
-            },
-            "mathTeacher": {
-              "name": "数学老师角色",
-              "explanation": "设定为数学老师，强调教学和错误检查"
-            },
-            "logicExpert": {
-              "name": "逻辑推理专家",
-              "explanation": "设定为逻辑推理专家，专注于逻辑分析"
-            },
-            "studentRole": {
-              "name": "学生角色",
-              "explanation": "设定为学习数学的学生，展示思考过程"
-            }
-          }
-        }
-      }
-    },
     "prerequisites": "前置要求",
     "exercise": "练习",
     "instructions": "说明",
@@ -267,257 +114,103 @@
     "canImprove": "输出可改进",
     "aiThinking": "AI 正在思考...",
     "clickRunPrompt": "点击\"运行提示\"查看AI响应",
-    "fundamentals": {
-      "title": "基础课程",
-      "theory": "掌握Claude最佳提示工程的全面分步指南。学习API结构、清晰沟通、角色分配三大核心技能。",
-      "chapter1": {
-        "title": "第一章：基本提示结构",
-        "theory": "学习Messages API的必需参数：model、max_tokens、messages数组。掌握user/assistant对话格式和系统提示的正确使用。",
-        "messageRules": {
-          "title": "消息交替原则",
-          "content": "用户(User)和助手(Assistant)消息必须交替出现，且必须以用户(User)轮次开始。"
-        },
-        "systemPrompts": {
-          "title": "系统提示",
-          "content": "系统提示可用于为AI模型提供上下文、指令和指导原则。系统提示在结构上独立于用户和助手消息列表之外，需要在单独的\"系统提示\"参数中指定。"
-        },
-        "messageFormatting": {
-          "title": "消息格式化",
-          "content": "使用消息API时，务必在每条消息之间插入换行符（一条消息即为单个用户或助手轮次）。如果不这样做，AI不会返回错误，但会将未用换行符分隔的所有内容视为单条消息的一部分。"
-        },
-        "multiTurnConversations": {
-          "title": "多轮对话",
-          "content": "您可以在提示中包含多个\"用户:\"/\"助手:\"对话轮次（如模拟多轮对话）。您也可以在结尾的\"助手:\"消息中放入内容，让AI从您留下的位置继续回答。"
-        },
-        "whySystemPrompts": {
-          "title": "系统提示的价值",
-          "content": "良好编写的系统提示可以在多个方面改善AI的表现，例如提高AI遵循规则和指令的能力。"
-        },
-        "examples": [
-          "✅ 正确格式: {role: 'user', content: 'Hi Claude, how are you?'}",
-          "❌ 错误格式: {Hi Claude, how are you?} - 缺少role和content字段",
-          "✅ 系统提示: '你是一个逻辑推理专家，专门解决复杂逻辑问题'"
-        ],
-        "exercises": {
-          "countToThree": {
-            "instructions": "使用正确的user/assistant格式，让Claude数到三",
-            "template": "[Replace this text]",
-            "hints": [
-              "直接说出你的需求",
-              "使用简单清晰的指令",
-              "避免不必要的复杂性"
-            ]
-          },
-          "systemPromptChild": {
-            "instructions": "修改系统提示让Claude像3岁小孩一样回应",
-            "template": "系统提示 = '[Replace this text]'",
-            "hints": [
-              "想想3岁孩子如何说话",
-              "使用简单词汇和表达",
-              "加入孩子气的语言特征"
-            ]
-          }
-        }
-      },
-      "chapter2": {
-        "title": "第二章：清晰直接",
-        "theory": "AI需要明确具体的指令才能产生准确回应。就像指导新员工一样，越详细直接的说明，AI的表现越好。",
-        "directCommunication": {
-          "title": "明确性原则",
-          "content": "模糊指令导致差结果，具体要求获得好输出。直接说明你的需求和期望。"
-        },
-        "specificityMatters": {
-          "title": "格式约束",
-          "content": "指定输出格式、长度、风格等约束条件，让AI产出符合预期的结果。"
-        },
-        "goldenRule": {
-          "title": "同事测试法",
-          "content": "把提示词给同事看，如果他们困惑，AI也会困惑。"
-        },
-        "forcedChoices": {
-          "title": "强制选择",
-          "content": "用'如果必须选择一个'让AI避免模糊回避，给出明确答案。"
-        },
-        "examples": [
-          "❌ 模糊: '写一首关于机器人的俳句'",
-          "✅ 明确: '写一首关于机器人的俳句，跳过前言直接进入诗歌'",
-          "❌ 模糊: '谁是史上最佳篮球运动员？'",
-          "✅ 强制选择: '谁是史上最佳篮球运动员？虽然有不同观点，但如果你必须选择一个，会是谁？'"
-        ],
-        "exercises": {
-          "spanishResponse": {
-            "instructions": "修改系统提示让AI用西班牙语回答",
-            "template": "系统提示 = '[Replace this text]'",
-            "hints": [
-              "直接告诉AI使用哪种语言",
-              "可以在系统提示中指定语言要求"
-            ]
-          },
-          "onePlayerOnly": {
-            "instructions": "让AI只回答一个球员的名字，没有其他文字或标点",
-            "template": "[Replace this text]",
-            "hints": [
-              "要非常具体地说明格式要求",
-              "明确说明不要解释或其他内容",
-              "强制AI做出选择"
-            ]
-          },
-          "longStory": {
-            "instructions": "写一个800字以上的故事",
-            "template": "[Replace this text]",
-            "hints": [
-              "明确要求故事长度",
-              "可以给出具体的故事题材",
-              "要求详细描述和情节发展"
-            ]
-          }
-        }
-      },
-      "chapter3": {
-        "title": "第三章：角色分配",
-        "theory": "给Claude分配具体角色能显著提升表现。就像让人“像某某一样思考”能帮助解决问题一样，角色提示可以改变回应的风格、语调和专业程度。",
-        "roleContext": {
-          "title": "角色上下文",
-          "content": "Claude只知道你告诉它的信息，因此需要提供完整的角色背景和上下文。"
-        },
-        "roleEffects": {
-          "title": "角色效果",
-          "content": "角色设定可以改变回应风格、语调和专业程度，提高在特定领域的表现。"
-        },
-        "rolePromptLocation": {
-          "title": "设置位置",
-          "content": "角色可以在系统提示或用户消息中设定，两种方式都有效。"
-        },
-        "detailMatters": {
-          "title": "细节重要性",
-          "content": "角色描述越详细，效果越好。包含具体的专业背景和行为期望。"
-        },
-        "examples": [
-          "❌ 无角色: '滑板运动怎么样？'",
-          "✅ 特定角色: system='你是一个滑板教练' → 专业回应",
-          "❌ 逻辑问题: 'Jack看Anne，Anne看George，Jack已婚George未婚，已婚者在看未婚者吗？'",
-          "✅ 专家角色: system='你是逻辑推理专家' → 精准分析"
-        ],
-        "exercises": {
-          "mathCorrection": {
-            "instructions": "让Claude发现这个数学错误：2x-3=9, 2x=6, x=3",
-            "template": "这个方程解得对吗？\n\n2x - 3 = 9\n2x = 6\nx = 3",
-            "hints": [
-              "给Claude分配数学老师或逻辑推理专家角色",
-              "要求仔细检查每一步",
-              "强调找出错误"
-            ]
-          }
-        }
-      }
-    },
-    "playground": {
-      "chapter1": {
-        "title": "第一章 Playground：基础结构与系统提示",
-        "creativeCounting": {
-          "name": "创意计数",
-          "description": "尝试用不同有趣的方式进行计数！",
-          "variations": {
-            "basic": "基础创意",
-            "basicExplanation": "简单的创意计数方法",
-            "storytelling": "故事格式",
-            "storytellingExplanation": "通过故事情节自然融入数字",
-            "poetic": "诗歌风格",
-            "poeticExplanation": "使用韵律和诗歌语言进行计数",
-            "withContext": "教育情境",
-            "withContextExplanation": "结合系统提示添加教育背景"
-          }
-        },
-        "systemPromptExperiment": {
-          "name": "系统提示结构",
-          "description": "学习系统提示如何引导AI行为和回应风格",
-          "variations": {
-            "basic": "无系统提示",
-            "basicExplanation": "标准AI回应，无系统引导",
-            "structured": "结构化要求",
-            "structuredExplanation": "系统提示要求清晰结构",
-            "detailed": "详细指令",
-            "detailedExplanation": "系统提示要求详细科学解释",
-            "simple": "简化要求",
-            "simpleExplanation": "系统提示要求简单易懂的语言"
-          }
-        },
-        "hint1": "尝试不同的创意方法来处理基础任务",
-        "hint2": "实验各种系统提示结构",
-        "hint3": "注意系统提示如何改变AI回应风格"
-      },
-      "chapter2": {
-        "title": "第二章 Playground：清晰沟通",
-        "languageExperiment": {
-          "name": "语言选择",
-          "description": "探索AI如何选择语言并解释决策",
-          "variations": {
-            "basic": "开放选择",
-            "basicExplanation": "AI自由选择语言并解释原因",
-            "specific": "指定语言",
-            "specificExplanation": "要求特定语言并了解文化背景",
-            "comparative": "语言对比",
-            "comparativeExplanation": "比较多种语言的问候方式",
-            "contextual": "商务情境",
-            "contextualExplanation": "专业商务场合的问候方式"
-          }
-        },
-        "formatExperiment": {
-          "name": "格式风格",
-          "description": "尝试不同的列表和结构格式方法",
-          "variations": {
-            "basic": "灵活格式",
-            "basicExplanation": "AI自由选择格式风格",
-            "numbered": "编号列表",
-            "numberedExplanation": "特定编号列表格式并附解释",
-            "detailed": "详细描述",
-            "detailedExplanation": "丰富描述并说明原因",
-            "creative": "创意格式",
-            "creativeExplanation": "诗歌或故事等创意表现形式"
-          }
-        },
-        "hint1": "对需求要具体明确",
-        "hint2": "尝试不同的输出格式",
-        "hint3": "实验显式与隐式指令的区别"
-      },
-      "chapter3": {
-        "title": "第三章 Playground：角色提示",
-        "roleComparison": {
-          "name": "角色对比",
-          "description": "比较不同专业视角的回答",
-          "variations": {
-            "basic": "无角色背景",
-            "basicExplanation": "通用AI回应，无特定专业角色",
-            "conservative": "保守顾问",
-            "conservativeExplanation": "风险规避型金融顾问视角",
-            "aggressive": "科技顾问",
-            "aggressiveExplanation": "专注成长的数字资产专家视角",
-            "balanced": "认证规划师",
-            "balancedExplanation": "认证金融规划师的客观分析"
-          }
-        },
-        "expertiseExperiment": {
-          "name": "专业程度实验",
-          "description": "看看不同专业水平如何影响解释",
-          "variations": {
-            "basic": "通用回应",
-            "basicExplanation": "标准AI解释，无专业角色设定",
-            "professor": "学术教授",
-            "professorExplanation": "数据科学教授的易懂讲解",
-            "beginner": "初学者导师",
-            "beginnerExplanation": "专门教授零基础学员的导师",
-            "practical": "行业专家",
-            "practicalExplanation": "实战数据科学家展示实际应用"
-          }
-        },
-        "hint1": "尝试对比不同的专业角色",
-        "hint2": "实验不同的专业水平",
-        "hint3": "注意角色背景如何塑造回答"
-      }
-    },
     "coreConceptsTitle": "核心概念"
   },
   "courses": {
+    "fundamentals": {
+      "title": "基础提示工程",
+      "summary": "掌握Claude最佳提示工程的全面分步指南。学习API结构、清晰沟通、角色分配三大核心技能。",
+      "sections": {
+        "basicStructure": {
+          "title": "第一章：基本提示结构",
+          "theory": "学习Messages API的必需参数：model、max_tokens、messages数组。掌握user/assistant对话格式和系统提示的正确使用。\n\n**消息交替原则**\n用户(User)和助手(Assistant)消息必须交替出现，且必须以用户(User)轮次开始。\n\n**系统提示**\n系统提示可用于为AI模型提供上下文、指令和指导原则。系统提示在结构上独立于用户和助手消息列表之外，需要在单独的\"系统提示\"参数中指定。\n\n**消息格式化**\n使用消息API时，务必在每条消息之间插入换行符（一条消息即为单个用户或助手轮次）。如果不这样做，AI不会返回错误，但会将未用换行符分隔的所有内容视为单条消息的一部分。\n\n**多轮对话**\n您可以在提示中包含多个\"用户:\"/\"助手:\"对话轮次（如模拟多轮对话）。您也可以在结尾的\"助手:\"消息中放入内容，让AI从您留下的位置继续回答。\n\n**系统提示的价值**\n良好编写的系统提示可以在多个方面改善AI的表现，例如提高AI遵循规则和指令的能力。",
+          "examples": [
+            "正确格式: role='user', content='Hi Claude, how are you?'",
+            "错误格式: 缺少role和content字段",
+            "系统提示: 你是一个逻辑推理专家，专门解决复杂逻辑问题"
+          ],
+          "exercises": {
+            "countToThree": {
+              "instructions": "使用正确的user/assistant格式，让Claude数到三",
+              "template": "[Replace this text]",
+              "hints": [
+                "直接说出你的需求",
+                "使用简单清晰的指令",
+                "避免不必要的复杂性"
+              ]
+            },
+            "systemPromptChild": {
+              "instructions": "修改系统提示让Claude像3岁小孩一样回应",
+              "template": "系统提示 = '[Replace this text]'",
+              "hints": [
+                "想想3岁孩子如何说话",
+                "使用简单词汇和表达",
+                "加入孩子气的语言特征"
+              ]
+            }
+          }
+        },
+        "clearCommunication": {
+          "title": "第二章：清晰直接",
+          "theory": "AI需要明确具体的指令才能产生准确回应。就像指导新员工一样，越详细直接的说明，AI的表现越好。\n\n**明确性原则**\n模糊指令导致差结果，具体要求获得好输出。直接说明你的需求和期望。\n\n**格式约束**\n指定输出格式、长度、风格等约束条件，让AI产出符合预期的结果。\n\n**同事测试法**\n把提示词给同事看，如果他们困惑，AI也会困惑。\n\n**强制选择**\n用'如果必须选择一个'让AI避免模糊回避，给出明确答案。",
+          "examples": [
+            "模糊: 写一首关于机器人的俳句",
+            "明确: 写一首关于机器人的俳句，跳过前言直接进入诗歌",
+            "模糊: 谁是史上最佳篮球运动员？",
+            "强制选择: 谁是史上最佳篮球运动员？虽然有不同观点，但如果你必须选择一个，会是谁？"
+          ],
+          "exercises": {
+            "spanishResponse": {
+              "instructions": "修改系统提示让AI用西班牙语回答",
+              "template": "系统提示 = '[Replace this text]'",
+              "hints": [
+                "直接告诉AI使用哪种语言",
+                "可以在系统提示中指定语言要求"
+              ]
+            },
+            "onePlayerOnly": {
+              "instructions": "让AI只回答一个球员的名字，没有其他文字或标点",
+              "template": "[Replace this text]",
+              "hints": [
+                "要非常具体地说明格式要求",
+                "明确说明不要解释或其他内容",
+                "强制AI做出选择"
+              ]
+            },
+            "longStory": {
+              "instructions": "写一个800字以上的故事",
+              "template": "[Replace this text]",
+              "hints": [
+                "明确要求故事长度",
+                "可以给出具体的故事题材",
+                "要求详细描述和情节发展"
+              ]
+            }
+          }
+        },
+        "rolePrompting": {
+          "title": "第三章：角色分配",
+          "theory": "给Claude分配具体角色能显著提升表现。就像让人“像某某一样思考”能帮助解决问题一样，角色提示可以改变回应的风格、语调和专业程度。\n\n**角色上下文**\nClaude只知道你告诉它的信息，因此需要提供完整的角色背景和上下文。\n\n**角色效果**\n角色设定可以改变回应风格、语调和专业程度，提高在特定领域的表现。\n\n**设置位置**\n角色可以在系统提示或用户消息中设定，两种方式都有效。\n\n**细节重要性**\n角色描述越详细，效果越好。包含具体的专业背景和行为期望。",
+          "examples": [
+            "无角色: 滑板运动怎么样？",
+            "特定角色: system='你是一个滑板教练' 专业回应",
+            "逻辑问题: Jack看Anne，Anne看George，Jack已婚George未婚，已婚者在看未婚者吗？",
+            "专家角色: system='你是逻辑推理专家' 精准分析"
+          ],
+          "exercises": {
+            "mathCorrection": {
+              "instructions": "让Claude发现这个数学错误：2x-3=9, 2x=6, x=3",
+              "template": "这个方程解得对吗？\n\n2x - 3 = 9\n2x = 6\nx = 3",
+              "hints": [
+                "给Claude分配数学老师或逻辑推理专家角色",
+                "要求仔细检查每一步",
+                "强调找出错误"
+              ]
+            }
+          }
+        }
+      }
+    },
     "intermediate": {
       "title": "中级提示工程",
       "summary": "掌握数据分离、输出格式化和系统性思考的高级技术",
@@ -562,6 +255,145 @@
     }
   },
   "practiceExercises": {
+    "fundamentals": {
+      "chapter1BasicStructure": {
+        "title": "第一章练习：数到三（API结构）",
+        "description": "学习正确的Messages API格式。这是最基础的练习，确保你理解如何构建有效的提示。",
+        "expectedOutput": "包含1、2、3的回应，格式清晰。",
+        "hints": {
+          "0": "直接说出你的需求：'数到三'",
+          "1": "使用简单清晰的指令",
+          "2": "避免不必要的复杂性"
+        },
+        "variations": {
+          "directInstruction": {
+            "name": "直接指令",
+            "explanation": "最简单直接的方式"
+          },
+          "clearFormat": {
+            "name": "明确格式",
+            "explanation": "指定了输出格式"
+          }
+        }
+      },
+      "chapter1SystemPrompt": {
+        "title": "第一章练习：3岁小孩角色（系统提示）",
+        "description": "体验 system prompt 的威力。通过角色设定，让Claude的回应风格彻底改变。",
+        "expectedOutput": "像3岁孩子一样的兴奋回应，可能包含笑声、简单词汇和天真的表达。",
+        "hints": {
+          "0": "想想3岁孩子如何说话：兴奋、好奇、词汇简单",
+          "1": "可以加入一些孩子气的表达如 'soo big' 或 'giggles'",
+          "2": "System prompt 定义了AI的整个'人格'"
+        },
+        "variations": {
+          "noSystemPrompt": {
+            "name": "无System Prompt",
+            "explanation": "不设置System Prompt，看看默认回应"
+          },
+          "strictScientist": {
+            "name": "严格科学家",
+            "explanation": "System: '你是一个严格的物理学家。给出精确的科学答案。'"
+          },
+          "friendlyTeacher": {
+            "name": "友好老师",
+            "explanation": "System: '你是一个友好的老师，向孩子们解释。'"
+          }
+        }
+      },
+      "chapter2Spanish": {
+        "title": "第二章练习：西班牙语回应（清晰指令）",
+        "description": "学习如何给出明确指令控制输出语言。这个练习显示API能够精确按照你的要求执行。",
+        "expectedOutput": "用西班牙语回应，包含 'Hola' 等西班牙语问候词。",
+        "hints": {
+          "0": "直接在提示中说明语言要求",
+          "1": "可以说 'Please respond in Spanish' 或 'Responde en español'",
+          "2": "观察 AI 如何完全切换语言"
+        },
+        "variations": {
+          "frenchResponse": {
+            "name": "法语回应",
+            "explanation": "要求用法语回应"
+          },
+          "bilingualResponse": {
+            "name": "双语回应",
+            "explanation": "要求用英文和西班牙语回应"
+          }
+        }
+      },
+      "chapter2Basketball": {
+        "title": "第二章练习：只要一个名字（精确格式）",
+        "description": "学习如何给出极具体的格式要求。这个练习教你如何获得精确控制的输出。",
+        "expectedOutput": "只有一个球员的名字，没有其他任何文字或解释。",
+        "hints": {
+          "0": "要非常具体地说明格式要求",
+          "1": "明确说明不要解释或其他内容",
+          "2": "强制AI做出选择"
+        },
+        "variations": {
+          "withExplanation": {
+            "name": "带解释",
+            "explanation": "允许Claude解释选择"
+          },
+          "top3List": {
+            "name": "前3名列表",
+            "explanation": "要求前3名球员而不是一个"
+          },
+          "specificFormat": {
+            "name": "特定格式",
+            "explanation": "要求名字和一个理由"
+          }
+        }
+      },
+      "chapter2LongStory": {
+        "title": "第二章练习：写长故事（明确要求）",
+        "description": "学习如何通过明确的长度要求控制输出。这个练习展示了给出具体指标的重要性。",
+        "expectedOutput": "一个至少800字的关于机器人学画画的故事，情节丰富，描述详细。",
+        "hints": {
+          "0": "明确要求故事长度：至少800字",
+          "1": "给出具体的故事题材和主题",
+          "2": "要求详细描述和情节发展",
+          "3": "可以要求包含对话和场景描写"
+        },
+        "variations": {
+          "noLength": {
+            "name": "无长度要求",
+            "explanation": "不指定长度，看看默认的故事长度"
+          },
+          "exactWordCount": {
+            "name": "明确字数要求",
+            "explanation": "指定确切字数并要求特定元素"
+          },
+          "longerStory": {
+            "name": "更长的故事",
+            "explanation": "要求更长篇幅和更复杂结构"
+          }
+        }
+      },
+      "chapter3MathLogic": {
+        "title": "第三章练习：数学错误检查（角色分配）",
+        "description": "体验角色分配对逻辑推理的影响。通过给Claude分配专家角色，提高其在特定领域的表现。",
+        "expectedOutput": "发现数学错误：从2x-3=9到2x=6的步骤是错误的，正确应该是2x=12。",
+        "hints": {
+          "0": "给Claude分配数学老师或逻辑推理专家角色",
+          "1": "要求仔细检查每一步计算",
+          "2": "强调找出错误所在"
+        },
+        "variations": {
+          "noRole": {
+            "name": "无角色设定",
+            "explanation": "不设定特定角色，看看基础表现"
+          },
+          "logicExpert": {
+            "name": "逻辑专家",
+            "explanation": "设定为逻辑推理专家，专注于逻辑分析"
+          },
+          "studentRole": {
+            "name": "学生角色",
+            "explanation": "设定为学习数学的学生，展示思考过程"
+          }
+        }
+      }
+    },
     "intermediate": {
       "chapter4Haiku": {
         "title": "俳句模板练习",
@@ -706,6 +538,110 @@
     }
   },
   "playground": {
+    "fundamentals": {
+      "basicStructure": {
+        "title": "第一章 Playground：基础结构与系统提示",
+        "creativeCounting": {
+          "name": "创意计数",
+          "description": "尝试用不同有趣的方式进行计数！",
+          "variations": {
+            "basic": "基础创意",
+            "basicExplanation": "简单的创意计数方法",
+            "storytelling": "故事格式",
+            "storytellingExplanation": "通过故事情节自然融入数字",
+            "poetic": "诗歌风格",
+            "poeticExplanation": "使用韵律和诗歌语言进行计数",
+            "withContext": "教育情境",
+            "withContextExplanation": "结合系统提示添加教育背景"
+          }
+        },
+        "systemPromptExperiment": {
+          "name": "系统提示结构",
+          "description": "学习系统提示如何引导AI行为和回应风格",
+          "variations": {
+            "basic": "无系统提示",
+            "basicExplanation": "标准AI回应，无系统引导",
+            "structured": "结构化要求",
+            "structuredExplanation": "系统提示要求清晰结构",
+            "detailed": "详细指令",
+            "detailedExplanation": "系统提示要求详细科学解释",
+            "simple": "简化要求",
+            "simpleExplanation": "系统提示要求简单易懂的语言"
+          }
+        },
+        "hint1": "尝试不同的创意方法来处理基础任务",
+        "hint2": "实验各种系统提示结构",
+        "hint3": "注意系统提示如何改变AI回应风格"
+      },
+      "clearCommunication": {
+        "title": "第二章 Playground：清晰沟通",
+        "languageExperiment": {
+          "name": "语言选择",
+          "description": "探索AI如何选择语言并解释决策",
+          "variations": {
+            "basic": "开放选择",
+            "basicExplanation": "AI自由选择语言并解释原因",
+            "specific": "指定语言",
+            "specificExplanation": "要求特定语言并了解文化背景",
+            "comparative": "语言对比",
+            "comparativeExplanation": "比较多种语言的问候方式",
+            "contextual": "商务情境",
+            "contextualExplanation": "专业商务场合的问候方式"
+          }
+        },
+        "formatExperiment": {
+          "name": "格式风格",
+          "description": "尝试不同的列表和结构格式方法",
+          "variations": {
+            "basic": "灵活格式",
+            "basicExplanation": "AI自由选择格式风格",
+            "numbered": "编号列表",
+            "numberedExplanation": "特定编号列表格式并附解释",
+            "detailed": "详细描述",
+            "detailedExplanation": "丰富描述并说明原因",
+            "creative": "创意格式",
+            "creativeExplanation": "诗歌或故事等创意表现形式"
+          }
+        },
+        "hint1": "对需求要具体明确",
+        "hint2": "尝试不同的输出格式",
+        "hint3": "实验显式与隐式指令的区别"
+      },
+      "rolePrompting": {
+        "title": "第三章 Playground：角色提示",
+        "roleComparison": {
+          "name": "角色对比",
+          "description": "比较不同专业视角的回答",
+          "variations": {
+            "basic": "无角色背景",
+            "basicExplanation": "通用AI回应，无特定专业角色",
+            "conservative": "保守顾问",
+            "conservativeExplanation": "风险规避型金融顾问视角",
+            "aggressive": "科技顾问",
+            "aggressiveExplanation": "专注成长的数字资产专家视角",
+            "balanced": "认证规划师",
+            "balancedExplanation": "认证金融规划师的客观分析"
+          }
+        },
+        "expertiseExperiment": {
+          "name": "专业程度实验",
+          "description": "看看不同专业水平如何影响解释",
+          "variations": {
+            "basic": "通用回应",
+            "basicExplanation": "标准AI解释，无专业角色设定",
+            "professor": "学术教授",
+            "professorExplanation": "数据科学教授的易懂讲解",
+            "beginner": "初学者导师",
+            "beginnerExplanation": "专门教授零基础学员的导师",
+            "practical": "行业专家",
+            "practicalExplanation": "实战数据科学家展示实际应用"
+          }
+        },
+        "hint1": "尝试对比不同的专业角色",
+        "hint2": "实验不同的专业水平",
+        "hint3": "注意角色背景如何塑造回答"
+      }
+    },
     "intermediate": {
       "dataInstructionSeparation": {
         "title": "数据与指令分离",

@@ -373,6 +373,40 @@ export default function LearningCard({
               )}
             </div>
 
+            {/* Key Techniques Section */}
+            {currentLearningItem.keyTechniques && Array.isArray(currentLearningItem.keyTechniques) && (
+              <div className="mb-6">
+                <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100 mb-4">
+                  Key Techniques
+                </h3>
+                <div className="grid gap-2">
+                  {currentLearningItem.keyTechniques.map((technique, index) => (
+                    <div key={index} className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <p className="text-gray-700 dark:text-gray-300">{technique}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Common Pitfalls Section */}
+            {currentLearningItem.commonPitfalls && Array.isArray(currentLearningItem.commonPitfalls) && (
+              <div className="mb-6">
+                <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100 mb-4">
+                  Common Pitfalls
+                </h3>
+                <div className="grid gap-2">
+                  {currentLearningItem.commonPitfalls.map((pitfall, index) => (
+                    <div key={index} className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 bg-amber-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <p className="text-gray-700 dark:text-gray-300">{pitfall}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {/* Examples Section */}
             <div className="mb-6">
               <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100 mb-4">
