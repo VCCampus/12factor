@@ -43,18 +43,47 @@ export default function InteractivePromptEditor({ example, mode = 'practice' }: 
   const [error, setError] = useState<string | null>(null);
 
 
-  // Analyze prompt quality
-  const analyzePrompt = (system: string, user: string): 'good' | 'needs-improvement' => {
-    const totalLength = system.length + user.length;
-    const hasSpecificInstructions = user.includes('specific') || user.includes('详细') || user.includes('列出');
-    const hasRole = system.includes('you are') || system.includes('作为') || system.includes('角色');
-    const hasContext = system.length > 20 || user.includes('context') || user.includes('背景');
-    
-    if (totalLength > 50 && (hasSpecificInstructions || hasRole || hasContext)) {
-      return 'good';
+  // Use LLM to evaluate prompt quality based on the actual output
+  const evaluateWithLLM = async (output: string, systemPrompt: string, userPrompt: string, context?: string): Promise<'good' | 'needs-improvement'> => {
+    try {
+      // Truncate long content to avoid API limits
+      const truncatedOutput = output.length > 800 ? output.substring(0, 800) + '...' : output;
+      const truncatedUserPrompt = userPrompt.length > 200 ? userPrompt.substring(0, 200) + '...' : userPrompt;
+      
+      const evaluationPrompt = `评估AI输出质量。
+任务: ${context || '通用任务'}
+用户要求: ${truncatedUserPrompt}
+AI输出: ${truncatedOutput}
+
+输出是否符合要求? 回答 "good" 或 "needs-improvement"`;
+      
+      const response = await fetch('/api/llm', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          systemPrompt: '',
+          userPrompt: evaluationPrompt,
+          mode: 'evaluation'
+        }),
+      });
+
+      const data = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to evaluate with LLM');
+      }
+
+      const evaluation = data.response.trim().toLowerCase();
+      return evaluation.includes('good') ? 'good' : 'needs-improvement';
+      
+    } catch (error) {
+      console.error('LLM evaluation failed:', error);
+      throw error; // Re-throw error instead of falling back
     }
-    return 'needs-improvement';
   };
+
 
   const runPrompt = async () => {
     setIsRunning(true);
@@ -81,7 +110,19 @@ export default function InteractivePromptEditor({ example, mode = 'practice' }: 
       }
       
       setCurrentOutput(data.response);
-      setAnalysisResult(analyzePrompt(systemPrompt, userPrompt));
+      
+      // Get context from the current example for evaluation
+      const currentContext = `${example.title}: ${example.description}`;
+      
+      // Use LLM evaluation
+      try {
+        const evaluation = await evaluateWithLLM(data.response, systemPrompt, userPrompt, currentContext);
+        setAnalysisResult(evaluation);
+      } catch (evaluationError) {
+        console.error('Evaluation failed:', evaluationError);
+        setError(t('evaluationError') || 'Failed to evaluate prompt quality');
+        setAnalysisResult(null);
+      }
       
     } catch (error) {
       console.error('Error calling LLM API:', error);
@@ -160,7 +201,7 @@ export default function InteractivePromptEditor({ example, mode = 'practice' }: 
               {example.hints.map((hint, index) => (
                 <li key={index} className="flex items-start gap-2 text-sm text-yellow-700 dark:text-yellow-200">
                   <span className="text-yellow-600 dark:text-yellow-400 mt-0.5">•</span>
-                  {hint}
+                  {t(hint)}
                 </li>
               ))}
             </ul>
@@ -198,9 +239,9 @@ export default function InteractivePromptEditor({ example, mode = 'practice' }: 
               🎯 {t('editPrompt')}
             </h4>
             
-            {/* System Prompt - only show if the exercise needs it or if variation has one */}
-            {((example.systemPrompt !== undefined && example.systemPrompt !== '') || 
-              (selectedVariation !== null && example.variations[selectedVariation]?.systemPrompt !== undefined)) && (
+            {/* System Prompt - show if exercise has one or if any variation has one */}
+            {(example.systemPrompt !== undefined || 
+              example.variations.some(v => v.systemPrompt !== undefined)) && (
               <div>
                 <label className="block text-xs font-medium text-gray-700 dark:text-gray-300 mb-2">
                   {t('systemPrompt')}
@@ -209,7 +250,12 @@ export default function InteractivePromptEditor({ example, mode = 'practice' }: 
                   value={systemPrompt}
                   onChange={(e) => setSystemPrompt(e.target.value)}
                   placeholder={t('systemPromptPlaceholder')}
-                  className="w-full h-20 px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-[#98a971] focus:border-transparent resize-none"
+                  disabled={selectedVariation !== null && example.variations[selectedVariation]?.systemPrompt === ''}
+                  className={`w-full h-20 px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-[#98a971] focus:border-transparent resize-none ${
+                    selectedVariation !== null && example.variations[selectedVariation]?.systemPrompt === ''
+                      ? 'bg-gray-100 dark:bg-gray-700 cursor-not-allowed opacity-60'
+                      : 'bg-white dark:bg-gray-800'
+                  }`}
                 />
               </div>
             )}
@@ -303,15 +349,17 @@ export default function InteractivePromptEditor({ example, mode = 'practice' }: 
           </div>
         </div>
 
-        {/* Expected Output */}
-        <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg">
-          <h4 className="text-sm font-medium text-blue-800 dark:text-blue-200 mb-2">
-            🎯 {t('expectedOutput')}
-          </h4>
-          <p className="text-sm text-blue-700 dark:text-blue-300 leading-relaxed">
-            {example.expectedOutput}
-          </p>
-        </div>
+        {/* Expected Output - only show in practice mode */}
+        {mode === 'practice' && (
+          <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg">
+            <h4 className="text-sm font-medium text-blue-800 dark:text-blue-200 mb-2">
+              🎯 {t('expectedOutput')}
+            </h4>
+            <p className="text-sm text-blue-700 dark:text-blue-300 leading-relaxed">
+              {example.expectedOutput}
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );

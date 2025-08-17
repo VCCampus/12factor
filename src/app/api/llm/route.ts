@@ -127,18 +127,19 @@ export async function POST(request: NextRequest) {
       );
     }
     
-    // Validate mode is either 'playground' or 'practice'
-    if (!mode || !['playground', 'practice'].includes(mode)) {
+    // Validate mode is either 'playground', 'practice', or 'evaluation'
+    if (!mode || !['playground', 'practice', 'evaluation'].includes(mode)) {
       return NextResponse.json(
-        { error: 'Invalid request: mode must be either "playground" or "practice"' },
+        { error: 'Invalid request: mode must be either "playground", "practice", or "evaluation"' },
         { status: 400 }
       );
     }
     
     // Validate prompt lengths to prevent abuse
-    if (userPrompt.length > 2000) {
+    const maxUserPromptLength = mode === 'evaluation' ? 3000 : 2000;
+    if (userPrompt.length > maxUserPromptLength) {
       return NextResponse.json(
-        { error: 'User prompt too long (max 2000 characters)' },
+        { error: `User prompt too long (max ${maxUserPromptLength} characters)` },
         { status: 400 }
       );
     }
@@ -167,8 +168,10 @@ export async function POST(request: NextRequest) {
     
     messages.push({ role: 'user', content: userPrompt });
     
-    // Determine model to use
+    // Determine model and parameters based on mode
     const model = process.env.LLM_MODEL || 'gpt-3.5-turbo';
+    const maxTokens = mode === 'evaluation' ? 50 : 500; // Evaluation needs enough tokens for detailed response
+    const temperature = mode === 'evaluation' ? 0.2 : 0.7; // Lower temperature for more consistent evaluation
     
     let response = 'No response generated';
     
@@ -187,8 +190,8 @@ export async function POST(request: NextRequest) {
           body: JSON.stringify({
             model,
             messages,
-            max_tokens: 500,
-            temperature: 0.7,
+            max_tokens: maxTokens,
+            temperature: temperature,
             top_p: 1,
             frequency_penalty: 0,
             presence_penalty: 0,
@@ -233,8 +236,8 @@ export async function POST(request: NextRequest) {
     const completion = await llmClient.chat.completions.create({
       model, // Use configured model
       messages,
-      max_tokens: 500, // Limit response length
-      temperature: 0.7,
+      max_tokens: maxTokens,
+      temperature: temperature,
       top_p: 1,
       frequency_penalty: 0,
       presence_penalty: 0,
