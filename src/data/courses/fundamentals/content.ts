@@ -16,15 +16,15 @@ export const fundamentalsContent: CourseContent = {
         'courses.fundamentals.sections.basicStructure.examples.2'
       ],
       keyTechniques: [
-        'Messages API parameters: model, max_tokens, messages',
-        'User/Assistant conversation format',
-        'System prompt configuration',
-        'Message alternation rules'
+        'courses.fundamentals.sections.basicStructure.keyTechniques.0',
+        'courses.fundamentals.sections.basicStructure.keyTechniques.1',
+        'courses.fundamentals.sections.basicStructure.keyTechniques.2',
+        'courses.fundamentals.sections.basicStructure.keyTechniques.3'
       ],
       commonPitfalls: [
-        'Not alternating user/assistant messages',
-        'Starting with assistant message instead of user',
-        'Mixing system prompt with conversation messages'
+        'courses.fundamentals.sections.basicStructure.commonPitfalls.0',
+        'courses.fundamentals.sections.basicStructure.commonPitfalls.1',
+        'courses.fundamentals.sections.basicStructure.commonPitfalls.2'
       ]
     },
     {
@@ -38,15 +38,15 @@ export const fundamentalsContent: CourseContent = {
         'courses.fundamentals.sections.clearCommunication.examples.3'
       ],
       keyTechniques: [
-        'Direct and specific instructions',
-        'Format constraints and requirements',
-        'Forcing specific choices when needed',
-        'The colleague test for clarity'
+        'courses.fundamentals.sections.clearCommunication.keyTechniques.0',
+        'courses.fundamentals.sections.clearCommunication.keyTechniques.1',
+        'courses.fundamentals.sections.clearCommunication.keyTechniques.2',
+        'courses.fundamentals.sections.clearCommunication.keyTechniques.3'
       ],
       commonPitfalls: [
-        'Being too vague or ambiguous',
-        'Not specifying output format',
-        'Allowing AI to avoid making choices'
+        'courses.fundamentals.sections.clearCommunication.commonPitfalls.0',
+        'courses.fundamentals.sections.clearCommunication.commonPitfalls.1',
+        'courses.fundamentals.sections.clearCommunication.commonPitfalls.2'
       ]
     },
     {
@@ -60,15 +60,15 @@ export const fundamentalsContent: CourseContent = {
         'courses.fundamentals.sections.rolePrompting.examples.3'
       ],
       keyTechniques: [
-        'Assigning specific roles and personas',
-        'Providing detailed role context',
-        'Using roles to improve domain expertise',
-        'Setting roles in system prompts'
+        'courses.fundamentals.sections.rolePrompting.keyTechniques.0',
+        'courses.fundamentals.sections.rolePrompting.keyTechniques.1',
+        'courses.fundamentals.sections.rolePrompting.keyTechniques.2',
+        'courses.fundamentals.sections.rolePrompting.keyTechniques.3'
       ],
       commonPitfalls: [
-        'Using roles without sufficient context',
-        'Not being specific about role expertise',
-        'Forgetting to set appropriate tone with role'
+        'courses.fundamentals.sections.rolePrompting.commonPitfalls.0',
+        'courses.fundamentals.sections.rolePrompting.commonPitfalls.1',
+        'courses.fundamentals.sections.rolePrompting.commonPitfalls.2'
       ]
     }
   ]

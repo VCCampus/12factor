@@ -376,14 +376,15 @@ export default function LearningCard({
             {/* Key Techniques Section */}
             {currentLearningItem.keyTechniques && Array.isArray(currentLearningItem.keyTechniques) && (
               <div className="mb-6">
-                <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100 mb-4">
-                  Key Techniques
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2">
+                  <div className="w-1 h-5 bg-[#98a971] rounded-full"></div>
+                  {t('keyTechniquesTitle')}
                 </h3>
                 <div className="grid gap-2">
                   {currentLearningItem.keyTechniques.map((technique, index) => (
                     <div key={index} className="flex items-start gap-3">
                       <div className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-gray-700 dark:text-gray-300">{technique}</p>
+                      <p className="text-gray-700 dark:text-gray-300">{technique.startsWith('courses.') ? tRoot(technique) : technique}</p>
                     </div>
                   ))}
                 </div>
@@ -393,14 +394,15 @@ export default function LearningCard({
             {/* Common Pitfalls Section */}
             {currentLearningItem.commonPitfalls && Array.isArray(currentLearningItem.commonPitfalls) && (
               <div className="mb-6">
-                <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100 mb-4">
-                  Common Pitfalls
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2">
+                  <div className="w-1 h-5 bg-[#98a971] rounded-full"></div>
+                  {t('commonPitfallsTitle')}
                 </h3>
                 <div className="grid gap-2">
                   {currentLearningItem.commonPitfalls.map((pitfall, index) => (
                     <div key={index} className="flex items-start gap-3">
                       <div className="w-1.5 h-1.5 bg-amber-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-gray-700 dark:text-gray-300">{pitfall}</p>
+                      <p className="text-gray-700 dark:text-gray-300">{pitfall.startsWith('courses.') ? tRoot(pitfall) : pitfall}</p>
                     </div>
                   ))}
                 </div>

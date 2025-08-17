@@ -114,7 +114,9 @@
     "canImprove": "Output can improve",
     "aiThinking": "AI is thinking...",
     "clickRunPrompt": "Click \"Run Prompt\" to see AI response",
-    "coreConceptsTitle": "Core Concepts"
+    "coreConceptsTitle": "Core Concepts",
+    "keyTechniquesTitle": "Key Techniques",
+    "commonPitfallsTitle": "Common Pitfalls"
   },
   "courses": {
     "fundamentals": {
@@ -129,6 +131,17 @@
             "Wrong format: Missing role and content fields",
             "System prompt: You are a logical reasoning expert who specializes in solving complex logical problems"
           ],
+          "keyTechniques": {
+            "0": "Messages API parameters: model, max_tokens, messages",
+            "1": "User/Assistant conversation format",
+            "2": "System prompt configuration",
+            "3": "Message alternation rules"
+          },
+          "commonPitfalls": {
+            "0": "Not alternating user/assistant messages",
+            "1": "Starting with assistant message instead of user",
+            "2": "Mixing system prompt with conversation messages"
+          },
           "exercises": {
             "countToThree": {
               "instructions": "Use the correct user/assistant format to have Claude count to three",
@@ -159,6 +172,17 @@
             "Vague: Who is the best basketball player of all time?",
             "Force choice: Who is the best basketball player of all time? While there are different opinions, if you had to choose one, who would it be?"
           ],
+          "keyTechniques": {
+            "0": "Direct and specific instructions",
+            "1": "Format constraints and requirements",
+            "2": "Forcing specific choices when needed",
+            "3": "The colleague test for clarity"
+          },
+          "commonPitfalls": {
+            "0": "Being too vague or ambiguous",
+            "1": "Not specifying output format",
+            "2": "Allowing AI to avoid making choices"
+          },
           "exercises": {
             "spanishResponse": {
               "instructions": "Modify the SYSTEM_PROMPT to make Claude respond in Spanish",
@@ -197,6 +221,17 @@
             "Logic error: Jack looks at Anne, Anne looks at George, Jack is married George is unmarried, is a married person looking at an unmarried person?",
             "Logic expert: system='You are a logical reasoning expert' correctly analyzes this problem"
           ],
+          "keyTechniques": {
+            "0": "Assigning specific roles and personas",
+            "1": "Providing detailed role context",
+            "2": "Using roles to improve domain expertise",
+            "3": "Setting roles in system prompts"
+          },
+          "commonPitfalls": {
+            "0": "Using roles without sufficient context",
+            "1": "Not being specific about role expertise",
+            "2": "Forgetting to set appropriate tone with role"
+          },
           "exercises": {
             "mathCorrection": {
               "instructions": "Have Claude find the math error: 2x-3=9, 2x=6, x=3",
@@ -222,7 +257,18 @@
             "Create dynamic prompts with variable substitution using f-strings",
             "Use XML tags to clearly separate data from instructions",
             "Handle messy or unclear input by providing proper boundaries"
-          ]
+          ],
+          "keyTechniques": {
+            "0": "F-string templating with variables",
+            "1": "XML tag wrapping for data boundaries",
+            "2": "Clear instruction-data separation",
+            "3": "Input validation patterns"
+          },
+          "commonPitfalls": {
+            "0": "Not clearly separating instructions from data",
+            "1": "Forgetting to wrap variable content in XML tags",
+            "2": "Using unclear variable names in templates"
+          }
         },
         "formatting": {
           "title": "Formatting Output & Speaking for Claude",
@@ -231,7 +277,18 @@
             "Format output in XML tags for easy parsing",
             "Use prefilling to guide response generation",
             "Enforce JSON output for structured data"
-          ]
+          ],
+          "keyTechniques": {
+            "0": "XML tag output formatting",
+            "1": "Assistant turn prefilling",
+            "2": "JSON output enforcement",
+            "3": "Multi-variable template formatting"
+          },
+          "commonPitfalls": {
+            "0": "Not using consistent output format tags",
+            "1": "Forgetting to prefill the opening tag",
+            "2": "Not enforcing format requirements"
+          }
         },
         "thinking": {
           "title": "Precognition (Thinking Step by Step)",
@@ -240,7 +297,18 @@
             "Guide AI through explicit reasoning steps",
             "Use XML-tagged thinking sections for organization",
             "Apply multi-perspective analysis for better decisions"
-          ]
+          ],
+          "keyTechniques": {
+            "0": "Explicit reasoning steps",
+            "1": "XML-tagged thinking sections",
+            "2": "Multi-perspective analysis",
+            "3": "Brainstorming before answering"
+          },
+          "commonPitfalls": {
+            "0": "Asking for thinking without showing the work",
+            "1": "Not structuring the thinking process",
+            "2": "Skipping reasoning for complex problems"
+          }
         },
         "examples": {
           "title": "Using Examples (Few-Shot Prompting)",
@@ -249,7 +317,18 @@
             "Choose optimal examples for guidance",
             "Format examples for maximum impact",
             "Apply examples across different domains"
-          ]
+          ],
+          "keyTechniques": {
+            "0": "Few-shot example selection",
+            "1": "Example formatting patterns",
+            "2": "Context-appropriate examples",
+            "3": "Output format consistency"
+          },
+          "commonPitfalls": {
+            "0": "Using poor quality or irrelevant examples",
+            "1": "Not maintaining consistent format across examples",
+            "2": "Too few or too many examples"
+          }
         }
       }
     }

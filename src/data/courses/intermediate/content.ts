@@ -16,15 +16,15 @@ export const intermediateContent: CourseContent = {
         `courses.intermediate.sections.dataInstructions.examples.2`
       ],
       keyTechniques: [
-        'F-string templating with variables',
-        'XML tag wrapping for data boundaries', 
-        'Clear instruction-data separation',
-        'Input validation patterns'
+        'courses.intermediate.sections.dataInstructions.keyTechniques.0',
+        'courses.intermediate.sections.dataInstructions.keyTechniques.1', 
+        'courses.intermediate.sections.dataInstructions.keyTechniques.2',
+        'courses.intermediate.sections.dataInstructions.keyTechniques.3'
       ],
       commonPitfalls: [
-        'Not clearly separating instructions from data',
-        'Forgetting to wrap variable content in XML tags',
-        'Using unclear variable names in templates'
+        'courses.intermediate.sections.dataInstructions.commonPitfalls.0',
+        'courses.intermediate.sections.dataInstructions.commonPitfalls.1',
+        'courses.intermediate.sections.dataInstructions.commonPitfalls.2'
       ]
     },
     {
@@ -37,15 +37,15 @@ export const intermediateContent: CourseContent = {
         `courses.intermediate.sections.formatting.examples.2`
       ],
       keyTechniques: [
-        'XML tag output formatting',
-        'Assistant turn prefilling',
-        'JSON output enforcement',
-        'Multi-variable template formatting'
+        'courses.intermediate.sections.formatting.keyTechniques.0',
+        'courses.intermediate.sections.formatting.keyTechniques.1',
+        'courses.intermediate.sections.formatting.keyTechniques.2',
+        'courses.intermediate.sections.formatting.keyTechniques.3'
       ],
       commonPitfalls: [
-        'Not using consistent output format tags',
-        'Forgetting to prefill the opening tag',
-        'Not enforcing format requirements'
+        'courses.intermediate.sections.formatting.commonPitfalls.0',
+        'courses.intermediate.sections.formatting.commonPitfalls.1',
+        'courses.intermediate.sections.formatting.commonPitfalls.2'
       ]
     },
     {
@@ -58,15 +58,15 @@ export const intermediateContent: CourseContent = {
         `courses.intermediate.sections.thinking.examples.2`
       ],
       keyTechniques: [
-        'Explicit reasoning steps',
-        'XML-tagged thinking sections',
-        'Multi-perspective analysis',
-        'Brainstorming before answering'
+        'courses.intermediate.sections.thinking.keyTechniques.0',
+        'courses.intermediate.sections.thinking.keyTechniques.1',
+        'courses.intermediate.sections.thinking.keyTechniques.2',
+        'courses.intermediate.sections.thinking.keyTechniques.3'
       ],
       commonPitfalls: [
-        'Asking for thinking without showing the work',
-        'Not structuring the thinking process',
-        'Skipping reasoning for complex problems'
+        'courses.intermediate.sections.thinking.commonPitfalls.0',
+        'courses.intermediate.sections.thinking.commonPitfalls.1',
+        'courses.intermediate.sections.thinking.commonPitfalls.2'
       ]
     },
     {
@@ -79,15 +79,15 @@ export const intermediateContent: CourseContent = {
         `courses.intermediate.sections.examples.examples.2`
       ],
       keyTechniques: [
-        'Few-shot example selection',
-        'Example formatting patterns',
-        'Context-appropriate examples',
-        'Output format consistency'
+        'courses.intermediate.sections.examples.keyTechniques.0',
+        'courses.intermediate.sections.examples.keyTechniques.1',
+        'courses.intermediate.sections.examples.keyTechniques.2',
+        'courses.intermediate.sections.examples.keyTechniques.3'
       ],
       commonPitfalls: [
-        'Using poor quality or irrelevant examples',
-        'Not maintaining consistent format across examples',
-        'Too few or too many examples'
+        'courses.intermediate.sections.examples.commonPitfalls.0',
+        'courses.intermediate.sections.examples.commonPitfalls.1',
+        'courses.intermediate.sections.examples.commonPitfalls.2'
       ]
     }
   ]
