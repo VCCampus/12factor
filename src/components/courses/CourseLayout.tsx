@@ -58,8 +58,12 @@ export default function CourseLayout() {
       try {
         // For hints that might contain placeholder patterns like {TOPIC}, provide them as literals
         const translated = tRoot.raw(key);
-        if (typeof translated === 'string' && translated.includes('{') && translated.includes('}')) {
-          // Extract placeholders and provide them as is (not as variables)
+        // Check for double brackets first (literal text, not placeholders)
+        if (typeof translated === 'string' && translated.includes('{{') && translated.includes('}}')) {
+          // Double brackets are literal text, return as-is
+          return translated;
+        } else if (typeof translated === 'string' && translated.includes('{') && translated.includes('}')) {
+          // Single brackets are placeholders
           const placeholders: Record<string, string> = {};
           const matches = translated.match(/\{([^}]+)\}/g);
           if (matches) {

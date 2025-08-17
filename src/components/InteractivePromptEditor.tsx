@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useTranslations } from 'next-intl';
 import { 
   PlayIcon, 
@@ -32,9 +32,29 @@ interface InteractivePromptEditorProps {
 }
 
 export default function InteractivePromptEditor({ example, mode = 'practice' }: InteractivePromptEditorProps) {
-  const t = useTranslations('promptEngineering');
+  const tBase = useTranslations('promptEngineering');
+  
+  // Custom translation function to handle double brackets
+  const t = useCallback((key: string) => {
+    try {
+      const translated = tBase.raw(key);
+      // Check if translation contains double brackets (literal text)
+      if (typeof translated === 'string' && translated.includes('{{') && translated.includes('}}')) {
+        // Return the raw string without processing as template
+        return translated;
+      }
+      // Otherwise use normal translation
+      return tBase(key);
+    } catch {
+      // Fallback to key if translation fails
+      return key;
+    }
+  }, [tBase]);
   const [systemPrompt, setSystemPrompt] = useState(mode === 'practice' ? '' : (example.systemPrompt || ''));
   const [userPrompt, setUserPrompt] = useState(mode === 'practice' ? '' : example.userPrompt);
+  const [promptTemplate, setPromptTemplate] = useState(mode === 'practice' ? '' : example.userPrompt);
+  const [templateVariables, setTemplateVariables] = useState<Record<string, string>>({});
+  const [hasTemplateVariables, setHasTemplateVariables] = useState(false);
   const [currentOutput, setCurrentOutput] = useState('');
   const [isRunning, setIsRunning] = useState(false);
   const [showHints, setShowHints] = useState(false);
@@ -42,17 +62,68 @@ export default function InteractivePromptEditor({ example, mode = 'practice' }: 
   const [analysisResult, setAnalysisResult] = useState<'good' | 'needs-improvement' | null>(null);
   const [error, setError] = useState<string | null>(null);
 
+  // Extract template variables from a prompt
+  const extractTemplateVariables = (prompt: string): string[] => {
+    const matches = prompt.match(/\{\{([^}]+)\}\}/g);
+    return matches ? matches.map(match => match.slice(2, -2)) : [];
+  };
+
+  // Replace template variables in prompt
+  const replaceTemplateVariables = (template: string, variables: Record<string, string>): string => {
+    let result = template;
+    Object.entries(variables).forEach(([key, value]) => {
+      result = result.replace(new RegExp(`\\{\\{${key}\\}\\}`, 'g'), value);
+    });
+    return result;
+  };
+
+  // Update template variables when prompt template changes
+  const updateTemplateVariables = useCallback((template: string) => {
+    const variables = extractTemplateVariables(template);
+    const hasVars = variables.length > 0;
+    setHasTemplateVariables(hasVars);
+    
+    if (hasVars) {
+      setTemplateVariables(prev => {
+        const newVariables: Record<string, string> = {};
+        variables.forEach(variable => {
+          // Keep existing values if variable already exists
+          newVariables[variable] = prev[variable] || '';
+        });
+        return newVariables;
+      });
+    } else {
+      setTemplateVariables({});
+    }
+  }, []);
+
   // Update prompts when example changes (e.g., when navigating between cards)
   useEffect(() => {
-    if (mode === 'playground') {
-      setSystemPrompt(example.systemPrompt || '');
-      setUserPrompt(example.userPrompt);
-      setCurrentOutput('');
-      setAnalysisResult(null);
-      setSelectedVariation(null);
-      setError(null);
+    setSystemPrompt(mode === 'practice' ? '' : (example.systemPrompt || ''));
+    setPromptTemplate(mode === 'practice' ? '' : example.userPrompt);
+    
+    // Check for template variables in the initial prompt
+    const initialTemplate = mode === 'practice' ? '' : example.userPrompt;
+    updateTemplateVariables(initialTemplate);
+    
+    // Set initial user prompt
+    setUserPrompt(mode === 'practice' ? '' : example.userPrompt);
+    setCurrentOutput('');
+    setAnalysisResult(null);
+    setSelectedVariation(null);
+    setError(null);
+  }, [example.id, example.systemPrompt, example.userPrompt, mode, updateTemplateVariables]);
+
+  // Update user prompt when template or variables change
+  useEffect(() => {
+    if (hasTemplateVariables) {
+      const replacedPrompt = replaceTemplateVariables(promptTemplate, templateVariables);
+      setUserPrompt(replacedPrompt);
+    } else {
+      // If no template variables, user prompt is the same as template
+      setUserPrompt(promptTemplate);
     }
-  }, [example.id, example.systemPrompt, example.userPrompt, mode]);
+  }, [promptTemplate, templateVariables, hasTemplateVariables]);
 
 
   // Use LLM to evaluate prompt quality based on the actual output
@@ -160,6 +231,9 @@ AI输出: ${truncatedOutput}
 
   const resetToExample = () => {
     setSystemPrompt(mode === 'practice' ? '' : (example.systemPrompt || ''));
+    const initialTemplate = mode === 'practice' ? '' : example.userPrompt;
+    setPromptTemplate(initialTemplate);
+    updateTemplateVariables(initialTemplate);
     setUserPrompt(mode === 'practice' ? '' : example.userPrompt);
     setCurrentOutput('');
     setAnalysisResult(null);
@@ -173,7 +247,9 @@ AI输出: ${truncatedOutput}
     
     // In practice mode, don't auto-fill inputs - let user practice from scratch
     if (mode !== 'practice') {
-      setUserPrompt(variation.prompt);
+      setPromptTemplate(variation.prompt);
+      updateTemplateVariables(variation.prompt);
+      
       // Update system prompt if variation has one, otherwise keep original
       if (variation.systemPrompt !== undefined) {
         setSystemPrompt(variation.systemPrompt);
@@ -277,18 +353,73 @@ AI输出: ${truncatedOutput}
               </div>
             )}
 
-            {/* User Prompt */}
+            {/* Prompt Template - Always show, but label changes based on template variables */}
             <div>
               <label className="block text-xs font-medium text-gray-700 dark:text-gray-300 mb-2">
-                {t('userPrompt')}
+                {hasTemplateVariables ? t('promptTemplate') : t('userPrompt')}
               </label>
               <textarea
-                value={userPrompt}
-                onChange={(e) => setUserPrompt(e.target.value)}
-                placeholder={t('userPromptPlaceholder')}
-                className="w-full h-24 px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-[#98a971] focus:border-transparent resize-none"
+                value={promptTemplate}
+                onChange={(e) => {
+                  setPromptTemplate(e.target.value);
+                  updateTemplateVariables(e.target.value);
+                }}
+                placeholder={hasTemplateVariables ? t('promptTemplatePlaceholder') : t('userPromptPlaceholder')}
+                className={`w-full h-24 px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-[#98a971] focus:border-transparent resize-none ${
+                  hasTemplateVariables ? 'font-mono' : ''
+                }`}
               />
+              {hasTemplateVariables && (
+                <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                  {t('templateHint')}
+                </p>
+              )}
             </div>
+
+            {/* Template Variables - Only show when template variables exist */}
+            {hasTemplateVariables && Object.keys(templateVariables).length > 0 && (
+              <div className="space-y-3">
+                <label className="block text-xs font-medium text-gray-700 dark:text-gray-300">
+                  {t('templateVariables')}
+                </label>
+                {Object.entries(templateVariables).map(([variable, value]) => (
+                  <div key={variable}>
+                    <label className="block text-xs text-gray-600 dark:text-gray-400 mb-1">
+                      {variable}
+                    </label>
+                    <input
+                      type="text"
+                      value={value}
+                      onChange={(e) => {
+                        setTemplateVariables(prev => ({
+                          ...prev,
+                          [variable]: e.target.value
+                        }));
+                      }}
+                      placeholder={t('enterValue')}
+                      className="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-[#98a971] focus:border-transparent"
+                    />
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* Final Prompt Preview - Only show when template variables exist and are filled */}
+            {hasTemplateVariables && Object.keys(templateVariables).length > 0 && (
+              <div>
+                <label className="block text-xs font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  {t('finalPrompt')}
+                </label>
+                <textarea
+                  value={userPrompt}
+                  readOnly
+                  className="w-full h-20 px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-gray-100 cursor-default resize-none"
+                />
+                <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                  {t('finalPromptHint')}
+                </p>
+              </div>
+            )}
 
             {/* Controls */}
             <div className="space-y-3">

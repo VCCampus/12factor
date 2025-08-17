@@ -118,7 +118,17 @@
     "coreConceptsTitle": "Core Concepts",
     "keyTechniquesTitle": "Key Techniques",
     "commonPitfallsTitle": "Common Pitfalls",
-    "commonPitfallsTitle": "Common Pitfalls"
+    "promptTemplate": "Prompt Template",
+    "promptTemplatePlaceholder": "Enter your prompt template with variables like {{example1}}, {{example2}}...",
+    "templateHint": "Use {{format}} for placeholders that will be replaced",
+    "templateVariables": "Template Variables",
+    "enterValue": "Enter value...",
+    "finalPrompt": "Final Prompt (Generated)",
+    "finalPromptHint": "This is the final prompt after variable replacement",
+    "rateLimitError": "Rate limit exceeded. Please wait a moment and try again.",
+    "serviceUnavailableError": "Service temporarily unavailable. Please try again later.",
+    "generalError": "An error occurred. Please try again.",
+    "evaluationError": "Could not evaluate prompt quality automatically."
   },
   "courses": {
     "fundamentals": {
@@ -500,7 +510,7 @@
         "description": "Create a reusable prompt template for generating haikus about any topic",
         "expectedOutput": "A haiku that mentions the specified topic",
         "hints": {
-          "0": "Use {TOPIC} as a placeholder in your prompt template",
+          "0": "Use {{TOPIC}} as a placeholder in your prompt template",
           "1": "Make sure to ask for a haiku format",
           "2": "Test with different topics to verify the template works"
         },

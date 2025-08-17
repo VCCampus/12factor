@@ -118,7 +118,17 @@
     "coreConceptsTitle": "核心概念",
     "keyTechniquesTitle": "关键技巧",
     "commonPitfallsTitle": "常见陷阱",
-    "commonPitfallsTitle": "常见陷阱"
+    "promptTemplate": "提示模板",
+    "promptTemplatePlaceholder": "输入包含变量的提示模板，如 {{example1}}、{{example2}}...",
+    "templateHint": "使用 {{format}} 格式作为将被替换的占位符",
+    "templateVariables": "模板变量",
+    "enterValue": "输入值...",
+    "finalPrompt": "最终提示词（已生成）",
+    "finalPromptHint": "这是变量替换后的最终提示词",
+    "rateLimitError": "请求频率超限。请稍等片刻后重试。",
+    "serviceUnavailableError": "服务暂时不可用。请稍后重试。",
+    "generalError": "发生错误。请重试。",
+    "evaluationError": "无法自动评估提示词质量。"
   },
   "courses": {
     "fundamentals": {
@@ -500,7 +510,7 @@
         "description": "创建一个可重用的提示模板，为任何主题生成俳句",
         "expectedOutput": "一首提到指定主题的俳句",
         "hints": {
-          "0": "在提示模板中使用{TOPIC}作为占位符",
+          "0": "在提示模板中使用{{TOPIC}}作为占位符",
           "1": "确保要求俳句格式",
           "2": "使用不同主题测试以验证模板工作"
         },
