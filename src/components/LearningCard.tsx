@@ -442,20 +442,8 @@ export default function LearningCard({
             {/* Playground Examples */}
             <div className="space-y-6">
               {currentPlaygroundItem.examples.map((example, exIndex) => (
-                <div key={exIndex} className="bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700">
-                  {/* Example Header */}
-                  <div className="p-4 border-b border-gray-200 dark:border-gray-700">
-                    <h3 className="font-medium text-gray-900 dark:text-gray-100 mb-2">
-                      {example.name}
-                    </h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
-                      {example.description}
-                    </p>
-                  </div>
-                  
-                  {/* Interactive Editor for this example */}
-                  <div className="p-4">
-                    <InteractivePromptEditor 
+                <div key={exIndex} className="mb-6">
+                  <InteractivePromptEditor 
                       example={{
                         id: `${currentPlaygroundItem.id}-${exIndex}`,
                         title: example.name,
@@ -468,7 +456,6 @@ export default function LearningCard({
                       }}
                       mode="playground"
                     />
-                  </div>
                 </div>
               ))}
             </div>
