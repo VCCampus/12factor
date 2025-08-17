@@ -17,6 +17,7 @@ export interface InteractivePromptExample {
   variations: {
     name: string;
     prompt: string;
+    systemPrompt?: string;
     explanation: string;
   }[];
 }
@@ -43,6 +44,7 @@ export const notebookLessons: NotebookLesson[] = [
     examples: [],
     interactiveExamples: [
       {
+        // No system prompt needed - direct user instruction works better
         id: 'chapter1-basic-structure',
         title: 'practiceExercises.fundamentals.chapter1BasicStructure.title',
         description: 'practiceExercises.fundamentals.chapter1BasicStructure.description',
@@ -82,16 +84,19 @@ export const notebookLessons: NotebookLesson[] = [
           {
             name: 'practiceExercises.fundamentals.chapter1SystemPrompt.variations.noSystemPrompt.name',
             prompt: 'How big is the sky?',
+            systemPrompt: '',
             explanation: 'practiceExercises.fundamentals.chapter1SystemPrompt.variations.noSystemPrompt.explanation'
           },
           {
             name: 'practiceExercises.fundamentals.chapter1SystemPrompt.variations.strictScientist.name',
             prompt: 'How big is the sky?',
+            systemPrompt: '你是一个严格的物理学家。给出精确的科学答案。',
             explanation: 'practiceExercises.fundamentals.chapter1SystemPrompt.variations.strictScientist.explanation'
           },
           {
             name: 'practiceExercises.fundamentals.chapter1SystemPrompt.variations.friendlyTeacher.name',
             prompt: 'How big is the sky?',
+            systemPrompt: 'You are a friendly elementary school teacher. Explain things in a warm, encouraging way that children can understand.',
             explanation: 'practiceExercises.fundamentals.chapter1SystemPrompt.variations.friendlyTeacher.explanation'
           }
         ]
@@ -100,8 +105,7 @@ export const notebookLessons: NotebookLesson[] = [
         id: 'chapter2-spanish',
         title: 'practiceExercises.fundamentals.chapter2Spanish.title',
         description: 'practiceExercises.fundamentals.chapter2Spanish.description',
-        systemPrompt: 'Please respond in Spanish.',
-        userPrompt: 'Hello Claude, how are you?',
+        userPrompt: 'Hello Claude, how are you? Please respond in Spanish.',
         expectedOutput: 'practiceExercises.fundamentals.chapter2Spanish.expectedOutput',
         hints: [
           'practiceExercises.fundamentals.chapter2Spanish.hints.0',
@@ -111,12 +115,12 @@ export const notebookLessons: NotebookLesson[] = [
         variations: [
           {
             name: 'practiceExercises.fundamentals.chapter2Spanish.variations.frenchResponse.name',
-            prompt: 'Hello Claude, how are you?',
+            prompt: 'Hello Claude, how are you? Please respond in French.',
             explanation: 'practiceExercises.fundamentals.chapter2Spanish.variations.frenchResponse.explanation'
           },
           {
             name: 'practiceExercises.fundamentals.chapter2Spanish.variations.bilingualResponse.name',
-            prompt: 'Hello Claude, how are you?',
+            prompt: 'Hello Claude, how are you? Please respond in both English and Spanish.',
             explanation: 'practiceExercises.fundamentals.chapter2Spanish.variations.bilingualResponse.explanation'
           }
         ]

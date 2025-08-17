@@ -21,6 +21,7 @@ interface PromptExample {
   variations: {
     name: string;
     prompt: string;
+    systemPrompt?: string;
     explanation: string;
   }[];
 }
@@ -114,8 +115,13 @@ export default function InteractivePromptEditor({ example, mode = 'practice' }: 
   };
 
   const applyVariation = (index: number) => {
-    // Don't auto-fill user prompt - let user manually copy if needed
+    const variation = example.variations[index];
     setSelectedVariation(index);
+    setUserPrompt(variation.prompt);
+    // Update system prompt if variation has one, otherwise keep original
+    if (variation.systemPrompt !== undefined) {
+      setSystemPrompt(variation.systemPrompt);
+    }
     setCurrentOutput('');
     setAnalysisResult(null);
   };
@@ -192,8 +198,9 @@ export default function InteractivePromptEditor({ example, mode = 'practice' }: 
               🎯 {t('editPrompt')}
             </h4>
             
-            {/* System Prompt - only show if the exercise needs it */}
-            {(example.systemPrompt !== undefined) && (
+            {/* System Prompt - only show if the exercise needs it or if variation has one */}
+            {((example.systemPrompt !== undefined && example.systemPrompt !== '') || 
+              (selectedVariation !== null && example.variations[selectedVariation]?.systemPrompt !== undefined)) && (
               <div>
                 <label className="block text-xs font-medium text-gray-700 dark:text-gray-300 mb-2">
                   {t('systemPrompt')}

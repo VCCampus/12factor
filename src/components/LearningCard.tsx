@@ -28,6 +28,7 @@ interface PracticeContent {
   variants: Array<{
     name: string;
     prompt: string;
+    systemPrompt?: string;
     explanation: string;
   }>;
   expectedOutput: string;
@@ -307,6 +308,7 @@ export default function LearningCard({
                 variations: currentPracticeItem.variants?.map(variant => ({
                   name: variant.name,
                   prompt: variant.prompt || '',
+                  systemPrompt: variant.systemPrompt,
                   explanation: variant.explanation
                 })) || []
               }}

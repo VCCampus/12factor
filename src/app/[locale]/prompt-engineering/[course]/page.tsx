@@ -144,6 +144,7 @@ export default function CoursePage() {
     const resolvedVariations = example.variations?.map(variation => ({
       name: resolveTranslationKey(variation.name),
       prompt: variation.prompt,
+      systemPrompt: variation.systemPrompt,
       explanation: resolveTranslationKey(variation.explanation)
     })) || [];
 
@@ -173,7 +174,7 @@ export default function CoursePage() {
     const playgroundExamples = example.variations?.map(variation => ({
       name: resolveTranslationKey(variation.name),
       prompt: variation.prompt,
-      systemPrompt: example.systemPrompt,
+      systemPrompt: variation.systemPrompt || example.systemPrompt,
       description: resolveTranslationKey(variation.explanation)
     })) || [{
       name: resolveTranslationKey(example.title),
