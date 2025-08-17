@@ -1,0 +1,37 @@
+{
+  "common": {
+    "title": "12Factor.me - Vibe 编程，成就 10x 工程师",
+    "subtitle": "面向 AI 时代开发者：四大阶段 · 十二项原则",
+    "language": "语言",
+    "home": "首页",
+    "principles": "原则",
+    "flashcards": "闪卡",
+    "quiz": "测验",
+    "promptEngineering": "提示工程",
+    "more": "更多",
+    "progress": "进度",
+    "learnMore": "了解更多",
+    "languageLabels": {
+      "chinese": "中文",
+      "english": "English"
+    },
+    "github": "GitHub",
+    "footer": {
+      "copyright": "12Factor",
+      "author": "@wquguru",
+      "license": "MIT 许可证"
+    },
+    "navigation": {
+      "methodology": "12Factor 方法论",
+      "principlesDescription": "学习12个核心原则和最佳实践",
+      "flashcardsDescription": "通过互动卡片巩固学习内容",
+      "quizDescription": "测试你对12Factor原则的理解",
+      "resources": "资源",
+      "githubRepo": "GitHub 仓库",
+      "githubRepoDescription": "查看源代码和贡献项目",
+      "apiDocs": "API 文档",
+      "communityForum": "社区论坛",
+      "comingSoon": "即将推出"
+    }
+  }
+}

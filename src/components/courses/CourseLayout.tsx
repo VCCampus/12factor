@@ -105,8 +105,8 @@ export default function CourseLayout() {
     // Create processed section with translated content
     const processedSection: LearningCardContent = {
       id: `section-${index}`,
-      title: t(section.title),
-      theory: t(section.theory),
+      title: t(`${section.title}`),
+      theory: t(`${section.theory}`),
       examples: resolvedExamples,
       exercises: processedExercises,
       practiceCount: sectionPracticeCount

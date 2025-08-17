@@ -1,427 +1,4 @@
 {
-  "common": {
-    "title": "12Factor.me - Vibe Coding 10x Engineer",
-    "subtitle": "Four Stages × Twelve Principles for 10x Engineering Efficiency",
-    "language": "Language",
-    "home": "Home",
-    "principles": "Principles",
-    "flashcards": "Flashcards",
-    "quiz": "Quiz",
-    "promptEngineering": "Prompt Engineering",
-    "more": "More",
-    "progress": "Progress",
-    "learnMore": "Learn More",
-    "languageLabels": {
-      "chinese": "中文",
-      "english": "English"
-    },
-    "github": "GitHub",
-    "footer": {
-      "copyright": "12Factor",
-      "author": "@wquguru",
-      "license": "MIT License"
-    },
-    "navigation": {
-      "methodology": "12Factor Methodology",
-      "principlesDescription": "Learn 12 core principles and best practices",
-      "flashcardsDescription": "Reinforce learning through interactive cards",
-      "quizDescription": "Test your understanding of 12Factor principles",
-      "resources": "Resources",
-      "githubRepo": "GitHub Repository",
-      "githubRepoDescription": "View source code and contribute to the project",
-      "apiDocs": "API Documentation",
-      "communityForum": "Community Forum",
-      "comingSoon": "Coming Soon"
-    }
-  },
-  "home": {
-    "hero": {
-      "title": "12 Vibe Coding Factors",
-      "titleAlt": "10x Engineer Efficiency",
-      "subtitle": "Four-Stage Twelve-Principle methodology provides real insights for 10x engineering efficiency, without the complexity overload.",
-      "cta": "Study Principles",
-      "ctaSecondary": "Practice with Flashcards",
-      "statsNumber": "12",
-      "statsCore": "Core Principles", 
-      "statsMethodology": "Four-Stage Methodology"
-    },
-    "benefits": {
-      "title": "We have cracked the code for 10x engineering efficiency.",
-      "subtitle": "12Factor provides real methodological insights, without the cognitive overload.",
-      "aiCollaboration": {
-        "title": "Master AI Collaboration",
-        "description": "Learn systematic approaches to working with AI tools, revealing key opportunities for enhanced productivity and code quality."
-      },
-      "developmentFlow": {
-        "title": "Control Your Development Flow",
-        "description": "Manage and track your coding workflow, ensuring consistent performance and streamlined collaboration patterns."
-      },
-      "communication": {
-        "title": "Bridge Human-AI Communication", 
-        "description": "Master effective prompting techniques for clear AI communication and enhanced development collaboration."
-      },
-      "progress": {
-        "title": "Achieve 10x Engineering Efficiency",
-        "description": "Master the synergy between 12Factor methodology and Vibe Coding practices to unlock unprecedented development productivity and code quality."
-      }
-    },
-    "bigPicture": {
-      "title": "See the Big Picture",
-      "subtitle": "12Factor turns complex development methodologies into clear, actionable principles that show you exactly how to improve your AI collaboration workflow.",
-      "step1": {
-        "title": "Master Principles in Minutes",
-        "description": "No more endless documentation searches."
-      },
-      "step2": {
-        "title": "Get Everyone on the Same Page", 
-        "description": "Share consistent AI collaboration patterns with your team."
-      },
-      "step3": {
-        "title": "Make Learning Interactive",
-        "description": "Gamified flashcards and quizzes keep your team engaged."
-      },
-      "step4": {
-        "title": "Your Development Snapshot",
-        "description": "Get a quick, clear overview of your team's AI collaboration maturity."
-      },
-      "cta": "Study Principles"
-    },
-    "learningPath": {
-      "title": "Four-Stage Learning Path",
-      "subtitle": "Master AI collaboration through a systematic four-stage approach designed for modern developers.",
-      "prepare": {
-        "title": "Prepare",
-        "description": "Single Source of Truth, Prompt First, Context Hygiene - Establish the foundation for effective AI collaboration."
-      },
-      "execute": {
-        "title": "Execute", 
-        "description": "Human-in-the-Loop, Chunked Work, Parallel Flow - Implement systematic development processes."
-      },
-      "collaborate": {
-        "title": "Collaborate",
-        "description": "Cognitive Load Budget, Flow Protection, Reproducible Sessions - Optimize team collaboration patterns."
-      },
-      "iterate": {
-        "title": "Iterate",
-        "description": "Rest & Reflection, Skill Parity, Culture of Curiosity - Continuous improvement and learning."
-      }
-    },
-    "journey": {
-      "title": "Start Your Journey",
-      "subtitle": "Begin mastering AI collaboration with our free, open-source learning platform designed by developers, for developers.",
-      "step1": {
-        "title": "Learn the Principles",
-        "description": "Explore the 12 fundamental principles through interactive content and real-world examples."
-      },
-      "step2": {
-        "title": "Practice & Test", 
-        "description": "Use flashcards and quizzes to reinforce your understanding and track your progress."
-      },
-      "step3": {
-        "title": "Apply in Practice",
-        "description": "Implement the methodology in your development workflow and share knowledge with your team."
-      },
-      "ctaPrimary": "Study Principles",
-      "ctaSecondary": "Practice with Flashcards"
-    }
-  },
-  "principles": {
-    "title": "12 Principles",
-    "stage": "Stage",
-    "concept": "Concept",
-    "practices": "Practices",
-    "antiPatterns": "Anti-patterns",
-    "backToStages": "Back to Stages",
-    "fallbackTitle": "Master the Principles",
-    "fallbackDescription": "Explore the complete Four-Stage Twelve-Principle methodology for effective 10x engineering efficiency.",
-    "stageLabel": "Stage Principles",
-    "coreLabel": "Core Principles",
-    "practiceWithFlashcards": "Practice with Flashcards",
-    "takeQuiz": "Take Quiz",
-    "fourStageMethodology": "Four-Stage Methodology",
-    "chooseLearningPath": "Choose Your Learning Path",
-    "chooseLearningPathDescription": "Master all 12 principles through our structured four-stage approach. Select a stage to explore its principles in detail.",
-    "stagePrinciplesTitle": "Stage {stage} Principles",
-    "stagePrinciplesDescription": "Dive deep into the principles of this methodology stage.",
-    "stage1Title": "Prepare: Build a Solid Foundation",
-    "stage1Description": "Establish clear information sources, optimize prompts, and maintain clean contexts.",
-    "stage2Title": "Execute: Efficient Collaboration Flow",
-    "stage2Description": "Human-AI collaborative decisions, chunked execution, and parallel processing.",
-    "stage3Title": "Collaborate: Team Synergy Optimization",
-    "stage3Description": "Manage cognitive load, protect flow states, and ensure reproducible sessions.",
-    "stage4Title": "Iterate: Continuous Growth",
-    "stage4Description": "Rest and reflection, skill parity, and a culture of curiosity.",
-    "viewPrinciples": "View Principles",
-    "principlesCount": "principles",
-    "previousStage": "Previous Stage",
-    "nextStage": "Next Stage",
-    "principle1": {
-      "name": "Single Source of Truth",
-      "concept": "Information dispersion equals context confusion; both AI and humans may misjudge.",
-      "practices": [
-        "Centralize all requirements, designs, and context in one documentation hub (Notion / Confluence / GitHub Wiki)",
-        "For AI, directly reference this single source rather than ad-hoc copy-pasting"
-      ],
-      "antiPatterns": [
-        "Team members maintaining different document versions, causing inconsistent AI responses"
-      ]
-    },
-    "principle2": {
-      "name": "Prompt First",
-      "concept": "Prompts are the new generation of design documents.",
-      "practices": [
-        "Write prompts before tasks begin, clarifying inputs, outputs, style, and constraints",
-        "Teams reuse validated prompt templates"
-      ],
-      "antiPatterns": [
-        "Immediately asking AI to write code, resulting in wrong direction and rework"
-      ]
-    }
-  },
-  "flashcards": {
-    "title": "Interactive Learning",
-    "subtitle": "Master the 12 principles through engaging flashcards that help reinforce your understanding of AI collaboration methodology.",
-    "studyPrinciples": "Study Principles",
-    "takeQuiz": "Take Quiz",
-    "progress": "Progress",
-    "of": "of",
-    "practiceSession": "Practice Session",
-    "practiceDescription": "Review each principle carefully and test your understanding with interactive flashcards.",
-    "startPracticing": "Start Practicing",
-    "learningProgress": "Learning Progress",
-    "flip": "Tap to flip",
-    "next": "Next",
-    "previous": "Previous",
-    "mastered": "Mastered",
-    "needsReview": "Needs Review",
-    "showAnswer": "Show Answer",
-    "quickJump": "Quick Jump",
-    "quickJumpDescription": "Navigate to any principle",
-    "statusNew": "New",
-    "statusLearning": "Learning",
-    "statusDone": "Done",
-    "statusReview": "Review",
-    "stage": "Stage",
-    "flipBack": "Tap to flip back",
-    "principleOf": "Principle {current} of {total}"
-  },
-  "quiz": {
-    "title": "Quiz",
-    "question": "Question",
-    "submit": "Submit",
-    "next": "Next Question",
-    "results": "Results",
-    "score": "Your Score",
-    "retry": "Try Again",
-    "chooseChallenge": "Choose Your Challenge",
-    "selectModeDescription": "Select a quiz mode to test your 12Factor knowledge and track your learning progress through different challenge levels.",
-    "quizModes": "Quiz Modes",
-    "chooseChallengeLevel": "Choose the perfect challenge level that matches your learning goals and time availability.",
-    "chooseMode": "Choose Mode",
-    "viewResults": "View Results",
-    "normalMode": "Normal Mode",
-    "normalModeSubtitle": "No time limit • All question types",
-    "normalModeDescription": "Take your time to carefully consider each question. Perfect for learning and building confidence.",
-    "timedMode": "Timed Mode",
-    "timedModeSubtitle": "30s per question • Pressure testing",
-    "timedModeDescription": "Race against the clock! 30 seconds per question to test your quick thinking and recall.",
-    "challengeMode": "Challenge Mode",
-    "challengeModeSubtitle": "Hard questions • Streak multiplier",
-    "challengeModeDescription": "Harder questions and scenarios. Build up your streak for bonus points and advanced learning.",
-    "adaptiveMode": "Adaptive Mode",
-    "adaptiveModeSubtitle": "AI-powered difficulty • Personalized",
-    "adaptiveModeDescription": "Questions adapt to your performance. Get harder as you improve for optimal learning.",
-    "quizComplete": "Quiz Complete!",
-    "modeResults": "{mode} Mode Results",
-    "performanceSummary": "Your Performance Summary",
-    "excellent": "Excellent!",
-    "goodJob": "Good job!",
-    "keepLearning": "Keep learning!",
-    "maxStreak": "Max Streak: {streak} questions in a row!",
-    "challengeBonus": "Challenge bonus: +{points} points",
-    "backToModes": "Back to Quiz Modes",
-    "modeLabel": "{mode} Mode",
-    "interactiveQuiz": "Interactive Quiz",
-    "questionCount": "Question {current} of {total}",
-    "scenario": "Scenario",
-    "questionType": "{type} Question",
-    "nextQuestion": "Next Question",
-    "submitQuiz": "Submit Quiz",
-    "difficulty": {
-      "easy": "easy",
-      "medium": "medium", 
-      "hard": "hard"
-    },
-    "wrongAnswers": [
-      "Store context across multiple sources to maximize flexibility",
-      "Let AI handle all decisions without human intervention",
-      "Focus on completing all work in a single session"
-    ],
-    "principleOptions": {
-      "contextHygiene": "Context Hygiene",
-      "singleSource": "Single Source of Truth",
-      "chunkedWork": "Chunked Work",
-      "humanInLoop": "Human-in-the-Loop",
-      "promptFirst": "Prompt First",
-      "parallelFlow": "Parallel Flow",
-      "cognitiveLoadBudget": "Cognitive Load Budget",
-      "flowProtection": "Flow Protection",
-      "reproducibleSessions": "Reproducible Sessions",
-      "restReflection": "Rest & Reflection",
-      "skillParity": "Skill Parity",
-      "cultureOfCuriosity": "Culture of Curiosity"
-    },
-    "principle1": {
-      "name": "Single Source of Truth",
-      "concept": "Information dispersion equals context confusion; both AI and humans may misjudge.",
-      "practices": [
-        "Centralize all requirements, designs, and context in one documentation hub (Notion / Confluence / GitHub Wiki)",
-        "For AI, directly reference this single source rather than ad-hoc copy-pasting"
-      ],
-      "antiPatterns": [
-        "Team members maintaining different document versions, causing inconsistent AI responses"
-      ]
-    },
-    "principle2": {
-      "name": "Prompt First",
-      "concept": "Prompts are the new generation of design documents.",
-      "practices": [
-        "Write prompts before tasks begin, clarifying inputs, outputs, style, and constraints",
-        "Teams reuse validated prompt templates"
-      ],
-      "antiPatterns": [
-        "Immediately asking AI to write code, resulting in wrong direction and rework"
-      ]
-    },
-    "principle3": {
-      "name": "Context Hygiene",
-      "concept": "Clean context enables more precise AI performance.",
-      "practices": [
-        "Start independent sessions for each new task to avoid old content interference",
-        "Regularly summarize current status in one sentence to help AI \"align context\""
-      ],
-      "antiPatterns": [
-        "Mixing conversations from three days ago with today's tasks"
-      ]
-    },
-    "principle4": {
-      "name": "Human-in-the-Loop",
-      "concept": "AI produces quickly, but only humans can grasp direction and business judgment.",
-      "practices": [
-        "AI provides drafts, humans handle key decisions and risk management",
-        "Perform logic validation for important features before merging code"
-      ],
-      "antiPatterns": [
-        "Accepting AI output wholesale without any review"
-      ]
-    },
-    "principle5": {
-      "name": "Chunked Work",
-      "concept": "Break large tasks into small chunks for easier iteration and correction.",
-      "practices": [
-        "Control tasks to small scope completable in 10-30 minutes",
-        "Immediately validate results after each chunk"
-      ],
-      "antiPatterns": [
-        "Having AI write 5000 lines at once, making debugging impossible"
-      ]
-    },
-    "principle6": {
-      "name": "Parallel Flow",
-      "concept": "While AI works, humans do low-switching-cost side tasks to maintain continuous rhythm.",
-      "practices": [
-        "Prepare a \"side task list\" including documentation, small fixes, code reviews",
-        "When waiting for AI, avoid high cognitive load tasks to prevent switching overhead"
-      ],
-      "antiPatterns": [
-        "Browsing social media while waiting for AI, breaking rhythm"
-      ]
-    },
-    "principle7": {
-      "name": "Cognitive Load Budget",
-      "concept": "Human attention is a scarce resource.",
-      "practices": [
-        "Set daily time limits for AI collaboration",
-        "Schedule deep review tasks during peak mental hours"
-      ],
-      "antiPatterns": [
-        "Working with AI all day long, becoming completely exhausted by evening"
-      ]
-    },
-    "principle8": {
-      "name": "Flow Protection",
-      "concept": "Once high-focus flow is interrupted, recovery cost is extremely high.",
-      "practices": [
-        "Set focused time blocks (e.g., 90 minutes), blocking notifications and interruptions",
-        "Batch AI interactions within focus flow rather than scattered triggers"
-      ],
-      "antiPatterns": [
-        "Coding while replying to WeChat and reading AI output, causing cliff-like efficiency drop"
-      ]
-    },
-    "principle9": {
-      "name": "Reproducible Sessions",
-      "concept": "Collaborative processes must be traceable to enable continuous optimization.",
-      "practices": [
-        "Save prompts, AI versions, and change reasons to code or knowledge base",
-        "Can replay generation process when bugs occur"
-      ],
-      "antiPatterns": [
-        "No record of AI generation history, unable to trace error causes"
-      ]
-    },
-    "principle10": {
-      "name": "Rest & Reflection",
-      "concept": "Post-sprint retrospection enables faster running.",
-      "practices": [
-        "Spend 5 minutes after sprint reviewing AI output vs expectations",
-        "Update prompt templates and accumulate \"pitfall records\""
-      ],
-      "antiPatterns": [
-        "Continuous sprinting without summarizing accumulated errors"
-      ]
-    },
-    "principle11": {
-      "name": "Skill Parity",
-      "concept": "AI is a magnifying glass that amplifies both abilities and shortcomings.",
-      "practices": [
-        "Continuously learn domain knowledge and code review skills",
-        "Maintain independent judgment ability for AI output"
-      ],
-      "antiPatterns": [
-        "Complete dependency on AI, losing manual abilities and technical insights"
-      ]
-    },
-    "principle12": {
-      "name": "Culture of Curiosity",
-      "concept": "Curiosity drives exploration and prevents \"blind faith in AI\".",
-      "practices": [
-        "When facing AI answers, first ask \"why\", then ask \"can it be better\"",
-        "Team shares AI usage experiences and improvement ideas"
-      ],
-      "antiPatterns": [
-        "Accepting AI solutions wholesale without ever questioning"
-      ]
-    },
-    "stages": {
-      "stage1": {
-        "name": "Prepare",
-        "description": "Establish clear information architecture and context environment"
-      },
-      "stage2": {
-        "name": "Execute", 
-        "description": "Efficiently collaborate to complete specific tasks"
-      },
-      "stage3": {
-        "name": "Collaborate",
-        "description": "Manage cognitive load and workflow in collaborative processes"
-      },
-      "stage4": {
-        "name": "Iterate",
-        "description": "Continuously learn and improve collaborative patterns"
-      }
-    }
-  },
   "promptEngineering": {
     "title": "Prompt Engineering Mastery",
     "description": "Learn practical prompt engineering techniques through interactive lessons and hands-on exercises",
@@ -436,201 +13,8 @@
     "chapter": "Chapter",
     "theory": "Theory",
     "examples": "Examples",
-    "exercises": "Exercises",
-    "practicalExamples": "Practical Examples",
-    "practiceExercises": "Practice Exercises",
-    "prerequisites": "Prerequisites",
-    "exercise": "Exercise",
-    "instructions": "Instructions",
-    "hints": "Hints",
-    "showHints": "Show Hints",
-    "hideHints": "Hide Hints",
-    "yourPrompt": "Your Prompt",
-    "enterPromptHere": "Enter your prompt here...",
-    "checkAnswer": "Check Answer",
-    "reset": "Reset",
-    "exerciseCompleted": "Exercise completed!",
-    "exerciseCorrect": "Great! Your prompt works correctly.",
-    "exerciseIncorrect": "Not quite right. Try refining your prompt.",
-    "validationError": "Error validating your prompt.",
-    "tryAgainWithHints": "Try again or check the hints for guidance.",
-    "previousLesson": "Previous Lesson",
-    "nextLesson": "Next Lesson",
-    "practiceExercise": "Practice Exercise",
-    "stage1": {
-      "name": "Fundamentals",
-      "description": "Master the basics of clear and effective prompt communication"
-    },
-    "stage2": {
-      "name": "Intermediate",
-      "description": "Learn structured prompting and output formatting techniques"
-    },
-    "stage3": {
-      "name": "Advanced", 
-      "description": "Explore complex prompting strategies and reasoning techniques"
-    },
-    "stage4": {
-      "name": "Practical",
-      "description": "Apply prompt engineering in real-world scenarios and workflows"
-    },
-    "lesson1": {
-      "title": "Basic Prompt Structure",
-      "summary": "Learn the fundamental elements of effective prompt design and clear communication with AI systems."
-    },
-    "lesson2": {
-      "title": "Being Clear and Direct",
-      "summary": "Eliminate ambiguity and get precise responses by being specific about your requirements."
-    },
-    "lesson3": {
-      "title": "Role Prompting",
-      "summary": "Assign specific roles and perspectives to improve response quality and consistency."
-    },
-    "lesson4": {
-      "title": "Data/Instruction Separation",
-      "summary": "Use clear delimiters to separate data from instructions for better prompt clarity."
-    },
-    "lesson5": {
-      "title": "Output Formatting",
-      "summary": "Specify exact output formats to get structured, consistent responses."
-    },
-    "lesson6": {
-      "title": "Step-by-Step Thinking",
-      "summary": "Leverage chain-of-thought prompting for better reasoning and problem-solving."
-    },
-    "course": {
-      "fundamentals": {
-        "title": "Fundamentals Course",
-        "summary": "Learn fundamental concepts and core principles of prompt engineering"
-      },
-      "intermediate": {
-        "title": "Intermediate Course",
-        "summary": "Master advanced techniques for data separation, output formatting, and systematic thinking"
-      }
-    },
-    "nextCourse": "Next Course",
-    "integratedCourse": "Integrated Course",
-    "courseOverview": "Course Overview",
-    "sections": "sections",
-    "previousCourse": "Previous Course",
-    "clickToStartPractice": "Click the editor below to start practice",
-    "learningMode": "Learning Mode",
-    "playgroundMode": "Playground",
-    "practiceMode": "Practice Mode",
-    "learningContent": "Learning Content",
-    "experimentalPlayground": "Experimental Playground",
-    "interactiveExercise": "Interactive Exercise",
-    "experimentWithThisPrompt": "Experiment with this prompt",
-    "promptExamples": "Prompt Examples",
-    "practicalExercises": "Practical Exercises",
     "exercises": "exercises",
-    "previous": "Previous",
-    "next": "Next",
-    "showHints": "Show Hints",
-    "hideHints": "Hide Hints",
-    "learningTips": "Learning Tips",
-    "tryDifferentVariations": "Try Different Prompt Variations",
-    "editPrompt": "Edit Prompt",
-    "systemPrompt": "System Prompt",
-    "systemPromptPlaceholder": "Set AI's role and behavior rules...",
-    "userPrompt": "User Prompt", 
-    "userPromptPlaceholder": "Enter your question or instruction...",
-    "runPrompt": "Run Prompt",
-    "running": "Running...",
-    "reset": "Reset",
-    "aiResponse": "AI Response",
-    "goodPromptQuality": "Good output quality",
-    "canImprove": "Output can improve",
-    "aiThinking": "AI is thinking...",
-    "clickRunPrompt": "Click \"Run Prompt\" to see AI response",
-    "fundamentals": {
-      "title": "Fundamentals Course",
-      "theory": "Comprehensive step-by-step guide to mastering Claude's best prompt engineering practices. Learn three core skills: API structure, clear communication, and role assignment.",
-      "chapter1": {
-        "title": "Chapter 1: Basic Prompt Structure",
-        "theory": "Learn the required parameters of the Messages API: model, max_tokens, messages array. Master the user/assistant conversation format and correct usage of system prompts.",
-        "messageRules": {
-          "title": "Message Alternation Rule",
-          "content": "User and Assistant messages MUST alternate, and messages MUST start with a User turn."
-        },
-        "systemPrompts": {
-          "title": "System Prompts",
-          "content": "You can use a system prompt to give AI models instructions and guidelines. A system prompt is a way to provide context, instructions, and guidelines before presenting a question or task in the User turn. Structurally, system prompts exist separately from the list of User & Assistant messages, and thus belong in a separate \"system prompt\" parameter."
-        },
-        "messageFormatting": {
-          "title": "Message Formatting",
-          "content": "When using message APIs, be sure to demarcate messages by inserting a newline between each message (a message is a single User or Assistant turn). If you fail to do so, the AI will not return an error, but will consider everything not separated by a newline as part of a single message."
-        },
-        "multiTurnConversations": {
-          "title": "Multi-turn Conversations",
-          "content": "You can have multiple \"User:\" / \"Assistant:\" pairs in a prompt (as if simulating a multi-turn conversation). You can also put words into an ending \"Assistant:\" message for the AI to continue from where you left off."
-        },
-        "whySystemPrompts": {
-          "title": "Why use system prompts?",
-          "content": "A well-written system prompt can improve AI performance in a variety of ways, such as increasing the AI's ability to follow rules and instructions."
-        },
-        "examples": [
-          "✅ Correct format: {role: 'user', content: 'Hi Claude, how are you?'}",
-          "❌ Wrong format: {Hi Claude, how are you?} - missing role and content fields",
-          "✅ System prompt: 'You are a logical reasoning expert who specializes in solving complex logical problems'"
-        ],
-        "exercises": {
-          "countToThree": {
-            "instructions": "Use the correct user/assistant format to have Claude count to three",
-            "template": "[Replace this text]",
-            "hints": ["State your request directly", "Use simple clear instructions", "Avoid unnecessary complexity"]
-          },
-          "systemPromptChild": {
-            "instructions": "Modify the SYSTEM_PROMPT to make Claude respond like a 3-year-old child",
-            "template": "SYSTEM_PROMPT = '[Replace this text]'",
-            "hints": ["Think about how 3-year-olds speak", "Use simple vocabulary and expressions", "Add childlike language features"]
-          }
-        }
-      },
-      "chapter2": {
-        "title": "Chapter 2: Being Clear and Direct",
-        "theory": "Claude needs clear instructions. Follow the golden rule: if you show your prompt to a colleague and they're confused, Claude will be confused too.",
-        "examples": [
-          "❌ Vague: 'Write a haiku about robots'",
-          "✅ Clear: 'Write a haiku about robots, skip the preamble and go straight to the poem'",
-          "❌ Vague: 'Who is the best basketball player of all time?'",
-          "✅ Force choice: 'Who is the best basketball player of all time? While there are different opinions, if you had to choose one, who would it be?'"
-        ],
-        "exercises": {
-          "spanishResponse": {
-            "instructions": "Modify the SYSTEM_PROMPT to make Claude respond in Spanish",
-            "template": "SYSTEM_PROMPT = '[Replace this text]'",
-            "hints": ["Tell Claude directly which language to use", "You can specify language requirements in the system prompt"]
-          },
-          "onePlayerOnly": {
-            "instructions": "Have Claude respond with only one player's name, no other text or punctuation",
-            "template": "[Replace this text]",
-            "hints": ["Be very specific about format requirements", "Clearly state no explanations or other content", "Force Claude to make a choice"]
-          },
-          "longStory": {
-            "instructions": "Write a story of 800+ words",
-            "template": "[Replace this text]",
-            "hints": ["Clearly specify story length", "You can provide specific story themes", "Request detailed descriptions and plot development"]
-          }
-        }
-      },
-      "chapter3": {
-        "title": "Chapter 3: Assigning Roles (Role Prompting)",
-        "theory": "Assigning specific roles to Claude can significantly improve performance. Role setting can change response style, tone, and level of expertise.",
-        "examples": [
-          "❌ No role: 'What about skateboarding?'",
-          "✅ Cat role: system='You are a cat' → will answer from a cat's perspective",
-          "❌ Logic error: Jack looks at Anne, Anne looks at George, Jack is married George is unmarried, is a married person looking at an unmarried person?",
-          "✅ Logic expert: system='You are a logical reasoning expert' → correctly analyzes this problem"
-        ],
-        "exercises": {
-          "mathCorrection": {
-            "instructions": "Have Claude find the math error: 2x-3=9, 2x=6, x=3",
-            "template": "Is this equation solved correctly?\n\n2x - 3 = 9\n2x = 6\nx = 3",
-            "hints": ["Assign Claude a math teacher or logic expert role", "Request careful checking of each step", "Emphasize finding the error"]
-          }
-        }
-      }
-    },
+    "practicalExamples": "Practical Examples",
     "practiceExercises": {
       "fundamentals": {
         "chapter1BasicStructure": {
@@ -784,6 +168,217 @@
         }
       }
     },
+    "prerequisites": "Prerequisites",
+    "exercise": "Exercise",
+    "instructions": "Instructions",
+    "hints": "Hints",
+    "showHints": "Show Hints",
+    "hideHints": "Hide Hints",
+    "yourPrompt": "Your Prompt",
+    "enterPromptHere": "Enter your prompt here...",
+    "checkAnswer": "Check Answer",
+    "reset": "Reset",
+    "exerciseCompleted": "Exercise completed!",
+    "exerciseCorrect": "Great! Your prompt works correctly.",
+    "exerciseIncorrect": "Not quite right. Try refining your prompt.",
+    "validationError": "Error validating your prompt.",
+    "tryAgainWithHints": "Try again or check the hints for guidance.",
+    "previousLesson": "Previous Lesson",
+    "nextLesson": "Next Lesson",
+    "practiceExercise": "Practice Exercise",
+    "stage1": {
+      "name": "Fundamentals",
+      "description": "Master the basics of clear and effective prompt communication"
+    },
+    "stage2": {
+      "name": "Intermediate",
+      "description": "Learn structured prompting and output formatting techniques"
+    },
+    "stage3": {
+      "name": "Advanced",
+      "description": "Explore complex prompting strategies and reasoning techniques"
+    },
+    "stage4": {
+      "name": "Practical",
+      "description": "Apply prompt engineering in real-world scenarios and workflows"
+    },
+    "lesson1": {
+      "title": "Basic Prompt Structure",
+      "summary": "Learn the fundamental elements of effective prompt design and clear communication with AI systems."
+    },
+    "lesson2": {
+      "title": "Being Clear and Direct",
+      "summary": "Eliminate ambiguity and get precise responses by being specific about your requirements."
+    },
+    "lesson3": {
+      "title": "Role Prompting",
+      "summary": "Assign specific roles and perspectives to improve response quality and consistency."
+    },
+    "lesson4": {
+      "title": "Data/Instruction Separation",
+      "summary": "Use clear delimiters to separate data from instructions for better prompt clarity."
+    },
+    "lesson5": {
+      "title": "Output Formatting",
+      "summary": "Specify exact output formats to get structured, consistent responses."
+    },
+    "lesson6": {
+      "title": "Step-by-Step Thinking",
+      "summary": "Leverage chain-of-thought prompting for better reasoning and problem-solving."
+    },
+    "course": {
+      "fundamentals": {
+        "title": "Fundamentals Course",
+        "summary": "Learn fundamental concepts and core principles of prompt engineering"
+      },
+      "intermediate": {
+        "title": "Intermediate Course",
+        "summary": "Master advanced techniques for data separation, output formatting, and systematic thinking"
+      }
+    },
+    "nextCourse": "Next Course",
+    "integratedCourse": "Integrated Course",
+    "courseOverview": "Course Overview",
+    "sections": "sections",
+    "previousCourse": "Previous Course",
+    "clickToStartPractice": "Click the editor below to start practice",
+    "learningMode": "Learning Mode",
+    "playgroundMode": "Playground",
+    "practiceMode": "Practice Mode",
+    "learningContent": "Learning Content",
+    "experimentalPlayground": "Experimental Playground",
+    "interactiveExercise": "Interactive Exercise",
+    "experimentWithThisPrompt": "Experiment with this prompt",
+    "promptExamples": "Prompt Examples",
+    "practicalExercises": "Practical Exercises",
+    "previous": "Previous",
+    "next": "Next",
+    "learningTips": "Learning Tips",
+    "tryDifferentVariations": "Try Different Prompt Variations",
+    "editPrompt": "Edit Prompt",
+    "systemPrompt": "System Prompt",
+    "systemPromptPlaceholder": "Set AI's role and behavior rules...",
+    "userPrompt": "User Prompt",
+    "userPromptPlaceholder": "Enter your question or instruction...",
+    "runPrompt": "Run Prompt",
+    "running": "Running...",
+    "aiResponse": "AI Response",
+    "goodPromptQuality": "Good output quality",
+    "canImprove": "Output can improve",
+    "aiThinking": "AI is thinking...",
+    "clickRunPrompt": "Click \"Run Prompt\" to see AI response",
+    "fundamentals": {
+      "title": "Fundamentals Course",
+      "theory": "Comprehensive step-by-step guide to mastering Claude's best prompt engineering practices. Learn three core skills: API structure, clear communication, and role assignment.",
+      "chapter1": {
+        "title": "Chapter 1: Basic Prompt Structure",
+        "theory": "Learn the required parameters of the Messages API: model, max_tokens, messages array. Master the user/assistant conversation format and correct usage of system prompts.",
+        "messageRules": {
+          "title": "Message Alternation Rule",
+          "content": "User and Assistant messages MUST alternate, and messages MUST start with a User turn."
+        },
+        "systemPrompts": {
+          "title": "System Prompts",
+          "content": "You can use a system prompt to give AI models instructions and guidelines. A system prompt is a way to provide context, instructions, and guidelines before presenting a question or task in the User turn. Structurally, system prompts exist separately from the list of User & Assistant messages, and thus belong in a separate \"system prompt\" parameter."
+        },
+        "messageFormatting": {
+          "title": "Message Formatting",
+          "content": "When using message APIs, be sure to demarcate messages by inserting a newline between each message (a message is a single User or Assistant turn). If you fail to do so, the AI will not return an error, but will consider everything not separated by a newline as part of a single message."
+        },
+        "multiTurnConversations": {
+          "title": "Multi-turn Conversations",
+          "content": "You can have multiple \"User:\" / \"Assistant:\" pairs in a prompt (as if simulating a multi-turn conversation). You can also put words into an ending \"Assistant:\" message for the AI to continue from where you left off."
+        },
+        "whySystemPrompts": {
+          "title": "Why use system prompts?",
+          "content": "A well-written system prompt can improve AI performance in a variety of ways, such as increasing the AI's ability to follow rules and instructions."
+        },
+        "examples": [
+          "✅ Correct format: {role: 'user', content: 'Hi Claude, how are you?'}",
+          "❌ Wrong format: {Hi Claude, how are you?} - missing role and content fields",
+          "✅ System prompt: 'You are a logical reasoning expert who specializes in solving complex logical problems'"
+        ],
+        "exercises": {
+          "countToThree": {
+            "instructions": "Use the correct user/assistant format to have Claude count to three",
+            "template": "[Replace this text]",
+            "hints": [
+              "State your request directly",
+              "Use simple clear instructions",
+              "Avoid unnecessary complexity"
+            ]
+          },
+          "systemPromptChild": {
+            "instructions": "Modify the SYSTEM_PROMPT to make Claude respond like a 3-year-old child",
+            "template": "SYSTEM_PROMPT = '[Replace this text]'",
+            "hints": [
+              "Think about how 3-year-olds speak",
+              "Use simple vocabulary and expressions",
+              "Add childlike language features"
+            ]
+          }
+        }
+      },
+      "chapter2": {
+        "title": "Chapter 2: Being Clear and Direct",
+        "theory": "Claude needs clear instructions. Follow the golden rule: if you show your prompt to a colleague and they're confused, Claude will be confused too.",
+        "examples": [
+          "❌ Vague: 'Write a haiku about robots'",
+          "✅ Clear: 'Write a haiku about robots, skip the preamble and go straight to the poem'",
+          "❌ Vague: 'Who is the best basketball player of all time?'",
+          "✅ Force choice: 'Who is the best basketball player of all time? While there are different opinions, if you had to choose one, who would it be?'"
+        ],
+        "exercises": {
+          "spanishResponse": {
+            "instructions": "Modify the SYSTEM_PROMPT to make Claude respond in Spanish",
+            "template": "SYSTEM_PROMPT = '[Replace this text]'",
+            "hints": [
+              "Tell Claude directly which language to use",
+              "You can specify language requirements in the system prompt"
+            ]
+          },
+          "onePlayerOnly": {
+            "instructions": "Have Claude respond with only one player's name, no other text or punctuation",
+            "template": "[Replace this text]",
+            "hints": [
+              "Be very specific about format requirements",
+              "Clearly state no explanations or other content",
+              "Force Claude to make a choice"
+            ]
+          },
+          "longStory": {
+            "instructions": "Write a story of 800+ words",
+            "template": "[Replace this text]",
+            "hints": [
+              "Clearly specify story length",
+              "You can provide specific story themes",
+              "Request detailed descriptions and plot development"
+            ]
+          }
+        }
+      },
+      "chapter3": {
+        "title": "Chapter 3: Assigning Roles (Role Prompting)",
+        "theory": "Assigning specific roles to Claude can significantly improve performance. Role setting can change response style, tone, and level of expertise.",
+        "examples": [
+          "❌ No role: 'What about skateboarding?'",
+          "✅ Cat role: system='You are a cat' → will answer from a cat's perspective",
+          "❌ Logic error: Jack looks at Anne, Anne looks at George, Jack is married George is unmarried, is a married person looking at an unmarried person?",
+          "✅ Logic expert: system='You are a logical reasoning expert' → correctly analyzes this problem"
+        ],
+        "exercises": {
+          "mathCorrection": {
+            "instructions": "Have Claude find the math error: 2x-3=9, 2x=6, x=3",
+            "template": "Is this equation solved correctly?\n\n2x - 3 = 9\n2x = 6\nx = 3",
+            "hints": [
+              "Assign Claude a math teacher or logic expert role",
+              "Request careful checking of each step",
+              "Emphasize finding the error"
+            ]
+          }
+        }
+      }
+    },
     "playground": {
       "chapter1": {
         "title": "Chapter 1 Playground: Basic Structure & System Prompts",
@@ -887,7 +482,8 @@
         "hint2": "Experiment with different expertise levels",
         "hint3": "Notice how role context shapes responses"
       }
-    }
+    },
+    "coreConceptsTitle": "Core Concepts"
   },
   "courses": {
     "intermediate": {

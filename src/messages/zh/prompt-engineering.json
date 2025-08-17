@@ -1,427 +1,4 @@
 {
-  "common": {
-    "title": "12Factor.me - Vibe 编程，成就 10x 工程师",
-    "subtitle": "面向 AI 时代开发者：四大阶段 · 十二项原则",
-    "language": "语言",
-    "home": "首页",
-    "principles": "原则",
-    "flashcards": "闪卡",
-    "quiz": "测验",
-    "promptEngineering": "提示工程",
-    "more": "更多",
-    "progress": "进度",
-    "learnMore": "了解更多",
-    "languageLabels": {
-      "chinese": "中文",
-      "english": "English"
-    },
-    "github": "GitHub",
-    "footer": {
-      "copyright": "12Factor",
-      "author": "@wquguru",
-      "license": "MIT 许可证"
-    },
-    "navigation": {
-      "methodology": "12Factor 方法论",
-      "principlesDescription": "学习12个核心原则和最佳实践",
-      "flashcardsDescription": "通过互动卡片巩固学习内容",
-      "quizDescription": "测试你对12Factor原则的理解",
-      "resources": "资源",
-      "githubRepo": "GitHub 仓库",
-      "githubRepoDescription": "查看源代码和贡献项目",
-      "apiDocs": "API 文档",
-      "communityForum": "社区论坛",
-      "comingSoon": "即将推出"
-    }
-  },
-  "home": {
-    "hero": {
-      "title": "12 条 Vibe Coding 原则",
-      "titleAlt": "提升 10 倍工程师效率",
-      "subtitle": "“四阶段十二原则”方法论为 10 倍工程效率提供行之有效的洞见，化繁为简，轻松上手。",
-      "cta": "学习原则",
-      "ctaSecondary": "使用闪卡练习",
-      "statsNumber": "12",
-      "statsCore": "核心原则",
-      "statsMethodology": "四阶段方法论"
-    },
-    "benefits": {
-      "title": "我们已破解10倍工程效率的密码。",
-      "subtitle": "12Factor 提供行之有效的方法论洞见，助您轻松掌握，拒绝认知过载。",
-      "aiCollaboration": {
-        "title": "精通 AI 协作",
-        "description": "学习系统化的 AI 工具协同方法，发掘提升生产力与代码质量的关键机会。"
-      },
-      "developmentFlow": {
-        "title": "掌控开发心流",
-        "description": "高效管理和追踪您的编码工作流，确保性能稳定和协作模式顺畅。"
-      },
-      "communication": {
-        "title": "搭建人机沟通之桥",
-        "description": "掌握高效的提示词技巧，实现清晰的 AI 指令沟通，强化开发协作效率。"
-      },
-      "progress": {
-        "title": "达成 10x 工程师效率",
-        "description": "精通 12Factor 方法论与 Vibe 编程实践的协同效应，释放前所未有的开发生产力和代码质量。"
-      }
-    },
-    "bigPicture": {
-      "title": "洞察全局",
-      "subtitle": "12Factor 将复杂的开发方法论，转化为清晰、可行的原则，精准指导您如何优化 AI 协作工作流。",
-      "step1": {
-        "title": "分钟级掌握原则",
-        "description": "告别冗长的文档检索，快速上手。"
-      },
-      "step2": {
-        "title": "促进团队共识",
-        "description": "与团队共享一致的 AI 协作模式，提升整体效能。"
-      },
-      "step3": {
-        "title": "互动式学习体验",
-        "description": "游戏化的闪卡和测验，有效激发团队学习热情。"
-      },
-      "step4": {
-        "title": "团队开发快照",
-        "description": "快速、清晰地概览您团队的 AI 协作成熟度。"
-      },
-      "cta": "学习原则"
-    },
-    "learningPath": {
-      "title": "四阶段学习路径",
-      "subtitle": "遵循为现代开发者设计的系统化四阶段方法，精通 AI 协作。",
-      "prepare": {
-        "title": "准备 (Prepare)",
-        "description": "单一真源 (Single Source of Truth)、提示词先行 (Prompt First)、上下文洁净 (Context Hygiene) - 为高效的 AI 协作奠定坚实基础。"
-      },
-      "execute": {
-        "title": "执行 (Execute)",
-        "description": "人在回路 (Human-in-the-Loop)、分块工作 (Chunked Work)、并行流程 (Parallel Flow) - 实施系统化的开发过程。"
-      },
-      "collaborate": {
-        "title": "协作 (Collaborate)",
-        "description": "认知负荷预算 (Cognitive Load Budget)、心流保护 (Flow Protection)、可复现会话 (Reproducible Sessions) - 优化团队协作模式。"
-      },
-      "iterate": {
-        "title": "迭代 (Iterate)",
-        "description": "休息与反思 (Rest & Reflection)、技能对等 (Skill Parity)、好奇心文化 (Culture of Curiosity) - 鼓励持续改进与学习。"
-      }
-    },
-    "journey": {
-      "title": "开启您的精通之旅",
-      "subtitle": "从这里开始，使用我们为开发者精心打造的免费开源学习平台，逐步精通 AI 协作。",
-      "step1": {
-        "title": "学习原则",
-        "description": "通过互动内容和真实世界案例，探索 12 项基本原则。"
-      },
-      "step2": {
-        "title": "练习与测试",
-        "description": "使用闪卡和测验巩固理解，并追踪学习进度。"
-      },
-      "step3": {
-        "title": "付诸实践",
-        "description": "将方法论应用于您的日常开发工作流，并与团队分享知识。"
-      },
-      "ctaPrimary": "学习原则",
-      "ctaSecondary": "使用闪卡练习"
-    }
-  },
-  "principles": {
-    "title": "十二项原则",
-    "stage": "阶段",
-    "concept": "核心概念",
-    "practices": "推荐实践",
-    "antiPatterns": "反面模式",
-    "backToStages": "返回阶段列表",
-    "fallbackTitle": "精通12项原则", 
-    "fallbackDescription": "通过我们结构化的四阶段方法，逐一精通全部 12 项原则。请选择一个阶段开始探索。",
-    "stageLabel": "阶段原则",
-    "coreLabel": "核心原则",
-    "practiceWithFlashcards": "使用闪卡练习",
-    "takeQuiz": "进行测验",
-    "fourStageMethodology": "四阶段方法论",
-    "chooseLearningPath": "精通12项原则",
-    "chooseLearningPathDescription": "通过我们结构化的四阶段方法，逐一精通全部 12 项原则。请选择一个阶段开始探索。",
-    "stagePrinciplesTitle": "阶段 {stage} 原则",
-    "stagePrinciplesDescription": "深入探索当前阶段的各项原则。",
-    "stage1Title": "准备阶段：奠定坚实基础",
-    "stage1Description": "建立清晰的信息源，优化提示词，保持上下文整洁。",
-    "stage2Title": "执行阶段：高效协作流程",
-    "stage2Description": "人机协同决策，任务分块执行，多线程并行处理。",
-    "stage3Title": "协作阶段：团队协同优化",
-    "stage3Description": "管理认知负荷，保护心流状态，确保会话可复现。",
-    "stage4Title": "迭代阶段：持续改进成长",
-    "stage4Description": "适时休息反思，保持技能同步，培养好奇心文化。",
-    "viewPrinciples": "查看原则",
-    "principlesCount": "项原则",
-    "previousStage": "上一阶段",
-    "nextStage": "下一阶段",
-    "principle1": {
-      "name": "单一真源 (Single Source of Truth)",
-      "concept": "信息分散会导致上下文混乱，容易造成人机双方的误判。",
-      "practices": [
-        "将所有需求、设计及上下文集中于统一的文档中心 (如 Notion / Confluence / GitHub Wiki)。",
-        "与 AI 协作时，应直接引用此“真源”，而非随意复制粘贴信息。"
-      ],
-      "antiPatterns": [
-        "团队成员各自维护不同版本的文档，导致 AI 给出的回应和建议不一致。"
-      ]
-    },
-    "principle2": {
-      "name": "提示词先行 (Prompt First)",
-      "concept": "将提示词 (Prompt) 视为新一代的设计文档。",
-      "practices": [
-        "在任务开始前，优先编写提示词，用以明确输入、输出、风格和约束条件。",
-        "团队内部复用经过验证和优化的提示词模板。"
-      ],
-      "antiPatterns": [
-        "未经规划，直接要求 AI 编写代码，导致方向错误和不必要的返工。"
-      ]
-    }
-  },
-  "flashcards": {
-    "title": "互动学习",
-    "subtitle": "通过引人入胜的闪卡来掌握 12 项原则，加深您对 AI 协作方法论的理解。",
-    "studyPrinciples": "学习原则",
-    "takeQuiz": "开始测验",
-    "progress": "进度",
-    "of": "/",
-    "practiceSession": "练习环节",
-    "practiceDescription": "仔细复习每项原则，通过互动闪卡检验您的理解程度。",
-    "startPracticing": "开始练习",
-    "learningProgress": "学习进度",
-    "flip": "点击翻面",
-    "next": "下一阶段",
-    "previous": "上一阶段",
-    "mastered": "已掌握",
-    "needsReview": "待复习",
-    "showAnswer": "显示答案",
-    "quickJump": "快速跳转",
-    "quickJumpDescription": "快速导航至任意原则",
-    "statusNew": "新",
-    "statusLearning": "学习中",
-    "statusDone": "已完成",
-    "statusReview": "复习",
-    "stage": "阶段",
-    "flipBack": "点击翻回",
-    "principleOf": "第 {current} / {total} 项原则"
-  },
-  "quiz": {
-    "title": "知识测验",
-    "question": "问题",
-    "submit": "提交",
-    "next": "下一题",
-    "results": "查看结果",
-    "score": "您的得分",
-    "retry": "再试一次",
-    "chooseChallenge": "选择您的挑战",
-    "selectModeDescription": "选择一种测验模式，检验您对 12Factor 理论的掌握程度，并通过不同级别的挑战来追踪您的学习进度。",
-    "quizModes": "测验模式",
-    "chooseChallengeLevel": "选择一个最适合您学习目标和当前水平的挑战。",
-    "chooseMode": "选择模式",
-    "viewResults": "查看结果",
-    "normalMode": "普通模式",
-    "normalModeSubtitle": "无时间限制 • 覆盖所有题型",
-    "normalModeDescription": "从容思考每个问题，非常适合初次学习和巩固知识，稳步建立信心。",
-    "timedMode": "限时模式",
-    "timedModeSubtitle": "每题 30 秒 • 模拟实战压力",
-    "timedModeDescription": "与时间赛跑！每题 30 秒，考验您的快速反应和知识提取能力。",
-    "challengeMode": "挑战模式",
-    "challengeModeSubtitle": "高难度问题 • 连对奖励",
-    "challengeModeDescription": "面对更困难的问题和场景。保持连对以获得额外积分，挑战更高难度的学习。",
-    "adaptiveMode": "自适应模式",
-    "adaptiveModeSubtitle": "AI 动态难度 • 个性化学习",
-    "adaptiveModeDescription": "题目难度会根据您的表现动态调整。表现越好，难度越高，实现最高效的学习曲线。",
-    "quizComplete": "测验完成！",
-    "modeResults": "“{mode}”模式挑战结果",
-    "performanceSummary": "您的表现摘要",
-    "excellent": "表现卓越！",
-    "goodJob": "干得漂亮！",
-    "keepLearning": "继续努力！",
-    "maxStreak": "最高连对：连续答对 {streak} 题！",
-    "challengeBonus": "挑战奖励：加 {points} 分",
-    "backToModes": "返回测验模式",
-    "modeLabel": "{mode} 模式",
-    "interactiveQuiz": "互动测验",
-    "questionCount": "第 {current} 题 / 共 {total} 题",
-    "scenario": "场景题",
-    "questionType": "{type}题",
-    "nextQuestion": "下一题",
-    "submitQuiz": "提交测验",
-    "difficulty": {
-      "easy": "简单",
-      "medium": "中等",
-      "hard": "困难"
-    },
-    "wrongAnswers": [
-      "在多个来源存储上下文以最大化灵活性",
-      "让AI处理所有决策，无需人工干预",
-      "专注于在单个会话中完成所有工作"
-    ],
-    "principleOptions": {
-      "contextHygiene": "上下文洁净 (Context Hygiene)",
-      "singleSource": "单一真源 (Single Source of Truth)",
-      "chunkedWork": "分块工作 (Chunked Work)",
-      "humanInLoop": "人在回路 (Human-in-the-Loop)",
-      "promptFirst": "提示优先 (Prompt First)",
-      "parallelFlow": "并行流 (Parallel Flow)",
-      "cognitiveLoadBudget": "认知负荷预算 (Cognitive Load Budget)",
-      "flowProtection": "心流保护 (Flow Protection)",
-      "reproducibleSessions": "可重现会话 (Reproducible Sessions)",
-      "restReflection": "休息与反思 (Rest & Reflection)",
-      "skillParity": "技能平等 (Skill Parity)",
-      "cultureOfCuriosity": "好奇文化 (Culture of Curiosity)"
-    },
-    "principle1": {
-      "name": "单一真源 (Single Source of Truth)",
-      "concept": "信息分散会导致上下文混乱，容易造成人机双方的误判。",
-      "practices": [
-        "将所有需求、设计及上下文集中于统一的文档中心 (如 Notion / Confluence / GitHub Wiki)。",
-        "与 AI 协作时，应直接引用此“真源”，而非随意复制粘贴信息。"
-      ],
-      "antiPatterns": [
-        "团队成员各自维护不同版本的文档，导致 AI 给出的回应和建议不一致。"
-      ]
-    },
-    "principle2": {
-      "name": "提示词先行 (Prompt First)",
-      "concept": "将提示词 (Prompt) 视为新一代的设计文档。",
-      "practices": [
-        "在任务开始前，优先编写提示词，用以明确输入、输出、风格和约束条件。",
-        "团队内部复用经过验证和优化的提示词模板。"
-      ],
-      "antiPatterns": [
-        "未经规划，直接要求 AI 编写代码，导致方向错误和不必要的返工。"
-      ]
-    },
-    "principle3": {
-      "name": "上下文洁净 (Context Hygiene)",
-      "concept": "干净的上下文能让 AI 更精准。",
-      "practices": [
-        "每个新任务开独立会话，避免旧内容干扰",
-        "定期用一句话总结现状，让 AI \"对齐背景\""
-      ],
-      "antiPatterns": [
-        "把三天前的对话和今天的任务混在一起"
-      ]
-    },
-    "principle4": {
-      "name": "人类在环 (Human-in-the-Loop)",
-      "concept": "AI 产出快，但只有人类能把握方向与业务判断。",
-      "practices": [
-        "AI 给初稿，人类负责关键决策与风险把关",
-        "对重要功能先进行逻辑验证，再合并代码"
-      ],
-      "antiPatterns": [
-        "全盘接受 AI 产出，不做任何审查"
-      ]
-    },
-    "principle5": {
-      "name": "任务块化 (Chunked Work)",
-      "concept": "大任务拆小块，易于迭代与修正。",
-      "practices": [
-        "任务控制在可 10~30 分钟完成的小范围",
-        "每块结束后立即验证结果"
-      ],
-      "antiPatterns": [
-        "一次性让 AI 写 5000 行，结果无法调试"
-      ]
-    },
-    "principle6": {
-      "name": "并行流动 (Parallel Flow)",
-      "concept": "AI 工作时，人类做低切换成本的副任务，保持节奏不断。",
-      "practices": [
-        "准备一个\"副任务清单\"，包含文档整理、小修复、代码审查等",
-        "等待 AI 时，不接入高认知负载的新任务，避免切换开销过大"
-      ],
-      "antiPatterns": [
-        "等待 AI 时去刷社交媒体，导致节奏断档"
-      ]
-    },
-    "principle7": {
-      "name": "负载预算 (Cognitive Load Budget)",
-      "concept": "人类注意力是稀缺资源。",
-      "practices": [
-        "为 AI 协作设定每日时长上限",
-        "在精神高峰期安排深度审查任务"
-      ],
-      "antiPatterns": [
-        "全天候黏着 AI 工作，晚上完全耗尽"
-      ]
-    },
-    "principle8": {
-      "name": "流保护罩 (Flow Protection)",
-      "concept": "高专注流一旦被打断，恢复成本极高。",
-      "practices": [
-        "设定专注时段（如 90 分钟），屏蔽通知与打扰",
-        "AI 交互也在专注流中批量进行，而非零散触发"
-      ],
-      "antiPatterns": [
-        "边写代码边回微信边看 AI 输出，效率断崖式下降"
-      ]
-    },
-    "principle9": {
-      "name": "可复现性 (Reproducible Sessions)",
-      "concept": "协作过程可回溯，才能持续优化。",
-      "practices": [
-        "保存 Prompt、AI 版本、变更原因到代码库或知识库",
-        "出现 bug 时可重放生成过程"
-      ],
-      "antiPatterns": [
-        "AI 生成历史无记录，出错无法还原原因"
-      ]
-    },
-    "principle10": {
-      "name": "休息反思 (Rest & Reflection)",
-      "concept": "冲刺后复盘，才能越跑越快。",
-      "practices": [
-        "冲刺结束后，花 5 分钟复盘 AI 产出与预期差异",
-        "更新 Prompt 模板，积累\"踩坑记录\""
-      ],
-      "antiPatterns": [
-        "连续冲刺，累积错误不总结"
-      ]
-    },
-    "principle11": {
-      "name": "技能均衡 (Skill Parity)",
-      "concept": "AI 是放大镜，放大能力，也放大短板。",
-      "practices": [
-        "持续学习领域知识与代码审查技巧",
-        "对 AI 输出保持独立判断能力"
-      ],
-      "antiPatterns": [
-        "完全依赖 AI，失去手写能力与技术洞察力"
-      ]
-    },
-    "principle12": {
-      "name": "好奇文化 (Culture of Curiosity)",
-      "concept": "好奇心驱动探索，避免\"盲信 AI\"。",
-      "practices": [
-        "面对 AI 答案，先问\"为什么\"，再问\"还能更好吗\"",
-        "团队分享 AI 使用经验与改进思路"
-      ],
-      "antiPatterns": [
-        "对 AI 方案照单全收，从不质疑"
-      ]
-    },
-    "stages": {
-      "stage1": {
-        "name": "准备",
-        "description": "建立清晰的信息架构和上下文环境"
-      },
-      "stage2": {
-        "name": "执行",
-        "description": "高效协作完成具体任务"
-      },
-      "stage3": {
-        "name": "协作",
-        "description": "管理协作过程中的认知负载和工作流"
-      },
-      "stage4": {
-        "name": "迭代",
-        "description": "持续学习和改进协作模式"
-      }
-    }
-  },
   "promptEngineering": {
     "title": "提示工程精通",
     "description": "通过互动课程和实践练习学习实用的提示工程技术",
@@ -436,234 +13,8 @@
     "chapter": "章节",
     "theory": "理论",
     "examples": "示例",
-    "exercises": "练习",
-    "practicalExamples": "实践示例",
-    "practiceExercises": "练习题",
-    "prerequisites": "前置要求",
-    "exercise": "练习",
-    "instructions": "说明",
-    "hints": "提示",
-    "showHints": "显示提示",
-    "hideHints": "隐藏提示",
-    "yourPrompt": "你的提示词",
-    "enterPromptHere": "在这里输入你的提示词...",
-    "checkAnswer": "检查答案",
-    "reset": "重置",
-    "exerciseCompleted": "练习完成！",
-    "exerciseCorrect": "很好！你的提示词正确工作了。",
-    "exerciseIncorrect": "不太对。试试改进你的提示词。",
-    "validationError": "验证你的提示词时出错。",
-    "tryAgainWithHints": "再试一次或查看提示指导。",
-    "previousLesson": "上一课",
-    "nextLesson": "下一课",
-    "practiceExercise": "实践练习",
-    "nextCourse": "下一课程",
-    "stage1": {
-      "name": "基础",
-      "description": "掌握清晰有效的提示词交流基础"
-    },
-    "stage2": {
-      "name": "中级",
-      "description": "学习结构化提示词和输出格式化技术"
-    },
-    "stage3": {
-      "name": "高级",
-      "description": "探索复杂的提示策略和推理技术"
-    },
-    "stage4": {
-      "name": "实践",
-      "description": "在真实场景和工作流中应用提示工程"
-    },
-    "lesson1": {
-      "title": "基本提示结构",
-      "summary": "学习有效提示词设计的基本要素和与AI系统的清晰交流。"
-    },
-    "lesson2": {
-      "title": "清晰直接",
-      "summary": "通过明确需求消除歧义，获得精确的回复。"
-    },
-    "lesson3": {
-      "title": "角色提示",
-      "summary": "分配特定角色和视角来改善回复质量和一致性。"
-    },
-    "lesson4": {
-      "title": "数据/指令分离",
-      "summary": "使用清晰的分隔符将数据与指令分离，提高提示词清晰度。"
-    },
-    "lesson5": {
-      "title": "输出格式化",
-      "summary": "指定确切的输出格式以获得结构化、一致的回复。"
-    },
-    "lesson6": {
-      "title": "逐步思考",
-      "summary": "利用思维链提示来改善推理和问题解决。"
-    },
-    "integratedCourse": "综合课程",
-    "courseOverview": "课程概览",
-    "course": {
-      "fundamentals": {
-        "title": "基础课程",
-        "summary": "学习提示工程的基本概念和核心原理"
-      },
-      "intermediate": {
-        "title": "中级课程",
-        "summary": "掌握数据分离、输出格式化和系统性思考的高级技术"
-      }
-    },
-    "nextCourse": "下一课程",
-    "sections": "章节",
-    "previousCourse": "上一课程",
-    "clickToStartPractice": "点击下方编辑器开始练习",
-    "learningMode": "学习模式",
-    "playgroundMode": "Playground",
-    "practiceMode": "练习模式", 
-    "learningContent": "学习内容",
-    "experimentalPlayground": "实验性练习场",
-    "interactiveExercise": "交互式练习",
-    "experimentWithThisPrompt": "尝试这个提示词",
-    "promptExamples": "提示示例",
-    "practicalExercises": "实践练习",
     "exercises": "个",
-    "previous": "上一项",
-    "next": "下一项",
-    "showHints": "显示提示",
-    "hideHints": "隐藏提示",
-    "learningTips": "学习提示",
-    "tryDifferentVariations": "尝试不同的提示词变体",
-    "editPrompt": "编辑提示词",
-    "systemPrompt": "系统提示",
-    "systemPromptPlaceholder": "设定AI的角色和行为规则...",
-    "userPrompt": "用户提示",
-    "userPromptPlaceholder": "输入你的问题或指令...",
-    "runPrompt": "运行提示",
-    "running": "运行中...",
-    "reset": "重置",
-    "aiResponse": "AI 响应",
-    "goodPromptQuality": "输出效果好",
-    "canImprove": "输出可改进",
-    "aiThinking": "AI 正在思考...",
-    "clickRunPrompt": "点击\"运行提示\"查看AI响应",
-    "fundamentals": {
-      "title": "基础课程",
-      "theory": "掌握Claude最佳提示工程的全面分步指南。学习API结构、清晰沟通、角色分配三大核心技能。",
-      "chapter1": {
-        "title": "第一章：基本提示结构",
-        "theory": "学习Messages API的必需参数：model、max_tokens、messages数组。掌握user/assistant对话格式和系统提示的正确使用。",
-        "messageRules": {
-          "title": "消息交替原则",
-          "content": "用户(User)和助手(Assistant)消息必须交替出现，且必须以用户(User)轮次开始。"
-        },
-        "systemPrompts": {
-          "title": "系统提示",
-          "content": "系统提示可用于为AI模型提供上下文、指令和指导原则。系统提示在结构上独立于用户和助手消息列表之外，需要在单独的\"系统提示\"参数中指定。"
-        },
-        "messageFormatting": {
-          "title": "消息格式化",
-          "content": "使用消息API时，务必在每条消息之间插入换行符（一条消息即为单个用户或助手轮次）。如果不这样做，AI不会返回错误，但会将未用换行符分隔的所有内容视为单条消息的一部分。"
-        },
-        "multiTurnConversations": {
-          "title": "多轮对话",
-          "content": "您可以在提示中包含多个\"用户:\"/\"助手:\"对话轮次（如模拟多轮对话）。您也可以在结尾的\"助手:\"消息中放入内容，让AI从您留下的位置继续回答。"
-        },
-        "whySystemPrompts": {
-          "title": "系统提示的价值",
-          "content": "良好编写的系统提示可以在多个方面改善AI的表现，例如提高AI遵循规则和指令的能力。"
-        },
-        "examples": [
-          "✅ 正确格式: {role: 'user', content: 'Hi Claude, how are you?'}",
-          "❌ 错误格式: {Hi Claude, how are you?} - 缺少role和content字段",
-          "✅ 系统提示: '你是一个逻辑推理专家，专门解决复杂逻辑问题'"
-        ],
-        "exercises": {
-          "countToThree": {
-            "instructions": "使用正确的user/assistant格式，让Claude数到三",
-            "template": "[Replace this text]",
-            "hints": ["直接说出你的需求", "使用简单清晰的指令", "避免不必要的复杂性"]
-          },
-          "systemPromptChild": {
-            "instructions": "修改系统提示让Claude像3岁小孩一样回应",
-            "template": "系统提示 = '[Replace this text]'",
-            "hints": ["想想3岁孩子如何说话", "使用简单词汇和表达", "加入孩子气的语言特征"]
-          }
-        }
-      },
-      "chapter2": {
-        "title": "第二章：清晰直接",
-        "theory": "AI需要明确具体的指令才能产生准确回应。就像指导新员工一样，越详细直接的说明，AI的表现越好。",
-        "directCommunication": {
-          "title": "明确性原则",
-          "content": "模糊指令导致差结果，具体要求获得好输出。直接说明你的需求和期望。"
-        },
-        "specificityMatters": {
-          "title": "格式约束",
-          "content": "指定输出格式、长度、风格等约束条件，让AI产出符合预期的结果。"
-        },
-        "goldenRule": {
-          "title": "同事测试法",
-          "content": "把提示词给同事看，如果他们困惑，AI也会困惑。"
-        },
-        "forcedChoices": {
-          "title": "强制选择",
-          "content": "用'如果必须选择一个'让AI避免模糊回避，给出明确答案。"
-        },
-        "examples": [
-          "❌ 模糊: '写一首关于机器人的俳句'",
-          "✅ 明确: '写一首关于机器人的俳句，跳过前言直接进入诗歌'",
-          "❌ 模糊: '谁是史上最佳篮球运动员？'",
-          "✅ 强制选择: '谁是史上最佳篮球运动员？虽然有不同观点，但如果你必须选择一个，会是谁？'"
-        ],
-        "exercises": {
-          "spanishResponse": {
-            "instructions": "修改系统提示让AI用西班牙语回答",
-            "template": "系统提示 = '[Replace this text]'",
-            "hints": ["直接告诉AI使用哪种语言", "可以在系统提示中指定语言要求"]
-          },
-          "onePlayerOnly": {
-            "instructions": "让AI只回答一个球员的名字，没有其他文字或标点",
-            "template": "[Replace this text]",
-            "hints": ["要非常具体地说明格式要求", "明确说明不要解释或其他内容", "强制AI做出选择"]
-          },
-          "longStory": {
-            "instructions": "写一个800字以上的故事",
-            "template": "[Replace this text]",
-            "hints": ["明确要求故事长度", "可以给出具体的故事题材", "要求详细描述和情节发展"]
-          }
-        }
-      },
-      "chapter3": {
-        "title": "第三章：角色分配",
-        "theory": "给Claude分配具体角色能显著提升表现。就像让人“像某某一样思考”能帮助解决问题一样，角色提示可以改变回应的风格、语调和专业程度。",
-        "roleContext": {
-          "title": "角色上下文",
-          "content": "Claude只知道你告诉它的信息，因此需要提供完整的角色背景和上下文。"
-        },
-        "roleEffects": {
-          "title": "角色效果",
-          "content": "角色设定可以改变回应风格、语调和专业程度，提高在特定领域的表现。"
-        },
-        "rolePromptLocation": {
-          "title": "设置位置",
-          "content": "角色可以在系统提示或用户消息中设定，两种方式都有效。"
-        },
-        "detailMatters": {
-          "title": "细节重要性",
-          "content": "角色描述越详细，效果越好。包含具体的专业背景和行为期望。"
-        },
-        "examples": [
-          "❌ 无角色: '滑板运动怎么样？'",
-          "✅ 特定角色: system='你是一个滑板教练' → 专业回应",
-          "❌ 逻辑问题: 'Jack看Anne，Anne看George，Jack已婚George未婚，已婚者在看未婚者吗？'",
-          "✅ 专家角色: system='你是逻辑推理专家' → 精准分析"
-        ],
-        "exercises": {
-          "mathCorrection": {
-            "instructions": "让Claude发现这个数学错误：2x-3=9, 2x=6, x=3",
-            "template": "这个方程解得对吗？\n\n2x - 3 = 9\n2x = 6\nx = 3",
-            "hints": ["给Claude分配数学老师或逻辑推理专家角色", "要求仔细检查每一步", "强调找出错误"]
-          }
-        }
-      }
-    },
+    "practicalExamples": "实践示例",
     "practiceExercises": {
       "fundamentals": {
         "chapter1BasicStructure": {
@@ -817,6 +168,249 @@
         }
       }
     },
+    "prerequisites": "前置要求",
+    "exercise": "练习",
+    "instructions": "说明",
+    "hints": "提示",
+    "showHints": "显示提示",
+    "hideHints": "隐藏提示",
+    "yourPrompt": "你的提示词",
+    "enterPromptHere": "在这里输入你的提示词...",
+    "checkAnswer": "检查答案",
+    "reset": "重置",
+    "exerciseCompleted": "练习完成！",
+    "exerciseCorrect": "很好！你的提示词正确工作了。",
+    "exerciseIncorrect": "不太对。试试改进你的提示词。",
+    "validationError": "验证你的提示词时出错。",
+    "tryAgainWithHints": "再试一次或查看提示指导。",
+    "previousLesson": "上一课",
+    "nextLesson": "下一课",
+    "practiceExercise": "实践练习",
+    "nextCourse": "下一课程",
+    "stage1": {
+      "name": "基础",
+      "description": "掌握清晰有效的提示词交流基础"
+    },
+    "stage2": {
+      "name": "中级",
+      "description": "学习结构化提示词和输出格式化技术"
+    },
+    "stage3": {
+      "name": "高级",
+      "description": "探索复杂的提示策略和推理技术"
+    },
+    "stage4": {
+      "name": "实践",
+      "description": "在真实场景和工作流中应用提示工程"
+    },
+    "lesson1": {
+      "title": "基本提示结构",
+      "summary": "学习有效提示词设计的基本要素和与AI系统的清晰交流。"
+    },
+    "lesson2": {
+      "title": "清晰直接",
+      "summary": "通过明确需求消除歧义，获得精确的回复。"
+    },
+    "lesson3": {
+      "title": "角色提示",
+      "summary": "分配特定角色和视角来改善回复质量和一致性。"
+    },
+    "lesson4": {
+      "title": "数据/指令分离",
+      "summary": "使用清晰的分隔符将数据与指令分离，提高提示词清晰度。"
+    },
+    "lesson5": {
+      "title": "输出格式化",
+      "summary": "指定确切的输出格式以获得结构化、一致的回复。"
+    },
+    "lesson6": {
+      "title": "逐步思考",
+      "summary": "利用思维链提示来改善推理和问题解决。"
+    },
+    "integratedCourse": "综合课程",
+    "courseOverview": "课程概览",
+    "course": {
+      "fundamentals": {
+        "title": "基础课程",
+        "summary": "学习提示工程的基本概念和核心原理"
+      },
+      "intermediate": {
+        "title": "中级课程",
+        "summary": "掌握数据分离、输出格式化和系统性思考的高级技术"
+      }
+    },
+    "sections": "章节",
+    "previousCourse": "上一课程",
+    "clickToStartPractice": "点击下方编辑器开始练习",
+    "learningMode": "学习模式",
+    "playgroundMode": "Playground",
+    "practiceMode": "练习模式",
+    "learningContent": "学习内容",
+    "experimentalPlayground": "实验性练习场",
+    "interactiveExercise": "交互式练习",
+    "experimentWithThisPrompt": "尝试这个提示词",
+    "promptExamples": "提示示例",
+    "practicalExercises": "实践练习",
+    "previous": "上一项",
+    "next": "下一项",
+    "learningTips": "学习提示",
+    "tryDifferentVariations": "尝试不同的提示词变体",
+    "editPrompt": "编辑提示词",
+    "systemPrompt": "系统提示",
+    "systemPromptPlaceholder": "设定AI的角色和行为规则...",
+    "userPrompt": "用户提示",
+    "userPromptPlaceholder": "输入你的问题或指令...",
+    "runPrompt": "运行提示",
+    "running": "运行中...",
+    "aiResponse": "AI 响应",
+    "goodPromptQuality": "输出效果好",
+    "canImprove": "输出可改进",
+    "aiThinking": "AI 正在思考...",
+    "clickRunPrompt": "点击\"运行提示\"查看AI响应",
+    "fundamentals": {
+      "title": "基础课程",
+      "theory": "掌握Claude最佳提示工程的全面分步指南。学习API结构、清晰沟通、角色分配三大核心技能。",
+      "chapter1": {
+        "title": "第一章：基本提示结构",
+        "theory": "学习Messages API的必需参数：model、max_tokens、messages数组。掌握user/assistant对话格式和系统提示的正确使用。",
+        "messageRules": {
+          "title": "消息交替原则",
+          "content": "用户(User)和助手(Assistant)消息必须交替出现，且必须以用户(User)轮次开始。"
+        },
+        "systemPrompts": {
+          "title": "系统提示",
+          "content": "系统提示可用于为AI模型提供上下文、指令和指导原则。系统提示在结构上独立于用户和助手消息列表之外，需要在单独的\"系统提示\"参数中指定。"
+        },
+        "messageFormatting": {
+          "title": "消息格式化",
+          "content": "使用消息API时，务必在每条消息之间插入换行符（一条消息即为单个用户或助手轮次）。如果不这样做，AI不会返回错误，但会将未用换行符分隔的所有内容视为单条消息的一部分。"
+        },
+        "multiTurnConversations": {
+          "title": "多轮对话",
+          "content": "您可以在提示中包含多个\"用户:\"/\"助手:\"对话轮次（如模拟多轮对话）。您也可以在结尾的\"助手:\"消息中放入内容，让AI从您留下的位置继续回答。"
+        },
+        "whySystemPrompts": {
+          "title": "系统提示的价值",
+          "content": "良好编写的系统提示可以在多个方面改善AI的表现，例如提高AI遵循规则和指令的能力。"
+        },
+        "examples": [
+          "✅ 正确格式: {role: 'user', content: 'Hi Claude, how are you?'}",
+          "❌ 错误格式: {Hi Claude, how are you?} - 缺少role和content字段",
+          "✅ 系统提示: '你是一个逻辑推理专家，专门解决复杂逻辑问题'"
+        ],
+        "exercises": {
+          "countToThree": {
+            "instructions": "使用正确的user/assistant格式，让Claude数到三",
+            "template": "[Replace this text]",
+            "hints": [
+              "直接说出你的需求",
+              "使用简单清晰的指令",
+              "避免不必要的复杂性"
+            ]
+          },
+          "systemPromptChild": {
+            "instructions": "修改系统提示让Claude像3岁小孩一样回应",
+            "template": "系统提示 = '[Replace this text]'",
+            "hints": [
+              "想想3岁孩子如何说话",
+              "使用简单词汇和表达",
+              "加入孩子气的语言特征"
+            ]
+          }
+        }
+      },
+      "chapter2": {
+        "title": "第二章：清晰直接",
+        "theory": "AI需要明确具体的指令才能产生准确回应。就像指导新员工一样，越详细直接的说明，AI的表现越好。",
+        "directCommunication": {
+          "title": "明确性原则",
+          "content": "模糊指令导致差结果，具体要求获得好输出。直接说明你的需求和期望。"
+        },
+        "specificityMatters": {
+          "title": "格式约束",
+          "content": "指定输出格式、长度、风格等约束条件，让AI产出符合预期的结果。"
+        },
+        "goldenRule": {
+          "title": "同事测试法",
+          "content": "把提示词给同事看，如果他们困惑，AI也会困惑。"
+        },
+        "forcedChoices": {
+          "title": "强制选择",
+          "content": "用'如果必须选择一个'让AI避免模糊回避，给出明确答案。"
+        },
+        "examples": [
+          "❌ 模糊: '写一首关于机器人的俳句'",
+          "✅ 明确: '写一首关于机器人的俳句，跳过前言直接进入诗歌'",
+          "❌ 模糊: '谁是史上最佳篮球运动员？'",
+          "✅ 强制选择: '谁是史上最佳篮球运动员？虽然有不同观点，但如果你必须选择一个，会是谁？'"
+        ],
+        "exercises": {
+          "spanishResponse": {
+            "instructions": "修改系统提示让AI用西班牙语回答",
+            "template": "系统提示 = '[Replace this text]'",
+            "hints": [
+              "直接告诉AI使用哪种语言",
+              "可以在系统提示中指定语言要求"
+            ]
+          },
+          "onePlayerOnly": {
+            "instructions": "让AI只回答一个球员的名字，没有其他文字或标点",
+            "template": "[Replace this text]",
+            "hints": [
+              "要非常具体地说明格式要求",
+              "明确说明不要解释或其他内容",
+              "强制AI做出选择"
+            ]
+          },
+          "longStory": {
+            "instructions": "写一个800字以上的故事",
+            "template": "[Replace this text]",
+            "hints": [
+              "明确要求故事长度",
+              "可以给出具体的故事题材",
+              "要求详细描述和情节发展"
+            ]
+          }
+        }
+      },
+      "chapter3": {
+        "title": "第三章：角色分配",
+        "theory": "给Claude分配具体角色能显著提升表现。就像让人“像某某一样思考”能帮助解决问题一样，角色提示可以改变回应的风格、语调和专业程度。",
+        "roleContext": {
+          "title": "角色上下文",
+          "content": "Claude只知道你告诉它的信息，因此需要提供完整的角色背景和上下文。"
+        },
+        "roleEffects": {
+          "title": "角色效果",
+          "content": "角色设定可以改变回应风格、语调和专业程度，提高在特定领域的表现。"
+        },
+        "rolePromptLocation": {
+          "title": "设置位置",
+          "content": "角色可以在系统提示或用户消息中设定，两种方式都有效。"
+        },
+        "detailMatters": {
+          "title": "细节重要性",
+          "content": "角色描述越详细，效果越好。包含具体的专业背景和行为期望。"
+        },
+        "examples": [
+          "❌ 无角色: '滑板运动怎么样？'",
+          "✅ 特定角色: system='你是一个滑板教练' → 专业回应",
+          "❌ 逻辑问题: 'Jack看Anne，Anne看George，Jack已婚George未婚，已婚者在看未婚者吗？'",
+          "✅ 专家角色: system='你是逻辑推理专家' → 精准分析"
+        ],
+        "exercises": {
+          "mathCorrection": {
+            "instructions": "让Claude发现这个数学错误：2x-3=9, 2x=6, x=3",
+            "template": "这个方程解得对吗？\n\n2x - 3 = 9\n2x = 6\nx = 3",
+            "hints": [
+              "给Claude分配数学老师或逻辑推理专家角色",
+              "要求仔细检查每一步",
+              "强调找出错误"
+            ]
+          }
+        }
+      }
+    },
     "playground": {
       "chapter1": {
         "title": "第一章 Playground：基础结构与系统提示",
@@ -920,7 +514,8 @@
         "hint2": "实验不同的专业水平",
         "hint3": "注意角色背景如何塑造回答"
       }
-    }
+    },
+    "coreConceptsTitle": "核心概念"
   },
   "courses": {
     "intermediate": {

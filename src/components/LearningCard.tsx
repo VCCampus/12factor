@@ -101,6 +101,7 @@ export default function LearningCard({
   canGoPrev
 }: LearningCardProps) {
   const t = useTranslations('promptEngineering');
+  const tRoot = useTranslations();
   const mode = currentMode;
 
   const currentLearningItem = learningContent[currentIndex];
@@ -191,7 +192,7 @@ export default function LearningCard({
               <div className="space-y-6">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2">
                   <div className="w-1 h-5 bg-[#98a971] rounded-full"></div>
-                  核心概念
+                  {t('coreConceptsTitle')}
                 </h3>
                 
                 <div className="grid gap-4">
@@ -378,7 +379,7 @@ export default function LearningCard({
                 {t('promptExamples')}
               </h3>
               <div className="space-y-3">
-                {currentLearningItem.examples.map((example, exIndex) => (
+                {(Array.isArray(currentLearningItem.examples) ? currentLearningItem.examples : []).map((example, exIndex) => (
                   <div key={exIndex} className="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-5 border border-gray-200 dark:border-gray-600">
                     <code className="text-sm text-gray-800 dark:text-gray-200 leading-relaxed block">
                       {example}
@@ -399,9 +400,9 @@ export default function LearningCard({
                     <div key={exercise.id} className="bg-[#98a971]/5 dark:bg-[#98a971]/10 rounded-xl p-6 border border-[#98a971]/20">
                       <div className="flex items-center gap-2 mb-4">
                         <h5 className="font-medium text-[#98a971] text-lg">
-                          {exercise.instructions}
+                          {tRoot(`promptEngineering.${exercise.instructions}`)}
                         </h5>
-                        {exercise.hints && exercise.hints.length > 0 && (
+                        {exercise.hints && (
                           <div className="relative group">
                             <button className="text-[#98a971] hover:text-[#98a971]/80 transition-colors">
                               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
@@ -410,7 +411,7 @@ export default function LearningCard({
                             </button>
                             <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-900 dark:bg-gray-700 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10 w-80 max-w-xs">
                               <div className="space-y-2">
-                                {exercise.hints.map((hint, hintIndex) => (
+                                {(typeof exercise.hints === 'string' ? tRoot(`promptEngineering.${exercise.hints}`, { returnObjects: true }) : exercise.hints).map((hint, hintIndex) => (
                                   <div key={hintIndex} className="flex items-start gap-2">
                                     <span className="text-[#98a971] mt-1 text-xs flex-shrink-0">▶</span>
                                     <span className="leading-relaxed text-xs">{hint}</span>
@@ -425,7 +426,7 @@ export default function LearningCard({
                       {exercise.template && (
                         <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
                           <code className="text-sm text-gray-600 dark:text-gray-400 block">
-                            {exercise.template}
+                            {typeof exercise.template === 'string' && exercise.template.includes('.') ? tRoot(`promptEngineering.${exercise.template}`) : exercise.template}
                           </code>
                         </div>
                       )}

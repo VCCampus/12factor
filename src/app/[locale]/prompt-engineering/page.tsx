@@ -27,7 +27,7 @@ export default async function PromptEngineeringPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const t = await getTranslations('promptEngineering');
+  const t = await getTranslations({locale, namespace: 'promptEngineering'});
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
@@ -84,6 +84,8 @@ export default async function PromptEngineeringPage({
                 switch (id) {
                   case 'fundamentals':
                     return t('course.fundamentals.title');
+                  case 'intermediate':
+                    return t('course.intermediate.title');
                   default:
                     return 'Course';
                 }
@@ -93,6 +95,8 @@ export default async function PromptEngineeringPage({
                 switch (id) {
                   case 'fundamentals':
                     return t('course.fundamentals.summary');
+                  case 'intermediate':
+                    return t('course.intermediate.summary');
                   default:
                     return '';
                 }

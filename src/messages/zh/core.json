@@ -1,0 +1,272 @@
+{
+  "principles": {
+    "title": "十二项原则",
+    "stage": "阶段",
+    "concept": "核心概念",
+    "practices": "推荐实践",
+    "antiPatterns": "反面模式",
+    "backToStages": "返回阶段列表",
+    "fallbackTitle": "精通12项原则",
+    "fallbackDescription": "通过我们结构化的四阶段方法，逐一精通全部 12 项原则。请选择一个阶段开始探索。",
+    "stageLabel": "阶段原则",
+    "coreLabel": "核心原则",
+    "practiceWithFlashcards": "使用闪卡练习",
+    "takeQuiz": "进行测验",
+    "fourStageMethodology": "四阶段方法论",
+    "chooseLearningPath": "精通12项原则",
+    "chooseLearningPathDescription": "通过我们结构化的四阶段方法，逐一精通全部 12 项原则。请选择一个阶段开始探索。",
+    "stagePrinciplesTitle": "阶段 {stage} 原则",
+    "stagePrinciplesDescription": "深入探索当前阶段的各项原则。",
+    "stage1Title": "准备阶段：奠定坚实基础",
+    "stage1Description": "建立清晰的信息源，优化提示词，保持上下文整洁。",
+    "stage2Title": "执行阶段：高效协作流程",
+    "stage2Description": "人机协同决策，任务分块执行，多线程并行处理。",
+    "stage3Title": "协作阶段：团队协同优化",
+    "stage3Description": "管理认知负荷，保护心流状态，确保会话可复现。",
+    "stage4Title": "迭代阶段：持续改进成长",
+    "stage4Description": "适时休息反思，保持技能同步，培养好奇心文化。",
+    "viewPrinciples": "查看原则",
+    "principlesCount": "项原则",
+    "previousStage": "上一阶段",
+    "nextStage": "下一阶段",
+    "principle1": {
+      "name": "单一真源 (Single Source of Truth)",
+      "concept": "信息分散会导致上下文混乱，容易造成人机双方的误判。",
+      "practices": [
+        "将所有需求、设计及上下文集中于统一的文档中心 (如 Notion / Confluence / GitHub Wiki)。",
+        "与 AI 协作时，应直接引用此“真源”，而非随意复制粘贴信息。"
+      ],
+      "antiPatterns": [
+        "团队成员各自维护不同版本的文档，导致 AI 给出的回应和建议不一致。"
+      ]
+    },
+    "principle2": {
+      "name": "提示词先行 (Prompt First)",
+      "concept": "将提示词 (Prompt) 视为新一代的设计文档。",
+      "practices": [
+        "在任务开始前，优先编写提示词，用以明确输入、输出、风格和约束条件。",
+        "团队内部复用经过验证和优化的提示词模板。"
+      ],
+      "antiPatterns": [
+        "未经规划，直接要求 AI 编写代码，导致方向错误和不必要的返工。"
+      ]
+    }
+  },
+  "quiz": {
+    "title": "知识测验",
+    "question": "问题",
+    "submit": "提交",
+    "next": "下一题",
+    "results": "查看结果",
+    "score": "您的得分",
+    "retry": "再试一次",
+    "chooseChallenge": "选择您的挑战",
+    "selectModeDescription": "选择一种测验模式，检验您对 12Factor 理论的掌握程度，并通过不同级别的挑战来追踪您的学习进度。",
+    "quizModes": "测验模式",
+    "chooseChallengeLevel": "选择一个最适合您学习目标和当前水平的挑战。",
+    "chooseMode": "选择模式",
+    "viewResults": "查看结果",
+    "normalMode": "普通模式",
+    "normalModeSubtitle": "无时间限制 • 覆盖所有题型",
+    "normalModeDescription": "从容思考每个问题，非常适合初次学习和巩固知识，稳步建立信心。",
+    "timedMode": "限时模式",
+    "timedModeSubtitle": "每题 30 秒 • 模拟实战压力",
+    "timedModeDescription": "与时间赛跑！每题 30 秒，考验您的快速反应和知识提取能力。",
+    "challengeMode": "挑战模式",
+    "challengeModeSubtitle": "高难度问题 • 连对奖励",
+    "challengeModeDescription": "面对更困难的问题和场景。保持连对以获得额外积分，挑战更高难度的学习。",
+    "adaptiveMode": "自适应模式",
+    "adaptiveModeSubtitle": "AI 动态难度 • 个性化学习",
+    "adaptiveModeDescription": "题目难度会根据您的表现动态调整。表现越好，难度越高，实现最高效的学习曲线。",
+    "quizComplete": "测验完成！",
+    "modeResults": "“{mode}”模式挑战结果",
+    "performanceSummary": "您的表现摘要",
+    "excellent": "表现卓越！",
+    "goodJob": "干得漂亮！",
+    "keepLearning": "继续努力！",
+    "maxStreak": "最高连对：连续答对 {streak} 题！",
+    "challengeBonus": "挑战奖励：加 {points} 分",
+    "backToModes": "返回测验模式",
+    "modeLabel": "{mode} 模式",
+    "interactiveQuiz": "互动测验",
+    "questionCount": "第 {current} 题 / 共 {total} 题",
+    "scenario": "场景题",
+    "questionType": "{type}题",
+    "nextQuestion": "下一题",
+    "submitQuiz": "提交测验",
+    "difficulty": {
+      "easy": "简单",
+      "medium": "中等",
+      "hard": "困难"
+    },
+    "wrongAnswers": [
+      "在多个来源存储上下文以最大化灵活性",
+      "让AI处理所有决策，无需人工干预",
+      "专注于在单个会话中完成所有工作"
+    ],
+    "principleOptions": {
+      "contextHygiene": "上下文洁净 (Context Hygiene)",
+      "singleSource": "单一真源 (Single Source of Truth)",
+      "chunkedWork": "分块工作 (Chunked Work)",
+      "humanInLoop": "人在回路 (Human-in-the-Loop)",
+      "promptFirst": "提示优先 (Prompt First)",
+      "parallelFlow": "并行流 (Parallel Flow)",
+      "cognitiveLoadBudget": "认知负荷预算 (Cognitive Load Budget)",
+      "flowProtection": "心流保护 (Flow Protection)",
+      "reproducibleSessions": "可重现会话 (Reproducible Sessions)",
+      "restReflection": "休息与反思 (Rest & Reflection)",
+      "skillParity": "技能平等 (Skill Parity)",
+      "cultureOfCuriosity": "好奇文化 (Culture of Curiosity)"
+    },
+    "principle1": {
+      "name": "单一真源 (Single Source of Truth)",
+      "concept": "信息分散会导致上下文混乱，容易造成人机双方的误判。",
+      "practices": [
+        "将所有需求、设计及上下文集中于统一的文档中心 (如 Notion / Confluence / GitHub Wiki)。",
+        "与 AI 协作时，应直接引用此“真源”，而非随意复制粘贴信息。"
+      ],
+      "antiPatterns": [
+        "团队成员各自维护不同版本的文档，导致 AI 给出的回应和建议不一致。"
+      ]
+    },
+    "principle2": {
+      "name": "提示词先行 (Prompt First)",
+      "concept": "将提示词 (Prompt) 视为新一代的设计文档。",
+      "practices": [
+        "在任务开始前，优先编写提示词，用以明确输入、输出、风格和约束条件。",
+        "团队内部复用经过验证和优化的提示词模板。"
+      ],
+      "antiPatterns": [
+        "未经规划，直接要求 AI 编写代码，导致方向错误和不必要的返工。"
+      ]
+    },
+    "principle3": {
+      "name": "上下文洁净 (Context Hygiene)",
+      "concept": "干净的上下文能让 AI 更精准。",
+      "practices": [
+        "每个新任务开独立会话，避免旧内容干扰",
+        "定期用一句话总结现状，让 AI \"对齐背景\""
+      ],
+      "antiPatterns": [
+        "把三天前的对话和今天的任务混在一起"
+      ]
+    },
+    "principle4": {
+      "name": "人类在环 (Human-in-the-Loop)",
+      "concept": "AI 产出快，但只有人类能把握方向与业务判断。",
+      "practices": [
+        "AI 给初稿，人类负责关键决策与风险把关",
+        "对重要功能先进行逻辑验证，再合并代码"
+      ],
+      "antiPatterns": [
+        "全盘接受 AI 产出，不做任何审查"
+      ]
+    },
+    "principle5": {
+      "name": "任务块化 (Chunked Work)",
+      "concept": "大任务拆小块，易于迭代与修正。",
+      "practices": [
+        "任务控制在可 10~30 分钟完成的小范围",
+        "每块结束后立即验证结果"
+      ],
+      "antiPatterns": [
+        "一次性让 AI 写 5000 行，结果无法调试"
+      ]
+    },
+    "principle6": {
+      "name": "并行流动 (Parallel Flow)",
+      "concept": "AI 工作时，人类做低切换成本的副任务，保持节奏不断。",
+      "practices": [
+        "准备一个\"副任务清单\"，包含文档整理、小修复、代码审查等",
+        "等待 AI 时，不接入高认知负载的新任务，避免切换开销过大"
+      ],
+      "antiPatterns": [
+        "等待 AI 时去刷社交媒体，导致节奏断档"
+      ]
+    },
+    "principle7": {
+      "name": "负载预算 (Cognitive Load Budget)",
+      "concept": "人类注意力是稀缺资源。",
+      "practices": [
+        "为 AI 协作设定每日时长上限",
+        "在精神高峰期安排深度审查任务"
+      ],
+      "antiPatterns": [
+        "全天候黏着 AI 工作，晚上完全耗尽"
+      ]
+    },
+    "principle8": {
+      "name": "流保护罩 (Flow Protection)",
+      "concept": "高专注流一旦被打断，恢复成本极高。",
+      "practices": [
+        "设定专注时段（如 90 分钟），屏蔽通知与打扰",
+        "AI 交互也在专注流中批量进行，而非零散触发"
+      ],
+      "antiPatterns": [
+        "边写代码边回微信边看 AI 输出，效率断崖式下降"
+      ]
+    },
+    "principle9": {
+      "name": "可复现性 (Reproducible Sessions)",
+      "concept": "协作过程可回溯，才能持续优化。",
+      "practices": [
+        "保存 Prompt、AI 版本、变更原因到代码库或知识库",
+        "出现 bug 时可重放生成过程"
+      ],
+      "antiPatterns": [
+        "AI 生成历史无记录，出错无法还原原因"
+      ]
+    },
+    "principle10": {
+      "name": "休息反思 (Rest & Reflection)",
+      "concept": "冲刺后复盘，才能越跑越快。",
+      "practices": [
+        "冲刺结束后，花 5 分钟复盘 AI 产出与预期差异",
+        "更新 Prompt 模板，积累\"踩坑记录\""
+      ],
+      "antiPatterns": [
+        "连续冲刺，累积错误不总结"
+      ]
+    },
+    "principle11": {
+      "name": "技能均衡 (Skill Parity)",
+      "concept": "AI 是放大镜，放大能力，也放大短板。",
+      "practices": [
+        "持续学习领域知识与代码审查技巧",
+        "对 AI 输出保持独立判断能力"
+      ],
+      "antiPatterns": [
+        "完全依赖 AI，失去手写能力与技术洞察力"
+      ]
+    },
+    "principle12": {
+      "name": "好奇文化 (Culture of Curiosity)",
+      "concept": "好奇心驱动探索，避免\"盲信 AI\"。",
+      "practices": [
+        "面对 AI 答案，先问\"为什么\"，再问\"还能更好吗\"",
+        "团队分享 AI 使用经验与改进思路"
+      ],
+      "antiPatterns": [
+        "对 AI 方案照单全收，从不质疑"
+      ]
+    },
+    "stages": {
+      "stage1": {
+        "name": "准备",
+        "description": "建立清晰的信息架构和上下文环境"
+      },
+      "stage2": {
+        "name": "执行",
+        "description": "高效协作完成具体任务"
+      },
+      "stage3": {
+        "name": "协作",
+        "description": "管理协作过程中的认知负载和工作流"
+      },
+      "stage4": {
+        "name": "迭代",
+        "description": "持续学习和改进协作模式"
+      }
+    }
+  }
+}

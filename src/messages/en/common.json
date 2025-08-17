@@ -1,0 +1,37 @@
+{
+  "common": {
+    "title": "12Factor.me - Vibe Coding 10x Engineer",
+    "subtitle": "Four Stages × Twelve Principles for 10x Engineering Efficiency",
+    "language": "Language",
+    "home": "Home",
+    "principles": "Principles",
+    "flashcards": "Flashcards",
+    "quiz": "Quiz",
+    "promptEngineering": "Prompt Engineering",
+    "more": "More",
+    "progress": "Progress",
+    "learnMore": "Learn More",
+    "languageLabels": {
+      "chinese": "中文",
+      "english": "English"
+    },
+    "github": "GitHub",
+    "footer": {
+      "copyright": "12Factor",
+      "author": "@wquguru",
+      "license": "MIT License"
+    },
+    "navigation": {
+      "methodology": "12Factor Methodology",
+      "principlesDescription": "Learn 12 core principles and best practices",
+      "flashcardsDescription": "Reinforce learning through interactive cards",
+      "quizDescription": "Test your understanding of 12Factor principles",
+      "resources": "Resources",
+      "githubRepo": "GitHub Repository",
+      "githubRepoDescription": "View source code and contribute to the project",
+      "apiDocs": "API Documentation",
+      "communityForum": "Community Forum",
+      "comingSoon": "Coming Soon"
+    }
+  }
+}
