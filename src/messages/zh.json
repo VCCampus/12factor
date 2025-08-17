@@ -504,10 +504,6 @@
       "fundamentals": {
         "title": "基础课程",
         "summary": "学习提示工程的基本概念和核心原理"
-      },
-      "advanced": {
-        "title": "高级课程",
-        "summary": "复杂提示策略和推理技术"
       }
     },
     "nextCourse": "下一课程",
@@ -660,55 +656,6 @@
             "instructions": "让Claude发现这个数学错误：2x-3=9, 2x=6, x=3",
             "template": "这个方程解得对吗？\n\n2x - 3 = 9\n2x = 6\nx = 3",
             "hints": ["给Claude分配数学老师或逻辑推理专家角色", "要求仔细检查每一步", "强调找出错误"]
-          }
-        }
-      }
-    },
-    "advanced": {
-      "title": "高级课程",
-      "theory": "高级提示工程技术：数据分离、输出格式化和思维链推理。这些方法释放Claude的全部分析潜力。",
-      "dataSeparation": {
-        "title": "数据分离技术",
-        "theory": "使用XML标签、Markdown部分或清晰分隔符将数据与指令分离。这可以防止混淆并提高处理准确性。",
-        "examples": [
-          "混合: 'Summarize this: AI is transforming industries by automating tasks'",
-          "分离: 'Analyze the following text:\\n\\n<content>\\nAI is transforming industries\\n</content>\\n\\nProvide a 2-sentence summary.'"
-        ],
-        "exercises": {
-          "adv1": {
-            "instructions": "使用XML标签在分析文本结构时分离数据",
-            "template": "分析这个句子的语法：\\n\\n<sentence>\\n[你的句子]\\n</sentence>",
-            "hints": ["使用清晰的XML分隔符", "保持指令与数据分离", "明确分析类型"]
-          }
-        }
-      },
-      "outputFormatting": {
-        "title": "输出格式控制",
-        "theory": "通过明确的模板、示例和结构要求控制Claude的响应格式。一致的格式化可以实现自动化和集成。",
-        "examples": [
-          "无格式: 'List programming languages'",
-          "有格式: 'List 3 languages using this format:\\n1. **Language**: Description\\n2. **Language**: Description'"
-        ],
-        "exercises": {
-          "adv2": {
-            "instructions": "让Claude以特定编号格式提供恰好3个项目",
-            "template": "给我3个生产力技巧，使用这个确切格式：\\n[定义你的格式]",
-            "hints": ["指定确切的格式要求", "使用模板作为示例", "明确结构要求"]
-          }
-        }
-      },
-      "chainOfThought": {
-        "title": "思维链推理",
-        "theory": "通过要求逐步推理释放Claude的分析能力。这种技术显著改善复杂问题解决并确保逻辑透明。",
-        "examples": [
-          "直接: 'What's 25% of 80?'",
-          "思维链: 'Calculate 25% of 80. Show each step of your calculation with explanations.'"
-        ],
-        "exercises": {
-          "adv3": {
-            "instructions": "让Claude使用明确的逐步推理解决复杂问题",
-            "template": "逐步解决这个问题，展示你的工作过程：[你的问题]",
-            "hints": ["要求明确的推理", "请求逐步分解", "寻找逻辑连接词"]
           }
         }
       }

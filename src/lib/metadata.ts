@@ -140,4 +140,34 @@ export const defaultMetadata = {
       description: "挑战你的 Vibe Coding 知识，通过全面的编程方法论测验验证你的 10x Engineering 能力。",
     },
   },
+  promptEngineering: {
+    en: {
+      title: "Prompt Engineering - Master AI Communication for 10x Engineering",
+      description: "Learn prompt engineering fundamentals and advanced techniques. Interactive courses for effective AI collaboration and 10x developer productivity.",
+    },
+    zh: {
+      title: "提示词工程 - 掌握AI沟通实现10x Engineering",
+      description: "学习提示词工程基础和高级技巧。交互式课程助您实现高效AI协作和10x开发者生产力。",
+    },
+  },
+  promptEngineeringFundamentals: {
+    en: {
+      title: "Prompt Engineering Fundamentals - AI Communication Basics",
+      description: "Master the fundamentals of prompt engineering: basic structure, clear communication, and role prompting for effective AI collaboration.",
+    },
+    zh: {
+      title: "提示词工程基础 - AI沟通基础",
+      description: "掌握提示词工程基础：基本结构、清晰沟通和角色提示，实现高效AI协作。",
+    },
+  },
+  promptEngineeringAdvanced: {
+    en: {
+      title: "Advanced Prompt Engineering - Complex AI Interaction Techniques", 
+      description: "Advanced prompt engineering techniques: data separation, output formatting, and chain-of-thought reasoning for sophisticated AI workflows.",
+    },
+    zh: {
+      title: "高级提示词工程 - 复杂AI交互技巧",
+      description: "高级提示词工程技巧：数据分离、输出格式化和思维链推理，构建复杂AI工作流程。",
+    },
+  },
 } as const;

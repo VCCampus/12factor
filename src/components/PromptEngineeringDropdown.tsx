@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
-import { promptLessons } from '@/data/prompt-lessons';
+import { getAllCourses } from '@/data/courses';
 
 export default function PromptEngineeringDropdown() {
   const [isOpen, setIsOpen] = useState(false);
@@ -70,7 +70,7 @@ export default function PromptEngineeringDropdown() {
               </Link>
 
               {/* Course Links */}
-              {promptLessons.map((course) => {
+              {getAllCourses().map((course) => {
                 const getCourseTitle = (id: string) => {
                   switch (id) {
                     case 'fundamentals':
@@ -95,20 +95,20 @@ export default function PromptEngineeringDropdown() {
 
                 return (
                   <Link
-                    key={course.id}
+                    key={course.content.id}
                     href={{
                       pathname: '/prompt-engineering/[course]',
-                      params: { course: course.id.toString() }
+                      params: { course: course.content.id.toString() }
                     }}
                     locale={locale}
                     className="block mb-3 group"
                     onClick={() => setIsOpen(false)}
                   >
                     <div className="text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:text-[#98a971] transition-colors">
-                      {getCourseTitle(course.id as string)}
+                      {getCourseTitle(course.content.id)}
                     </div>
                     <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                      {getCourseSummary(course.id as string).substring(0, 60)}...
+                      {getCourseSummary(course.content.id).substring(0, 60)}...
                     </div>
                   </Link>
                 );

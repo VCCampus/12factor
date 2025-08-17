@@ -18,6 +18,7 @@ export interface Stage {
   principles: number[];
 }
 
+// Legacy types - keeping for backward compatibility
 export interface ExerciseData {
   id: string;
   instructions: string;
@@ -62,3 +63,13 @@ export interface PromptLesson {
   };
   prerequisites?: (string | number)[];
 }
+
+// Re-export new course types for convenience
+export type {
+  Course,
+  CourseContent,
+  CourseSection as NewCourseSection,
+  ExerciseData as NewExerciseData,
+  PracticeExample,
+  PlaygroundScenario
+} from '@/data/courses/types';

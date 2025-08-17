@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import { ChevronDownIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
-import { promptLessons, promptStages } from '@/data/prompt-lessons';
+import { getAllCourses } from '@/data/courses';
 
 interface MobilePromptEngineeringMenuProps {
   onLinkClick?: () => void;
@@ -53,74 +53,56 @@ export default function MobilePromptEngineeringMenu({ onLinkClick }: MobilePromp
             </div>
           </Link>
 
-          {/* Stages */}
-          {promptStages.slice(0, 2).map((stage) => (
-            <div key={stage.id}>
-              {/* Stage Header */}
-              <div className="px-8 py-2 bg-[#98a971]/10 dark:bg-[#98a971]/15">
-                <div className="flex items-center gap-2">
-                  <span className="text-sm">{stage.id === 1 ? '🎯' : '🚀'}</span>
-                  <span className="text-xs font-semibold text-[#98a971] dark:text-[#98a971] uppercase tracking-wide">
-                    {tPE(`stage${stage.id}.name`)}
+          {/* Courses */}
+          {getAllCourses().map((course, index) => {
+            const getCourseTitle = (id: string) => {
+              switch (id) {
+                case 'fundamentals':
+                  return tPE('course.fundamentals.title');
+                case 'advanced':
+                  return tPE('course.advanced.title');
+                default:
+                  return 'Course';
+              }
+            };
+
+            const getCourseSummary = (id: string) => {
+              switch (id) {
+                case 'fundamentals':
+                  return tPE('course.fundamentals.summary');
+                case 'advanced':
+                  return tPE('course.advanced.summary');
+                default:
+                  return '';
+              }
+            };
+
+            return (
+              <Link
+                key={course.content.id}
+                href={{
+                  pathname: '/prompt-engineering/[course]',
+                  params: { course: course.content.id.toString() }
+                }}
+                locale={locale}
+                className="flex items-center gap-3 px-8 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-[#98a971]/10 dark:hover:bg-[#98a971]/15 transition-colors"
+                onClick={handleLinkClick}
+              >
+                <div className="w-6 h-6 bg-[#98a971]/10 border border-[#98a971]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <span className="text-[#98a971] text-xs font-semibold">
+                    {index + 1}
                   </span>
                 </div>
-              </div>
-
-              {/* Courses */}
-              {stage.lessons.map((courseId) => {
-                const course = promptLessons.find(l => l.id === courseId);
-                if (!course) return null;
-
-                const getCourseTitle = (id: string) => {
-                  switch (id) {
-                    case 'fundamentals':
-                      return tPE('course.fundamentals.title');
-                    case 'advanced':
-                      return tPE('course.advanced.title');
-                    default:
-                      return 'Course';
-                  }
-                };
-
-                const getCourseSummary = (id: string) => {
-                  switch (id) {
-                    case 'fundamentals':
-                      return tPE('course.fundamentals.summary');
-                    case 'advanced':
-                      return tPE('course.advanced.summary');
-                    default:
-                      return '';
-                  }
-                };
-
-                return (
-                  <Link
-                    key={course.id}
-                    href={{
-                      pathname: '/prompt-engineering/[course]',
-                      params: { course: course.id.toString() }
-                    }}
-                    locale={locale}
-                    className="flex items-center gap-3 px-10 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-[#98a971]/10 dark:hover:bg-[#98a971]/15 transition-colors"
-                    onClick={handleLinkClick}
-                  >
-                    <div className="w-6 h-6 bg-[#98a971]/10 border border-[#98a971]/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <span className="text-[#98a971] text-xs font-semibold">
-                        {stage.id}
-                      </span>
-                    </div>
-                    <div className="min-w-0 flex-1">
-                      <div className="font-medium">{getCourseTitle(course.id as string)}</div>
-                      <div className="text-xs text-gray-500 dark:text-gray-400 line-clamp-1">
-                        {getCourseSummary(course.id as string)}
-                      </div>
-                    </div>
-                    <ChevronRightIcon className="h-4 w-4 text-gray-400" />
-                  </Link>
-                );
-              })}
-            </div>
-          ))}
+                <div className="min-w-0 flex-1">
+                  <div className="font-medium">{getCourseTitle(course.content.id)}</div>
+                  <div className="text-xs text-gray-500 dark:text-gray-400 line-clamp-1">
+                    {getCourseSummary(course.content.id)}
+                  </div>
+                </div>
+                <ChevronRightIcon className="h-4 w-4 text-gray-400" />
+              </Link>
+            );
+          })}
 
           {/* Coming Soon */}
           <div className="px-8 py-3 text-center border-t border-gray-200 dark:border-gray-600">

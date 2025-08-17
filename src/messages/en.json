@@ -501,10 +501,6 @@
       "fundamentals": {
         "title": "Fundamentals Course",
         "summary": "Learn fundamental concepts and core principles of prompt engineering"
-      },
-      "advanced": {
-        "title": "Advanced Course", 
-        "summary": "Complex prompting strategies and reasoning techniques"
       }
     },
     "nextCourse": "Next Course",
@@ -627,55 +623,6 @@
             "instructions": "Have Claude find the math error: 2x-3=9, 2x=6, x=3",
             "template": "Is this equation solved correctly?\n\n2x - 3 = 9\n2x = 6\nx = 3",
             "hints": ["Assign Claude a math teacher or logic expert role", "Request careful checking of each step", "Emphasize finding the error"]
-          }
-        }
-      }
-    },
-    "advanced": {
-      "title": "Advanced Course",
-      "theory": "Advanced prompt engineering techniques: Data Separation, Output Formatting, and Chain-of-Thought Reasoning. These methods unlock Claude's full analytical potential.",
-      "dataSeparation": {
-        "title": "Data Separation Techniques",
-        "theory": "Use XML tags, Markdown sections, or clear delimiters to separate data from instructions. This prevents confusion and improves processing accuracy.",
-        "examples": [
-          "Mixed: 'Summarize this: AI is transforming industries by automating tasks'",
-          "Separated: 'Analyze the following text:\\n\\n<content>\\nAI is transforming industries\\n</content>\\n\\nProvide a 2-sentence summary.'"
-        ],
-        "exercises": {
-          "adv1": {
-            "instructions": "Use XML tags to separate data when analyzing text structure",
-            "template": "Analyze the grammar of this sentence:\\n\\n<sentence>\\n[Your sentence]\\n</sentence>",
-            "hints": ["Use clear XML delimiters", "Keep instructions separate from data", "Be specific about analysis type"]
-          }
-        }
-      },
-      "outputFormatting": {
-        "title": "Output Formatting Control",
-        "theory": "Control Claude's response format through clear templates, examples, and structural requirements. Consistent formatting enables automation and integration.",
-        "examples": [
-          "Unformatted: 'List programming languages'",
-          "Formatted: 'List 3 languages using this format:\\n1. **Language**: Description\\n2. **Language**: Description'"
-        ],
-        "exercises": {
-          "adv2": {
-            "instructions": "Get Claude to provide exactly 3 items in a specific numbered format",
-            "template": "Give me 3 productivity tips in this exact format:\\n[Define your format]",
-            "hints": ["Specify exact formatting requirements", "Use templates as examples", "Be explicit about structure"]
-          }
-        }
-      },
-      "chainOfThought": {
-        "title": "Chain-of-Thought Reasoning",
-        "theory": "Unlock Claude's analytical capabilities by requiring step-by-step reasoning. This technique significantly improves complex problem solving and ensures logical transparency.",
-        "examples": [
-          "Direct: 'What's 25% of 80?'",
-          "Chain-of-thought: 'Calculate 25% of 80. Show each step of your calculation with explanations.'"
-        ],
-        "exercises": {
-          "adv3": {
-            "instructions": "Get Claude to solve a complex problem using explicit step-by-step reasoning",
-            "template": "Solve this step by step, showing your work: [Your problem]",
-            "hints": ["Ask for explicit reasoning", "Request step-by-step breakdown", "Look for logical connectors"]
           }
         }
       }
