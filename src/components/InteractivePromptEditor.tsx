@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { 
   PlayIcon, 
@@ -41,6 +41,18 @@ export default function InteractivePromptEditor({ example, mode = 'practice' }: 
   const [selectedVariation, setSelectedVariation] = useState<number | null>(null);
   const [analysisResult, setAnalysisResult] = useState<'good' | 'needs-improvement' | null>(null);
   const [error, setError] = useState<string | null>(null);
+
+  // Update prompts when example changes (e.g., when navigating between cards)
+  useEffect(() => {
+    if (mode === 'playground') {
+      setSystemPrompt(example.systemPrompt || '');
+      setUserPrompt(example.userPrompt);
+      setCurrentOutput('');
+      setAnalysisResult(null);
+      setSelectedVariation(null);
+      setError(null);
+    }
+  }, [example.id, example.systemPrompt, example.userPrompt, mode]);
 
 
   // Use LLM to evaluate prompt quality based on the actual output
@@ -120,7 +132,7 @@ AI输出: ${truncatedOutput}
         setAnalysisResult(evaluation);
       } catch (evaluationError) {
         console.error('Evaluation failed:', evaluationError);
-        setError(t('evaluationError') || 'Failed to evaluate prompt quality');
+        setError(t('evaluationError'));
         setAnalysisResult(null);
       }
       

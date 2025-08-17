@@ -899,5 +899,6 @@
   },
   "rateLimitError": "请求频率过高，请稍等片刻后重试。",
   "serviceUnavailableError": "服务暂时不可用，请稍后重试。",
-  "generalError": "处理请求时发生错误，请重试。"
+  "generalError": "处理请求时发生错误，请重试。",
+  "evaluationError": "无法评估提示词质量，请重试。"
 }

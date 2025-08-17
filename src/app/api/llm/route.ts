@@ -10,7 +10,11 @@ const MAX_REQUESTS_PER_HOUR = 50; // Max 50 requests per hour per IP
 const ipRequestCounts = new Map<string, { count: number; hourlyCount: number; lastReset: number; hourlyReset: number }>();
 
 // Allowed paths to prevent API abuse
-const ALLOWED_PATHS = ['/prompt-engineering/fundamentals'];
+const ALLOWED_PATHS = [
+  '/prompt-engineering/fundamentals',
+  '/prompt-engineering/intermediate',
+  '/prompt-engineering/advanced'
+];
 
 // Validate request source
 function validateRequestSource(referer: string | null, userAgent: string | null): boolean {
@@ -23,8 +27,8 @@ function validateRequestSource(referer: string | null, userAgent: string | null)
   
   if (!isLocalDev && !isProdDomain) return false;
   
-  // Check if it's from an allowed path
-  return ALLOWED_PATHS.some(path => referer.includes(path));
+  // Check if it's from prompt-engineering pages
+  return referer.includes('/prompt-engineering/');
 }
 
 // Rate limiting check
