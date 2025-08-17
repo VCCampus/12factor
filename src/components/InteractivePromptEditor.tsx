@@ -119,7 +119,6 @@ export default function InteractivePromptEditor({ example }: InteractivePromptEd
   };
 
   const applyVariation = (index: number) => {
-    const variation = example.variations[index];
     // Don't auto-fill user prompt - let user manually copy if needed
     setSelectedVariation(index);
     setCurrentOutput('');

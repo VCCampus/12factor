@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { ChevronLeftIcon, ChevronRightIcon, BookOpenIcon, BeakerIcon } from '@heroicons/react/24/outline';
+import { ChevronLeftIcon, ChevronRightIcon, BookOpenIcon, BeakerIcon, CodeBracketIcon } from '@heroicons/react/24/outline';
 import { useTranslations } from 'next-intl';
 import InteractivePromptEditor from './InteractivePromptEditor';
 
@@ -34,14 +34,26 @@ interface PracticeContent {
   hints?: string[];
 }
 
+interface PlaygroundContent {
+  id: string;
+  title: string;
+  examples: Array<{
+    name: string;
+    prompt: string;
+    systemPrompt?: string;
+    description: string;
+  }>;
+}
+
 interface LearningCardProps {
   learningContent: LearningContent[];
   practiceContent: PracticeContent[];
+  playgroundContent?: PlaygroundContent[];
   currentIndex: number;
-  currentMode?: 'learning' | 'practice';
+  currentMode?: 'learning' | 'playground' | 'practice';
   onNext: () => void;
   onPrev: () => void;
-  onModeChange?: (mode: 'learning' | 'practice') => void;
+  onModeChange?: (mode: 'learning' | 'playground' | 'practice') => void;
   canGoNext: boolean;
   canGoPrev: boolean;
 }
@@ -50,6 +62,7 @@ interface LearningCardProps {
 export default function LearningCard({
   learningContent,
   practiceContent,
+  playgroundContent = [],
   currentIndex,
   currentMode = 'learning',
   onNext,
@@ -63,9 +76,12 @@ export default function LearningCard({
 
   const currentLearningItem = learningContent[currentIndex];
   const currentPracticeItem = practiceContent[currentIndex];
+  const currentPlaygroundItem = playgroundContent[currentIndex];
   
-  // Use practice content length for practice mode navigation
-  const totalItems = mode === 'practice' ? practiceContent.length : learningContent.length;
+  // Use appropriate content length for navigation
+  const totalItems = mode === 'practice' ? practiceContent.length : 
+                    mode === 'playground' ? playgroundContent.length : 
+                    learningContent.length;
 
 
   return (
@@ -75,7 +91,7 @@ export default function LearningCard({
         <div className="bg-gray-100 dark:bg-gray-800 rounded-xl p-2 flex gap-2">
           <button
             onClick={() => onModeChange?.('learning')}
-            className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all ${
+            className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all focus:outline-none ${
               mode === 'learning'
                 ? 'bg-white dark:bg-gray-700 shadow-sm text-[#98a971]'
                 : 'text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200'
@@ -84,9 +100,22 @@ export default function LearningCard({
             <BookOpenIcon className="h-4 w-4" />
             {t('learningMode')}
           </button>
+          {playgroundContent.length > 0 && (
+            <button
+              onClick={() => onModeChange?.('playground')}
+              className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all focus:outline-none ${
+                mode === 'playground'
+                  ? 'bg-white dark:bg-gray-700 shadow-sm text-[#98a971]'
+                  : 'text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200'
+              }`}
+            >
+              <CodeBracketIcon className="h-4 w-4" />
+              {t('playgroundMode')}
+            </button>
+          )}
           <button
             onClick={() => onModeChange?.('practice')}
-            className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all ${
+            className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all focus:outline-none ${
               mode === 'practice'
                 ? 'bg-white dark:bg-gray-700 shadow-sm text-[#98a971]'
                 : 'text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200'
@@ -192,6 +221,56 @@ export default function LearningCard({
           </div>
         )}
 
+        {mode === 'playground' && currentPlaygroundItem && (
+          <div className="p-8">
+            {/* Playground Content Header */}
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-12 h-12 bg-[#98a971]/20 rounded-xl flex items-center justify-center">
+                <CodeBracketIcon className="h-6 w-6 text-[#98a971]" />
+              </div>
+              <div>
+                <h2 className="text-2xl font-medium text-gray-900 dark:text-gray-100 mb-2">
+                  {currentPlaygroundItem.title}
+                </h2>
+                <p className="text-sm text-[#98a971] font-medium">{t('experimentalPlayground')}</p>
+              </div>
+            </div>
+
+            {/* Playground Examples */}
+            <div className="space-y-6">
+              {currentPlaygroundItem.examples.map((example, exIndex) => (
+                <div key={exIndex} className="bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700">
+                  {/* Example Header */}
+                  <div className="p-4 border-b border-gray-200 dark:border-gray-700">
+                    <h3 className="font-medium text-gray-900 dark:text-gray-100 mb-2">
+                      {example.name}
+                    </h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                      {example.description}
+                    </p>
+                  </div>
+                  
+                  {/* Interactive Editor for this example */}
+                  <div className="p-4">
+                    <InteractivePromptEditor 
+                      example={{
+                        id: `${currentPlaygroundItem.id}-${exIndex}`,
+                        title: example.name,
+                        description: example.description,
+                        systemPrompt: example.systemPrompt || '',
+                        userPrompt: example.prompt,
+                        expectedOutput: '',
+                        hints: [],
+                        variations: []
+                      }} 
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         {mode === 'practice' && currentPracticeItem && (
           <div className="p-8">
             {/* Practice Content Header */}
@@ -240,7 +319,7 @@ export default function LearningCard({
             <button
               onClick={onPrev}
               disabled={!canGoPrev}
-              className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all ${
+              className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all focus:outline-none ${
                 canGoPrev
                   ? 'text-[#98a971] hover:bg-[#98a971]/10'
                   : 'text-gray-400 cursor-not-allowed'
@@ -259,7 +338,7 @@ export default function LearningCard({
             <button
               onClick={onNext}
               disabled={!canGoNext}
-              className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all ${
+              className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all focus:outline-none ${
                 canGoNext
                   ? 'text-[#98a971] hover:bg-[#98a971]/10'
                   : 'text-gray-400 cursor-not-allowed'

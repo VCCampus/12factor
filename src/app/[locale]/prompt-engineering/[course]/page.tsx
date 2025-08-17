@@ -11,7 +11,7 @@ import { notFound } from 'next/navigation';
 
 export default function CoursePage() {
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
-  const [currentMode, setCurrentMode] = useState<'learning' | 'practice'>('learning');
+  const [currentMode, setCurrentMode] = useState<'learning' | 'practice' | 'playground'>('learning');
   const params = useParams();
   const locale = params.locale as string;
   const courseSlug = params.course as string;
@@ -78,7 +78,13 @@ export default function CoursePage() {
       } else if (typeof exercise.hints === 'string') {
         // Single hint (either key or content)
         try {
-          resolvedHints = [t(exercise.hints)];
+          // Check if it's a translation key that resolves to an array
+          const hintsData = t.raw(exercise.hints);
+          if (Array.isArray(hintsData)) {
+            resolvedHints = hintsData;
+          } else {
+            resolvedHints = [t(exercise.hints)];
+          }
         } catch {
           resolvedHints = [exercise.hints];
         }
@@ -153,12 +159,44 @@ export default function CoursePage() {
     };
   }) || [];
 
+  // Prepare playground content based on notebook examples
+  const playgroundContent = notebookLesson?.interactiveExamples?.map((example) => {
+    const resolveTranslationKey = (key: string): string => {
+      try {
+        return t(key);
+      } catch {
+        return key;
+      }
+    };
+
+    // Create playground examples from the notebook content
+    const playgroundExamples = example.variations?.map(variation => ({
+      name: resolveTranslationKey(variation.name),
+      prompt: variation.prompt,
+      systemPrompt: example.systemPrompt,
+      description: resolveTranslationKey(variation.explanation)
+    })) || [{
+      name: resolveTranslationKey(example.title),
+      prompt: example.userPrompt || 'Enter your prompt here...',
+      systemPrompt: example.systemPrompt,
+      description: resolveTranslationKey(example.description) || t('experimentWithThisPrompt')
+    }];
+
+    return {
+      id: example.id,
+      title: resolveTranslationKey(example.title),
+      examples: playgroundExamples
+    };
+  }) || [];
+
   const handleNext = useCallback(() => {
-    const maxIndex = currentMode === 'practice' ? practiceContent.length - 1 : learningContent.length - 1;
+    const maxIndex = currentMode === 'practice' ? practiceContent.length - 1 : 
+                    currentMode === 'playground' ? playgroundContent.length - 1 : 
+                    learningContent.length - 1;
     if (currentCardIndex < maxIndex) {
       setCurrentCardIndex(currentCardIndex + 1);
     }
-  }, [currentCardIndex, currentMode, practiceContent.length, learningContent.length]);
+  }, [currentCardIndex, currentMode, practiceContent.length, playgroundContent.length, learningContent.length]);
 
   const handlePrev = useCallback(() => {
     if (currentCardIndex > 0) {
@@ -166,7 +204,7 @@ export default function CoursePage() {
     }
   }, [currentCardIndex]);
 
-  const handleModeChange = (newMode: 'learning' | 'practice') => {
+  const handleModeChange = (newMode: 'learning' | 'playground' | 'practice') => {
     setCurrentMode(newMode);
     // Reset to first item when switching modes
     setCurrentCardIndex(0);
@@ -271,12 +309,15 @@ export default function CoursePage() {
             <LearningCard
               learningContent={learningContent}
               practiceContent={practiceContent}
+              playgroundContent={playgroundContent}
               currentIndex={currentCardIndex}
               currentMode={currentMode}
               onNext={handleNext}
               onPrev={handlePrev}
               onModeChange={handleModeChange}
-              canGoNext={currentCardIndex < (currentMode === 'practice' ? practiceContent.length - 1 : learningContent.length - 1)}
+              canGoNext={currentCardIndex < (currentMode === 'practice' ? practiceContent.length - 1 : 
+                         currentMode === 'playground' ? playgroundContent.length - 1 : 
+                         learningContent.length - 1)}
               canGoPrev={currentCardIndex > 0}
             />
           )}
