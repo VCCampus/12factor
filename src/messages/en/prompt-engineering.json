@@ -272,7 +272,7 @@
       "summary": "Master advanced techniques for data separation, output formatting, and systematic thinking",
       "sections": {
         "dataInstructions": {
-          "title": "Separating Data from Instructions",
+          "title": "Chapter 4: Separating Data from Instructions",
           "theory": "Learn how to create reusable prompt templates by cleanly separating instructions from variable data. This chapter covers the use of XML tags, f-string templating, and best practices for handling user input safely and effectively.",
           "examples": [
             "Create dynamic prompts with variable substitution using f-strings",
@@ -292,7 +292,7 @@
           }
         },
         "formatting": {
-          "title": "Formatting Output & Speaking for Claude",
+          "title": "Chapter 5: Formatting Output & Speaking for Claude",
           "theory": "Master techniques for controlling and formatting AI output. Learn how to use XML tags, JSON formatting, and prefilling to get exactly the response format you need.",
           "examples": [
             "Format output in XML tags for easy parsing",
@@ -312,7 +312,7 @@
           }
         },
         "thinking": {
-          "title": "Precognition (Thinking Step by Step)",
+          "title": "Chapter 6: Precognition (Thinking Step by Step)",
           "theory": "Improve AI accuracy by implementing chain-of-thought prompting. Learn how to structure reasoning processes and use step-by-step thinking for complex problems.",
           "examples": [
             "Guide AI through explicit reasoning steps",
@@ -332,7 +332,7 @@
           }
         },
         "examples": {
-          "title": "Using Examples (Few-Shot Prompting)",
+          "title": "Chapter 7: Using Examples (Few-Shot Prompting)",
           "theory": "Leverage the power of examples to guide AI behavior. Learn how to select effective examples, format them properly, and use few-shot prompting for consistent results.",
           "examples": [
             "Choose optimal examples for guidance",
@@ -496,7 +496,7 @@
     },
     "intermediate": {
       "chapter4Haiku": {
-        "title": "Haiku Template Exercise",
+        "title": "Chapter 4 Practice: Haiku Template Exercise",
         "description": "Create a reusable prompt template for generating haikus about any topic",
         "expectedOutput": "A haiku that mentions the specified topic",
         "hints": {
@@ -516,7 +516,7 @@
         }
       },
       "chapter4DogXML": {
-        "title": "XML Tag Separation",
+        "title": "Chapter 4 Practice: XML Tag Separation",
         "description": "Fix a messy prompt by using XML tags to separate the question from surrounding text",
         "expectedOutput": "A clear answer about dogs being brown",
         "hints": {
@@ -536,7 +536,7 @@
         }
       },
       "chapter5Curry": {
-        "title": "Response Prefilling",
+        "title": "Chapter 5 Practice: Response Prefilling",
         "description": "Use prefilling to guide Claude toward a specific basketball player",
         "expectedOutput": "An argument for Stephen Curry as the best player",
         "hints": {
@@ -556,7 +556,7 @@
         }
       },
       "chapter5TwoHaikus": {
-        "title": "Multiple Output Formatting",
+        "title": "Chapter 5 Practice: Multiple Output Formatting",
         "description": "Format output to contain two separate haikus with clear boundaries",
         "expectedOutput": "Two distinct haikus about cats, each in its own tags",
         "hints": {
@@ -576,7 +576,7 @@
         }
       },
       "chapter6EmailClass": {
-        "title": "Step-by-Step Email Classification",
+        "title": "Chapter 6 Practice: Step-by-Step Email Classification",
         "description": "Classify emails by having AI think through the process step by step",
         "expectedOutput": "Classification with visible reasoning process",
         "hints": {
@@ -596,7 +596,7 @@
         }
       },
       "chapter6EmailFormatted": {
-        "title": "Formatted Classification Output",
+        "title": "Chapter 6 Practice: Formatted Classification Output",
         "description": "Get classification results in a specific XML format",
         "expectedOutput": "Classification letter wrapped in answer tags",
         "hints": {
@@ -616,7 +616,7 @@
         }
       },
       "chapter7EmailExamples": {
-        "title": "Few-Shot Email Classification",
+        "title": "Chapter 7 Practice: Few-Shot Email Classification",
         "description": "Use examples to teach AI how to classify emails consistently",
         "expectedOutput": "Correct classification following example patterns",
         "hints": {
@@ -744,7 +744,7 @@
     },
     "intermediate": {
       "dataInstructionSeparation": {
-        "title": "Data & Instruction Separation",
+        "title": "Chapter 4 Playground: Data & Instruction Separation",
         "examples": {
           "animalSounds": {
             "name": "Animal Sound Generator",
@@ -782,7 +782,7 @@
         }
       },
       "outputFormatting": {
-        "title": "Output Formatting Control",
+        "title": "Chapter 5 Playground: Output Formatting Control",
         "examples": {
           "haikuXML": {
             "name": "XML-Formatted Haikus",
@@ -820,7 +820,7 @@
         }
       },
       "stepByStepThinking": {
-        "title": "Chain-of-Thought Reasoning",
+        "title": "Chapter 6 Playground: Chain-of-Thought Reasoning",
         "examples": {
           "movieReview": {
             "name": "Movie Review Analysis",
@@ -858,7 +858,7 @@
         }
       },
       "fewShotExamples": {
-        "title": "Example-Driven Prompting",
+        "title": "Chapter 7 Playground: Example-Driven Prompting",
         "examples": {
           "parentBot": {
             "name": "Parent Response Bot",
