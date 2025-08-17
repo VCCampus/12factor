@@ -31,6 +31,8 @@ export default function CourseLayout() {
   const params = useParams();
   const locale = params.locale as string;
   const t = useTranslations('promptEngineering');
+  const tCourses = useTranslations('courses');
+  const tRoot = useTranslations();
   const { course, courseId } = useCourse();
 
   // Get course navigation info
@@ -41,6 +43,53 @@ export default function CourseLayout() {
   const prevCourse = prevCourseId ? getCourse(prevCourseId) : null;
   const nextCourse = nextCourseId ? getCourse(nextCourseId) : null;
 
+  // Helper function to translate keys based on their structure
+  const translateKey = (key: string): string => {
+    if (!key || typeof key !== 'string') return key;
+    
+    if (key.startsWith('courses.')) {
+      try {
+        return tCourses(key.replace('courses.', ''));
+      } catch {
+        return key;
+      }
+    } else if (key.startsWith('practiceExercises.') || key.startsWith('playground.')) {
+      // These keys need to be accessed from the root with their full path
+      try {
+        // For hints that might contain placeholder patterns like {TOPIC}, provide them as literals
+        const translated = tRoot.raw(key);
+        if (typeof translated === 'string' && translated.includes('{') && translated.includes('}')) {
+          // Extract placeholders and provide them as is (not as variables)
+          const placeholders: Record<string, string> = {};
+          const matches = translated.match(/\{([^}]+)\}/g);
+          if (matches) {
+            matches.forEach(match => {
+              const varName = match.slice(1, -1);
+              placeholders[varName] = match; // Keep the brackets
+            });
+          }
+          return tRoot(key, placeholders);
+        }
+        return tRoot(key);
+      } catch {
+        return key;
+      }
+    } else if (key.startsWith('fundamentals.') || key.startsWith('advanced.')) {
+      try {
+        return t(key);
+      } catch {
+        return key;
+      }
+    } else {
+      // Try root translation for other keys
+      try {
+        return tRoot(key);
+      } catch {
+        return key;
+      }
+    }
+  };
+
   // Prepare learning content
   const learningContent = course.content.sections?.map((section, index) => {
     // Find matching interactive examples for this section from practice content
@@ -48,20 +97,26 @@ export default function CourseLayout() {
       example.title.includes(`${index + 1}章`)
     ).length || 0;
     
-    // Resolve examples from translation key
+    // Resolve examples from translation key or array
     let resolvedExamples: string[] = [];
-    try {
-      const examplesKey = section.examples as string;
-      const examplesData = t.raw(examplesKey);
-      if (Array.isArray(examplesData)) {
-        resolvedExamples = examplesData;
-      } else if (typeof examplesData === 'string') {
-        resolvedExamples = [examplesData];
-      } else {
-        resolvedExamples = [examplesKey];
+    if (Array.isArray(section.examples)) {
+      // For intermediate course, examples are arrays of translation keys
+      resolvedExamples = section.examples.map(key => translateKey(key));
+    } else {
+      // For fundamentals course, examples is a single translation key
+      try {
+        const examplesKey = section.examples as string;
+        const examplesData = t.raw(examplesKey);
+        if (Array.isArray(examplesData)) {
+          resolvedExamples = examplesData;
+        } else if (typeof examplesData === 'string') {
+          resolvedExamples = [examplesData];
+        } else {
+          resolvedExamples = [examplesKey];
+        }
+      } catch {
+        resolvedExamples = [section.examples as string];
       }
-    } catch {
-      resolvedExamples = [section.examples as string];
     }
     
     // Process exercises to resolve hints translation keys
@@ -102,11 +157,11 @@ export default function CourseLayout() {
       };
     }) || [];
     
-    // Create processed section with translated content
+    // Create processed section with translated content    
     const processedSection: LearningCardContent = {
       id: `section-${index}`,
-      title: t(`${section.title}`),
-      theory: t(`${section.theory}`),
+      title: translateKey(section.title),
+      theory: translateKey(section.theory),
       examples: resolvedExamples,
       exercises: processedExercises,
       practiceCount: sectionPracticeCount
@@ -116,7 +171,11 @@ export default function CourseLayout() {
     Object.keys(section).forEach(key => {
       if (!['id', 'title', 'theory', 'examples', 'exercises'].includes(key)) {
         const value = section[key];
-        if (typeof value === 'string' && value.includes('.')) {
+        
+        // Handle arrays (like keyTechniques, commonPitfalls)
+        if (Array.isArray(value)) {
+          processedSection[key] = value;
+        } else if (typeof value === 'string' && value.includes('.')) {
           // Looks like a translation key
           try {
             const translatedValue = t.raw(value);
@@ -126,7 +185,7 @@ export default function CourseLayout() {
                 content: t(`${value}.content`)
               };
             } else {
-              processedSection[key] = t(value);
+              processedSection[key] = translateKey(value);
             }
           } catch {
             processedSection[key] = value;
@@ -143,29 +202,19 @@ export default function CourseLayout() {
   // Prepare practice content
   const practiceContent = course.practice?.map(example => {
     const resolveTranslationKey = (key: string): string => {
-      try {
-        return t(key);
-      } catch {
-        return key;
-      }
+      return translateKey(key);
     };
 
     const resolveHintsArray = (hints: string | string[]): string[] => {
       if (Array.isArray(hints)) {
-        return hints.map(hint => {
-          try {
-            return t(hint);
-          } catch {
-            return hint;
-          }
-        });
+        return hints.map(hint => translateKey(hint));
       }
       try {
         const hintsData = t.raw(hints);
         if (Array.isArray(hintsData)) {
           return hintsData;
         }
-        return [t(hints)];
+        return [translateKey(hints)];
       } catch {
         return [hints];
       }
@@ -193,11 +242,7 @@ export default function CourseLayout() {
   // Prepare playground content
   const playgroundContent = course.playground?.map(scenario => {
     const resolveTranslationKey = (key: string): string => {
-      try {
-        return t(key);
-      } catch {
-        return key;
-      }
+      return translateKey(key);
     };
 
     const processedExamples = scenario.examples.map(example => ({
@@ -273,6 +318,8 @@ export default function CourseLayout() {
     switch (courseId) {
       case 'fundamentals':
         return t('course.fundamentals.title');
+      case 'intermediate':
+        return t('course.intermediate.title');
       case 'advanced':
         return t('course.advanced.title');
       default:
@@ -284,6 +331,8 @@ export default function CourseLayout() {
     switch (courseId) {
       case 'fundamentals':
         return t('course.fundamentals.summary');
+      case 'intermediate':
+        return t('course.intermediate.summary');
       case 'advanced':
         return t('course.advanced.summary');
       default:
