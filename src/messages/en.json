@@ -537,6 +537,26 @@
       "chapter1": {
         "title": "Chapter 1: Basic Prompt Structure",
         "theory": "Learn the required parameters of the Messages API: model, max_tokens, messages array. Master the user/assistant conversation format and correct usage of system prompts.",
+        "messageRules": {
+          "title": "Message Alternation Rule",
+          "content": "User and Assistant messages MUST alternate, and messages MUST start with a User turn."
+        },
+        "systemPrompts": {
+          "title": "System Prompts",
+          "content": "You can use a system prompt to give AI models instructions and guidelines. A system prompt is a way to provide context, instructions, and guidelines before presenting a question or task in the User turn. Structurally, system prompts exist separately from the list of User & Assistant messages, and thus belong in a separate \"system prompt\" parameter."
+        },
+        "messageFormatting": {
+          "title": "Message Formatting",
+          "content": "When using message APIs, be sure to demarcate messages by inserting a newline between each message (a message is a single User or Assistant turn). If you fail to do so, the AI will not return an error, but will consider everything not separated by a newline as part of a single message."
+        },
+        "multiTurnConversations": {
+          "title": "Multi-turn Conversations",
+          "content": "You can have multiple \"User:\" / \"Assistant:\" pairs in a prompt (as if simulating a multi-turn conversation). You can also put words into an ending \"Assistant:\" message for the AI to continue from where you left off."
+        },
+        "whySystemPrompts": {
+          "title": "Why use system prompts?",
+          "content": "A well-written system prompt can improve AI performance in a variety of ways, such as increasing the AI's ability to follow rules and instructions."
+        },
         "examples": [
           "✅ Correct format: {role: 'user', content: 'Hi Claude, how are you?'}",
           "❌ Wrong format: {Hi Claude, how are you?} - missing role and content fields",

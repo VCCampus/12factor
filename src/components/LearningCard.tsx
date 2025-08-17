@@ -9,6 +9,21 @@ interface LearningContent {
   id: string;
   title: string;
   theory: string;
+  messageRules?: { title: string; content: string };
+  systemPrompts?: { title: string; content: string };
+  messageFormatting?: { title: string; content: string };
+  multiTurnConversations?: { title: string; content: string };
+  whySystemPrompts?: { title: string; content: string };
+  // Chapter 2 specific core concepts
+  directCommunication?: { title: string; content: string };
+  specificityMatters?: { title: string; content: string };
+  goldenRule?: { title: string; content: string };
+  forcedChoices?: { title: string; content: string };
+  // Chapter 3 specific core concepts
+  roleContext?: { title: string; content: string };
+  roleEffects?: { title: string; content: string };
+  rolePromptLocation?: { title: string; content: string };
+  detailMatters?: { title: string; content: string };
   examples: string[];
   exercises?: Array<{
     id: string;
@@ -150,11 +165,198 @@ export default function LearningCard({
 
             {/* Theory Section */}
             <div className="mb-8">
-              <div className="prose prose-lg dark:prose-invert max-w-none">
-                <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
-                  {currentLearningItem.theory}
-                </p>
+              {/* Primary Theory Content */}
+              <div className="bg-[#98a971]/5 border border-[#98a971]/20 rounded-xl p-6 mb-8">
+                <div className="prose prose-lg dark:prose-invert max-w-none">
+                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg m-0">
+                    {currentLearningItem.theory}
+                  </p>
+                </div>
               </div>
+
+              {/* Core Concepts Grid */}
+              <div className="space-y-6">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2">
+                  <div className="w-1 h-5 bg-[#98a971] rounded-full"></div>
+                  核心概念
+                </h3>
+                
+                <div className="grid gap-4">
+                  {currentLearningItem.messageRules && (
+                    <div className="group border border-gray-200 dark:border-gray-700 rounded-lg p-4 hover:border-[#98a971]/30 transition-colors">
+                      <div className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-[#98a971] rounded-full mt-2 flex-shrink-0"></div>
+                        <div>
+                          <h4 className="font-semibold text-[#98a971] mb-1">{currentLearningItem.messageRules.title}</h4>
+                          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{currentLearningItem.messageRules.content}</p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                  
+                  {currentLearningItem.systemPrompts && (
+                    <div className="group border border-gray-200 dark:border-gray-700 rounded-lg p-4 hover:border-[#98a971]/30 transition-colors">
+                      <div className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-[#98a971] rounded-full mt-2 flex-shrink-0"></div>
+                        <div>
+                          <h4 className="font-semibold text-[#98a971] mb-1">{currentLearningItem.systemPrompts.title}</h4>
+                          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{currentLearningItem.systemPrompts.content}</p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                  
+                  {currentLearningItem.messageFormatting && (
+                    <div className="group border border-gray-200 dark:border-gray-700 rounded-lg p-4 hover:border-[#98a971]/30 transition-colors">
+                      <div className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-[#98a971] rounded-full mt-2 flex-shrink-0"></div>
+                        <div>
+                          <h4 className="font-semibold text-[#98a971] mb-1">{currentLearningItem.messageFormatting.title}</h4>
+                          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{currentLearningItem.messageFormatting.content}</p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                  
+                  {currentLearningItem.directCommunication && (
+                    <div className="group border border-gray-200 dark:border-gray-700 rounded-lg p-4 hover:border-[#98a971]/30 transition-colors">
+                      <div className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-[#98a971] rounded-full mt-2 flex-shrink-0"></div>
+                        <div>
+                          <h4 className="font-semibold text-[#98a971] mb-1">{currentLearningItem.directCommunication.title}</h4>
+                          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{currentLearningItem.directCommunication.content}</p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                  
+                  {currentLearningItem.specificityMatters && (
+                    <div className="group border border-gray-200 dark:border-gray-700 rounded-lg p-4 hover:border-[#98a971]/30 transition-colors">
+                      <div className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-[#98a971] rounded-full mt-2 flex-shrink-0"></div>
+                        <div>
+                          <h4 className="font-semibold text-[#98a971] mb-1">{currentLearningItem.specificityMatters.title}</h4>
+                          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{currentLearningItem.specificityMatters.content}</p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                  
+                  {currentLearningItem.goldenRule && (
+                    <div className="group border border-gray-200 dark:border-gray-700 rounded-lg p-4 hover:border-[#98a971]/30 transition-colors">
+                      <div className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-[#98a971] rounded-full mt-2 flex-shrink-0"></div>
+                        <div>
+                          <h4 className="font-semibold text-[#98a971] mb-1">{currentLearningItem.goldenRule.title}</h4>
+                          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{currentLearningItem.goldenRule.content}</p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                  
+                  {currentLearningItem.forcedChoices && (
+                    <div className="group border border-gray-200 dark:border-gray-700 rounded-lg p-4 hover:border-[#98a971]/30 transition-colors">
+                      <div className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-[#98a971] rounded-full mt-2 flex-shrink-0"></div>
+                        <div>
+                          <h4 className="font-semibold text-[#98a971] mb-1">{currentLearningItem.forcedChoices.title}</h4>
+                          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{currentLearningItem.forcedChoices.content}</p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                  
+                  {currentLearningItem.roleContext && (
+                    <div className="group border border-gray-200 dark:border-gray-700 rounded-lg p-4 hover:border-[#98a971]/30 transition-colors">
+                      <div className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-[#98a971] rounded-full mt-2 flex-shrink-0"></div>
+                        <div>
+                          <h4 className="font-semibold text-[#98a971] mb-1">{currentLearningItem.roleContext.title}</h4>
+                          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{currentLearningItem.roleContext.content}</p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                  
+                  {currentLearningItem.roleEffects && (
+                    <div className="group border border-gray-200 dark:border-gray-700 rounded-lg p-4 hover:border-[#98a971]/30 transition-colors">
+                      <div className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-[#98a971] rounded-full mt-2 flex-shrink-0"></div>
+                        <div>
+                          <h4 className="font-semibold text-[#98a971] mb-1">{currentLearningItem.roleEffects.title}</h4>
+                          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{currentLearningItem.roleEffects.content}</p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                  
+                  {currentLearningItem.rolePromptLocation && (
+                    <div className="group border border-gray-200 dark:border-gray-700 rounded-lg p-4 hover:border-[#98a971]/30 transition-colors">
+                      <div className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-[#98a971] rounded-full mt-2 flex-shrink-0"></div>
+                        <div>
+                          <h4 className="font-semibold text-[#98a971] mb-1">{currentLearningItem.rolePromptLocation.title}</h4>
+                          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{currentLearningItem.rolePromptLocation.content}</p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                  
+                  {currentLearningItem.detailMatters && (
+                    <div className="group border border-gray-200 dark:border-gray-700 rounded-lg p-4 hover:border-[#98a971]/30 transition-colors">
+                      <div className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-[#98a971] rounded-full mt-2 flex-shrink-0"></div>
+                        <div>
+                          <h4 className="font-semibold text-[#98a971] mb-1">{currentLearningItem.detailMatters.title}</h4>
+                          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{currentLearningItem.detailMatters.content}</p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {/* Additional Concepts */}
+              {(currentLearningItem.multiTurnConversations || currentLearningItem.whySystemPrompts) && (
+                <div className="mt-8 space-y-4">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2">
+                    <div className="w-1 h-5 bg-[#98a971]/60 rounded-full"></div>
+                    扩展说明
+                  </h3>
+                  
+                  <div className="space-y-3">
+                    {currentLearningItem.multiTurnConversations && (
+                      <details className="group">
+                        <summary className="flex items-center gap-3 cursor-pointer text-gray-700 dark:text-gray-300 hover:text-[#98a971] transition-colors p-3 border border-gray-200 dark:border-gray-700 rounded-lg">
+                          <div className="w-1.5 h-1.5 bg-gray-400 rounded-full group-open:bg-[#98a971] transition-colors"></div>
+                          <span className="font-medium">{currentLearningItem.multiTurnConversations.title}</span>
+                          <ChevronRightIcon className="w-4 h-4 ml-auto group-open:rotate-90 transition-transform" />
+                        </summary>
+                        <div className="mt-3 pl-6 pr-3 pb-3">
+                          <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm">
+                            {currentLearningItem.multiTurnConversations.content}
+                          </p>
+                        </div>
+                      </details>
+                    )}
+                    
+                    {currentLearningItem.whySystemPrompts && (
+                      <details className="group">
+                        <summary className="flex items-center gap-3 cursor-pointer text-gray-700 dark:text-gray-300 hover:text-[#98a971] transition-colors p-3 border border-gray-200 dark:border-gray-700 rounded-lg">
+                          <div className="w-1.5 h-1.5 bg-gray-400 rounded-full group-open:bg-[#98a971] transition-colors"></div>
+                          <span className="font-medium">{currentLearningItem.whySystemPrompts.title}</span>
+                          <ChevronRightIcon className="w-4 h-4 ml-auto group-open:rotate-90 transition-transform" />
+                        </summary>
+                        <div className="mt-3 pl-6 pr-3 pb-3">
+                          <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm">
+                            {currentLearningItem.whySystemPrompts.content}
+                          </p>
+                        </div>
+                      </details>
+                    )}
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* Examples Section */}

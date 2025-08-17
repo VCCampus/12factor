@@ -102,6 +102,60 @@ export default function CoursePage() {
       id: `section-${index}`,
       title: t(section.title),
       theory: t(section.theory),
+      messageRules: section.messageRules ? {
+        title: t(`${section.messageRules}.title`),
+        content: t(`${section.messageRules}.content`)
+      } : undefined,
+      systemPrompts: section.systemPrompts ? {
+        title: t(`${section.systemPrompts}.title`),
+        content: t(`${section.systemPrompts}.content`)
+      } : undefined,
+      messageFormatting: section.messageFormatting ? {
+        title: t(`${section.messageFormatting}.title`),
+        content: t(`${section.messageFormatting}.content`)
+      } : undefined,
+      multiTurnConversations: section.multiTurnConversations ? {
+        title: t(`${section.multiTurnConversations}.title`),
+        content: t(`${section.multiTurnConversations}.content`)
+      } : undefined,
+      whySystemPrompts: section.whySystemPrompts ? {
+        title: t(`${section.whySystemPrompts}.title`),
+        content: t(`${section.whySystemPrompts}.content`)
+      } : undefined,
+      // Chapter 2 specific core concepts
+      directCommunication: section.directCommunication ? {
+        title: t(`${section.directCommunication}.title`),
+        content: t(`${section.directCommunication}.content`)
+      } : undefined,
+      specificityMatters: section.specificityMatters ? {
+        title: t(`${section.specificityMatters}.title`),
+        content: t(`${section.specificityMatters}.content`)
+      } : undefined,
+      goldenRule: section.goldenRule ? {
+        title: t(`${section.goldenRule}.title`),
+        content: t(`${section.goldenRule}.content`)
+      } : undefined,
+      forcedChoices: section.forcedChoices ? {
+        title: t(`${section.forcedChoices}.title`),
+        content: t(`${section.forcedChoices}.content`)
+      } : undefined,
+      // Chapter 3 specific core concepts
+      roleContext: section.roleContext ? {
+        title: t(`${section.roleContext}.title`),
+        content: t(`${section.roleContext}.content`)
+      } : undefined,
+      roleEffects: section.roleEffects ? {
+        title: t(`${section.roleEffects}.title`),
+        content: t(`${section.roleEffects}.content`)
+      } : undefined,
+      rolePromptLocation: section.rolePromptLocation ? {
+        title: t(`${section.rolePromptLocation}.title`),
+        content: t(`${section.rolePromptLocation}.content`)
+      } : undefined,
+      detailMatters: section.detailMatters ? {
+        title: t(`${section.detailMatters}.title`),
+        content: t(`${section.detailMatters}.content`)
+      } : undefined,
       examples: resolvedExamples,
       exercises: processedExercises,
       practiceCount: sectionPracticeCount

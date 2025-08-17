@@ -538,6 +538,26 @@
       "chapter1": {
         "title": "第一章：基本提示结构",
         "theory": "学习Messages API的必需参数：model、max_tokens、messages数组。掌握user/assistant对话格式和系统提示的正确使用。",
+        "messageRules": {
+          "title": "消息交替原则",
+          "content": "用户(User)和助手(Assistant)消息必须交替出现，且必须以用户(User)轮次开始。"
+        },
+        "systemPrompts": {
+          "title": "系统提示",
+          "content": "系统提示可用于为AI模型提供上下文、指令和指导原则。系统提示在结构上独立于用户和助手消息列表之外，需要在单独的\"系统提示\"参数中指定。"
+        },
+        "messageFormatting": {
+          "title": "消息格式化",
+          "content": "使用消息API时，务必在每条消息之间插入换行符（一条消息即为单个用户或助手轮次）。如果不这样做，AI不会返回错误，但会将未用换行符分隔的所有内容视为单条消息的一部分。"
+        },
+        "multiTurnConversations": {
+          "title": "多轮对话",
+          "content": "您可以在提示中包含多个\"用户:\"/\"助手:\"对话轮次（如模拟多轮对话）。您也可以在结尾的\"助手:\"消息中放入内容，让AI从您留下的位置继续回答。"
+        },
+        "whySystemPrompts": {
+          "title": "系统提示的价值",
+          "content": "良好编写的系统提示可以在多个方面改善AI的表现，例如提高AI遵循规则和指令的能力。"
+        },
         "examples": [
           "✅ 正确格式: {role: 'user', content: 'Hi Claude, how are you?'}",
           "❌ 错误格式: {Hi Claude, how are you?} - 缺少role和content字段",
@@ -558,7 +578,23 @@
       },
       "chapter2": {
         "title": "第二章：清晰直接",
-        "theory": "Claude需要明确指令。遵循黄金法则：把你的提示词给同事看，如果他们困惑，Claude也会困惑。",
+        "theory": "AI需要明确具体的指令才能产生准确回应。就像指导新员工一样，越详细直接的说明，AI的表现越好。",
+        "directCommunication": {
+          "title": "明确性原则",
+          "content": "模糊指令导致差结果，具体要求获得好输出。直接说明你的需求和期望。"
+        },
+        "specificityMatters": {
+          "title": "格式约束",
+          "content": "指定输出格式、长度、风格等约束条件，让AI产出符合预期的结果。"
+        },
+        "goldenRule": {
+          "title": "同事测试法",
+          "content": "把提示词给同事看，如果他们困惑，AI也会困惑。"
+        },
+        "forcedChoices": {
+          "title": "强制选择",
+          "content": "用'如果必须选择一个'让AI避免模糊回避，给出明确答案。"
+        },
         "examples": [
           "❌ 模糊: '写一首关于机器人的俳句'",
           "✅ 明确: '写一首关于机器人的俳句，跳过前言直接进入诗歌'",
@@ -567,14 +603,14 @@
         ],
         "exercises": {
           "spanishResponse": {
-            "instructions": "修改系统提示让Claude用西班牙语回答",
+            "instructions": "修改系统提示让AI用西班牙语回答",
             "template": "系统提示 = '[Replace this text]'",
-            "hints": ["直接告诉Claude使用哪种语言", "可以在系统提示中指定语言要求"]
+            "hints": ["直接告诉AI使用哪种语言", "可以在系统提示中指定语言要求"]
           },
           "onePlayerOnly": {
-            "instructions": "让Claude只回答一个球员的名字，没有其他文字或标点",
+            "instructions": "让AI只回答一个球员的名字，没有其他文字或标点",
             "template": "[Replace this text]",
-            "hints": ["要非常具体地说明格式要求", "明确说明不要解释或其他内容", "强制Claude做出选择"]
+            "hints": ["要非常具体地说明格式要求", "明确说明不要解释或其他内容", "强制AI做出选择"]
           },
           "longStory": {
             "instructions": "写一个800字以上的故事",
@@ -585,12 +621,28 @@
       },
       "chapter3": {
         "title": "第三章：角色分配",
-        "theory": "给Claude分配具体角色能显著提升表现。角色设定可以改变回应风格、语调和专业程度。体验角色分配对逻辑推理的影响。通过给Claude分配专家角色，提高其在特定领域的表现。",
+        "theory": "给Claude分配具体角色能显著提升表现。就像让人“像某某一样思考”能帮助解决问题一样，角色提示可以改变回应的风格、语调和专业程度。",
+        "roleContext": {
+          "title": "角色上下文",
+          "content": "Claude只知道你告诉它的信息，因此需要提供完整的角色背景和上下文。"
+        },
+        "roleEffects": {
+          "title": "角色效果",
+          "content": "角色设定可以改变回应风格、语调和专业程度，提高在特定领域的表现。"
+        },
+        "rolePromptLocation": {
+          "title": "设置位置",
+          "content": "角色可以在系统提示或用户消息中设定，两种方式都有效。"
+        },
+        "detailMatters": {
+          "title": "细节重要性",
+          "content": "角色描述越详细，效果越好。包含具体的专业背景和行为期望。"
+        },
         "examples": [
           "❌ 无角色: '滑板运动怎么样？'",
-          "✅ 猫的角色: system='你是一只猫' → 会从猫的视角回答",
-          "❌ 逻辑错误: Jack看Anne，Anne看George，Jack已婚George未婚，已婚者在看未婚者吗？",
-          "✅ 逻辑推理专家: system='你是逻辑推理专家' → 正确分析这个问题"
+          "✅ 特定角色: system='你是一个滑板教练' → 专业回应",
+          "❌ 逻辑问题: 'Jack看Anne，Anne看George，Jack已婚George未婚，已婚者在看未婚者吗？'",
+          "✅ 专家角色: system='你是逻辑推理专家' → 精准分析"
         ],
         "exercises": {
           "mathCorrection": {
@@ -707,7 +759,7 @@
           "hints": [
             "直接在System Prompt中说明语言要求",
             "可以说 \"Please respond in Spanish\" 或 \"Responde en español\"",
-            "观察 Claude 如何完全切换语言"
+            "观察 AI 如何完全切换语言"
           ],
           "variations": {
             "chineseResponse": {
@@ -731,7 +783,7 @@
           "hints": [
             "要非常具体地说明格式要求",
             "明确说明不要解释或其他内容",
-            "强制Claude做出选择"
+            "强制AI做出选择"
           ],
           "variations": {
             "withExplanation": {

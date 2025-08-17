@@ -13,6 +13,11 @@ export const promptLessons: PromptLesson[] = [
         {
           title: 'fundamentals.chapter1.title',
           theory: 'fundamentals.chapter1.theory',
+          messageRules: 'fundamentals.chapter1.messageRules',
+          systemPrompts: 'fundamentals.chapter1.systemPrompts',
+          messageFormatting: 'fundamentals.chapter1.messageFormatting',
+          multiTurnConversations: 'fundamentals.chapter1.multiTurnConversations',
+          whySystemPrompts: 'fundamentals.chapter1.whySystemPrompts',
           examples: 'fundamentals.chapter1.examples',
           exercises: [{
             id: "count_to_three",
@@ -31,6 +36,10 @@ export const promptLessons: PromptLesson[] = [
         {
           title: 'fundamentals.chapter2.title',
           theory: 'fundamentals.chapter2.theory',
+          directCommunication: 'fundamentals.chapter2.directCommunication',
+          specificityMatters: 'fundamentals.chapter2.specificityMatters',
+          goldenRule: 'fundamentals.chapter2.goldenRule',
+          forcedChoices: 'fundamentals.chapter2.forcedChoices',
           examples: 'fundamentals.chapter2.examples',
           exercises: [{
             id: "spanish_response",
@@ -55,6 +64,10 @@ export const promptLessons: PromptLesson[] = [
         {
           title: 'fundamentals.chapter3.title',
           theory: 'fundamentals.chapter3.theory',
+          roleContext: 'fundamentals.chapter3.roleContext',
+          roleEffects: 'fundamentals.chapter3.roleEffects',
+          rolePromptLocation: 'fundamentals.chapter3.rolePromptLocation',
+          detailMatters: 'fundamentals.chapter3.detailMatters',
           examples: 'fundamentals.chapter3.examples',
           exercises: [{
             id: "math_correction",
