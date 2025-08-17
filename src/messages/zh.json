@@ -20,6 +20,18 @@
       "copyright": "12Factor",
       "author": "@wquguru",
       "license": "MIT 许可证"
+    },
+    "navigation": {
+      "methodology": "12Factor 方法论",
+      "principlesDescription": "学习12个核心原则和最佳实践",
+      "flashcardsDescription": "通过互动卡片巩固学习内容",
+      "quizDescription": "测试你对12Factor原则的理解",
+      "resources": "资源",
+      "githubRepo": "GitHub 仓库",
+      "githubRepoDescription": "查看源代码和贡献项目",
+      "apiDocs": "API 文档",
+      "communityForum": "社区论坛",
+      "comingSoon": "即将推出"
     }
   },
   "home": {

@@ -11,6 +11,7 @@ export default function PromptEngineeringDropdown() {
   const dropdownRef = useRef<HTMLDivElement>(null);
   const t = useTranslations('common');
   const tPE = useTranslations('promptEngineering');
+  const tNav = useTranslations('common.navigation');
   const locale = useLocale();
 
   useEffect(() => {
@@ -118,7 +119,7 @@ export default function PromptEngineeringDropdown() {
             <div className="p-6">
               <div className="mb-4">
                 <h3 className="text-sm font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wide mb-4">
-                  12Factor 方法论
+                  {tNav('methodology')}
                 </h3>
               </div>
               
@@ -132,7 +133,7 @@ export default function PromptEngineeringDropdown() {
                   {t('principles')}
                 </div>
                 <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                  学习12个核心原则和最佳实践
+                  {tNav('principlesDescription')}
                 </div>
               </Link>
 
@@ -146,7 +147,7 @@ export default function PromptEngineeringDropdown() {
                   {t('flashcards')}
                 </div>
                 <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                  通过互动卡片巩固学习内容
+                  {tNav('flashcardsDescription')}
                 </div>
               </Link>
 
@@ -160,7 +161,7 @@ export default function PromptEngineeringDropdown() {
                   {t('quiz')}
                 </div>
                 <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                  测试你对12Factor原则的理解
+                  {tNav('quizDescription')}
                 </div>
               </Link>
             </div>
@@ -169,7 +170,7 @@ export default function PromptEngineeringDropdown() {
             <div className="p-6">
               <div className="mb-4">
                 <h3 className="text-sm font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wide mb-4">
-                  资源
+                  {tNav('resources')}
                 </h3>
               </div>
               
@@ -180,28 +181,28 @@ export default function PromptEngineeringDropdown() {
                 className="block mb-3 group"
               >
                 <div className="text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:text-[#98a971] transition-colors">
-                  GitHub 仓库
+                  {tNav('githubRepo')}
                 </div>
                 <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                  查看源代码和贡献项目
+                  {tNav('githubRepoDescription')}
                 </div>
               </a>
 
               <div className="block mb-3 group">
                 <div className="text-sm font-medium text-gray-500 dark:text-gray-400">
-                  API 文档
+                  {tNav('apiDocs')}
                 </div>
                 <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                  即将推出
+                  {tNav('comingSoon')}
                 </div>
               </div>
 
               <div className="block mb-3 group">
                 <div className="text-sm font-medium text-gray-500 dark:text-gray-400">
-                  社区论坛
+                  {tNav('communityForum')}
                 </div>
                 <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                  即将推出
+                  {tNav('comingSoon')}
                 </div>
               </div>
             </div>
