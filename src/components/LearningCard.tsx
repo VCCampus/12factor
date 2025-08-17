@@ -262,7 +262,8 @@ export default function LearningCard({
                         expectedOutput: '',
                         hints: [],
                         variations: []
-                      }} 
+                      }}
+                      mode="playground"
                     />
                   </div>
                 </div>
@@ -308,7 +309,8 @@ export default function LearningCard({
                   prompt: variant.prompt || '',
                   explanation: variant.explanation
                 })) || []
-              }} 
+              }}
+              mode="practice"
             />
           </div>
         )}

@@ -39,6 +39,34 @@ npm run lint   # Code quality checks
 - **10x Engineering Focus**: Systematic approach to AI collaboration efficiency
 - **Open Source**: MIT licensed, community-driven development
 
+## LLM API Configuration
+
+The prompt engineering features support custom LLM providers. Configure your API in `.env.local`:
+
+```bash
+# Copy environment template
+cp .env.example .env.local
+```
+
+### Using DeepSeek (Recommended)
+```env
+OPENAI_API_KEY=sk-your-deepseek-key
+LLM_API_URL=https://api.deepseek.com/v1/chat/completions
+LLM_MODEL=deepseek-chat
+```
+
+### Using OpenAI (Default)
+```env
+OPENAI_API_KEY=sk-your-openai-key
+```
+
+### Health Check
+```bash
+curl http://localhost:3000/api/llm/health
+```
+
+> See [LLM_API_SETUP.md](./LLM_API_SETUP.md) for more configuration options.
+
 ## Technology Stack
 
 - **Framework**: Next.js 15 with App Router
@@ -47,3 +75,4 @@ npm run lint   # Code quality checks
 - **State**: Zustand for lightweight management
 - **i18n**: next-intl for internationalization
 - **Icons**: Heroicons for consistent UI
+- **LLM**: OpenAI SDK with custom endpoint support

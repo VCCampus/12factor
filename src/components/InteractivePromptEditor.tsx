@@ -27,9 +27,10 @@ interface PromptExample {
 
 interface InteractivePromptEditorProps {
   example: PromptExample;
+  mode?: 'playground' | 'practice';
 }
 
-export default function InteractivePromptEditor({ example }: InteractivePromptEditorProps) {
+export default function InteractivePromptEditor({ example, mode = 'practice' }: InteractivePromptEditorProps) {
   const t = useTranslations('promptEngineering');
   const [systemPrompt, setSystemPrompt] = useState(example.systemPrompt || '');
   const [userPrompt, setUserPrompt] = useState(example.userPrompt);
@@ -38,51 +39,8 @@ export default function InteractivePromptEditor({ example }: InteractivePromptEd
   const [showHints, setShowHints] = useState(false);
   const [selectedVariation, setSelectedVariation] = useState<number | null>(null);
   const [analysisResult, setAnalysisResult] = useState<'good' | 'needs-improvement' | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
-  // AI response generator (mock)
-  const generateMockResponse = (system: string, user: string): string => {
-    const prompt = (system + ' ' + user).toLowerCase();
-    
-    // Basic greeting responses
-    if (prompt.includes('hello') || prompt.includes('hi') || prompt.includes('how are you') || prompt.includes('你好')) {
-      if (prompt.includes('formal') || prompt.includes('good morning')) {
-        return "Good morning! I'm functioning optimally today, thank you for asking. I'm Claude, an AI assistant, and I'm ready to help you with any questions or tasks you may have. How may I assist you today?";
-      } else if (prompt.includes('hey') || prompt.includes('what\'s up')) {
-        return "Hey there! I'm doing well, thanks for asking! I'm Claude, and I'm here to help out with whatever you need. What can I help you with today?";
-      } else if (prompt.includes('中文') || prompt.includes('你好')) {
-        return "你好！很高兴认识你！我是Claude，一个由Anthropic开发的AI助手。我可以用中文和英文与你交流，有什么可以帮助你的吗？";
-      } else {
-        return "Hello! I'm Claude, an AI assistant created by Anthropic. I'm here to help you with any questions or tasks you might have. How can I assist you today?";
-      }
-    }
-    
-    // Programming variables related
-    if (prompt.includes('variable') && prompt.includes('programming')) {
-      if (prompt.includes('mentor') || prompt.includes('friendly')) {
-        return "Great question! Think of a variable like a labeled box 📦. Just like you might have a box labeled 'toys' where you store your toys, in programming, a variable is a named container that stores data.\n\nFor example, you might create a variable called 'age' and store the number 25 in it. Later, you can look in that box (use the variable) or put something new in it (change the value).\n\nVariables are super helpful because instead of remembering numbers or text throughout your code, you just remember the easy name you gave to the box!";
-      } else if (prompt.includes('expert') || prompt.includes('engineer')) {
-        return "A variable in programming is a symbolic name for a memory location that stores data values. Variables provide an abstraction layer over memory addresses, allowing developers to reference and manipulate data using meaningful identifiers rather than hexadecimal memory addresses.\n\nKey characteristics include:\n- Type (determines data format and operations)\n- Scope (visibility and lifetime within program)\n- Mutability (whether the value can be changed)\n- Memory allocation (stack vs heap storage)";
-      } else if (prompt.includes('5岁') || prompt.includes('child')) {
-        return "哇！变量就像你的玩具盒子！🎁\n\n你知道吗？当你有很多玩具的时候，妈妈会让你把它们放在不同的盒子里对吧？比如一个盒子放积木，一个盒子放小汽车。\n\n在电脑的世界里，变量就是这样的盒子！程序员叔叔给每个盒子起个名字，比如叫'我的年龄'，然后在里面放一个数字，比如5！\n\n这样，电脑就记住了你5岁啦！很神奇对不对？";
-      } else {
-        return "A variable is a named storage location in a program that holds data. It's called a 'variable' because the value it contains can vary or change during program execution.\n\nFor example:\n- `name = 'Alice'` creates a variable called 'name' that stores the text 'Alice'\n- `age = 25` creates a variable called 'age' that stores the number 25\n\nVariables allow us to store, retrieve, and manipulate data throughout our programs in a readable and organized way.";
-      }
-    }
-    
-    // Dog-related summaries
-    if (prompt.includes('dogs') || prompt.includes('dog')) {
-      if (prompt.includes('golden retriever') && prompt.includes('150')) {
-        return "Golden Retrievers are among the most beloved family dogs, known for their gentle, friendly temperament and exceptional patience with children. These medium to large-sized dogs are highly intelligent, making them easy to train and eager to please their families. Originally bred as hunting companions, they retain high energy levels and require regular exercise - daily walks and active play sessions keep them healthy and happy. Their calm, loyal nature combined with natural protective instincts makes them excellent family pets, though their friendly disposition means they're more likely to welcome intruders with wagging tails than guard against them.";
-      } else if (prompt.includes('labrador') && prompt.includes('structured')) {
-        return "## Labrador Retriever Overview\n\n**1) Physical Characteristics:**\nLabradors are medium to large dogs weighing 55-80 pounds with short, water-resistant double coats. They come in three standard colors: yellow, black, and chocolate, with broad heads and expressive eyes.\n\n**2) Personality Traits:**\nKnown for their friendly, outgoing nature and high intelligence, Labs are eager to please and excellent with children. They're naturally social dogs that thrive on human interaction and rarely show aggression.\n\n**3) Exercise Needs:**\nAs high-energy working dogs, Labs require 1-2 hours of daily exercise including walks, swimming, or fetch. Mental stimulation through training and puzzle toys is equally important for their well-being.\n\n**4) Grooming Requirements:**\nTheir short coat needs weekly brushing, increasing to daily during shedding seasons. Regular nail trims, ear cleaning, and dental care complete their basic grooming needs.";
-      } else {
-        return "Dogs are domesticated mammals that have been human companions for thousands of years. They come in hundreds of breeds with diverse sizes, temperaments, and characteristics. Most dogs are loyal, social animals that form strong bonds with their families. They require regular exercise, proper nutrition, veterinary care, and social interaction to thrive. Dogs serve many roles including companions, working animals, therapy animals, and service animals.";
-      }
-    }
-    
-    // Default response
-    return "I understand you'd like me to help with that. Could you provide a bit more specific information about what you're looking for? I'm here to assist with a wide range of topics and tasks.";
-  };
 
   // Analyze prompt quality
   const analyzePrompt = (system: string, user: string): 'good' | 'needs-improvement' => {
@@ -100,14 +58,50 @@ export default function InteractivePromptEditor({ example }: InteractivePromptEd
   const runPrompt = async () => {
     setIsRunning(true);
     setCurrentOutput('');
+    setError(null);
     
-    // Simulate API call delay
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    const response = generateMockResponse(systemPrompt, userPrompt);
-    setCurrentOutput(response);
-    setAnalysisResult(analyzePrompt(systemPrompt, userPrompt));
-    setIsRunning(false);
+    try {
+      const response = await fetch('/api/llm', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          systemPrompt: systemPrompt || undefined,
+          userPrompt: userPrompt.trim(),
+          mode: mode
+        }),
+      });
+      
+      const data = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to get response from AI');
+      }
+      
+      setCurrentOutput(data.response);
+      setAnalysisResult(analyzePrompt(systemPrompt, userPrompt));
+      
+    } catch (error) {
+      console.error('Error calling LLM API:', error);
+      
+      if (error instanceof Error) {
+        if (error.message.includes('Rate limit')) {
+          setError(t('rateLimitError'));
+        } else if (error.message.includes('Service temporarily unavailable')) {
+          setError(t('serviceUnavailableError'));
+        } else {
+          setError(t('generalError'));
+        }
+      } else {
+        setError(t('generalError'));
+      }
+      
+      // No fallback - just show the error
+      setCurrentOutput('');
+    } finally {
+      setIsRunning(false);
+    }
   };
 
   const resetToExample = () => {
@@ -116,6 +110,7 @@ export default function InteractivePromptEditor({ example }: InteractivePromptEd
     setCurrentOutput('');
     setAnalysisResult(null);
     setSelectedVariation(null);
+    setError(null);
   };
 
   const applyVariation = (index: number) => {
@@ -226,26 +221,35 @@ export default function InteractivePromptEditor({ example }: InteractivePromptEd
             </div>
 
             {/* Controls */}
-            <div className="flex gap-2">
-              <button
-                onClick={runPrompt}
-                disabled={isRunning || !userPrompt.trim()}
-                className="flex items-center gap-2 px-4 py-2 bg-[#98a971] text-white rounded-lg hover:bg-[#7a8259] disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-sm"
-              >
-                {isRunning ? (
-                  <ArrowPathIcon className="h-4 w-4 animate-spin" />
-                ) : (
-                  <PlayIcon className="h-4 w-4" />
-                )}
-                {isRunning ? t('running') : t('runPrompt')}
-              </button>
+            <div className="space-y-3">
+              {/* Error Display */}
+              {error && (
+                <div className="p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded-lg">
+                  <p className="text-sm text-red-700 dark:text-red-300">{error}</p>
+                </div>
+              )}
               
-              <button
-                onClick={resetToExample}
-                className="px-4 py-2 text-gray-600 dark:text-gray-400 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-sm"
-              >
-                {t('reset')}
-              </button>
+              <div className="flex gap-2">
+                <button
+                  onClick={runPrompt}
+                  disabled={isRunning || !userPrompt.trim()}
+                  className="flex items-center gap-2 px-4 py-2 bg-[#98a971] text-white rounded-lg hover:bg-[#7a8259] disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-sm"
+                >
+                  {isRunning ? (
+                    <ArrowPathIcon className="h-4 w-4 animate-spin" />
+                  ) : (
+                    <PlayIcon className="h-4 w-4" />
+                  )}
+                  {isRunning ? t('running') : t('runPrompt')}
+                </button>
+                
+                <button
+                  onClick={resetToExample}
+                  className="px-4 py-2 text-gray-600 dark:text-gray-400 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-sm"
+                >
+                  {t('reset')}
+                </button>
+              </div>
             </div>
           </div>
 
