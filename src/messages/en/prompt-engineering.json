@@ -1,5 +1,6 @@
 {
   "promptEngineering": {
+    "coreConceptsTitle": "Core Concepts",
     "title": "Prompt Engineering Mastery",
     "description": "Learn practical prompt engineering techniques through interactive lessons and hands-on exercises",
     "startLearning": "Start Learning",
@@ -116,6 +117,7 @@
     "clickRunPrompt": "Click \"Run Prompt\" to see AI response",
     "coreConceptsTitle": "Core Concepts",
     "keyTechniquesTitle": "Key Techniques",
+    "commonPitfallsTitle": "Common Pitfalls",
     "commonPitfallsTitle": "Common Pitfalls"
   },
   "courses": {
@@ -125,12 +127,19 @@
       "sections": {
         "basicStructure": {
           "title": "Chapter 1: Basic Prompt Structure",
-          "theory": "Learn the required parameters of the Messages API: model, max_tokens, messages array. Master the user/assistant conversation format and correct usage of system prompts.\n\n**Message Alternation Rule**\nUser and Assistant messages MUST alternate, and messages MUST start with a User turn.\n\n**System Prompts**\nYou can use a system prompt to give AI models instructions and guidelines. A system prompt is a way to provide context, instructions, and guidelines before presenting a question or task in the User turn. Structurally, system prompts exist separately from the list of User & Assistant messages, and thus belong in a separate \"system prompt\" parameter.\n\n**Message Formatting**\nWhen using message APIs, be sure to demarcate messages by inserting a newline between each message (a message is a single User or Assistant turn). If you fail to do so, the AI will not return an error, but will consider everything not separated by a newline as part of a single message.\n\n**Multi-turn Conversations**\nYou can have multiple \"User:\" / \"Assistant:\" pairs in a prompt (as if simulating a multi-turn conversation). You can also put words into an ending \"Assistant:\" message for the AI to continue from where you left off.\n\n**Why use system prompts?**\nA well-written system prompt can improve AI performance in a variety of ways, such as increasing the AI's ability to follow rules and instructions.",
+          "theory": "Learn the required parameters of the Messages API: model, max_tokens, messages array. Master the user/assistant conversation format and correct usage of system prompts.",
           "examples": [
             "Correct format: role='user', content='Hi Claude, how are you?'",
             "Wrong format: Missing role and content fields",
             "System prompt: You are a logical reasoning expert who specializes in solving complex logical problems"
           ],
+          "coreConcepts": {
+            "0": "**Message Alternation Rule** - User and Assistant messages MUST alternate, and messages MUST start with a User turn",
+            "1": "**System Prompts** - System prompts provide context, instructions, and guidelines to AI models, structurally separate from user & assistant messages",
+            "2": "**Message Formatting** - When using message APIs, insert newlines between each message, or AI will consider unseparated content as a single message",
+            "3": "**Multi-turn Conversations** - You can include multiple User/Assistant pairs in a prompt, and have AI continue from an ending Assistant message",
+            "4": "**Value of System Prompts** - Well-written system prompts improve AI performance, such as increasing AI's ability to follow rules and instructions"
+          },
           "keyTechniques": {
             "0": "Messages API parameters: model, max_tokens, messages",
             "1": "User/Assistant conversation format",
@@ -172,6 +181,12 @@
             "Vague: Who is the best basketball player of all time?",
             "Force choice: Who is the best basketball player of all time? While there are different opinions, if you had to choose one, who would it be?"
           ],
+          "coreConcepts": {
+            "0": "**Clarity Principle** - Vague instructions lead to poor results, specific requirements get good output. State your needs and expectations directly",
+            "1": "**Format Constraints** - Specify output format, length, style and other constraints to make AI produce results that meet expectations",
+            "2": "**Colleague Test** - Show your prompt to a colleague, if they're confused, AI will be confused too",
+            "3": "**Forced Choice** - Use 'if you had to choose one' to make AI avoid vague hedging and give clear answers"
+          },
           "keyTechniques": {
             "0": "Direct and specific instructions",
             "1": "Format constraints and requirements",
@@ -221,6 +236,12 @@
             "Logic error: Jack looks at Anne, Anne looks at George, Jack is married George is unmarried, is a married person looking at an unmarried person?",
             "Logic expert: system='You are a logical reasoning expert' correctly analyzes this problem"
           ],
+          "coreConcepts": {
+            "0": "**Role Context** - Claude only knows what you tell it, so provide complete role background and context",
+            "1": "**Role Effects** - Role setting can change response style, tone, and expertise level, improving performance in specific domains",
+            "2": "**Setting Location** - Roles can be set in system prompts or user messages, both methods are effective",
+            "3": "**Detail Importance** - The more detailed the role description, the better the effect. Include specific professional background and behavioral expectations"
+          },
           "keyTechniques": {
             "0": "Assigning specific roles and personas",
             "1": "Providing detailed role context",

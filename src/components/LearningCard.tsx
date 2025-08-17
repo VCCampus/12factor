@@ -9,6 +9,7 @@ interface LearningContent {
   id: string;
   title: string;
   theory: string;
+  coreConcepts?: string[];
   messageRules?: { title: string; content: string };
   systemPrompts?: { title: string; content: string };
   messageFormatting?: { title: string; content: string };
@@ -25,6 +26,8 @@ interface LearningContent {
   rolePromptLocation?: { title: string; content: string };
   detailMatters?: { title: string; content: string };
   examples: string[];
+  keyTechniques?: string[];
+  commonPitfalls?: string[];
   exercises?: Array<{
     id: string;
     instructions: string;
@@ -188,49 +191,82 @@ export default function LearningCard({
                 </div>
               </div>
 
-              {/* Core Concepts Grid */}
-              <div className="space-y-6">
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2">
-                  <div className="w-1 h-5 bg-[#98a971] rounded-full"></div>
-                  {t('coreConceptsTitle')}
-                </h3>
-                
-                <div className="grid gap-4">
-                  {currentLearningItem.messageRules && (
-                    <div className="group border border-gray-200 dark:border-gray-700 rounded-lg p-4 hover:border-[#98a971]/30 transition-colors">
-                      <div className="flex items-start gap-3">
-                        <div className="w-2 h-2 bg-[#98a971] rounded-full mt-2 flex-shrink-0"></div>
-                        <div>
-                          <h4 className="font-semibold text-[#98a971] mb-1">{currentLearningItem.messageRules.title}</h4>
-                          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{currentLearningItem.messageRules.content}</p>
-                        </div>
-                      </div>
-                    </div>
-                  )}
+              {/* Core Concepts Section */}
+              {currentLearningItem.coreConcepts && currentLearningItem.coreConcepts.length > 0 && (
+                <div className="space-y-6">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2">
+                    <div className="w-1 h-5 bg-[#98a971] rounded-full"></div>
+                    {t('coreConceptsTitle')}
+                  </h3>
                   
-                  {currentLearningItem.systemPrompts && (
-                    <div className="group border border-gray-200 dark:border-gray-700 rounded-lg p-4 hover:border-[#98a971]/30 transition-colors">
-                      <div className="flex items-start gap-3">
-                        <div className="w-2 h-2 bg-[#98a971] rounded-full mt-2 flex-shrink-0"></div>
-                        <div>
-                          <h4 className="font-semibold text-[#98a971] mb-1">{currentLearningItem.systemPrompts.title}</h4>
-                          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{currentLearningItem.systemPrompts.content}</p>
+                  <div className="grid gap-4">
+                    {currentLearningItem.coreConcepts.map((concept, index) => {
+                      // Parse the concept to extract title and content
+                      const parts = concept.split(' - ');
+                      const titleMatch = parts[0]?.match(/\*\*(.+?)\*\*/);
+                      const title = titleMatch ? titleMatch[1] : parts[0];
+                      const content = parts.slice(1).join(' - ') || concept;
+                      
+                      return (
+                        <div key={index} className="group border border-gray-200 dark:border-gray-700 rounded-lg p-4 hover:border-[#98a971]/30 transition-colors">
+                          <div className="flex items-start gap-3">
+                            <div className="w-2 h-2 bg-[#98a971] rounded-full mt-2 flex-shrink-0"></div>
+                            <div>
+                              <h4 className="font-semibold text-[#98a971] mb-1">{title}</h4>
+                              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{content}</p>
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                    </div>
-                  )}
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+
+              {/* Legacy Core Concepts Grid - for backward compatibility */}
+              {!currentLearningItem.coreConcepts && (currentLearningItem.messageRules || currentLearningItem.systemPrompts || currentLearningItem.messageFormatting) && (
+                <div className="space-y-6">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2">
+                    <div className="w-1 h-5 bg-[#98a971] rounded-full"></div>
+                    {t('coreConceptsTitle')}
+                  </h3>
                   
-                  {currentLearningItem.messageFormatting && (
-                    <div className="group border border-gray-200 dark:border-gray-700 rounded-lg p-4 hover:border-[#98a971]/30 transition-colors">
-                      <div className="flex items-start gap-3">
-                        <div className="w-2 h-2 bg-[#98a971] rounded-full mt-2 flex-shrink-0"></div>
-                        <div>
-                          <h4 className="font-semibold text-[#98a971] mb-1">{currentLearningItem.messageFormatting.title}</h4>
-                          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{currentLearningItem.messageFormatting.content}</p>
+                  <div className="grid gap-4">
+                    {currentLearningItem.messageRules && (
+                      <div className="group border border-gray-200 dark:border-gray-700 rounded-lg p-4 hover:border-[#98a971]/30 transition-colors">
+                        <div className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-[#98a971] rounded-full mt-2 flex-shrink-0"></div>
+                          <div>
+                            <h4 className="font-semibold text-[#98a971] mb-1">{currentLearningItem.messageRules.title}</h4>
+                            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{currentLearningItem.messageRules.content}</p>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  )}
+                    )}
+                    
+                    {currentLearningItem.systemPrompts && (
+                      <div className="group border border-gray-200 dark:border-gray-700 rounded-lg p-4 hover:border-[#98a971]/30 transition-colors">
+                        <div className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-[#98a971] rounded-full mt-2 flex-shrink-0"></div>
+                          <div>
+                            <h4 className="font-semibold text-[#98a971] mb-1">{currentLearningItem.systemPrompts.title}</h4>
+                            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{currentLearningItem.systemPrompts.content}</p>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                    
+                    {currentLearningItem.messageFormatting && (
+                      <div className="group border border-gray-200 dark:border-gray-700 rounded-lg p-4 hover:border-[#98a971]/30 transition-colors">
+                        <div className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-[#98a971] rounded-full mt-2 flex-shrink-0"></div>
+                          <div>
+                            <h4 className="font-semibold text-[#98a971] mb-1">{currentLearningItem.messageFormatting.title}</h4>
+                            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{currentLearningItem.messageFormatting.content}</p>
+                          </div>
+                        </div>
+                      </div>
+                    )}
                   
                   {currentLearningItem.directCommunication && (
                     <div className="group border border-gray-200 dark:border-gray-700 rounded-lg p-4 hover:border-[#98a971]/30 transition-colors">
@@ -329,6 +365,7 @@ export default function LearningCard({
                   )}
                 </div>
               </div>
+              )}
 
               {/* Additional Concepts */}
               {(currentLearningItem.multiTurnConversations || currentLearningItem.whySystemPrompts) && (
@@ -373,53 +410,68 @@ export default function LearningCard({
               )}
             </div>
 
-            {/* Key Techniques Section */}
-            {currentLearningItem.keyTechniques && Array.isArray(currentLearningItem.keyTechniques) && (
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2">
-                  <div className="w-1 h-5 bg-[#98a971] rounded-full"></div>
-                  {t('keyTechniquesTitle')}
-                </h3>
-                <div className="grid gap-2">
-                  {currentLearningItem.keyTechniques.map((technique, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-gray-700 dark:text-gray-300">{technique.startsWith('courses.') ? tRoot(technique) : technique}</p>
+            {/* Key Techniques and Common Pitfalls as Collapsible Sections under Core Concepts */}
+            {(currentLearningItem.keyTechniques || currentLearningItem.commonPitfalls) && (
+              <div className="mt-6 space-y-3">
+                {/* Key Techniques Collapsible */}
+                {currentLearningItem.keyTechniques && Array.isArray(currentLearningItem.keyTechniques) && (
+                  <details className="group">
+                    <summary className="flex items-center gap-3 cursor-pointer text-gray-700 dark:text-gray-300 hover:text-[#98a971] transition-colors p-4 border border-gray-200 dark:border-gray-700 rounded-lg">
+                      <div className="w-1.5 h-1.5 bg-gray-400 rounded-full group-open:bg-[#98a971] transition-colors"></div>
+                      <span className="font-medium text-base">{t('keyTechniquesTitle')}</span>
+                      <ChevronRightIcon className="w-4 h-4 ml-auto group-open:rotate-90 transition-transform" />
+                    </summary>
+                    <div className="mt-3 px-6 pb-4">
+                      <div className="grid gap-2">
+                        {currentLearningItem.keyTechniques.map((technique, index) => (
+                          <div key={index} className="flex items-start gap-3">
+                            <div className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                            <p className="text-gray-600 dark:text-gray-400 text-sm">{technique.startsWith('courses.') ? tRoot(technique) : technique}</p>
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                  ))}
-                </div>
+                  </details>
+                )}
+
+                {/* Common Pitfalls Collapsible */}
+                {currentLearningItem.commonPitfalls && Array.isArray(currentLearningItem.commonPitfalls) && (
+                  <details className="group">
+                    <summary className="flex items-center gap-3 cursor-pointer text-gray-700 dark:text-gray-300 hover:text-[#98a971] transition-colors p-4 border border-gray-200 dark:border-gray-700 rounded-lg">
+                      <div className="w-1.5 h-1.5 bg-gray-400 rounded-full group-open:bg-[#98a971] transition-colors"></div>
+                      <span className="font-medium text-base">{t('commonPitfallsTitle')}</span>
+                      <ChevronRightIcon className="w-4 h-4 ml-auto group-open:rotate-90 transition-transform" />
+                    </summary>
+                    <div className="mt-3 px-6 pb-4">
+                      <div className="grid gap-2">
+                        {currentLearningItem.commonPitfalls.map((pitfall, index) => (
+                          <div key={index} className="flex items-start gap-3">
+                            <div className="w-1.5 h-1.5 bg-amber-500 rounded-full mt-2 flex-shrink-0"></div>
+                            <p className="text-gray-600 dark:text-gray-400 text-sm">{pitfall.startsWith('courses.') ? tRoot(pitfall) : pitfall}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </details>
+                )}
               </div>
             )}
 
-            {/* Common Pitfalls Section */}
-            {currentLearningItem.commonPitfalls && Array.isArray(currentLearningItem.commonPitfalls) && (
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2">
-                  <div className="w-1 h-5 bg-[#98a971] rounded-full"></div>
-                  {t('commonPitfallsTitle')}
-                </h3>
-                <div className="grid gap-2">
-                  {currentLearningItem.commonPitfalls.map((pitfall, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 bg-amber-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-gray-700 dark:text-gray-300">{pitfall.startsWith('courses.') ? tRoot(pitfall) : pitfall}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* Examples Section */}
-            <div className="mb-6">
-              <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100 mb-4">
+            {/* Examples Section - Styled like Core Concepts */}
+            <div className="mt-8 mb-6">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2">
+                <div className="w-1 h-5 bg-[#98a971] rounded-full"></div>
                 {t('promptExamples')}
               </h3>
-              <div className="space-y-3">
+              <div className="grid gap-4">
                 {(Array.isArray(currentLearningItem.examples) ? currentLearningItem.examples : []).map((example, exIndex) => (
-                  <div key={exIndex} className="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-5 border border-gray-200 dark:border-gray-600">
-                    <code className="text-sm text-gray-800 dark:text-gray-200 leading-relaxed block">
-                      {example}
-                    </code>
+                  <div key={exIndex} className="group border border-gray-200 dark:border-gray-700 rounded-lg p-4 hover:border-[#98a971]/30 transition-colors">
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-[#98a971] rounded-full mt-2 flex-shrink-0"></div>
+                      <code className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed block">
+                        {example}
+                      </code>
+                    </div>
                   </div>
                 ))}
               </div>

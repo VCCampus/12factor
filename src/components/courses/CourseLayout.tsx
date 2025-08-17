@@ -172,9 +172,15 @@ export default function CourseLayout() {
       if (!['id', 'title', 'theory', 'examples', 'exercises'].includes(key)) {
         const value = section[key];
         
-        // Handle arrays (like keyTechniques, commonPitfalls)
+        // Handle arrays (like coreConcepts, keyTechniques, commonPitfalls)
         if (Array.isArray(value)) {
-          processedSection[key] = value;
+          // Translate array items if they are translation keys
+          processedSection[key] = value.map(item => {
+            if (typeof item === 'string' && item.includes('.')) {
+              return translateKey(item);
+            }
+            return item;
+          });
         } else if (typeof value === 'string' && value.includes('.')) {
           // Looks like a translation key
           try {
