@@ -145,6 +145,8 @@ export default function CoursePage() {
       id: example.id,
       title: resolveTranslationKey(example.title),
       description: resolveTranslationKey(example.description) || t('clickToStartPractice'),
+      systemPrompt: example.systemPrompt,
+      userPrompt: example.userPrompt,
       variants: resolvedVariations,
       expectedOutput: resolveTranslationKey(example.expectedOutput) || '',
       hints: resolveHintsArray(example.hints || [])

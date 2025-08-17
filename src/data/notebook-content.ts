@@ -63,11 +63,6 @@ export const notebookLessons: NotebookLesson[] = [
             name: 'practiceExercises.fundamentals.chapter1BasicStructure.variations.clearFormat.name',
             prompt: 'Please count from 1 to 3, one number per line.',
             explanation: 'practiceExercises.fundamentals.chapter1BasicStructure.variations.clearFormat.explanation'
-          },
-          {
-            name: 'practiceExercises.fundamentals.chapter1BasicStructure.variations.chineseInstruction.name',
-            prompt: '请从1数到3。',
-            explanation: 'practiceExercises.fundamentals.chapter1BasicStructure.variations.chineseInstruction.explanation'
           }
         ]
       },
@@ -114,11 +109,6 @@ export const notebookLessons: NotebookLesson[] = [
           'practiceExercises.fundamentals.chapter2Spanish.hints.2'
         ],
         variations: [
-          {
-            name: 'practiceExercises.fundamentals.chapter2Spanish.variations.chineseResponse.name',
-            prompt: 'Hello Claude, how are you?',
-            explanation: 'practiceExercises.fundamentals.chapter2Spanish.variations.chineseResponse.explanation'
-          },
           {
             name: 'practiceExercises.fundamentals.chapter2Spanish.variations.frenchResponse.name',
             prompt: 'Hello Claude, how are you?',

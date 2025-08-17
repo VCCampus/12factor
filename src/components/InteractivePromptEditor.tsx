@@ -120,7 +120,7 @@ export default function InteractivePromptEditor({ example }: InteractivePromptEd
 
   const applyVariation = (index: number) => {
     const variation = example.variations[index];
-    setUserPrompt(variation.prompt);
+    // Don't auto-fill user prompt - let user manually copy if needed
     setSelectedVariation(index);
     setCurrentOutput('');
     setAnalysisResult(null);
@@ -198,18 +198,20 @@ export default function InteractivePromptEditor({ example }: InteractivePromptEd
               🎯 {t('editPrompt')}
             </h4>
             
-            {/* System Prompt */}
-            <div>
-              <label className="block text-xs font-medium text-gray-700 dark:text-gray-300 mb-2">
-                {t('systemPrompt')}
-              </label>
-              <textarea
-                value={systemPrompt}
-                onChange={(e) => setSystemPrompt(e.target.value)}
-                placeholder={t('systemPromptPlaceholder')}
-                className="w-full h-20 px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-[#98a971] focus:border-transparent resize-none"
-              />
-            </div>
+            {/* System Prompt - only show if the exercise needs it */}
+            {(example.systemPrompt !== undefined) && (
+              <div>
+                <label className="block text-xs font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  {t('systemPrompt')}
+                </label>
+                <textarea
+                  value={systemPrompt}
+                  onChange={(e) => setSystemPrompt(e.target.value)}
+                  placeholder={t('systemPromptPlaceholder')}
+                  className="w-full h-20 px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-[#98a971] focus:border-transparent resize-none"
+                />
+              </div>
+            )}
 
             {/* User Prompt */}
             <div>

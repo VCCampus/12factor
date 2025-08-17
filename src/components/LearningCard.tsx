@@ -23,6 +23,8 @@ interface PracticeContent {
   id: string;
   title: string;
   description: string;
+  systemPrompt?: string;
+  userPrompt?: string;
   variants: Array<{
     name: string;
     prompt: string;
@@ -218,8 +220,8 @@ export default function LearningCard({
                 id: currentPracticeItem.id,
                 title: currentPracticeItem.title,
                 description: currentPracticeItem.description,
-                systemPrompt: '',
-                userPrompt: 'Enter your prompt here...',
+                systemPrompt: currentPracticeItem.systemPrompt || '',
+                userPrompt: currentPracticeItem.userPrompt || 'Enter your prompt here...',
                 expectedOutput: currentPracticeItem.expectedOutput,
                 hints: currentPracticeItem.hints || [],
                 variations: currentPracticeItem.variants?.map(variant => ({
