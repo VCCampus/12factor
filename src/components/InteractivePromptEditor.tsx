@@ -33,8 +33,8 @@ interface InteractivePromptEditorProps {
 
 export default function InteractivePromptEditor({ example, mode = 'practice' }: InteractivePromptEditorProps) {
   const t = useTranslations('promptEngineering');
-  const [systemPrompt, setSystemPrompt] = useState(example.systemPrompt || '');
-  const [userPrompt, setUserPrompt] = useState(example.userPrompt);
+  const [systemPrompt, setSystemPrompt] = useState(mode === 'practice' ? '' : (example.systemPrompt || ''));
+  const [userPrompt, setUserPrompt] = useState(mode === 'practice' ? '' : example.userPrompt);
   const [currentOutput, setCurrentOutput] = useState('');
   const [isRunning, setIsRunning] = useState(false);
   const [showHints, setShowHints] = useState(false);
@@ -147,8 +147,8 @@ AI输出: ${truncatedOutput}
   };
 
   const resetToExample = () => {
-    setSystemPrompt(example.systemPrompt || '');
-    setUserPrompt(example.userPrompt);
+    setSystemPrompt(mode === 'practice' ? '' : (example.systemPrompt || ''));
+    setUserPrompt(mode === 'practice' ? '' : example.userPrompt);
     setCurrentOutput('');
     setAnalysisResult(null);
     setSelectedVariation(null);
@@ -158,11 +158,16 @@ AI输出: ${truncatedOutput}
   const applyVariation = (index: number) => {
     const variation = example.variations[index];
     setSelectedVariation(index);
-    setUserPrompt(variation.prompt);
-    // Update system prompt if variation has one, otherwise keep original
-    if (variation.systemPrompt !== undefined) {
-      setSystemPrompt(variation.systemPrompt);
+    
+    // In practice mode, don't auto-fill inputs - let user practice from scratch
+    if (mode !== 'practice') {
+      setUserPrompt(variation.prompt);
+      // Update system prompt if variation has one, otherwise keep original
+      if (variation.systemPrompt !== undefined) {
+        setSystemPrompt(variation.systemPrompt);
+      }
     }
+    
     setCurrentOutput('');
     setAnalysisResult(null);
   };
@@ -201,7 +206,7 @@ AI输出: ${truncatedOutput}
               {example.hints.map((hint, index) => (
                 <li key={index} className="flex items-start gap-2 text-sm text-yellow-700 dark:text-yellow-200">
                   <span className="text-yellow-600 dark:text-yellow-400 mt-0.5">•</span>
-                  {t(hint)}
+                  {hint}
                 </li>
               ))}
             </ul>
@@ -349,17 +354,6 @@ AI输出: ${truncatedOutput}
           </div>
         </div>
 
-        {/* Expected Output - only show in practice mode */}
-        {mode === 'practice' && (
-          <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg">
-            <h4 className="text-sm font-medium text-blue-800 dark:text-blue-200 mb-2">
-              🎯 {t('expectedOutput')}
-            </h4>
-            <p className="text-sm text-blue-700 dark:text-blue-300 leading-relaxed">
-              {example.expectedOutput}
-            </p>
-          </div>
-        )}
       </div>
     </div>
   );

@@ -200,16 +200,19 @@ export const notebookLessons: NotebookLesson[] = [
           {
             name: 'practiceExercises.fundamentals.chapter3MathLogic.variations.noRole.name',
             prompt: 'Is this equation solved correctly?\n\n2x - 3 = 9\n2x = 6\nx = 3',
+            systemPrompt: '',
             explanation: 'practiceExercises.fundamentals.chapter3MathLogic.variations.noRole.explanation'
           },
           {
             name: 'practiceExercises.fundamentals.chapter3MathLogic.variations.logicExpert.name',
             prompt: 'Is this equation solved correctly?\n\n2x - 3 = 9\n2x = 6\nx = 3',
+            systemPrompt: 'You are a logic and mathematics expert. Analyze each step carefully and identify any errors in mathematical reasoning.',
             explanation: 'practiceExercises.fundamentals.chapter3MathLogic.variations.logicExpert.explanation'
           },
           {
             name: 'practiceExercises.fundamentals.chapter3MathLogic.variations.studentRole.name',
             prompt: 'Is this equation solved correctly?\n\n2x - 3 = 9\n2x = 6\nx = 3',
+            systemPrompt: 'You are a student learning algebra. Approach this problem with curiosity and explain your thinking process step by step.',
             explanation: 'practiceExercises.fundamentals.chapter3MathLogic.variations.studentRole.explanation'
           }
         ]

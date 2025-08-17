@@ -538,11 +538,10 @@
     "running": "Running...",
     "reset": "Reset",
     "aiResponse": "AI Response",
-    "goodPromptQuality": "Good prompt quality",
-    "canImprove": "Can improve",
+    "goodPromptQuality": "Good output quality",
+    "canImprove": "Output can improve",
     "aiThinking": "AI is thinking...",
     "clickRunPrompt": "Click \"Run Prompt\" to see AI response",
-    "expectedOutput": "Expected Output Example",
     "fundamentals": {
       "title": "Fundamentals Course",
       "theory": "Comprehensive step-by-step guide to mastering Claude's best prompt engineering practices. Learn three core skills: API structure, clear communication, and role assignment.",
@@ -832,6 +831,110 @@
             }
           }
         }
+      }
+    },
+    "playground": {
+      "chapter1": {
+        "title": "Chapter 1 Playground: Basic Structure & System Prompts",
+        "creativeCounting": {
+          "name": "Creative Counting",
+          "description": "Experiment with different ways to count - try making it fun!",
+          "variations": {
+            "basic": "Basic Creative",
+            "basicExplanation": "Simple creative counting approach",
+            "storytelling": "Story Format",
+            "storytellingExplanation": "Count by embedding numbers in a narrative",
+            "poetic": "Poetic Style",
+            "poeticExplanation": "Use rhymes and poetic language for counting",
+            "withContext": "Educational Context",
+            "withContextExplanation": "Add educational context with system prompt"
+          }
+        },
+        "systemPromptExperiment": {
+          "name": "System Prompt Structure",
+          "description": "Learn how system prompts guide AI behavior and response style",
+          "variations": {
+            "basic": "No System Prompt",
+            "basicExplanation": "Standard AI response without system guidance",
+            "structured": "Structured Request",
+            "structuredExplanation": "System prompt requesting clear structure",
+            "detailed": "Detailed Instructions",
+            "detailedExplanation": "System prompt asking for detailed scientific explanation",
+            "simple": "Simplicity Request",
+            "simpleExplanation": "System prompt requesting simple language"
+          }
+        },
+        "hint1": "Try different creative approaches to basic tasks",
+        "hint2": "Experiment with various system prompt structures",
+        "hint3": "Notice how system prompts change AI response style"
+      },
+      "chapter2": {
+        "title": "Chapter 2 Playground: Clear Communication",
+        "languageExperiment": {
+          "name": "Language Choice",
+          "description": "Explore how AI chooses languages and explains decisions",
+          "variations": {
+            "basic": "Open Choice",
+            "basicExplanation": "AI chooses any language and explains why",
+            "specific": "Specific Language",
+            "specificExplanation": "Request a specific language with cultural context",
+            "comparative": "Language Comparison",
+            "comparativeExplanation": "Compare greetings across multiple languages",
+            "contextual": "Business Context",
+            "contextualExplanation": "Professional greeting with business context"
+          }
+        },
+        "formatExperiment": {
+          "name": "Format Styles",
+          "description": "Try different formatting approaches for lists and structure",
+          "variations": {
+            "basic": "Flexible Format",
+            "basicExplanation": "AI chooses formatting style freely",
+            "numbered": "Numbered List",
+            "numberedExplanation": "Specific numbered list with explanations",
+            "detailed": "Detailed Descriptions",
+            "detailedExplanation": "Rich descriptions with reasons",
+            "creative": "Creative Format",
+            "creativeExplanation": "Creative presentation like poem or story"
+          }
+        },
+        "hint1": "Be specific about your requirements",
+        "hint2": "Try different output formats",
+        "hint3": "Experiment with explicit vs implicit instructions"
+      },
+      "chapter3": {
+        "title": "Chapter 3 Playground: Role Prompting",
+        "roleComparison": {
+          "name": "Role Comparison",
+          "description": "Compare responses from different professional perspectives",
+          "variations": {
+            "basic": "No Role Context",
+            "basicExplanation": "General AI response without specific professional role",
+            "conservative": "Conservative Advisor",
+            "conservativeExplanation": "Risk-averse financial advisor perspective",
+            "aggressive": "Tech-Savvy Advisor",
+            "aggressiveExplanation": "Digital asset specialist with growth focus",
+            "balanced": "Certified Planner",
+            "balancedExplanation": "Objective analysis from certified financial planner"
+          }
+        },
+        "expertiseExperiment": {
+          "name": "Expertise Levels",
+          "description": "See how different expertise levels affect explanations",
+          "variations": {
+            "basic": "General Response",
+            "basicExplanation": "Standard AI explanation without expertise role",
+            "professor": "Academic Professor",
+            "professorExplanation": "Data science professor making topics accessible",
+            "beginner": "Beginner Tutor",
+            "beginnerExplanation": "Tutor specialized in teaching absolute beginners",
+            "practical": "Industry Expert",
+            "practicalExplanation": "Working data scientist showing real applications"
+          }
+        },
+        "hint1": "Try contrasting professional roles",
+        "hint2": "Experiment with different expertise levels",
+        "hint3": "Notice how role context shapes responses"
       }
     },
     "rateLimitError": "Rate limit exceeded. Please wait a moment and try again.",

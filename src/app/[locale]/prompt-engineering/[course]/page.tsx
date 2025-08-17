@@ -214,35 +214,254 @@ export default function CoursePage() {
     };
   }) || [];
 
-  // Prepare playground content based on notebook examples
-  const playgroundContent = notebookLesson?.interactiveExamples?.map((example) => {
-    const resolveTranslationKey = (key: string): string => {
-      try {
-        return t(key);
-      } catch {
-        return key;
+  // Prepare playground content - create unique experimental scenarios based on learning concepts
+  const playgroundContent = learningContent.map((section, sectionIndex) => {
+    const chapterNum = sectionIndex + 1;
+    
+    // Define playground scenarios based on chapter concepts
+    const getPlaygroundScenarios = (chapterIndex: number) => {
+      switch (chapterIndex) {
+        case 0: // Chapter 1: Basic Structure & System Prompts
+          return [
+            {
+              name: t('playground.chapter1.creativeCounting.name'),
+              prompt: 'Count to five in a creative way',
+              systemPrompt: '',
+              description: t('playground.chapter1.creativeCounting.description')
+            },
+            {
+              name: t('playground.chapter1.systemPromptExperiment.name'),
+              prompt: 'Explain what clouds are made of',
+              systemPrompt: '',
+              description: t('playground.chapter1.systemPromptExperiment.description')
+            }
+          ];
+        case 1: // Chapter 2: Clear Communication
+          return [
+            {
+              name: t('playground.chapter2.languageExperiment.name'),
+              prompt: 'Greet me in the language of your choice and explain why you chose it',
+              systemPrompt: '',
+              description: t('playground.chapter2.languageExperiment.description')
+            },
+            {
+              name: t('playground.chapter2.formatExperiment.name'),
+              prompt: 'List your top 3 favorite activities. Try different formatting styles.',
+              systemPrompt: '',
+              description: t('playground.chapter2.formatExperiment.description')
+            }
+          ];
+        case 2: // Chapter 3: Role Prompting
+          return [
+            {
+              name: t('playground.chapter3.roleComparison.name'),
+              prompt: 'Should I invest in cryptocurrency?',
+              systemPrompt: 'You are a conservative financial advisor with 20 years of experience.',
+              description: t('playground.chapter3.roleComparison.description')
+            },
+            {
+              name: t('playground.chapter3.expertiseExperiment.name'),
+              prompt: 'Explain machine learning to me',
+              systemPrompt: 'You are a data science professor who excels at making complex topics accessible.',
+              description: t('playground.chapter3.expertiseExperiment.description')
+            }
+          ];
+        default:
+          return [];
       }
     };
 
-    // Create playground examples from the notebook content
-    const playgroundExamples = example.variations?.map(variation => ({
-      name: resolveTranslationKey(variation.name),
-      prompt: variation.prompt,
-      systemPrompt: variation.systemPrompt || example.systemPrompt,
-      description: resolveTranslationKey(variation.explanation)
-    })) || [{
-      name: resolveTranslationKey(example.title),
-      prompt: example.userPrompt || 'Enter your prompt here...',
-      systemPrompt: example.systemPrompt,
-      description: resolveTranslationKey(example.description) || t('experimentWithThisPrompt')
-    }];
+    // Define real variations for each scenario
+    const getScenarioVariations = (chapterIndex: number, scenarioIndex: number) => {
+      switch (chapterIndex) {
+        case 0: // Chapter 1: Basic Structure & System Prompts
+          if (scenarioIndex === 0) { // Creative Counting
+            return [
+              {
+                name: t('playground.chapter1.creativeCounting.variations.basic'),
+                prompt: 'Count to five in a creative way',
+                systemPrompt: '',
+                explanation: t('playground.chapter1.creativeCounting.variations.basicExplanation')
+              },
+              {
+                name: t('playground.chapter1.creativeCounting.variations.storytelling'),
+                prompt: 'Count to five by telling a short story where each number appears naturally',
+                systemPrompt: '',
+                explanation: t('playground.chapter1.creativeCounting.variations.storytellingExplanation')
+              },
+              {
+                name: t('playground.chapter1.creativeCounting.variations.poetic'),
+                prompt: 'Count to five using rhymes or poetic language',
+                systemPrompt: '',
+                explanation: t('playground.chapter1.creativeCounting.variations.poeticExplanation')
+              },
+              {
+                name: t('playground.chapter1.creativeCounting.variations.withContext'),
+                prompt: 'Count to five in a creative way, making it educational for children',
+                systemPrompt: 'You are a kindergarten teacher who makes learning fun and engaging.',
+                explanation: t('playground.chapter1.creativeCounting.variations.withContextExplanation')
+              }
+            ];
+          } else { // System Prompt Experiment
+            return [
+              {
+                name: t('playground.chapter1.systemPromptExperiment.variations.basic'),
+                prompt: 'Explain what clouds are made of',
+                systemPrompt: '',
+                explanation: t('playground.chapter1.systemPromptExperiment.variations.basicExplanation')
+              },
+              {
+                name: t('playground.chapter1.systemPromptExperiment.variations.structured'),
+                prompt: 'Explain what clouds are made of',
+                systemPrompt: 'Please provide a clear, structured explanation.',
+                explanation: t('playground.chapter1.systemPromptExperiment.variations.structuredExplanation')
+              },
+              {
+                name: t('playground.chapter1.systemPromptExperiment.variations.detailed'),
+                prompt: 'Explain what clouds are made of',
+                systemPrompt: 'Provide a detailed scientific explanation with examples.',
+                explanation: t('playground.chapter1.systemPromptExperiment.variations.detailedExplanation')
+              },
+              {
+                name: t('playground.chapter1.systemPromptExperiment.variations.simple'),
+                prompt: 'Explain what clouds are made of',
+                systemPrompt: 'Explain in simple, easy-to-understand language.',
+                explanation: t('playground.chapter1.systemPromptExperiment.variations.simpleExplanation')
+              }
+            ];
+          }
+        case 1: // Chapter 2: Clear Communication
+          if (scenarioIndex === 0) { // Language Experiment
+            return [
+              {
+                name: t('playground.chapter2.languageExperiment.variations.basic'),
+                prompt: 'Greet me in the language of your choice and explain why you chose it',
+                systemPrompt: '',
+                explanation: t('playground.chapter2.languageExperiment.variations.basicExplanation')
+              },
+              {
+                name: t('playground.chapter2.languageExperiment.variations.specific'),
+                prompt: 'Greet me in Spanish and explain the cultural significance of your chosen greeting',
+                systemPrompt: '',
+                explanation: t('playground.chapter2.languageExperiment.variations.specificExplanation')
+              },
+              {
+                name: t('playground.chapter2.languageExperiment.variations.comparative'),
+                prompt: 'Greet me in two different languages and compare how greetings reflect cultural values',
+                systemPrompt: '',
+                explanation: t('playground.chapter2.languageExperiment.variations.comparativeExplanation')
+              },
+              {
+                name: t('playground.chapter2.languageExperiment.variations.contextual'),
+                prompt: 'Greet me appropriately for a business meeting and explain your choice',
+                systemPrompt: 'You are a professional business consultant familiar with international etiquette.',
+                explanation: t('playground.chapter2.languageExperiment.variations.contextualExplanation')
+              }
+            ];
+          } else { // Format Experiment
+            return [
+              {
+                name: t('playground.chapter2.formatExperiment.variations.basic'),
+                prompt: 'List your top 3 favorite activities. Try different formatting styles.',
+                systemPrompt: '',
+                explanation: t('playground.chapter2.formatExperiment.variations.basicExplanation')
+              },
+              {
+                name: t('playground.chapter2.formatExperiment.variations.numbered'),
+                prompt: 'List your top 3 favorite activities in a numbered list with brief explanations for each',
+                systemPrompt: '',
+                explanation: t('playground.chapter2.formatExperiment.variations.numberedExplanation')
+              },
+              {
+                name: t('playground.chapter2.formatExperiment.variations.detailed'),
+                prompt: 'List your top 3 favorite activities with detailed descriptions and reasons why you enjoy them',
+                systemPrompt: '',
+                explanation: t('playground.chapter2.formatExperiment.variations.detailedExplanation')
+              },
+              {
+                name: t('playground.chapter2.formatExperiment.variations.creative'),
+                prompt: 'Present your top 3 favorite activities in a creative format (e.g., as a poem, story, or advertisement)',
+                systemPrompt: '',
+                explanation: t('playground.chapter2.formatExperiment.variations.creativeExplanation')
+              }
+            ];
+          }
+        case 2: // Chapter 3: Role Prompting
+          if (scenarioIndex === 0) { // Role Comparison
+            return [
+              {
+                name: t('playground.chapter3.roleComparison.variations.basic'),
+                prompt: 'Should I invest in cryptocurrency?',
+                systemPrompt: '',
+                explanation: t('playground.chapter3.roleComparison.variations.basicExplanation')
+              },
+              {
+                name: t('playground.chapter3.roleComparison.variations.conservative'),
+                prompt: 'Should I invest in cryptocurrency?',
+                systemPrompt: 'You are a conservative financial advisor with 20 years of experience.',
+                explanation: t('playground.chapter3.roleComparison.variations.conservativeExplanation')
+              },
+              {
+                name: t('playground.chapter3.roleComparison.variations.aggressive'),
+                prompt: 'Should I invest in cryptocurrency?',
+                systemPrompt: 'You are a tech-savvy investment advisor who specializes in emerging digital assets.',
+                explanation: t('playground.chapter3.roleComparison.variations.aggressiveExplanation')
+              },
+              {
+                name: t('playground.chapter3.roleComparison.variations.balanced'),
+                prompt: 'Should I invest in cryptocurrency? Please provide a balanced analysis.',
+                systemPrompt: 'You are a certified financial planner who provides objective, balanced investment advice.',
+                explanation: t('playground.chapter3.roleComparison.variations.balancedExplanation')
+              }
+            ];
+          } else { // Expertise Experiment
+            return [
+              {
+                name: t('playground.chapter3.expertiseExperiment.variations.basic'),
+                prompt: 'Explain machine learning to me',
+                systemPrompt: '',
+                explanation: t('playground.chapter3.expertiseExperiment.variations.basicExplanation')
+              },
+              {
+                name: t('playground.chapter3.expertiseExperiment.variations.professor'),
+                prompt: 'Explain machine learning to me',
+                systemPrompt: 'You are a data science professor who excels at making complex topics accessible.',
+                explanation: t('playground.chapter3.expertiseExperiment.variations.professorExplanation')
+              },
+              {
+                name: t('playground.chapter3.expertiseExperiment.variations.beginner'),
+                prompt: 'Explain machine learning to a complete beginner',
+                systemPrompt: 'You are a friendly tutor who specializes in teaching technical concepts to absolute beginners.',
+                explanation: t('playground.chapter3.expertiseExperiment.variations.beginnerExplanation')
+              },
+              {
+                name: t('playground.chapter3.expertiseExperiment.variations.practical'),
+                prompt: 'Explain machine learning with real-world examples and applications',
+                systemPrompt: 'You are a data scientist working in industry who likes to show practical applications.',
+                explanation: t('playground.chapter3.expertiseExperiment.variations.practicalExplanation')
+              }
+            ];
+          }
+        default:
+          return [];
+      }
+    };
 
     return {
-      id: example.id,
-      title: resolveTranslationKey(example.title),
-      examples: playgroundExamples
+      id: `playground-chapter-${chapterNum}`,
+      title: t(`playground.chapter${chapterNum}.title`),
+      examples: getPlaygroundScenarios(sectionIndex).map((scenario, scenarioIndex) => ({
+        ...scenario,
+        variations: getScenarioVariations(sectionIndex, scenarioIndex)
+      })),
+      hints: [
+        t(`playground.chapter${chapterNum}.hint1`),
+        t(`playground.chapter${chapterNum}.hint2`),
+        t(`playground.chapter${chapterNum}.hint3`)
+      ],
+      variations: getScenarioVariations(sectionIndex, 0) // Keep for backward compatibility
     };
-  }) || [];
+  });
 
   const handleNext = useCallback(() => {
     const maxIndex = currentMode === 'practice' ? practiceContent.length - 1 : 

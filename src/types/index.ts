@@ -29,8 +29,24 @@ export interface ExerciseData {
 export interface CourseSection {
   title: string;
   theory: string;
-  examples: string | string[];
+  examples?: string | string[];
   exercises?: ExerciseData[];
+  // Chapter 1 specific properties
+  messageRules?: string;
+  systemPrompts?: string;
+  messageFormatting?: string;
+  multiTurnConversations?: string;
+  whySystemPrompts?: string;
+  // Chapter 2 specific properties
+  directCommunication?: string;
+  specificityMatters?: string;
+  goldenRule?: string;
+  forcedChoices?: string;
+  // Chapter 3 specific properties
+  roleContext?: string;
+  roleEffects?: string;
+  rolePromptLocation?: string;
+  detailMatters?: string;
 }
 
 export interface PromptLesson {

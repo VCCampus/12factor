@@ -58,6 +58,19 @@ interface PlaygroundContent {
     prompt: string;
     systemPrompt?: string;
     description: string;
+    variations?: Array<{
+      name: string;
+      prompt: string;
+      systemPrompt?: string;
+      explanation: string;
+    }>;
+  }>;
+  hints?: string[];
+  variations?: Array<{
+    name: string;
+    prompt: string;
+    systemPrompt?: string;
+    explanation: string;
   }>;
 }
 
@@ -451,8 +464,8 @@ export default function LearningCard({
                         systemPrompt: example.systemPrompt || '',
                         userPrompt: example.prompt,
                         expectedOutput: '',
-                        hints: [],
-                        variations: []
+                        hints: currentPlaygroundItem.hints || [],
+                        variations: example.variations || currentPlaygroundItem.variations || []
                       }}
                       mode="playground"
                     />

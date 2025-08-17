@@ -539,11 +539,10 @@
     "running": "运行中...",
     "reset": "重置",
     "aiResponse": "AI 响应",
-    "goodPromptQuality": "提示词质量好",
-    "canImprove": "可以改进",
+    "goodPromptQuality": "输出效果好",
+    "canImprove": "输出可改进",
     "aiThinking": "AI 正在思考...",
     "clickRunPrompt": "点击\"运行提示\"查看AI响应",
-    "expectedOutput": "期望输出示例",
     "fundamentals": {
       "title": "基础课程",
       "theory": "掌握Claude最佳提示工程的全面分步指南。学习API结构、清晰沟通、角色分配三大核心技能。",
@@ -865,6 +864,110 @@
             }
           }
         }
+      }
+    },
+    "playground": {
+      "chapter1": {
+        "title": "第一章 Playground：基础结构与系统提示",
+        "creativeCounting": {
+          "name": "创意计数",
+          "description": "尝试用不同有趣的方式进行计数！",
+          "variations": {
+            "basic": "基础创意",
+            "basicExplanation": "简单的创意计数方法",
+            "storytelling": "故事格式",
+            "storytellingExplanation": "通过故事情节自然融入数字",
+            "poetic": "诗歌风格",
+            "poeticExplanation": "使用韵律和诗歌语言进行计数",
+            "withContext": "教育情境",
+            "withContextExplanation": "结合系统提示添加教育背景"
+          }
+        },
+        "systemPromptExperiment": {
+          "name": "系统提示结构",
+          "description": "学习系统提示如何引导AI行为和回应风格",
+          "variations": {
+            "basic": "无系统提示",
+            "basicExplanation": "标准AI回应，无系统引导",
+            "structured": "结构化要求",
+            "structuredExplanation": "系统提示要求清晰结构",
+            "detailed": "详细指令",
+            "detailedExplanation": "系统提示要求详细科学解释",
+            "simple": "简化要求",
+            "simpleExplanation": "系统提示要求简单易懂的语言"
+          }
+        },
+        "hint1": "尝试不同的创意方法来处理基础任务",
+        "hint2": "实验各种系统提示结构",
+        "hint3": "注意系统提示如何改变AI回应风格"
+      },
+      "chapter2": {
+        "title": "第二章 Playground：清晰沟通",
+        "languageExperiment": {
+          "name": "语言选择",
+          "description": "探索AI如何选择语言并解释决策",
+          "variations": {
+            "basic": "开放选择",
+            "basicExplanation": "AI自由选择语言并解释原因",
+            "specific": "指定语言",
+            "specificExplanation": "要求特定语言并了解文化背景",
+            "comparative": "语言对比",
+            "comparativeExplanation": "比较多种语言的问候方式",
+            "contextual": "商务情境",
+            "contextualExplanation": "专业商务场合的问候方式"
+          }
+        },
+        "formatExperiment": {
+          "name": "格式风格",
+          "description": "尝试不同的列表和结构格式方法",
+          "variations": {
+            "basic": "灵活格式",
+            "basicExplanation": "AI自由选择格式风格",
+            "numbered": "编号列表",
+            "numberedExplanation": "特定编号列表格式并附解释",
+            "detailed": "详细描述",
+            "detailedExplanation": "丰富描述并说明原因",
+            "creative": "创意格式",
+            "creativeExplanation": "诗歌或故事等创意表现形式"
+          }
+        },
+        "hint1": "对需求要具体明确",
+        "hint2": "尝试不同的输出格式",
+        "hint3": "实验显式与隐式指令的区别"
+      },
+      "chapter3": {
+        "title": "第三章 Playground：角色提示",
+        "roleComparison": {
+          "name": "角色对比",
+          "description": "比较不同专业视角的回答",
+          "variations": {
+            "basic": "无角色背景",
+            "basicExplanation": "通用AI回应，无特定专业角色",
+            "conservative": "保守顾问",
+            "conservativeExplanation": "风险规避型金融顾问视角",
+            "aggressive": "科技顾问",
+            "aggressiveExplanation": "专注成长的数字资产专家视角",
+            "balanced": "认证规划师",
+            "balancedExplanation": "认证金融规划师的客观分析"
+          }
+        },
+        "expertiseExperiment": {
+          "name": "专业程度实验",
+          "description": "看看不同专业水平如何影响解释",
+          "variations": {
+            "basic": "通用回应",
+            "basicExplanation": "标准AI解释，无专业角色设定",
+            "professor": "学术教授",
+            "professorExplanation": "数据科学教授的易懂讲解",
+            "beginner": "初学者导师",
+            "beginnerExplanation": "专门教授零基础学员的导师",
+            "practical": "行业专家",
+            "practicalExplanation": "实战数据科学家展示实际应用"
+          }
+        },
+        "hint1": "尝试对比不同的专业角色",
+        "hint2": "实验不同的专业水平",
+        "hint3": "注意角色背景如何塑造回答"
       }
     },
     "rateLimitError": "请求频率过高，请稍等片刻后重试。",
