@@ -169,7 +169,7 @@ export default function Navigation() {
         
         {/* Mobile menu overlay */}
         {isMobileMenuOpen && (
-          <div className="md:hidden absolute inset-x-0 top-full bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 shadow-xl z-40">
+          <div className="md:hidden absolute inset-x-0 top-full bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 shadow-xl z-40 max-h-[calc(100vh-5rem)] overflow-y-auto overscroll-contain">
             <div className="max-w-6xl mx-auto">
               {/* Regular navigation items */}
               {navigationItems.map((item) => (
