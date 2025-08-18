@@ -18,6 +18,13 @@ export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const langMenuRef = useRef<HTMLDivElement>(null);
 
+  // Save user's language preference when they manually switch
+  const handleLanguageChange = (newLocale: 'en' | 'zh') => {
+    // Set a cookie that the middleware can read
+    document.cookie = `preferred-locale=${newLocale};path=/;max-age=${60 * 60 * 24 * 365}`; // 1 year
+    setIsLangMenuOpen(false);
+  };
+
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -138,7 +145,7 @@ export default function Navigation() {
                     href={getNavigableHref(pathname)}
                     locale="en"
                     className="block px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-t-2xl transition-colors"
-                    onClick={() => setIsLangMenuOpen(false)}
+                    onClick={() => handleLanguageChange('en')}
                   >
                     {t('languageLabels.english')}
                   </Link>
@@ -146,7 +153,7 @@ export default function Navigation() {
                     href={getNavigableHref(pathname)}
                     locale="zh"
                     className="block px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-b-2xl transition-colors"
-                    onClick={() => setIsLangMenuOpen(false)}
+                    onClick={() => handleLanguageChange('zh')}
                   >
                     {t('languageLabels.chinese')}
                   </Link>
@@ -182,52 +189,51 @@ export default function Navigation() {
               <MobilePromptEngineeringMenu onLinkClick={() => setIsMobileMenuOpen(false)} />
               
               {/* Language and theme controls */}
-              <div className="px-6 py-4 bg-gray-50 dark:bg-gray-800 flex items-center justify-between">
-                <div className="flex items-center space-x-4">
-                  <button
-                    onClick={() => {
-                      setIsLangMenuOpen(!isLangMenuOpen);
-                    }}
-                    className="flex items-center text-sm font-medium text-gray-600 dark:text-gray-400"
-                  >
-                    <GlobeAltIcon className="h-4 w-4 mr-2" />
-                    {locale === 'zh' ? '中文' : 'English'}
-                    <ChevronDownIcon className="h-4 w-4 ml-1" />
-                  </button>
+              <div className="px-6 py-4 bg-gray-50 dark:bg-gray-800">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-4">
+                    <div className="flex items-center">
+                      <GlobeAltIcon className="h-4 w-4 mr-2 text-gray-600 dark:text-gray-400" />
+                      <div className="flex space-x-2">
+                        <Link
+                          href={getNavigableHref(pathname)}
+                          locale="en"
+                          className={`px-3 py-1 text-sm font-medium rounded-lg transition-colors ${
+                            locale === 'en' 
+                              ? 'bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900' 
+                              : 'text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700'
+                          }`}
+                          onClick={() => {
+                            handleLanguageChange('en');
+                            setIsMobileMenuOpen(false);
+                          }}
+                        >
+                          EN
+                        </Link>
+                        <Link
+                          href={getNavigableHref(pathname)}
+                          locale="zh"
+                          className={`px-3 py-1 text-sm font-medium rounded-lg transition-colors ${
+                            locale === 'zh' 
+                              ? 'bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900' 
+                              : 'text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700'
+                          }`}
+                          onClick={() => {
+                            handleLanguageChange('zh');
+                            setIsMobileMenuOpen(false);
+                          }}
+                        >
+                          中文
+                        </Link>
+                      </div>
+                    </div>
+                    
+                    <ThemeToggle />
+                  </div>
                   
-                  <ThemeToggle />
+                  <SocialShare />
                 </div>
-                
-                <SocialShare />
               </div>
-              
-              {/* Language selector for mobile */}
-              {isLangMenuOpen && (
-                <div className="bg-gray-100 dark:bg-gray-700">
-                  <Link
-                    href={getNavigableHref(pathname)}
-                    locale="en"
-                    className="block px-8 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600"
-                    onClick={() => {
-                      setIsLangMenuOpen(false);
-                      setIsMobileMenuOpen(false);
-                    }}
-                  >
-                    English
-                  </Link>
-                  <Link
-                    href={getNavigableHref(pathname)}
-                    locale="zh"
-                    className="block px-8 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600"
-                    onClick={() => {
-                      setIsLangMenuOpen(false);
-                      setIsMobileMenuOpen(false);
-                    }}
-                  >
-                    中文
-                  </Link>
-                </div>
-              )}
             </div>
           </div>
         )}

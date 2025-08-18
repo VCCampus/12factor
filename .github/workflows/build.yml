@@ -30,6 +30,10 @@ jobs:
       run: npm run lint
 
     - name: Build project
+      env:
+        OPENAI_API_KEY: dummy-api-key-for-build
+        LLM_MODEL: gpt-3.5-turbo
+        LLM_API_URL: https://api.openai.com/v1/chat/completions
       run: npm run build
 
     - name: Check build output
