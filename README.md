@@ -6,27 +6,11 @@
   <h1>12Factor Methodology</h1>
   <p><strong>Master AI-Human Collaboration for 10x Engineering Efficiency</strong></p>
   
-  <!-- Project Status -->
-  [![Build Status](https://github.com/wquguru/12factor/actions/workflows/build.yml/badge.svg)](https://github.com/wquguru/12factor/actions/workflows/build.yml)
-  [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-  [![Version](https://img.shields.io/github/package-json/v/wquguru/12factor)](package.json)
-  [![Last Commit](https://img.shields.io/github/last-commit/wquguru/12factor)](https://github.com/wquguru/12factor/commits/main)
-  
-  <!-- Tech Stack -->
   [![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=next.js)](https://nextjs.org)
-  [![React](https://img.shields.io/badge/React-18-61DAFB?logo=react)](https://reactjs.org)
   [![TypeScript](https://img.shields.io/badge/TypeScript-5.3-3178C6?logo=typescript)](https://www.typescriptlang.org)
-  [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC?logo=tailwind-css)](https://tailwindcss.com)
-  
-  <!-- Community -->
-  [![GitHub Stars](https://img.shields.io/github/stars/wquguru/12factor?style=social)](https://github.com/wquguru/12factor/stargazers)
-  [![GitHub Forks](https://img.shields.io/github/forks/wquguru/12factor?style=social)](https://github.com/wquguru/12factor/network/members)
-  [![Contributors](https://img.shields.io/github/contributors/wquguru/12factor)](https://github.com/wquguru/12factor/graphs/contributors)
-  
-  <!-- Features -->
+  [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
   [![i18n](https://img.shields.io/badge/i18n-EN%20%7C%20ZH-green)](https://12factor.me)
-  [![AI Powered](https://img.shields.io/badge/AI-Powered-purple)](https://12factor.me)
-  [![Interactive](https://img.shields.io/badge/Interactive-Learning-orange)](https://12factor.me)
+  [![GitHub Stars](https://img.shields.io/github/stars/wquguru/12factor?style=social)](https://github.com/wquguru/12factor/stargazers)
   
   <p><a href="https://12factor.me">Live Demo</a> | <a href="https://github.com/wquguru/12factor">GitHub</a> | <a href="#quick-start">Quick Start</a></p>
 </div>
@@ -103,27 +87,11 @@ cp .env.example .env.local
   <h1>12Factor 方法论</h1>
   <p><strong>掌握AI协作，实现10倍工程效率</strong></p>
   
-  <!-- 项目状态 -->
-  [![构建状态](https://github.com/wquguru/12factor/actions/workflows/build.yml/badge.svg)](https://github.com/wquguru/12factor/actions/workflows/build.yml)
-  [![许可证](https://img.shields.io/badge/许可证-MIT-blue.svg)](LICENSE)
-  [![版本](https://img.shields.io/github/package-json/v/wquguru/12factor)](package.json)
-  [![最后提交](https://img.shields.io/github/last-commit/wquguru/12factor)](https://github.com/wquguru/12factor/commits/main)
-  
-  <!-- 技术栈 -->
   [![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=next.js)](https://nextjs.org)
-  [![React](https://img.shields.io/badge/React-18-61DAFB?logo=react)](https://reactjs.org)
   [![TypeScript](https://img.shields.io/badge/TypeScript-5.3-3178C6?logo=typescript)](https://www.typescriptlang.org)
-  [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC?logo=tailwind-css)](https://tailwindcss.com)
-  
-  <!-- 社区 -->
+  [![许可证](https://img.shields.io/badge/许可证-MIT-blue.svg)](LICENSE)
+  [![国际化](https://img.shields.io/badge/国际化-中文%20%7C%20EN-green)](https://12factor.me)
   [![GitHub Stars](https://img.shields.io/github/stars/wquguru/12factor?style=social)](https://github.com/wquguru/12factor/stargazers)
-  [![GitHub Forks](https://img.shields.io/github/forks/wquguru/12factor?style=social)](https://github.com/wquguru/12factor/network/members)
-  [![贡献者](https://img.shields.io/github/contributors/wquguru/12factor)](https://github.com/wquguru/12factor/graphs/contributors)
-  
-  <!-- 功能特性 -->
-  [![i18n](https://img.shields.io/badge/国际化-中文%20%7C%20EN-green)](https://12factor.me)
-  [![AI驱动](https://img.shields.io/badge/AI-驱动-purple)](https://12factor.me)
-  [![互动学习](https://img.shields.io/badge/互动-学习-orange)](https://12factor.me)
   
   <p><a href="https://12factor.me">在线演示</a> | <a href="https://github.com/wquguru/12factor">GitHub</a> | <a href="#快速开始">快速开始</a></p>
 </div>
