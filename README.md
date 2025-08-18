@@ -3,16 +3,37 @@
 [中文版](#中文版) | English
 
 <div align="center">
-  <h3>🎯 12Factor Methodology</h3>
+  <h1>12Factor Methodology</h1>
   <p><strong>Master AI-Human Collaboration for 10x Engineering Efficiency</strong></p>
-  <p><a href="https://12factor.me">12factor.me</a> | <a href="https://github.com/wquguru/12factor">GitHub</a></p>
   
-  [![Build](https://github.com/wquguru/12factor/actions/workflows/build.yml/badge.svg)](https://github.com/wquguru/12factor/actions/workflows/build.yml)
+  <!-- Project Status -->
+  [![Build Status](https://github.com/wquguru/12factor/actions/workflows/build.yml/badge.svg)](https://github.com/wquguru/12factor/actions/workflows/build.yml)
+  [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+  [![Version](https://img.shields.io/github/package-json/v/wquguru/12factor)](package.json)
+  [![Last Commit](https://img.shields.io/github/last-commit/wquguru/12factor)](https://github.com/wquguru/12factor/commits/main)
+  
+  <!-- Tech Stack -->
+  [![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=next.js)](https://nextjs.org)
+  [![React](https://img.shields.io/badge/React-18-61DAFB?logo=react)](https://reactjs.org)
+  [![TypeScript](https://img.shields.io/badge/TypeScript-5.3-3178C6?logo=typescript)](https://www.typescriptlang.org)
+  [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC?logo=tailwind-css)](https://tailwindcss.com)
+  
+  <!-- Community -->
+  [![GitHub Stars](https://img.shields.io/github/stars/wquguru/12factor?style=social)](https://github.com/wquguru/12factor/stargazers)
+  [![GitHub Forks](https://img.shields.io/github/forks/wquguru/12factor?style=social)](https://github.com/wquguru/12factor/network/members)
+  [![Contributors](https://img.shields.io/github/contributors/wquguru/12factor)](https://github.com/wquguru/12factor/graphs/contributors)
+  
+  <!-- Features -->
+  [![i18n](https://img.shields.io/badge/i18n-EN%20%7C%20ZH-green)](https://12factor.me)
+  [![AI Powered](https://img.shields.io/badge/AI-Powered-purple)](https://12factor.me)
+  [![Interactive](https://img.shields.io/badge/Interactive-Learning-orange)](https://12factor.me)
+  
+  <p><a href="https://12factor.me">Live Demo</a> | <a href="https://github.com/wquguru/12factor">GitHub</a> | <a href="#quick-start">Quick Start</a></p>
 </div>
 
 ## Overview
 
-Interactive learning platform teaching the Four-Stage Twelve-Principle methodology for AI collaboration era. Features gamified lessons, prompt engineering playground, and bilingual support.
+Interactive methodology framework for the Four-Stage Twelve-Principle approach to AI collaboration era. Features hands-on exercises, prompt engineering toolkit, and bilingual support.
 
 ## Quick Start
 
@@ -29,37 +50,48 @@ cp .env.example .env.local
 # Add your API key (OpenAI/DeepSeek/Azure)
 ```
 
-## Learning Paths
+## Methodology Modules
 
-### 🎓 12 Principles Course
+### 12 Principles Guide
 **Four Stages:** Prepare → Execute → Collaborate → Iterate
 - Interactive flashcards with progress tracking
 - Adaptive quizzes with performance analytics
 - Real-world examples and anti-patterns
 
-### 🤖 Prompt Engineering Lab
-**Three Learning Modes:**
+### Prompt Engineering Practice
+**Three Practice Modes:**
 - **Theory**: Core concepts and techniques
 - **Practice**: Guided exercises with hints
 - **Playground**: Live LLM experimentation
 
-**Course Topics:**
+**Key Topics:**
 - Fundamentals: Structure, system prompts, role assignment
 - Advanced: Few-shot, chain-of-thought, temperature control
 - Optimization: Token efficiency, context management
 
 ## Features
 
-- ✅ Bilingual (English/中文)
-- ✅ Dark mode support
-- ✅ Progress persistence
-- ✅ Multi-LLM support (OpenAI, DeepSeek, Azure)
-- ✅ Rate-limited API with security
-- ✅ Mobile responsive
+- Bilingual (English/中文)
+- Dark mode support
+- Progress persistence
+- Multi-LLM support (OpenAI, DeepSeek, Azure)
+- Rate-limited API with security
+- Mobile responsive
 
 ## Tech Stack
 
-Next.js 15 • TypeScript • Tailwind CSS • Zustand • next-intl
+| Technology | Version | Purpose |
+|------------|---------|----------|
+| [Next.js](https://nextjs.org) | 15 | React framework with App Router |
+| [TypeScript](https://www.typescriptlang.org) | 5.3 | Type safety and developer experience |
+| [Tailwind CSS](https://tailwindcss.com) | 3.4 | Utility-first CSS framework |
+| [Zustand](https://github.com/pmndrs/zustand) | 5.0 | Lightweight state management |
+| [next-intl](https://next-intl.dev) | 3.26 | Internationalization |
+
+## Requirements
+
+[![Node.js](https://img.shields.io/badge/Node.js-%3E%3D18.17-339933?logo=node.js)](https://nodejs.org)
+[![npm](https://img.shields.io/badge/npm-%3E%3D9.0-CB3837?logo=npm)](https://www.npmjs.com)
 
 ---
 
@@ -68,14 +100,37 @@ Next.js 15 • TypeScript • Tailwind CSS • Zustand • next-intl
 [English](#12factorme) | 中文版
 
 <div align="center">
-  <h3>🎯 12Factor 方法论</h3>
+  <h1>12Factor 方法论</h1>
   <p><strong>掌握AI协作，实现10倍工程效率</strong></p>
-  <p><a href="https://12factor.me">12factor.me</a> | <a href="https://github.com/wquguru/12factor">GitHub</a></p>
+  
+  <!-- 项目状态 -->
+  [![构建状态](https://github.com/wquguru/12factor/actions/workflows/build.yml/badge.svg)](https://github.com/wquguru/12factor/actions/workflows/build.yml)
+  [![许可证](https://img.shields.io/badge/许可证-MIT-blue.svg)](LICENSE)
+  [![版本](https://img.shields.io/github/package-json/v/wquguru/12factor)](package.json)
+  [![最后提交](https://img.shields.io/github/last-commit/wquguru/12factor)](https://github.com/wquguru/12factor/commits/main)
+  
+  <!-- 技术栈 -->
+  [![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=next.js)](https://nextjs.org)
+  [![React](https://img.shields.io/badge/React-18-61DAFB?logo=react)](https://reactjs.org)
+  [![TypeScript](https://img.shields.io/badge/TypeScript-5.3-3178C6?logo=typescript)](https://www.typescriptlang.org)
+  [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC?logo=tailwind-css)](https://tailwindcss.com)
+  
+  <!-- 社区 -->
+  [![GitHub Stars](https://img.shields.io/github/stars/wquguru/12factor?style=social)](https://github.com/wquguru/12factor/stargazers)
+  [![GitHub Forks](https://img.shields.io/github/forks/wquguru/12factor?style=social)](https://github.com/wquguru/12factor/network/members)
+  [![贡献者](https://img.shields.io/github/contributors/wquguru/12factor)](https://github.com/wquguru/12factor/graphs/contributors)
+  
+  <!-- 功能特性 -->
+  [![i18n](https://img.shields.io/badge/国际化-中文%20%7C%20EN-green)](https://12factor.me)
+  [![AI驱动](https://img.shields.io/badge/AI-驱动-purple)](https://12factor.me)
+  [![互动学习](https://img.shields.io/badge/互动-学习-orange)](https://12factor.me)
+  
+  <p><a href="https://12factor.me">在线演示</a> | <a href="https://github.com/wquguru/12factor">GitHub</a> | <a href="#快速开始">快速开始</a></p>
 </div>
 
 ## 概述
 
-互动学习平台，教授AI协作时代的四阶段十二原则方法论。包含游戏化课程、提示工程实验室和双语支持。
+互动方法论框架，展示AI协作时代的四阶段十二原则方法。包含实践练习、提示工程工具箱和双语支持。
 
 ## 快速开始
 
@@ -92,34 +147,45 @@ cp .env.example .env.local
 # 添加您的API密钥（OpenAI/DeepSeek/Azure）
 ```
 
-## 学习路径
+## 方法论模块
 
-### 🎓 十二原则课程
+### 十二原则指南
 **四个阶段：** 准备 → 执行 → 协作 → 迭代
 - 互动闪卡与进度追踪
 - 自适应测验与性能分析
 - 真实案例与反模式
 
-### 🤖 提示工程实验室
-**三种学习模式：**
+### 提示工程实践
+**三种实践模式：**
 - **理论**：核心概念与技术
 - **练习**：带提示的引导练习
 - **实验室**：实时LLM实验
 
-**课程主题：**
+**核心主题：**
 - 基础：结构、系统提示、角色分配
 - 进阶：少样本学习、思维链、温度控制
 - 优化：令牌效率、上下文管理
 
 ## 功能特性
 
-- ✅ 双语支持（中文/English）
-- ✅ 深色模式
-- ✅ 进度持久化
-- ✅ 多LLM支持（OpenAI、DeepSeek、Azure）
-- ✅ 限流API与安全保护
-- ✅ 移动端响应式
+- 双语支持（中文/English）
+- 深色模式
+- 进度持久化
+- 多LLM支持（OpenAI、DeepSeek、Azure）
+- 限流API与安全保护
+- 移动端响应式
 
 ## 技术栈
 
-Next.js 15 • TypeScript • Tailwind CSS • Zustand • next-intl
+| 技术 | 版本 | 用途 |
+|------|------|------|
+| [Next.js](https://nextjs.org) | 15 | React框架，使用App Router |
+| [TypeScript](https://www.typescriptlang.org) | 5.3 | 类型安全与开发体验 |
+| [Tailwind CSS](https://tailwindcss.com) | 3.4 | 实用优先的CSS框架 |
+| [Zustand](https://github.com/pmndrs/zustand) | 5.0 | 轻量级状态管理 |
+| [next-intl](https://next-intl.dev) | 3.26 | 国际化支持 |
+
+## 环境要求
+
+[![Node.js](https://img.shields.io/badge/Node.js-%3E%3D18.17-339933?logo=node.js)](https://nodejs.org)
+[![npm](https://img.shields.io/badge/npm-%3E%3D9.0-CB3837?logo=npm)](https://www.npmjs.com)
