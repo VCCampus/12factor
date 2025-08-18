@@ -18,13 +18,11 @@ export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const langMenuRef = useRef<HTMLDivElement>(null);
 
-  // Save user's language preference when they manually switch
-  const handleLanguageChange = (newLocale: 'en' | 'zh') => {
-    // Set a cookie that the middleware can read
-    document.cookie = `preferred-locale=${newLocale};path=/;max-age=${60 * 60 * 24 * 365}`; // 1 year
+  // Close language menu when language is changed
+  // next-intl will automatically handle cookie management
+  const handleLanguageChange = () => {
     setIsLangMenuOpen(false);
   };
-
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -145,7 +143,7 @@ export default function Navigation() {
                     href={getNavigableHref(pathname)}
                     locale="en"
                     className="block px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-t-2xl transition-colors"
-                    onClick={() => handleLanguageChange('en')}
+                    onClick={handleLanguageChange}
                   >
                     {t('languageLabels.english')}
                   </Link>
@@ -153,7 +151,7 @@ export default function Navigation() {
                     href={getNavigableHref(pathname)}
                     locale="zh"
                     className="block px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-b-2xl transition-colors"
-                    onClick={() => handleLanguageChange('zh')}
+                    onClick={handleLanguageChange}
                   >
                     {t('languageLabels.chinese')}
                   </Link>
@@ -204,7 +202,7 @@ export default function Navigation() {
                               : 'text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700'
                           }`}
                           onClick={() => {
-                            handleLanguageChange('en');
+                            handleLanguageChange();
                             setIsMobileMenuOpen(false);
                           }}
                         >
@@ -219,7 +217,7 @@ export default function Navigation() {
                               : 'text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700'
                           }`}
                           onClick={() => {
-                            handleLanguageChange('zh');
+                            handleLanguageChange();
                             setIsMobileMenuOpen(false);
                           }}
                         >

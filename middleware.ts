@@ -1,49 +1,22 @@
-import { NextRequest, NextResponse } from 'next/server';
 import createMiddleware from 'next-intl/middleware';
 import { routing } from './src/i18n/routing';
 
-// Create the next-intl middleware
-const intlMiddleware = createMiddleware(routing);
-
-export default function middleware(request: NextRequest) {
-  const pathname = request.nextUrl.pathname;
-  
-  // Check if this is the root path without any locale
-  if (pathname === '/') {
-    // Try to get the user's preferred language from cookie (set by client-side)
-    const preferredLocale = request.cookies.get('preferred-locale')?.value;
-    
-    if (preferredLocale && (preferredLocale === 'en' || preferredLocale === 'zh')) {
-      // Redirect to the user's preferred locale
-      const url = request.nextUrl.clone();
-      url.pathname = `/${preferredLocale}`;
-      return NextResponse.redirect(url);
-    }
-    
-    // Otherwise, detect from Accept-Language header
-    const acceptLanguage = request.headers.get('accept-language') || '';
-    
-    // Check if the browser prefers Chinese
-    // Common Chinese language codes: zh, zh-CN, zh-TW, zh-HK, etc.
-    const isChinese = /\bzh\b/i.test(acceptLanguage);
-    
-    const detectedLocale = isChinese ? 'zh' : 'en';
-    
-    // Redirect to the detected locale
-    const url = request.nextUrl.clone();
-    url.pathname = `/${detectedLocale}`;
-    return NextResponse.redirect(url);
-  }
-  
-  // For all other paths, use the default next-intl middleware
-  return intlMiddleware(request);
-}
+export default createMiddleware({
+  ...routing,
+  // next-intl 会自动：
+  // 1. 检测用户的语言偏好（从 URL、cookie、Accept-Language header）
+  // 2. 当用户手动切换语言时，设置 NEXT_LOCALE cookie
+  // 3. 后续访问时优先使用 cookie 中的语言设置
+  localeDetection: true // 默认为 true，启用自动语言检测
+});
 
 export const config = {
   matcher: [
     // Match all pathnames except for
     // - … if they start with `/api`, `/_next` or `/_vercel`
     // - … the ones containing a dot (e.g. `favicon.ico`)
-    '/((?!api|_next|_vercel|.*\\..*).*)'
+    '/((?!api|_next|_vercel|.*\\..*).*)',
+    // However, match all pathnames within `/users`, including ones with a dot
+    '/([\\w-]+)?/users/(.+)'
   ]
 };

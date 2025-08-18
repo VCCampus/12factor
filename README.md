@@ -1,26 +1,18 @@
 # 12Factor.me
 
+[中文版](#中文版) | English
+
 <div align="center">
-  <div style="width: 32px; height: 32px; background-color: #1c1917; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 16px;">
-    <div style="width: 16px; height: 16px; border: 2px solid white; border-radius: 2px;"></div>
-  </div>
-  <h3>12 Vibe Coding Factors</h3>
-  <p><strong>Four-Stage Twelve-Principle methodology for 10x Engineering Efficiency</strong></p>
-  <p>Visit: <a href="https://12factor.me">https://12factor.me</a></p>
+  <h3>🎯 12Factor Methodology</h3>
+  <p><strong>Master AI-Human Collaboration for 10x Engineering Efficiency</strong></p>
+  <p><a href="https://12factor.me">12factor.me</a> | <a href="https://github.com/wquguru/12factor">GitHub</a></p>
   
   [![Build](https://github.com/wquguru/12factor/actions/workflows/build.yml/badge.svg)](https://github.com/wquguru/12factor/actions/workflows/build.yml)
 </div>
 
 ## Overview
 
-12Factor provides real methodological insights for mastering AI-human collaboration, without the complexity overload. The platform teaches 12 essential principles through an interactive, gamified learning experience with bilingual support.
-
-**Four-Stage Learning Path:**
-
-1. **Prepare** - Single Source of Truth, Prompt First, Context Hygiene
-2. **Execute** - Human-in-the-Loop, Chunked Work, Parallel Flow  
-3. **Collaborate** - Cognitive Load Budget, Flow Protection, Reproducible Sessions
-4. **Iterate** - Rest & Reflection, Skill Parity, Culture of Curiosity
+Interactive learning platform teaching the Four-Stage Twelve-Principle methodology for AI collaboration era. Features gamified lessons, prompt engineering playground, and bilingual support.
 
 ## Quick Start
 
@@ -28,51 +20,106 @@
 npm install
 npm run dev    # Start at http://localhost:3000
 npm run build  # Production build
-npm run lint   # Code quality checks
 ```
 
-## Key Features
-
-- **Bilingual Learning**: Full English and Chinese localization
-- **Interactive Content**: Flashcards with progress tracking
-- **Adaptive Quizzes**: Multiple difficulty modes with performance analytics
-- **10x Engineering Focus**: Systematic approach to AI collaboration efficiency
-- **Open Source**: MIT licensed, community-driven development
-
-## LLM API Configuration
-
-The prompt engineering features support custom LLM providers. Configure your API in `.env.local`:
+### Prompt Engineering Setup (Optional)
 
 ```bash
-# Copy environment template
 cp .env.example .env.local
+# Add your API key (OpenAI/DeepSeek/Azure)
 ```
 
-### Using DeepSeek (Recommended)
-```env
-OPENAI_API_KEY=sk-your-deepseek-key
-LLM_API_URL=https://api.deepseek.com/v1/chat/completions
-LLM_MODEL=deepseek-chat
-```
+## Learning Paths
 
-### Using OpenAI (Default)
-```env
-OPENAI_API_KEY=sk-your-openai-key
-```
+### 🎓 12 Principles Course
+**Four Stages:** Prepare → Execute → Collaborate → Iterate
+- Interactive flashcards with progress tracking
+- Adaptive quizzes with performance analytics
+- Real-world examples and anti-patterns
 
-### Health Check
+### 🤖 Prompt Engineering Lab
+**Three Learning Modes:**
+- **Theory**: Core concepts and techniques
+- **Practice**: Guided exercises with hints
+- **Playground**: Live LLM experimentation
+
+**Course Topics:**
+- Fundamentals: Structure, system prompts, role assignment
+- Advanced: Few-shot, chain-of-thought, temperature control
+- Optimization: Token efficiency, context management
+
+## Features
+
+- ✅ Bilingual (English/中文)
+- ✅ Dark mode support
+- ✅ Progress persistence
+- ✅ Multi-LLM support (OpenAI, DeepSeek, Azure)
+- ✅ Rate-limited API with security
+- ✅ Mobile responsive
+
+## Tech Stack
+
+Next.js 15 • TypeScript • Tailwind CSS • Zustand • next-intl
+
+---
+
+# 中文版
+
+[English](#12factorme) | 中文版
+
+<div align="center">
+  <h3>🎯 12Factor 方法论</h3>
+  <p><strong>掌握AI协作，实现10倍工程效率</strong></p>
+  <p><a href="https://12factor.me">12factor.me</a> | <a href="https://github.com/wquguru/12factor">GitHub</a></p>
+</div>
+
+## 概述
+
+互动学习平台，教授AI协作时代的四阶段十二原则方法论。包含游戏化课程、提示工程实验室和双语支持。
+
+## 快速开始
+
 ```bash
-curl http://localhost:3000/api/llm/health
+npm install
+npm run dev    # 启动开发服务器 http://localhost:3000
+npm run build  # 生产构建
 ```
 
-> See [LLM_API_SETUP.md](./LLM_API_SETUP.md) for more configuration options.
+### 提示工程配置（可选）
 
-## Technology Stack
+```bash
+cp .env.example .env.local
+# 添加您的API密钥（OpenAI/DeepSeek/Azure）
+```
 
-- **Framework**: Next.js 15 with App Router
-- **Language**: TypeScript (strict mode)
-- **Styling**: Tailwind CSS with dark mode
-- **State**: Zustand for lightweight management
-- **i18n**: next-intl for internationalization
-- **Icons**: Heroicons for consistent UI
-- **LLM**: OpenAI SDK with custom endpoint support
+## 学习路径
+
+### 🎓 十二原则课程
+**四个阶段：** 准备 → 执行 → 协作 → 迭代
+- 互动闪卡与进度追踪
+- 自适应测验与性能分析
+- 真实案例与反模式
+
+### 🤖 提示工程实验室
+**三种学习模式：**
+- **理论**：核心概念与技术
+- **练习**：带提示的引导练习
+- **实验室**：实时LLM实验
+
+**课程主题：**
+- 基础：结构、系统提示、角色分配
+- 进阶：少样本学习、思维链、温度控制
+- 优化：令牌效率、上下文管理
+
+## 功能特性
+
+- ✅ 双语支持（中文/English）
+- ✅ 深色模式
+- ✅ 进度持久化
+- ✅ 多LLM支持（OpenAI、DeepSeek、Azure）
+- ✅ 限流API与安全保护
+- ✅ 移动端响应式
+
+## 技术栈
+
+Next.js 15 • TypeScript • Tailwind CSS • Zustand • next-intl
