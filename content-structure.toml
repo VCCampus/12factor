@@ -1,0 +1,414 @@
+# 12Factor.me Content Management Structure
+# This TOML file defines the complete content structure for the website
+# Modifying this file will automatically update all website content
+
+[metadata]
+version = "1.0.0"
+last_updated = "2025-01-19"
+supported_locales = ["en", "zh"]
+
+# ========================================
+# STAGES (Four-Stage Organization)
+# ========================================
+
+[[stages]]
+id = "prepare"
+order = 1
+icon = "🎯"
+
+[stages.title]
+en = "Prepare"
+zh = "准备"
+
+[stages.description]
+en = "Set the foundation for effective AI collaboration"
+zh = "为有效的 AI 协作奠定基础"
+
+[[stages]]
+id = "execute"
+order = 2
+icon = "⚡"
+
+[stages.title]
+en = "Execute"
+zh = "执行"
+
+[stages.description]
+en = "Implement with human oversight and parallel workflows"
+zh = "在人类监督下并行执行工作流"
+
+[[stages]]
+id = "collaborate"
+order = 3
+icon = "🤝"
+
+[stages.title]
+en = "Collaborate"
+zh = "协作"
+
+[stages.description]
+en = "Optimize team and AI interactions"
+zh = "优化团队与 AI 的互动"
+
+[[stages]]
+id = "iterate"
+order = 4
+icon = "🔄"
+
+[stages.title]
+en = "Iterate"
+zh = "迭代"
+
+[stages.description]
+en = "Continuously improve and evolve"
+zh = "持续改进和演化"
+
+# ========================================
+# PRINCIPLES (12 Core Principles)
+# ========================================
+
+[[principles]]
+id = "single-source-of-truth"
+stage = "prepare"
+order = 1
+icon = "📚"
+
+[principles.title]
+en = "Single Source of Truth"
+zh = "单一事实来源"
+
+[principles.concept]
+en = "Maintain one authoritative source for all project information"
+zh = "为所有项目信息维护一个权威来源"
+
+[principles.practices]
+en = [
+  "Use version control for all code and documentation",
+  "Maintain a central project README",
+  "Document decisions in one place"
+]
+zh = [
+  "对所有代码和文档使用版本控制",
+  "维护中央项目 README",
+  "在一个地方记录决策"
+]
+
+[principles.antipatterns]
+en = [
+  "Information scattered across multiple platforms",
+  "Conflicting documentation versions",
+  "Undocumented tribal knowledge"
+]
+zh = [
+  "信息分散在多个平台",
+  "文档版本冲突",
+  "未记录的部落知识"
+]
+
+# Flashcard content for this principle
+[principles.flashcard]
+front.en = "What is the Single Source of Truth principle?"
+front.zh = "什么是单一事实来源原则？"
+back.en = "Maintain one authoritative source for all project information to avoid confusion and ensure consistency"
+back.zh = "为所有项目信息维护一个权威来源，避免混淆并确保一致性"
+difficulty = "beginner"
+tags = ["foundation", "documentation", "prepare"]
+
+# Quiz questions for this principle
+[[principles.quiz]]
+type = "single-choice"
+difficulty = "easy"
+
+[principles.quiz.question]
+en = "What is the primary benefit of maintaining a Single Source of Truth?"
+zh = "维护单一事实来源的主要好处是什么？"
+
+[[principles.quiz.options]]
+text.en = "Reduces confusion and conflicting information"
+text.zh = "减少混淆和冲突信息"
+correct = true
+
+[[principles.quiz.options]]
+text.en = "Makes the project run faster"
+text.zh = "让项目运行更快"
+correct = false
+
+[[principles.quiz.options]]
+text.en = "Reduces storage costs"
+text.zh = "降低存储成本"
+correct = false
+
+[[principles.quiz.options]]
+text.en = "Simplifies deployment"
+text.zh = "简化部署"
+correct = false
+
+[principles.quiz.explanation]
+en = "A Single Source of Truth eliminates confusion by ensuring everyone references the same authoritative information"
+zh = "单一事实来源通过确保每个人都引用相同的权威信息来消除混淆"
+
+[[principles]]
+id = "prompt-first"
+stage = "prepare"
+order = 2
+icon = "✍️"
+
+[principles.title]
+en = "Prompt First"
+zh = "提示优先"
+
+[principles.concept]
+en = "Design clear prompts before implementation"
+zh = "在实施前设计清晰的提示"
+
+[principles.practices]
+en = [
+  "Write requirements as prompts",
+  "Test prompts before coding",
+  "Iterate on prompt clarity"
+]
+zh = [
+  "将需求写成提示",
+  "编码前测试提示",
+  "迭代提示的清晰度"
+]
+
+[principles.antipatterns]
+en = [
+  "Vague or ambiguous instructions",
+  "Implementing without clear goals",
+  "Assuming AI understands context"
+]
+zh = [
+  "模糊或含糊的指令",
+  "没有明确目标就实施",
+  "假设 AI 理解上下文"
+]
+
+[principles.flashcard]
+front.en = "What does 'Prompt First' mean in AI collaboration?"
+front.zh = "在 AI 协作中'提示优先'是什么意思？"
+back.en = "Design and refine clear prompts before starting implementation to ensure AI understands the requirements"
+back.zh = "在开始实施前设计和优化清晰的提示，确保 AI 理解需求"
+difficulty = "beginner"
+tags = ["prompting", "planning", "prepare"]
+
+# Continue for all 12 principles...
+
+# ========================================
+# COURSES (Prompt Engineering)
+# ========================================
+
+[[courses]]
+id = "fundamentals"
+order = 1
+difficulty = "beginner"
+estimated_time = "30 minutes"
+
+[courses.title]
+en = "Prompt Engineering Fundamentals"
+zh = "提示工程基础"
+
+[courses.description]
+en = "Learn the basics of effective prompt design and communication with AI"
+zh = "学习有效提示设计和与 AI 沟通的基础知识"
+
+[courses.objectives]
+en = [
+  "Understand prompt structure and components",
+  "Learn to write clear, specific instructions",
+  "Master basic prompt patterns"
+]
+zh = [
+  "理解提示结构和组成",
+  "学习编写清晰、具体的指令",
+  "掌握基本的提示模式"
+]
+
+# Course Sections
+[[courses.sections]]
+id = "basic-structure"
+course = "fundamentals"
+order = 1
+
+[courses.sections.title]
+en = "Basic Prompt Structure"
+zh = "基本提示结构"
+
+[courses.sections.content]
+en = """
+A well-structured prompt has three main components:
+1. **Context**: Background information
+2. **Instruction**: What you want the AI to do
+3. **Format**: How you want the output structured
+"""
+zh = """
+一个结构良好的提示有三个主要组成部分：
+1. **上下文**：背景信息
+2. **指令**：你希望 AI 做什么
+3. **格式**：你希望输出如何组织
+"""
+
+[courses.sections.example]
+prompt.en = "You are a helpful assistant. Summarize this article in 3 bullet points."
+prompt.zh = "你是一个有用的助手。用3个要点总结这篇文章。"
+expected_output.en = "• Point 1\n• Point 2\n• Point 3"
+expected_output.zh = "• 要点 1\n• 要点 2\n• 要点 3"
+
+# Practice exercises for this section
+[[courses.sections.practice]]
+id = "structure-exercise-1"
+type = "fill-blank"
+
+[courses.sections.practice.instruction]
+en = "Complete this prompt structure"
+zh = "完成这个提示结构"
+
+[courses.sections.practice.template]
+en = "You are a [BLANK]. Please [BLANK] in [BLANK] format."
+zh = "你是一个[空白]。请用[空白]格式[空白]。"
+
+[courses.sections.practice.solution]
+blanks = ["role", "task", "output"]
+example.en = "You are a technical writer. Please explain this concept in bullet point format."
+example.zh = "你是一名技术写手。请用要点格式解释这个概念。"
+
+# Playground scenarios for free exploration
+[[courses.playground]]
+id = "role-exploration"
+course = "fundamentals"
+
+[courses.playground.title]
+en = "Explore Different AI Roles"
+zh = "探索不同的 AI 角色"
+
+[courses.playground.scenario]
+en = "Try giving the AI different roles and see how responses change"
+zh = "尝试给 AI 不同的角色，看看响应如何变化"
+
+[courses.playground.starter_prompts]
+en = [
+  "You are a technical expert...",
+  "You are a creative writer...",
+  "You are a data analyst..."
+]
+zh = [
+  "你是一名技术专家...",
+  "你是一名创意作家...",
+  "你是一名数据分析师..."
+]
+
+# ========================================
+# LEARNING PATHS
+# ========================================
+
+[[learning_paths]]
+id = "beginner"
+title.en = "Beginner Path"
+title.zh = "初学者路径"
+description.en = "Start your journey with 12Factor methodology"
+description.zh = "开始你的 12Factor 方法之旅"
+
+# Sequential learning steps
+steps = [
+  { type = "principle", id = "single-source-of-truth", mode = "learn" },
+  { type = "principle", id = "single-source-of-truth", mode = "flashcard" },
+  { type = "principle", id = "single-source-of-truth", mode = "quiz" },
+  { type = "principle", id = "prompt-first", mode = "learn" },
+  { type = "course", id = "fundamentals", section = "basic-structure" },
+  { type = "course", id = "fundamentals", mode = "practice" }
+]
+
+# ========================================
+# UI CONFIGURATION
+# ========================================
+
+[ui.navigation]
+main_menu = [
+  { id = "home", path = "/", icon = "🏠" },
+  { id = "principles", path = "/principles", icon = "📖" },
+  { id = "flashcards", path = "/flashcards", icon = "🎴" },
+  { id = "quiz", path = "/quiz", icon = "❓" },
+  { id = "prompt-engineering", path = "/prompt-engineering", icon = "🤖", has_dropdown = true }
+]
+
+[ui.navigation.dropdown.prompt-engineering]
+items = [
+  { id = "fundamentals", path = "/prompt-engineering/fundamentals" },
+  { id = "intermediate", path = "/prompt-engineering/intermediate" },
+  { id = "advanced", path = "/prompt-engineering/advanced" }
+]
+
+[ui.themes]
+light = {
+  primary = "#3B82F6",
+  secondary = "#10B981",
+  background = "#FFFFFF",
+  text = "#1F2937"
+}
+dark = {
+  primary = "#60A5FA",
+  secondary = "#34D399",
+  background = "#111827",
+  text = "#F9FAFB"
+}
+
+# ========================================
+# FEATURES CONFIGURATION
+# ========================================
+
+[features.flashcards]
+enabled = true
+allow_shuffle = true
+track_progress = true
+mastery_threshold = 3  # Times correctly answered to mark as mastered
+review_interval_days = 7
+
+[features.quiz]
+enabled = true
+modes = ["normal", "timed", "challenge", "adaptive"]
+time_per_question_seconds = 30
+passing_score = 70
+allow_retries = true
+
+[features.prompt_engineering]
+enabled = true
+llm_integration = true
+rate_limit_per_minute = 10
+rate_limit_per_hour = 50
+allowed_models = ["gpt-3.5-turbo", "gpt-4", "deepseek"]
+evaluation_enabled = true
+
+[features.progress_tracking]
+enabled = true
+storage = "localStorage"
+sync_enabled = false  # Future feature
+track_metrics = [
+  "principles_learned",
+  "flashcards_mastered",
+  "quiz_scores",
+  "courses_completed",
+  "practice_exercises_done"
+]
+
+# ========================================
+# CONTENT VALIDATION RULES
+# ========================================
+
+[validation]
+required_fields = [
+  "principles.title",
+  "principles.concept",
+  "principles.practices",
+  "courses.title",
+  "courses.description"
+]
+
+content_rules = [
+  { field = "principles.practices", min_items = 3, max_items = 5 },
+  { field = "principles.antipatterns", min_items = 2, max_items = 4 },
+  { field = "courses.objectives", min_items = 2, max_items = 5 }
+]
+
+translation_required = true
+supported_locales = ["en", "zh"]

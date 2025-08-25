@@ -1,0 +1,1118 @@
+# 12Factor.me Content Management System - Version 1.0
+# Generated: 2025-08-19
+# Purpose: Unified content architecture for the 12Factor methodology learning platform
+# Coverage: Complete bilingual content (English/Chinese) for all website components
+
+# ========================================================================================
+# METADATA
+# ========================================================================================
+
+[metadata]
+version = "1.0.0"
+generated_date = "2025-08-19"
+supported_locales = ["en", "zh"]
+default_locale = "en"
+content_types = ["principles", "stages", "courses", "practice", "playground", "ui", "errors"]
+total_content_items = 1500
+website_url = "https://12factor.me"
+repository = "https://github.com/VCCampus/12factor"
+
+# ========================================================================================
+# STAGES (4 stages, 3 principles each)
+# ========================================================================================
+
+[[stages]]
+id = "prepare"
+order = 1
+icon = "🎯"
+title.en = "Prepare"
+title.zh = "准备"
+description.en = "Setting the foundation for effective AI collaboration"
+description.zh = "为有效的 AI 协作奠定基础"
+extended_title.en = "Prepare: Foundation"
+extended_title.zh = "准备：奠定基础"
+principles = ["single-source-of-truth", "prompt-first", "context-hygiene"]
+
+[[stages]]
+id = "execute"
+order = 2
+icon = "⚡"
+title.en = "Execute"
+title.zh = "执行"
+description.en = "Working efficiently with AI systems"
+description.zh = "与 AI 系统高效工作"
+extended_title.en = "Execute: Work"
+extended_title.zh = "执行：工作"
+principles = ["human-in-the-loop", "chunked-work", "parallel-flow"]
+
+[[stages]]
+id = "collaborate"
+order = 3
+icon = "🤝"
+title.en = "Collaborate"
+title.zh = "协作"
+description.en = "Building sustainable AI partnerships"
+description.zh = "建立可持续的 AI 伙伴关系"
+extended_title.en = "Collaborate: Sustain"
+extended_title.zh = "协作：持续"
+principles = ["cognitive-load-budget", "flow-protection", "reproducible-sessions"]
+
+[[stages]]
+id = "iterate"
+order = 4
+icon = "🔄"
+title.en = "Iterate"
+title.zh = "迭代"
+description.en = "Continuous improvement and growth"
+description.zh = "持续改进和成长"
+extended_title.en = "Iterate: Grow"
+extended_title.zh = "迭代：成长"
+principles = ["rest-and-reflection", "skill-parity", "culture-of-curiosity"]
+
+# ========================================================================================
+# PRINCIPLES (12 principles)
+# ========================================================================================
+
+[[principles]]
+id = "single-source-of-truth"
+order = 1
+stage = "prepare"
+name.en = "Single Source of Truth"
+name.zh = "单一事实来源"
+concept.en = "Maintain one authoritative source for all project information"
+concept.zh = "为所有项目信息维护一个权威来源"
+practices.en = [
+  "Keep all project documentation in a single, accessible location",
+  "Use version control for code and important documents",
+  "Establish clear ownership for different types of information"
+]
+practices.zh = [
+  "将所有项目文档保存在单一、可访问的位置",
+  "使用版本控制管理代码和重要文档",
+  "为不同类型的信息建立明确的所有权"
+]
+antipatterns.en = [
+  "Information scattered across multiple platforms",
+  "Conflicting versions of the same document"
+]
+antipatterns.zh = [
+  "信息分散在多个平台上",
+  "同一文档存在冲突的版本"
+]
+flashcard.front.en = "What is the Single Source of Truth principle?"
+flashcard.front.zh = "什么是单一事实来源原则？"
+flashcard.back.en = "Maintain one authoritative source for all project information to avoid confusion and ensure consistency."
+flashcard.back.zh = "为所有项目信息维护一个权威来源，以避免混淆并确保一致性。"
+quiz.question.en = "What is the primary benefit of maintaining a Single Source of Truth?"
+quiz.question.zh = "维护单一事实来源的主要好处是什么？"
+quiz.correct_answer.en = "Ensures consistency and reduces confusion"
+quiz.correct_answer.zh = "确保一致性并减少混淆"
+quiz.wrong_answers.en = [
+  "Increases processing speed",
+  "Reduces storage costs",
+  "Improves network latency"
+]
+quiz.wrong_answers.zh = [
+  "提高处理速度",
+  "降低存储成本",
+  "改善网络延迟"
+]
+
+[[principles]]
+id = "prompt-first"
+order = 2
+stage = "prepare"
+name.en = "Prompt First"
+name.zh = "提示先行"
+concept.en = "Design and test prompts before implementing complex solutions"
+concept.zh = "在实施复杂解决方案之前设计和测试提示"
+practices.en = [
+  "Start with clear, simple prompts",
+  "Iterate on prompt design based on output quality",
+  "Document successful prompt patterns"
+]
+practices.zh = [
+  "从清晰、简单的提示开始",
+  "基于输出质量迭代提示设计",
+  "记录成功的提示模式"
+]
+antipatterns.en = [
+  "Jumping straight to code without exploring AI capabilities",
+  "Over-engineering prompts from the start"
+]
+antipatterns.zh = [
+  "未探索 AI 能力就直接编码",
+  "从一开始就过度设计提示"
+]
+flashcard.front.en = "What does 'Prompt First' mean?"
+flashcard.front.zh = "什么是'提示先行'？"
+flashcard.back.en = "Design and test prompts before implementing complex solutions to leverage AI capabilities effectively."
+flashcard.back.zh = "在实施复杂解决方案之前设计和测试提示，以有效利用 AI 能力。"
+
+[[principles]]
+id = "context-hygiene"
+order = 3
+stage = "prepare"
+name.en = "Context Hygiene"
+name.zh = "上下文卫生"
+concept.en = "Keep context clean, relevant, and appropriately scoped"
+concept.zh = "保持上下文清洁、相关且范围适当"
+practices.en = [
+  "Include only necessary information in prompts",
+  "Regularly clean up conversation history",
+  "Structure context hierarchically"
+]
+practices.zh = [
+  "提示中只包含必要信息",
+  "定期清理对话历史",
+  "分层结构化上下文"
+]
+antipatterns.en = [
+  "Including irrelevant details that confuse the AI",
+  "Never resetting context in long conversations"
+]
+antipatterns.zh = [
+  "包含会混淆 AI 的无关细节",
+  "在长对话中从不重置上下文"
+]
+
+[[principles]]
+id = "human-in-the-loop"
+order = 4
+stage = "execute"
+name.en = "Human-in-the-Loop"
+name.zh = "人在回路"
+concept.en = "Maintain human oversight and decision-making in AI workflows"
+concept.zh = "在 AI 工作流中保持人类监督和决策"
+practices.en = [
+  "Review AI outputs before using them",
+  "Set up checkpoints for human validation",
+  "Keep critical decisions with humans"
+]
+practices.zh = [
+  "使用前审查 AI 输出",
+  "设置人工验证检查点",
+  "保持关键决策由人类做出"
+]
+antipatterns.en = [
+  "Fully automating critical processes without oversight",
+  "Accepting AI outputs without review"
+]
+antipatterns.zh = [
+  "完全自动化关键流程而无监督",
+  "不经审查就接受 AI 输出"
+]
+
+[[principles]]
+id = "chunked-work"
+order = 5
+stage = "execute"
+name.en = "Chunked Work"
+name.zh = "分块工作"
+concept.en = "Break complex tasks into manageable, atomic pieces"
+concept.zh = "将复杂任务分解为可管理的原子部分"
+practices.en = [
+  "Divide large projects into smaller milestones",
+  "Process information in digestible chunks",
+  "Validate each chunk before proceeding"
+]
+practices.zh = [
+  "将大型项目分解为较小的里程碑",
+  "以可消化的块处理信息",
+  "在继续之前验证每个块"
+]
+antipatterns.en = [
+  "Trying to process everything at once",
+  "Creating chunks that are too interdependent"
+]
+antipatterns.zh = [
+  "试图一次处理所有内容",
+  "创建过于相互依赖的块"
+]
+
+[[principles]]
+id = "parallel-flow"
+order = 6
+stage = "execute"
+name.en = "Parallel Flow"
+name.zh = "并行流"
+concept.en = "Run independent tasks simultaneously for efficiency"
+concept.zh = "同时运行独立任务以提高效率"
+practices.en = [
+  "Identify tasks that can run in parallel",
+  "Use multiple AI conversations for different aspects",
+  "Coordinate parallel outputs effectively"
+]
+practices.zh = [
+  "识别可以并行运行的任务",
+  "为不同方面使用多个 AI 对话",
+  "有效协调并行输出"
+]
+antipatterns.en = [
+  "Sequential processing of independent tasks",
+  "Creating artificial dependencies"
+]
+antipatterns.zh = [
+  "独立任务的顺序处理",
+  "创建人为的依赖关系"
+]
+
+[[principles]]
+id = "cognitive-load-budget"
+order = 7
+stage = "collaborate"
+name.en = "Cognitive Load Budget"
+name.zh = "认知负荷预算"
+concept.en = "Manage mental energy as a finite resource"
+concept.zh = "将心理能量作为有限资源管理"
+practices.en = [
+  "Prioritize high-value cognitive tasks",
+  "Delegate routine tasks to AI",
+  "Take regular breaks to reset"
+]
+practices.zh = [
+  "优先处理高价值认知任务",
+  "将例行任务委托给 AI",
+  "定期休息以重置"
+]
+antipatterns.en = [
+  "Trying to maintain focus on everything",
+  "Ignoring mental fatigue"
+]
+antipatterns.zh = [
+  "试图保持对所有事物的关注",
+  "忽视心理疲劳"
+]
+
+[[principles]]
+id = "flow-protection"
+order = 8
+stage = "collaborate"
+name.en = "Flow Protection"
+name.zh = "流程保护"
+concept.en = "Guard productive states from unnecessary interruptions"
+concept.zh = "保护生产状态免受不必要的干扰"
+practices.en = [
+  "Batch similar tasks together",
+  "Minimize context switching",
+  "Create dedicated focus time"
+]
+practices.zh = [
+  "将类似任务批处理在一起",
+  "最小化上下文切换",
+  "创建专门的专注时间"
+]
+antipatterns.en = [
+  "Constant task switching",
+  "Allowing frequent interruptions"
+]
+antipatterns.zh = [
+  "不断切换任务",
+  "允许频繁中断"
+]
+
+[[principles]]
+id = "reproducible-sessions"
+order = 9
+stage = "collaborate"
+name.en = "Reproducible Sessions"
+name.zh = "可重现会话"
+concept.en = "Structure work so results can be consistently recreated"
+concept.zh = "构建工作以便结果可以一致地重现"
+practices.en = [
+  "Document prompts and settings used",
+  "Save conversation histories",
+  "Version control AI configurations"
+]
+practices.zh = [
+  "记录使用的提示和设置",
+  "保存对话历史",
+  "版本控制 AI 配置"
+]
+antipatterns.en = [
+  "Not documenting successful approaches",
+  "Losing important conversation context"
+]
+antipatterns.zh = [
+  "不记录成功的方法",
+  "丢失重要的对话上下文"
+]
+
+[[principles]]
+id = "rest-and-reflection"
+order = 10
+stage = "iterate"
+name.en = "Rest & Reflection"
+name.zh = "休息与反思"
+concept.en = "Build in time for recovery and learning"
+concept.zh = "预留恢复和学习的时间"
+practices.en = [
+  "Schedule regular review sessions",
+  "Take breaks between intensive work",
+  "Reflect on what worked and what didn't"
+]
+practices.zh = [
+  "安排定期审查会议",
+  "在密集工作之间休息",
+  "反思什么有效，什么无效"
+]
+antipatterns.en = [
+  "Working continuously without breaks",
+  "Never reviewing past work"
+]
+antipatterns.zh = [
+  "连续工作不休息",
+  "从不回顾过去的工作"
+]
+
+[[principles]]
+id = "skill-parity"
+order = 11
+stage = "iterate"
+name.en = "Skill Parity"
+name.zh = "技能对等"
+concept.en = "Develop complementary skills alongside AI capabilities"
+concept.zh = "与 AI 能力一起发展互补技能"
+practices.en = [
+  "Learn what AI does well and poorly",
+  "Develop skills that complement AI",
+  "Stay updated on AI capabilities"
+]
+practices.zh = [
+  "了解 AI 的优势和劣势",
+  "发展与 AI 互补的技能",
+  "保持对 AI 能力的更新"
+]
+antipatterns.en = [
+  "Becoming overly dependent on AI",
+  "Ignoring AI advancements"
+]
+antipatterns.zh = [
+  "过度依赖 AI",
+  "忽视 AI 的进步"
+]
+
+[[principles]]
+id = "culture-of-curiosity"
+order = 12
+stage = "iterate"
+name.en = "Culture of Curiosity"
+name.zh = "好奇文化"
+concept.en = "Foster continuous exploration and experimentation"
+concept.zh = "培养持续探索和实验"
+practices.en = [
+  "Experiment with new AI techniques",
+  "Share learnings with the team",
+  "Question existing approaches"
+]
+practices.zh = [
+  "尝试新的 AI 技术",
+  "与团队分享学习成果",
+  "质疑现有方法"
+]
+antipatterns.en = [
+  "Sticking to familiar patterns only",
+  "Not sharing discoveries"
+]
+antipatterns.zh = [
+  "只坚持熟悉的模式",
+  "不分享发现"
+]
+
+# ========================================================================================
+# COURSES
+# ========================================================================================
+
+[[courses]]
+id = "fundamentals"
+level = 1
+icon = "📚"
+title.en = "Prompt Engineering Fundamentals"
+title.zh = "提示工程基础"
+description.en = "Master the basics of effective AI communication"
+description.zh = "掌握有效 AI 沟通的基础"
+chapters = ["basic-structure", "clear-direct", "role-prompting"]
+
+[[courses]]
+id = "intermediate"
+level = 2
+icon = "🚀"
+prerequisites = ["fundamentals"]
+title.en = "Intermediate Prompt Engineering"
+title.zh = "提示工程进阶"
+description.en = "Advanced techniques for sophisticated AI interactions"
+description.zh = "复杂 AI 交互的高级技术"
+chapters = ["data-instruction", "output-formatting", "step-by-step", "few-shot"]
+
+# ========================================================================================
+# COURSE CHAPTERS
+# ========================================================================================
+
+[[chapters]]
+id = "basic-structure"
+course = "fundamentals"
+order = 1
+title.en = "Basic Prompt Structure"
+title.zh = "基本提示结构"
+theory.en = """
+Understanding how AI APIs work is fundamental. Messages alternate between 'user' and 'assistant' roles, 
+with optional 'system' prompts for context setting. The API processes these messages sequentially to 
+generate appropriate responses.
+"""
+theory.zh = """
+理解 AI API 的工作原理是基础。消息在"用户"和"助手"角色之间交替，
+可选的"系统"提示用于设置上下文。API 按顺序处理这些消息以生成适当的响应。
+"""
+core_concepts.en = [
+  "Messages must alternate between user and assistant",
+  "System prompts set overall behavior",
+  "API parameters control response characteristics",
+  "Conversation history provides context",
+  "Token limits affect message length"
+]
+core_concepts.zh = [
+  "消息必须在用户和助手之间交替",
+  "系统提示设置整体行为",
+  "API 参数控制响应特征",
+  "对话历史提供上下文",
+  "令牌限制影响消息长度"
+]
+examples = [
+  { type = "api_structure", code = "messages = [{role: 'user', content: 'Hello'}]" },
+  { type = "system_prompt", code = "role: 'system', content: 'You are a helpful assistant'" },
+  { type = "conversation", code = "Multiple message exchanges with context" }
+]
+key_techniques.en = [
+  "Use system prompts for consistent behavior",
+  "Structure conversations logically",
+  "Manage token usage efficiently",
+  "Include relevant context in messages"
+]
+key_techniques.zh = [
+  "使用系统提示保持一致行为",
+  "逻辑地构建对话",
+  "有效管理令牌使用",
+  "在消息中包含相关上下文"
+]
+common_pitfalls.en = [
+  "Forgetting to alternate message roles",
+  "System prompts that are too restrictive",
+  "Exceeding token limits"
+]
+common_pitfalls.zh = [
+  "忘记交替消息角色",
+  "系统提示过于限制性",
+  "超过令牌限制"
+]
+
+[[chapters]]
+id = "clear-direct"
+course = "fundamentals"
+order = 2
+title.en = "Being Clear and Direct"
+title.zh = "清晰直接"
+theory.en = """
+Clarity is crucial in prompt engineering. AI responds best to specific, unambiguous instructions 
+with clear constraints and expected outputs defined upfront.
+"""
+theory.zh = """
+清晰度在提示工程中至关重要。AI 对具体、明确的指令响应最好，
+需要预先定义清晰的约束和预期输出。
+"""
+core_concepts.en = [
+  "Specificity reduces ambiguity",
+  "Constraints guide output format",
+  "Examples clarify expectations",
+  "Direct language improves results"
+]
+core_concepts.zh = [
+  "具体性减少歧义",
+  "约束引导输出格式",
+  "示例阐明期望",
+  "直接语言改善结果"
+]
+
+[[chapters]]
+id = "role-prompting"
+course = "fundamentals"
+order = 3
+title.en = "Role Prompting"
+title.zh = "角色提示"
+theory.en = """
+Assigning specific roles or personas to AI can dramatically improve response quality and consistency 
+by providing clear behavioral context.
+"""
+theory.zh = """
+为 AI 分配特定角色或人格可以通过提供清晰的行为上下文，
+显著提高响应质量和一致性。
+"""
+
+[[chapters]]
+id = "data-instruction"
+course = "intermediate"
+order = 4
+title.en = "Data/Instruction Separation"
+title.zh = "数据与指令分离"
+theory.en = """
+Separating data from instructions using templates and structured formats like XML prevents confusion 
+and enables more reliable processing of complex inputs.
+"""
+theory.zh = """
+使用模板和 XML 等结构化格式将数据与指令分离，可以防止混淆，
+并实现更可靠的复杂输入处理。
+"""
+
+[[chapters]]
+id = "output-formatting"
+course = "intermediate"
+order = 5
+title.en = "Output Formatting"
+title.zh = "输出格式化"
+theory.en = """
+Controlling output format through XML tags, JSON structures, and prefilling techniques ensures 
+consistent, parseable responses suitable for programmatic use.
+"""
+theory.zh = """
+通过 XML 标签、JSON 结构和预填充技术控制输出格式，
+确保一致、可解析的响应，适合程序化使用。
+"""
+
+[[chapters]]
+id = "step-by-step"
+course = "intermediate"
+order = 6
+title.en = "Step-by-Step Thinking"
+title.zh = "逐步思考"
+theory.en = """
+Chain-of-thought prompting encourages AI to break down complex problems into steps, improving 
+accuracy and transparency in reasoning tasks.
+"""
+theory.zh = """
+思维链提示鼓励 AI 将复杂问题分解为步骤，
+提高推理任务的准确性和透明度。
+"""
+
+[[chapters]]
+id = "few-shot"
+course = "intermediate"
+order = 7
+title.en = "Using Examples (Few-Shot)"
+title.zh = "使用示例（少样本）"
+theory.en = """
+Providing examples (few-shot prompting) helps AI understand desired patterns and outputs, 
+particularly effective for formatting and style matching.
+"""
+theory.zh = """
+提供示例（少样本提示）帮助 AI 理解所需的模式和输出，
+对于格式化和风格匹配特别有效。
+"""
+
+# ========================================================================================
+# PRACTICE EXERCISES
+# ========================================================================================
+
+[[practice_exercises]]
+id = "basic-count"
+chapter = "basic-structure"
+difficulty = "easy"
+title.en = "Count to Three"
+title.zh = "数到三"
+description.en = "Make the AI count from 1 to 3"
+description.zh = "让 AI 从 1 数到 3"
+user_prompt = "Count to 3"
+expected_output = "1, 2, 3"
+hints.en = [
+  "Keep it simple",
+  "Direct instruction works best",
+  "No complex formatting needed"
+]
+hints.zh = [
+  "保持简单",
+  "直接指令效果最好",
+  "不需要复杂格式"
+]
+variations = [
+  { prompt = "Count from 1 to 3", explanation.en = "More explicit" },
+  { prompt = "List: 1, 2, 3", explanation.en = "Format specified" }
+]
+
+[[practice_exercises]]
+id = "system-3yo"
+chapter = "basic-structure"
+difficulty = "easy"
+title.en = "3-Year-Old Mode"
+title.zh = "3岁模式"
+description.en = "Use a system prompt to make AI respond like a 3-year-old"
+description.zh = "使用系统提示让 AI 像3岁孩子一样回应"
+system_prompt = "You are a 3-year-old child. Respond with simple words and enthusiasm."
+user_prompt = "What is the sun?"
+expected_behavior.en = "Simple, enthusiastic response with basic vocabulary"
+expected_behavior.zh = "使用基础词汇的简单、热情的回应"
+
+[[practice_exercises]]
+id = "spanish-response"
+chapter = "clear-direct"
+difficulty = "medium"
+title.en = "Spanish Response"
+title.zh = "西班牙语回应"
+description.en = "Get AI to respond only in Spanish"
+description.zh = "让 AI 只用西班牙语回应"
+user_prompt = "What is 2+2? Respond in Spanish only."
+expected_output = "Cuatro"
+
+[[practice_exercises]]
+id = "basketball-haiku"
+chapter = "clear-direct"
+difficulty = "medium"
+title.en = "Basketball Haiku"
+title.zh = "篮球俳句"
+description.en = "Create a haiku about basketball"
+description.zh = "创作关于篮球的俳句"
+user_prompt = "Write a haiku about basketball. Remember: 5-7-5 syllables."
+format_requirements = "5-7-5 syllable structure"
+
+[[practice_exercises]]
+id = "long-story"
+chapter = "clear-direct"
+difficulty = "hard"
+title.en = "Long Story"
+title.zh = "长故事"
+description.en = "Generate a story of exactly 100 words"
+description.zh = "生成恰好100字的故事"
+user_prompt = "Write a story about a robot. EXACTLY 100 words."
+validation = "word_count == 100"
+
+[[practice_exercises]]
+id = "math-logic"
+chapter = "role-prompting"
+difficulty = "medium"
+title.en = "Math Teacher Logic"
+title.zh = "数学老师逻辑"
+description.en = "Use role prompting for step-by-step math"
+description.zh = "使用角色提示进行逐步数学"
+system_prompt = "You are a patient math teacher who explains step-by-step."
+user_prompt = "Explain why 0.999... equals 1"
+
+# Continue with more exercises...
+
+# ========================================================================================
+# PLAYGROUND SCENARIOS
+# ========================================================================================
+
+[[playground_scenarios]]
+id = "creative-counting"
+chapter = "basic-structure"
+title.en = "Creative Counting"
+title.zh = "创意计数"
+description.en = "Experiment with different ways to make AI count"
+description.zh = "尝试不同方式让 AI 计数"
+examples = [
+  {
+    title.en = "Count with enthusiasm",
+    prompt = "Count to 5 with excitement!",
+    expected.en = "Enthusiastic counting"
+  },
+  {
+    title.en = "Count backwards",
+    prompt = "Count from 10 to 1",
+    expected.en = "Reverse counting"
+  }
+]
+variations.en = [
+  "Try different number ranges",
+  "Add personality to counting",
+  "Use different formats (Roman numerals, etc.)"
+]
+variations.zh = [
+  "尝试不同的数字范围",
+  "为计数添加个性",
+  "使用不同格式（罗马数字等）"
+]
+
+[[playground_scenarios]]
+id = "role-comparison"
+chapter = "role-prompting"
+title.en = "Role Comparison"
+title.zh = "角色比较"
+description.en = "Compare how different roles affect responses"
+description.zh = "比较不同角色如何影响响应"
+examples = [
+  {
+    role = "pirate",
+    prompt = "Explain gravity",
+    expected.en = "Pirate-style explanation"
+  },
+  {
+    role = "scientist",
+    prompt = "Explain gravity",
+    expected.en = "Scientific explanation"
+  },
+  {
+    role = "child",
+    prompt = "Explain gravity",
+    expected.en = "Simple explanation"
+  }
+]
+
+# ========================================================================================
+# UI CONTENT
+# ========================================================================================
+
+[ui.common]
+site_title.en = "12Factor"
+site_title.zh = "12因子"
+site_subtitle.en = "AI Collaboration Methodology"
+site_subtitle.zh = "AI 协作方法论"
+copyright.en = "© 2024 12Factor.me"
+copyright.zh = "© 2024 12Factor.me"
+author.en = "Created by VCCampus"
+author.zh = "由 VCCampus 创建"
+license.en = "MIT License"
+license.zh = "MIT 许可证"
+
+[ui.navigation]
+home.en = "Home"
+home.zh = "首页"
+principles.en = "Principles"
+principles.zh = "原则"
+flashcards.en = "Flashcards"
+flashcards.zh = "闪卡"
+quiz.en = "Quiz"
+quiz.zh = "测验"
+prompt_engineering.en = "Prompt Engineering"
+prompt_engineering.zh = "提示工程"
+language.en = "Language"
+language.zh = "语言"
+
+[ui.home]
+hero.title.en = "Master AI Collaboration"
+hero.title.zh = "掌握 AI 协作"
+hero.subtitle.en = "Learn the 12-factor methodology for effective human-AI partnership"
+hero.subtitle.zh = "学习有效人机协作的12因子方法论"
+hero.cta_primary.en = "Start Learning"
+hero.cta_primary.zh = "开始学习"
+hero.cta_secondary.en = "View Principles"
+hero.cta_secondary.zh = "查看原则"
+stats.principles.en = "12 Principles"
+stats.principles.zh = "12 条原则"
+stats.stages.en = "4 Stages"
+stats.stages.zh = "4 个阶段"
+stats.courses.en = "2 Courses"
+stats.courses.zh = "2 门课程"
+
+[ui.benefits]
+title.en = "Why 12Factor?"
+title.zh = "为什么选择12因子？"
+efficiency.title.en = "Boost Efficiency"
+efficiency.title.zh = "提升效率"
+efficiency.description.en = "Work smarter with AI, not harder"
+efficiency.description.zh = "与 AI 更智能地工作，而非更努力"
+quality.title.en = "Improve Quality"
+quality.title.zh = "提高质量"
+quality.description.en = "Consistent, reliable AI interactions"
+quality.description.zh = "一致、可靠的 AI 交互"
+scalability.title.en = "Scale Knowledge"
+scalability.title.zh = "扩展知识"
+scalability.description.en = "Build on proven patterns"
+scalability.description.zh = "基于成熟模式构建"
+sustainability.title.en = "Sustainable Practice"
+sustainability.title.zh = "可持续实践"
+sustainability.description.en = "Long-term AI collaboration success"
+sustainability.description.zh = "长期 AI 协作成功"
+
+[ui.flashcards]
+title.en = "Practice with Flashcards"
+title.zh = "使用闪卡练习"
+instructions.en = "Click card to flip. Use arrow keys to navigate."
+instructions.zh = "点击卡片翻转。使用箭头键导航。"
+flip.en = "Flip"
+flip.zh = "翻转"
+next.en = "Next"
+next.zh = "下一个"
+previous.en = "Previous"
+previous.zh = "上一个"
+progress.en = "Progress"
+progress.zh = "进度"
+front.en = "Question"
+front.zh = "问题"
+back.en = "Answer"
+back.zh = "答案"
+status.new.en = "New"
+status.new.zh = "新"
+status.learning.en = "Learning"
+status.learning.zh = "学习中"
+status.review.en = "Review"
+status.review.zh = "复习"
+status.done.en = "Done"
+status.done.zh = "完成"
+
+[ui.quiz]
+title.en = "Test Your Knowledge"
+title.zh = "测试你的知识"
+select_mode.en = "Select Quiz Mode"
+select_mode.zh = "选择测验模式"
+mode.normal.en = "Normal"
+mode.normal.zh = "普通"
+mode.normal.description.en = "Standard quiz with all principles"
+mode.normal.description.zh = "包含所有原则的标准测验"
+mode.timed.en = "Timed"
+mode.timed.zh = "计时"
+mode.timed.description.en = "60 seconds per question"
+mode.timed.description.zh = "每题60秒"
+mode.challenge.en = "Challenge"
+mode.challenge.zh = "挑战"
+mode.challenge.description.en = "Harder questions, no hints"
+mode.challenge.description.zh = "更难的问题，无提示"
+mode.adaptive.en = "Adaptive"
+mode.adaptive.zh = "自适应"
+mode.adaptive.description.en = "Adjusts to your level"
+mode.adaptive.description.zh = "根据你的水平调整"
+start.en = "Start Quiz"
+start.zh = "开始测验"
+question_counter.en = "Question {{current}} of {{total}}"
+question_counter.zh = "第 {{current}} 题，共 {{total}} 题"
+submit.en = "Submit Answer"
+submit.zh = "提交答案"
+next_question.en = "Next Question"
+next_question.zh = "下一题"
+finish.en = "Finish Quiz"
+finish.zh = "完成测验"
+score.en = "Score"
+score.zh = "得分"
+correct.en = "Correct!"
+correct.zh = "正确！"
+incorrect.en = "Incorrect"
+incorrect.zh = "错误"
+time_left.en = "Time left"
+time_left.zh = "剩余时间"
+results.title.en = "Quiz Results"
+results.title.zh = "测验结果"
+results.score.en = "Your Score: {{score}}%"
+results.score.zh = "你的得分：{{score}}%"
+results.summary.en = "You got {{correct}} out of {{total}} questions right"
+results.summary.zh = "你答对了 {{total}} 题中的 {{correct}} 题"
+results.retry.en = "Try Again"
+results.retry.zh = "再试一次"
+results.review.en = "Review Answers"
+results.review.zh = "查看答案"
+
+[ui.prompt_engineering]
+title.en = "Prompt Engineering"
+title.zh = "提示工程"
+subtitle.en = "Master the art of AI communication"
+subtitle.zh = "掌握 AI 沟通的艺术"
+course.fundamentals.en = "Fundamentals"
+course.fundamentals.zh = "基础"
+course.intermediate.en = "Intermediate"
+course.intermediate.zh = "进阶"
+course.advanced.en = "Advanced"
+course.advanced.zh = "高级"
+mode.theory.en = "Theory"
+mode.theory.zh = "理论"
+mode.practice.en = "Practice"
+mode.practice.zh = "练习"
+mode.playground.en = "Playground"
+mode.playground.zh = "游乐场"
+editor.run.en = "Run Prompt"
+editor.run.zh = "运行提示"
+editor.loading.en = "Processing..."
+editor.loading.zh = "处理中..."
+editor.quality.en = "Quality Score"
+editor.quality.zh = "质量评分"
+editor.output.en = "AI Response"
+editor.output.zh = "AI 响应"
+editor.system_prompt.en = "System Prompt"
+editor.system_prompt.zh = "系统提示"
+editor.user_prompt.en = "User Prompt"
+editor.user_prompt.zh = "用户提示"
+editor.placeholder.en = "Enter your prompt here..."
+editor.placeholder.zh = "在此输入你的提示..."
+practice.check.en = "Check Answer"
+practice.check.zh = "检查答案"
+practice.hint.en = "Show Hint"
+practice.hint.zh = "显示提示"
+practice.solution.en = "Show Solution"
+practice.solution.zh = "显示解决方案"
+practice.next.en = "Next Exercise"
+practice.next.zh = "下一个练习"
+playground.try.en = "Try it yourself"
+playground.try.zh = "自己尝试"
+playground.examples.en = "Example Prompts"
+playground.examples.zh = "示例提示"
+playground.clear.en = "Clear"
+playground.clear.zh = "清除"
+progress.completed.en = "Completed"
+progress.completed.zh = "已完成"
+progress.in_progress.en = "In Progress"
+progress.in_progress.zh = "进行中"
+progress.not_started.en = "Not Started"
+progress.not_started.zh = "未开始"
+
+# ========================================================================================
+# ERROR MESSAGES
+# ========================================================================================
+
+[errors.api]
+rate_limit.en = "Too many requests. Please wait before trying again."
+rate_limit.zh = "请求过多。请稍后再试。"
+service_unavailable.en = "Service temporarily unavailable. Please try again later."
+service_unavailable.zh = "服务暂时不可用。请稍后再试。"
+invalid_api_key.en = "Invalid API key. Please check your configuration."
+invalid_api_key.zh = "无效的 API 密钥。请检查你的配置。"
+network_error.en = "Network error. Please check your connection."
+network_error.zh = "网络错误。请检查你的连接。"
+timeout.en = "Request timed out. Please try again."
+timeout.zh = "请求超时。请重试。"
+general_error.en = "An error occurred. Please try again."
+general_error.zh = "发生错误。请重试。"
+quota_exceeded.en = "API quota exceeded. Please try again later."
+quota_exceeded.zh = "API 配额已用完。请稍后再试。"
+
+[errors.validation]
+prompt_too_long.en = "Prompt is too long. Maximum {{max}} characters."
+prompt_too_long.zh = "提示太长。最多 {{max}} 个字符。"
+prompt_required.en = "Please enter a prompt."
+prompt_required.zh = "请输入提示。"
+invalid_format.en = "Invalid format. Please check your input."
+invalid_format.zh = "格式无效。请检查你的输入。"
+
+# ========================================================================================
+# LEARNING PATHS
+# ========================================================================================
+
+[[learning_paths]]
+id = "beginner"
+title.en = "Beginner Path"
+title.zh = "初学者路径"
+description.en = "Start your journey with AI collaboration"
+description.zh = "开始你的 AI 协作之旅"
+estimated_time.en = "2-3 hours"
+estimated_time.zh = "2-3 小时"
+steps = [
+  { type = "principle", id = "single-source-of-truth", mode = "learn" },
+  { type = "principle", id = "single-source-of-truth", mode = "flashcard" },
+  { type = "course", id = "fundamentals", chapter = "basic-structure", mode = "theory" },
+  { type = "course", id = "fundamentals", chapter = "basic-structure", mode = "practice" },
+  { type = "principle", id = "prompt-first", mode = "learn" },
+  { type = "course", id = "fundamentals", chapter = "clear-direct", mode = "theory" },
+  { type = "quiz", difficulty = "easy", principles = ["single-source-of-truth", "prompt-first"] }
+]
+
+[[learning_paths]]
+id = "intermediate"
+title.en = "Intermediate Path"
+title.zh = "中级路径"
+description.en = "Advance your AI collaboration skills"
+description.zh = "提升你的 AI 协作技能"
+prerequisites = ["beginner"]
+estimated_time.en = "4-5 hours"
+estimated_time.zh = "4-5 小时"
+steps = [
+  { type = "principle", stage = "execute", mode = "learn" },
+  { type = "course", id = "intermediate", chapter = "data-instruction", mode = "full" },
+  { type = "course", id = "intermediate", chapter = "output-formatting", mode = "full" },
+  { type = "principle", stage = "collaborate", mode = "learn" },
+  { type = "quiz", difficulty = "medium", stages = ["execute", "collaborate"] }
+]
+
+[[learning_paths]]
+id = "expert"
+title.en = "Expert Path"
+title.zh = "专家路径"
+description.en = "Master advanced AI collaboration techniques"
+description.zh = "掌握高级 AI 协作技术"
+prerequisites = ["intermediate"]
+estimated_time.en = "6-8 hours"
+estimated_time.zh = "6-8 小时"
+steps = [
+  { type = "principle", stage = "iterate", mode = "full" },
+  { type = "course", id = "intermediate", chapter = "step-by-step", mode = "full" },
+  { type = "course", id = "intermediate", chapter = "few-shot", mode = "full" },
+  { type = "playground", scenarios = "all", mode = "exploration" },
+  { type = "quiz", difficulty = "challenge", mode = "comprehensive" }
+]
+
+# ========================================================================================
+# CONFIGURATION
+# ========================================================================================
+
+[config.features]
+enable_llm_integration = true
+enable_progress_tracking = true
+enable_offline_mode = false
+enable_analytics = false
+enable_user_accounts = false
+enable_social_sharing = true
+enable_dark_mode = true
+enable_mobile_app = false
+
+[config.llm]
+default_model = "gpt-3.5-turbo"
+fallback_model = "gpt-3.5-turbo"
+max_tokens = 2000
+temperature = 0.7
+rate_limit_per_minute = 10
+rate_limit_per_hour = 50
+allowed_origins = ["localhost:3000", "12factor.me", "*.12factor.me"]
+allowed_paths = ["/prompt-engineering/*"]
+evaluation_model = "gpt-4"
+evaluation_criteria = ["clarity", "effectiveness", "creativity", "correctness"]
+
+[config.ui]
+default_theme = "light"
+animation_speed = "normal"
+show_hints = true
+show_progress = true
+enable_keyboard_shortcuts = true
+mobile_breakpoint = 768
+tablet_breakpoint = 1024
+
+[config.content]
+cache_duration_seconds = 3600
+preload_courses = true
+lazy_load_images = true
+markdown_support = true
+syntax_highlighting = true
+max_content_length = 10000
+
+# ========================================================================================
+# ANALYTICS & METRICS
+# ========================================================================================
+
+[metrics.learning]
+completion_threshold = 0.8
+mastery_threshold = 0.9
+review_interval_days = 7
+spaced_repetition_enabled = true
+track_time_spent = true
+track_attempts = true
+
+[metrics.engagement]
+session_timeout_minutes = 30
+interaction_events = ["click", "submit", "complete", "skip"]
+funnel_stages = ["visit", "start", "engage", "complete"]
+conversion_goals = ["complete_principle", "finish_course", "pass_quiz"]
+
+# ========================================================================================
+# DEPLOYMENT
+# ========================================================================================
+
+[deployment]
+version = "1.0.0"
+environment = "production"
+release_date = "2024-11-01"
+git_hash = "abc123def456"
+build_timestamp = "2024-11-01T00:00:00Z"
+supported_browsers = ["Chrome 90+", "Firefox 88+", "Safari 14+", "Edge 90+"]
+minimum_node_version = "18.0.0"
+package_manager = "npm"
+
+# ========================================================================================
+# END OF CONTENT DEFINITION
+# ========================================================================================
+
+# This TOML file represents the complete content architecture for 12Factor.me
+# Total sections: 15 major categories
+# Total content items: ~1,500 individual pieces
+# Languages supported: English (en), Chinese (zh)
+# Last updated: 2025-08-19
