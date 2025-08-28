@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QuizGPT — 3C数字资产与创业思维 · 题库版</title>
+  <style>
+    :root{--bg:#0a0f14;--card:#101824;--ink:#e9f1fb;--muted:#9fb3c8;--accent:#7cc0ff;--ok:#59d38c;--bad:#ff6b6b;}
+    *{box-sizing:border-box}html,body{height:100%}
+    body{margin:0;background:linear-gradient(120deg,#0a0f14,#0d1320 40%,#0a0f14);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial}
+    .wrap{max-width:1080px;margin:28px auto;padding:16px}
+    header{display:flex;gap:12px;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap}
+    .brand{font-weight:800;font-size:20px;letter-spacing:.2px}
+    .brand small{display:block;color:var(--muted);font-weight:500;font-size:12px}
+    .grid{display:grid;gap:12px}
+    .card{background:var(--card);border:1px solid rgba(124,192,255,.16);border-radius:16px;box-shadow:0 6px 28px rgba(0,0,0,.35);padding:18px}
+    .setup{grid-template-columns:1fr}
+    .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+    .section-title{font-weight:700;color:var(--muted);font-size:13px;margin-bottom:8px}
+    .tag{display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(124,192,255,.25);padding:6px 10px;border-radius:999px;color:var(--ink);background:#0f1826;cursor:pointer}
+    .tag input{accent-color:#66bdf7}
+    .qno{color:var(--muted);font-size:14px;margin-bottom:6px}
+    h1{font-size:20px;margin:0 0 6px 0}
+    .hint{font-size:13px;color:var(--muted);margin:8px 0 0 0}
+    .choices{display:grid;grid-template-columns:1fr;gap:10px;margin-top:12px}
+    .choice{border:1px solid rgba(124,192,255,.18);border-radius:12px;padding:12px 14px;cursor:pointer;transition:transform .04s ease, border-color .2s ease, background .2s ease}
+    .choice:hover{transform:translateY(-1px);border-color:rgba(124,192,255,.36)}
+    .choice.correct{border-color:rgba(89,211,140,.7);background:rgba(89,211,140,.08)}
+    .choice.wrong{border-color:rgba(255,107,107,.7);background:rgba(255,107,107,.08)}
+    .controls{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+    button{appearance:none;border:1px solid rgba(124,192,255,.28);background:#0f1826;color:var(--ink);padding:10px 14px;border-radius:12px;cursor:pointer}
+    button:hover{border-color:var(--accent)}
+    select, input[type="number"]{background:#0f1826;border:1px solid rgba(124,192,255,.28);color:var(--ink);border-radius:10px;padding:8px 10px;min-width:100px}
+    .pill{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:8px 12px;background:#0e1623;border:1px solid rgba(124,192,255,.18);color:var(--muted);font-size:13px}
+    .meter{height:10px;background:#0b141e;border-radius:999px;overflow:hidden;border:1px solid rgba(124,192,255,.18);margin-top:14px}
+    .bar{height:100%;width:0;background:linear-gradient(90deg,var(--accent),#a6e3ff);transition:width .3s ease}
+    .result{margin-top:12px;font-weight:700}
+    footer{margin-top:18px;color:var(--muted);font-size:12px;text-align:center}
+    .hidden{display:none}
+    @media (min-width:960px){.setup{grid-template-columns:1fr 1fr} .choices{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">QuizGPT
+        <small>3C数字资产与创业思维 · 题库与筛选版（纯前端单文件）</small>
+      </div>
+      <div class="pill"><span id="metaCount">题库加载中…</span></div>
+    </header>
+
+    <!-- 设置面板 -->
+    <section class="card grid setup">
+      <div>
+        <div class="section-title">选择章节</div>
+        <div class="row" id="chapters"></div>
+      </div>
+      <div>
+        <div class="section-title">题量与出题方式</div>
+        <div class="row">
+          <label class="tag"><input id="shuffle" type="checkbox" checked>随机出题</label>
+          <label class="tag"><input id="oneTry" type="checkbox" checked>每题一次机会</label>
+          <label class="tag"><input id="showHintsAuto" type="checkbox">错题自动显示提示</label>
+          <label class="tag">题量：<input id="limit" type="number" min="1" step="1" value="10"></label>
+        </div>
+        <div class="row" style="margin-top:8px">
+          <button id="start">开始练习</button>
+          <button id="exportBank">导出当前题库(JSON)</button>
+          <a id="downloadBank" class="hidden" download="quizgpt-bank.json">下载</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 题目卡片 -->
+    <section class="card">
+      <div class="qno" id="qno">请选择章节并开始</div>
+      <h1 id="question">——</h1>
+      <div class="choices" id="choices"></div>
+      <div class="hint" id="hint"></div>
+      <div class="meter"><div class="bar" id="bar"></div></div>
+      <div class="controls">
+        <button id="prev">上一题</button>
+        <button id="next">下一题</button>
+        <button id="reveal">显示提示</button>
+        <button id="restart">重新开始</button>
+        <button id="exportScore">导出成绩</button>
+        <a id="downloadScore" class="hidden" download="quizgpt-score.json">下载</a>
+      </div>
+      <div class="result" id="result"></div>
+    </section>
+
+    <footer>单文件 · 可部署到任意静态网站（GitHub Pages / Nginx / Vercel 静态等）</footer>
+  </div>
+
+  <script>
+  // 题库：合并「基础版」与「更难一套」，并标注章节
+  const BANK = [
+    // 创业方法论
+    {chapter:"创业方法论", q:"创业三要素指哪三种方法论？", choices:["主体思维、效果逻辑、精益创业","增长黑客、融资、营销","设计思维、瀑布模型、OKR","博弈论、长期主义、德鲁克管理"], a:0, hint:"思维+方法三件套。"},
+    {chapter:"创业方法论", q:"主体思维的核心强调是什么？", choices:["主动掌控与自我负责","精准预测市场","以竞品为中心","以融资为先"], a:0, hint:"我命由我不由天。"},
+    {chapter:"创业方法论", q:"效果逻辑的出发点是什么？", choices:["从现有资源出发去创造目标","先写详尽商业计划","先筹足资金再行动","依赖行业专家预测"], a:0, hint:"谁/知道什么/认识谁。"},
+    {chapter:"创业方法论", q:"精益创业的核心循环是？", choices:["构建-测量-学习","计划-执行-检查-行动","需求-设计-开发-上线","调研-立项-投放-扩张"], a:0, hint:"Build-Measure-Learn。"},
+
+    // 效果逻辑原则
+    {chapter:"效果逻辑原则", q:"“手中鸟原则”指？", choices:["先用手边已有的资源","尽量等到最佳时机","优先追求最大收益","先找最强合伙人"], a:0, hint:"who/what/whom you know。"},
+    {chapter:"效果逻辑原则", q:"“可承担损失原则”的关键是？", choices:["先看能承受的最坏损失","计算预期净现值","追求最高ROI","对赌未来估值"], a:0, hint:"关注 downside 而非 upside。"},
+    {chapter:"效果逻辑原则", q:"“疯狂被子原则”主张？", choices:["与各方合作共创价值","避免与竞争者接触","只与大公司合作","先签排他协议"], a:0, hint:"Patchwork Quilt。"},
+    {chapter:"效果逻辑原则", q:"“柠檬水原则”要求？", choices:["把意外变成机会","严格按计划推进","减少试验次数","用价格战取胜"], a:0, hint:"把酸变甜。"},
+    {chapter:"效果逻辑原则", q:"“飞行员原则”强调？", choices:["创造而非预测未来","用AI精准预测销量","外包核心能力","先定五年战略"], a:0, hint:"Pilot-in-the-plane。"},
+    {chapter:"效果逻辑原则", q:"Effectuation 中“手中鸟”包含哪三类资源？", choices:["你是谁/你知道什么/你认识谁","现金/人才/渠道","技术/市场/资本","产品/价格/渠道"], a:0, hint:"who/what/whom you know。"},
+
+    // 精益创业实践
+    {chapter:"精益创业实践", q:"精益创业的第一步是？", choices:["验证用户需求","确定获客渠道","完善商业模式","制定融资计划"], a:0, hint:"没有痛点一切免谈。"},
+    {chapter:"精益创业实践", q:"为何不先考虑“获客渠道”？", choices:["先确认市场有真实需求","渠道建设最费钱","渠道总能后补","竞争者太多"], a:0, hint:"别把无价值产品卖给更多人。"},
+    {chapter:"精益创业实践", q:"以下哪个是精益创业步骤的正确位置？", choices:["商业模式验证在第三步","商业模式验证在第一步","获客渠道在第二步","竞争壁垒在第二步"], a:0, hint:"顺序：需→解→商→获→壁。"},
+    {chapter:"精益创业实践", q:"精益创业：MVP 的首要目的？", choices:["验证关键假设","提升品牌形象","覆盖全部功能","获取媒体报道"], a:0, hint:"用最小代价学习。"},
+    {chapter:"精益创业实践", q:"正确的验证顺序是？", choices:["问题→方案→商业模式→渠道→壁垒","渠道→方案→问题→壁垒→模式","问题→渠道→壁垒→方案→模式","模式→问题→方案→渠道→壁垒"], a:0, hint:"先问题，再方案。"},
+    {chapter:"精益创业实践", q:"以下哪项属于“问题验证”证据？", choices:["用户为替代方案付费","投放点击率高","投资人意向书","行业报告预测大"], a:0, hint:"行为>口头表态。"},
+    {chapter:"精益创业实践", q:"创业早期该如何看待“护城河”？", choices:["先聚焦学习速度与验证","先申请尽可能多专利","先做渠道排他","先做高额营销锁客"], a:0, hint:"快速迭代优先。"},
+
+    // K型经济与AI
+    {chapter:"K型经济与AI", q:"K型经济主要描述了什么？", choices:["技能与行业的两极分化","整体同步复苏","所有人效率均等提升","均值回归"], a:0, hint:"一支向上，一支向下。"},
+    {chapter:"K型经济与AI", q:"关于AI与K型经济，下列哪项正确？", choices:["AI不会让所有人平均受益","AI必然平均提升所有人","AI只影响制造业","AI只让初创公司受益"], a:0, hint:"与AI协同的更受益。"},
+    {chapter:"K型经济与AI", q:"K 型经济下个人的最佳策略？", choices:["叠加稀缺技能与AI协同","只卷工时与价格","等待行业均值回归","专注单一重复技能"], a:0, hint:"走向上支。"},
+
+    // 去中心化与区块链
+    {chapter:"去中心化与区块链", q:"去中心化的核心在于？", choices:["记账权与数据所有权分散化","政府统一监管","单点服务器降本","完全匿名不可追踪"], a:0, hint:"从中心保管到分布式。"},
+    {chapter:"去中心化与区块链", q:"微信支付与比特币在记账上的差异？", choices:["前者中心化，后者分布式公开账本","两者都去中心化","两者都中心化","前者分布式，后者中心化"], a:0, hint:"公司 vs 全网共识。"},
+    {chapter:"去中心化与区块链", q:"区块链最贴切的定义是？", choices:["分布式、不可篡改的数字账本","压缩数据库索引","高并发缓存系统","匿名聊天协议"], a:0, hint:"比特币底层。"},
+    {chapter:"去中心化与区块链", q:"去中心化与中心化的本质差别是？", choices:["共识与记账权的分布方式","是否用区块链","是否开源","是否有公司运作"], a:0, hint:"谁来写账，谁能改账。"},
+    {chapter:"去中心化与区块链", q:"区块链不可篡改主要依赖？", choices:["链式哈希+共识机制","更快数据库","多云容灾","权限更细"], a:0, hint:"Hash linking + Consensus。"},
+    {chapter:"去中心化与区块链", q:"公有链与联盟链的关键差异？", choices:["准入与治理方式","是否支持智能合约","是否能扩容","是否能存图片"], a:0, hint:"Permissionless vs Permissioned。"},
+    {chapter:"去中心化与区块链", q:"Web2 支付与比特币转账的对比正确的是？", choices:["前者由平台记账，后者由全网共识","两者都公开透明可审计","两者都依赖银行清算","前者更匿名"], a:0, hint:"一个中心一个分布。"}
+  ];
+
+  // 初始化章节复选
+  const chaptersBox = document.getElementById('chapters');
+  const uniqChapters = [...new Set(BANK.map(x=>x.chapter))];
+  uniqChapters.forEach(ch => {
+    const label = document.createElement('label');
+    label.className = 'tag';
+    label.innerHTML = `<input type="checkbox" value="${ch}" checked> ${ch}`;
+    chaptersBox.appendChild(label);
+  });
+
+  // 元信息
+  const metaCount = document.getElementById('metaCount');
+  metaCount.textContent = `题库总数：${BANK.length} 题 · 章节：${uniqChapters.length}`;
+
+  // 控件
+  const limitInput = document.getElementById('limit');
+  const shuffleInput = document.getElementById('shuffle');
+  const oneTryInput = document.getElementById('oneTry');
+  const showHintsAuto = document.getElementById('showHintsAuto');
+  const startBtn = document.getElementById('start');
+  const exportBankBtn = document.getElementById('exportBank');
+  const downloadBank = document.getElementById('downloadBank');
+
+  // 题目区域
+  const qno = document.getElementById('qno');
+  const question = document.getElementById('question');
+  const choices = document.getElementById('choices');
+  const hint = document.getElementById('hint');
+  const bar = document.getElementById('bar');
+  const result = document.getElementById('result');
+  const prevBtn = document.getElementById('prev');
+  const nextBtn = document.getElementById('next');
+  const revealBtn = document.getElementById('reveal');
+  const restartBtn = document.getElementById('restart');
+  const exportScoreBtn = document.getElementById('exportScore');
+  const downloadScore = document.getElementById('downloadScore');
+
+  let PAPER = [];      // 本轮试卷
+  let idx = 0, score = 0, answered = []; // 状态
+
+  function pickPaper(){
+    const chosen = [...chaptersBox.querySelectorAll('input[type=checkbox]:checked')].map(i=>i.value);
+    let pool = BANK.filter(x => chosen.includes(x.chapter));
+    if(shuffleInput.checked){
+      pool = pool.map(v=>[Math.random(), v]).sort((a,b)=>a[0]-b[0]).map(x=>x[1]);
+    }
+    const n = Math.max(1, Math.min(pool.length, parseInt(limitInput.value||'1',10)));
+    PAPER = pool.slice(0, n);
+    idx = 0; score = 0; answered = Array(PAPER.length).fill(null);
+  }
+
+  function render(){
+    if(PAPER.length === 0){
+      qno.textContent = '请选择章节并开始';
+      question.textContent = '——';
+      choices.innerHTML = '';
+      hint.textContent = '';
+      bar.style.width = '0%';
+      result.textContent = '';
+      return;
+    }
+    const item = PAPER[idx];
+    qno.textContent = `第 ${idx+1} / ${PAPER.length} 题 · 章节：${item.chapter}`;
+    question.textContent = item.q;
+    hint.textContent = '';
+    choices.innerHTML = '';
+    item.choices.forEach((c,i)=>{
+      const div = document.createElement('div');
+      div.className = 'choice';
+      div.textContent = c;
+      div.onclick = ()=>select(i);
+      if(answered[idx] !== null){
+        if(i === item.a){ div.classList.add('correct'); }
+        if(i === answered[idx] && answered[idx] !== item.a){ div.classList.add('wrong'); }
+      }
+      choices.appendChild(div);
+    });
+    const pct = Math.round((idx)/(PAPER.length-1||1) * 100);
+    bar.style.width = pct + '%';
+    result.textContent = finished() ? `完成！得分：${score} / ${PAPER.length}` : '';
+    prevBtn.disabled = idx===0;
+    nextBtn.disabled = idx===PAPER.length-1;
+  }
+
+  function select(i){
+    if(PAPER.length===0) return;
+    if(oneTryInput.checked && answered[idx] !== null) return;
+    const item = PAPER[idx];
+    const firstAnswer = answered[idx] === null;
+    answered[idx] = i;
+    if(i === item.a && firstAnswer){ score++; }
+    if(i !== item.a && showHintsAuto.checked){
+      hint.textContent = '提示：' + item.hint;
+    }
+    render();
+  }
+
+  function finished(){ return PAPER.length>0 && answered.every(v=>v!==null); }
+
+  // 事件绑定
+  startBtn.onclick = ()=>{ pickPaper(); render(); };
+  prevBtn.onclick = ()=>{ if(PAPER.length){ idx=Math.max(0,idx-1); render(); } };
+  nextBtn.onclick = ()=>{ if(PAPER.length){ idx=Math.min(PAPER.length-1,idx+1); render(); } };
+  revealBtn.onclick = ()=>{ if(PAPER.length){ hint.textContent = '提示：' + PAPER[idx].hint; } };
+  restartBtn.onclick = ()=>{ if(PAPER.length){ idx=0; score=0; answered=Array(PAPER.length).fill(null); render(); } };
+
+  exportScoreBtn.onclick = ()=>{
+    if(PAPER.length===0) return;
+    const payload = {
+      title:"QuizGPT-题库练习",
+      timestamp:new Date().toISOString(),
+      score, total:PAPER.length,
+      answered, paper:PAPER, options:{
+        shuffle:shuffleInput.checked, oneTry:oneTryInput.checked, showHintsAuto:showHintsAuto.checked
+      }, version:1
+    };
+    const blob = new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});
+    downloadScore.href = URL.createObjectURL(blob);
+    downloadScore.click();
+  };
+
+  exportBankBtn.onclick = ()=>{
+    const chosen = [...chaptersBox.querySelectorAll('input[type=checkbox]:checked')].map(i=>i.value);
+    const subset = BANK.filter(x=>chosen.includes(x.chapter));
+    const blob = new Blob([JSON.stringify({count:subset.length, chapters:chosen, items:subset}, null, 2)], {type:'application/json'});
+    downloadBank.href = URL.createObjectURL(blob);
+    downloadBank.click();
+  };
+
+  // 首次渲染
+  render();
+  </script>
+</body>
+</html>

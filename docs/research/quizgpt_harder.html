@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QuizGPT — 3C数字资产与创业思维 · 更难一套</title>
+  <style>
+    :root{--bg:#0b0f14;--card:#111824;--ink:#e6eef8;--muted:#9fb3c8;--accent:#7cc0ff;--ok:#59d38c;--bad:#ff6b6b;}
+    *{box-sizing:border-box}html,body{height:100%}
+    body{margin:0;background:linear-gradient(120deg,#0b0f14,#0e1420 40%,#0b0f14);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial}
+    .wrap{max-width:960px;margin:32px auto;padding:16px}
+    header{display:flex;gap:12px;align-items:center;justify-content:space-between;margin-bottom:16px}
+    .brand{font-weight:700;font-size:20px;letter-spacing:.3px}
+    .brand small{display:block;color:var(--muted);font-weight:500;font-size:12px}
+    .card{background:var(--card);border:1px solid rgba(124,192,255,.16);border-radius:16px;box-shadow:0 6px 28px rgba(0,0,0,.35);padding:20px}
+    .qno{color:var(--muted);font-size:14px;margin-bottom:8px}
+    h1{font-size:20px;margin:0 0 6px 0}
+    .hint{font-size:13px;color:var(--muted);margin:8px 0 0 0}
+    .choices{display:grid;grid-template-columns:1fr;gap:10px;margin-top:12px}
+    .choice{border:1px solid rgba(124,192,255,.18);border-radius:12px;padding:12px 14px;cursor:pointer;transition:transform .04s ease, border-color .2s ease, background .2s ease}
+    .choice:hover{transform:translateY(-1px);border-color:rgba(124,192,255,.36)}
+    .choice.correct{border-color:rgba(89,211,140,.6);background:rgba(89,211,140,.08)}
+    .choice.wrong{border-color:rgba(255,107,107,.6);background:rgba(255,107,107,.08)}
+    .controls{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+    button{appearance:none;border:1px solid rgba(124,192,255,.28);background:#0f1826;color:var(--ink);padding:10px 14px;border-radius:12px;cursor:pointer}
+    button:hover{border-color:var(--accent)}
+    .pill{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:8px 12px;background:#0e1623;border:1px solid rgba(124,192,255,.18);color:var(--muted);font-size:13px}
+    .meter{height:10px;background:#0b141e;border-radius:999px;overflow:hidden;border:1px solid rgba(124,192,255,.18);margin-top:18px}
+    .bar{height:100%;width:0;background:linear-gradient(90deg,var(--accent),#a6e3ff);transition:width .3s ease}
+    .result{margin-top:16px;font-weight:700}
+    footer{margin-top:24px;color:var(--muted);font-size:12px;text-align:center}
+    .hidden{display:none}
+    @media (min-width:720px){.choices{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">QuizGPT
+        <small>3C数字资产与创业思维 · 来一套更难的</small>
+      </div>
+      <div class="pill"><span id="progress">0 / 14</span></div>
+    </header>
+    <div class="card">
+      <div class="qno" id="qno"></div>
+      <h1 id="question">加载中…</h1>
+      <div class="choices" id="choices"></div>
+      <div class="hint" id="hint"></div>
+      <div class="meter"><div class="bar" id="bar"></div></div>
+      <div class="controls">
+        <button id="prev">上一题</button>
+        <button id="next">下一题</button>
+        <button id="reveal">显示提示</button>
+        <button id="restart">重新开始</button>
+        <button id="exportBtn">导出成绩</button>
+        <a id="downloadLink" class="hidden" download="quizgpt-score.json">下载</a>
+      </div>
+      <div class="result" id="result"></div>
+    </div>
+    <footer>
+      纯前端离线应用 · 单文件 · 可直接部署到任意静态服务器（如 GitHub Pages）
+    </footer>
+  </div>
+
+  <script>
+  // 硬核一套：与当前会话中“更难一套”一致
+  const QUIZ = [
+    {q:"Effectuation 中“手中鸟”包含哪三类资源？",
+     choices:["你是谁/你知道什么/你认识谁","现金/人才/渠道","技术/市场/资本","产品/价格/渠道"], a:0, hint:"who you are / what you know / whom you know"},
+    {q:"下列哪项最符合“可承担损失”实践？",
+     choices:["先设定最坏亏损上限再行动","计算三年期净现值再决定","以行业平均ROI做门槛","等待更准确的预测"], a:0, hint:"关注 downside 而非 upside"},
+    {q:"“疯狂被子”体现的核心能力是？",
+     choices:["拼接多方资源共创","高投入独立开发","通过排他构建护城河","价格战抢市场"], a:0, hint:"Patchwork Quilt：co-create"},
+    {q:"面对重大意外，“柠檬水”正确反应是？",
+     choices:["快速重构假设并测试","暂停全部试验等待窗口","加大投放对冲风险","转向更大更远目标"], a:0, hint:"把酸变甜"},
+    {q:"“飞行员原则”与哪句最一致？",
+     choices:["掌控当下的可控变量","预测五年后的拐点","外包非核心把控","追求规模优先"], a:0, hint:"Pilot-in-the-plane"},
+    {q:"精益创业：MVP 的首要目的？",
+     choices:["验证关键假设","提升品牌形象","覆盖全部功能","获取媒体报道"], a:0, hint:"用最小代价学习"},
+    {q:"正确的验证顺序是？",
+     choices:["问题→方案→商业模式→渠道→壁垒","渠道→方案→问题→壁垒→模式","问题→渠道→壁垒→方案→模式","模式→问题→方案→渠道→壁垒"], a:0, hint:"先有真实痛点"},
+    {q:"以下哪项属于“问题验证”证据？",
+     choices:["用户为替代方案付费","投放点击率高","投资人意向书","行业报告预测大"], a:0, hint:"行为>口头表态"},
+    {q:"K 型经济下个人的最佳策略？",
+     choices:["叠加稀缺技能与AI协同","只卷工时与价格","等待行业均值回归","专注单一重复技能"], a:0, hint:"走向“上支”"},
+    {q:"去中心化与中心化的本质差别是？",
+     choices:["共识与记账权的分布方式","是否用区块链","是否开源","是否有公司运作"], a:0, hint:"谁来写账、谁能改账"},
+    {q:"区块链不可篡改主要依赖？",
+     choices:["链式哈希+共识机制","更快数据库","多云容灾","权限更细"], a:0, hint:"Hash + consensus"},
+    {q:"公有链与联盟链的关键差异？",
+     choices:["准入与治理方式","是否支持智能合约","是否能扩容","是否能存图片"], a:0, hint:"permissionless vs permissioned"},
+    {q:"Web2 支付与比特币转账的对比正确的是？",
+     choices:["前者由平台记账，后者由全网共识","两者都公开透明可审计","两者都依赖银行清算","前者更匿名"], a:0, hint:"一个中心一个分布"},
+    {q:"创业早期该如何看待“护城河”？",
+     choices:["先聚焦学习速度与验证","先申请尽可能多专利","先做渠道排他","先做高额营销锁客"], a:0, hint:"学习速度>过早优化"}
+  ];
+
+  let idx = 0, score = 0, answered = Array(QUIZ.length).fill(null);
+
+  const qno = document.getElementById('qno');
+  const question = document.getElementById('question');
+  const choices = document.getElementById('choices');
+  const hint = document.getElementById('hint');
+  const bar = document.getElementById('bar');
+  const progress = document.getElementById('progress');
+  const result = document.getElementById('result');
+  const prevBtn = document.getElementById('prev');
+  const nextBtn = document.getElementById('next');
+  const revealBtn = document.getElementById('reveal');
+  const restartBtn = document.getElementById('restart');
+  const exportBtn = document.getElementById('exportBtn');
+  const downloadLink = document.getElementById('downloadLink');
+
+  function render(){
+    const item = QUIZ[idx];
+    qno.textContent = `第 ${idx+1} 题`;
+    question.textContent = item.q;
+    hint.textContent = "";
+    choices.innerHTML = "";
+    item.choices.forEach((c,i)=>{
+      const div = document.createElement('div');
+      div.className = 'choice';
+      div.textContent = c;
+      div.onclick = ()=>select(i);
+      if(answered[idx] !== null){
+        if(i === item.a){ div.classList.add('correct'); }
+        if(i === answered[idx] && answered[idx] !== item.a){ div.classList.add('wrong'); }
+      }
+      choices.appendChild(div);
+    });
+    progress.textContent = `${answered.filter(v=>v!==null).length} / ${QUIZ.length}`;
+    const pct = Math.round((idx)/(QUIZ.length-1)*100);
+    bar.style.width = pct + "%";
+    result.textContent = finished() ? `完成！得分：${score} / ${QUIZ.length}` : "";
+    prevBtn.disabled = idx===0;
+    nextBtn.disabled = idx===QUIZ.length-1;
+  }
+
+  function select(i){
+    if(answered[idx]!==null) return; // 一题一次机会
+    answered[idx]=i;
+    if(i===QUIZ[idx].a){ score++; }
+    render();
+  }
+  function finished(){ return answered.every(v=>v!==null); }
+
+  prevBtn.onclick = ()=>{ idx=Math.max(0,idx-1); render(); };
+  nextBtn.onclick = ()=>{ idx=Math.min(QUIZ.length-1,idx+1); render(); };
+  revealBtn.onclick = ()=>{ hint.textContent = "提示："+ QUIZ[idx].hint; };
+  restartBtn.onclick = ()=>{
+    idx=0;score=0;answered=Array(QUIZ.length).fill(null);render();
+  };
+
+  exportBtn.onclick = ()=>{
+    const payload = {
+      title:"QuizGPT-更难一套",
+      timestamp:new Date().toISOString(),
+      score, total:QUIZ.length,
+      answered, version:1
+    };
+    const blob = new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});
+    downloadLink.href = URL.createObjectURL(blob);
+    downloadLink.click();
+  };
+
+  render();
+  </script>
+</body>
+</html>
