@@ -1,0 +1,820 @@
+# 3C数字资产与创业思维学习平台 - Version 1.0
+# Generated: 2025-08-25
+# Purpose: 3C数字资产与创业思维核心概念学习平台内容架构
+# Coverage: 中文内容，专注创业学与数字经济
+
+# ========================================================================================
+# METADATA
+# ========================================================================================
+
+[metadata]
+version = "1.0.0"
+generated_date = "2025-08-25"
+supported_locales = ["zh"]
+default_locale = "zh"
+content_types = ["principles", "stages", "flashcards", "quiz"]
+total_content_items = 500
+website_url = "https://3c-learning.me"
+repository = "https://github.com/VCCampus/12factor"
+
+# ========================================================================================
+# STAGES (4 stages)
+# ========================================================================================
+
+[[stages]]
+id = "entrepreneurship"
+order = 1
+icon = "🎯"
+title = "创业三要素"
+description = "创业者需要具备的三种核心思维模式"
+extended_title = "创业三要素：核心思维"
+principles = ["subject-thinking", "effectual-logic", "lean-startup"]
+
+[[stages]]
+id = "effectuation"
+order = 2
+icon = "🛠️"
+title = "效果逻辑五原则"
+description = "指导创业早期探索的行动指南"
+extended_title = "效果逻辑：行动指南"
+principles = ["bird-in-hand", "affordable-loss", "crazy-quilt", "lemonade", "pilot"]
+
+[[stages]]
+id = "lean-process"
+order = 3
+icon = "🔄"
+title = "精益创业五阶段"
+description = "逻辑递进的创业流程"
+extended_title = "精益创业：验证流程"
+principles = ["user-needs", "solution", "business-model", "customer-acquisition", "competitive-moat"]
+
+[[stages]]
+id = "digital-economy"
+order = 4
+icon = "💻"
+title = "数字经济概念"
+description = "AI与区块链时代的前沿理念"
+extended_title = "数字经济：前沿概念"
+principles = ["k-shaped-economy", "decentralization"]
+
+# ========================================================================================
+# PRINCIPLES (12 principles total)
+# ========================================================================================
+
+# 创业三要素
+[[principles]]
+id = "subject-thinking"
+order = 1
+stage = "entrepreneurship"
+name = "主体思维"
+concept = "我命由我不由天，强调创业者掌握自己命运的主动性"
+practices = [
+  "培养自主决策的能力",
+  "不依赖外部环境和他人的安排",
+  "主动寻找和创造机会",
+  "承担创业的全部责任"
+]
+antipatterns = [
+  "等待完美的外部条件",
+  "依赖他人为自己做决定",
+  "抱怨环境而不采取行动"
+]
+flashcard.front = "什么是主体思维？"
+flashcard.back = "我命由我不由天，强调创业者掌握自己命运的主动性，不依赖外部条件，主动创造机会。"
+quiz.question = "主体思维的核心理念是什么？"
+quiz.correct_answer = "我命由我不由天，主动掌握自己的命运"
+quiz.wrong_answers = [
+  "听天由命，顺其自然",
+  "依靠他人指导做决定",
+  "等待完美时机再行动"
+]
+
+[[principles]]
+id = "effectual-logic"
+order = 2
+stage = "entrepreneurship"
+name = "效果逻辑"
+concept = "先行动后反思，从已有资源出发，通过与人互动来创造机会的思维方式"
+practices = [
+  "从现有资源（你是谁、你知道什么、你认识谁）出发",
+  "通过行动发现机会，而不是预先规划",
+  "在行动中调整和完善目标",
+  "重视与他人的互动合作"
+]
+antipatterns = [
+  "必须有完整计划才开始行动",
+  "过度分析而延误行动时机",
+  "固守既定目标不愿调整"
+]
+flashcard.front = "效果逻辑与因果逻辑有什么区别？"
+flashcard.back = "效果逻辑是从现有资源出发去创造目标，而因果逻辑是为既定目标去寻找资源。先行动后反思vs先规划后行动。"
+quiz.question = "效果逻辑的特点是？"
+quiz.correct_answer = "从现有资源出发，通过行动创造机会"
+quiz.wrong_answers = [
+  "制定详细计划，严格按计划执行",
+  "先设定目标，再寻找资源",
+  "避免行动，专注于分析"
+]
+
+[[principles]]
+id = "lean-startup"
+order = 3
+stage = "entrepreneurship"
+name = "精益创业"
+concept = "行动-学习-建设，通过快速试错和迭代来验证商业模式的科学方法"
+practices = [
+  "构建最小可行产品(MVP)快速验证",
+  "通过用户反馈持续迭代改进",
+  "建立测量-学习-构建的循环",
+  "在失败中快速学习和调整"
+]
+antipatterns = [
+  "完美主义，产品不完美不发布",
+  "闭门造车，不听用户反馈",
+  "一次性投入大量资源"
+]
+flashcard.front = "精益创业的核心循环是什么？"
+flashcard.back = "构建-测量-学习的反馈循环，通过MVP快速验证想法，根据用户反馈持续迭代。"
+quiz.question = "精益创业强调什么？"
+quiz.correct_answer = "快速试错，持续迭代，验证商业模式"
+quiz.wrong_answers = [
+  "完美产品一次性发布",
+  "大量资金投入保证成功",
+  "详细计划避免试错"
+]
+
+# 效果逻辑五原则
+[[principles]]
+id = "bird-in-hand"
+order = 4
+stage = "effectuation"
+name = "手中鸟原则"
+concept = "从你已有的资源出发：你是谁、你知道什么、你认识谁"
+practices = [
+  "盘点个人技能、知识和经验",
+  "分析人脉关系和社会网络",
+  "充分利用现有资源创造价值",
+  "不等待理想资源，用现有的开始"
+]
+antipatterns = [
+  "总是觉得资源不够而不开始",
+  "羡慕别人的资源而忽视自己的",
+  "等待完美资源配置"
+]
+flashcard.front = "手中鸟原则的'三个维度'是什么？"
+flashcard.back = "你是谁（身份特质）、你知道什么（知识技能）、你认识谁（人脉网络）。"
+quiz.question = "手中鸟原则强调什么？"
+quiz.correct_answer = "从已有资源出发，不等待完美条件"
+quiz.wrong_answers = [
+  "等待获得更多资源再开始",
+  "模仿成功者的资源配置",
+  "只关注资金资源"
+]
+
+[[principles]]
+id = "affordable-loss"
+order = 5
+stage = "effectuation"
+name = "可承担损失原则"
+concept = "决策时不看潜在收益，而看能否承受最坏的损失"
+practices = [
+  "评估最坏情况下的损失",
+  "只投入能够承受的资源",
+  "设定损失上限和止损点",
+  "用能承担的小损失换取学习机会"
+]
+antipatterns = [
+  "只看收益不考虑风险",
+  "投入超过承受能力的资源",
+  "没有设定止损底线"
+]
+flashcard.front = "可承担损失原则和传统投资思维有什么不同？"
+flashcard.back = "传统思维关注预期收益最大化，而可承担损失关注最坏损失是否能承受，用风险控制代替收益预测。"
+quiz.question = "可承担损失原则的核心是？"
+quiz.correct_answer = "决策基于能承受的最大损失，而非预期收益"
+quiz.wrong_answers = [
+  "追求收益最大化",
+  "避免任何形式的损失",
+  "根据市场预测做决策"
+]
+
+[[principles]]
+id = "crazy-quilt"
+order = 6
+stage = "effectuation"
+name = "疯狂被子原则"
+concept = "与任何人（甚至竞争对手）合作，共同创造价值"
+practices = [
+  "开放合作心态，不排斥任何可能的伙伴",
+  "寻找互补资源和共同利益点",
+  "通过合作降低不确定性",
+  "构建多元化的合作网络"
+]
+antipatterns = [
+  "零和思维，认为合作必有输赢",
+  "排斥竞争对手，错失合作机会",
+  "只愿意与熟悉的人合作"
+]
+flashcard.front = "为什么叫'疯狂被子'原则？"
+flashcard.back = "像拼接不同颜色布料做被子一样，将看似不相关甚至竞争的各方拼接合作，共同创造价值。"
+quiz.question = "疯狂被子原则的特点是？"
+quiz.correct_answer = "开放合作，甚至与竞争对手共创价值"
+quiz.wrong_answers = [
+  "只与朋友和熟人合作",
+  "避免与竞争对手接触",
+  "追求独占式的竞争优势"
+]
+
+[[principles]]
+id = "lemonade"
+order = 7
+stage = "effectuation"
+name = "柠檬水原则"
+concept = "将意外和失败转化为机遇和优势"
+practices = [
+  "积极面对意外情况和挫折",
+  "从失败中寻找新的机会",
+  "将劣势转化为差异化优势",
+  "保持灵活应变的心态"
+]
+antipatterns = [
+  "被意外打击而放弃",
+  "抱怨外部环境的不利",
+  "固守原计划不愿调整"
+]
+flashcard.front = "柠檬水原则的寓意是什么？"
+flashcard.back = "生活给你柠檬（困难），你就做柠檬水（机会）。将酸涩的挫败转化为甜美的成功。"
+quiz.question = "柠檬水原则教我们什么？"
+quiz.correct_answer = "将意外和失败转化为新的机遇"
+quiz.wrong_answers = [
+  "避免任何意外和风险",
+  "按原计划严格执行",
+  "抱怨外部环境的不公"
+]
+
+[[principles]]
+id = "pilot"
+order = 8
+stage = "effectuation"
+name = "飞行员原则"
+concept = "未来是创造出来的，而非预测出来的，要掌控好当下"
+practices = [
+  "专注于当下可以控制的因素",
+  "通过行动创造未来而非预测未来",
+  "保持对环境变化的敏感度",
+  "在行动中调整方向"
+]
+antipatterns = [
+  "过度依赖市场预测和分析",
+  "等待确定的未来再行动",
+  "忽视当下可控制的因素"
+]
+flashcard.front = "飞行员原则为什么不强调预测？"
+flashcard.back = "飞行员在飞行中主要靠当下的操控，而不是预测天气。未来充满不确定性，关键是掌控当下的行动。"
+quiz.question = "飞行员原则的核心理念是？"
+quiz.correct_answer = "未来是创造的，专注掌控当下"
+quiz.wrong_answers = [
+  "准确预测未来趋势",
+  "制定详细的长期计划",
+  "等待确定性再行动"
+]
+
+# 精益创业五阶段
+[[principles]]
+id = "user-needs"
+order = 9
+stage = "lean-process"
+name = "用户需求验证"
+concept = "第一步验证市场是否存在真实且足够强烈的需求"
+practices = [
+  "深入了解目标用户群体",
+  "识别真实痛点而非伪需求",
+  "验证需求的强度和频次",
+  "确保需求有足够的市场规模"
+]
+antipatterns = [
+  "假设市场需求而不验证",
+  "关注伪需求和表面需求",
+  "忽视需求的强度和紧迫性"
+]
+flashcard.front = "为什么用户需求是第一步？"
+flashcard.back = "没有真实强烈的用户需求，再好的解决方案也没有价值。需求验证是所有后续工作的基础。"
+quiz.question = "用户需求验证的重点是？"
+quiz.correct_answer = "确认真实、强烈、具有足够规模的需求"
+quiz.wrong_answers = [
+  "设计最酷的产品功能",
+  "分析竞争对手的产品",
+  "制定详细的商业计划"
+]
+
+[[principles]]
+id = "solution"
+order = 10
+stage = "lean-process"
+name = "解决方案验证"
+concept = "验证你的产品或服务能否有效解决用户的痛点"
+practices = [
+  "设计针对性的解决方案",
+  "构建最小可行产品验证",
+  "收集用户使用反馈",
+  "持续优化解决方案"
+]
+antipatterns = [
+  "过度设计复杂解决方案",
+  "不收集用户真实反馈",
+  "固守最初的解决方案设计"
+]
+flashcard.front = "解决方案验证和需求验证有什么关系？"
+flashcard.back = "需求验证确认'要解决什么问题'，解决方案验证确认'如何有效解决这个问题'。"
+quiz.question = "解决方案验证的关键是？"
+quiz.correct_answer = "确认方案能有效解决已验证的用户需求"
+quiz.wrong_answers = [
+  "做出功能最全的产品",
+  "抄袭成功产品的功能",
+  "追求技术上的完美"
+]
+
+[[principles]]
+id = "business-model"
+order = 11
+stage = "lean-process"
+name = "商业模式验证"
+concept = "验证用户是否愿意为你的解决方案付费，以及能否持续盈利"
+practices = [
+  "设计合理的价格策略",
+  "验证用户的付费意愿",
+  "计算单位经济效益",
+  "确保商业模式可持续"
+]
+antipatterns = [
+  "免费模式没有盈利路径",
+  "定价脱离用户承受能力",
+  "忽视成本结构的合理性"
+]
+flashcard.front = "商业模式验证解决什么问题？"
+flashcard.back = "解决'用户愿不愿意付费'和'企业能不能赚钱'两个核心问题。"
+quiz.question = "商业模式验证的核心是？"
+quiz.correct_answer = "确认用户付费意愿和盈利可持续性"
+quiz.wrong_answers = [
+  "提供免费服务吸引用户",
+  "模仿竞争对手的价格",
+  "追求最大的用户规模"
+]
+
+[[principles]]
+id = "customer-acquisition"
+order = 12
+stage = "lean-process"
+name = "获客渠道验证"
+concept = "验证你是否有办法规模化地获取客户"
+practices = [
+  "识别有效的获客渠道",
+  "测试不同渠道的转化率",
+  "计算客户获取成本",
+  "建立可扩展的营销体系"
+]
+antipatterns = [
+  "依赖单一获客渠道",
+  "获客成本过高无法持续",
+  "没有系统的获客策略"
+]
+flashcard.front = "获客渠道为什么重要？"
+flashcard.back = "有好产品但没人知道等于零。需要找到成本可控、效果可测、规模可扩的方式让目标用户知道并使用你的产品。"
+quiz.question = "获客渠道验证的重点是？"
+quiz.correct_answer = "找到成本可控且可规模化的获客方式"
+quiz.wrong_answers = [
+  "在所有平台都投放广告",
+  "依靠口碑自然传播",
+  "等待用户主动找上门"
+]
+
+[[principles]]
+id = "competitive-moat"
+order = 13
+stage = "lean-process"
+name = "竞争壁垒建设"
+concept = "验证你是否能建立护城河，抵御长期竞争"
+practices = [
+  "识别可持续的竞争优势",
+  "建立技术或资源壁垒",
+  "构建网络效应和规模效应",
+  "培育品牌和用户忠诚度"
+]
+antipatterns = [
+  "没有差异化竞争优势",
+  "容易被模仿和替代",
+  "只靠价格战竞争"
+]
+flashcard.front = "为什么竞争壁垒是最后一步？"
+flashcard.back = "前面验证了需求、方案、商业模式、获客，最后要确保这个生意能长期做下去，不被轻易模仿和替代。"
+quiz.question = "竞争壁垒的作用是？"
+quiz.correct_answer = "保护企业长期盈利不被轻易模仿"
+quiz.wrong_answers = [
+  "打价格战击败竞争对手",
+  "垄断整个市场",
+  "避免任何竞争对手出现"
+]
+
+# 数字经济概念
+[[principles]]
+id = "k-shaped-economy"
+order = 14
+stage = "digital-economy"
+name = "K型经济"
+concept = "AI等技术对就业市场造成的两极分化效应，少数技能价值极大提升，多数技能价值骤降"
+practices = [
+  "识别与AI协同的技能方向",
+  "发展难以被AI替代的能力",
+  "关注技术变革的分化效应",
+  "提前布局高价值技能赛道"
+]
+antipatterns = [
+  "认为AI会平等提升所有人效率",
+  "忽视技术变革的分化影响",
+  "固守传统技能不愿转型"
+]
+flashcard.front = "K型经济的'K'指什么？"
+flashcard.back = "K型指分化趋势：约20%与AI协同的技能价值大幅提升（K的向上分支），80%被AI替代的技能价值下降（K的向下分支）。"
+quiz.question = "K型经济现象说明什么？"
+quiz.correct_answer = "AI技术导致就业市场两极分化，而非平等提升"
+quiz.wrong_answers = [
+  "AI会平等提升所有人的效率",
+  "所有传统工作都会被淘汰",
+  "技术进步对所有人都有利"
+]
+
+[[principles]]
+id = "decentralization"
+order = 15
+stage = "digital-economy"
+name = "去中心化"
+concept = "记账权和数据所有权的分散化，不存在单一中心机构控制"
+practices = [
+  "理解区块链分布式账本原理",
+  "区分中心化和去中心化系统",
+  "关注数据所有权和隐私保护",
+  "了解去中心化的应用场景"
+]
+antipatterns = [
+  "混淆去中心化和分布式概念",
+  "认为去中心化完全取代中心化",
+  "忽视去中心化的局限性"
+]
+flashcard.front = "去中心化的核心是什么？"
+flashcard.back = "记账权和数据所有权的分散化。比如比特币的交易记录由全球分布式账本维护，而非单一机构保管。"
+quiz.question = "去中心化与微信支付的根本区别是？"
+quiz.correct_answer = "微信支付由腾讯中心化记账，比特币由分布式网络共同记账"
+quiz.wrong_answers = [
+  "去中心化更安全可靠",
+  "微信支付技术更先进",
+  "两者只是支付方式不同"
+]
+
+# ========================================================================================
+# UI CONTENT
+# ========================================================================================
+
+[ui.common]
+site_title = "3C数字资产学习平台"
+site_subtitle = "创业学与数字经济核心概念"
+copyright = "© 2024 3C学习平台"
+author = "由 VCCampus 创建"
+license = "MIT 许可证"
+
+[ui.navigation]
+home = "首页"
+principles = "原则"
+flashcards = "闪卡"
+quiz = "测试"
+
+[ui.home]
+hero.title = "掌握3C数字资产思维"
+hero.subtitle = "学习创业学与数字经济的核心概念，培养面向未来的思维模式"
+hero.cta_primary = "开始学习"
+hero.cta_secondary = "查看原则"
+stats.concepts = "15 个概念"
+stats.stages = "4 个阶段"
+stats.principles = "核心原则"
+
+[ui.benefits]
+title = "为什么学习3C？"
+entrepreneurship.title = "创业思维"
+entrepreneurship.description = "掌握效果逻辑和精益方法"
+digital.title = "数字素养"
+digital.description = "理解K型经济和去中心化"
+future.title = "面向未来"
+future.description = "适应AI和区块链时代"
+practice.title = "实践导向"
+practice.description = "从理论到实际应用"
+
+[ui.flashcards]
+title = "概念闪卡练习"
+instructions = "点击卡片翻转。使用箭头键导航。"
+flip = "翻转"
+next = "下一个"
+previous = "上一个"
+progress = "进度"
+front = "问题"
+back = "答案"
+status.new = "新"
+status.learning = "学习中"
+status.review = "复习"
+status.done = "完成"
+
+[ui.quiz]
+title = "知识测试"
+select_mode = "选择测试模式"
+mode.normal = "普通模式"
+mode.normal.description = "标准测试，包含所有概念"
+mode.timed = "计时模式"
+mode.timed.description = "每题60秒限时"
+mode.challenge = "挑战模式"
+mode.challenge.description = "更难的问题，无提示"
+start = "开始测试"
+question_counter = "第 {{current}} 题，共 {{total}} 题"
+submit = "提交答案"
+next_question = "下一题"
+finish = "完成测试"
+score = "得分"
+correct = "正确！"
+incorrect = "错误"
+time_left = "剩余时间"
+results.title = "测试结果"
+results.score = "你的得分：{{score}}%"
+results.summary = "你答对了 {{total}} 题中的 {{correct}} 题"
+results.retry = "再试一次"
+results.review = "查看答案"
+
+# ========================================================================================
+# CONFIGURATION
+# ========================================================================================
+
+[config.features]
+enable_llm_integration = false
+enable_progress_tracking = true
+enable_offline_mode = true
+enable_analytics = false
+enable_user_accounts = false
+enable_social_sharing = false
+enable_dark_mode = true
+enable_mobile_app = false
+
+[config.ui]
+default_theme = "light"
+animation_speed = "normal"
+show_hints = true
+show_progress = true
+enable_keyboard_shortcuts = true
+mobile_breakpoint = 768
+tablet_breakpoint = 1024
+
+[config.content]
+cache_duration_seconds = 3600
+preload_content = true
+lazy_load_images = false
+markdown_support = false
+max_content_length = 5000
+
+# ========================================================================================
+# DEPLOYMENT
+# ========================================================================================
+
+[deployment]
+version = "1.0.0"
+environment = "production"
+release_date = "2025-08-25"
+supported_browsers = ["Chrome 90+", "Firefox 88+", "Safari 14+", "Edge 90+"]
+minimum_node_version = "18.0.0"
+package_manager = "npm"
+build_output = "/opt/src/12factor/dist"
+source_directory = "/opt/src/12factor/vue"
+
+# ========================================================================================
+# LEARNING SUGGESTIONS (学习建议系统)
+# ========================================================================================
+
+[suggestions.metadata]
+version = "1.0.0"
+description = "个性化学习建议和改进方向"
+last_updated = "2025-08-25"
+
+# 按测试分数段提供建议
+[[suggestions.score_ranges]]
+id = "excellent"
+min_score = 90
+max_score = 100
+level = "优秀"
+badge = "🏆"
+message = "优秀！你已经很好地掌握了3C数字资产的核心概念"
+encouragement = "你的理解非常深刻，可以开始实际应用这些理论知识"
+next_steps = [
+  "尝试将理论应用到实际创业项目中",
+  "分享你的学习心得，帮助其他学习者",
+  "关注更深层次的创业实践和案例分析",
+  "考虑成为3C学习社区的导师或分享者"
+]
+
+[[suggestions.score_ranges]]
+id = "good"
+min_score = 80
+max_score = 89
+level = "良好"
+badge = "⭐"
+message = "良好！大部分概念都掌握了，还有进一步提升的空间"
+encouragement = "你已经建立了扎实的基础，继续努力就能达到优秀水平"
+next_steps = [
+  "重点巩固测试中的薄弱环节",
+  "多进行实际案例分析和应用练习",
+  "定期复习核心概念，加深理解",
+  "寻找创业实践机会，验证理论知识"
+]
+
+[[suggestions.score_ranges]]
+id = "average"
+min_score = 70
+max_score = 79
+level = "及格"
+badge = "👍"
+message = "及格！基础概念基本掌握，需要深化理解和加强练习"
+encouragement = "你已经迈出了重要的第一步，通过持续学习一定能够提高"
+next_steps = [
+  "系统性重新学习薄弱的概念",
+  "增加闪卡练习的频率和时间",
+  "寻找真实的创业案例来理解概念",
+  "制定详细的学习计划，循序渐进"
+]
+
+[[suggestions.score_ranges]]
+id = "needs_improvement"
+min_score = 0
+max_score = 69
+level = "需加强"
+badge = "💪"
+message = "需要加强！建议重新系统学习，打牢基础"
+encouragement = "每个人都有自己的学习节奏，不要气馁，持续努力就会看到进步"
+next_steps = [
+  "从基础概念开始，逐个重新学习",
+  "大幅增加学习时间投入",
+  "寻求学习指导或参加相关培训",
+  "通过多种方式强化记忆：笔记、思维导图、实践应用"
+]
+
+# 按学习阶段提供针对性建议
+[[suggestions.stage_guidance]]
+stage_id = "entrepreneurship"
+stage_name = "创业三要素"
+weak_performance = {
+  threshold = 60,
+  message = "创业三要素是整个框架的基础，需要重点加强",
+  focus_areas = ["深入理解主体思维的核心理念", "掌握效果逻辑与因果逻辑的根本区别", "理解精益创业的科学方法"],
+  study_methods = ["反复阅读概念解释", "寻找生活中的实际应用例子", "与有创业经验的人交流讨论"]
+}
+good_performance = {
+  threshold = 80,
+  message = "创业三要素掌握良好，可以开始思考实际应用",
+  enhancement = ["尝试用效果逻辑思维分析身边的机会", "实践精益创业的思维模式", "培养主体思维的行动力"]
+}
+
+[[suggestions.stage_guidance]]
+stage_id = "effectuation"
+stage_name = "效果逻辑五原则"
+weak_performance = {
+  threshold = 60,
+  message = "效果逻辑五原则是创业实践的核心指导，务必深入理解",
+  focus_areas = ["理解每个原则的具体含义", "掌握原则之间的逻辑关系", "学会在实际情况中应用这些原则"],
+  study_methods = ["制作原则对比表格", "寻找每个原则的实际案例", "练习用原则分析创业决策"]
+}
+good_performance = {
+  threshold = 80,
+  message = "效果逻辑五原则理解到位，开始实践应用",
+  enhancement = ["在日常决策中运用这些原则", "分析成功创业者的决策模式", "培养原则性思维习惯"]
+}
+
+[[suggestions.stage_guidance]]
+stage_id = "lean-process"
+stage_name = "精益创业五阶段"
+weak_performance = {
+  threshold = 60,
+  message = "精益创业流程是系统性的方法论，需要理解其逻辑顺序",
+  focus_areas = ["明确每个阶段的目标和要求", "理解阶段之间的递进关系", "掌握每个阶段的验证方法"],
+  study_methods = ["画出完整的流程图", "分析每个阶段的关键问题", "寻找按此流程成功的案例"]
+}
+good_performance = {
+  threshold = 80,
+  message = "精益创业流程理解清晰，可以指导实际创业",
+  enhancement = ["尝试用此流程分析现有项目", "设计小规模的验证实验", "建立系统化的创业思维"]
+}
+
+[[suggestions.stage_guidance]]
+stage_id = "digital-economy"
+stage_name = "数字经济概念"
+weak_performance = {
+  threshold = 60,
+  message = "数字经济概念关乎未来发展趋势，需要深入理解",
+  focus_areas = ["理解K型经济的分化效应", "掌握去中心化的核心特征", "认识技术变革的深层影响"],
+  study_methods = ["关注相关新闻和案例", "了解区块链和AI的基本原理", "思考对个人职业发展的影响"]
+}
+good_performance = {
+  threshold = 80,
+  message = "数字经济概念理解准确，具备前瞻思维",
+  enhancement = ["持续关注技术发展动态", "思考如何适应和利用变化", "培养数字时代的核心竞争力"]
+}
+
+# 通用学习建议
+[suggestions.general]
+study_habits = [
+  "建立固定的学习时间，保持学习节奏",
+  "采用多种学习方式：阅读、练习、讨论、实践",
+  "定期复习，运用间隔重复的记忆方法",
+  "将理论知识与实际案例相结合",
+  "保持好奇心，主动思考和提问"
+]
+
+improvement_methods = [
+  "制作思维导图，梳理概念之间的关系",
+  "寻找创业成功和失败的案例进行分析",
+  "与他人讨论，通过交流加深理解",
+  "尝试用学到的概念分析身边的现象",
+  "写学习笔记和心得体会"
+]
+
+common_mistakes = [
+  "死记硬背概念而不理解其实质含义",
+  "孤立地学习概念而不了解整体框架",
+  "只学理论不思考实际应用",
+  "学习不够深入，浅尝辄止",
+  "缺乏系统性，学习零散没有章法"
+]
+
+# 学习资源推荐
+[suggestions.resources]
+recommended_books = [
+  "《效果逻辑：顶级企业家的思维方式》- 萨斯·萨拉斯瓦西",
+  "《精益创业》- 埃里克·莱斯",
+  "《从0到1》- 彼得·蒂尔",
+  "《创业维艰》- 本·霍洛维茨"
+]
+
+online_resources = [
+  "创业邦 - 创业资讯和案例分析",
+  "36氪 - 科技创业动态",
+  "知乎创业话题 - 经验分享和讨论",
+  "Coursera创业课程 - 系统化学习"
+]
+
+practice_suggestions = [
+  "参加创业竞赛或项目",
+  "加入创业社群或组织",
+  "寻找创业导师或顾问",
+  "尝试小规模的商业实验"
+]
+
+# 数据导出模板
+[suggestions.export_templates]
+progress_report = """
+# 3C数字资产学习进度报告
+
+## 学习概况
+- 学习进度：{completed_concepts}/15 个概念已掌握
+- 整体完成度：{completion_percentage}%
+- 学习用时：{study_time}
+
+## 测试成绩
+- 最近测试得分：{recent_score} 分
+- 历史最高分：{best_score} 分  
+- 平均成绩：{average_score} 分
+- 测试次数：{test_count} 次
+
+## 分阶段表现
+### 🎯 创业三要素
+- 掌握度：{entrepreneurship_mastery}%
+- 状态：{entrepreneurship_status}
+
+### 🛠️ 效果逻辑五原则  
+- 掌握度：{effectuation_mastery}%
+- 状态：{effectuation_status}
+
+### 🔄 精益创业五阶段
+- 掌握度：{lean_process_mastery}%
+- 状态：{lean_process_status}
+
+### 💻 数字经济概念
+- 掌握度：{digital_economy_mastery}%
+- 状态：{digital_economy_status}
+
+## 闪卡练习统计
+- 精通：{perfect_cards} 张
+- 熟悉：{good_cards} 张  
+- 模糊：{fair_cards} 张
+- 待学习：{new_cards} 张
+
+## 个性化学习建议
+{personalized_suggestions}
+
+## 下一步行动计划
+{action_plan}
+
+---
+*报告生成时间：{export_date}*
+*数据来源：3C数字资产学习平台*
+"""
