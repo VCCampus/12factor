@@ -23,6 +23,16 @@ const router = createRouter({
       path: '/quiz',
       name: 'quiz',
       component: () => import('@/views/QuizView.vue')
+    },
+    {
+      path: '/analytics',
+      name: 'analytics',
+      component: () => import('@/views/AnalyticsView.vue')
+    },
+    {
+      path: '/achievements',
+      name: 'achievements', 
+      component: () => import('@/views/GamificationView.vue')
     }
   ]
 })

@@ -8,24 +8,60 @@
 
 const fs = require('fs');
 const path = require('path');
+const { parseTomlForCSS } = require('./simple-toml-parser');
 
-// 简单的TOML解析器（重用验证工具中的代码）
+// 改进的TOML解析器，支持多行数组
 function parseSimpleTOML(content) {
   const lines = content.split('\n');
   const result = {};
   let currentSection = result;
   let currentPath = [];
+  let inMultilineArray = false;
+  let currentArrayKey = '';
+  let currentArrayValue = [];
   
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i].trim();
     
+    // 处理多行数组的结束
+    if (inMultilineArray) {
+      if (line.endsWith(']')) {
+        // 数组结束
+        if (line !== ']') {
+          currentArrayValue.push(line.slice(0, -1).trim().replace(/"/g, ''));
+        }
+        // 设置数组值
+        if (currentArrayKey.includes('.')) {
+          const keys = currentArrayKey.split('.');
+          let target = currentSection;
+          for (let j = 0; j < keys.length - 1; j++) {
+            if (!target[keys[j]]) target[keys[j]] = {};
+            target = target[keys[j]];
+          }
+          target[keys[keys.length - 1]] = currentArrayValue;
+        } else {
+          currentSection[currentArrayKey] = currentArrayValue;
+        }
+        inMultilineArray = false;
+        currentArrayKey = '';
+        currentArrayValue = [];
+        continue;
+      } else if (line && !line.startsWith('#')) {
+        // 添加数组项
+        currentArrayValue.push(line.replace(/"/g, '').replace(/,$/, ''));
+        continue;
+      }
+      continue;
+    }
+    
     if (!line || line.startsWith('#')) continue;
     
+    // 处理节标题
     if (line.startsWith('[') && line.endsWith(']')) {
       const sectionName = line.slice(1, -1);
       
-      if (sectionName.startsWith('[') && sectionName.endsWith(']]')) {
-        const arrayName = sectionName.slice(1, -1);
+      if (line.startsWith('[[') && line.endsWith(']]')) {
+        const arrayName = sectionName;
         if (!result[arrayName]) result[arrayName] = [];
         const newObj = {};
         result[arrayName].push(newObj);
@@ -50,6 +86,20 @@ function parseSimpleTOML(content) {
       const value = line.substring(equalIndex + 1).trim();
       
       let parsedValue = value;
+      
+      // 处理多行数组开始
+      if (value === '[' || (value.startsWith('[') && !value.endsWith(']'))) {
+        inMultilineArray = true;
+        currentArrayKey = key;
+        currentArrayValue = [];
+        if (value !== '[') {
+          // 第一行就有内容
+          currentArrayValue.push(value.slice(1).trim().replace(/"/g, '').replace(/,$/, ''));
+        }
+        continue;
+      }
+      
+      // 处理单行值
       if (value.startsWith('"') && value.endsWith('"')) {
         parsedValue = value.slice(1, -1);
       } else if (value.startsWith('[') && value.endsWith(']')) {
@@ -62,7 +112,18 @@ function parseSimpleTOML(content) {
         parsedValue = Number(value);
       }
       
-      currentSection[key] = parsedValue;
+      // 处理嵌套对象键 (如 flashcard.front)
+      if (key.includes('.')) {
+        const keys = key.split('.');
+        let target = currentSection;
+        for (let j = 0; j < keys.length - 1; j++) {
+          if (!target[keys[j]]) target[keys[j]] = {};
+          target = target[keys[j]];
+        }
+        target[keys[keys.length - 1]] = parsedValue;
+      } else {
+        currentSection[key] = parsedValue;
+      }
     }
   }
   
@@ -140,7 +201,14 @@ function convertTOMLToJSONShards(tomlPath, outputDir) {
   }
   
   const content = fs.readFileSync(tomlPath, 'utf8');
-  const config = parseSimpleTOML(content);
+  const config = parseTomlForCSS(content);
+  
+  // 调试信息
+  console.log(`🔍 解析结果: stages=${config.stages?.length}, principles=${config.principles?.length}`);
+  if (config.principles?.length > 0) {
+    const firstPrinciple = config.principles[0];
+    console.log(`   第一个principle: ${firstPrinciple.id} (stage: ${firstPrinciple.stage})`);
+  }
   
   console.log(`🔄 开始转换为分片JSON...`);
   

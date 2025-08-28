@@ -1,5 +1,8 @@
 <template>
   <div class="app-layout min-h-screen flex flex-col bg-white">
+    <!-- Offline Indicator -->
+    <OfflineIndicator />
+    
     <!-- Header -->
     <AppHeader />
     
@@ -21,20 +24,33 @@ import { ref, onMounted } from 'vue'
 import AppHeader from './AppHeader.vue'
 import AppFooter from './AppFooter.vue'
 import PWAInstallPrompt from '@/components/common/PWAInstallPrompt.vue'
+import OfflineIndicator from '@/components/OfflineIndicator.vue'
+import { useDataLoader } from '@/composables/useDataLoader'
 
 // Props
 defineProps<{
   showFooterStats?: boolean
 }>()
 
+// 数据加载
+const { initializeApp, isReady, hasError, errorMessage } = useDataLoader()
+
 // PWA Install Prompt
 const showPWAPrompt = ref(false)
 
 // Check if should show PWA install prompt
-onMounted(() => {
+onMounted(async () => {
+  // 初始化应用数据
+  try {
+    await initializeApp()
+    console.log('📱 应用数据加载完成')
+  } catch (error) {
+    console.error('❌ 应用数据加载失败:', error)
+  }
+  
   // Show PWA prompt on first visit
   const hasShownPWA = localStorage.getItem('pwa-prompt-shown')
-  if (!hasShownPWA && 'serviceWorker' in navigator) {
+  if (!hasShownPWA && 'serviceWorker' in navigator && isReady.value) {
     setTimeout(() => {
       showPWAPrompt.value = true
     }, 3000) // Show after 3 seconds

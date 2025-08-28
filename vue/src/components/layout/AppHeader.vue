@@ -40,6 +40,20 @@
           >
             测试
           </RouterLink>
+          <RouterLink 
+            to="/analytics" 
+            class="neo-nav-item"
+            :class="{ active: $route.name === 'analytics' }"
+          >
+            分析
+          </RouterLink>
+          <RouterLink 
+            to="/achievements" 
+            class="neo-nav-item"
+            :class="{ active: $route.name === 'achievements' }"
+          >
+            成就
+          </RouterLink>
         </div>
         
         <!-- Mobile Menu Button -->
@@ -87,6 +101,22 @@
             @click="closeMobileMenu"
           >
             测试
+          </RouterLink>
+          <RouterLink 
+            to="/analytics" 
+            class="neo-nav-item block"
+            :class="{ active: $route.name === 'analytics' }"
+            @click="closeMobileMenu"
+          >
+            分析
+          </RouterLink>
+          <RouterLink 
+            to="/achievements" 
+            class="neo-nav-item block"
+            :class="{ active: $route.name === 'achievements' }"
+            @click="closeMobileMenu"
+          >
+            成就
           </RouterLink>
         </div>
       </div>
