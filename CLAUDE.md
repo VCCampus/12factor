@@ -174,3 +174,104 @@ Each principle contains concept, practices, and anti-patterns in both languages.
 - **"Invalid request source"**: Requests must come from allowed domains/paths
 - **"Rate limit exceeded"**: IP-based limiting active (10/min, 50/hour)
 - **Missing translations**: Course content requires bilingual support
+
+## Project State & Directory Structure
+
+### Current Project State
+- **Framework**: Next.js 15.4.6 with React 19.1.0
+- **Language**: TypeScript 5.9.2 with strict mode
+- **Styling**: Tailwind CSS 3.4.17 with dark mode support
+- **State Management**: Zustand 5.0.7
+- **Internationalization**: next-intl 4.3.4 (English/Chinese)
+- **Testing**: Playwright 1.55.0 (configured but no tests written)
+- **Build Status**: Clean, production-ready
+- **Git Status**: Clean working directory on main branch
+
+### Main Dependencies
+- **UI Components**: @headlessui/react 2.2.7, @heroicons/react 2.2.0, lucide-react
+- **Animation**: framer-motion 12.23.12
+- **LLM Integration**: openai 5.12.2
+- **Analytics**: @vercel/analytics 1.5.0
+- **Utilities**: clsx, tailwind-merge
+
+### Project Directory Structure
+```
+/opt/src/12factor/
+├── src/                    # Source code (Next.js app structure)
+│   ├── app/               # App router pages and API routes
+│   ├── components/        # React components
+│   ├── data/              # Static data and course content
+│   ├── hooks/             # Custom React hooks
+│   ├── i18n/              # Internationalization config
+│   ├── messages/          # Translation files (en/zh)
+│   ├── providers/         # Context providers
+│   ├── types/             # TypeScript definitions
+│   └── utils/             # Utility functions
+├── public/                # Static assets (icons, images)
+├── dist/                  # Production build output
+├── docs/                  # Documentation and planning
+│   ├── plans/            # Task analysis and planning documents
+│   ├── reports/          # Research reports and deliverables
+│   └── research/         # External reference materials
+├── scripts/              # Utility and helper scripts
+├── rdd/                  # Requirements Driven Development docs
+│   ├── 01-website-core/  # Core website requirements
+│   ├── 02-prompt-engineering/ # Prompt engineering specs
+│   └── prompt/           # Jupyter notebooks for tutorials
+└── vue/                  # Vue.js migration workspace (do not modify)
+
+## Development Guidelines & Rules
+
+### Script and Documentation Output Rules
+
+#### 1. Script Output Location
+All utility, testing, data processing, and temporary scripts must be output to:
+```
+/opt/src/12factor/scripts/
+```
+- Test scripts
+- Build helpers
+- Data migration tools
+- Temporary automation scripts
+- Maintenance utilities
+
+#### 2. Documentation Output Locations
+All planning, research, and discussion documents must be organized in:
+```
+/opt/src/12factor/docs/
+├── plans/       # Task analysis and implementation plans
+├── reports/     # Research outcomes, deliverables, findings
+└── research/    # External references and gathered materials
+```
+
+#### 3. Protected Directories
+The following directories are legacy/protected and MUST NOT be modified without explicit permission:
+- `/dist` - Build output (auto-generated)
+- `/docs` - Documentation (managed)
+- `/vue` - Vue migration workspace (protected)
+- `/scripts` - Utility scripts (managed)
+- All other existing project directories not mentioned above
+
+**Important**: If modifications to protected directories are necessary, always:
+1. Request explicit permission first
+2. Create new files rather than modifying existing ones
+3. Document the reason for changes
+
+### Code Modification Guidelines
+1. **Prefer editing over creating**: Always edit existing files rather than creating new ones
+2. **No unsolicited documentation**: Never create *.md or README files unless explicitly requested
+3. **Respect existing patterns**: Follow the codebase's established conventions
+4. **Bilingual support required**: All user-facing content must support both English and Chinese
+5. **Dark mode compliance**: All UI components must support dark mode with Tailwind's `dark:` prefix
+
+### Git Workflow
+- Main branch: `main`
+- Keep commits focused and atomic
+- Never commit without explicit user request
+- Run `npm run lint` before committing code changes
+
+### Testing Requirements
+- Run `npm run lint` after code changes
+- Verify TypeScript compilation with `npm run build`
+- Test both English and Chinese locales
+- Verify dark mode functionality

@@ -1,0 +1,22 @@
+{
+  "version": "4.0.0",
+  "generated_at": "2025-08-28T03:45:00Z",
+  "files": [
+    "w3sc8_principles-core.json",
+    "w3sc8_principles-3c.json",
+    "w3sc8_principles-marketing.json",
+    "w3sc8_principles-funding.json",
+    "w3sc8_principles-cases.json",
+    "w3sc8_quiz-data.json",
+    "w3sc8_suggestions.json"
+  ],
+  "total_size_kb": 165,
+  "modules": [
+    {
+      "id": "core-cognition",
+      "name": "创业核心认知",
+      "icon": "🧠",
+      "file": "w3sc8_principles-core.json"
+    }
+  ]
+}

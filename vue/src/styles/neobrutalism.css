@@ -1,0 +1,220 @@
+/* Neobrutalism Design System for CSS数创学习平台 */
+/* 基于决策：蓝色科技主色调 + 极简几何图标 + 高对比度设计 */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border-black;
+  }
+  
+  body {
+    @apply bg-white text-text-dark;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold leading-tight;
+  }
+}
+
+@layer components {
+  /* Neo-brutalism核心卡片样式 */
+  .neo-card {
+    @apply bg-white border-4 border-border-black relative;
+    box-shadow: 6px 6px 0px theme('colors.border-black');
+    border-radius: 0; /* 无圆角 */
+    transition: none; /* 无过渡动画 */
+  }
+  
+  .neo-card:hover {
+    @apply cursor-pointer;
+    box-shadow: 4px 4px 0px theme('colors.border-black');
+    transform: translate(2px, 2px);
+  }
+  
+  /* 问题卡片样式 - 浅蓝背景 */
+  .question-card {
+    @apply neo-card bg-question-bg border-primary-blue;
+    box-shadow: 6px 6px 0px theme('colors.primary-blue');
+  }
+  
+  .question-card:hover {
+    box-shadow: 4px 4px 0px theme('colors.primary-blue');
+  }
+  
+  /* 答案卡片样式 - 深蓝背景 */
+  .answer-card {
+    @apply neo-card bg-answer-bg text-white border-border-black;
+    box-shadow: 6px 6px 0px theme('colors.border-black');
+  }
+  
+  .answer-card:hover {
+    box-shadow: 4px 4px 0px theme('colors.border-black');
+  }
+  
+  /* 按钮样式 */
+  .neo-btn {
+    @apply neo-card px-6 py-3 font-bold text-center;
+    @apply bg-primary-blue text-white border-border-black;
+    box-shadow: 4px 4px 0px theme('colors.border-black');
+  }
+  
+  .neo-btn:hover {
+    @apply bg-primary-dark;
+    box-shadow: 2px 2px 0px theme('colors.border-black');
+    transform: translate(2px, 2px);
+  }
+  
+  .neo-btn:active {
+    box-shadow: 0px 0px 0px theme('colors.border-black');
+    transform: translate(4px, 4px);
+  }
+  
+  .neo-btn-secondary {
+    @apply neo-btn bg-white text-text-dark;
+  }
+  
+  .neo-btn-secondary:hover {
+    @apply bg-gray-100;
+  }
+  
+  /* 导航样式 */
+  .neo-nav {
+    @apply neo-card mb-0;
+    border-radius: 0;
+    border-bottom-width: 4px;
+  }
+  
+  .neo-nav-item {
+    @apply px-4 py-2 font-medium text-text-dark;
+    @apply border-r-4 border-border-black;
+    transition: none;
+  }
+  
+  .neo-nav-item:hover {
+    @apply bg-accent-light;
+  }
+  
+  .neo-nav-item.active {
+    @apply bg-primary-blue text-white;
+  }
+  
+  /* 进度条样式 */
+  .neo-progress {
+    @apply neo-card h-4 p-0 overflow-hidden;
+  }
+  
+  .neo-progress-bar {
+    @apply h-full bg-primary-blue;
+    transition: none;
+  }
+  
+  /* 图标容器样式 */
+  .neo-icon {
+    @apply w-8 h-8 flex items-center justify-center;
+    @apply bg-primary-blue text-white border-2 border-border-black;
+    font-size: 1.2rem;
+    line-height: 1;
+  }
+  
+  /* 闪卡特定样式 */
+  .flashcard {
+    @apply neo-card w-full max-w-md h-64;
+    @apply flex items-center justify-center text-center p-6;
+  }
+  
+  .flashcard.question {
+    @apply question-card;
+  }
+  
+  .flashcard.answer {
+    @apply answer-card;
+  }
+  
+  /* 测试题样式 */
+  .quiz-option {
+    @apply neo-card p-4 mb-3;
+    @apply bg-white hover:bg-accent-light;
+    cursor: pointer;
+  }
+  
+  .quiz-option.selected {
+    @apply bg-primary-blue text-white;
+  }
+  
+  .quiz-option:hover:not(.selected) {
+    @apply bg-accent-light;
+  }
+  
+  /* 结果展示样式 */
+  .result-card {
+    @apply neo-card p-6 text-center;
+    @apply bg-primary-blue text-white;
+  }
+  
+  .result-score {
+    @apply text-4xl font-bold mb-2;
+  }
+  
+  .result-level {
+    @apply text-xl font-medium;
+  }
+  
+  /* 响应式设计 */
+  @screen md {
+    .neo-card {
+      box-shadow: 8px 8px 0px theme('colors.border-black');
+    }
+    
+    .neo-card:hover {
+      box-shadow: 6px 6px 0px theme('colors.border-black');
+    }
+  }
+  
+  /* 暗色模式支持（可选） */
+  .dark .neo-card {
+    @apply bg-gray-900 border-white text-white;
+    box-shadow: 6px 6px 0px white;
+  }
+  
+  .dark .question-card {
+    @apply bg-blue-900;
+  }
+  
+  .dark .answer-card {
+    @apply bg-blue-800;
+  }
+}
+
+@layer utilities {
+  /* 无动画实用类 */
+  .no-animation * {
+    transition: none !important;
+    animation: none !important;
+  }
+  
+  /* 硬朗边框 */
+  .hard-border {
+    border-radius: 0 !important;
+  }
+  
+  /* 高对比度文本 */
+  .high-contrast {
+    @apply text-border-black;
+    text-shadow: none;
+  }
+}
+
+/* 全局样式重置 - 移除所有动画和圆角 */
+* {
+  border-radius: 0 !important;
+  transition: none !important;
+}
+
+/* 保留必要的悬停效果，但无动画 */
+button:hover, 
+.clickable:hover {
+  transform: translate(1px, 1px);
+}
