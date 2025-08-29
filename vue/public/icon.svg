@@ -1,0 +1,26 @@
+<svg width="192" height="192" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg">
+  <!-- 几何图形背景 -->
+  <rect width="192" height="192" fill="#2563eb" rx="24"/>
+  
+  <!-- 主要图形 - 简化的3C概念 -->
+  <g transform="translate(48, 48)">
+    <!-- C1 -->
+    <rect x="0" y="0" width="28" height="28" fill="white" rx="4"/>
+    <text x="14" y="20" text-anchor="middle" fill="#2563eb" font-family="Arial, sans-serif" font-size="16" font-weight="bold">C</text>
+    
+    <!-- C2 -->
+    <rect x="36" y="0" width="28" height="28" fill="white" rx="4"/>
+    <text x="50" y="20" text-anchor="middle" fill="#2563eb" font-family="Arial, sans-serif" font-size="16" font-weight="bold">S</text>
+    
+    <!-- C3 -->
+    <rect x="72" y="0" width="28" height="28" fill="white" rx="4"/>
+    <text x="86" y="20" text-anchor="middle" fill="#2563eb" font-family="Arial, sans-serif" font-size="16" font-weight="bold">S</text>
+    
+    <!-- 连接线 -->
+    <line x1="28" y1="14" x2="36" y2="14" stroke="white" stroke-width="2"/>
+    <line x1="64" y1="14" x2="72" y2="14" stroke="white" stroke-width="2"/>
+    
+    <!-- 底部文字 -->
+    <text x="50" y="48" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">学习</text>
+  </g>
+</svg>

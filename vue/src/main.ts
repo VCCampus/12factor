@@ -6,6 +6,7 @@ import router from './router'
 
 // Import styles
 import './styles/neobrutalism.css'
+import './styles/responsive.css'
 
 const app = createApp(App)
 

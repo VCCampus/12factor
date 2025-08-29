@@ -1,0 +1,80 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e4]:
+  - banner [ref=e5]:
+    - navigation [ref=e7]:
+      - generic [ref=e8]:
+        - generic [ref=e9]: 📚
+        - heading "3C数创学习平台" [level=1] [ref=e10]
+      - generic [ref=e11]:
+        - link "首页" [ref=e12] [cursor=pointer]:
+          - /url: /
+        - link "原则" [ref=e13] [cursor=pointer]:
+          - /url: /principles
+        - link "闪卡" [ref=e14] [cursor=pointer]:
+          - /url: /flashcards
+        - link "测试" [ref=e15] [cursor=pointer]:
+          - /url: /quiz
+        - link "分析" [ref=e16] [cursor=pointer]:
+          - /url: /analytics
+        - link "成就" [ref=e17] [cursor=pointer]:
+          - /url: /achievements
+        - link "导出" [ref=e18] [cursor=pointer]:
+          - /url: /export
+  - main [ref=e19]:
+    - generic [ref=e21]:
+      - generic [ref=e22]:
+        - heading "知识测试" [level=1] [ref=e23]
+        - paragraph [ref=e24]: 检验学习成果，巩固知识理解
+      - generic [ref=e25]:
+        - heading "选择测试模式" [level=3] [ref=e26]
+        - generic [ref=e27]:
+          - generic [ref=e28] [cursor=pointer]:
+            - generic [ref=e29] [cursor=pointer]: 🎨
+            - heading "练习模式" [level=4] [ref=e30] [cursor=pointer]
+            - paragraph [ref=e31] [cursor=pointer]: 无时间限制，可查看解释
+            - generic [ref=e32] [cursor=pointer]:
+              - generic [ref=e33] [cursor=pointer]: ✅ 即时反馈
+              - generic [ref=e34] [cursor=pointer]: ✅ 详细解释
+          - generic [ref=e35] [cursor=pointer]:
+            - generic [ref=e36] [cursor=pointer]: 🏆
+            - heading "考试模式" [level=4] [ref=e37] [cursor=pointer]
+            - paragraph [ref=e38] [cursor=pointer]: 有时间限制，模拟真实考试
+            - generic [ref=e39] [cursor=pointer]:
+              - generic [ref=e40] [cursor=pointer]: ⏰ 15分钟限时
+              - generic [ref=e41] [cursor=pointer]: ✅ 成绩记录
+          - generic [ref=e42] [cursor=pointer]:
+            - generic [ref=e43] [cursor=pointer]: 📚
+            - heading "复习模式" [level=4] [ref=e44] [cursor=pointer]
+            - paragraph [ref=e45] [cursor=pointer]: 针对性复习错题和难点
+            - generic [ref=e46] [cursor=pointer]:
+              - generic [ref=e47] [cursor=pointer]: 🎯 精准复习
+              - generic [ref=e48] [cursor=pointer]: ✅ 个性化
+      - generic [ref=e49]:
+        - heading "最近记录" [level=4] [ref=e50]
+        - generic [ref=e51]:
+          - generic [ref=e52]:
+            - generic [ref=e53]:
+              - generic [ref=e54]: 练习模式
+              - generic [ref=e55]: 昨天
+            - generic [ref=e56]: 85分
+          - generic [ref=e57]:
+            - generic [ref=e58]:
+              - generic [ref=e59]: 考试模式
+              - generic [ref=e60]: 2天前
+            - generic [ref=e61]: 72分
+          - generic [ref=e62]:
+            - generic [ref=e63]:
+              - generic [ref=e64]: 复习模式
+              - generic [ref=e65]: 3天前
+            - generic [ref=e66]: 91分
+  - contentinfo [ref=e67]:
+    - generic [ref=e69]:
+      - generic [ref=e70]:
+        - paragraph [ref=e71]: © 2024 CSS数创学习平台
+        - paragraph [ref=e72]: 基于CSS数创班8期知识体系
+      - generic [ref=e73]:
+        - paragraph [ref=e74]: 版本 v4.0.0 | Vue 3 + Vite
+        - paragraph [ref=e75]: 🚀 PWA离线支持
+```

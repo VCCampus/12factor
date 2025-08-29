@@ -1,0 +1,88 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e4]:
+  - banner [ref=e5]:
+    - navigation [ref=e7]:
+      - generic [ref=e8]:
+        - generic [ref=e9]: 📚
+        - heading "3C数创学习平台" [level=1] [ref=e10]
+      - generic [ref=e11]:
+        - link "首页" [ref=e12] [cursor=pointer]:
+          - /url: /
+        - link "原则" [ref=e13] [cursor=pointer]:
+          - /url: /principles
+        - link "闪卡" [ref=e14] [cursor=pointer]:
+          - /url: /flashcards
+        - link "测试" [ref=e15] [cursor=pointer]:
+          - /url: /quiz
+        - link "分析" [ref=e16] [cursor=pointer]:
+          - /url: /analytics
+        - link "成就" [ref=e17] [cursor=pointer]:
+          - /url: /achievements
+        - link "导出" [ref=e18] [cursor=pointer]:
+          - /url: /export
+  - main [ref=e19]:
+    - generic [ref=e20]:
+      - generic [ref=e21]:
+        - generic [ref=e22]:
+          - heading "闪卡练习" [level=1] [ref=e23]
+          - paragraph [ref=e24]: 通过间隔重复算法，高效掌握核心概念
+        - generic [ref=e26]:
+          - button "📚 复习模式" [ref=e27] [cursor=pointer]
+          - button "🎯 学习模式" [ref=e28] [cursor=pointer]
+          - button "🏆 挑战模式" [ref=e29] [cursor=pointer]
+        - generic [ref=e31]:
+          - generic [ref=e32]:
+            - generic [ref=e33]: "5"
+            - generic [ref=e34]: 待学习卡片
+          - generic [ref=e35]:
+            - generic [ref=e36]: "0"
+            - generic [ref=e37]: 本次完成
+          - generic [ref=e38]:
+            - generic [ref=e39]: 0%
+            - generic [ref=e40]: 平均得分
+      - generic [ref=e42]:
+        - generic [ref=e43] [cursor=pointer]:
+          - generic [ref=e44] [cursor=pointer]:
+            - generic [ref=e45] [cursor=pointer]:
+              - generic [ref=e46] [cursor=pointer]:
+                - generic [ref=e47] [cursor=pointer]: core-cognition
+                - generic [ref=e48] [cursor=pointer]: 数字创业定义
+              - generic [ref=e49] [cursor=pointer]: 1 / 5
+            - generic [ref=e50] [cursor=pointer]:
+              - generic [ref=e51] [cursor=pointer]: ❓
+              - heading "数字创业的本质是什么？" [level=3] [ref=e52] [cursor=pointer]
+              - paragraph [ref=e53] [cursor=pointer]: 点击查看答案
+          - generic [ref=e57] [cursor=pointer]:
+            - generic [ref=e58] [cursor=pointer]:
+              - generic [ref=e59] [cursor=pointer]:
+                - generic [ref=e60] [cursor=pointer]: core-cognition
+                - generic [ref=e61] [cursor=pointer]: 数字创业定义
+              - generic [ref=e62] [cursor=pointer]: 1 / 5
+            - generic [ref=e63] [cursor=pointer]:
+              - generic [ref=e64] [cursor=pointer]: 💡
+              - heading "和喜欢的人一起做有价值的事。广义是运用数字化技术创业（数字化转型），狭义是打造3C数字产品的创业（超级个体）。" [level=3] [ref=e65] [cursor=pointer]
+        - generic [ref=e69]:
+          - generic [ref=e70]:
+            - generic [ref=e71]: "2"
+            - generic [ref=e72]: 已复习
+          - generic [ref=e73]:
+            - generic [ref=e74]: 80%
+            - generic [ref=e75]: 掌握度
+          - generic [ref=e76]:
+            - generic [ref=e77]: 2天后
+            - generic [ref=e78]: 下次复习
+        - generic [ref=e79]:
+          - button "⬅️ 上一张" [disabled] [ref=e80]
+          - button "🔄 重置" [ref=e81] [cursor=pointer]
+          - button "下一张 ➡️" [ref=e82] [cursor=pointer]
+  - contentinfo [ref=e83]:
+    - generic [ref=e85]:
+      - generic [ref=e86]:
+        - paragraph [ref=e87]: © 2024 CSS数创学习平台
+        - paragraph [ref=e88]: 基于CSS数创班8期知识体系
+      - generic [ref=e89]:
+        - paragraph [ref=e90]: 版本 v4.0.0 | Vue 3 + Vite
+        - paragraph [ref=e91]: 🚀 PWA离线支持
+```

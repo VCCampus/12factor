@@ -54,6 +54,20 @@
           >
             成就
           </RouterLink>
+          <RouterLink 
+            to="/export" 
+            class="neo-nav-item"
+            :class="{ active: $route.name === 'export' }"
+          >
+            导出
+          </RouterLink>
+          <RouterLink 
+            to="/thermometer" 
+            class="neo-nav-item"
+            :class="{ active: $route.name === 'thermometer' }"
+          >
+            温度计
+          </RouterLink>
         </div>
         
         <!-- Mobile Menu Button -->
@@ -117,6 +131,22 @@
             @click="closeMobileMenu"
           >
             成就
+          </RouterLink>
+          <RouterLink 
+            to="/export" 
+            class="neo-nav-item block"
+            :class="{ active: $route.name === 'export' }"
+            @click="closeMobileMenu"
+          >
+            导出
+          </RouterLink>
+          <RouterLink 
+            to="/thermometer" 
+            class="neo-nav-item block"
+            :class="{ active: $route.name === 'thermometer' }"
+            @click="closeMobileMenu"
+          >
+            温度计
           </RouterLink>
         </div>
       </div>

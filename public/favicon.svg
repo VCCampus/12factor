@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <!-- Black rounded square background -->
-  <rect width="32" height="32" rx="6" fill="#1c1917"/>
-  <!-- White circle border inside -->
-  <circle cx="16" cy="16" r="6" fill="none" stroke="#ffffff" stroke-width="2"/>
-</svg>

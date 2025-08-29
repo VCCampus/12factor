@@ -33,6 +33,16 @@ const router = createRouter({
       path: '/achievements',
       name: 'achievements', 
       component: () => import('@/views/GamificationView.vue')
+    },
+    {
+      path: '/export',
+      name: 'export',
+      component: () => import('@/views/ExportView.vue')
+    },
+    {
+      path: '/thermometer',
+      name: 'thermometer',
+      component: () => import('@/views/ThermometerView.vue')
     }
   ]
 })

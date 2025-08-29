@@ -1,0 +1,105 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e4]:
+  - banner [ref=e5]:
+    - navigation [ref=e7]:
+      - generic [ref=e8]:
+        - generic [ref=e9]: 📚
+        - heading "3C数创学习平台" [level=1] [ref=e10]
+      - generic [ref=e11]:
+        - link "首页" [ref=e12] [cursor=pointer]:
+          - /url: /
+        - link "原则" [ref=e13] [cursor=pointer]:
+          - /url: /principles
+        - link "闪卡" [ref=e14] [cursor=pointer]:
+          - /url: /flashcards
+        - link "测试" [ref=e15] [cursor=pointer]:
+          - /url: /quiz
+        - link "分析" [ref=e16] [cursor=pointer]:
+          - /url: /analytics
+        - link "成就" [ref=e17] [cursor=pointer]:
+          - /url: /achievements
+        - link "导出" [ref=e18] [cursor=pointer]:
+          - /url: /export
+  - main [ref=e19]:
+    - generic [ref=e21]:
+      - generic [ref=e23]: 🎯
+      - heading "掌握3C数字资产思维" [level=1] [ref=e24]
+      - paragraph [ref=e25]: 学习CSS数字创业核心知识体系，培养面向AI与Web3时代的创业思维模式
+      - generic [ref=e26]:
+        - link "开始学习" [ref=e27] [cursor=pointer]:
+          - /url: /principles
+        - link "立即测试" [ref=e28] [cursor=pointer]:
+          - /url: /quiz
+    - generic [ref=e29]:
+      - generic [ref=e30]:
+        - heading "学习路径" [level=2] [ref=e31]
+        - paragraph [ref=e32]: 系统性掌握数字创业全流程知识
+      - generic [ref=e33]:
+        - generic [ref=e34]:
+          - generic [ref=e35]: 🧠
+          - heading "创业核心认知" [level=3] [ref=e36]
+          - list [ref=e37]:
+            - listitem [ref=e38]: • 数字创业定义
+            - listitem [ref=e39]: • 百森创业七法
+            - listitem [ref=e40]: • 主体思维模式
+            - listitem [ref=e41]: • 效果逻辑原则
+            - listitem [ref=e42]: • 精益创业流程
+          - paragraph [ref=e45]: 0/5 已完成
+        - generic [ref=e46]:
+          - generic [ref=e47]: 💎
+          - heading "3C数字资产" [level=3] [ref=e48]
+          - list [ref=e49]:
+            - listitem [ref=e50]: • Content内容资产
+            - listitem [ref=e51]: • Code软件代码
+            - listitem [ref=e52]: • Crypto加密货币
+            - listitem [ref=e53]: • AI大模型应用
+            - listitem [ref=e54]: • 比特币基础知识
+          - paragraph [ref=e57]: 0/5 已完成
+        - generic [ref=e58]:
+          - generic [ref=e59]: 🎯
+          - heading "精准营销实战" [level=3] [ref=e60]
+          - list [ref=e61]:
+            - listitem [ref=e62]: • 商业模式画布
+            - listitem [ref=e63]: • PMF验证方法
+            - listitem [ref=e64]: • STP营销策略
+            - listitem [ref=e65]: • 内容营销法则
+            - listitem [ref=e66]: • 千粉理论实践
+          - paragraph [ref=e69]: 0/5 已完成
+        - generic [ref=e70]:
+          - generic [ref=e71]: 💰
+          - heading "融资致胜法则" [level=3] [ref=e72]
+          - list [ref=e73]:
+            - listitem [ref=e74]: • 风险投资本质
+            - listitem [ref=e75]: • 融资阶段管理
+            - listitem [ref=e76]: • 路演演讲技巧
+            - listitem [ref=e77]: • 财务基础知识
+          - paragraph [ref=e80]: 0/4 已完成
+    - generic [ref=e82]:
+      - heading "快速开始" [level=2] [ref=e83]
+      - generic [ref=e84]:
+        - link "📖 学习概念 系统学习21个核心概念" [ref=e85] [cursor=pointer]:
+          - /url: /principles
+          - generic [ref=e86] [cursor=pointer]: 📖
+          - generic [ref=e87] [cursor=pointer]: 学习概念
+          - generic [ref=e88] [cursor=pointer]: 系统学习21个核心概念
+        - link "🃏 练习闪卡 通过闪卡快速记忆" [ref=e89] [cursor=pointer]:
+          - /url: /flashcards
+          - generic [ref=e90] [cursor=pointer]: 🃏
+          - generic [ref=e91] [cursor=pointer]: 练习闪卡
+          - generic [ref=e92] [cursor=pointer]: 通过闪卡快速记忆
+        - link "✅ 知识测试 检验学习成果" [ref=e93] [cursor=pointer]:
+          - /url: /quiz
+          - generic [ref=e94] [cursor=pointer]: ✅
+          - generic [ref=e95] [cursor=pointer]: 知识测试
+          - generic [ref=e96] [cursor=pointer]: 检验学习成果
+  - contentinfo [ref=e97]:
+    - generic [ref=e99]:
+      - generic [ref=e100]:
+        - paragraph [ref=e101]: © 2024 CSS数创学习平台
+        - paragraph [ref=e102]: 基于CSS数创班8期知识体系
+      - generic [ref=e103]:
+        - paragraph [ref=e104]: 版本 v4.0.0 | Vue 3 + Vite
+        - paragraph [ref=e105]: 🚀 PWA离线支持
+```

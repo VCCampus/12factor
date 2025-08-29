@@ -1,0 +1,224 @@
+/* 响应式设计优化 - Phase 5 */
+
+/* 桌面端优先 (1024px+) */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+  }
+  
+  /* 大屏幕网格优化 */
+  .grid-responsive {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  /* 导航栏优化 */
+  .neo-nav {
+    padding: 0 2rem;
+  }
+  
+  /* 卡片布局 */
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* 分析图表 */
+  .chart-container {
+    height: 400px;
+  }
+}
+
+/* 平板端布局 (768px-1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    max-width: 100%;
+    padding: 0 1.5rem;
+  }
+  
+  /* 平板网格 */
+  .grid-responsive {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  /* 卡片布局 */
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* 分析图表 */
+  .chart-container {
+    height: 350px;
+  }
+  
+  /* 按钮组 */
+  .btn-group-responsive {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
+
+/* 移动端体验优化 (<768px) */
+@media (max-width: 767px) {
+  /* 容器优化 */
+  .container {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+  
+  /* 单列布局 */
+  .grid-responsive {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  /* 卡片全宽 */
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* 分析图表 */
+  .chart-container {
+    height: 300px;
+  }
+  
+  /* 闪卡优化 */
+  .flashcard-container {
+    max-width: 100%;
+    height: 400px;
+  }
+  
+  /* 测试题目 */
+  .quiz-question {
+    font-size: 1.125rem;
+  }
+  
+  /* 按钮堆叠 */
+  .btn-group-responsive {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .btn-group-responsive button {
+    width: 100%;
+  }
+  
+  /* 导出组件优化 */
+  .data-exporter .neo-card {
+    padding: 1rem;
+  }
+  
+  /* 成就卡片 */
+  .achievement-card {
+    padding: 0.75rem;
+  }
+  
+  /* 统计数字 */
+  .stat-number {
+    font-size: 1.5rem;
+  }
+  
+  /* 底部导航固定 */
+  .mobile-bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    border-top: 2px solid black;
+    padding: 0.5rem;
+    z-index: 50;
+  }
+}
+
+/* 超小屏幕优化 (<480px) */
+@media (max-width: 480px) {
+  /* 文字大小调整 */
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.25rem; }
+  h3 { font-size: 1.125rem; }
+  
+  /* 按钮尺寸 */
+  .neo-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+  
+  /* 闪卡更小 */
+  .flashcard-container {
+    height: 350px;
+  }
+  
+  /* 导航项紧凑 */
+  .neo-nav-item {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+  }
+  
+  /* 统计卡片 */
+  .stat-card {
+    padding: 0.75rem;
+  }
+}
+
+/* 打印样式优化 */
+@media print {
+  /* 隐藏不必要元素 */
+  .neo-nav, .mobile-bottom-nav, .btn-group-responsive {
+    display: none;
+  }
+  
+  /* 优化打印布局 */
+  .container {
+    max-width: 100%;
+  }
+  
+  /* 去除背景色 */
+  .neo-card {
+    background: white;
+    border: 1px solid #ccc;
+  }
+  
+  /* 分页控制 */
+  .page-break {
+    page-break-after: always;
+  }
+}
+
+/* 动画性能优化 */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 暗黑模式支持（预留） */
+@media (prefers-color-scheme: dark) {
+  /* 未来可扩展暗黑模式 */
+}
+
+/* 高DPI屏幕优化 */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* 边框优化 */
+  .neo-card {
+    border-width: 0.5px;
+    transform: translateZ(0);
+  }
+}
+
+/* 横屏模式优化 */
+@media (orientation: landscape) and (max-height: 500px) {
+  /* 减小顶部高度 */
+  .neo-nav {
+    padding: 0.25rem 1rem;
+  }
+  
+  /* 紧凑布局 */
+  .container {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
