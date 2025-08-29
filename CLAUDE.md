@@ -177,23 +177,35 @@ Each principle contains concept, practices, and anti-patterns in both languages.
 
 ## Project State & Directory Structure
 
-### Current Project State
-- **Framework**: Next.js 15.4.6 with React 19.1.0
+### Current Project State (2025-08-29)
+- **Framework**: Next.js 15.4.6 with React 19.1.0 (Legacy, Read-only)
+- **Primary Platform**: Vue.js 3.4.0 (CSS Digital Entrepreneurship) 
 - **Language**: TypeScript 5.9.2 with strict mode
 - **Styling**: Tailwind CSS 3.4.17 with dark mode support
-- **State Management**: Zustand 5.0.7
+- **State Management**: Zustand 5.0.7 (Next.js), Pinia (Vue)
 - **Internationalization**: next-intl 4.3.4 (English/Chinese)
-- **Testing**: Playwright 1.55.0 (configured but no tests written)
+- **Testing**: Playwright 1.55.0 (e2e tests configured for Vue)
 - **Build Status**: Clean, production-ready
 - **Git Status**: Clean working directory on main branch
 - **Development Phase**: Phase 5 completed (August 2025)
-- **Dual Platform**: Next.js (primary) + Vue.js 3.4.0 (parallel CSS Digital Entrepreneurship)
-- **Content Volume**: 1,092 lines course content, 2,681 lines translations
-- **Course Modules**: 2 prompt engineering courses (Fundamentals, Intermediate)
+- **Active Development**: Vue project only (/vue directory)
+- **Content Source**: TOML configuration (web3scv8_v4.toml)
+- **Content Volume**: 1,036 lines TOML config, 28 Vue components
+- **Build System**: Custom TOML → JSON → Vue build pipeline
 - **PWA Features**: Service worker, manifest, offline capabilities (Vue version)
 
 ### Main Dependencies
-- **UI Components**: @headlessui/react 2.2.7, @heroicons/react 2.2.0, lucide-react
+
+#### Vue Project (Primary)
+- **Framework**: Vue 3.4.0, Vue Router 4.0.13
+- **Build Tool**: Vite 4.0.0
+- **State Management**: Pinia 2.0.32
+- **UI Components**: @headlessui/vue, lucide-vue-next
+- **Testing**: Playwright 1.55.0, @vue/test-utils 2.4.6
+- **PWA**: vite-plugin-pwa 0.16.4
+
+#### Next.js Project (Legacy, Read-only)
+- **UI Components**: @headlessui/react 2.2.7, @heroicons/react 2.2.0
 - **Animation**: framer-motion 12.23.12
 - **LLM Integration**: openai 5.12.2
 - **Analytics**: @vercel/analytics 1.5.0
@@ -202,28 +214,32 @@ Each principle contains concept, practices, and anti-patterns in both languages.
 ### Project Directory Structure
 ```
 /opt/src/12factor/
-├── src/                    # Source code (Next.js app structure)
-│   ├── app/               # App router pages and API routes
-│   ├── components/        # React components
-│   ├── data/              # Static data and course content
-│   ├── hooks/             # Custom React hooks
-│   ├── i18n/              # Internationalization config
-│   ├── messages/          # Translation files (en/zh)
-│   ├── providers/         # Context providers
-│   ├── types/             # TypeScript definitions
-│   └── utils/             # Utility functions
-├── public/                # Static assets (icons, images)
-├── dist/                  # Production build output
+├── vue/                   # PRIMARY DEVELOPMENT - CSS Digital Entrepreneurship
+│   ├── src/              # Vue source code
+│   │   ├── components/   # Vue components
+│   │   ├── router/       # Vue Router configuration
+│   │   ├── stores/       # Pinia state stores
+│   │   ├── views/        # Page components
+│   │   └── utils/        # Utility functions
+│   ├── public/           # Static assets and JSON data
+│   │   └── w3sc8_*.json  # Generated JSON from TOML
+│   ├── tests/            # Playwright e2e tests
+│   └── package.json      # Vue project config
+├── dist/                  # Production build output (from Vue)
 ├── docs/                  # Documentation and planning
-│   ├── plans/            # Task analysis and planning documents
+│   ├── plans/            # Task analysis and planning
+│   │   └── web3scv8_v4.toml # Main TOML configuration
 │   ├── reports/          # Research reports and deliverables
 │   └── research/         # External reference materials
-├── scripts/              # Utility and helper scripts
-├── rdd/                  # Requirements Driven Development docs
-│   ├── 01-website-core/  # Core website requirements
-│   ├── 02-prompt-engineering/ # Prompt engineering specs
-│   └── prompt/           # Jupyter notebooks for tutorials
-└── vue/                  # Vue.js CSS Digital Entrepreneurship project (PRIMARY development workspace)
+├── scripts/              # Build and utility scripts (cleaned)
+│   ├── build.sh          # Main build script
+│   ├── toml-to-json.js   # TOML to JSON converter
+│   ├── validate-config.js # TOML validator
+│   └── generate-changelog.js # Change tracker
+├── logs/                 # Build and test logs
+├── src/                  # LEGACY Next.js (read-only, do not modify)
+├── public/               # LEGACY static assets
+└── rdd/                  # Requirements Driven Development docs
 
 ## Development Guidelines & Rules
 
