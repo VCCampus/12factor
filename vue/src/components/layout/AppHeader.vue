@@ -20,6 +20,13 @@
             首页
           </RouterLink>
           <RouterLink 
+            to="/thermometer" 
+            class="neo-nav-item"
+            :class="{ active: $route.name === 'thermometer' }"
+          >
+            温度计
+          </RouterLink>
+          <RouterLink 
             to="/principles" 
             class="neo-nav-item"
             :class="{ active: $route.name === 'principles' }"
@@ -41,6 +48,13 @@
             测试
           </RouterLink>
           <RouterLink 
+            to="/mock-interview" 
+            class="neo-nav-item"
+            :class="{ active: $route.path.includes('mock-interview') }"
+          >
+            模拟面试
+          </RouterLink>
+          <RouterLink 
             to="/analytics" 
             class="neo-nav-item"
             :class="{ active: $route.name === 'analytics' }"
@@ -60,13 +74,6 @@
             :class="{ active: $route.name === 'export' }"
           >
             导出
-          </RouterLink>
-          <RouterLink 
-            to="/thermometer" 
-            class="neo-nav-item"
-            :class="{ active: $route.name === 'thermometer' }"
-          >
-            温度计
           </RouterLink>
         </div>
         
@@ -93,6 +100,14 @@
             首页
           </RouterLink>
           <RouterLink 
+            to="/thermometer" 
+            class="neo-nav-item block"
+            :class="{ active: $route.name === 'thermometer' }"
+            @click="closeMobileMenu"
+          >
+            温度计
+          </RouterLink>
+          <RouterLink 
             to="/principles" 
             class="neo-nav-item block"
             :class="{ active: $route.name === 'principles' }"
@@ -117,6 +132,14 @@
             测试
           </RouterLink>
           <RouterLink 
+            to="/mock-interview" 
+            class="neo-nav-item block"
+            :class="{ active: $route.path.includes('mock-interview') }"
+            @click="closeMobileMenu"
+          >
+            模拟面试
+          </RouterLink>
+          <RouterLink 
             to="/analytics" 
             class="neo-nav-item block"
             :class="{ active: $route.name === 'analytics' }"
@@ -139,14 +162,6 @@
             @click="closeMobileMenu"
           >
             导出
-          </RouterLink>
-          <RouterLink 
-            to="/thermometer" 
-            class="neo-nav-item block"
-            :class="{ active: $route.name === 'thermometer' }"
-            @click="closeMobileMenu"
-          >
-            温度计
           </RouterLink>
         </div>
       </div>

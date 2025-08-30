@@ -153,7 +153,36 @@
           </div>
         </div>
 
-        <div class="difficulty-analysis">
+        <!-- 面试模式：分类能力分析 -->
+        <div v-if="mode === 'interview'" class="category-analysis">
+          <h4 class="analysis-title">📊 分类能力分析</h4>
+          <div class="category-stats">
+            <div 
+              v-for="category in categoryStats" 
+              :key="category.category"
+              class="category-item"
+            >
+              <div class="category-header">
+                <span class="category-label">{{ category.name }}</span>
+                <span class="category-percent">{{ category.percentage }}%</span>
+              </div>
+              <div class="category-bar">
+                <div 
+                  class="category-fill" 
+                  :class="getCategoryColorClass(category.percentage)"
+                  :style="{ width: `${category.percentage}%` }"
+                ></div>
+              </div>
+              <div class="category-details">
+                <span class="detail-item">正确: {{ category.correct }}/{{ category.total }}</span>
+                <span class="detail-item">平均: {{ category.averageTime }}秒/题</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 传统模式：难度分析 -->
+        <div v-else class="difficulty-analysis">
           <h4 class="analysis-title">难度分析</h4>
           <div class="difficulty-stats">
             <div class="difficulty-item">
@@ -257,11 +286,12 @@ import type { QuizQuestion, QuizAnswer } from '@/stores/quiz'
 
 interface Props {
   questions: QuizQuestion[]
-  mode: 'practice' | 'exam' | 'review'
+  mode: 'practice' | 'exam' | 'review' | 'interview'
   timeLimit?: number // 秒数，0表示无限制
   passingScore?: number // 及格分数
   randomizeQuestions?: boolean
   randomizeOptions?: boolean
+  jobInfo?: any // 面试相关信息
 }
 
 interface Emits {
@@ -282,7 +312,8 @@ const props = withDefaults(defineProps<Props>(), {
   timeLimit: 0,
   passingScore: 60,
   randomizeQuestions: false,
-  randomizeOptions: true
+  randomizeOptions: true,
+  jobInfo: () => ({})
 })
 
 const emit = defineEmits<Emits>()
@@ -476,6 +507,80 @@ function getDifficultyAccuracy(difficulty: string): number {
   })
   
   return (correctAnswers.length / difficultyQuestions.length) * 100
+}
+
+// 面试模式：获取分类统计
+function getCategoryAccuracy(category: string): number {
+  if (props.mode !== 'interview') return 0
+  
+  const categoryQuestions = props.questions.filter(q => (q as any).category === category)
+  if (categoryQuestions.length === 0) return 0
+  
+  const correctAnswers = answers.value.filter(a => {
+    const question = props.questions.find(q => q.id === a.questionId)
+    return (question as any)?.category === category && a.isCorrect
+  })
+  
+  return (correctAnswers.length / categoryQuestions.length) * 100
+}
+
+// 面试模式：获取分类统计详情
+const categoryStats = computed(() => {
+  if (props.mode !== 'interview') return []
+  
+  const categories = new Map()
+  
+  props.questions.forEach(question => {
+    const category = (question as any).category || 'general'
+    if (!categories.has(category)) {
+      categories.set(category, {
+        name: getCategoryName(category),
+        correct: 0,
+        total: 0,
+        totalTime: 0
+      })
+    }
+    categories.get(category).total++
+  })
+  
+  answers.value.forEach(answer => {
+    const question = props.questions.find(q => q.id === answer.questionId)
+    if (question) {
+      const category = (question as any).category || 'general'
+      const stats = categories.get(category)
+      if (stats) {
+        stats.totalTime += answer.timeSpent
+        if (answer.isCorrect) {
+          stats.correct++
+        }
+      }
+    }
+  })
+  
+  return Array.from(categories.entries()).map(([category, stats]) => ({
+    category,
+    name: stats.name,
+    correct: stats.correct,
+    total: stats.total,
+    percentage: stats.total > 0 ? Math.round((stats.correct / stats.total) * 100) : 0,
+    averageTime: stats.total > 0 ? Math.round(stats.totalTime / stats.total) : 0
+  }))
+})
+
+function getCategoryName(category: string): string {
+  const names = {
+    general: '通用素质',
+    research: '深度研究',
+    practical: '新闻实战'
+  }
+  return names[category as keyof typeof names] || category
+}
+
+function getCategoryColorClass(percentage: number): string {
+  if (percentage >= 80) return 'excellent'
+  if (percentage >= 60) return 'good' 
+  if (percentage >= 40) return 'fair'
+  return 'poor'
 }
 
 function getUserAnswer(questionId: string): QuizAnswer | undefined {
@@ -1031,6 +1136,101 @@ watch(() => props.timeLimit, (newLimit) => {
   .difficulty-label {
     width: auto;
     text-align: center;
+  }
+}
+
+/* 面试模式专用样式 */
+.category-analysis {
+  margin: 32px 0;
+  text-align: left;
+}
+
+.category-stats {
+  space-y: 16px;
+}
+
+.category-item {
+  margin-bottom: 16px;
+  padding: 16px;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.category-label {
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 16px;
+}
+
+.category-percent {
+  font-weight: 700;
+  font-size: 18px;
+  color: #1e293b;
+}
+
+.category-bar {
+  height: 12px;
+  background: #e2e8f0;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.category-fill {
+  height: 100%;
+  transition: width 0.5s ease;
+  border-radius: 6px;
+}
+
+.category-fill.excellent {
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+}
+
+.category-fill.good {
+  background: linear-gradient(90deg, #3b82f6, #2563eb);
+}
+
+.category-fill.fair {
+  background: linear-gradient(90deg, #f59e0b, #d97706);
+}
+
+.category-fill.poor {
+  background: linear-gradient(90deg, #ef4444, #dc2626);
+}
+
+.category-details {
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.detail-item {
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .category-item {
+    padding: 12px;
+  }
+  
+  .category-header {
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+  }
+  
+  .category-details {
+    flex-direction: column;
+    gap: 4px;
   }
 }
 </style>

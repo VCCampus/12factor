@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "title": "ChainCatcher 模拟面试问卷集",
+    "description": "区块链记者岗位模拟面试系统",
+    "version": "1.0.0",
+    "generatedAt": "2025-08-29T08:37:52.840Z"
+  },
+  "jobInfo": {
+    "company": "ChainCatcher",
+    "position": "区块链记者",
+    "location": "深圳",
+    "salary": "2500-3600/月",
+    "type": "记者·内容",
+    "description": "专业的区块链研究与资讯平台",
+    "requirements": [
+      "热爱写作，对 Crypto 行业有强烈求知欲",
+      "阅读过 100+ 篇商业科技、财经媒体优质文章",
+      "具备成熟的文字写作功底和逻辑清晰表达能力",
+      "有强烈责任心和良好团队协作意识"
+    ]
+  },
+  "questionnaires": [
+    {
+      "id": "basic",
+      "file": "interview-basic.json",
+      "title": "通用素质测评",
+      "description": "测评基础的文字表达和行业理解能力",
+      "difficulty": "basic",
+      "category": "general",
+      "timeLimit": 60,
+      "icon": "📝",
+      "estimatedQuestions": 100
+    },
+    {
+      "id": "advanced",
+      "file": "interview-advanced.json",
+      "title": "深度研究能力",
+      "description": "考察深度分析和研究能力",
+      "difficulty": "advanced",
+      "category": "research",
+      "timeLimit": 90,
+      "icon": "🔍",
+      "estimatedQuestions": 100
+    },
+    {
+      "id": "expert",
+      "file": "interview-expert.json",
+      "title": "新闻实战技能",
+      "description": "实战新闻写作和策划能力",
+      "difficulty": "expert",
+      "category": "practical",
+      "timeLimit": 120,
+      "icon": "⚡",
+      "estimatedQuestions": 100
+    }
+  ],
+  "categories": {
+    "general": "通用素质",
+    "research": "深度研究",
+    "practical": "新闻实战"
+  }
+}

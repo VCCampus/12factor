@@ -25,6 +25,24 @@ const router = createRouter({
       component: () => import('@/views/QuizView.vue')
     },
     {
+      path: '/mock-interview',
+      name: 'mock-interview',
+      component: () => import('@/views/MockInterviewView.vue'),
+      children: [
+        {
+          path: '',
+          name: 'interview-home',
+          component: () => import('@/components/interview/InterviewHome.vue')
+        },
+        {
+          path: ':difficulty',
+          name: 'interview-quiz',
+          component: () => import('@/components/interview/InterviewQuiz.vue'),
+          props: true
+        }
+      ]
+    },
+    {
       path: '/analytics',
       name: 'analytics',
       component: () => import('@/views/AnalyticsView.vue')

@@ -1,0 +1,2339 @@
+{
+  "meta": {
+    "title": "新闻实战技能",
+    "description": "实战新闻写作和策划能力",
+    "difficulty": "expert",
+    "category": "practical",
+    "timeLimit": 120,
+    "icon": "⚡",
+    "totalQuestions": 100,
+    "generatedAt": "2025-08-29T08:37:52.839Z",
+    "version": "1.0.0"
+  },
+  "jobInfo": {
+    "company": "ChainCatcher",
+    "position": "区块链记者",
+    "location": "深圳",
+    "salary": "2500-3600/月",
+    "type": "记者·内容",
+    "description": "专业的区块链研究与资讯平台",
+    "requirements": [
+      "热爱写作，对 Crypto 行业有强烈求知欲",
+      "阅读过 100+ 篇商业科技、财经媒体优质文章",
+      "具备成熟的文字写作功底和逻辑清晰表达能力",
+      "有强烈责任心和良好团队协作意识"
+    ]
+  },
+  "questions": [
+    {
+      "id": "expert_q1",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 1
+    },
+    {
+      "id": "expert_q2",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 2
+    },
+    {
+      "id": "expert_q3",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 3
+    },
+    {
+      "id": "expert_q4",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 4
+    },
+    {
+      "id": "expert_q5",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 5
+    },
+    {
+      "id": "expert_q6",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 6
+    },
+    {
+      "id": "expert_q7",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 7
+    },
+    {
+      "id": "expert_q8",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 8
+    },
+    {
+      "id": "expert_q9",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 9
+    },
+    {
+      "id": "expert_q10",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 10
+    },
+    {
+      "id": "expert_q11",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 11
+    },
+    {
+      "id": "expert_q12",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 12
+    },
+    {
+      "id": "expert_q13",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 13
+    },
+    {
+      "id": "expert_q14",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 14
+    },
+    {
+      "id": "expert_q15",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 15
+    },
+    {
+      "id": "expert_q16",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 16
+    },
+    {
+      "id": "expert_q17",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 17
+    },
+    {
+      "id": "expert_q18",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 18
+    },
+    {
+      "id": "expert_q19",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 19
+    },
+    {
+      "id": "expert_q20",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 20
+    },
+    {
+      "id": "expert_q21",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 21
+    },
+    {
+      "id": "expert_q22",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 22
+    },
+    {
+      "id": "expert_q23",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 23
+    },
+    {
+      "id": "expert_q24",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 24
+    },
+    {
+      "id": "expert_q25",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 25
+    },
+    {
+      "id": "expert_q26",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 26
+    },
+    {
+      "id": "expert_q27",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 27
+    },
+    {
+      "id": "expert_q28",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 28
+    },
+    {
+      "id": "expert_q29",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 29
+    },
+    {
+      "id": "expert_q30",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 30
+    },
+    {
+      "id": "expert_q31",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 31
+    },
+    {
+      "id": "expert_q32",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 32
+    },
+    {
+      "id": "expert_q33",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 33
+    },
+    {
+      "id": "expert_q34",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 34
+    },
+    {
+      "id": "expert_q35",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 35
+    },
+    {
+      "id": "expert_q36",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 36
+    },
+    {
+      "id": "expert_q37",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 37
+    },
+    {
+      "id": "expert_q38",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 38
+    },
+    {
+      "id": "expert_q39",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 39
+    },
+    {
+      "id": "expert_q40",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 40
+    },
+    {
+      "id": "expert_q41",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 41
+    },
+    {
+      "id": "expert_q42",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 42
+    },
+    {
+      "id": "expert_q43",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 43
+    },
+    {
+      "id": "expert_q44",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 44
+    },
+    {
+      "id": "expert_q45",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 45
+    },
+    {
+      "id": "expert_q46",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 46
+    },
+    {
+      "id": "expert_q47",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 47
+    },
+    {
+      "id": "expert_q48",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 48
+    },
+    {
+      "id": "expert_q49",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 49
+    },
+    {
+      "id": "expert_q50",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 50
+    },
+    {
+      "id": "expert_q51",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 51
+    },
+    {
+      "id": "expert_q52",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 52
+    },
+    {
+      "id": "expert_q53",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 53
+    },
+    {
+      "id": "expert_q54",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 54
+    },
+    {
+      "id": "expert_q55",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 55
+    },
+    {
+      "id": "expert_q56",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 56
+    },
+    {
+      "id": "expert_q57",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 57
+    },
+    {
+      "id": "expert_q58",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 58
+    },
+    {
+      "id": "expert_q59",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 59
+    },
+    {
+      "id": "expert_q60",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 60
+    },
+    {
+      "id": "expert_q61",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 61
+    },
+    {
+      "id": "expert_q62",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 62
+    },
+    {
+      "id": "expert_q63",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 63
+    },
+    {
+      "id": "expert_q64",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 64
+    },
+    {
+      "id": "expert_q65",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 65
+    },
+    {
+      "id": "expert_q66",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 66
+    },
+    {
+      "id": "expert_q67",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 67
+    },
+    {
+      "id": "expert_q68",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 68
+    },
+    {
+      "id": "expert_q69",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 69
+    },
+    {
+      "id": "expert_q70",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 70
+    },
+    {
+      "id": "expert_q71",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 71
+    },
+    {
+      "id": "expert_q72",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 72
+    },
+    {
+      "id": "expert_q73",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 73
+    },
+    {
+      "id": "expert_q74",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 74
+    },
+    {
+      "id": "expert_q75",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 75
+    },
+    {
+      "id": "expert_q76",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 76
+    },
+    {
+      "id": "expert_q77",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 77
+    },
+    {
+      "id": "expert_q78",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 78
+    },
+    {
+      "id": "expert_q79",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 79
+    },
+    {
+      "id": "expert_q80",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 80
+    },
+    {
+      "id": "expert_q81",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 81
+    },
+    {
+      "id": "expert_q82",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 82
+    },
+    {
+      "id": "expert_q83",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 83
+    },
+    {
+      "id": "expert_q84",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 84
+    },
+    {
+      "id": "expert_q85",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 85
+    },
+    {
+      "id": "expert_q86",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 86
+    },
+    {
+      "id": "expert_q87",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 87
+    },
+    {
+      "id": "expert_q88",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 88
+    },
+    {
+      "id": "expert_q89",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 89
+    },
+    {
+      "id": "expert_q90",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 90
+    },
+    {
+      "id": "expert_q91",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 91
+    },
+    {
+      "id": "expert_q92",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 92
+    },
+    {
+      "id": "expert_q93",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 93
+    },
+    {
+      "id": "expert_q94",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 94
+    },
+    {
+      "id": "expert_q95",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 95
+    },
+    {
+      "id": "expert_q96",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 96
+    },
+    {
+      "id": "expert_q97",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 97
+    },
+    {
+      "id": "expert_q98",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 98
+    },
+    {
+      "id": "expert_q99",
+      "principle_id": "expert",
+      "question": "以下哪一项最能体现区块链行业从业记者的核心素质？",
+      "correct_answer": "B",
+      "wrong_answers": [
+        "仅仅依赖官方新闻稿",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "all_options": [
+        "仅仅依赖官方新闻稿",
+        "能够快速提炼信息并形成逻辑清晰的报道",
+        "只关注价格波动",
+        "主要依靠AI生成内容"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "single",
+      "explanation": "正确答案: B",
+      "questionNumber": 99
+    },
+    {
+      "id": "expert_q100",
+      "principle_id": "expert",
+      "question": "记者在撰写深度行业分析文章时，应当具备哪些能力？（多选）",
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "wrong_answers": [
+        "仅凭主观感受"
+      ],
+      "all_options": [
+        "行业趋势研判",
+        "技术原理理解",
+        "财经数据解读",
+        "仅凭主观感受"
+      ],
+      "difficulty": "expert",
+      "category": "practical",
+      "type": "multiple",
+      "explanation": "正确答案: A, B, C",
+      "questionNumber": 100
+    }
+  ],
+  "categories": {
+    "general": "通用素质",
+    "research": "深度研究",
+    "practical": "新闻实战"
+  },
+  "instructions": {
+    "timeManagement": "建议合理安排答题时间，系统会进行软性提醒",
+    "answering": "请仔细阅读题目，选择最合适的答案",
+    "review": "答题完成后可以查看详细解析和个人表现分析"
+  }
+}

@@ -41,26 +41,42 @@
               <input type="checkbox" v-model="includeRecommendations" class="mr-2">
               个性化学习建议
             </label>
+            <label v-if="hasInterviewResults" class="flex items-center">
+              <input type="checkbox" v-model="includeInterviewResults" class="mr-2">
+              模拟面试成绩
+            </label>
           </div>
         </div>
       </div>
       
-      <div class="export-actions mt-6 space-x-2">
-        <button 
-          @click="exportData" 
-          :disabled="isExporting"
-          class="neo-btn bg-primary-blue text-white"
-        >
-          <span v-if="!isExporting">⬇️ 导出报告</span>
-          <span v-else>🔄 生成中...</span>
-        </button>
-        
-        <button 
-          @click="previewReport" 
-          class="neo-btn-secondary"
-        >
-          👁️ 预览报告
-        </button>
+      <div class="export-actions mt-6 space-y-2">
+        <div class="flex flex-col md:flex-row gap-2">
+          <button 
+            @click="exportData" 
+            :disabled="isExporting"
+            class="neo-btn bg-primary-blue text-white"
+          >
+            <span v-if="!isExporting">⬇️ 导出报告</span>
+            <span v-else>🔄 生成中...</span>
+          </button>
+          
+          <button 
+            @click="previewReport" 
+            class="neo-btn-secondary"
+          >
+            👁️ 预览报告
+          </button>
+          
+          <button 
+            v-if="hasInterviewResults"
+            @click="exportInterviewPDF" 
+            :disabled="isExporting"
+            class="neo-btn bg-red-600 text-white"
+          >
+            <span v-if="!isExporting">📄 面试报告 (PDF)</span>
+            <span v-else>🔄 生成中...</span>
+          </button>
+        </div>
       </div>
       
       <!-- 预览模态框 -->
@@ -80,10 +96,11 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { useProgressStore } from '@/stores/progress'
 import { useQuizStore } from '@/stores/quiz'
 import { useGamificationStore } from '@/stores/gamification'
+import jsPDF from 'jspdf'
 
 const progressStore = useProgressStore()
 const quizStore = useQuizStore()
@@ -95,11 +112,21 @@ const includeProgress = ref(true)
 const includeQuizResults = ref(true)
 const includeAchievements = ref(true)
 const includeRecommendations = ref(true)
+const includeInterviewResults = ref(true)
+
+// 面试结果数据
+const interviewResults = ref<any[]>([])
+const hasInterviewResults = computed(() => interviewResults.value.length > 0)
 
 // 状态
 const isExporting = ref(false)
 const showPreview = ref(false)
 const previewContent = ref('')
+
+// 组件挂载时加载面试结果
+onMounted(() => {
+  loadInterviewResults()
+})
 
 // 导出数据
 const exportData = async () => {
@@ -167,6 +194,16 @@ const generateReportData = () => {
     data.recommendations = generatePersonalizedRecommendations()
   }
   
+  if (includeInterviewResults.value && interviewResults.value.length > 0) {
+    data.interviewResults = {
+      totalInterviews: interviewResults.value.length,
+      averageScore: interviewResults.value.reduce((sum, result) => sum + result.percentage, 0) / interviewResults.value.length,
+      bestScore: Math.max(...interviewResults.value.map(result => result.percentage)),
+      recentResults: interviewResults.value.slice(-3),
+      categoryAnalysis: generateCategoryAnalysis()
+    }
+  }
+  
   return data
 }
 
@@ -195,6 +232,21 @@ const generateMarkdownReport = (data: any) => {
     markdown += `- **当前等级**: ${data.achievements.currentLevel}\n`
     markdown += `- **总积分**: ${data.achievements.totalPoints} 分\n`
     markdown += `- **已获得徽章**: ${data.achievements.unlockedBadges.length} 个\n\n`
+  }
+  
+  if (data.interviewResults) {
+    markdown += `## 🎤 模拟面试表现\n\n`
+    markdown += `- **完成面试数**: ${data.interviewResults.totalInterviews} 次\n`
+    markdown += `- **平均分数**: ${data.interviewResults.averageScore.toFixed(1)}%\n`
+    markdown += `- **最高分数**: ${data.interviewResults.bestScore.toFixed(1)}%\n\n`
+    
+    if (data.interviewResults.categoryAnalysis && Object.keys(data.interviewResults.categoryAnalysis).length > 0) {
+      markdown += `### 分类表现分析\n\n`
+      Object.entries(data.interviewResults.categoryAnalysis).forEach(([category, stats]: [string, any]) => {
+        markdown += `- **${category}**: ${stats.accuracy.toFixed(1)}% (${stats.correct}/${stats.total})\n`
+      })
+      markdown += `\n`
+    }
   }
   
   if (data.recommendations) {
@@ -236,6 +288,165 @@ const generatePersonalizedRecommendations = (): string[] => {
   }
   
   return recommendations
+}
+
+// 生成分类分析
+const generateCategoryAnalysis = () => {
+  const categoryAnalysis: Record<string, { correct: number; total: number; accuracy: number }> = {}
+  
+  interviewResults.value.forEach(result => {
+    if (result.categoryStats) {
+      Object.entries(result.categoryStats).forEach(([category, stats]: [string, any]) => {
+        if (!categoryAnalysis[category]) {
+          categoryAnalysis[category] = { correct: 0, total: 0, accuracy: 0 }
+        }
+        categoryAnalysis[category].correct += stats.correct
+        categoryAnalysis[category].total += stats.total
+      })
+    }
+  })
+  
+  // 计算准确率
+  Object.keys(categoryAnalysis).forEach(category => {
+    const stats = categoryAnalysis[category]
+    stats.accuracy = (stats.correct / stats.total) * 100
+  })
+  
+  return categoryAnalysis
+}
+
+// 加载面试结果
+const loadInterviewResults = () => {
+  try {
+    const savedResults = localStorage.getItem('interview-results')
+    if (savedResults) {
+      interviewResults.value = JSON.parse(savedResults)
+    }
+  } catch (error) {
+    console.error('加载面试结果失败:', error)
+    interviewResults.value = []
+  }
+}
+
+// 导出面试PDF报告
+const exportInterviewPDF = async () => {
+  isExporting.value = true
+  
+  try {
+    const doc = new jsPDF()
+    const pageWidth = doc.internal.pageSize.width
+    let yPosition = 20
+    
+    // 标题
+    doc.setFontSize(18)
+    doc.text('CSS数创学习平台 - 模拟面试报告', pageWidth / 2, yPosition, { align: 'center' })
+    yPosition += 15
+    
+    // 生成时间
+    doc.setFontSize(10)
+    doc.text(`生成时间: ${new Date().toLocaleString('zh-CN')}`, pageWidth / 2, yPosition, { align: 'center' })
+    yPosition += 20
+    
+    // 遍历面试结果
+    interviewResults.value.forEach((result, index) => {
+      if (yPosition > 250) {
+        doc.addPage()
+        yPosition = 20
+      }
+      
+      // 面试标题
+      doc.setFontSize(14)
+      doc.text(`${index + 1}. ${result.difficultyTitle}`, 20, yPosition)
+      yPosition += 10
+      
+      // 基本信息
+      doc.setFontSize(10)
+      doc.text(`完成时间: ${new Date(result.completedAt).toLocaleString('zh-CN')}`, 20, yPosition)
+      yPosition += 6
+      doc.text(`总分数: ${result.score}/${result.totalQuestions} (${result.percentage.toFixed(1)}%)`, 20, yPosition)
+      yPosition += 6
+      doc.text(`用时: ${Math.floor(result.timeSpent / 60)}分${result.timeSpent % 60}秒`, 20, yPosition)
+      yPosition += 10
+      
+      // 分类表现
+      if (result.categoryStats) {
+        doc.text('分类表现:', 20, yPosition)
+        yPosition += 6
+        
+        Object.entries(result.categoryStats).forEach(([category, stats]: [string, any]) => {
+          const accuracy = ((stats.correct / stats.total) * 100).toFixed(1)
+          doc.text(`  ${category}: ${stats.correct}/${stats.total} (${accuracy}%)`, 25, yPosition)
+          yPosition += 5
+        })
+      }
+      
+      yPosition += 10
+    })
+    
+    // 个性化建议
+    if (interviewResults.value.length > 0) {
+      if (yPosition > 220) {
+        doc.addPage()
+        yPosition = 20
+      }
+      
+      doc.setFontSize(12)
+      doc.text('个性化学习建议', 20, yPosition)
+      yPosition += 10
+      
+      const suggestions = generateInterviewSuggestions()
+      doc.setFontSize(10)
+      suggestions.forEach((suggestion, index) => {
+        const lines = doc.splitTextToSize(`${index + 1}. ${suggestion}`, pageWidth - 40)
+        doc.text(lines, 20, yPosition)
+        yPosition += lines.length * 5 + 2
+      })
+    }
+    
+    // 保存PDF
+    doc.save(`面试报告-${new Date().toISOString().slice(0, 10)}.pdf`)
+    
+  } catch (error) {
+    console.error('生成PDF失败:', error)
+  } finally {
+    isExporting.value = false
+  }
+}
+
+// 生成面试建议
+const generateInterviewSuggestions = (): string[] => {
+  const suggestions: string[] = []
+  
+  if (interviewResults.value.length === 0) return suggestions
+  
+  // 计算整体表现
+  const avgScore = interviewResults.value.reduce((sum, result) => sum + result.percentage, 0) / interviewResults.value.length
+  
+  if (avgScore >= 85) {
+    suggestions.push('你的面试表现优秀！继续保持这种水准，可以尝试更高难度的面试练习。')
+  } else if (avgScore >= 70) {
+    suggestions.push('面试表现良好，建议针对薄弱环节进行专项练习。')
+  } else if (avgScore >= 60) {
+    suggestions.push('面试表现有待提高，建议系统学习相关知识，多做练习题。')
+  } else {
+    suggestions.push('建议从基础知识开始，逐步提升，多参与模拟面试练习。')
+  }
+  
+  // 根据最新面试分析建议
+  const latestResult = interviewResults.value[interviewResults.value.length - 1]
+  if (latestResult.categoryStats) {
+    const weakestCategory = Object.entries(latestResult.categoryStats)
+      .sort(([,a]: [string, any], [,b]: [string, any]) => (a.correct/a.total) - (b.correct/b.total))[0]
+    
+    if (weakestCategory) {
+      const [category] = weakestCategory as [string, any]
+      suggestions.push(`在"${category}"方面需要加强练习，这是你当前的薄弱环节。`)
+    }
+  }
+  
+  suggestions.push('持续练习是提高面试表现的关键，建议定期参与模拟面试。')
+  
+  return suggestions
 }
 
 // 下载文件

@@ -446,11 +446,12 @@ export const useGamificationStore = defineStore('gamification', () => {
           shouldUnlock = totalPoints.value >= 10
           achievement.progress = Math.min(100, (totalPoints.value / 10) * 100)
           break
-        case 'week_warrior':
+        case 'week_warrior': {
           const dailyStreak = streaks.value.daily?.current || 0
           shouldUnlock = dailyStreak >= 7
           achievement.progress = Math.min(100, (dailyStreak / 7) * 100)
           break
+        }
         // 更多成就检查逻辑...
       }
       

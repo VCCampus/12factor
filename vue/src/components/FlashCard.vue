@@ -170,7 +170,7 @@ function calculateNextReview(): string {
 }
 
 function flipCard() {
-  if (!showResult) {
+  if (!showResult.value) {
     isFlipped.value = !isFlipped.value
     emit('flip')
   }
