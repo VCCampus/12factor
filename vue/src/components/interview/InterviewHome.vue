@@ -1,5 +1,6 @@
 <template>
-  <div class="interview-home container mx-auto px-4 py-8">
+  <AppLayout :show-footer-stats="false">
+    <div class="container mx-auto px-4 py-8">
     <!-- 招聘信息卡片 -->
     <div class="neo-card recruitment-card mb-8 p-8">
       <div class="card-header mb-6">
@@ -76,13 +77,15 @@
         </div>
       </div>
     </div>
-  </div>
+    </div>
+  </AppLayout>
 </template>
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import DifficultyCard from './DifficultyCard.vue'
+import AppLayout from '@/components/layout/AppLayout.vue'
 
 const router = useRouter()
 

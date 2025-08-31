@@ -1,25 +1,35 @@
 <template>
   <footer class="neo-card mt-8 border-t-4 border-border-black">
-    <div class="container mx-auto px-4 py-6">
-      <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-        <!-- Copyright Info -->
-        <div class="text-center md:text-left">
-          <p class="text-sm text-text-dark font-medium">
-            © 2024 CSS数创学习平台
-          </p>
-          <p class="text-xs text-gray-600 mt-1">
-            基于CSS数创班8期知识体系
-          </p>
-        </div>
-        
-        <!-- Version Info -->
-        <div class="text-center md:text-right">
-          <p class="text-xs text-gray-600">
-            版本 v4.0.0 | Vue 3 + Vite
-          </p>
-          <p class="text-xs text-gray-500 mt-1">
-            🚀 PWA离线支持
-          </p>
+    <div class="container mx-auto px-4" :class="minimal ? 'py-3' : 'py-6'">
+      <!-- 极简模式 -->
+      <div v-if="minimal" class="text-center">
+        <p class="text-sm text-text-dark">
+          © 2024 <RouterLink to="/" class="font-medium hover:text-primary-blue transition-colors">📚 CSS数创学习平台</RouterLink>
+        </p>
+      </div>
+      
+      <!-- 标准模式 -->
+      <div v-else>
+        <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+          <!-- Copyright Info -->
+          <div class="text-center md:text-left">
+            <p class="text-sm text-text-dark font-medium">
+              © 2024 <RouterLink to="/" class="hover:text-primary-blue transition-colors">📚 CSS数创学习平台</RouterLink>
+            </p>
+            <p class="text-xs text-gray-600 mt-1">
+              基于CSS数创班8期知识体系
+            </p>
+          </div>
+          
+          <!-- Version Info -->
+          <div class="text-center md:text-right">
+            <p class="text-xs text-gray-600">
+              版本 v4.0.0 | Vue 3 + Vite
+            </p>
+            <p class="text-xs text-gray-500 mt-1">
+              🚀 PWA离线支持
+            </p>
+          </div>
         </div>
       </div>
       
@@ -49,9 +59,12 @@
 </template>
 
 <script setup lang="ts">
-// Optional: Show statistics in footer
+import { RouterLink } from 'vue-router'
+
+// Optional: Show statistics in footer, minimal mode
 defineProps<{
   showStats?: boolean
+  minimal?: boolean
 }>()
 </script>
 

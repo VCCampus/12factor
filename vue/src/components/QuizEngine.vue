@@ -219,14 +219,20 @@
         </div>
 
         <div class="result-actions">
-          <button @click="reviewQuiz" class="review-btn">
+          <!-- 面试模式特殊按钮 -->
+          <button v-if="mode === 'interview'" @click="goToExport" class="export-btn">
+            📊 查看详细报告并导出
+          </button>
+          
+          <!-- 通用按钮 -->
+          <button v-if="mode !== 'interview'" @click="reviewQuiz" class="review-btn">
             📋 查看详解
           </button>
-          <button @click="restartQuiz" class="restart-btn">
+          <button v-if="mode !== 'interview'" @click="restartQuiz" class="restart-btn">
             🔄 再测一次
           </button>
           <button @click="$emit('exit')" class="exit-btn">
-            🏠 返回首页
+            {{ mode === 'interview' ? '🏠 返回面试选择' : '🏠 返回首页' }}
           </button>
         </div>
       </div>
@@ -282,6 +288,8 @@
 
 <script setup lang="ts">
 import { ref, computed, watch, onMounted, onUnmounted } from 'vue'
+import { useRouter } from 'vue-router'
+import { useInterviewStore } from '@/stores/interview'
 import type { QuizQuestion, QuizAnswer } from '@/stores/quiz'
 
 interface Props {
@@ -317,6 +325,10 @@ const props = withDefaults(defineProps<Props>(), {
 })
 
 const emit = defineEmits<Emits>()
+
+// 路由和Store
+const router = useRouter()
+const interviewStore = useInterviewStore()
 
 // 状态管理
 const isQuizActive = ref(false)
@@ -429,6 +441,11 @@ function nextQuestion() {
   selectedAnswer.value = ''
   showResult.value = false
   questionStartTime.value = Date.now()
+  
+  // 在面试模式下更新进度
+  if (props.mode === 'interview') {
+    interviewStore.updateProgress(currentQuestionIndex.value - 1)
+  }
 }
 
 function finishQuiz() {
@@ -585,6 +602,11 @@ function getCategoryColorClass(percentage: number): string {
 
 function getUserAnswer(questionId: string): QuizAnswer | undefined {
   return answers.value.find(a => a.questionId === questionId)
+}
+
+// 面试完成跳转到导出页面
+function goToExport() {
+  router.push('/export')
 }
 
 // 生命周期
@@ -987,7 +1009,7 @@ watch(() => props.timeLimit, (newLimit) => {
   margin-top: 32px;
 }
 
-.review-btn, .restart-btn, .exit-btn {
+.review-btn, .restart-btn, .exit-btn, .export-btn {
   padding: 12px 24px;
   border: 2px solid #e2e8f0;
   background: white;
@@ -995,6 +1017,17 @@ watch(() => props.timeLimit, (newLimit) => {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
+}
+
+.export-btn {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+.export-btn:hover { 
+  background: #1d4ed8;
+  border-color: #1d4ed8;
 }
 
 .review-btn:hover { border-color: #3b82f6; color: #3b82f6; }

@@ -1,0 +1,134 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e5]:
+  - banner [ref=e6] [cursor=pointer]:
+    - navigation [ref=e8] [cursor=pointer]:
+      - generic [ref=e9] [cursor=pointer]:
+        - generic [ref=e10] [cursor=pointer]: 📚
+        - heading "3C数创学习平台" [level=1] [ref=e11] [cursor=pointer]
+      - generic [ref=e12] [cursor=pointer]:
+        - link "首页" [ref=e13] [cursor=pointer]:
+          - /url: /
+        - link "温度计" [ref=e14] [cursor=pointer]:
+          - /url: /thermometer
+        - link "原则" [ref=e15] [cursor=pointer]:
+          - /url: /principles
+        - link "闪卡" [ref=e16] [cursor=pointer]:
+          - /url: /flashcards
+        - link "测试" [ref=e17] [cursor=pointer]:
+          - /url: /quiz
+        - link "模拟面试" [ref=e18] [cursor=pointer]:
+          - /url: /mock-interview
+        - link "分析" [ref=e19] [cursor=pointer]:
+          - /url: /analytics
+        - link "成就" [ref=e20] [cursor=pointer]:
+          - /url: /achievements
+        - link "导出" [ref=e21] [cursor=pointer]:
+          - /url: /export
+  - main [ref=e22]:
+    - generic [ref=e23]:
+      - generic [ref=e24]:
+        - generic [ref=e25]:
+          - heading "🏢 ChainCatcher 区块链记者岗位" [level=2] [ref=e26]
+          - paragraph [ref=e27]: 专业的区块链研究与资讯平台招聘
+        - generic [ref=e28]:
+          - generic [ref=e29]:
+            - generic [ref=e30]: 📍 深圳
+            - paragraph [ref=e31]: 工作地点
+          - generic [ref=e32]:
+            - generic [ref=e33]: 💰 2500-3600/月
+            - paragraph [ref=e34]: 薪酬范围
+          - generic [ref=e35]:
+            - generic [ref=e36]: 💼 记者·内容
+            - paragraph [ref=e37]: 岗位类型
+        - generic [ref=e38]:
+          - heading "📋 岗位要求" [level=3] [ref=e39]
+          - list [ref=e40]:
+            - listitem [ref=e41]:
+              - generic [ref=e42]: •
+              - generic [ref=e43]: 热爱写作，对 Crypto 行业有强烈求知欲，保持对新鲜事物的敏感度
+            - listitem [ref=e44]:
+              - generic [ref=e45]: •
+              - generic [ref=e46]: 阅读过 100+ 篇商业科技、财经媒体优质文章，有独到理解
+            - listitem [ref=e47]:
+              - generic [ref=e48]: •
+              - generic [ref=e49]: 具备成熟的文字写作功底，能驾驭不同风格文章
+            - listitem [ref=e50]:
+              - generic [ref=e51]: •
+              - generic [ref=e52]: 有强烈责任心和良好团队协作意识，能高效沟通配合
+      - generic [ref=e53]:
+        - heading "选择面试难度等级" [level=2] [ref=e54]
+        - generic [ref=e55]:
+          - generic [ref=e57] [cursor=pointer]:
+            - generic [ref=e58] [cursor=pointer]:
+              - generic [ref=e59] [cursor=pointer]: 📝
+              - heading "通用素质测评" [level=3] [ref=e60] [cursor=pointer]
+              - paragraph [ref=e61] [cursor=pointer]: 测评基础的文字表达和行业理解能力
+            - generic [ref=e62] [cursor=pointer]:
+              - generic [ref=e63] [cursor=pointer]:
+                - generic [ref=e64] [cursor=pointer]: 题目数量
+                - generic [ref=e65] [cursor=pointer]: 100道
+              - generic [ref=e66] [cursor=pointer]:
+                - generic [ref=e67] [cursor=pointer]: 建议时长
+                - generic [ref=e68] [cursor=pointer]: 60分钟建议
+            - generic [ref=e70] [cursor=pointer]: 测评基础的文字表达和行业理解能力
+            - button "开始通用素质测评 →" [ref=e71] [cursor=pointer]
+            - generic [ref=e77] [cursor=pointer]: "难度等级: 1/3"
+          - generic [ref=e79] [cursor=pointer]:
+            - generic [ref=e80] [cursor=pointer]:
+              - generic [ref=e81] [cursor=pointer]: 🔍
+              - heading "深度研究能力" [level=3] [ref=e82] [cursor=pointer]
+              - paragraph [ref=e83] [cursor=pointer]: 考察深度分析和研究能力
+            - generic [ref=e84] [cursor=pointer]:
+              - generic [ref=e85] [cursor=pointer]:
+                - generic [ref=e86] [cursor=pointer]: 题目数量
+                - generic [ref=e87] [cursor=pointer]: 100道
+              - generic [ref=e88] [cursor=pointer]:
+                - generic [ref=e89] [cursor=pointer]: 建议时长
+                - generic [ref=e90] [cursor=pointer]: 90分钟建议
+            - generic [ref=e92] [cursor=pointer]: 考察深度分析和研究能力
+            - button "开始深度研究能力 →" [ref=e93] [cursor=pointer]
+            - generic [ref=e99] [cursor=pointer]: "难度等级: 2/3"
+          - generic [ref=e101] [cursor=pointer]:
+            - generic [ref=e102] [cursor=pointer]:
+              - generic [ref=e103] [cursor=pointer]: ⚡
+              - heading "新闻实战技能" [level=3] [ref=e104] [cursor=pointer]
+              - paragraph [ref=e105] [cursor=pointer]: 实战新闻写作和策划能力
+            - generic [ref=e106] [cursor=pointer]:
+              - generic [ref=e107] [cursor=pointer]:
+                - generic [ref=e108] [cursor=pointer]: 题目数量
+                - generic [ref=e109] [cursor=pointer]: 100道
+              - generic [ref=e110] [cursor=pointer]:
+                - generic [ref=e111] [cursor=pointer]: 建议时长
+                - generic [ref=e112] [cursor=pointer]: 120分钟建议
+            - generic [ref=e114] [cursor=pointer]: 实战新闻写作和策划能力
+            - button "开始新闻实战技能 →" [ref=e115] [cursor=pointer]
+            - generic [ref=e121] [cursor=pointer]: "难度等级: 3/3"
+      - generic [ref=e122]:
+        - heading "💡 面试说明" [level=3] [ref=e123]
+        - generic [ref=e124]:
+          - generic [ref=e125]:
+            - strong [ref=e126]: "时间管理:"
+            - text: 系统会进行软性时间提醒，不会强制结束
+          - generic [ref=e127]:
+            - strong [ref=e128]: "答题方式:"
+            - text: 仔细阅读题目，选择最合适的答案
+          - generic [ref=e129]:
+            - strong [ref=e130]: "题目随机:"
+            - text: 每次进入题目顺序都会随机排列
+          - generic [ref=e131]:
+            - strong [ref=e132]: "结果分析:"
+            - text: 完成后可查看详细分析和改进建议
+  - contentinfo [ref=e133]:
+    - generic [ref=e136]:
+      - generic [ref=e137]:
+        - paragraph [ref=e138]:
+          - text: © 2024
+          - link "📚 CSS数创学习平台" [ref=e139] [cursor=pointer]:
+            - /url: /
+        - paragraph [ref=e140]: 基于CSS数创班8期知识体系
+      - generic [ref=e141]:
+        - paragraph [ref=e142]: 版本 v4.0.0 | Vue 3 + Vite
+        - paragraph [ref=e143]: 🚀 PWA离线支持
+```

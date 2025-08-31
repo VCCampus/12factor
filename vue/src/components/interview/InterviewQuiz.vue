@@ -1,5 +1,5 @@
 <template>
-  <div class="interview-quiz">
+  <AppLayout :show-footer-stats="false" :minimal-footer="true">
     <div v-if="loading" class="loading-container">
       <div class="neo-card text-center p-8">
         <div class="text-6xl mb-4">📚</div>
@@ -58,17 +58,20 @@
         @exit="handleExit"
       />
     </div>
-  </div>
+  </AppLayout>
 </template>
 
 <script setup lang="ts">
 import { ref, onMounted, computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import QuizEngine from '@/components/QuizEngine.vue'
+import AppLayout from '@/components/layout/AppLayout.vue'
+import { useInterviewStore } from '@/stores/interview'
 import type { QuizQuestion } from '@/stores/quiz'
 
 const route = useRoute()
 const router = useRouter()
+const interviewStore = useInterviewStore()
 
 // 状态管理
 const questions = ref<QuizQuestion[]>([])
@@ -113,6 +116,13 @@ const loadInterviewQuestions = async () => {
     questions.value = data.questions
     jobInfo.value = data.jobInfo || {}
     
+    // 初始化面试Store
+    interviewStore.startInterview(
+      difficulty.value as 'basic' | 'advanced' | 'expert',
+      difficultyTitle.value,
+      questions.value.length
+    )
+    
     console.log(`✅ 成功加载 ${questions.value.length} 道题目`)
     
   } catch (err) {
@@ -135,6 +145,9 @@ const getDifficultyIcon = (diff: string) => {
 const handleInterviewComplete = (results: any) => {
   console.log('🎉 面试完成:', results)
   
+  // 完成面试状态
+  interviewStore.completeInterview()
+  
   // 保存面试结果到 localStorage
   const interviewResult = {
     ...results,
@@ -154,10 +167,12 @@ const handleInterviewComplete = (results: any) => {
 }
 
 const handleExit = () => {
+  interviewStore.resetInterview()
   backToHome()
 }
 
 const backToHome = () => {
+  interviewStore.resetInterview()
   router.push('/mock-interview')
 }
 </script>

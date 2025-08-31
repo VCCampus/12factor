@@ -166,12 +166,16 @@
         </div>
       </div>
     </div>
+    
+    <!-- 面试进度条 -->
+    <InterviewProgressBar />
   </header>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
+import InterviewProgressBar from '@/components/common/InterviewProgressBar.vue'
 
 // Mobile menu state
 const showMobileMenu = ref(false)

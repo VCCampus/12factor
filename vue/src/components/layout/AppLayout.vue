@@ -12,7 +12,7 @@
     </main>
     
     <!-- Footer -->
-    <AppFooter :show-stats="showFooterStats" />
+    <AppFooter :show-stats="showFooterStats" :minimal="minimalFooter" />
     
     <!-- PWA Install Prompt -->
     <PWAInstallPrompt v-if="showPWAPrompt" @close="closePWAPrompt" />
@@ -30,6 +30,7 @@ import { useDataLoader } from '@/composables/useDataLoader'
 // Props
 defineProps<{
   showFooterStats?: boolean
+  minimalFooter?: boolean
 }>()
 
 // 数据加载
