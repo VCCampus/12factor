@@ -5,10 +5,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Development Commands
 
 ### Core Development
-- `npm run dev` - Start development server at http://localhost:3000
-- `npm run build` - Build production bundle
-- `npm run start` - Start production server
-- `npm run lint` - Run ESLint for code quality checks
+- `cd vue && npm run dev` - Start development server at http://localhost:5173
+- `cd vue && npm run build` - Build production bundle to /dist
+- `./scripts/build.sh` - Full TOML→JSON→Vue build pipeline
+- `cd vue && npm run lint` - Run ESLint for code quality checks
+- `cd vue && npm run type-check` - TypeScript compilation check
 
 ### TypeScript and Linting
 The project uses TypeScript with strict mode enabled. Run `npm run lint` after making changes to ensure code quality.
@@ -24,12 +25,14 @@ Create a `.env.local` file in the project root with the following variables:
 ### Main Dependencies
 
 #### Vue Project (Primary)
-- **Framework**: Vue 3.4.0, Vue Router 4.0.13
-- **Build Tool**: Vite 4.0.0
-- **State Management**: Pinia 2.0.32
-- **UI Components**: @headlessui/vue, lucide-vue-next
-- **Testing**: Playwright 1.55.0, @vue/test-utils 2.4.6
-- **PWA**: vite-plugin-pwa 0.16.4
+- **Framework**: Vue 3.4.0, Vue Router 4.2.5
+- **Build Tool**: Vite 5.0.10
+- **State Management**: Pinia 2.1.7
+- **Styling**: Tailwind CSS 3.4.0, Neobrutalism design system
+- **TypeScript**: 5.3.0 with strict mode
+- **Testing**: Playwright 1.55.0 with E2E automation
+- **PDF Export**: jsPDF 3.0.2
+- **Build Output**: /dist directory (via Vite build)
 
 
 ### Project Directory Structure
@@ -125,7 +128,42 @@ All planning, research, and discussion documents must be organized in:
 - Run `npm run lint` before committing code changes
 
 ### Testing Requirements
-- Run `npm run lint` after code changes
-- Verify TypeScript compilation with `npm run build`
-- Test both English and Chinese locales
-- Verify dark mode functionality
+- Run `cd vue && npm run lint` after code changes
+- Verify TypeScript compilation with `cd vue && npm run type-check`
+- Test with `cd vue && npm run build` to ensure production readiness
+- Run E2E tests with Playwright: baseURL configured for http://web3mh.101.so:11181/
+- Test Chinese locale support (primary language)
+- Verify neobrutalism design system consistency
+
+## Current Project Status (2025-09-01)
+
+### Active Features
+- **Home Dashboard**: CSS数创班8期核心知识体系学习平台
+- **Knowledge Principles**: 20 principles across 5 stages from TOML config
+- **Flashcards System**: Interactive learning cards with progress tracking
+- **Quiz Engine**: Multi-category quiz system with scoring
+- **Mock Interviews**: 4-difficulty interview system (basic/intermediate/advanced/expert)
+- **Progress Analytics**: Learning progress visualization and statistics
+- **Data Export**: PDF export functionality via jsPDF
+- **Gamification**: Achievement and progress tracking system
+- **Thermometer View**: Special navigation component
+
+### Technical Architecture
+- **Data Pipeline**: TOML configuration → JSON generation → Vue consumption
+- **State Management**: 5 Pinia stores (config, quiz, interview, progress, gamification)
+- **Routing**: 8 main routes with nested interview routes
+- **Styling**: Tailwind CSS with custom neobrutalism theme
+- **Build Process**: Automated via scripts/build.sh with validation pipeline
+
+### Current Code Quality Issues
+ESLint detected 13 problems (9 errors, 4 warnings):
+- Process environment variables in playwright.config.js
+- Service worker global variables (clients)
+- Unused variables in components
+- Vue deprecated filter usage
+- Test file cleanup needed
+
+### Data Sources
+- Main config: docs/plans/web3scv8_v4.toml (4.0.0)
+- Generated JSON files: vue/public/w3sc8_*.json
+- Interview questions: vue/public/data/interview-*.json
