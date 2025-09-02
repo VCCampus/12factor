@@ -1,0 +1,964 @@
+# 深潮Techflow全栈工程师面试题库 - 中级篇
+# 适合经验：3-5年全栈开发经验，有大型项目经验
+
+[metadata]
+title = "深潮Techflow全栈工程师面试题库 - 中级篇"
+version = "1.0.0"
+description = "针对中级全栈工程师的100道面试题"
+difficulty = "中级"
+total_questions = 100
+
+# 高级React/Next.js架构部分 (1-20题)
+
+[[questions]]
+id = 1
+category = "高级React/Next.js"
+type = "single"
+question = "Next.js的ISR（增量静态再生）工作原理是什么？"
+options = ["在请求时重新生成过期的静态页面", "完全客户端渲染", "每次请求都生成", "只在构建时生成"]
+answer = "在请求时重新生成过期的静态页面"
+explanation = "ISR允许在不重新构建整个站点的情况下更新静态内容"
+
+[[questions]]
+id = 2
+category = "高级React/Next.js"
+type = "multiple"
+question = "React性能优化技术包括？（多选）"
+options = ["代码分割", "懒加载", "虚拟列表", "Memoization"]
+answer = ["代码分割", "懒加载", "虚拟列表", "Memoization"]
+explanation = "综合运用这些技术可以显著提升React应用性能"
+
+[[questions]]
+id = 3
+category = "高级React/Next.js"
+type = "single"
+question = "React Fiber的主要目的是什么？"
+options = ["实现增量渲染和优先级调度", "提高开发速度", "减少包体积", "改善语法"]
+answer = "实现增量渲染和优先级调度"
+explanation = "Fiber架构使React能够中断和恢复渲染工作"
+
+[[questions]]
+id = 4
+category = "高级React/Next.js"
+type = "single"
+question = "Next.js中间件的执行时机是？"
+options = ["在请求完成之前的边缘运行时", "构建时", "客户端", "服务器启动时"]
+answer = "在请求完成之前的边缘运行时"
+explanation = "中间件在Edge Runtime执行，可以修改请求和响应"
+
+[[questions]]
+id = 5
+category = "高级React/Next.js"
+type = "single"
+question = "什么是React Server Components？"
+options = ["在服务器端渲染且不增加客户端包大小的组件", "API组件", "数据库组件", "静态组件"]
+answer = "在服务器端渲染且不增加客户端包大小的组件"
+explanation = "RSC允许组件在服务器端执行，减少客户端JavaScript"
+
+[[questions]]
+id = 6
+category = "高级React/Next.js"
+type = "multiple"
+question = "Next.js 13+ App Router的特性包括？（多选）"
+options = ["嵌套路由", "并行路由", "拦截路由", "服务器组件"]
+answer = ["嵌套路由", "并行路由", "拦截路由", "服务器组件"]
+explanation = "App Router引入了许多新的路由和渲染特性"
+
+[[questions]]
+id = 7
+category = "高级React/Next.js"
+type = "single"
+question = "React Suspense的作用是什么？"
+options = ["处理异步组件加载状态", "错误处理", "状态管理", "路由管理"]
+answer = "处理异步组件加载状态"
+explanation = "Suspense提供了声明式的加载状态处理"
+
+[[questions]]
+id = 8
+category = "高级React/Next.js"
+type = "single"
+question = "Next.js的数据缓存策略包括哪些层级？"
+options = ["请求记忆化、数据缓存、完整路由缓存、路由器缓存", "只有浏览器缓存", "只有CDN缓存", "只有服务器缓存"]
+answer = "请求记忆化、数据缓存、完整路由缓存、路由器缓存"
+explanation = "Next.js提供多层缓存机制优化性能"
+
+[[questions]]
+id = 9
+category = "高级React/Next.js"
+type = "single"
+question = "如何优化Next.js的构建性能？"
+options = ["模块化导入、并行构建、缓存优化", "使用更大内存", "减少代码", "关闭优化"]
+answer = "模块化导入、并行构建、缓存优化"
+explanation = "多种技术结合可以显著减少构建时间"
+
+[[questions]]
+id = 10
+category = "高级React/Next.js"
+type = "single"
+question = "React 18的并发特性主要解决什么问题？"
+options = ["改善用户交互响应性", "减少代码量", "提高开发效率", "简化API"]
+answer = "改善用户交互响应性"
+explanation = "并发渲染允许React中断长时间运行的任务"
+
+[[questions]]
+id = 11
+category = "高级React/Next.js"
+type = "single"
+question = "Next.js的Edge Runtime与Node.js Runtime的区别是？"
+options = ["Edge Runtime更轻量但API受限", "完全相同", "Edge Runtime功能更多", "Edge Runtime更慢"]
+answer = "Edge Runtime更轻量但API受限"
+explanation = "Edge Runtime基于Web APIs，适合轻量级计算"
+
+[[questions]]
+id = 12
+category = "高级React/Next.js"
+type = "multiple"
+question = "优化React重渲染的策略包括？（多选）"
+options = ["使用memo", "拆分组件", "状态下沉", "使用useMemo/useCallback"]
+answer = ["使用memo", "拆分组件", "状态下沉", "使用useMemo/useCallback"]
+explanation = "这些策略可以有效减少不必要的重渲染"
+
+[[questions]]
+id = 13
+category = "高级React/Next.js"
+type = "single"
+question = "Next.js的Partial Prerendering是什么？"
+options = ["结合静态和动态渲染的混合方案", "部分页面渲染", "增量渲染", "懒加载"]
+answer = "结合静态和动态渲染的混合方案"
+explanation = "PPR允许在同一路由中混合静态和动态内容"
+
+[[questions]]
+id = 14
+category = "高级React/Next.js"
+type = "single"
+question = "React错误边界不能捕获哪类错误？"
+options = ["事件处理器中的错误", "渲染错误", "生命周期错误", "构造函数错误"]
+answer = "事件处理器中的错误"
+explanation = "错误边界只能捕获渲染期间、生命周期和构造函数中的错误"
+
+[[questions]]
+id = 15
+category = "高级React/Next.js"
+type = "single"
+question = "Next.js的Server Actions主要用途是？"
+options = ["在服务器端直接处理表单和数据变更", "客户端状态管理", "路由处理", "静态生成"]
+answer = "在服务器端直接处理表单和数据变更"
+explanation = "Server Actions允许直接在服务器端执行数据操作"
+
+[[questions]]
+id = 16
+category = "高级React/Next.js"
+type = "single"
+question = "什么是React的合成事件系统？"
+options = ["跨浏览器的事件系统封装", "自定义事件", "原生事件", "第三方事件库"]
+answer = "跨浏览器的事件系统封装"
+explanation = "合成事件提供跨浏览器一致的事件处理"
+
+[[questions]]
+id = 17
+category = "高级React/Next.js"
+type = "multiple"
+question = "Next.js应用的安全最佳实践包括？（多选）"
+options = ["CSP头设置", "环境变量管理", "输入验证", "HTTPS强制"]
+answer = ["CSP头设置", "环境变量管理", "输入验证", "HTTPS强制"]
+explanation = "全面的安全措施保护应用免受攻击"
+
+[[questions]]
+id = 18
+category = "高级React/Next.js"
+type = "single"
+question = "React的批量更新机制在什么情况下失效？"
+options = ["setTimeout/Promise等异步操作中", "同步代码中", "组件内部", "渲染期间"]
+answer = "setTimeout/Promise等异步操作中"
+explanation = "React 18之前，异步操作中的更新不会自动批处理"
+
+[[questions]]
+id = 19
+category = "高级React/Next.js"
+type = "single"
+question = "Next.js的动态导入与React.lazy的区别是？"
+options = ["Next.js动态导入支持SSR", "完全相同", "React.lazy更快", "Next.js不支持动态导入"]
+answer = "Next.js动态导入支持SSR"
+explanation = "Next.js的dynamic提供SSR友好的代码分割"
+
+[[questions]]
+id = 20
+category = "高级React/Next.js"
+type = "single"
+question = "如何处理Next.js应用的内存泄漏？"
+options = ["清理事件监听器、取消订阅、避免闭包陷阱", "增加内存", "重启服务器", "使用更多缓存"]
+answer = "清理事件监听器、取消订阅、避免闭包陷阱"
+explanation = "正确的资源管理防止内存泄漏"
+
+# Node.js高级与架构部分 (21-40题)
+
+[[questions]]
+id = 21
+category = "Node.js高级"
+type = "single"
+question = "Node.js的Event Loop包含哪些阶段？"
+options = ["timers、pending、idle、poll、check、close", "只有一个阶段", "同步和异步", "输入和输出"]
+answer = "timers、pending、idle、poll、check、close"
+explanation = "Event Loop通过多个阶段处理不同类型的回调"
+
+[[questions]]
+id = 22
+category = "Node.js高级"
+type = "single"
+question = "如何优化Node.js应用的内存使用？"
+options = ["使用流处理、避免内存泄漏、合理使用缓存", "增加内存限制", "使用更多进程", "关闭垃圾回收"]
+answer = "使用流处理、避免内存泄漏、合理使用缓存"
+explanation = "合理的内存管理策略确保应用稳定运行"
+
+[[questions]]
+id = 23
+category = "Node.js高级"
+type = "multiple"
+question = "Node.js性能监控指标包括？（多选）"
+options = ["CPU使用率", "内存使用", "事件循环延迟", "垃圾回收频率"]
+answer = ["CPU使用率", "内存使用", "事件循环延迟", "垃圾回收频率"]
+explanation = "全面监控帮助发现性能瓶颈"
+
+[[questions]]
+id = 24
+category = "Node.js高级"
+type = "single"
+question = "Node.js中的Worker Threads用于什么？"
+options = ["CPU密集型任务的并行处理", "I/O操作", "网络请求", "文件读写"]
+answer = "CPU密集型任务的并行处理"
+explanation = "Worker Threads提供真正的多线程并行计算"
+
+[[questions]]
+id = 25
+category = "Node.js高级"
+type = "single"
+question = "什么是Node.js的背压（Backpressure）？"
+options = ["数据生产速度超过消费速度", "内存压力", "CPU压力", "网络压力"]
+answer = "数据生产速度超过消费速度"
+explanation = "背压机制防止内存溢出"
+
+[[questions]]
+id = 26
+category = "Node.js高级"
+type = "single"
+question = "如何实现Node.js应用的优雅关闭？"
+options = ["监听信号、完成现有请求、清理资源、关闭连接", "直接退出", "强制关闭", "重启服务"]
+answer = "监听信号、完成现有请求、清理资源、关闭连接"
+explanation = "优雅关闭确保不丢失正在处理的请求"
+
+[[questions]]
+id = 27
+category = "Node.js高级"
+type = "multiple"
+question = "Node.js安全最佳实践包括？（多选）"
+options = ["输入验证", "使用helmet", "限流", "依赖审计"]
+answer = ["输入验证", "使用helmet", "限流", "依赖审计"]
+explanation = "多层安全措施保护应用"
+
+[[questions]]
+id = 28
+category = "Node.js高级"
+type = "single"
+question = "Node.js的Cluster模块如何实现负载均衡？"
+options = ["Round-robin调度", "随机分配", "最少连接", "加权轮询"]
+answer = "Round-robin调度"
+explanation = "默认使用轮询方式分配请求到工作进程"
+
+[[questions]]
+id = 29
+category = "Node.js高级"
+type = "single"
+question = "什么是Node.js的libuv？"
+options = ["提供异步I/O的C库", "JavaScript引擎", "Web框架", "数据库驱动"]
+answer = "提供异步I/O的C库"
+explanation = "libuv是Node.js异步I/O的核心"
+
+[[questions]]
+id = 30
+category = "Node.js高级"
+type = "single"
+question = "如何处理Node.js中的未捕获异常？"
+options = ["process.on('uncaughtException')但应避免继续运行", "忽略异常", "自动重启", "记录后继续"]
+answer = "process.on('uncaughtException')但应避免继续运行"
+explanation = "捕获异常后应该优雅关闭进程"
+
+[[questions]]
+id = 31
+category = "Node.js高级"
+type = "single"
+question = "Node.js的流（Stream）有哪些类型？"
+options = ["Readable、Writable、Duplex、Transform", "输入流和输出流", "文件流和网络流", "同步流和异步流"]
+answer = "Readable、Writable、Duplex、Transform"
+explanation = "Node.js提供四种基本流类型"
+
+[[questions]]
+id = 32
+category = "Node.js高级"
+type = "single"
+question = "什么是Node.js的N-API？"
+options = ["构建原生插件的稳定API", "网络API", "新版API", "Node API"]
+answer = "构建原生插件的稳定API"
+explanation = "N-API提供ABI稳定的原生模块接口"
+
+[[questions]]
+id = 33
+category = "Node.js高级"
+type = "multiple"
+question = "微服务架构的挑战包括？（多选）"
+options = ["服务发现", "分布式事务", "监控复杂", "网络延迟"]
+answer = ["服务发现", "分布式事务", "监控复杂", "网络延迟"]
+explanation = "微服务带来架构复杂性"
+
+[[questions]]
+id = 34
+category = "Node.js高级"
+type = "single"
+question = "如何实现Node.js的热重载？"
+options = ["使用nodemon或pm2等工具", "手动重启", "自动重启", "不需要重载"]
+answer = "使用nodemon或pm2等工具"
+explanation = "开发工具提供文件变化监听和自动重启"
+
+[[questions]]
+id = 35
+category = "Node.js高级"
+type = "single"
+question = "Node.js的内存限制默认是多少？"
+options = ["64位系统约1.4GB", "无限制", "4GB", "8GB"]
+answer = "64位系统约1.4GB"
+explanation = "V8默认限制可通过--max-old-space-size调整"
+
+[[questions]]
+id = 36
+category = "Node.js高级"
+type = "single"
+question = "什么是事件发射器（EventEmitter）？"
+options = ["Node.js的事件驱动架构核心", "错误处理器", "日志记录器", "HTTP服务器"]
+answer = "Node.js的事件驱动架构核心"
+explanation = "EventEmitter是Node.js事件系统的基础"
+
+[[questions]]
+id = 37
+category = "Node.js高级"
+type = "single"
+question = "如何调试Node.js内存泄漏？"
+options = ["使用heapdump、Chrome DevTools、clinic.js", "增加内存", "重启应用", "忽略问题"]
+answer = "使用heapdump、Chrome DevTools、clinic.js"
+explanation = "专业工具帮助定位内存泄漏"
+
+[[questions]]
+id = 38
+category = "Node.js高级"
+type = "multiple"
+question = "Node.js应用部署策略包括？（多选）"
+options = ["蓝绿部署", "滚动更新", "金丝雀发布", "灰度发布"]
+answer = ["蓝绿部署", "滚动更新", "金丝雀发布", "灰度发布"]
+explanation = "不同策略适用不同场景"
+
+[[questions]]
+id = 39
+category = "Node.js高级"
+type = "single"
+question = "什么是Node.js的AsyncLocalStorage？"
+options = ["异步上下文追踪机制", "本地存储", "缓存系统", "数据库"]
+answer = "异步上下文追踪机制"
+explanation = "AsyncLocalStorage提供异步调用链的上下文传递"
+
+[[questions]]
+id = 40
+category = "Node.js高级"
+type = "single"
+question = "如何优化Node.js的启动时间？"
+options = ["懒加载、减少依赖、使用快照", "增加内存", "并行启动", "预热缓存"]
+answer = "懒加载、减少依赖、使用快照"
+explanation = "多种优化技术减少冷启动时间"
+
+# 数据库优化与架构部分 (41-60题)
+
+[[questions]]
+id = 41
+category = "数据库优化"
+type = "single"
+question = "PostgreSQL的MVCC机制是什么？"
+options = ["多版本并发控制", "多视图缓存控制", "内存版本控制", "多值约束检查"]
+answer = "多版本并发控制"
+explanation = "MVCC允许读写并发不阻塞"
+
+[[questions]]
+id = 42
+category = "数据库优化"
+type = "multiple"
+question = "数据库索引优化策略包括？（多选）"
+options = ["覆盖索引", "部分索引", "表达式索引", "合理选择索引类型"]
+answer = ["覆盖索引", "部分索引", "表达式索引", "合理选择索引类型"]
+explanation = "不同索引策略适用不同查询场景"
+
+[[questions]]
+id = 43
+category = "数据库优化"
+type = "single"
+question = "什么是数据库连接池的连接泄漏？"
+options = ["连接未正确释放导致耗尽", "连接超时", "连接中断", "连接重复"]
+answer = "连接未正确释放导致耗尽"
+explanation = "连接泄漏会导致应用无法获取新连接"
+
+[[questions]]
+id = 44
+category = "数据库优化"
+type = "single"
+question = "PostgreSQL的分区表优势是什么？"
+options = ["提高查询性能和维护效率", "减少存储空间", "简化表结构", "自动备份"]
+answer = "提高查询性能和维护效率"
+explanation = "分区表可以显著提升大表的查询和维护性能"
+
+[[questions]]
+id = 45
+category = "数据库优化"
+type = "single"
+question = "Redis的持久化RDB和AOF如何选择？"
+options = ["根据数据重要性和性能需求权衡", "总是用RDB", "总是用AOF", "不需要持久化"]
+answer = "根据数据重要性和性能需求权衡"
+explanation = "RDB性能好但可能丢数据，AOF安全但影响性能"
+
+[[questions]]
+id = 46
+category = "数据库优化"
+type = "single"
+question = "什么是数据库的慢查询？"
+options = ["执行时间超过阈值的查询", "语法错误的查询", "返回大量数据的查询", "失败的查询"]
+answer = "执行时间超过阈值的查询"
+explanation = "慢查询是性能优化的重要指标"
+
+[[questions]]
+id = 47
+category = "数据库优化"
+type = "multiple"
+question = "Redis集群的数据分片策略包括？（多选）"
+options = ["哈希槽", "一致性哈希", "范围分片", "随机分片"]
+answer = ["哈希槽", "一致性哈希", "范围分片"]
+explanation = "不同分片策略有不同的适用场景"
+
+[[questions]]
+id = 48
+category = "数据库优化"
+type = "single"
+question = "PostgreSQL的死锁如何处理？"
+options = ["自动检测并回滚其中一个事务", "等待超时", "手动处理", "重启数据库"]
+answer = "自动检测并回滚其中一个事务"
+explanation = "PostgreSQL有死锁检测机制"
+
+[[questions]]
+id = 49
+category = "数据库优化"
+type = "single"
+question = "什么是数据库的读写分离？"
+options = ["主库写从库读", "分离不同表", "分离不同数据库", "分离不同字段"]
+answer = "主库写从库读"
+explanation = "读写分离提高数据库并发能力"
+
+[[questions]]
+id = 50
+category = "数据库优化"
+type = "single"
+question = "Redis的缓存雪崩是什么？"
+options = ["大量缓存同时失效", "缓存被清空", "缓存服务崩溃", "缓存穿透"]
+answer = "大量缓存同时失效"
+explanation = "缓存雪崩会造成数据库压力激增"
+
+[[questions]]
+id = 51
+category = "数据库优化"
+type = "single"
+question = "PostgreSQL的explain analyze作用是什么？"
+options = ["显示查询执行计划和实际执行统计", "优化查询", "执行查询", "分析表结构"]
+answer = "显示查询执行计划和实际执行统计"
+explanation = "explain analyze是查询优化的重要工具"
+
+[[questions]]
+id = 52
+category = "数据库优化"
+type = "multiple"
+question = "数据库事务隔离级别包括？（多选）"
+options = ["读未提交", "读已提交", "可重复读", "串行化"]
+answer = ["读未提交", "读已提交", "可重复读", "串行化"]
+explanation = "不同隔离级别平衡并发性和一致性"
+
+[[questions]]
+id = 53
+category = "数据库优化"
+type = "single"
+question = "什么是数据库的热点数据？"
+options = ["频繁访问的数据", "最新数据", "最大数据", "加密数据"]
+answer = "频繁访问的数据"
+explanation = "热点数据需要特殊的缓存和优化策略"
+
+[[questions]]
+id = 54
+category = "数据库优化"
+type = "single"
+question = "Redis的Pipeline机制优势是什么？"
+options = ["减少网络往返次数", "提高数据安全", "增加存储容量", "简化操作"]
+answer = "减少网络往返次数"
+explanation = "Pipeline批量发送命令提高效率"
+
+[[questions]]
+id = 55
+category = "数据库优化"
+type = "single"
+question = "PostgreSQL的vacuum full和普通vacuum的区别？"
+options = ["full会锁表并重建，普通只标记空间", "没有区别", "full更快", "普通会锁表"]
+answer = "full会锁表并重建，普通只标记空间"
+explanation = "vacuum full更彻底但影响更大"
+
+[[questions]]
+id = 56
+category = "数据库优化"
+type = "single"
+question = "什么是数据库的分库分表？"
+options = ["将数据分散到多个库或表", "备份数据", "合并数据", "删除数据"]
+answer = "将数据分散到多个库或表"
+explanation = "分库分表解决单库单表的性能瓶颈"
+
+[[questions]]
+id = 57
+category = "数据库优化"
+type = "multiple"
+question = "Redis内存优化策略包括？（多选）"
+options = ["使用合适的数据结构", "设置过期时间", "内存淘汰策略", "压缩存储"]
+answer = ["使用合适的数据结构", "设置过期时间", "内存淘汰策略", "压缩存储"]
+explanation = "多种策略结合优化内存使用"
+
+[[questions]]
+id = 58
+category = "数据库优化"
+type = "single"
+question = "PostgreSQL的HOT（Heap Only Tuple）更新是什么？"
+options = ["不更新索引的堆内更新", "热数据更新", "高优先级更新", "批量更新"]
+answer = "不更新索引的堆内更新"
+explanation = "HOT更新减少索引维护开销"
+
+[[questions]]
+id = 59
+category = "数据库优化"
+type = "single"
+question = "如何监控PostgreSQL性能？"
+options = ["pg_stat_statements、pg_stat_activity、日志分析", "只看错误日志", "定期重启", "查看文件大小"]
+answer = "pg_stat_statements、pg_stat_activity、日志分析"
+explanation = "综合使用多种工具监控数据库性能"
+
+[[questions]]
+id = 60
+category = "数据库优化"
+type = "single"
+question = "Redis的Lua脚本优势是什么？"
+options = ["原子性执行和减少网络开销", "更快速度", "更大容量", "更好安全性"]
+answer = "原子性执行和减少网络开销"
+explanation = "Lua脚本在服务器端原子执行复杂逻辑"
+
+# AI/RAG系统集成部分 (61-80题)
+
+[[questions]]
+id = 61
+category = "AI/RAG集成"
+type = "single"
+question = "RAG系统中的文档分块策略有哪些？"
+options = ["固定大小、语义分割、滑动窗口、层次分块", "随机分块", "不分块", "按行分块"]
+answer = "固定大小、语义分割、滑动窗口、层次分块"
+explanation = "不同分块策略影响检索效果"
+
+[[questions]]
+id = 62
+category = "AI/RAG集成"
+type = "single"
+question = "向量数据库的ANN搜索算法包括？"
+options = ["HNSW、IVF、LSH", "二分查找", "线性搜索", "哈希查找"]
+answer = "HNSW、IVF、LSH"
+explanation = "近似最近邻搜索算法提高检索效率"
+
+[[questions]]
+id = 63
+category = "AI/RAG集成"
+type = "multiple"
+question = "优化LLM响应质量的方法包括？（多选）"
+options = ["提示工程", "Few-shot学习", "思维链", "温度参数调整"]
+answer = ["提示工程", "Few-shot学习", "思维链", "温度参数调整"]
+explanation = "多种技术结合提高生成质量"
+
+[[questions]]
+id = 64
+category = "AI/RAG集成"
+type = "single"
+question = "什么是混合搜索在RAG中的应用？"
+options = ["结合关键词和语义搜索", "多模态搜索", "多语言搜索", "实时搜索"]
+answer = "结合关键词和语义搜索"
+explanation = "混合搜索提高检索的准确性和召回率"
+
+[[questions]]
+id = 65
+category = "AI/RAG集成"
+type = "single"
+question = "LangChain中的Agent是什么？"
+options = ["能够使用工具做决策的LLM系统", "用户代理", "网络代理", "数据代理"]
+answer = "能够使用工具做决策的LLM系统"
+explanation = "Agent可以动态选择和使用工具完成任务"
+
+[[questions]]
+id = 66
+category = "AI/RAG集成"
+type = "single"
+question = "如何处理RAG中的文档更新？"
+options = ["增量索引、版本控制、定期重建", "完全重建", "不更新", "手动更新"]
+answer = "增量索引、版本控制、定期重建"
+explanation = "高效的更新策略保持知识库时效性"
+
+[[questions]]
+id = 67
+category = "AI/RAG集成"
+type = "multiple"
+question = "向量嵌入的质量评估指标包括？（多选）"
+options = ["余弦相似度", "欧氏距离", "点积", "曼哈顿距离"]
+answer = ["余弦相似度", "欧氏距离", "点积", "曼哈顿距离"]
+explanation = "不同度量方式适用不同场景"
+
+[[questions]]
+id = 68
+category = "AI/RAG集成"
+type = "single"
+question = "什么是ReRank在RAG中的作用？"
+options = ["对初步检索结果重新排序", "重新生成", "重新索引", "重新分块"]
+answer = "对初步检索结果重新排序"
+explanation = "ReRank提高最终返回结果的相关性"
+
+[[questions]]
+id = 69
+category = "AI/RAG集成"
+type = "single"
+question = "如何减少LLM的幻觉问题？"
+options = ["提供准确上下文、温度调低、事实验证", "增加参数", "更长提示", "更多训练"]
+answer = "提供准确上下文、温度调低、事实验证"
+explanation = "多种方法结合减少虚假信息生成"
+
+[[questions]]
+id = 70
+category = "AI/RAG集成"
+type = "single"
+question = "什么是多跳问答在RAG中？"
+options = ["需要多次检索才能回答的问题", "多个问题", "重复问题", "简单问题"]
+answer = "需要多次检索才能回答的问题"
+explanation = "复杂问题需要迭代检索和推理"
+
+[[questions]]
+id = 71
+category = "AI/RAG集成"
+type = "single"
+question = "LLM的上下文窗口管理策略包括？"
+options = ["摘要压缩、重要性排序、滑动窗口", "随机截断", "固定截断", "不管理"]
+answer = "摘要压缩、重要性排序、滑动窗口"
+explanation = "有效管理有限的上下文窗口"
+
+[[questions]]
+id = 72
+category = "AI/RAG集成"
+type = "multiple"
+question = "RAG系统的评估指标包括？（多选）"
+options = ["准确率", "召回率", "响应时间", "成本效率"]
+answer = ["准确率", "召回率", "响应时间", "成本效率"]
+explanation = "全面评估RAG系统性能"
+
+[[questions]]
+id = 73
+category = "AI/RAG集成"
+type = "single"
+question = "什么是Embedding模型的微调？"
+options = ["针对特定领域优化向量表示", "调整大小", "压缩模型", "加速推理"]
+answer = "针对特定领域优化向量表示"
+explanation = "领域特定的embedding提高检索效果"
+
+[[questions]]
+id = 74
+category = "AI/RAG集成"
+type = "single"
+question = "如何处理多语言RAG？"
+options = ["多语言embedding、翻译对齐、跨语言检索", "分别处理", "只用英语", "自动翻译"]
+answer = "多语言embedding、翻译对齐、跨语言检索"
+explanation = "多语言RAG需要特殊的处理策略"
+
+[[questions]]
+id = 75
+category = "AI/RAG集成"
+type = "single"
+question = "什么是知识图谱增强的RAG？"
+options = ["结合结构化知识提高检索", "图像增强", "音频增强", "视频增强"]
+answer = "结合结构化知识提高检索"
+explanation = "知识图谱提供实体关系信息"
+
+[[questions]]
+id = 76
+category = "AI/RAG集成"
+type = "single"
+question = "LLM推理优化技术包括？"
+options = ["量化、剪枝、知识蒸馏、缓存", "增加参数", "更大模型", "更多层"]
+answer = "量化、剪枝、知识蒸馏、缓存"
+explanation = "优化技术提高推理效率降低成本"
+
+[[questions]]
+id = 77
+category = "AI/RAG集成"
+type = "multiple"
+question = "RAG的安全考虑包括？（多选）"
+options = ["提示注入防护", "数据隐私", "内容过滤", "访问控制"]
+answer = ["提示注入防护", "数据隐私", "内容过滤", "访问控制"]
+explanation = "全面的安全措施保护RAG系统"
+
+[[questions]]
+id = 78
+category = "AI/RAG集成"
+type = "single"
+question = "什么是RAG中的查询改写？"
+options = ["优化用户查询以提高检索效果", "纠正拼写", "翻译查询", "扩展查询"]
+answer = "优化用户查询以提高检索效果"
+explanation = "查询改写提高检索的准确性"
+
+[[questions]]
+id = 79
+category = "AI/RAG集成"
+type = "single"
+question = "如何监控RAG系统性能？"
+options = ["日志分析、指标追踪、用户反馈、A/B测试", "只看错误", "定期重启", "不监控"]
+answer = "日志分析、指标追踪、用户反馈、A/B测试"
+explanation = "全方位监控确保系统稳定运行"
+
+[[questions]]
+id = 80
+category = "AI/RAG集成"
+type = "single"
+question = "什么是自适应检索在RAG中？"
+options = ["根据查询复杂度动态调整检索策略", "固定检索", "随机检索", "全量检索"]
+answer = "根据查询复杂度动态调整检索策略"
+explanation = "自适应策略优化检索效率和效果"
+
+# 系统架构与实践部分 (81-100题)
+
+[[questions]]
+id = 81
+category = "系统架构"
+type = "single"
+question = "高并发媒体网站的架构关键是什么？"
+options = ["CDN、缓存层、负载均衡、数据库优化", "更大服务器", "更多内存", "更快CPU"]
+answer = "CDN、缓存层、负载均衡、数据库优化"
+explanation = "多层架构应对高并发访问"
+
+[[questions]]
+id = 82
+category = "系统架构"
+type = "multiple"
+question = "微服务通信方式包括？（多选）"
+options = ["REST API", "gRPC", "消息队列", "GraphQL"]
+answer = ["REST API", "gRPC", "消息队列", "GraphQL"]
+explanation = "不同通信方式适用不同场景"
+
+[[questions]]
+id = 83
+category = "系统架构"
+type = "single"
+question = "什么是服务网格（Service Mesh）？"
+options = ["处理服务间通信的基础设施层", "网络设备", "API网关", "负载均衡器"]
+answer = "处理服务间通信的基础设施层"
+explanation = "服务网格提供流量管理、安全、可观测性"
+
+[[questions]]
+id = 84
+category = "系统架构"
+type = "single"
+question = "如何实现系统的高可用？"
+options = ["冗余部署、故障转移、健康检查、自动恢复", "单点部署", "手动维护", "定期重启"]
+answer = "冗余部署、故障转移、健康检查、自动恢复"
+explanation = "多种机制确保系统持续可用"
+
+[[questions]]
+id = 85
+category = "系统架构"
+type = "single"
+question = "什么是CQRS模式？"
+options = ["命令查询职责分离", "缓存查询系统", "复杂查询系统", "查询优化"]
+answer = "命令查询职责分离"
+explanation = "CQRS分离读写模型优化性能"
+
+[[questions]]
+id = 86
+category = "系统架构"
+type = "multiple"
+question = "容器编排的优势包括？（多选）"
+options = ["自动扩缩容", "服务发现", "滚动更新", "自愈能力"]
+answer = ["自动扩缩容", "服务发现", "滚动更新", "自愈能力"]
+explanation = "容器编排简化应用管理"
+
+[[questions]]
+id = 87
+category = "系统架构"
+type = "single"
+question = "什么是事件驱动架构？"
+options = ["基于事件的异步通信架构", "定时任务", "同步调用", "批处理"]
+answer = "基于事件的异步通信架构"
+explanation = "事件驱动实现松耦合和高扩展性"
+
+[[questions]]
+id = 88
+category = "系统架构"
+type = "single"
+question = "如何设计多租户系统？"
+options = ["数据隔离、资源隔离、配置隔离", "共享所有", "完全独立", "不隔离"]
+answer = "数据隔离、资源隔离、配置隔离"
+explanation = "多租户需要考虑隔离和效率平衡"
+
+[[questions]]
+id = 89
+category = "系统架构"
+type = "single"
+question = "什么是断路器模式？"
+options = ["防止级联故障的容错机制", "电路保护", "网络断开", "服务停止"]
+answer = "防止级联故障的容错机制"
+explanation = "断路器保护系统免受故障服务影响"
+
+[[questions]]
+id = 90
+category = "系统架构"
+type = "multiple"
+question = "API设计最佳实践包括？（多选）"
+options = ["版本管理", "文档完善", "错误处理", "限流保护"]
+answer = ["版本管理", "文档完善", "错误处理", "限流保护"]
+explanation = "良好的API设计提高可用性和维护性"
+
+[[questions]]
+id = 91
+category = "系统架构"
+type = "single"
+question = "什么是无服务器架构的优势？"
+options = ["按需付费、自动扩展、无需管理服务器", "更快速度", "更大容量", "更好控制"]
+answer = "按需付费、自动扩展、无需管理服务器"
+explanation = "Serverless简化运维降低成本"
+
+[[questions]]
+id = 92
+category = "系统架构"
+type = "single"
+question = "如何处理分布式事务？"
+options = ["两阶段提交、Saga模式、TCC模式", "不处理", "避免事务", "单机事务"]
+answer = "两阶段提交、Saga模式、TCC模式"
+explanation = "不同模式适用不同的一致性要求"
+
+[[questions]]
+id = 93
+category = "系统架构"
+type = "single"
+question = "什么是灰度发布？"
+options = ["逐步推送新版本给部分用户", "全量发布", "回滚发布", "紧急发布"]
+answer = "逐步推送新版本给部分用户"
+explanation = "灰度发布降低新版本风险"
+
+[[questions]]
+id = 94
+category = "系统架构"
+type = "multiple"
+question = "监控系统应该包括哪些方面？（多选）"
+options = ["应用监控", "基础设施监控", "业务监控", "用户体验监控"]
+answer = ["应用监控", "基础设施监控", "业务监控", "用户体验监控"]
+explanation = "全方位监控保障系统健康"
+
+[[questions]]
+id = 95
+category = "系统架构"
+type = "single"
+question = "什么是SRE（Site Reliability Engineering）？"
+options = ["将软件工程应用于运维", "安全工程", "需求工程", "测试工程"]
+answer = "将软件工程应用于运维"
+explanation = "SRE强调自动化和可靠性"
+
+[[questions]]
+id = 96
+category = "系统架构"
+type = "single"
+question = "如何设计可扩展的消息系统？"
+options = ["分区、集群、背压控制、消息持久化", "单队列", "同步处理", "内存队列"]
+answer = "分区、集群、背压控制、消息持久化"
+explanation = "可扩展消息系统需要考虑多个方面"
+
+[[questions]]
+id = 97
+category = "系统架构"
+type = "single"
+question = "什么是边缘计算在Web应用中的应用？"
+options = ["在靠近用户的边缘节点处理请求", "中心处理", "客户端处理", "云端处理"]
+answer = "在靠近用户的边缘节点处理请求"
+explanation = "边缘计算减少延迟提高响应速度"
+
+[[questions]]
+id = 98
+category = "系统架构"
+type = "multiple"
+question = "技术选型需要考虑的因素？（多选）"
+options = ["团队熟悉度", "社区活跃度", "性能要求", "维护成本"]
+answer = ["团队熟悉度", "社区活跃度", "性能要求", "维护成本"]
+explanation = "综合评估做出合理的技术选择"
+
+[[questions]]
+id = 99
+category = "系统架构"
+type = "single"
+question = "什么是零信任架构？"
+options = ["不信任任何请求，持续验证", "完全信任", "部分信任", "一次验证"]
+answer = "不信任任何请求，持续验证"
+explanation = "零信任提高系统安全性"
+
+[[questions]]
+id = 100
+category = "系统架构"
+type = "single"
+question = "高级全栈工程师最重要的能力是什么？"
+options = ["架构设计和问题解决能力", "编码速度", "技术广度", "项目管理"]
+answer = "架构设计和问题解决能力"
+explanation = "高级工程师需要全局视角和深度思考"
+
+# 评分标准
+[scoring]
+excellent = "90-100分：优秀，具备中级全栈工程师的全面能力"
+good = "75-89分：良好，大部分领域掌握较好，可针对性提升"
+pass = "60-74分：及格，需要加强实战经验和深度理解"
+fail = "60分以下：需要更多项目经验和系统学习"
+
+# 学习建议
+[recommendations]
+level_1 = """
+0-30分学习建议：
+1. 架构基础：学习系统设计和架构模式
+2. 深入框架：掌握React/Next.js高级特性
+3. 数据库优化：学习查询优化和索引设计
+4. 实战项目：参与复杂项目开发
+5. 推荐资源：System Design Interview、High Performance Browser Networking
+"""
+
+level_2 = """
+31-60分学习建议：
+1. 性能优化：深入学习前后端性能优化
+2. AI集成：实践LLM应用开发和RAG系统
+3. 微服务架构：学习分布式系统设计
+4. 监控运维：掌握DevOps和SRE实践
+5. 推荐资源：Designing Data-Intensive Applications、Site Reliability Engineering
+"""
+
+level_3 = """
+61-80分学习建议：
+1. 架构演进：学习大规模系统架构演进
+2. 技术领导：培养技术决策和团队领导能力
+3. 创新实践：探索前沿技术和最佳实践
+4. 开源贡献：参与开源项目贡献代码
+5. 推荐资源：技术大会、架构师社区、开源项目
+"""
+
+level_4 = """
+81-100分学习建议：
+1. 技术布道：分享经验和最佳实践
+2. 架构创新：设计和实现创新解决方案
+3. 团队培养：指导初级工程师成长
+4. 业务理解：深入理解业务需求和价值
+5. 推荐资源：撰写技术博客、技术演讲、架构评审
+"""

@@ -1,0 +1,964 @@
+# 深潮Techflow全栈工程师面试题库 - 初级篇
+# 适合经验：1-3年全栈开发经验或刚接触Web3媒体领域
+
+[metadata]
+title = "深潮Techflow全栈工程师面试题库 - 初级篇"
+version = "1.0.0"
+description = "针对初级全栈工程师的100道面试题"
+difficulty = "初级"
+total_questions = 100
+
+# React/Next.js基础部分 (1-20题)
+
+[[questions]]
+id = 1
+category = "React/Next.js基础"
+type = "single"
+question = "React中的Virtual DOM是什么？"
+options = ["内存中的DOM表示", "真实DOM", "HTML文件", "CSS样式"]
+answer = "内存中的DOM表示"
+explanation = "Virtual DOM是React在内存中维护的DOM树的轻量级表示，用于优化渲染性能"
+
+[[questions]]
+id = 2
+category = "React/Next.js基础"
+type = "single"
+question = "Next.js相比纯React的主要优势是什么？"
+options = ["服务端渲染和SEO优化", "更小的打包体积", "更快的开发速度", "更好的浏览器兼容性"]
+answer = "服务端渲染和SEO优化"
+explanation = "Next.js提供开箱即用的SSR/SSG功能，显著改善SEO和首屏加载性能"
+
+[[questions]]
+id = 3
+category = "React/Next.js基础"
+type = "multiple"
+question = "React Hooks包括哪些？（多选）"
+options = ["useState", "useEffect", "useContext", "useClass"]
+answer = ["useState", "useEffect", "useContext"]
+explanation = "React Hooks允许在函数组件中使用状态和其他React特性"
+
+[[questions]]
+id = 4
+category = "React/Next.js基础"
+type = "single"
+question = "什么是JSX？"
+options = ["JavaScript XML语法扩展", "JSON格式", "CSS预处理器", "数据库查询语言"]
+answer = "JavaScript XML语法扩展"
+explanation = "JSX允许在JavaScript中编写类似HTML的代码"
+
+[[questions]]
+id = 5
+category = "React/Next.js基础"
+type = "single"
+question = "Next.js中的getStaticProps用于什么？"
+options = ["构建时获取数据", "运行时获取数据", "处理用户输入", "管理状态"]
+answer = "构建时获取数据"
+explanation = "getStaticProps在构建时获取数据，用于静态生成"
+
+[[questions]]
+id = 6
+category = "React/Next.js基础"
+type = "single"
+question = "React中的state和props有什么区别？"
+options = ["state可变props不可变", "都可变", "都不可变", "props可变state不可变"]
+answer = "state可变props不可变"
+explanation = "state是组件内部管理的可变数据，props是父组件传递的只读数据"
+
+[[questions]]
+id = 7
+category = "React/Next.js基础"
+type = "single"
+question = "Next.js的文件路由系统基于什么？"
+options = ["文件系统结构", "配置文件", "数据库", "URL参数"]
+answer = "文件系统结构"
+explanation = "Next.js使用pages目录下的文件结构自动生成路由"
+
+[[questions]]
+id = 8
+category = "React/Next.js基础"
+type = "multiple"
+question = "Next.js支持哪些渲染方式？（多选）"
+options = ["SSR", "SSG", "ISR", "CSR"]
+answer = ["SSR", "SSG", "ISR", "CSR"]
+explanation = "Next.js支持服务端渲染、静态生成、增量静态再生和客户端渲染"
+
+[[questions]]
+id = 9
+category = "React/Next.js基础"
+type = "single"
+question = "useEffect Hook的作用是什么？"
+options = ["处理副作用", "管理状态", "创建组件", "处理路由"]
+answer = "处理副作用"
+explanation = "useEffect用于处理副作用如数据获取、订阅、DOM操作等"
+
+[[questions]]
+id = 10
+category = "React/Next.js基础"
+type = "single"
+question = "React组件的生命周期方法在函数组件中如何实现？"
+options = ["使用Hooks", "使用类方法", "不能实现", "使用装饰器"]
+answer = "使用Hooks"
+explanation = "函数组件通过useEffect等Hooks实现生命周期功能"
+
+[[questions]]
+id = 11
+category = "React/Next.js基础"
+type = "single"
+question = "Next.js中的API Routes位于哪个目录？"
+options = ["pages/api", "api", "routes", "server"]
+answer = "pages/api"
+explanation = "API Routes位于pages/api目录，用于创建后端API端点"
+
+[[questions]]
+id = 12
+category = "React/Next.js基础"
+type = "single"
+question = "什么是React的单向数据流？"
+options = ["数据从父组件流向子组件", "数据双向绑定", "数据循环流动", "数据随机流动"]
+answer = "数据从父组件流向子组件"
+explanation = "React采用单向数据流，数据通过props从父组件传递到子组件"
+
+[[questions]]
+id = 13
+category = "React/Next.js基础"
+type = "single"
+question = "Next.js的Image组件优势是什么？"
+options = ["自动优化和懒加载", "更大的图片", "更多格式支持", "更快的上传"]
+answer = "自动优化和懒加载"
+explanation = "Next.js Image组件提供自动图片优化、懒加载和响应式支持"
+
+[[questions]]
+id = 14
+category = "React/Next.js基础"
+type = "single"
+question = "React中key属性的作用是什么？"
+options = ["帮助React识别列表项变化", "设置样式", "绑定事件", "存储数据"]
+answer = "帮助React识别列表项变化"
+explanation = "key帮助React识别哪些列表项发生了变化，优化渲染性能"
+
+[[questions]]
+id = 15
+category = "React/Next.js基础"
+type = "multiple"
+question = "Next.js的优化特性包括？（多选）"
+options = ["代码分割", "预取", "图片优化", "字体优化"]
+answer = ["代码分割", "预取", "图片优化", "字体优化"]
+explanation = "Next.js提供多种内置优化功能提升性能"
+
+[[questions]]
+id = 16
+category = "React/Next.js基础"
+type = "single"
+question = "useState Hook返回什么？"
+options = ["状态值和更新函数", "只有状态值", "只有更新函数", "Promise对象"]
+answer = "状态值和更新函数"
+explanation = "useState返回一个数组，包含当前状态值和更新状态的函数"
+
+[[questions]]
+id = 17
+category = "React/Next.js基础"
+type = "single"
+question = "Next.js中的动态路由如何定义？"
+options = ["使用方括号[param]", "使用花括号{param}", "使用圆括号(param)", "使用尖括号<param>"]
+answer = "使用方括号[param]"
+explanation = "Next.js使用方括号语法定义动态路由参数"
+
+[[questions]]
+id = 18
+category = "React/Next.js基础"
+type = "single"
+question = "React.memo的作用是什么？"
+options = ["性能优化防止不必要渲染", "管理内存", "处理错误", "创建组件"]
+answer = "性能优化防止不必要渲染"
+explanation = "React.memo是高阶组件，通过浅比较props来避免不必要的重新渲染"
+
+[[questions]]
+id = 19
+category = "React/Next.js基础"
+type = "single"
+question = "Next.js的_app.js文件作用是什么？"
+options = ["自定义App组件", "定义路由", "配置数据库", "处理错误"]
+answer = "自定义App组件"
+explanation = "_app.js用于自定义App组件，可以保持布局、全局状态等"
+
+[[questions]]
+id = 20
+category = "React/Next.js基础"
+type = "single"
+question = "什么是React Context？"
+options = ["跨组件传递数据的方式", "组件样式", "路由管理", "状态管理库"]
+answer = "跨组件传递数据的方式"
+explanation = "Context提供了一种在组件树中传递数据的方式，避免props逐层传递"
+
+# Node.js后端开发部分 (21-40题)
+
+[[questions]]
+id = 21
+category = "Node.js后端"
+type = "single"
+question = "Node.js是基于什么引擎的？"
+options = ["V8引擎", "SpiderMonkey", "Chakra", "JavaScriptCore"]
+answer = "V8引擎"
+explanation = "Node.js基于Chrome的V8 JavaScript引擎"
+
+[[questions]]
+id = 22
+category = "Node.js后端"
+type = "single"
+question = "Node.js的事件循环是什么？"
+options = ["处理异步操作的机制", "循环语句", "数组方法", "错误处理"]
+answer = "处理异步操作的机制"
+explanation = "事件循环是Node.js处理非阻塞I/O操作的核心机制"
+
+[[questions]]
+id = 23
+category = "Node.js后端"
+type = "multiple"
+question = "Node.js常用的框架有哪些？（多选）"
+options = ["Express", "Koa", "Fastify", "Django"]
+answer = ["Express", "Koa", "Fastify"]
+explanation = "Express、Koa、Fastify都是流行的Node.js框架，Django是Python框架"
+
+[[questions]]
+id = 24
+category = "Node.js后端"
+type = "single"
+question = "什么是中间件？"
+options = ["处理请求和响应的函数", "数据库", "前端组件", "测试工具"]
+answer = "处理请求和响应的函数"
+explanation = "中间件是在请求和响应周期中执行的函数"
+
+[[questions]]
+id = 25
+category = "Node.js后端"
+type = "single"
+question = "npm是什么？"
+options = ["Node包管理器", "编程语言", "数据库", "Web服务器"]
+answer = "Node包管理器"
+explanation = "npm是Node.js的包管理器，用于安装和管理依赖"
+
+[[questions]]
+id = 26
+category = "Node.js后端"
+type = "single"
+question = "package.json文件的作用是什么？"
+options = ["定义项目依赖和配置", "存储数据", "配置路由", "管理用户"]
+answer = "定义项目依赖和配置"
+explanation = "package.json包含项目元数据、依赖、脚本等配置信息"
+
+[[questions]]
+id = 27
+category = "Node.js后端"
+type = "single"
+question = "Node.js中的异步操作可以通过什么方式处理？"
+options = ["回调、Promise、async/await", "只能用回调", "只能用Promise", "只能同步处理"]
+answer = "回调、Promise、async/await"
+explanation = "Node.js支持多种异步处理方式"
+
+[[questions]]
+id = 28
+category = "Node.js后端"
+type = "single"
+question = "什么是RESTful API？"
+options = ["遵循REST架构风格的API", "数据库接口", "前端框架", "测试工具"]
+answer = "遵循REST架构风格的API"
+explanation = "RESTful API是遵循REST架构约束的Web服务接口"
+
+[[questions]]
+id = 29
+category = "Node.js后端"
+type = "multiple"
+question = "HTTP常用方法包括？（多选）"
+options = ["GET", "POST", "PUT", "DELETE"]
+answer = ["GET", "POST", "PUT", "DELETE"]
+explanation = "这些是RESTful API中常用的HTTP方法"
+
+[[questions]]
+id = 30
+category = "Node.js后端"
+type = "single"
+question = "Node.js的模块系统使用什么语法？"
+options = ["require/module.exports", "import/export", "include", "using"]
+answer = "require/module.exports"
+explanation = "Node.js默认使用CommonJS模块系统"
+
+[[questions]]
+id = 31
+category = "Node.js后端"
+type = "single"
+question = "什么是环境变量？"
+options = ["系统级配置值", "JavaScript变量", "数据库字段", "用户输入"]
+answer = "系统级配置值"
+explanation = "环境变量用于存储配置信息如API密钥、数据库连接等"
+
+[[questions]]
+id = 32
+category = "Node.js后端"
+type = "single"
+question = "CORS是什么？"
+options = ["跨域资源共享", "数据压缩", "缓存策略", "认证方式"]
+answer = "跨域资源共享"
+explanation = "CORS允许Web应用从不同域访问资源"
+
+[[questions]]
+id = 33
+category = "Node.js后端"
+type = "single"
+question = "JWT代表什么？"
+options = ["JSON Web Token", "JavaScript Web Tool", "Java Web Token", "JSON Web Template"]
+answer = "JSON Web Token"
+explanation = "JWT是一种用于安全传输信息的开放标准"
+
+[[questions]]
+id = 34
+category = "Node.js后端"
+type = "single"
+question = "Node.js中的Buffer是什么？"
+options = ["处理二进制数据的类", "数组", "字符串", "对象"]
+answer = "处理二进制数据的类"
+explanation = "Buffer用于处理二进制数据流"
+
+[[questions]]
+id = 35
+category = "Node.js后端"
+type = "multiple"
+question = "Node.js的优势包括？（多选）"
+options = ["高性能", "非阻塞I/O", "单线程", "JavaScript全栈"]
+answer = ["高性能", "非阻塞I/O", "单线程", "JavaScript全栈"]
+explanation = "Node.js的这些特性使其适合构建高并发应用"
+
+[[questions]]
+id = 36
+category = "Node.js后端"
+type = "single"
+question = "Express中的路由是什么？"
+options = ["定义端点和处理函数", "数据传输", "页面跳转", "状态管理"]
+answer = "定义端点和处理函数"
+explanation = "路由定义应用如何响应特定端点的客户端请求"
+
+[[questions]]
+id = 37
+category = "Node.js后端"
+type = "single"
+question = "什么是API限流？"
+options = ["限制API调用频率", "提高API速度", "API缓存", "API测试"]
+answer = "限制API调用频率"
+explanation = "限流防止API被过度使用，保护服务器资源"
+
+[[questions]]
+id = 38
+category = "Node.js后端"
+type = "single"
+question = "Node.js的cluster模块作用是什么？"
+options = ["创建子进程利用多核", "数据聚类", "缓存管理", "日志收集"]
+answer = "创建子进程利用多核"
+explanation = "cluster模块允许创建共享服务器端口的子进程"
+
+[[questions]]
+id = 39
+category = "Node.js后端"
+type = "single"
+question = "什么是WebSocket？"
+options = ["全双工通信协议", "HTTP方法", "数据库连接", "缓存技术"]
+answer = "全双工通信协议"
+explanation = "WebSocket提供浏览器和服务器间的全双工通信"
+
+[[questions]]
+id = 40
+category = "Node.js后端"
+type = "single"
+question = "Node.js如何处理文件上传？"
+options = ["使用multer等中间件", "直接保存", "不支持", "只能用FTP"]
+answer = "使用multer等中间件"
+explanation = "multer是处理multipart/form-data的Node.js中间件"
+
+# 数据库与缓存部分 (41-60题)
+
+[[questions]]
+id = 41
+category = "数据库与缓存"
+type = "single"
+question = "PostgreSQL是什么类型的数据库？"
+options = ["关系型数据库", "NoSQL数据库", "图数据库", "键值数据库"]
+answer = "关系型数据库"
+explanation = "PostgreSQL是功能强大的开源关系型数据库"
+
+[[questions]]
+id = 42
+category = "数据库与缓存"
+type = "single"
+question = "Redis主要用作什么？"
+options = ["缓存和消息队列", "主数据库", "文件存储", "日志系统"]
+answer = "缓存和消息队列"
+explanation = "Redis是内存数据结构存储，常用作缓存和消息代理"
+
+[[questions]]
+id = 43
+category = "数据库与缓存"
+type = "multiple"
+question = "SQL基本操作包括？（多选）"
+options = ["SELECT", "INSERT", "UPDATE", "DELETE"]
+answer = ["SELECT", "INSERT", "UPDATE", "DELETE"]
+explanation = "这是SQL的CRUD基本操作"
+
+[[questions]]
+id = 44
+category = "数据库与缓存"
+type = "single"
+question = "什么是数据库索引？"
+options = ["提高查询速度的数据结构", "数据备份", "数据加密", "数据压缩"]
+answer = "提高查询速度的数据结构"
+explanation = "索引是提高数据库查询性能的重要机制"
+
+[[questions]]
+id = 45
+category = "数据库与缓存"
+type = "single"
+question = "Redis支持哪些数据类型？"
+options = ["字符串、列表、集合、哈希等", "只有字符串", "只有数字", "只有对象"]
+answer = "字符串、列表、集合、哈希等"
+explanation = "Redis支持多种数据结构"
+
+[[questions]]
+id = 46
+category = "数据库与缓存"
+type = "single"
+question = "什么是事务？"
+options = ["一组原子性操作", "数据传输", "数据备份", "数据查询"]
+answer = "一组原子性操作"
+explanation = "事务确保一组操作要么全部成功要么全部失败"
+
+[[questions]]
+id = 47
+category = "数据库与缓存"
+type = "single"
+question = "PostgreSQL的JSONB类型优势是什么？"
+options = ["二进制JSON存储效率高", "文本存储", "更大容量", "更快写入"]
+answer = "二进制JSON存储效率高"
+explanation = "JSONB提供高效的JSON数据存储和查询"
+
+[[questions]]
+id = 48
+category = "数据库与缓存"
+type = "single"
+question = "什么是缓存击穿？"
+options = ["热点key过期导致大量请求打到数据库", "缓存服务器宕机", "缓存数据错误", "缓存容量不足"]
+answer = "热点key过期导致大量请求打到数据库"
+explanation = "缓存击穿会导致数据库压力突增"
+
+[[questions]]
+id = 49
+category = "数据库与缓存"
+type = "multiple"
+question = "数据库优化方法包括？（多选）"
+options = ["添加索引", "查询优化", "分表分库", "缓存"]
+answer = ["添加索引", "查询优化", "分表分库", "缓存"]
+explanation = "多种方法结合可以显著提升数据库性能"
+
+[[questions]]
+id = 50
+category = "数据库与缓存"
+type = "single"
+question = "Redis持久化方式有哪些？"
+options = ["RDB和AOF", "只有RDB", "只有AOF", "不支持持久化"]
+answer = "RDB和AOF"
+explanation = "Redis提供RDB快照和AOF日志两种持久化方式"
+
+[[questions]]
+id = 51
+category = "数据库与缓存"
+type = "single"
+question = "什么是主从复制？"
+options = ["数据同步到多个节点", "数据备份", "数据压缩", "数据加密"]
+answer = "数据同步到多个节点"
+explanation = "主从复制提供数据冗余和读写分离"
+
+[[questions]]
+id = 52
+category = "数据库与缓存"
+type = "single"
+question = "什么是连接池？"
+options = ["复用数据库连接", "连接备份", "连接加密", "连接压缩"]
+answer = "复用数据库连接"
+explanation = "连接池避免频繁创建销毁连接，提高性能"
+
+[[questions]]
+id = 53
+category = "数据库与缓存"
+type = "single"
+question = "PostgreSQL的外键作用是什么？"
+options = ["维护引用完整性", "提高查询速度", "数据加密", "数据压缩"]
+answer = "维护引用完整性"
+explanation = "外键确保数据的引用完整性"
+
+[[questions]]
+id = 54
+category = "数据库与缓存"
+type = "single"
+question = "Redis的过期策略是什么？"
+options = ["定期删除和惰性删除", "立即删除", "不删除", "随机删除"]
+answer = "定期删除和惰性删除"
+explanation = "Redis结合两种策略管理过期键"
+
+[[questions]]
+id = 55
+category = "数据库与缓存"
+type = "multiple"
+question = "数据库ACID特性包括？（多选）"
+options = ["原子性", "一致性", "隔离性", "持久性"]
+answer = ["原子性", "一致性", "隔离性", "持久性"]
+explanation = "ACID是数据库事务的基本特性"
+
+[[questions]]
+id = 56
+category = "数据库与缓存"
+type = "single"
+question = "什么是ORM？"
+options = ["对象关系映射", "数据库优化", "缓存技术", "查询语言"]
+answer = "对象关系映射"
+explanation = "ORM将数据库表映射为编程语言中的对象"
+
+[[questions]]
+id = 57
+category = "数据库与缓存"
+type = "single"
+question = "Redis集群的作用是什么？"
+options = ["数据分片和高可用", "数据备份", "数据压缩", "数据加密"]
+answer = "数据分片和高可用"
+explanation = "Redis集群提供自动分片和故障转移"
+
+[[questions]]
+id = 58
+category = "数据库与缓存"
+type = "single"
+question = "什么是数据库迁移？"
+options = ["管理数据库schema变更", "数据备份", "数据恢复", "数据复制"]
+answer = "管理数据库schema变更"
+explanation = "数据库迁移工具帮助版本控制和部署schema变更"
+
+[[questions]]
+id = 59
+category = "数据库与缓存"
+type = "single"
+question = "PostgreSQL的VACUUM作用是什么？"
+options = ["清理死元组回收空间", "备份数据", "创建索引", "查询优化"]
+answer = "清理死元组回收空间"
+explanation = "VACUUM维护PostgreSQL的存储健康"
+
+[[questions]]
+id = 60
+category = "数据库与缓存"
+type = "single"
+question = "什么是缓存预热？"
+options = ["提前加载热点数据到缓存", "清理缓存", "缓存备份", "缓存压缩"]
+answer = "提前加载热点数据到缓存"
+explanation = "缓存预热避免冷启动性能问题"
+
+# AI集成与基础部分 (61-80题)
+
+[[questions]]
+id = 61
+category = "AI集成基础"
+type = "single"
+question = "什么是LLM？"
+options = ["大型语言模型", "轻量级模型", "线性模型", "逻辑模型"]
+answer = "大型语言模型"
+explanation = "LLM是Large Language Model的缩写"
+
+[[questions]]
+id = 62
+category = "AI集成基础"
+type = "single"
+question = "什么是API？"
+options = ["应用程序接口", "人工智能", "自动化工具", "分析平台"]
+answer = "应用程序接口"
+explanation = "API是Application Programming Interface的缩写"
+
+[[questions]]
+id = 63
+category = "AI集成基础"
+type = "single"
+question = "调用OpenAI API需要什么？"
+options = ["API密钥", "用户名密码", "证书文件", "IP白名单"]
+answer = "API密钥"
+explanation = "API密钥用于身份验证和计费"
+
+[[questions]]
+id = 64
+category = "AI集成基础"
+type = "single"
+question = "什么是prompt？"
+options = ["给AI的输入指令", "输出结果", "配置文件", "数据库"]
+answer = "给AI的输入指令"
+explanation = "Prompt是引导AI生成响应的输入文本"
+
+[[questions]]
+id = 65
+category = "AI集成基础"
+type = "single"
+question = "RAG代表什么？"
+options = ["检索增强生成", "随机访问生成", "快速自动生成", "实时分析生成"]
+answer = "检索增强生成"
+explanation = "RAG是Retrieval-Augmented Generation的缩写"
+
+[[questions]]
+id = 66
+category = "AI集成基础"
+type = "single"
+question = "什么是向量数据库？"
+options = ["存储向量嵌入的数据库", "图形数据库", "关系数据库", "文档数据库"]
+answer = "存储向量嵌入的数据库"
+explanation = "向量数据库专门用于存储和检索向量嵌入"
+
+[[questions]]
+id = 67
+category = "AI集成基础"
+type = "single"
+question = "什么是embedding？"
+options = ["文本的数值表示", "数据压缩", "加密方法", "图像处理"]
+answer = "文本的数值表示"
+explanation = "Embedding将文本转换为向量形式"
+
+[[questions]]
+id = 68
+category = "AI集成基础"
+type = "multiple"
+question = "RAG系统的组成部分包括？（多选）"
+options = ["文档分块", "向量化", "检索", "生成"]
+answer = ["文档分块", "向量化", "检索", "生成"]
+explanation = "RAG系统包含这些关键步骤"
+
+[[questions]]
+id = 69
+category = "AI集成基础"
+type = "single"
+question = "什么是token？"
+options = ["文本的基本单位", "认证令牌", "代币", "变量"]
+answer = "文本的基本单位"
+explanation = "在LLM中，token是文本处理的基本单位"
+
+[[questions]]
+id = 70
+category = "AI集成基础"
+type = "single"
+question = "API调用的限流是为了什么？"
+options = ["防止滥用保护服务", "提高速度", "增加功能", "数据备份"]
+answer = "防止滥用保护服务"
+explanation = "限流保护API服务的稳定性"
+
+[[questions]]
+id = 71
+category = "AI集成基础"
+type = "single"
+question = "什么是语义搜索？"
+options = ["基于含义的搜索", "关键词搜索", "全文搜索", "模糊搜索"]
+answer = "基于含义的搜索"
+explanation = "语义搜索理解查询的含义而非仅匹配关键词"
+
+[[questions]]
+id = 72
+category = "AI集成基础"
+type = "single"
+question = "LangChain是什么？"
+options = ["LLM应用开发框架", "编程语言", "数据库", "云服务"]
+answer = "LLM应用开发框架"
+explanation = "LangChain简化LLM应用的开发"
+
+[[questions]]
+id = 73
+category = "AI集成基础"
+type = "single"
+question = "什么是上下文窗口？"
+options = ["LLM能处理的最大文本长度", "浏览器窗口", "数据库连接", "网络端口"]
+answer = "LLM能处理的最大文本长度"
+explanation = "上下文窗口限制了LLM一次能处理的信息量"
+
+[[questions]]
+id = 74
+category = "AI集成基础"
+type = "multiple"
+question = "AI应用的常见挑战包括？（多选）"
+options = ["成本控制", "响应延迟", "准确性", "隐私保护"]
+answer = ["成本控制", "响应延迟", "准确性", "隐私保护"]
+explanation = "这些是开发AI应用时需要考虑的关键问题"
+
+[[questions]]
+id = 75
+category = "AI集成基础"
+type = "single"
+question = "什么是fine-tuning？"
+options = ["微调模型", "模型压缩", "模型加密", "模型备份"]
+answer = "微调模型"
+explanation = "Fine-tuning是在预训练模型基础上针对特定任务调整"
+
+[[questions]]
+id = 76
+category = "AI集成基础"
+type = "single"
+question = "向量相似度通常用什么度量？"
+options = ["余弦相似度", "绝对值", "平均值", "最大值"]
+answer = "余弦相似度"
+explanation = "余弦相似度是衡量向量相似性的常用方法"
+
+[[questions]]
+id = 77
+category = "AI集成基础"
+type = "single"
+question = "什么是hallucination在AI中？"
+options = ["生成不真实的信息", "图像生成", "语音合成", "翻译错误"]
+answer = "生成不真实的信息"
+explanation = "Hallucination是LLM生成虚假信息的现象"
+
+[[questions]]
+id = 78
+category = "AI集成基础"
+type = "single"
+question = "API响应缓存的好处是什么？"
+options = ["减少成本和延迟", "增加准确性", "提高安全性", "增加功能"]
+answer = "减少成本和延迟"
+explanation = "缓存避免重复API调用，节省成本和时间"
+
+[[questions]]
+id = 79
+category = "AI集成基础"
+type = "single"
+question = "什么是流式响应？"
+options = ["逐步返回生成内容", "批量处理", "并行处理", "缓存响应"]
+answer = "逐步返回生成内容"
+explanation = "流式响应提供更好的用户体验"
+
+[[questions]]
+id = 80
+category = "AI集成基础"
+type = "single"
+question = "RAG相比纯LLM的优势是什么？"
+options = ["基于真实数据减少幻觉", "更快速度", "更低成本", "更简单实现"]
+answer = "基于真实数据减少幻觉"
+explanation = "RAG通过检索真实文档提高回答准确性"
+
+# Web3与实践应用部分 (81-100题)
+
+[[questions]]
+id = 81
+category = "Web3与实践"
+type = "single"
+question = "Web3的核心特征是什么？"
+options = ["去中心化", "更快速度", "更好界面", "更多功能"]
+answer = "去中心化"
+explanation = "Web3强调去中心化和用户数据所有权"
+
+[[questions]]
+id = 82
+category = "Web3与实践"
+type = "single"
+question = "什么是DeFi？"
+options = ["去中心化金融", "数据金融", "数字金融", "直接金融"]
+answer = "去中心化金融"
+explanation = "DeFi是Decentralized Finance的缩写"
+
+[[questions]]
+id = 83
+category = "Web3与实践"
+type = "single"
+question = "什么是NFT？"
+options = ["非同质化代币", "新金融技术", "网络文件传输", "节点功能测试"]
+answer = "非同质化代币"
+explanation = "NFT是Non-Fungible Token的缩写"
+
+[[questions]]
+id = 84
+category = "Web3与实践"
+type = "single"
+question = "构建媒体平台需要考虑什么？"
+options = ["内容管理、SEO、性能、用户体验", "只需要内容", "只需要设计", "只需要技术"]
+answer = "内容管理、SEO、性能、用户体验"
+explanation = "媒体平台需要综合考虑多个方面"
+
+[[questions]]
+id = 85
+category = "Web3与实践"
+type = "single"
+question = "什么是CMS？"
+options = ["内容管理系统", "客户管理系统", "缓存管理系统", "云管理系统"]
+answer = "内容管理系统"
+explanation = "CMS是Content Management System的缩写"
+
+[[questions]]
+id = 86
+category = "Web3与实践"
+type = "single"
+question = "i18n代表什么？"
+options = ["国际化", "集成化", "智能化", "互联网化"]
+answer = "国际化"
+explanation = "i18n是internationalization的缩写"
+
+[[questions]]
+id = 87
+category = "Web3与实践"
+type = "multiple"
+question = "高并发系统的优化策略包括？（多选）"
+options = ["负载均衡", "缓存", "CDN", "数据库优化"]
+answer = ["负载均衡", "缓存", "CDN", "数据库优化"]
+explanation = "多种策略结合应对高并发"
+
+[[questions]]
+id = 88
+category = "Web3与实践"
+type = "single"
+question = "什么是SEO？"
+options = ["搜索引擎优化", "安全优化", "系统优化", "服务优化"]
+answer = "搜索引擎优化"
+explanation = "SEO是Search Engine Optimization的缩写"
+
+[[questions]]
+id = 89
+category = "Web3与实践"
+type = "single"
+question = "Git的作用是什么？"
+options = ["版本控制", "项目管理", "代码编译", "测试工具"]
+answer = "版本控制"
+explanation = "Git是分布式版本控制系统"
+
+[[questions]]
+id = 90
+category = "Web3与实践"
+type = "single"
+question = "什么是CI/CD？"
+options = ["持续集成/持续部署", "客户界面/客户数据", "云基础设施", "代码检查"]
+answer = "持续集成/持续部署"
+explanation = "CI/CD自动化软件交付流程"
+
+[[questions]]
+id = 91
+category = "Web3与实践"
+type = "single"
+question = "响应式设计的目的是什么？"
+options = ["适配不同设备屏幕", "提高响应速度", "减少代码量", "增加功能"]
+answer = "适配不同设备屏幕"
+explanation = "响应式设计确保网站在各种设备上良好显示"
+
+[[questions]]
+id = 92
+category = "Web3与实践"
+type = "single"
+question = "什么是CDN？"
+options = ["内容分发网络", "中心数据网络", "云数据节点", "缓存数据网络"]
+answer = "内容分发网络"
+explanation = "CDN通过分布式节点加速内容传输"
+
+[[questions]]
+id = 93
+category = "Web3与实践"
+type = "multiple"
+question = "代码质量包括哪些方面？（多选）"
+options = ["可读性", "可维护性", "性能", "安全性"]
+answer = ["可读性", "可维护性", "性能", "安全性"]
+explanation = "高质量代码需要多方面的考虑"
+
+[[questions]]
+id = 94
+category = "Web3与实践"
+type = "single"
+question = "什么是技术债？"
+options = ["快速开发留下的技术问题", "购买技术的费用", "技术培训成本", "硬件投资"]
+answer = "快速开发留下的技术问题"
+explanation = "技术债是为了快速交付而妥协的技术决策"
+
+[[questions]]
+id = 95
+category = "Web3与实践"
+type = "single"
+question = "敏捷开发的核心是什么？"
+options = ["迭代和响应变化", "详细规划", "固定需求", "瀑布流程"]
+answer = "迭代和响应变化"
+explanation = "敏捷强调快速迭代和适应变化"
+
+[[questions]]
+id = 96
+category = "Web3与实践"
+type = "single"
+question = "什么是MVP？"
+options = ["最小可行产品", "最有价值玩家", "模型视图展示", "主要验证点"]
+answer = "最小可行产品"
+explanation = "MVP是Minimum Viable Product的缩写"
+
+[[questions]]
+id = 97
+category = "Web3与实践"
+type = "single"
+question = "代码审查的目的是什么？"
+options = ["提高代码质量和知识共享", "找错误", "评价开发者", "延长开发时间"]
+answer = "提高代码质量和知识共享"
+explanation = "代码审查是保证质量的重要实践"
+
+[[questions]]
+id = 98
+category = "Web3与实践"
+type = "single"
+question = "什么是技术栈？"
+options = ["项目使用的技术组合", "服务器硬件", "数据结构", "算法集合"]
+answer = "项目使用的技术组合"
+explanation = "技术栈是构建应用所用技术的集合"
+
+[[questions]]
+id = 99
+category = "Web3与实践"
+type = "single"
+question = "远程工作的关键是什么？"
+options = ["良好的沟通和自律", "更多会议", "严格监控", "固定时间"]
+answer = "良好的沟通和自律"
+explanation = "远程工作需要主动沟通和自我管理"
+
+[[questions]]
+id = 100
+category = "Web3与实践"
+type = "single"
+question = "全栈工程师最重要的能力是什么？"
+options = ["学习能力和解决问题能力", "精通所有技术", "快速编码", "项目管理"]
+answer = "学习能力和解决问题能力"
+explanation = "全栈工程师需要不断学习和解决各种问题"
+
+# 评分标准
+[scoring]
+excellent = "90-100分：优秀，具备初级全栈工程师的基础知识"
+good = "75-89分：良好，建议加强部分薄弱环节"
+pass = "60-74分：及格，需要系统学习全栈开发知识"
+fail = "60分以下：需要从基础开始全面学习"
+
+# 学习建议
+[recommendations]
+level_1 = """
+0-30分学习建议：
+1. 基础知识：从React官方教程和Node.js基础开始
+2. 实践项目：构建简单的CRUD应用
+3. 数据库基础：学习SQL基础和Redis入门
+4. 版本控制：掌握Git基本操作
+5. 推荐资源：freeCodeCamp、MDN Web Docs
+"""
+
+level_2 = """
+31-60分学习建议：
+1. 深入框架：学习Next.js和Express高级特性
+2. 数据库进阶：掌握PostgreSQL和Redis优化
+3. API设计：学习RESTful API最佳实践
+4. 基础AI：了解LLM API调用基础
+5. 推荐资源：Next.js官方文档、Node.js最佳实践
+"""
+
+level_3 = """
+61-80分学习建议：
+1. 系统架构：学习高并发系统设计
+2. AI集成：实践RAG系统构建
+3. 性能优化：掌握前后端性能优化
+4. Web3基础：了解区块链和DeFi概念
+5. 推荐资源：System Design Primer、LangChain文档
+"""
+
+level_4 = """
+81-100分学习建议：
+1. 持续学习：关注最新技术趋势
+2. 开源贡献：参与开源项目
+3. 架构设计：学习微服务和云原生
+4. 团队协作：提升沟通和项目管理能力
+5. 推荐资源：技术博客、开源项目、技术会议
+"""

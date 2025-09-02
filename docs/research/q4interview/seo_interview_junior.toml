@@ -1,0 +1,964 @@
+# SEO优化师面试题库 - 初级篇
+# 适合经验：0-2年SEO相关经验，了解基础黑帽技术
+
+[metadata]
+title = "SEO优化师面试题库 - 初级篇"
+version = "1.0.0"
+description = "针对初级SEO优化师的100道面试题"
+difficulty = "初级"
+total_questions = 100
+company = "XXKK Derivatives"
+position = "SEO优化师"
+
+# SEO基础知识部分 (1-25题)
+
+[[questions]]
+id = 1
+category = "SEO基础"
+type = "single"
+question = "SEO的全称是什么？"
+options = ["Search Engine Optimization", "Search Engine Operation", "Site Engine Optimization", "Site External Optimization"]
+answer = "Search Engine Optimization"
+explanation = "SEO是搜索引擎优化的英文缩写"
+
+[[questions]]
+id = 2
+category = "SEO基础"
+type = "single"
+question = "以下哪个是黑帽SEO的典型特征？"
+options = ["短期快速见效", "长期稳定发展", "符合搜索引擎规范", "提升用户体验"]
+answer = "短期快速见效"
+explanation = "黑帽SEO追求短期快速排名提升"
+
+[[questions]]
+id = 3
+category = "SEO基础"
+type = "multiple"
+question = "Google的主要排名因素包括？（多选）"
+options = ["内容质量", "反向链接", "页面速度", "域名年龄"]
+answer = ["内容质量", "反向链接", "页面速度", "域名年龄"]
+explanation = "这些都是Google的重要排名因素"
+
+[[questions]]
+id = 4
+category = "SEO基础"
+type = "single"
+question = "什么是SERP？"
+options = ["搜索引擎结果页面", "搜索引擎排名位置", "搜索引擎优化程序", "搜索引擎权重评分"]
+answer = "搜索引擎结果页面"
+explanation = "SERP是Search Engine Results Page的缩写"
+
+[[questions]]
+id = 5
+category = "SEO基础"
+type = "single"
+question = "301重定向的主要作用是？"
+options = ["永久性页面跳转", "临时页面跳转", "屏蔽搜索引擎", "增加页面权重"]
+answer = "永久性页面跳转"
+explanation = "301是永久重定向状态码"
+
+[[questions]]
+id = 6
+category = "SEO基础"
+type = "single"
+question = "robots.txt文件的作用是？"
+options = ["告诉搜索引擎哪些页面可以抓取", "增加网站权重", "提高网站速度", "存储网站地图"]
+answer = "告诉搜索引擎哪些页面可以抓取"
+explanation = "robots.txt用于控制搜索引擎爬虫的访问权限"
+
+[[questions]]
+id = 7
+category = "SEO基础"
+type = "multiple"
+question = "以下哪些属于站内优化？（多选）"
+options = ["标题标签优化", "Meta描述优化", "内链建设", "外链建设"]
+answer = ["标题标签优化", "Meta描述优化", "内链建设"]
+explanation = "外链建设属于站外优化"
+
+[[questions]]
+id = 8
+category = "SEO基础"
+type = "single"
+question = "什么是关键词密度？"
+options = ["关键词在页面中出现的频率", "关键词的搜索量", "关键词的竞争度", "关键词的相关性"]
+answer = "关键词在页面中出现的频率"
+explanation = "关键词密度指关键词占总词数的比例"
+
+[[questions]]
+id = 9
+category = "SEO基础"
+type = "single"
+question = "sitemap的主要作用是？"
+options = ["帮助搜索引擎发现网站页面", "提高网站速度", "增加网站权重", "优化用户体验"]
+answer = "帮助搜索引擎发现网站页面"
+explanation = "站点地图帮助搜索引擎更好地爬取网站"
+
+[[questions]]
+id = 10
+category = "SEO基础"
+type = "single"
+question = "什么是锚文本？"
+options = ["超链接的可点击文字", "页面标题", "图片描述", "网页注释"]
+answer = "超链接的可点击文字"
+explanation = "锚文本是链接的可见文字部分"
+
+[[questions]]
+id = 11
+category = "SEO基础"
+type = "single"
+question = "PageRank是哪家公司的算法？"
+options = ["Google", "Bing", "Baidu", "Yahoo"]
+answer = "Google"
+explanation = "PageRank是Google的核心算法之一"
+
+[[questions]]
+id = 12
+category = "SEO基础"
+type = "multiple"
+question = "影响网站收录的因素有？（多选）"
+options = ["网站结构", "内容质量", "服务器稳定性", "网站年龄"]
+answer = ["网站结构", "内容质量", "服务器稳定性", "网站年龄"]
+explanation = "这些因素都会影响搜索引擎的收录"
+
+[[questions]]
+id = 13
+category = "SEO基础"
+type = "single"
+question = "什么是长尾关键词？"
+options = ["搜索量较小但转化率高的词", "热门关键词", "品牌词", "竞价词"]
+answer = "搜索量较小但转化率高的词"
+explanation = "长尾词通常更精准，转化效果好"
+
+[[questions]]
+id = 14
+category = "SEO基础"
+type = "single"
+question = "H1标签在一个页面中应该出现几次？"
+options = ["1次", "2次", "3次", "不限制"]
+answer = "1次"
+explanation = "一个页面应该只有一个H1标签"
+
+[[questions]]
+id = 15
+category = "SEO基础"
+type = "single"
+question = "什么是nofollow标签？"
+options = ["告诉搜索引擎不传递权重", "禁止访问", "加速收录", "提高权重"]
+answer = "告诉搜索引擎不传递权重"
+explanation = "nofollow用于不传递链接权重"
+
+[[questions]]
+id = 16
+category = "SEO基础"
+type = "single"
+question = "域名年龄对SEO的影响是？"
+options = ["老域名通常更受信任", "没有影响", "新域名更好", "取决于内容"]
+answer = "老域名通常更受信任"
+explanation = "搜索引擎倾向于信任历史悠久的域名"
+
+[[questions]]
+id = 17
+category = "SEO基础"
+type = "multiple"
+question = "以下哪些是搜索引擎？（多选）"
+options = ["Google", "Bing", "DuckDuckGo", "Facebook"]
+answer = ["Google", "Bing", "DuckDuckGo"]
+explanation = "Facebook是社交平台，不是搜索引擎"
+
+[[questions]]
+id = 18
+category = "SEO基础"
+type = "single"
+question = "什么是跳出率？"
+options = ["只访问一个页面就离开的比例", "页面加载失败率", "用户点击率", "转化率"]
+answer = "只访问一个页面就离开的比例"
+explanation = "跳出率反映用户参与度"
+
+[[questions]]
+id = 19
+category = "SEO基础"
+type = "single"
+question = "HTTPS对SEO的作用是？"
+options = ["提升排名信号", "降低排名", "没有影响", "只影响速度"]
+answer = "提升排名信号"
+explanation = "Google将HTTPS作为排名因素之一"
+
+[[questions]]
+id = 20
+category = "SEO基础"
+type = "single"
+question = "什么是canonical标签？"
+options = ["指定页面的规范版本", "禁止收录", "提高权重", "加速收录"]
+answer = "指定页面的规范版本"
+explanation = "用于解决重复内容问题"
+
+[[questions]]
+id = 21
+category = "SEO基础"
+type = "single"
+question = "移动优先索引是什么意思？"
+options = ["优先使用移动版本进行索引", "只索引移动站", "移动站权重更高", "禁止桌面访问"]
+answer = "优先使用移动版本进行索引"
+explanation = "Google优先抓取和索引移动版本"
+
+[[questions]]
+id = 22
+category = "SEO基础"
+type = "multiple"
+question = "Core Web Vitals包括哪些指标？（多选）"
+options = ["LCP", "FID", "CLS", "TTL"]
+answer = ["LCP", "FID", "CLS"]
+explanation = "核心网页指标包括最大内容绘制、首次输入延迟和累积布局偏移"
+
+[[questions]]
+id = 23
+category = "SEO基础"
+type = "single"
+question = "什么是爬虫预算？"
+options = ["搜索引擎分配的爬取资源", "SEO预算", "广告预算", "服务器成本"]
+answer = "搜索引擎分配的爬取资源"
+explanation = "爬虫预算决定搜索引擎爬取页面的数量和频率"
+
+[[questions]]
+id = 24
+category = "SEO基础"
+type = "single"
+question = "XML Sitemap的格式标准是？"
+options = ["Sitemaps.org", "W3C", "Google", "ISO"]
+answer = "Sitemaps.org"
+explanation = "Sitemaps.org定义了站点地图的标准格式"
+
+[[questions]]
+id = 25
+category = "SEO基础"
+type = "single"
+question = "什么是索引？"
+options = ["搜索引擎存储网页的数据库", "网站目录", "关键词列表", "链接列表"]
+answer = "搜索引擎存储网页的数据库"
+explanation = "索引是搜索引擎存储和组织网页信息的方式"
+
+# 黑帽SEO技术部分 (26-50题)
+
+[[questions]]
+id = 26
+category = "黑帽SEO"
+type = "single"
+question = "什么是关键词堆砌？"
+options = ["过度重复关键词", "合理使用关键词", "关键词研究", "关键词分析"]
+answer = "过度重复关键词"
+explanation = "关键词堆砌是一种黑帽SEO手法"
+
+[[questions]]
+id = 27
+category = "黑帽SEO"
+type = "single"
+question = "隐藏文本通常使用什么方法？"
+options = ["文字颜色与背景相同", "使用图片", "使用视频", "使用Flash"]
+answer = "文字颜色与背景相同"
+explanation = "隐藏文本是典型的黑帽手法"
+
+[[questions]]
+id = 28
+category = "黑帽SEO"
+type = "multiple"
+question = "以下哪些属于黑帽SEO手法？（多选）"
+options = ["链接农场", "内容采集", "桥页", "原创内容"]
+answer = ["链接农场", "内容采集", "桥页"]
+explanation = "原创内容是白帽SEO"
+
+[[questions]]
+id = 29
+category = "黑帽SEO"
+type = "single"
+question = "什么是蜘蛛池？"
+options = ["大量低质站点吸引爬虫", "服务器集群", "CDN网络", "数据中心"]
+answer = "大量低质站点吸引爬虫"
+explanation = "蜘蛛池用于快速吸引搜索引擎爬虫"
+
+[[questions]]
+id = 30
+category = "黑帽SEO"
+type = "single"
+question = "站群的主要目的是？"
+options = ["操控搜索排名", "提供优质内容", "改善用户体验", "降低成本"]
+answer = "操控搜索排名"
+explanation = "站群通过大量站点操控排名"
+
+[[questions]]
+id = 31
+category = "黑帽SEO"
+type = "single"
+question = "什么是泛解析？"
+options = ["将所有子域名解析到同一IP", "多个域名解析", "CDN解析", "DNS解析"]
+answer = "将所有子域名解析到同一IP"
+explanation = "泛解析常用于批量建站"
+
+[[questions]]
+id = 32
+category = "黑帽SEO"
+type = "single"
+question = "寄生虫程序的特点是？"
+options = ["在他人网站生成页面", "独立运行", "需要授权", "合法操作"]
+answer = "在他人网站生成页面"
+explanation = "寄生虫通过入侵在他人网站生成垃圾页面"
+
+[[questions]]
+id = 33
+category = "黑帽SEO"
+type = "single"
+question = "什么是桥页？"
+options = ["专门为搜索引擎制作的页面", "网站首页", "联系页面", "关于页面"]
+answer = "专门为搜索引擎制作的页面"
+explanation = "桥页是针对特定关键词优化的页面"
+
+[[questions]]
+id = 34
+category = "黑帽SEO"
+type = "multiple"
+question = "黑帽SEO的风险包括？（多选）"
+options = ["网站被K", "排名下降", "域名被封", "失去用户信任"]
+answer = ["网站被K", "排名下降", "域名被封", "失去用户信任"]
+explanation = "黑帽SEO面临多重风险"
+
+[[questions]]
+id = 35
+category = "黑帽SEO"
+type = "single"
+question = "什么是劫持？"
+options = ["将用户流量导向其他网站", "正常跳转", "页面优化", "内容更新"]
+answer = "将用户流量导向其他网站"
+explanation = "劫持是非法获取他人流量的手段"
+
+[[questions]]
+id = 36
+category = "黑帽SEO"
+type = "single"
+question = "黑链通常放在网页的什么位置？"
+options = ["隐藏的div中", "页面顶部", "导航栏", "页脚"]
+answer = "隐藏的div中"
+explanation = "黑链通常被隐藏起来不让用户看到"
+
+[[questions]]
+id = 37
+category = "黑帽SEO"
+type = "single"
+question = "什么是内容农场？"
+options = ["大量生产低质内容的网站", "农业网站", "电商平台", "新闻网站"]
+answer = "大量生产低质内容的网站"
+explanation = "内容农场批量产出低质内容获取流量"
+
+[[questions]]
+id = 38
+category = "黑帽SEO"
+type = "single"
+question = "刷点击的目的是？"
+options = ["提高用户行为信号", "增加销量", "提高转化", "降低跳出率"]
+answer = "提高用户行为信号"
+explanation = "通过刷点击欺骗搜索引擎算法"
+
+[[questions]]
+id = 39
+category = "黑帽SEO"
+type = "single"
+question = "什么是负面SEO？"
+options = ["攻击竞争对手网站", "优化负面内容", "删除负面信息", "危机公关"]
+answer = "攻击竞争对手网站"
+explanation = "负面SEO通过攻击手段损害竞争对手排名"
+
+[[questions]]
+id = 40
+category = "黑帽SEO"
+type = "multiple"
+question = "泛目录的特征包括？（多选）"
+options = ["大量生成目录页面", "URL结构相似", "内容质量低", "用户体验差"]
+answer = ["大量生成目录页面", "URL结构相似", "内容质量低", "用户体验差"]
+explanation = "泛目录是批量生成垃圾页面的手法"
+
+[[questions]]
+id = 41
+category = "黑帽SEO"
+type = "single"
+question = "什么是二级目录出租？"
+options = ["将网站目录出租给他人", "购买二级域名", "目录优化", "内链建设"]
+answer = "将网站目录出租给他人"
+explanation = "利用高权重网站的二级目录做垃圾内容"
+
+[[questions]]
+id = 42
+category = "黑帽SEO"
+type = "single"
+question = "快排技术主要依靠什么？"
+options = ["模拟用户点击行为", "优质内容", "外链建设", "网站结构"]
+answer = "模拟用户点击行为"
+explanation = "快排通过模拟点击提升排名"
+
+[[questions]]
+id = 43
+category = "黑帽SEO"
+type = "single"
+question = "什么是镜像网站？"
+options = ["完全复制其他网站", "备份网站", "测试网站", "移动网站"]
+answer = "完全复制其他网站"
+explanation = "镜像网站是完全复制他人网站内容"
+
+[[questions]]
+id = 44
+category = "黑帽SEO"
+type = "single"
+question = "链轮的作用是？"
+options = ["传递链接权重", "提高速度", "改善设计", "增加内容"]
+answer = "传递链接权重"
+explanation = "链轮通过站点间相互链接传递权重"
+
+[[questions]]
+id = 45
+category = "黑帽SEO"
+type = "single"
+question = "什么是伪原创？"
+options = ["修改他人内容冒充原创", "翻译内容", "引用内容", "转载内容"]
+answer = "修改他人内容冒充原创"
+explanation = "伪原创是低质量的内容生产方式"
+
+[[questions]]
+id = 46
+category = "黑帽SEO"
+type = "multiple"
+question = "站群软件的功能通常包括？（多选）"
+options = ["批量建站", "内容采集", "自动发布", "链接管理"]
+answer = ["批量建站", "内容采集", "自动发布", "链接管理"]
+explanation = "站群软件提供批量操作功能"
+
+[[questions]]
+id = 47
+category = "黑帽SEO"
+type = "single"
+question = "什么是蜘蛛劫持？"
+options = ["对爬虫和用户展示不同内容", "阻止爬虫", "加速爬虫", "引导爬虫"]
+answer = "对爬虫和用户展示不同内容"
+explanation = "蜘蛛劫持欺骗搜索引擎"
+
+[[questions]]
+id = 48
+category = "黑帽SEO"
+type = "single"
+question = "垃圾评论的目的是？"
+options = ["获取外链", "交流讨论", "提供帮助", "分享经验"]
+answer = "获取外链"
+explanation = "垃圾评论主要为了留下链接"
+
+[[questions]]
+id = 49
+category = "黑帽SEO"
+type = "single"
+question = "什么是挂马？"
+options = ["在网站植入恶意代码", "优化代码", "压缩代码", "加密代码"]
+answer = "在网站植入恶意代码"
+explanation = "挂马是严重的网络攻击行为"
+
+[[questions]]
+id = 50
+category = "黑帽SEO"
+type = "single"
+question = "Google沙盒效应是什么？"
+options = ["新站排名受限制", "网站被封", "排名下降", "收录减少"]
+answer = "新站排名受限制"
+explanation = "新站在一定时期内排名受限"
+
+# 工具使用部分 (51-75题)
+
+[[questions]]
+id = 51
+category = "工具使用"
+type = "single"
+question = "火车头采集器的主要功能是？"
+options = ["网页内容采集", "数据分析", "排名监控", "链接检查"]
+answer = "网页内容采集"
+explanation = "火车头是常用的内容采集工具"
+
+[[questions]]
+id = 52
+category = "工具使用"
+type = "single"
+question = "Xrumer主要用于？"
+options = ["论坛群发", "内容创作", "数据分析", "网站监控"]
+answer = "论坛群发"
+explanation = "Xrumer是论坛营销工具"
+
+[[questions]]
+id = 53
+category = "工具使用"
+type = "multiple"
+question = "GSA的功能包括？（多选）"
+options = ["自动注册", "自动发帖", "验证码识别", "代理管理"]
+answer = ["自动注册", "自动发帖", "验证码识别", "代理管理"]
+explanation = "GSA是功能全面的自动化工具"
+
+[[questions]]
+id = 54
+category = "工具使用"
+type = "single"
+question = "站群CMS的作用是？"
+options = ["批量管理多个网站", "单站管理", "内容编辑", "图片处理"]
+answer = "批量管理多个网站"
+explanation = "站群CMS用于批量站点管理"
+
+[[questions]]
+id = 55
+category = "工具使用"
+type = "single"
+question = "Google Analytics主要用于？"
+options = ["网站流量分析", "关键词研究", "内容创作", "链接建设"]
+answer = "网站流量分析"
+explanation = "GA是Google的网站分析工具"
+
+[[questions]]
+id = 56
+category = "工具使用"
+type = "single"
+question = "Google Search Console的作用是？"
+options = ["监控网站在搜索中的表现", "广告管理", "社交媒体", "邮件营销"]
+answer = "监控网站在搜索中的表现"
+explanation = "GSC帮助了解网站搜索表现"
+
+[[questions]]
+id = 57
+category = "工具使用"
+type = "multiple"
+question = "SEO常用的浏览器插件包括？（多选）"
+options = ["SEOquake", "MozBar", "Ahrefs插件", "AdBlock"]
+answer = ["SEOquake", "MozBar", "Ahrefs插件"]
+explanation = "这些都是SEO分析插件"
+
+[[questions]]
+id = 58
+category = "工具使用"
+type = "single"
+question = "shell管理面板用于？"
+options = ["批量管理webshell", "网站设计", "内容编辑", "图片优化"]
+answer = "批量管理webshell"
+explanation = "用于黑帽操作的批量管理"
+
+[[questions]]
+id = 59
+category = "工具使用"
+type = "single"
+question = "代理IP的作用是？"
+options = ["隐藏真实IP地址", "提高网速", "增加带宽", "优化路由"]
+answer = "隐藏真实IP地址"
+explanation = "代理IP用于隐藏身份和避免封禁"
+
+[[questions]]
+id = 60
+category = "工具使用"
+type = "single"
+question = "验证码识别服务的用途是？"
+options = ["自动识别验证码", "生成验证码", "验证用户", "加密数据"]
+answer = "自动识别验证码"
+explanation = "用于自动化操作中的验证码处理"
+
+[[questions]]
+id = 61
+category = "工具使用"
+type = "single"
+question = "Screaming Frog的主要功能是？"
+options = ["网站爬虫和SEO审计", "内容创作", "链接购买", "广告投放"]
+answer = "网站爬虫和SEO审计"
+explanation = "Screaming Frog是SEO技术审计工具"
+
+[[questions]]
+id = 62
+category = "工具使用"
+type = "multiple"
+question = "关键词研究工具包括？（多选）"
+options = ["Google Keyword Planner", "Ahrefs", "SEMrush", "Photoshop"]
+answer = ["Google Keyword Planner", "Ahrefs", "SEMrush"]
+explanation = "这些都是专业的关键词研究工具"
+
+[[questions]]
+id = 63
+category = "工具使用"
+type = "single"
+question = "PageSpeed Insights用于检测什么？"
+options = ["网页加载速度", "关键词密度", "外链数量", "内容质量"]
+answer = "网页加载速度"
+explanation = "Google的页面速度检测工具"
+
+[[questions]]
+id = 64
+category = "工具使用"
+type = "single"
+question = "什么是CDN？"
+options = ["内容分发网络", "域名系统", "数据库", "编程语言"]
+answer = "内容分发网络"
+explanation = "CDN加速网站内容分发"
+
+[[questions]]
+id = 65
+category = "工具使用"
+type = "single"
+question = "WordPress是什么类型的系统？"
+options = ["内容管理系统", "操作系统", "数据库系统", "编程语言"]
+answer = "内容管理系统"
+explanation = "WordPress是流行的CMS"
+
+[[questions]]
+id = 66
+category = "工具使用"
+type = "single"
+question = "API的全称是？"
+options = ["Application Programming Interface", "Advanced Program Integration", "Automatic Process Interface", "Application Process Integration"]
+answer = "Application Programming Interface"
+explanation = "API是应用程序编程接口"
+
+[[questions]]
+id = 67
+category = "工具使用"
+type = "multiple"
+question = "网站监控工具的功能包括？（多选）"
+options = ["正常运行时间监控", "性能监控", "安全监控", "错误监控"]
+answer = ["正常运行时间监控", "性能监控", "安全监控", "错误监控"]
+explanation = "监控工具提供全方位监控"
+
+[[questions]]
+id = 68
+category = "工具使用"
+type = "single"
+question = "FTP用于什么？"
+options = ["文件传输", "邮件发送", "数据库管理", "代码编译"]
+answer = "文件传输"
+explanation = "FTP是文件传输协议"
+
+[[questions]]
+id = 69
+category = "工具使用"
+type = "single"
+question = "MySQL是什么？"
+options = ["关系型数据库", "编程语言", "操作系统", "网页服务器"]
+answer = "关系型数据库"
+explanation = "MySQL是流行的开源数据库"
+
+[[questions]]
+id = 70
+category = "工具使用"
+type = "single"
+question = "cPanel是什么？"
+options = ["虚拟主机控制面板", "编程框架", "数据库", "CDN服务"]
+answer = "虚拟主机控制面板"
+explanation = "cPanel是流行的主机管理面板"
+
+[[questions]]
+id = 71
+category = "工具使用"
+type = "single"
+question = "Git的用途是？"
+options = ["版本控制", "图片编辑", "视频处理", "数据分析"]
+answer = "版本控制"
+explanation = "Git是分布式版本控制系统"
+
+[[questions]]
+id = 72
+category = "工具使用"
+type = "multiple"
+question = "Chrome开发者工具可以用于？（多选）"
+options = ["检查元素", "网络分析", "性能分析", "JavaScript调试"]
+answer = ["检查元素", "网络分析", "性能分析", "JavaScript调试"]
+explanation = "Chrome DevTools功能强大"
+
+[[questions]]
+id = 73
+category = "工具使用"
+type = "single"
+question = "VPN的主要作用是？"
+options = ["加密网络连接", "加速网站", "存储数据", "编译代码"]
+answer = "加密网络连接"
+explanation = "VPN提供安全的网络连接"
+
+[[questions]]
+id = 74
+category = "工具使用"
+type = "single"
+question = "Python在SEO中的应用是？"
+options = ["自动化脚本编写", "网页设计", "图片处理", "视频编辑"]
+answer = "自动化脚本编写"
+explanation = "Python常用于SEO自动化"
+
+[[questions]]
+id = 75
+category = "工具使用"
+type = "single"
+question = "正则表达式用于？"
+options = ["文本模式匹配", "图像处理", "音频处理", "视频编码"]
+answer = "文本模式匹配"
+explanation = "正则表达式用于复杂的文本处理"
+
+# 实战应用部分 (76-100题)
+
+[[questions]]
+id = 76
+category = "实战应用"
+type = "single"
+question = "新站上线后首先应该做什么？"
+options = ["提交sitemap", "大量发外链", "采集内容", "购买流量"]
+answer = "提交sitemap"
+explanation = "先让搜索引擎发现网站"
+
+[[questions]]
+id = 77
+category = "实战应用"
+type = "single"
+question = "发现网站被K后应该怎么做？"
+options = ["分析原因并整改", "继续黑帽操作", "放弃网站", "加大力度"]
+answer = "分析原因并整改"
+explanation = "需要找出问题并改正"
+
+[[questions]]
+id = 78
+category = "实战应用"
+type = "multiple"
+question = "提高网站收录的方法包括？（多选）"
+options = ["提交sitemap", "增加原创内容", "优化网站结构", "提高服务器速度"]
+answer = ["提交sitemap", "增加原创内容", "优化网站结构", "提高服务器速度"]
+explanation = "多方面优化提高收录"
+
+[[questions]]
+id = 79
+category = "实战应用"
+type = "single"
+question = "如何判断一个关键词的难度？"
+options = ["综合搜索量、竞争度等因素", "只看搜索量", "只看竞价", "随机判断"]
+answer = "综合搜索量、竞争度等因素"
+explanation = "需要综合多个因素判断"
+
+[[questions]]
+id = 80
+category = "实战应用"
+type = "single"
+question = "站群被发现的征兆是？"
+options = ["大量站点同时被降权", "流量增加", "收录增加", "排名上升"]
+answer = "大量站点同时被降权"
+explanation = "批量降权说明站群被识别"
+
+[[questions]]
+id = 81
+category = "实战应用"
+type = "single"
+question = "如何避免内容重复？"
+options = ["使用canonical标签", "删除所有内容", "不管重复", "全部noindex"]
+answer = "使用canonical标签"
+explanation = "canonical标签指定规范URL"
+
+[[questions]]
+id = 82
+category = "实战应用"
+type = "single"
+question = "外链建设的原则是？"
+options = ["质量优于数量", "数量越多越好", "只要dofollow", "只要免费的"]
+answer = "质量优于数量"
+explanation = "高质量外链更有价值"
+
+[[questions]]
+id = 83
+category = "实战应用"
+type = "multiple"
+question = "网站改版需要注意什么？（多选）"
+options = ["做好301重定向", "保持URL结构", "通知搜索引擎", "备份旧数据"]
+answer = ["做好301重定向", "保持URL结构", "通知搜索引擎", "备份旧数据"]
+explanation = "改版需要谨慎处理"
+
+[[questions]]
+id = 84
+category = "实战应用"
+type = "single"
+question = "如何处理404错误？"
+options = ["设置自定义404页面", "忽略错误", "全部301", "删除网站"]
+answer = "设置自定义404页面"
+explanation = "友好的404页面改善用户体验"
+
+[[questions]]
+id = 85
+category = "实战应用"
+type = "single"
+question = "内链建设的作用是？"
+options = ["传递权重和改善用户体验", "只是装饰", "降低权重", "增加代码"]
+answer = "传递权重和改善用户体验"
+explanation = "内链对SEO很重要"
+
+[[questions]]
+id = 86
+category = "实战应用"
+type = "single"
+question = "如何优化图片SEO？"
+options = ["添加alt标签和压缩图片", "删除所有图片", "使用Flash", "不用图片"]
+answer = "添加alt标签和压缩图片"
+explanation = "图片优化包括标签和大小"
+
+[[questions]]
+id = 87
+category = "实战应用"
+type = "single"
+question = "什么时候使用noindex标签？"
+options = ["不想被索引的页面", "所有页面", "首页", "重要页面"]
+answer = "不想被索引的页面"
+explanation = "noindex阻止页面被索引"
+
+[[questions]]
+id = 88
+category = "实战应用"
+type = "multiple"
+question = "提高页面速度的方法包括？（多选）"
+options = ["启用压缩", "使用CDN", "优化图片", "减少HTTP请求"]
+answer = ["启用压缩", "使用CDN", "优化图片", "减少HTTP请求"]
+explanation = "多种方法提高页面速度"
+
+[[questions]]
+id = 89
+category = "实战应用"
+type = "single"
+question = "如何检测网站是否被黑？"
+options = ["检查异常页面和流量", "不检查", "只看首页", "等用户反馈"]
+answer = "检查异常页面和流量"
+explanation = "定期检查防止被黑"
+
+[[questions]]
+id = 90
+category = "实战应用"
+type = "single"
+question = "什么是A/B测试？"
+options = ["对比测试两个版本", "测试服务器", "测试数据库", "测试代码"]
+answer = "对比测试两个版本"
+explanation = "A/B测试用于优化转化"
+
+[[questions]]
+id = 91
+category = "实战应用"
+type = "single"
+question = "如何分析竞争对手？"
+options = ["分析其关键词、外链、内容", "不分析", "复制内容", "攻击网站"]
+answer = "分析其关键词、外链、内容"
+explanation = "竞争分析帮助制定策略"
+
+[[questions]]
+id = 92
+category = "实战应用"
+type = "single"
+question = "本地SEO的重点是？"
+options = ["Google My Business优化", "全球推广", "忽略地域", "只做付费广告"]
+answer = "Google My Business优化"
+explanation = "GMB对本地搜索很重要"
+
+[[questions]]
+id = 93
+category = "实战应用"
+type = "multiple"
+question = "内容营销的要素包括？（多选）"
+options = ["目标受众", "内容质量", "发布频率", "推广渠道"]
+answer = ["目标受众", "内容质量", "发布频率", "推广渠道"]
+explanation = "内容营销需要综合策略"
+
+[[questions]]
+id = 94
+category = "实战应用"
+type = "single"
+question = "什么是转化率优化？"
+options = ["提高访客转化为客户的比例", "增加流量", "降低成本", "提高排名"]
+answer = "提高访客转化为客户的比例"
+explanation = "CRO专注于提高转化"
+
+[[questions]]
+id = 95
+category = "实战应用"
+type = "single"
+question = "如何处理负面评论？"
+options = ["专业回复并解决问题", "删除评论", "忽略", "攻击用户"]
+answer = "专业回复并解决问题"
+explanation = "正确处理负面评论很重要"
+
+[[questions]]
+id = 96
+category = "实战应用"
+type = "single"
+question = "什么是语义搜索？"
+options = ["理解搜索意图而非只匹配关键词", "关键词匹配", "图片搜索", "语音搜索"]
+answer = "理解搜索意图而非只匹配关键词"
+explanation = "语义搜索理解用户意图"
+
+[[questions]]
+id = 97
+category = "实战应用"
+type = "single"
+question = "如何优化移动端SEO？"
+options = ["响应式设计和提高加载速度", "忽略移动端", "单独移动站", "只做APP"]
+answer = "响应式设计和提高加载速度"
+explanation = "移动优化越来越重要"
+
+[[questions]]
+id = 98
+category = "实战应用"
+type = "multiple"
+question = "E-E-A-T代表什么？（多选）"
+options = ["Experience", "Expertise", "Authority", "Trustworthiness"]
+answer = ["Experience", "Expertise", "Authority", "Trustworthiness"]
+explanation = "Google的内容质量评估标准"
+
+[[questions]]
+id = 99
+category = "实战应用"
+type = "single"
+question = "什么是结构化数据？"
+options = ["帮助搜索引擎理解内容的标记", "数据库结构", "网站架构", "代码结构"]
+answer = "帮助搜索引擎理解内容的标记"
+explanation = "结构化数据提供额外信息"
+
+[[questions]]
+id = 100
+category = "实战应用"
+type = "single"
+question = "SEO的最终目标是？"
+options = ["提高业务转化和收益", "只追求排名", "增加流量", "打败竞争对手"]
+answer = "提高业务转化和收益"
+explanation = "SEO最终服务于业务目标"
+
+# 评分标准
+[scoring]
+excellent = "90-100分：优秀，具备扎实的SEO基础知识"
+good = "75-89分：良好，掌握了大部分SEO概念"
+pass = "60-74分：及格，需要加强实践和理论学习"
+fail = "60分以下：需要系统学习SEO基础知识"
+
+# 学习建议
+[recommendations]
+level_1 = """
+0-30分学习建议：
+1. SEO基础：学习搜索引擎工作原理
+2. HTML/CSS基础：掌握网页基础知识
+3. 内容创作：学习SEO写作技巧
+4. 工具使用：熟悉Google Analytics和Search Console
+5. 推荐资源：Google SEO入门指南、Moz初学者指南
+"""
+
+level_2 = """
+31-60分学习建议：
+1. 技术SEO：深入学习爬虫、索引、渲染
+2. 关键词研究：掌握关键词分析方法
+3. 链接建设：学习白帽外链策略
+4. 数据分析：提高数据解读能力
+5. 推荐资源：Ahrefs博客、Search Engine Journal
+"""
+
+level_3 = """
+61-80分学习建议：
+1. 高级技术：学习Python自动化、API使用
+2. 策略制定：掌握SEO项目管理
+3. 黑帽了解：了解但不使用黑帽技术
+4. 国际SEO：学习多语言、多地区优化
+5. 推荐资源：技术SEO社区、行业会议
+"""
+
+level_4 = """
+81-100分学习建议：
+1. 策略优化：持续测试和优化
+2. 团队管理：培养SEO团队
+3. 业务整合：将SEO与业务目标结合
+4. 持续学习：关注算法更新和行业动态
+5. 推荐资源：高级SEO论坛、专业认证
+"""
