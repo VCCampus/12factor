@@ -11,18 +11,28 @@ const router = createRouter({
     },
     {
       path: '/principles',
-      name: 'principles',
-      component: () => import('@/views/PrinciplesView.vue')
-    },
-    {
-      path: '/flashcards',
-      name: 'flashcards',
-      component: () => import('@/views/FlashcardsView.vue')
-    },
-    {
-      path: '/quiz',
-      name: 'quiz',
-      component: () => import('@/views/QuizView.vue')
+      component: () => import('@/views/PrinciplesView.vue'),
+      children: [
+        {
+          path: '',
+          redirect: '/principles/study'
+        },
+        {
+          path: 'study',
+          name: 'principles-study',
+          component: () => import('@/components/principles/StudyContent.vue')
+        },
+        {
+          path: 'flashcards',
+          name: 'principles-flashcards',
+          component: () => import('@/components/principles/FlashcardsContent.vue')
+        },
+        {
+          path: 'quiz',
+          name: 'principles-quiz',
+          component: () => import('@/components/principles/QuizContent.vue')
+        }
+      ]
     },
     {
       path: '/mock-interview',
@@ -43,26 +53,29 @@ const router = createRouter({
       ]
     },
     {
-      path: '/analytics',
-      name: 'analytics',
-      component: () => import('@/views/AnalyticsView.vue')
-    },
-    {
-      path: '/achievements',
-      name: 'achievements', 
-      component: () => import('@/views/GamificationView.vue')
-    },
-    {
-      path: '/export',
-      name: 'export',
-      component: () => import('@/views/ExportView.vue')
-    },
-    {
       path: '/thermometer',
       name: 'thermometer',
       component: () => import('@/views/ThermometerView.vue')
     }
   ]
+})
+
+// 处理旧路由的重定向
+router.beforeEach((to, from, next) => {
+  const deprecatedRoutes: Record<string, string> = {
+    '/flashcards': '/principles/flashcards',
+    '/quiz': '/principles/quiz',
+    '/analytics': '/',
+    '/achievements': '/',
+    '/export': '/'
+  }
+  
+  if (deprecatedRoutes[to.path]) {
+    console.warn(`⚠️ 路由 ${to.path} 已废弃，已重定向到新路径`)
+    next(deprecatedRoutes[to.path])
+  } else {
+    next()
+  }
 })
 
 export default router

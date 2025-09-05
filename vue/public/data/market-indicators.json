@@ -1,0 +1,70 @@
+{
+  "version": "1.0.0",
+  "lastUpdate": "2025-09-04T12:00:00Z",
+  "status": "success",
+  "data": {
+    "youzhiyouxing": {
+      "source": "https://youzhiyouxing.cn/data",
+      "fetchTime": "2025-09-04T12:00:05Z",
+      "indicators": {
+        "value": 65,
+        "level": "贪婪",
+        "levelEn": "Greed",
+        "description": "市场温度：65，贪婪",
+        "trend": "up",
+        "changeFromYesterday": 5
+      },
+      "visualization": {
+        "type": "thermometer",
+        "color": "#f59e0b",
+        "percentage": 65
+      },
+      "history": [
+        {"date": "2025-09-03", "value": 60},
+        {"date": "2025-09-02", "value": 58},
+        {"date": "2025-09-01", "value": 62},
+        {"date": "2025-08-31", "value": 59},
+        {"date": "2025-08-30", "value": 55}
+      ],
+      "metadata": {
+        "selector": "div.thermometer",
+        "rawText": "市场温度：65 贪婪"
+      }
+    },
+    "coinmarketcap": {
+      "source": "https://coinmarketcap.com/charts/fear-and-greed-index/",
+      "fetchTime": "2025-09-04T12:00:08Z",
+      "indicators": {
+        "value": 72,
+        "level": "Greed",
+        "levelZh": "贪婪",
+        "description": "Fear & Greed Index: 72 - Greed",
+        "components": {
+          "volatility": 0.65,
+          "momentum": 0.78,
+          "socialMedia": 0.69,
+          "surveys": 0.74,
+          "dominance": 0.68,
+          "trends": 0.71
+        }
+      },
+      "visualization": {
+        "type": "gauge",
+        "color": "#f59e0b",
+        "percentage": 72
+      },
+      "history": [
+        {"date": "2025-09-03", "value": 70},
+        {"date": "2025-09-02", "value": 68},
+        {"date": "2025-09-01", "value": 75},
+        {"date": "2025-08-31", "value": 73},
+        {"date": "2025-08-30", "value": 69}
+      ],
+      "metadata": {
+        "selector": "div[class*=\"fear-greed\"]",
+        "rawText": "Fear & Greed Index: 72 Greed"
+      }
+    }
+  },
+  "fallback": {}
+}

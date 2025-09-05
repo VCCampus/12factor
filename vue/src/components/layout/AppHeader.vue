@@ -29,23 +29,9 @@
           <RouterLink 
             to="/principles" 
             class="neo-nav-item"
-            :class="{ active: $route.name === 'principles' }"
+            :class="{ active: $route.path.startsWith('/principles') }"
           >
             原则
-          </RouterLink>
-          <RouterLink 
-            to="/flashcards" 
-            class="neo-nav-item"
-            :class="{ active: $route.name === 'flashcards' }"
-          >
-            闪卡
-          </RouterLink>
-          <RouterLink 
-            to="/quiz" 
-            class="neo-nav-item"
-            :class="{ active: $route.name === 'quiz' }"
-          >
-            测试
           </RouterLink>
           <RouterLink 
             to="/mock-interview" 
@@ -53,27 +39,6 @@
             :class="{ active: $route.path.includes('mock-interview') }"
           >
             模拟面试
-          </RouterLink>
-          <RouterLink 
-            to="/analytics" 
-            class="neo-nav-item"
-            :class="{ active: $route.name === 'analytics' }"
-          >
-            分析
-          </RouterLink>
-          <RouterLink 
-            to="/achievements" 
-            class="neo-nav-item"
-            :class="{ active: $route.name === 'achievements' }"
-          >
-            成就
-          </RouterLink>
-          <RouterLink 
-            to="/export" 
-            class="neo-nav-item"
-            :class="{ active: $route.name === 'export' }"
-          >
-            导出
           </RouterLink>
         </div>
         
@@ -110,26 +75,10 @@
           <RouterLink 
             to="/principles" 
             class="neo-nav-item block"
-            :class="{ active: $route.name === 'principles' }"
+            :class="{ active: $route.path.startsWith('/principles') }"
             @click="closeMobileMenu"
           >
             原则
-          </RouterLink>
-          <RouterLink 
-            to="/flashcards" 
-            class="neo-nav-item block"
-            :class="{ active: $route.name === 'flashcards' }"
-            @click="closeMobileMenu"
-          >
-            闪卡
-          </RouterLink>
-          <RouterLink 
-            to="/quiz" 
-            class="neo-nav-item block"
-            :class="{ active: $route.name === 'quiz' }"
-            @click="closeMobileMenu"
-          >
-            测试
           </RouterLink>
           <RouterLink 
             to="/mock-interview" 
@@ -138,30 +87,6 @@
             @click="closeMobileMenu"
           >
             模拟面试
-          </RouterLink>
-          <RouterLink 
-            to="/analytics" 
-            class="neo-nav-item block"
-            :class="{ active: $route.name === 'analytics' }"
-            @click="closeMobileMenu"
-          >
-            分析
-          </RouterLink>
-          <RouterLink 
-            to="/achievements" 
-            class="neo-nav-item block"
-            :class="{ active: $route.name === 'achievements' }"
-            @click="closeMobileMenu"
-          >
-            成就
-          </RouterLink>
-          <RouterLink 
-            to="/export" 
-            class="neo-nav-item block"
-            :class="{ active: $route.name === 'export' }"
-            @click="closeMobileMenu"
-          >
-            导出
           </RouterLink>
         </div>
       </div>

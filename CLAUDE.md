@@ -135,35 +135,82 @@ All planning, research, and discussion documents must be organized in:
 - Test Chinese locale support (primary language)
 - Verify neobrutalism design system consistency
 
-## Current Project Status (2025-09-01)
+## Current Project Status (2025-09-05) - Post Navigation Simplification
+
+### 🎉 Recent Major Update (Issue #17)
+**导航栏简化项目已完成** - 将原有9项导航精简为4项，显著改善用户体验。
+
+#### Navigation Structure Changes
+```
+旧导航：首页 | 温度计 | 原则 | 闪卡 | 测试 | 模拟面试 | 分析 | 成就 | 导出
+新导航：首页 | 温度计 | 原则 | 模拟面试
+
+原则页面新增Tab导航：
+📚 原则学习 | 🎯 闪卡练习 | 🏆 挑战测试
+```
+
+#### Key Architecture Changes
+- **Nested Routing**: `/principles/{study|flashcards|quiz}`
+- **Component Restructure**: New `/components/principles/` directory
+- **Data Management**: Moved to footer with localStorage storage
+- **File Archive**: Old files moved to `/disused/` directory
 
 ### Active Features
 - **Home Dashboard**: CSS数创班8期核心知识体系学习平台
-- **Knowledge Principles**: 20 principles across 5 stages from TOML config
-- **Flashcards System**: Interactive learning cards with progress tracking
-- **Quiz Engine**: Multi-category quiz system with scoring
+- **Knowledge Principles**: Integrated Tab-based learning center
+  - 📚 **原则学习**: 20 principles across 5 stages from TOML config
+  - 🎯 **闪卡练习**: Interactive learning cards with spaced repetition
+  - 🏆 **挑战测试**: Multi-mode quiz system (practice/exam/review)
 - **Mock Interviews**: 4-difficulty interview system (basic/intermediate/advanced/expert)
-- **Progress Analytics**: Learning progress visualization and statistics
-- **Data Export**: PDF export functionality via jsPDF
-- **Gamification**: Achievement and progress tracking system
-- **Thermometer View**: Special navigation component
+- **Thermometer View**: Market sentiment navigation component
 
 ### Technical Architecture
 - **Data Pipeline**: TOML configuration → JSON generation → Vue consumption
-- **State Management**: 5 Pinia stores (config, quiz, interview, progress, gamification)
-- **Routing**: 8 main routes with nested interview routes
+- **State Management**: 4 Pinia stores (config, quiz, interview, progress)
+- **Routing**: 4 main routes with nested principles subroutes
 - **Styling**: Tailwind CSS with custom neobrutalism theme
 - **Build Process**: Automated via scripts/build.sh with validation pipeline
+- **Data Storage**: localStorage with 5MB limit and automatic cleanup
 
-### Current Code Quality Issues
-ESLint detected 13 problems (9 errors, 4 warnings):
-- Process environment variables in playwright.config.js
-- Service worker global variables (clients)
-- Unused variables in components
-- Vue deprecated filter usage
-- Test file cleanup needed
+### Directory Structure Updates
+```
+/opt/src/12factor/
+├── vue/                           # PRIMARY DEVELOPMENT
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── principles/        # 🆕 Tab-based navigation components
+│   │   │   │   ├── PrinciplesTab.vue
+│   │   │   │   ├── StudyContent.vue
+│   │   │   │   ├── FlashcardsContent.vue
+│   │   │   │   └── QuizContent.vue
+│   │   │   └── layout/            # Updated footer with data management
+│   │   │   └── utils/
+│   │   │       └── dataManager.ts # 🆕 Data export and storage management
+│   │   └── views/                 # Simplified view structure
+├── disused/                       # 🆕 Archived components from navigation simplification
+│   ├── views/                     # 5 archived view files
+│   ├── stores/                    # 1 archived store file
+│   └── components/                # 2 archived components
+├── docs/
+│   ├── reports/
+│   │   └── 250905_nav_simplification.md  # 🆕 Detailed implementation report
+└── dist/                          # Production build (updated structure)
+```
+
+### Current Code Quality Status
+- ✅ **Build**: Successfully compiles to /dist
+- ⚠️ **TypeScript**: Minor type warnings (components use any type)
+- ✅ **ESLint**: Major issues resolved through file archiving
+- ✅ **Architecture**: Clean separation of concerns
+
+### Next Phase Priorities
+1. **TypeScript Type Safety**: Fix remaining any type usage
+2. **Component Polish**: Add transition animations and improved UX
+3. **Data Integration**: Replace mock data with real data sources
+4. **Performance**: Implement lazy loading and caching strategies
 
 ### Data Sources
 - Main config: docs/plans/web3scv8_v4.toml (4.0.0)
 - Generated JSON files: vue/public/w3sc8_*.json
 - Interview questions: vue/public/data/interview-*.json
+- Archived references: Git tag `v4.0.0-before-nav-simplify`

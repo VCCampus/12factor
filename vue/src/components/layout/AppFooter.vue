@@ -31,6 +31,30 @@
             </p>
           </div>
         </div>
+        
+        <!-- 数据管理区域 -->
+        <div class="mt-4 pt-4 border-t-2 border-border-black">
+          <div class="flex flex-wrap items-center justify-center gap-4 text-sm">
+            <span class="text-gray-600">📊 数据管理：</span>
+            <button 
+              @click="exportData"
+              class="neo-btn-text hover:text-primary-blue transition-colors"
+            >
+              导出学习数据
+            </button>
+            <span class="text-gray-400">|</span>
+            <button 
+              @click="clearCache"
+              class="neo-btn-text hover:text-error-red transition-colors"
+            >
+              清除缓存
+            </button>
+            <span class="text-gray-400">|</span>
+            <span class="text-xs text-gray-500">
+              存储空间: {{ storageSize }}
+            </span>
+          </div>
+        </div>
       </div>
       
       <!-- Progress Stats (Optional) -->
@@ -59,13 +83,39 @@
 </template>
 
 <script setup lang="ts">
+import { ref, onMounted } from 'vue'
 import { RouterLink } from 'vue-router'
+import dataManager from '@/utils/dataManager'
 
 // Optional: Show statistics in footer, minimal mode
 defineProps<{
   showStats?: boolean
   minimal?: boolean
 }>()
+
+// 存储空间大小
+const storageSize = ref('0 KB')
+
+// 导出数据
+const exportData = () => {
+  dataManager.export()
+}
+
+// 清除缓存
+const clearCache = () => {
+  dataManager.clear()
+  updateStorageSize()
+}
+
+// 更新存储空间显示
+const updateStorageSize = () => {
+  storageSize.value = dataManager.getSizeFormatted()
+}
+
+// 组件挂载时更新存储空间
+onMounted(() => {
+  updateStorageSize()
+})
 </script>
 
 <style scoped>
