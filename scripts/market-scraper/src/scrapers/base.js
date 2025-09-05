@@ -1,41 +1,105 @@
+import ExponentialBackoffRetry from '../utils/exponential-backoff-retry.js';
+
 export default class BaseScraper {
-  constructor(browser, options = {}) {
-    this.browser = browser;
+  constructor(contextManager, targetSite, options = {}) {
+    this.contextManager = contextManager;
+    this.targetSite = targetSite;
     this.options = {
       timeout: options.timeout || 30000,
-      retries: options.retries || 1,
+      retries: options.retries || 4,
+      verbose: options.verbose || false,
       ...options
     };
+    this.retry = new ExponentialBackoffRetry();
   }
 
   async scrape() {
-    let lastError = null;
+    const contextId = `scraper_${this.targetSite}_${Date.now()}`;
+    let context = null;
+    let page = null;
+    const startTime = Date.now();
     
-    for (let i = 0; i < this.options.retries; i++) {
-      try {
-        const page = await this.browser.newPage();
+    try {
+      const result = await this.retry.execute(async (attempt) => {
+        const attemptStart = Date.now();
         
-        // Set viewport and user agent to avoid detection
-        await page.setViewportSize({ width: 1920, height: 1080 });
-        await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36');
-        
-        const data = await this.scrapeWithPage(page);
-        await page.close();
-        
-        if (data) {
-          return this.processData(data);
+        try {
+          // Get context (will reuse or create new)
+          context = await this.contextManager.getContext(contextId, this.targetSite);
+          page = await context.newPage();
+          
+          this.log(`Attempt ${attempt}: Starting scrape with new page`, 'debug');
+          
+          const data = await this.scrapeWithPage(page);
+          const responseTime = Date.now() - attemptStart;
+          
+          if (data) {
+            // Record success
+            this.contextManager.recordContextUsage(contextId, true, responseTime);
+            this.log(`Scrape successful in ${responseTime}ms`, 'debug');
+            return this.processData(data);
+          } else {
+            throw new Error('No data extracted');
+          }
+        } catch (error) {
+          const responseTime = Date.now() - attemptStart;
+          this.contextManager.recordContextUsage(contextId, false, responseTime, error);
+          
+          this.log(`Attempt ${attempt} failed after ${responseTime}ms: ${error.message}`, 'debug');
+          throw error;
+        } finally {
+          if (page) {
+            await page.close();
+            page = null;
+          }
         }
-      } catch (error) {
-        lastError = error;
-        console.error(`Scraping attempt ${i + 1} failed:`, error.message);
-        
-        if (i < this.options.retries - 1) {
-          await this.delay(2000 * (i + 1)); // Progressive delay
+      }, this.options.retries);
+      
+      const totalTime = Date.now() - startTime;
+      this.log(`Total scraping time: ${totalTime}ms`, 'info');
+      
+      return result;
+      
+    } catch (error) {
+      const totalTime = Date.now() - startTime;
+      this.log(`Scraping failed after ${totalTime}ms: ${error.message}`, 'error');
+      throw error;
+    } finally {
+      // Clean up resources
+      if (page) {
+        try {
+          await page.close();
+        } catch (e) {
+          this.log(`Error closing page: ${e.message}`, 'debug');
         }
       }
+      
+      if (context) {
+        await this.contextManager.releaseContext(contextId);
+      }
     }
+  }
+
+  log(message, level = 'info') {
+    if (!this.options.verbose && level === 'debug') return;
     
-    throw lastError || new Error('Scraping failed after all retries');
+    const timestamp = new Date().toISOString();
+    const prefix = `[${timestamp}] [${this.targetSite.toUpperCase()}]`;
+    
+    switch (level) {
+      case 'debug':
+        if (this.options.verbose) console.debug(`${prefix} ${message}`);
+        break;
+      case 'info':
+        console.log(`${prefix} ${message}`);
+        break;
+      case 'warn':
+        console.warn(`${prefix} ⚠️  ${message}`);
+        break;
+      case 'error':
+        console.error(`${prefix} ❌ ${message}`);
+        break;
+    }
   }
 
   async scrapeWithPage(page) {

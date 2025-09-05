@@ -1,0 +1,100 @@
+{
+  "version": "2.0.0",
+  "lastUpdate": "2025-09-05T04:18:55.721Z",
+  "status": "success",
+  "data": {
+    "youzhiyouxing": {
+      "source": "https://youzhiyouxing.cn/data",
+      "fetchTime": "2025-09-05T04:18:49.780Z",
+      "indicators": {
+        "value": 64,
+        "level": "贪婪",
+        "levelEn": "Greed",
+        "description": "市场温度：64，贪婪",
+        "trend": "stable",
+        "changeFromYesterday": 0
+      },
+      "visualization": {
+        "type": "thermometer",
+        "color": "#f59e0b",
+        "percentage": 64
+      },
+      "history": [
+        {
+          "date": "2025-09-05",
+          "value": 64
+        }
+      ],
+      "metadata": {
+        "selector": "div.thermometer",
+        "rawText": "\n    \n\n      \n        \n          \n            64°\n            \n              中估\n              温度下降\n            \n          \n\n          \n            更多 \n  \n\n          \n        \n      \n\n      \n        \n "
+      }
+    },
+    "coinmarketcap": {
+      "source": "https://coinmarketcap.com/charts/fear-and-greed-index/",
+      "fetchTime": "2025-09-05T04:18:55.693Z",
+      "indicators": {
+        "value": 20,
+        "level": "Fear",
+        "levelZh": "极度恐慌",
+        "description": "Fear & Greed Index: 20 - Fear",
+        "components": {
+          "volatility": null,
+          "momentum": null,
+          "socialMedia": null,
+          "surveys": null,
+          "dominance": null,
+          "trends": null
+        },
+        "trend": "stable",
+        "changeFromYesterday": 0
+      },
+      "visualization": {
+        "type": "gauge",
+        "color": "#3b82f6",
+        "percentage": 20
+      },
+      "history": [
+        {
+          "date": "2025-09-05",
+          "value": 20
+        }
+      ],
+      "metadata": {
+        "selector": "div:has-text(\"Fear & Greed\")",
+        "rawText": "CryptocurrenciesCryptocurrenciesRankingCategoriesHistorical SnapshotsToken unlocksYieldReal-World AssetsLeaderboardsTrendingUpcomingRecently AddedGainers & LosersMost VisitedCommunity SentimentChain R"
+      }
+    }
+  },
+  "fallback": {},
+  "performance": {
+    "scrapeTime": "11275ms",
+    "timestamp": "2025-09-05T04:18:55.721Z"
+  },
+  "history": {
+    "youzhiyouxing": [
+      {
+        "value": 64,
+        "timestamp": "2025-09-05T04:18:55.721Z",
+        "level": "贪婪"
+      },
+      {
+        "value": 64,
+        "timestamp": "2025-09-05T04:18:03.562Z",
+        "level": "贪婪"
+      }
+    ],
+    "coinmarketcap": [
+      {
+        "value": 20,
+        "timestamp": "2025-09-05T04:18:55.721Z",
+        "level": "Fear"
+      },
+      {
+        "value": 20,
+        "timestamp": "2025-09-05T04:18:03.562Z",
+        "level": "Fear"
+      }
+    ]
+  }
+}
