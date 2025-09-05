@@ -98,38 +98,61 @@ export const useMarketDataStore = defineStore('marketData', () => {
   // 缓存操作
   const getCachedData = (): { data: MarketDataResponse, timestamp: number } | null => {
     try {
+      console.log('[marketData] Attempting to read cache...')
       const cached = localStorage.getItem(CACHE_KEY)
-      if (!cached) return null
+      if (!cached) {
+        console.log('[marketData] No cache found')
+        return null
+      }
       
       const parsed = JSON.parse(cached)
       const age = Date.now() - parsed.timestamp
       
       if (age > CACHE_DURATION) {
+        console.log('[marketData] Cache expired, removing...')
         localStorage.removeItem(CACHE_KEY)
         return null
       }
       
+      console.log('[marketData] Cache hit, age:', Math.round(age / 1000 / 60), 'minutes')
       return parsed
     } catch (e) {
-      console.error('Failed to read cache:', e)
-      localStorage.removeItem(CACHE_KEY)
+      console.error('[marketData] Failed to read cache:', e)
+      try {
+        localStorage.removeItem(CACHE_KEY)
+      } catch (removeError) {
+        console.error('[marketData] Failed to remove invalid cache:', removeError)
+      }
       return null
     }
   }
 
   const setCachedData = (marketData: MarketDataResponse) => {
     try {
-      localStorage.setItem(CACHE_KEY, JSON.stringify({
+      const cacheData = {
         data: marketData,
         timestamp: Date.now()
-      }))
+      }
+      localStorage.setItem(CACHE_KEY, JSON.stringify(cacheData))
+      console.log('[marketData] Data cached successfully')
     } catch (e) {
-      console.error('Failed to cache data:', e)
+      console.error('[marketData] Failed to cache data:', e)
+      // Try to clear some space if quota exceeded
+      if (e instanceof Error && e.name === 'QuotaExceededError') {
+        console.warn('[marketData] LocalStorage quota exceeded, clearing old data...')
+        try {
+          localStorage.removeItem(CACHE_KEY)
+        } catch (clearError) {
+          console.error('[marketData] Failed to clear storage:', clearError)
+        }
+      }
     }
   }
 
   // 数据加载
   const fetchMarketData = async (forceRefresh = false): Promise<MarketDataResponse> => {
+    console.log('[marketData] fetchMarketData called, forceRefresh:', forceRefresh)
+    
     // 如果不强制刷新且不是首次加载，先尝试使用缓存
     if (!forceRefresh && !loading.value) {
       const cached = getCachedData()
@@ -144,6 +167,7 @@ export const useMarketDataStore = defineStore('marketData', () => {
     error.value = null
 
     try {
+      console.log('[marketData] Fetching from /data/market-indicators.json...')
       const response = await fetch('/data/market-indicators.json', {
         cache: forceRefresh ? 'no-cache' : 'default',
         headers: {
@@ -156,10 +180,17 @@ export const useMarketDataStore = defineStore('marketData', () => {
       }
 
       const marketData: MarketDataResponse = await response.json()
+      console.log('[marketData] Data fetched, validating structure...')
       
       // 验证数据结构
       if (!marketData.version || !marketData.lastUpdate) {
-        throw new Error('Invalid data format')
+        console.error('[marketData] Invalid data structure:', marketData)
+        throw new Error('Invalid data format: missing version or lastUpdate')
+      }
+
+      // 确保data对象存在
+      if (!marketData.data) {
+        marketData.data = {}
       }
 
       // 更新状态
@@ -169,7 +200,7 @@ export const useMarketDataStore = defineStore('marketData', () => {
       // 缓存数据
       setCachedData(marketData)
       
-      console.log('Market data loaded successfully:', {
+      console.log('[marketData] Market data loaded successfully:', {
         version: marketData.version,
         lastUpdate: marketData.lastUpdate,
         hasYouzhiyouxing: !!marketData.data.youzhiyouxing,
@@ -181,18 +212,21 @@ export const useMarketDataStore = defineStore('marketData', () => {
 
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : 'Unknown error'
+      console.error('[marketData] Fetch failed:', errorMessage)
       error.value = errorMessage
       
       // 尝试使用缓存数据作为后备
       const cached = getCachedData()
       if (cached) {
-        console.warn('Failed to fetch fresh data, using cached data:', errorMessage)
+        console.warn('[marketData] Using cached data as fallback')
         data.value = cached.data
         lastFetchTime.value = cached.data.lastUpdate
+        // Don't throw error if we have cached data
+        error.value = null // Clear error since we have fallback
         return cached.data
       }
       
-      console.error('Failed to fetch market data and no cache available:', errorMessage)
+      console.error('[marketData] No cache available, operation failed')
       throw new Error(errorMessage)
     } finally {
       loading.value = false
@@ -265,19 +299,41 @@ export const useMarketDataStore = defineStore('marketData', () => {
 
   // 初始化时尝试加载缓存数据
   const initializeStore = async () => {
-    const cached = getCachedData()
-    if (cached) {
-      data.value = cached.data
-      lastFetchTime.value = cached.data.lastUpdate
-    }
+    console.log('[marketData] Initializing store...')
     
-    // 异步获取最新数据
     try {
+      // First try to load cached data
+      const cached = getCachedData()
+      if (cached) {
+        console.log('[marketData] Using cached data for initial load')
+        data.value = cached.data
+        lastFetchTime.value = cached.data.lastUpdate
+      }
+      
+      // Then try to fetch fresh data in background
+      console.log('[marketData] Fetching fresh data...')
       await fetchMarketData(false)
+      console.log('[marketData] Store initialization completed')
+      
     } catch (err) {
-      // 如果有缓存数据，不要因为网络错误而清空数据
-      if (!cached) {
-        console.error('Initial data fetch failed:', err)
+      console.error('[marketData] Store initialization error:', err)
+      
+      // If we already have data (from cache), don't throw error
+      if (data.value) {
+        console.log('[marketData] Using cached data despite fetch error')
+        error.value = 'Using cached data - refresh failed'
+      } else {
+        // Create fallback empty structure to prevent rendering errors
+        console.warn('[marketData] No data available, creating fallback structure')
+        data.value = {
+          version: '1.0.0',
+          lastUpdate: new Date().toISOString(),
+          status: 'error',
+          data: {},
+          fallback: {}
+        }
+        error.value = err instanceof Error ? err.message : 'Failed to load data'
+        // Don't throw - let the UI handle the error state
       }
     }
   }

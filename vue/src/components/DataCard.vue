@@ -12,43 +12,53 @@
     </div>
 
     <!-- 数据展示区域 -->
-    <div class="data-display mb-6" v-if="!loading && !error">
+    <div class="data-display mb-6" v-if="!loading && !error && hasValidData">
       <!-- 可视化组件 -->
       <div class="visualization-container mb-4">
         <!-- 温度计样式 (有知有行) -->
-        <div v-if="data.visualization?.type === 'thermometer'" class="thermometer-container">
+        <div v-if="data?.visualization?.type === 'thermometer'" class="thermometer-container">
           <ThermometerWidget 
-            :value="data.indicators.value"
-            :color="data.visualization.color"
-            :level="data.indicators.level"
+            :value="data.indicators?.value || 0"
+            :color="data.visualization?.color || '#6b7280'"
+            :level="data.indicators?.level || 'Unknown'"
           />
         </div>
         
         <!-- 仪表盘样式 (CoinMarketCap) -->
-        <div v-else-if="data.visualization?.type === 'gauge'" class="gauge-container">
+        <div v-else-if="data?.visualization?.type === 'gauge'" class="gauge-container">
           <GaugeWidget
-            :value="data.indicators.value" 
-            :color="data.visualization.color"
-            :level="data.indicators.level"
+            :value="data.indicators?.value || 0" 
+            :color="data.visualization?.color || '#6b7280'"
+            :level="data.indicators?.level || 'Unknown'"
           />
+        </div>
+        
+        <!-- 默认占位符 -->
+        <div v-else class="thermometer-container">
+          <div class="text-center text-gray-500 dark:text-gray-400">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+            <p>数据加载中...</p>
+          </div>
         </div>
       </div>
 
       <!-- 数值显示 -->
-      <div class="value-display text-center mb-4">
-        <div class="main-value text-4xl font-bold mb-2" :style="{ color: data.visualization?.color }">
-          {{ data.indicators.value }}
+      <div class="value-display text-center mb-4" v-if="data?.indicators">
+        <div class="main-value text-4xl font-bold mb-2" :style="{ color: data.visualization?.color || '#6b7280' }">
+          {{ data.indicators?.value || '--' }}
         </div>
         <div class="level-text text-lg font-medium text-gray-700 dark:text-gray-300">
-          {{ data.indicators.level }}
-          <span v-if="data.indicators.levelEn && data.indicators.levelEn !== data.indicators.level" 
+          {{ data.indicators?.level || 'Unknown' }}
+          <span v-if="data.indicators?.levelEn && data.indicators.levelEn !== data.indicators.level" 
                 class="text-sm text-gray-500 dark:text-gray-400 ml-2">
             ({{ data.indicators.levelEn }})
           </span>
         </div>
         
         <!-- 趋势指示器 -->
-        <div v-if="data.indicators.trend && data.indicators.changeFromYesterday !== null" 
+        <div v-if="data.indicators?.trend && data.indicators?.changeFromYesterday !== null && data.indicators?.changeFromYesterday !== undefined" 
              class="trend-indicator flex items-center justify-center mt-2 text-sm">
           <TrendIcon :trend="data.indicators.trend" />
           <span class="ml-1" :class="trendColorClass">
@@ -58,12 +68,12 @@
       </div>
 
       <!-- 历史趋势图 -->
-      <div v-if="data.history && data.history.length > 0" class="history-chart mb-4">
-        <MiniChart :data="data.history" :color="data.visualization?.color" />
+      <div v-if="data?.history && data.history.length > 0" class="history-chart mb-4">
+        <MiniChart :data="data.history" :color="data.visualization?.color || '#6b7280'" />
       </div>
 
       <!-- 描述信息 -->
-      <p class="description text-sm text-gray-600 dark:text-gray-400 text-center">
+      <p v-if="data?.indicators?.description" class="description text-sm text-gray-600 dark:text-gray-400 text-center">
         {{ data.indicators.description }}
       </p>
     </div>
@@ -90,8 +100,8 @@
         <p>更新时间: {{ formatTime(fallbackData.staleTime) }}</p>
       </div>
 
-      <a v-if="data.source" 
-         :href="data.source" 
+      <a v-if="data?.source || sourceDefaultUrl" 
+         :href="data?.source || sourceDefaultUrl" 
          target="_blank"
          rel="noopener noreferrer"
          class="neo-btn-small mt-4 inline-flex items-center">
@@ -109,7 +119,7 @@
           来源: {{ sourceDisplayName }}
         </span>
         <span class="update-time">
-          {{ formatTime(data.fetchTime) }}
+          {{ formatTime(data?.fetchTime) }}
         </span>
       </div>
     </div>
@@ -163,12 +173,26 @@ const statusText = computed(() => {
 
 // 趋势颜色样式
 const trendColorClass = computed(() => {
-  if (!props.data.indicators?.trend) return ''
+  if (!props.data?.indicators?.trend) return ''
   return {
     'text-green-600 dark:text-green-400': props.data.indicators.trend === 'up',
     'text-red-600 dark:text-red-400': props.data.indicators.trend === 'down',
     'text-gray-600 dark:text-gray-400': props.data.indicators.trend === 'stable'
   }
+})
+
+// 检查数据是否有效
+const hasValidData = computed(() => {
+  return props.data && 
+         props.data.indicators && 
+         typeof props.data.indicators.value !== 'undefined'
+})
+
+// 默认数据源URL
+const sourceDefaultUrl = computed(() => {
+  if (props.source === 'youzhiyouxing') return 'https://youzhiyouxing.cn/data'
+  if (props.source === 'coinmarketcap') return 'https://coinmarketcap.com/charts/fear-and-greed-index/'
+  return null
 })
 
 // 格式化时间

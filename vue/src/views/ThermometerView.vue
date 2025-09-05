@@ -3,6 +3,26 @@
     <!-- 主容器 -->
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       
+      <!-- Critical Error State -->
+      <div v-if="criticalError" class="neo-card mb-8 bg-red-50 dark:bg-red-900/20 border-red-500">
+        <h2 class="text-xl font-bold mb-2 text-red-800 dark:text-red-200">❌ 系统错误</h2>
+        <p class="text-red-700 dark:text-red-300 mb-4">{{ criticalError }}</p>
+        <button @click="handleRefresh" class="neo-btn-small bg-red-500 text-white">
+          🔄 重试加载
+        </button>
+      </div>
+      
+      <!-- Loading State -->
+      <div v-else-if="!isInitialized" class="neo-card mb-8">
+        <div class="flex items-center justify-center py-8">
+          <div class="spinner mr-4"></div>
+          <span class="text-lg text-gray-600 dark:text-gray-400">初始化市场数据...</span>
+        </div>
+      </div>
+      
+      <!-- Normal Content -->
+      <template v-else>
+      
       <!-- 标题卡片 -->
       <div class="neo-card mb-8">
         <h1 class="text-3xl font-bold text-center mb-2 text-gray-900 dark:text-white">
@@ -41,8 +61,9 @@
       <div class="data-cards-grid grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
         <!-- 有知有行温度计卡片 -->
         <DataCard
+          v-if="marketStore.youzhiyouxingData || marketStore.loading || marketStore.error"
           title="有知有行市场温度"
-          :data="marketStore.youzhiyouxingData"
+          :data="marketStore.youzhiyouxingData || {}"
           :loading="marketStore.loading && !marketStore.youzhiyouxingData"
           :error="!!(marketStore.error && !marketStore.youzhiyouxingData)"
           :error-message="marketStore.error || undefined"
@@ -52,8 +73,9 @@
         
         <!-- CoinMarketCap恐慌贪婪指数卡片 -->
         <DataCard
+          v-if="marketStore.coinmarketcapData || marketStore.loading || marketStore.error"
           title="CoinMarketCap恐慌贪婪指数"
-          :data="marketStore.coinmarketcapData"
+          :data="marketStore.coinmarketcapData || {}"
           :loading="marketStore.loading && !marketStore.coinmarketcapData"
           :error="!!(marketStore.error && !marketStore.coinmarketcapData)"
           :error-message="marketStore.error || undefined"
@@ -111,18 +133,23 @@
           </div>
         </div>
       </div>
+      </template>
     </div>
   </AppLayout>
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import AppLayout from '@/components/layout/AppLayout.vue'
 import DataCard from '@/components/DataCard.vue'
 import { useMarketDataStore } from '@/stores/marketData'
 
 // Store
 const marketStore = useMarketDataStore()
+
+// Error handling state
+const isInitialized = ref(false)
+const criticalError = ref<string | null>(null)
 
 // 计算属性
 const statusDotClass = computed(() => {
@@ -164,17 +191,35 @@ const lastUpdateTime = computed(() => {
 
 // 事件处理
 const handleRefresh = async () => {
+  console.log('[ThermometerView] Manual refresh triggered')
   try {
+    criticalError.value = null
     await marketStore.refreshData()
+    console.log('[ThermometerView] Refresh completed successfully')
   } catch (error) {
-    console.error('Refresh failed:', error)
-    // 错误已经在store中处理了
+    console.error('[ThermometerView] Refresh failed:', error)
+    criticalError.value = error instanceof Error ? error.message : 'Refresh failed'
   }
 }
 
 // 生命周期
 onMounted(async () => {
-  await marketStore.initializeStore()
+  console.log('[ThermometerView] Component mounting...')
+  try {
+    // Set loading state
+    isInitialized.value = false
+    criticalError.value = null
+    
+    console.log('[ThermometerView] Initializing market data store...')
+    await marketStore.initializeStore()
+    
+    console.log('[ThermometerView] Store initialized successfully')
+    isInitialized.value = true
+  } catch (error) {
+    console.error('[ThermometerView] Failed to initialize:', error)
+    criticalError.value = error instanceof Error ? error.message : 'Unknown error occurred'
+    isInitialized.value = true // Still set to true to show error state
+  }
 })
 </script>
 
