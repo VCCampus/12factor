@@ -59,6 +59,14 @@ if ! node "$SCRIPTS_DIR/toml-to-json.js" "$TOML_CONFIG" "$VUE_DIR/public/"; then
 fi
 echo -e "${GREEN}✅ JSON数据文件生成完成${NC}"
 
+# 3.5 转换面试题库TOML为JSON
+echo -e "${YELLOW}📝 转换面试题库数据...${NC}"
+if node "$SCRIPTS_DIR/interview-converter.js"; then
+    echo -e "${GREEN}✅ 面试题库数据生成完成${NC}"
+else
+    echo -e "${YELLOW}⚠️  面试题库转换失败，但不影响构建${NC}"
+fi
+
 # 检查JSON文件是否生成
 JSON_FILES=(
     "$VUE_DIR/public/w3sc8_principles-core.json"

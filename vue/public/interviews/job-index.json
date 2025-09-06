@@ -1,0 +1,212 @@
+{
+  "meta": {
+    "title": "模拟面试系统",
+    "description": "多岗位、多难度的区块链行业面试题库",
+    "version": "2.0.0",
+    "generatedAt": "2025-09-05T13:41:25.675Z"
+  },
+  "jobs": {
+    "defi_growth": {
+      "title": "DeFi增长经理",
+      "icon": "💼",
+      "salary": "$55K-80K",
+      "location": "远程",
+      "experience": "2年+",
+      "description": "快速发展的DeFi固定利率借贷平台增长经理",
+      "requirements": [
+        "深度理解DeFi借贷协议和流动性挖矿",
+        "具备强大的数据分析能力",
+        "熟练使用Dune Analytics等链上分析工具",
+        "优秀的英语沟通技能"
+      ]
+    },
+    "fullstack": {
+      "title": "全栈开发工程师",
+      "icon": "💻",
+      "salary": "¥25-40K",
+      "location": "深圳",
+      "experience": "3年+",
+      "description": "区块链技术全栈开发工程师",
+      "requirements": [
+        "熟悉React/Vue等前端框架",
+        "掌握Node.js/Python后端开发",
+        "了解智能合约开发",
+        "具备Web3集成经验"
+      ]
+    },
+    "seo": {
+      "title": "SEO营销专家",
+      "icon": "📈",
+      "salary": "¥20-35K",
+      "location": "北京",
+      "experience": "2年+",
+      "description": "区块链项目SEO和内容营销专家",
+      "requirements": [
+        "熟悉SEO和内容营销策略",
+        "了解区块链行业特点",
+        "具备数据分析能力",
+        "优秀的内容创作能力"
+      ]
+    }
+  },
+  "difficulties": {
+    "junior": {
+      "label": "初级",
+      "icon": "🥉",
+      "timeLimit": 30
+    },
+    "intermediate": {
+      "label": "中级",
+      "icon": "🥈",
+      "timeLimit": 45
+    },
+    "advanced": {
+      "label": "高级",
+      "icon": "🥇",
+      "timeLimit": 60
+    }
+  },
+  "questionnaires": [
+    {
+      "id": "defi_growth_advanced",
+      "jobType": "defi_growth",
+      "difficulty": "advanced",
+      "file": "defi_growth_advanced.json",
+      "title": "DeFi增长经理 - 高级",
+      "icon": "🥇",
+      "questionCount": 100,
+      "categories": [
+        "战略规划与创新",
+        "高级数据分析",
+        "领导力与管理",
+        "生态系统建设",
+        "前沿趋势"
+      ]
+    },
+    {
+      "id": "defi_growth_intermediate",
+      "jobType": "defi_growth",
+      "difficulty": "intermediate",
+      "file": "defi_growth_intermediate.json",
+      "title": "DeFi增长经理 - 中级",
+      "icon": "🥈",
+      "questionCount": 100,
+      "categories": [
+        "高级DeFi机制",
+        "增长数据分析",
+        "高级增长策略",
+        "实战案例分析",
+        "团队协作与执行"
+      ]
+    },
+    {
+      "id": "defi_growth_junior",
+      "jobType": "defi_growth",
+      "difficulty": "junior",
+      "file": "defi_growth_junior.json",
+      "title": "DeFi增长经理 - 初级",
+      "icon": "🥉",
+      "questionCount": 100,
+      "categories": [
+        "DeFi基础",
+        "数据分析",
+        "增长策略",
+        "Web3知识",
+        "实践应用"
+      ]
+    },
+    {
+      "id": "fullstack_advanced",
+      "jobType": "fullstack",
+      "difficulty": "advanced",
+      "file": "fullstack_advanced.json",
+      "title": "全栈开发工程师 - 高级",
+      "icon": "🥇",
+      "questionCount": 100,
+      "categories": [
+        "前端架构",
+        "后端架构",
+        "数据架构",
+        "AI工程",
+        "系统设计"
+      ]
+    },
+    {
+      "id": "fullstack_intermediate",
+      "jobType": "fullstack",
+      "difficulty": "intermediate",
+      "file": "fullstack_intermediate.json",
+      "title": "全栈开发工程师 - 中级",
+      "icon": "🥈",
+      "questionCount": 100,
+      "categories": [
+        "高级React/Next.js",
+        "Node.js高级",
+        "数据库优化",
+        "AI/RAG集成",
+        "系统架构"
+      ]
+    },
+    {
+      "id": "fullstack_junior",
+      "jobType": "fullstack",
+      "difficulty": "junior",
+      "file": "fullstack_junior.json",
+      "title": "全栈开发工程师 - 初级",
+      "icon": "🥉",
+      "questionCount": 100,
+      "categories": [
+        "React/Next.js基础",
+        "Node.js后端",
+        "数据库与缓存",
+        "AI集成基础",
+        "Web3与实践"
+      ]
+    },
+    {
+      "id": "seo_advanced",
+      "jobType": "seo",
+      "difficulty": "advanced",
+      "file": "seo_advanced.json",
+      "title": "SEO营销专家 - 高级",
+      "icon": "🥇",
+      "questionCount": 100,
+      "categories": [
+        "架构设计",
+        "高级技术",
+        "商业运营",
+        "前沿趋势"
+      ]
+    },
+    {
+      "id": "seo_intermediate",
+      "jobType": "seo",
+      "difficulty": "intermediate",
+      "file": "seo_intermediate.json",
+      "title": "SEO营销专家 - 中级",
+      "icon": "🥈",
+      "questionCount": 100,
+      "categories": [
+        "高级黑帽",
+        "站群管理",
+        "流量转化",
+        "风险控制"
+      ]
+    },
+    {
+      "id": "seo_junior",
+      "jobType": "seo",
+      "difficulty": "junior",
+      "file": "seo_junior.json",
+      "title": "SEO营销专家 - 初级",
+      "icon": "🥉",
+      "questionCount": 100,
+      "categories": [
+        "SEO基础",
+        "黑帽SEO",
+        "工具使用",
+        "实战应用"
+      ]
+    }
+  ]
+}

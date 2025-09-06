@@ -1,250 +1,411 @@
 <template>
-  <AppLayout :show-footer-stats="false" :minimal-footer="true">
-    <div v-if="loading" class="loading-container">
-      <div class="neo-card text-center p-8">
-        <div class="text-6xl mb-4">📚</div>
-        <h3 class="text-xl font-bold mb-2">正在加载面试题目...</h3>
-        <p class="text-text-muted">{{ difficultyTitle }} | {{ questions.length > 0 ? questions.length : 100 }} 道题目</p>
-        <div class="loading-bar mt-4">
-          <div class="loading-progress"></div>
+  <AppLayout :show-footer-stats="false">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+      <!-- Quiz Header -->
+      <div class="neo-card p-6 mb-6">
+        <div class="flex items-center justify-between">
+          <div>
+            <h1 class="text-2xl font-bold text-text-dark dark:text-text-light">
+              {{ jobTitle }} - {{ difficultyLabel }}测试
+            </h1>
+            <p class="text-text-muted mt-1">随机抽取25题，全面测试你的能力</p>
+          </div>
+          <div class="text-right">
+            <p class="text-lg font-medium text-text-dark dark:text-text-light">
+              题目 {{ currentIndex + 1 }}/{{ questions.length }}
+            </p>
+            <p class="text-sm text-text-muted">
+              ⏱️ {{ formatTime(elapsedTime) }}
+            </p>
+          </div>
+        </div>
+        
+        <!-- Progress Bar -->
+        <div class="mt-4 bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+          <div
+            class="bg-primary-blue h-2 rounded-full transition-all duration-300"
+            :style="`width: ${progressPercentage}%`"
+          ></div>
         </div>
       </div>
-    </div>
-    
-    <div v-else-if="error" class="error-container">
-      <div class="neo-card text-center p-8 border-red-300 bg-red-50">
-        <div class="text-6xl mb-4">❌</div>
-        <h3 class="text-xl font-bold mb-2 text-red-800">加载失败</h3>
-        <p class="text-red-600 mb-4">{{ error }}</p>
-        <div class="space-x-4">
-          <button @click="loadInterviewQuestions" class="neo-btn bg-red-600 text-white">
-            重试加载
-          </button>
-          <button @click="backToHome" class="neo-btn-secondary">
-            返回首页
-          </button>
+
+      <!-- Question Card -->
+      <div class="neo-card p-8 mb-6">
+        <div class="mb-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="neo-tag text-sm">{{ currentQuestion.category }}</span>
+            <span v-if="currentQuestion.type === 'multiple'" class="neo-tag text-sm bg-orange-100 text-orange-700">
+              多选题
+            </span>
+          </div>
+          <h2 class="text-xl font-medium text-text-dark dark:text-text-light">
+            {{ currentQuestion.question }}
+          </h2>
+        </div>
+        
+        <!-- Options -->
+        <div class="space-y-3">
+          <div
+            v-for="(option, index) in currentQuestion.options"
+            :key="index"
+            class="neo-card option-card p-4 cursor-pointer"
+            :class="{
+              'selected': isOptionSelected(index),
+              'border-primary-blue': isOptionSelected(index)
+            }"
+            @click="toggleOption(index)"
+          >
+            <div class="flex items-start gap-3">
+              <div class="mt-1">
+                <div
+                  v-if="currentQuestion.type === 'single'"
+                  class="w-5 h-5 rounded-full border-2 border-gray-400 flex items-center justify-center"
+                  :class="isOptionSelected(index) ? 'bg-primary-blue border-primary-blue' : ''"
+                >
+                  <div v-if="isOptionSelected(index)" class="w-2 h-2 bg-white rounded-full"></div>
+                </div>
+                <div
+                  v-else
+                  class="w-5 h-5 rounded border-2 border-gray-400 flex items-center justify-center"
+                  :class="isOptionSelected(index) ? 'bg-primary-blue border-primary-blue' : ''"
+                >
+                  <svg v-if="isOptionSelected(index)" class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+              </div>
+              <span class="text-text-dark dark:text-text-light">{{ option }}</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Warning for unanswered -->
+        <div v-if="showWarning" class="mt-4 p-3 bg-yellow-100 dark:bg-yellow-900 rounded-lg">
+          <p class="text-yellow-700 dark:text-yellow-300 text-sm">
+            ⚠️ 请先选择答案再继续
+          </p>
         </div>
       </div>
-    </div>
-    
-    <div v-else-if="questions.length > 0" class="quiz-container">
-      <!-- 面试信息头部 -->
-      <div class="interview-header neo-card mb-6 p-4 bg-blue-50 border-blue-200">
-        <div class="flex flex-col md:flex-row justify-between items-center">
-          <div class="interview-info">
-            <h2 class="text-xl font-bold text-blue-900">
-              {{ getDifficultyIcon(difficulty) }} {{ difficultyTitle }}
-            </h2>
-            <p class="text-blue-700">ChainCatcher 区块链记者岗位 • {{ questions.length }} 道题目</p>
-          </div>
-          <div class="interview-actions mt-4 md:mt-0">
-            <button @click="backToHome" class="neo-btn-secondary text-sm">
-              返回选择
-            </button>
-          </div>
+
+      <!-- Navigation Buttons -->
+      <div class="flex items-center justify-between">
+        <button
+          @click="previousQuestion"
+          :disabled="currentIndex === 0"
+          class="neo-btn"
+          :class="currentIndex === 0 ? 'opacity-50 cursor-not-allowed' : ''"
+        >
+          ← 上一题
+        </button>
+        
+        <div class="flex gap-2">
+          <button
+            v-if="currentIndex < questions.length - 1"
+            @click="nextQuestion"
+            class="neo-btn btn-primary"
+          >
+            下一题 →
+          </button>
+          <button
+            v-else
+            @click="submitQuiz"
+            class="neo-btn btn-success"
+          >
+            提交答卷
+          </button>
         </div>
       </div>
       
-      <!-- 使用扩展的 QuizEngine -->
-      <QuizEngine 
-        :questions="questions"
-        :mode="'interview'"
-        :time-limit="0"
-        :passing-score="60"
-        :randomize-questions="true"
-        :randomize-options="true"
-        :job-info="jobInfo"
-        @complete="handleInterviewComplete"
-        @exit="handleExit"
-      />
+      <!-- Answer Grid -->
+      <div class="mt-8 neo-card p-6">
+        <p class="text-sm text-text-muted mb-3">答题进度</p>
+        <div class="grid grid-cols-10 gap-2">
+          <button
+            v-for="(q, index) in questions"
+            :key="index"
+            @click="jumpToQuestion(index)"
+            class="w-10 h-10 rounded text-sm font-medium transition-all"
+            :class="{
+              'bg-primary-blue text-white': answers[index] && answers[index].length > 0,
+              'bg-gray-200 dark:bg-gray-700': !answers[index] || answers[index].length === 0,
+              'ring-2 ring-primary-blue': index === currentIndex
+            }"
+          >
+            {{ index + 1 }}
+          </button>
+        </div>
+      </div>
     </div>
   </AppLayout>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, computed } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import QuizEngine from '@/components/QuizEngine.vue'
 import AppLayout from '@/components/layout/AppLayout.vue'
-import { useInterviewStore } from '@/stores/interview'
-import type { QuizQuestion } from '@/stores/quiz'
 
 const route = useRoute()
 const router = useRouter()
-const interviewStore = useInterviewStore()
 
-// 状态管理
-const questions = ref<QuizQuestion[]>([])
-const loading = ref(true)
-const error = ref<string>('')
-const jobInfo = ref<any>({})
+interface Question {
+  id: string
+  category: string
+  type: 'single' | 'multiple'
+  question: string
+  options: string[]
+  answer: string | string[]
+  explanation: string
+}
 
-// 计算属性
-const difficulty = computed(() => route.params.difficulty as string)
-const difficultyTitle = computed(() => {
-  const titles = {
-    basic: '基础级别 - 通用素质测评',
-    advanced: '进阶级别 - 深度研究能力',
-    expert: '专家级别 - 新闻实战技能'
-  }
-  return titles[difficulty.value as keyof typeof titles] || '模拟面试'
+const jobType = ref<string>('')
+const difficulty = ref<string>('')
+const jobTitle = ref<string>('')
+const difficultyLabel = ref<string>('')
+
+const questions = ref<Question[]>([])
+const currentIndex = ref(0)
+const answers = ref<Record<number, string[]>>({})
+const startTime = ref<number>(Date.now())
+const elapsedTime = ref(0)
+const showWarning = ref(false)
+
+let timer: ReturnType<typeof setInterval> | null = null
+
+const currentQuestion = computed(() => questions.value[currentIndex.value] || {})
+const progressPercentage = computed(() => {
+  const answered = Object.values(answers.value).filter(a => a && a.length > 0).length
+  return Math.round((answered / questions.value.length) * 100)
 })
 
 onMounted(async () => {
-  await loadInterviewQuestions()
+  jobType.value = route.params.jobType as string
+  difficulty.value = route.params.difficulty as string
+  
+  // Load questions
+  await loadQuestions()
+  
+  // Start timer
+  startTime.value = Date.now()
+  timer = setInterval(() => {
+    elapsedTime.value = Date.now() - startTime.value
+  }, 1000)
 })
 
-const loadInterviewQuestions = async () => {
-  loading.value = true
-  error.value = ''
-  
+onUnmounted(() => {
+  if (timer) {
+    clearInterval(timer)
+  }
+})
+
+async function loadQuestions() {
   try {
-    console.log(`🔄 加载面试题目: ${difficulty.value}`)
+    // Load job index for metadata
+    const indexResponse = await fetch('/interviews/job-index.json')
+    const indexData = await indexResponse.json()
     
-    const response = await fetch(`/data/interview-${difficulty.value}.json`)
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}: ${response.statusText}`)
-    }
+    jobTitle.value = indexData.jobs[jobType.value]?.title || jobType.value
+    difficultyLabel.value = indexData.difficulties[difficulty.value]?.label || difficulty.value
     
-    const data = await response.json()
-    console.log(`📚 加载完成:`, data.meta)
+    // Load question bank
+    const questionsResponse = await fetch(`/interviews/${jobType.value}_${difficulty.value}.json`)
+    const questionData = await questionsResponse.json()
     
-    if (!data.questions || data.questions.length === 0) {
-      throw new Error('题目数据为空')
-    }
+    // Random select 25 questions
+    const allQuestions = questionData.questions
+    const selectedQuestions = randomSelectQuestions(allQuestions, 25)
+    questions.value = selectedQuestions
     
-    questions.value = data.questions
-    jobInfo.value = data.jobInfo || {}
-    
-    // 初始化面试Store
-    interviewStore.startInterview(
-      difficulty.value as 'basic' | 'advanced' | 'expert',
-      difficultyTitle.value,
-      questions.value.length
-    )
-    
-    console.log(`✅ 成功加载 ${questions.value.length} 道题目`)
-    
-  } catch (err) {
-    console.error('❌ 加载面试题目失败:', err)
-    error.value = err instanceof Error ? err.message : '未知错误'
-  } finally {
-    loading.value = false
+    // Initialize answers
+    questions.value.forEach((_, index) => {
+      answers.value[index] = []
+    })
+  } catch (error) {
+    console.error('Failed to load questions:', error)
+    alert('加载题目失败，请刷新重试')
   }
 }
 
-const getDifficultyIcon = (diff: string) => {
-  const icons = {
-    basic: '📝',
-    advanced: '🔍',
-    expert: '⚡'
-  }
-  return icons[diff as keyof typeof icons] || '📋'
+function randomSelectQuestions(allQuestions: Question[], count: number): Question[] {
+  const shuffled = [...allQuestions].sort(() => Math.random() - 0.5)
+  return shuffled.slice(0, count)
 }
 
-const handleInterviewComplete = (results: any) => {
-  console.log('🎉 面试完成:', results)
+function isOptionSelected(optionIndex: number): boolean {
+  const currentAnswers = answers.value[currentIndex.value] || []
+  const optionValue = currentQuestion.value.options[optionIndex]
+  return currentAnswers.includes(optionValue)
+}
+
+function toggleOption(optionIndex: number) {
+  const optionValue = currentQuestion.value.options[optionIndex]
+  const currentAnswers = answers.value[currentIndex.value] || []
   
-  // 完成面试状态
-  interviewStore.completeInterview()
+  if (currentQuestion.value.type === 'single') {
+    // Single choice - replace answer
+    answers.value[currentIndex.value] = [optionValue]
+  } else {
+    // Multiple choice - toggle
+    const index = currentAnswers.indexOf(optionValue)
+    if (index > -1) {
+      currentAnswers.splice(index, 1)
+    } else {
+      currentAnswers.push(optionValue)
+    }
+    answers.value[currentIndex.value] = [...currentAnswers]
+  }
   
-  // 保存面试结果到 localStorage
-  const interviewResult = {
-    ...results,
+  showWarning.value = false
+}
+
+function nextQuestion() {
+  // Check if current question is answered
+  if (!answers.value[currentIndex.value] || answers.value[currentIndex.value].length === 0) {
+    showWarning.value = true
+    return
+  }
+  
+  if (currentIndex.value < questions.value.length - 1) {
+    currentIndex.value++
+    showWarning.value = false
+  }
+}
+
+function previousQuestion() {
+  if (currentIndex.value > 0) {
+    currentIndex.value--
+    showWarning.value = false
+  }
+}
+
+function jumpToQuestion(index: number) {
+  currentIndex.value = index
+  showWarning.value = false
+}
+
+function submitQuiz() {
+  // Check if current question is answered
+  if (!answers.value[currentIndex.value] || answers.value[currentIndex.value].length === 0) {
+    showWarning.value = true
+    return
+  }
+  
+  // Check for unanswered questions
+  const unanswered = questions.value.filter((_, i) => 
+    !answers.value[i] || answers.value[i].length === 0
+  )
+  
+  if (unanswered.length > 0) {
+    const confirmed = confirm(`还有 ${unanswered.length} 题未作答，确定要提交吗？`)
+    if (!confirmed) return
+  }
+  
+  // Calculate score
+  const result = calculateScore()
+  
+  // Save result to localStorage
+  saveResult(result)
+  
+  // Navigate to result page
+  router.push({
+    path: `/mock-interview/${jobType.value}/${difficulty.value}/result`,
+    query: { sessionId: result.sessionId }
+  })
+}
+
+function calculateScore() {
+  let correctCount = 0
+  const wrongQuestions: number[] = []
+  const categoryScores: Record<string, { correct: number; total: number }> = {}
+  
+  questions.value.forEach((question, index) => {
+    const userAnswer = answers.value[index] || []
+    const correctAnswer = Array.isArray(question.answer) ? question.answer : [question.answer]
+    
+    // Initialize category score
+    if (!categoryScores[question.category]) {
+      categoryScores[question.category] = { correct: 0, total: 0 }
+    }
+    categoryScores[question.category].total++
+    
+    // Check if answer is correct
+    const isCorrect = userAnswer.length === correctAnswer.length &&
+      userAnswer.every(a => correctAnswer.includes(a))
+    
+    if (isCorrect) {
+      correctCount++
+      categoryScores[question.category].correct++
+    } else {
+      wrongQuestions.push(index)
+    }
+  })
+  
+  const totalScore = Math.round((correctCount / questions.value.length) * 100)
+  
+  return {
+    sessionId: `${jobType.value}_${difficulty.value}_${Date.now()}`,
+    jobType: jobType.value,
     difficulty: difficulty.value,
-    difficultyTitle: difficultyTitle.value,
-    jobInfo: jobInfo.value,
-    completedAt: new Date().toISOString(),
-    type: 'interview'
+    totalScore,
+    correctCount,
+    totalQuestions: questions.value.length,
+    timeSpent: Math.floor(elapsedTime.value / 60000), // minutes
+    categoryScores,
+    wrongQuestions,
+    answers: answers.value,
+    questions: questions.value,
+    completedAt: new Date().toISOString()
+  }
+}
+
+function saveResult(result: any) {
+  // Save to interview_results
+  const existingResults = JSON.parse(localStorage.getItem('interview_results') || '[]')
+  existingResults.unshift(result)
+  // Keep only last 20 results
+  if (existingResults.length > 20) {
+    existingResults.pop()
+  }
+  localStorage.setItem('interview_results', JSON.stringify(existingResults))
+  
+  // Update interview_sessions
+  const sessions = JSON.parse(localStorage.getItem('interview_sessions') || '{}')
+  const sessionKey = `${jobType.value}_${difficulty.value}`
+  
+  if (!sessions[sessionKey] || result.totalScore > sessions[sessionKey].bestScore) {
+    sessions[sessionKey] = {
+      bestScore: result.totalScore,
+      attempts: (sessions[sessionKey]?.attempts || 0) + 1,
+      lastAttempt: result.completedAt
+    }
   }
   
-  // 保存到本地存储
-  const existingResults = JSON.parse(localStorage.getItem('interview-results') || '[]')
-  existingResults.push(interviewResult)
-  localStorage.setItem('interview-results', JSON.stringify(existingResults))
+  localStorage.setItem('interview_sessions', JSON.stringify(sessions))
   
-  console.log('💾 面试结果已保存')
+  // Store current session for result page
+  sessionStorage.setItem('current_interview_result', JSON.stringify(result))
 }
 
-const handleExit = () => {
-  interviewStore.resetInterview()
-  backToHome()
-}
-
-const backToHome = () => {
-  interviewStore.resetInterview()
-  router.push('/mock-interview')
+function formatTime(ms: number): string {
+  const seconds = Math.floor(ms / 1000)
+  const minutes = Math.floor(seconds / 60)
+  const remainingSeconds = seconds % 60
+  return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`
 }
 </script>
 
 <style scoped>
-.interview-quiz {
-  min-height: calc(100vh - 80px);
-  padding: 1rem;
+.option-card {
+  transition: all 0.2s ease;
+  border: 2px solid var(--color-border);
 }
 
-.loading-container,
-.error-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 60vh;
+.option-card:hover {
+  border-color: var(--color-primary);
+  transform: translateX(4px);
 }
 
-.loading-bar {
-  width: 200px;
-  height: 4px;
-  background: #e2e8f0;
-  border-radius: 2px;
-  overflow: hidden;
-  margin: 0 auto;
-}
-
-.loading-progress {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, #3b82f6, #06b6d4);
-  animation: loading 1.5s ease-in-out infinite;
-}
-
-@keyframes loading {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-
-.interview-header {
-  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
-}
-
-.quiz-container {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-@media (max-width: 768px) {
-  .interview-quiz {
-    padding: 0.5rem;
-  }
-  
-  .interview-header {
-    margin-bottom: 1rem;
-    padding: 1rem;
-  }
-  
-  .interview-info h2 {
-    font-size: 1.125rem;
-  }
-  
-  .interview-actions {
-    width: 100%;
-  }
-  
-  .interview-actions button {
-    width: 100%;
-  }
+.option-card.selected {
+  background: var(--color-primary-light);
+  border-color: var(--color-primary);
 }
 </style>

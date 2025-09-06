@@ -45,9 +45,27 @@ const router = createRouter({
           component: () => import('@/components/interview/InterviewHome.vue')
         },
         {
-          path: ':difficulty',
+          path: ':jobType',
+          name: 'job-detail',
+          component: () => import('@/components/interview/JobDetail.vue'),
+          props: true
+        },
+        {
+          path: ':jobType/:difficulty/quiz',
           name: 'interview-quiz',
           component: () => import('@/components/interview/InterviewQuiz.vue'),
+          props: true
+        },
+        {
+          path: ':jobType/:difficulty/result',
+          name: 'interview-result',
+          component: () => import('@/components/interview/InterviewResult.vue'),
+          props: true
+        },
+        {
+          path: ':jobType/:difficulty/review',
+          name: 'interview-review',
+          component: () => import('@/components/interview/InterviewReview.vue'),
           props: true
         }
       ]

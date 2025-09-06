@@ -1,0 +1,1675 @@
+{
+  "meta": {
+    "jobType": "defi_growth",
+    "jobTypeLabel": "DeFi增长经理",
+    "difficulty": "junior",
+    "difficultyLabel": "初级",
+    "title": "DeFi增长经理面试题库 - 初级篇",
+    "version": "1.0.0",
+    "description": "针对初级DeFi增长经理的100道面试题",
+    "totalQuestions": 100,
+    "categories": [
+      "DeFi基础",
+      "数据分析",
+      "增长策略",
+      "Web3知识",
+      "实践应用"
+    ],
+    "generatedAt": "2025-09-05T13:41:25.700Z"
+  },
+  "questions": [
+    {
+      "id": "defi_growth_junior_defi_basics_001",
+      "originalId": 1,
+      "category": "DeFi基础",
+      "categoryKey": "defi_basics",
+      "type": "single",
+      "question": "DeFi是什么的缩写？",
+      "options": [
+        "Decentralized Finance",
+        "Digital Finance",
+        "Distributed Finance",
+        "Direct Finance"
+      ],
+      "answer": "Decentralized Finance",
+      "explanation": "DeFi是Decentralized Finance的缩写，指去中心化金融"
+    },
+    {
+      "id": "defi_growth_junior_defi_basics_002",
+      "originalId": 2,
+      "category": "DeFi基础",
+      "categoryKey": "defi_basics",
+      "type": "single",
+      "question": "TVL在DeFi中代表什么？",
+      "options": [
+        "Total Value Locked",
+        "Token Value Listed",
+        "Trading Volume Level",
+        "Transaction Value Limit"
+      ],
+      "answer": "Total Value Locked",
+      "explanation": "TVL（Total Value Locked）是衡量DeFi协议规模的重要指标，表示锁定在协议中的总价值"
+    },
+    {
+      "id": "defi_growth_junior_defi_basics_003",
+      "originalId": 3,
+      "category": "DeFi基础",
+      "categoryKey": "defi_basics",
+      "type": "single",
+      "question": "以下哪个是主要的DeFi借贷协议？",
+      "options": [
+        "Aave",
+        "OpenSea",
+        "Binance",
+        "Coinbase"
+      ],
+      "answer": "Aave",
+      "explanation": "Aave是最大的去中心化借贷协议之一"
+    },
+    {
+      "id": "defi_growth_junior_defi_basics_004",
+      "originalId": 4,
+      "category": "DeFi基础",
+      "categoryKey": "defi_basics",
+      "type": "multiple",
+      "question": "以下哪些是DeFi协议的特点？（多选）",
+      "options": [
+        "无需许可",
+        "透明公开",
+        "自动执行",
+        "中心化管理"
+      ],
+      "answer": [
+        "无需许可",
+        "透明公开",
+        "自动执行"
+      ],
+      "explanation": "DeFi协议的核心特点是去中心化、无需许可、透明和自动化"
+    },
+    {
+      "id": "defi_growth_junior_defi_basics_005",
+      "originalId": 5,
+      "category": "DeFi基础",
+      "categoryKey": "defi_basics",
+      "type": "single",
+      "question": "智能合约通常部署在哪个区块链上最多？",
+      "options": [
+        "Ethereum",
+        "Bitcoin",
+        "Ripple",
+        "Litecoin"
+      ],
+      "answer": "Ethereum",
+      "explanation": "以太坊是最大的智能合约平台，大部分DeFi协议都部署在以太坊上"
+    },
+    {
+      "id": "defi_growth_junior_defi_basics_006",
+      "originalId": 6,
+      "category": "DeFi基础",
+      "categoryKey": "defi_basics",
+      "type": "single",
+      "question": "流动性挖矿(Liquidity Mining)的主要目的是什么？",
+      "options": [
+        "激励用户提供流动性",
+        "挖掘比特币",
+        "验证交易",
+        "创建新代币"
+      ],
+      "answer": "激励用户提供流动性",
+      "explanation": "流动性挖矿通过奖励机制激励用户向协议提供流动性"
+    },
+    {
+      "id": "defi_growth_junior_defi_basics_007",
+      "originalId": 7,
+      "category": "DeFi基础",
+      "categoryKey": "defi_basics",
+      "type": "single",
+      "question": "AMM代表什么？",
+      "options": [
+        "Automated Market Maker",
+        "Asset Management Model",
+        "Advanced Mining Method",
+        "Alternative Money Market"
+      ],
+      "answer": "Automated Market Maker",
+      "explanation": "AMM（自动做市商）是DeFi中重要的交易机制"
+    },
+    {
+      "id": "defi_growth_junior_defi_basics_008",
+      "originalId": 8,
+      "category": "DeFi基础",
+      "categoryKey": "defi_basics",
+      "type": "single",
+      "question": "稳定币的主要作用是什么？",
+      "options": [
+        "保持价值稳定",
+        "投机获利",
+        "挖矿奖励",
+        "支付gas费"
+      ],
+      "answer": "保持价值稳定",
+      "explanation": "稳定币通过锚定法币等资产来保持价值稳定"
+    },
+    {
+      "id": "defi_growth_junior_defi_basics_009",
+      "originalId": 9,
+      "category": "DeFi基础",
+      "categoryKey": "defi_basics",
+      "type": "multiple",
+      "question": "以下哪些是常见的稳定币？（多选）",
+      "options": [
+        "USDT",
+        "USDC",
+        "DAI",
+        "BTC"
+      ],
+      "answer": [
+        "USDT",
+        "USDC",
+        "DAI"
+      ],
+      "explanation": "USDT、USDC和DAI都是主流稳定币，BTC不是稳定币"
+    },
+    {
+      "id": "defi_growth_junior_defi_basics_010",
+      "originalId": 10,
+      "category": "DeFi基础",
+      "categoryKey": "defi_basics",
+      "type": "single",
+      "question": "什么是超额抵押贷款？",
+      "options": [
+        "抵押品价值高于借款价值",
+        "抵押品价值等于借款价值",
+        "抵押品价值低于借款价值",
+        "无需抵押品"
+      ],
+      "answer": "抵押品价值高于借款价值",
+      "explanation": "DeFi借贷通常要求超额抵押以降低风险"
+    },
+    {
+      "id": "defi_growth_junior_defi_basics_011",
+      "originalId": 11,
+      "category": "DeFi基础",
+      "categoryKey": "defi_basics",
+      "type": "single",
+      "question": "Gas费是什么？",
+      "options": [
+        "区块链交易手续费",
+        "代币价格",
+        "挖矿奖励",
+        "借贷利息"
+      ],
+      "answer": "区块链交易手续费",
+      "explanation": "Gas费是在区块链上执行交易或智能合约所需支付的手续费"
+    },
+    {
+      "id": "defi_growth_junior_defi_basics_012",
+      "originalId": 12,
+      "category": "DeFi基础",
+      "categoryKey": "defi_basics",
+      "type": "single",
+      "question": "什么是无常损失(Impermanent Loss)？",
+      "options": [
+        "提供流动性时因价格变化产生的潜在损失",
+        "永久性的资金损失",
+        "黑客攻击损失",
+        "交易手续费"
+      ],
+      "answer": "提供流动性时因价格变化产生的潜在损失",
+      "explanation": "无常损失是流动性提供者面临的主要风险之一"
+    },
+    {
+      "id": "defi_growth_junior_defi_basics_013",
+      "originalId": 13,
+      "category": "DeFi基础",
+      "categoryKey": "defi_basics",
+      "type": "single",
+      "question": "DAO代表什么？",
+      "options": [
+        "Decentralized Autonomous Organization",
+        "Digital Asset Offering",
+        "Direct Access Operation",
+        "Data Analysis Organization"
+      ],
+      "answer": "Decentralized Autonomous Organization",
+      "explanation": "DAO是去中心化自治组织，通过智能合约和代币治理运作"
+    },
+    {
+      "id": "defi_growth_junior_defi_basics_014",
+      "originalId": 14,
+      "category": "DeFi基础",
+      "categoryKey": "defi_basics",
+      "type": "single",
+      "question": "什么是闪电贷(Flash Loan)？",
+      "options": [
+        "无需抵押的即时借还贷款",
+        "长期贷款",
+        "抵押贷款",
+        "信用贷款"
+      ],
+      "answer": "无需抵押的即时借还贷款",
+      "explanation": "闪电贷必须在同一笔交易中借出和归还"
+    },
+    {
+      "id": "defi_growth_junior_defi_basics_015",
+      "originalId": 15,
+      "category": "DeFi基础",
+      "categoryKey": "defi_basics",
+      "type": "multiple",
+      "question": "以下哪些是DeFi的主要风险？（多选）",
+      "options": [
+        "智能合约风险",
+        "流动性风险",
+        "价格波动风险",
+        "监管风险"
+      ],
+      "answer": [
+        "智能合约风险",
+        "流动性风险",
+        "价格波动风险",
+        "监管风险"
+      ],
+      "explanation": "DeFi面临多种风险，用户需要充分了解"
+    },
+    {
+      "id": "defi_growth_junior_defi_basics_016",
+      "originalId": 16,
+      "category": "DeFi基础",
+      "categoryKey": "defi_basics",
+      "type": "single",
+      "question": "什么是收益聚合器(Yield Aggregator)？",
+      "options": [
+        "自动优化收益的协议",
+        "交易聚合器",
+        "数据聚合工具",
+        "流动性聚合器"
+      ],
+      "answer": "自动优化收益的协议",
+      "explanation": "收益聚合器自动将资金分配到最高收益的协议"
+    },
+    {
+      "id": "defi_growth_junior_defi_basics_017",
+      "originalId": 17,
+      "category": "DeFi基础",
+      "categoryKey": "defi_basics",
+      "type": "single",
+      "question": "治理代币的主要功能是什么？",
+      "options": [
+        "参与协议决策投票",
+        "支付手续费",
+        "提供流动性",
+        "挖矿奖励"
+      ],
+      "answer": "参与协议决策投票",
+      "explanation": "治理代币赋予持有者参与协议治理的权利"
+    },
+    {
+      "id": "defi_growth_junior_defi_basics_018",
+      "originalId": 18,
+      "category": "DeFi基础",
+      "categoryKey": "defi_basics",
+      "type": "single",
+      "question": "什么是DEX？",
+      "options": [
+        "去中心化交易所",
+        "数据交换协议",
+        "衍生品交易所",
+        "中心化交易所"
+      ],
+      "answer": "去中心化交易所",
+      "explanation": "DEX（Decentralized Exchange）允许用户直接交易而无需中介"
+    },
+    {
+      "id": "defi_growth_junior_defi_basics_019",
+      "originalId": 19,
+      "category": "DeFi基础",
+      "categoryKey": "defi_basics",
+      "type": "single",
+      "question": "Uniswap使用什么定价模型？",
+      "options": [
+        "恒定乘积公式",
+        "订单簿",
+        "拍卖模式",
+        "固定价格"
+      ],
+      "answer": "恒定乘积公式",
+      "explanation": "Uniswap使用x*y=k的恒定乘积自动做市商模型"
+    },
+    {
+      "id": "defi_growth_junior_defi_basics_020",
+      "originalId": 20,
+      "category": "DeFi基础",
+      "categoryKey": "defi_basics",
+      "type": "single",
+      "question": "什么是滑点(Slippage)？",
+      "options": [
+        "预期价格与实际成交价格的差异",
+        "代币价格下跌",
+        "交易失败",
+        "网络延迟"
+      ],
+      "answer": "预期价格与实际成交价格的差异",
+      "explanation": "滑点在大额交易或流动性不足时特别明显"
+    },
+    {
+      "id": "defi_growth_junior_data_analysis_021",
+      "originalId": 21,
+      "category": "数据分析",
+      "categoryKey": "data_analysis",
+      "type": "single",
+      "question": "MAU代表什么指标？",
+      "options": [
+        "Monthly Active Users",
+        "Maximum Annual Usage",
+        "Market Average Unit",
+        "Minimum Account Usage"
+      ],
+      "answer": "Monthly Active Users",
+      "explanation": "MAU是衡量用户活跃度的重要指标"
+    },
+    {
+      "id": "defi_growth_junior_data_analysis_022",
+      "originalId": 22,
+      "category": "数据分析",
+      "categoryKey": "data_analysis",
+      "type": "single",
+      "question": "以下哪个工具最适合分析链上数据？",
+      "options": [
+        "Dune Analytics",
+        "Photoshop",
+        "Microsoft Word",
+        "Zoom"
+      ],
+      "answer": "Dune Analytics",
+      "explanation": "Dune Analytics是专门用于区块链数据分析的平台"
+    },
+    {
+      "id": "defi_growth_junior_data_analysis_023",
+      "originalId": 23,
+      "category": "数据分析",
+      "categoryKey": "data_analysis",
+      "type": "single",
+      "question": "什么是留存率？",
+      "options": [
+        "一段时间后继续使用产品的用户比例",
+        "新用户增长率",
+        "交易成功率",
+        "资金锁定率"
+      ],
+      "answer": "一段时间后继续使用产品的用户比例",
+      "explanation": "留存率是衡量用户粘性的关键指标"
+    },
+    {
+      "id": "defi_growth_junior_data_analysis_024",
+      "originalId": 24,
+      "category": "数据分析",
+      "categoryKey": "data_analysis",
+      "type": "single",
+      "question": "CAC代表什么？",
+      "options": [
+        "Customer Acquisition Cost",
+        "Crypto Asset Class",
+        "Chain Activity Count",
+        "Contract Audit Cost"
+      ],
+      "answer": "Customer Acquisition Cost",
+      "explanation": "CAC（客户获取成本）是增长营销的核心指标"
+    },
+    {
+      "id": "defi_growth_junior_data_analysis_025",
+      "originalId": 25,
+      "category": "数据分析",
+      "categoryKey": "data_analysis",
+      "type": "multiple",
+      "question": "以下哪些是DeFi协议的关键指标？（多选）",
+      "options": [
+        "TVL",
+        "交易量",
+        "独立用户数",
+        "代码行数"
+      ],
+      "answer": [
+        "TVL",
+        "交易量",
+        "独立用户数"
+      ],
+      "explanation": "TVL、交易量和用户数是评估DeFi协议的核心指标"
+    },
+    {
+      "id": "defi_growth_junior_data_analysis_026",
+      "originalId": 26,
+      "category": "数据分析",
+      "categoryKey": "data_analysis",
+      "type": "single",
+      "question": "什么是漏斗分析？",
+      "options": [
+        "分析用户转化路径的方法",
+        "分析代币价格",
+        "分析网络拥堵",
+        "分析合约漏洞"
+      ],
+      "answer": "分析用户转化路径的方法",
+      "explanation": "漏斗分析帮助识别用户流失点"
+    },
+    {
+      "id": "defi_growth_junior_data_analysis_027",
+      "originalId": 27,
+      "category": "数据分析",
+      "categoryKey": "data_analysis",
+      "type": "single",
+      "question": "LTV代表什么？",
+      "options": [
+        "Lifetime Value",
+        "Liquidity Total Volume",
+        "Lock Time Value",
+        "Latest Transaction Value"
+      ],
+      "answer": "Lifetime Value",
+      "explanation": "LTV（用户生命周期价值）是评估用户长期价值的指标"
+    },
+    {
+      "id": "defi_growth_junior_data_analysis_028",
+      "originalId": 28,
+      "category": "数据分析",
+      "categoryKey": "data_analysis",
+      "type": "single",
+      "question": "什么是队列分析(Cohort Analysis)？",
+      "options": [
+        "按时间分组分析用户行为",
+        "分析代码质量",
+        "分析网络性能",
+        "分析市场趋势"
+      ],
+      "answer": "按时间分组分析用户行为",
+      "explanation": "队列分析帮助理解不同时期用户的行为差异"
+    },
+    {
+      "id": "defi_growth_junior_data_analysis_029",
+      "originalId": 29,
+      "category": "数据分析",
+      "categoryKey": "data_analysis",
+      "type": "single",
+      "question": "DAU/MAU比率衡量什么？",
+      "options": [
+        "用户粘性",
+        "增长速度",
+        "收入水平",
+        "成本效率"
+      ],
+      "answer": "用户粘性",
+      "explanation": "DAU/MAU比率越高，说明用户使用频率越高"
+    },
+    {
+      "id": "defi_growth_junior_data_analysis_030",
+      "originalId": 30,
+      "category": "数据分析",
+      "categoryKey": "data_analysis",
+      "type": "single",
+      "question": "什么是北极星指标？",
+      "options": [
+        "最重要的核心增长指标",
+        "最北方的数据中心",
+        "最高的收益率",
+        "最大的交易量"
+      ],
+      "answer": "最重要的核心增长指标",
+      "explanation": "北极星指标是指导整体增长策略的核心指标"
+    },
+    {
+      "id": "defi_growth_junior_data_analysis_031",
+      "originalId": 31,
+      "category": "数据分析",
+      "categoryKey": "data_analysis",
+      "type": "single",
+      "question": "A/B测试的目的是什么？",
+      "options": [
+        "比较不同版本的效果",
+        "测试智能合约",
+        "审计代码",
+        "压力测试"
+      ],
+      "answer": "比较不同版本的效果",
+      "explanation": "A/B测试用于优化产品和营销策略"
+    },
+    {
+      "id": "defi_growth_junior_data_analysis_032",
+      "originalId": 32,
+      "category": "数据分析",
+      "categoryKey": "data_analysis",
+      "type": "single",
+      "question": "什么是激活率？",
+      "options": [
+        "完成关键操作的新用户比例",
+        "代币激活速度",
+        "网络激活时间",
+        "挖矿激活率"
+      ],
+      "answer": "完成关键操作的新用户比例",
+      "explanation": "激活率反映新用户的初始参与度"
+    },
+    {
+      "id": "defi_growth_junior_data_analysis_033",
+      "originalId": 33,
+      "category": "数据分析",
+      "categoryKey": "data_analysis",
+      "type": "multiple",
+      "question": "以下哪些是用户分析的维度？（多选）",
+      "options": [
+        "地理位置",
+        "使用频率",
+        "交易金额",
+        "代码贡献"
+      ],
+      "answer": [
+        "地理位置",
+        "使用频率",
+        "交易金额"
+      ],
+      "explanation": "用户分析需要从多个维度理解用户行为"
+    },
+    {
+      "id": "defi_growth_junior_data_analysis_034",
+      "originalId": 34,
+      "category": "数据分析",
+      "categoryKey": "data_analysis",
+      "type": "single",
+      "question": "什么是流失率(Churn Rate)？",
+      "options": [
+        "停止使用产品的用户比例",
+        "交易失败率",
+        "代币销毁率",
+        "网络错误率"
+      ],
+      "answer": "停止使用产品的用户比例",
+      "explanation": "流失率是衡量用户留存的反向指标"
+    },
+    {
+      "id": "defi_growth_junior_data_analysis_035",
+      "originalId": 35,
+      "category": "数据分析",
+      "categoryKey": "data_analysis",
+      "type": "single",
+      "question": "SQL在数据分析中的作用是什么？",
+      "options": [
+        "查询和分析数据库",
+        "编写智能合约",
+        "设计用户界面",
+        "管理服务器"
+      ],
+      "answer": "查询和分析数据库",
+      "explanation": "SQL是数据分析的基础技能"
+    },
+    {
+      "id": "defi_growth_junior_data_analysis_036",
+      "originalId": 36,
+      "category": "数据分析",
+      "categoryKey": "data_analysis",
+      "type": "single",
+      "question": "什么是转化率？",
+      "options": [
+        "完成目标行为的用户比例",
+        "代币兑换率",
+        "货币汇率",
+        "挖矿效率"
+      ],
+      "answer": "完成目标行为的用户比例",
+      "explanation": "转化率是衡量营销和产品效果的关键指标"
+    },
+    {
+      "id": "defi_growth_junior_data_analysis_037",
+      "originalId": 37,
+      "category": "数据分析",
+      "categoryKey": "data_analysis",
+      "type": "single",
+      "question": "Google Analytics主要用于什么？",
+      "options": [
+        "网站流量分析",
+        "区块链分析",
+        "代码分析",
+        "财务分析"
+      ],
+      "answer": "网站流量分析",
+      "explanation": "Google Analytics是网站和应用分析的标准工具"
+    },
+    {
+      "id": "defi_growth_junior_data_analysis_038",
+      "originalId": 38,
+      "category": "数据分析",
+      "categoryKey": "data_analysis",
+      "type": "single",
+      "question": "什么是归因分析？",
+      "options": [
+        "确定转化来源的分析",
+        "代币归属分析",
+        "错误归因分析",
+        "收益归属分析"
+      ],
+      "answer": "确定转化来源的分析",
+      "explanation": "归因分析帮助理解哪些渠道带来了转化"
+    },
+    {
+      "id": "defi_growth_junior_data_analysis_039",
+      "originalId": 39,
+      "category": "数据分析",
+      "categoryKey": "data_analysis",
+      "type": "single",
+      "question": "DefiLlama主要提供什么数据？",
+      "options": [
+        "DeFi协议TVL数据",
+        "用户社交数据",
+        "代码质量数据",
+        "硬件性能数据"
+      ],
+      "answer": "DeFi协议TVL数据",
+      "explanation": "DefiLlama是追踪DeFi TVL的主要平台"
+    },
+    {
+      "id": "defi_growth_junior_data_analysis_040",
+      "originalId": 40,
+      "category": "数据分析",
+      "categoryKey": "data_analysis",
+      "type": "single",
+      "question": "什么是数据可视化？",
+      "options": [
+        "用图表展示数据",
+        "加密数据",
+        "压缩数据",
+        "删除数据"
+      ],
+      "answer": "用图表展示数据",
+      "explanation": "数据可视化让复杂数据更易理解"
+    },
+    {
+      "id": "defi_growth_junior_growth_strategy_041",
+      "originalId": 41,
+      "category": "增长策略",
+      "categoryKey": "growth_strategy",
+      "type": "single",
+      "question": "什么是增长黑客(Growth Hacking)？",
+      "options": [
+        "快速低成本的增长方法",
+        "黑客攻击",
+        "代码破解",
+        "数据窃取"
+      ],
+      "answer": "快速低成本的增长方法",
+      "explanation": "增长黑客注重通过创新和数据驱动实现快速增长"
+    },
+    {
+      "id": "defi_growth_junior_growth_strategy_042",
+      "originalId": 42,
+      "category": "增长策略",
+      "categoryKey": "growth_strategy",
+      "type": "single",
+      "question": "病毒式传播的关键是什么？",
+      "options": [
+        "用户主动分享",
+        "付费广告",
+        "强制推送",
+        "邮件营销"
+      ],
+      "answer": "用户主动分享",
+      "explanation": "病毒式传播依靠用户的自发分享"
+    },
+    {
+      "id": "defi_growth_junior_growth_strategy_043",
+      "originalId": 43,
+      "category": "增长策略",
+      "categoryKey": "growth_strategy",
+      "type": "multiple",
+      "question": "以下哪些是Web3营销渠道？（多选）",
+      "options": [
+        "Twitter",
+        "Discord",
+        "Telegram",
+        "传统电视"
+      ],
+      "answer": [
+        "Twitter",
+        "Discord",
+        "Telegram"
+      ],
+      "explanation": "Twitter、Discord和Telegram是Web3社区的主要平台"
+    },
+    {
+      "id": "defi_growth_junior_growth_strategy_044",
+      "originalId": 44,
+      "category": "增长策略",
+      "categoryKey": "growth_strategy",
+      "type": "single",
+      "question": "空投(Airdrop)的主要目的是什么？",
+      "options": [
+        "激励早期用户和扩大用户基础",
+        "销毁代币",
+        "提高代币价格",
+        "减少流通量"
+      ],
+      "answer": "激励早期用户和扩大用户基础",
+      "explanation": "空投是Web3项目常用的用户获取策略"
+    },
+    {
+      "id": "defi_growth_junior_growth_strategy_045",
+      "originalId": 45,
+      "category": "增长策略",
+      "categoryKey": "growth_strategy",
+      "type": "single",
+      "question": "Galxe平台的主要功能是什么？",
+      "options": [
+        "Web3营销和社区增长",
+        "代币交易",
+        "NFT铸造",
+        "游戏开发"
+      ],
+      "answer": "Web3营销和社区增长",
+      "explanation": "Galxe是领先的Web3增长平台"
+    },
+    {
+      "id": "defi_growth_junior_growth_strategy_046",
+      "originalId": 46,
+      "category": "增长策略",
+      "categoryKey": "growth_strategy",
+      "type": "single",
+      "question": "什么是推荐计划？",
+      "options": [
+        "激励用户邀请新用户",
+        "推荐代码",
+        "推荐算法",
+        "推荐系统"
+      ],
+      "answer": "激励用户邀请新用户",
+      "explanation": "推荐计划通过奖励机制实现用户增长"
+    },
+    {
+      "id": "defi_growth_junior_growth_strategy_047",
+      "originalId": 47,
+      "category": "增长策略",
+      "categoryKey": "growth_strategy",
+      "type": "single",
+      "question": "社区驱动增长的核心是什么？",
+      "options": [
+        "让用户参与项目发展",
+        "中心化管理",
+        "付费推广",
+        "技术创新"
+      ],
+      "answer": "让用户参与项目发展",
+      "explanation": "Web3项目依靠社区的力量实现增长"
+    },
+    {
+      "id": "defi_growth_junior_growth_strategy_048",
+      "originalId": 48,
+      "category": "增长策略",
+      "categoryKey": "growth_strategy",
+      "type": "single",
+      "question": "什么是产品市场契合(Product-Market Fit)？",
+      "options": [
+        "产品满足市场需求",
+        "产品定价策略",
+        "市场营销计划",
+        "产品发布时机"
+      ],
+      "answer": "产品满足市场需求",
+      "explanation": "PMF是可持续增长的基础"
+    },
+    {
+      "id": "defi_growth_junior_growth_strategy_049",
+      "originalId": 49,
+      "category": "增长策略",
+      "categoryKey": "growth_strategy",
+      "type": "multiple",
+      "question": "以下哪些是增长指标？（多选）",
+      "options": [
+        "用户增长率",
+        "留存率",
+        "病毒系数",
+        "代码质量"
+      ],
+      "answer": [
+        "用户增长率",
+        "留存率",
+        "病毒系数"
+      ],
+      "explanation": "这些都是衡量增长效果的关键指标"
+    },
+    {
+      "id": "defi_growth_junior_growth_strategy_050",
+      "originalId": 50,
+      "category": "增长策略",
+      "categoryKey": "growth_strategy",
+      "type": "single",
+      "question": "什么是增长循环(Growth Loop)？",
+      "options": [
+        "自我强化的增长机制",
+        "循环贷款",
+        "代币循环",
+        "开发循环"
+      ],
+      "answer": "自我强化的增长机制",
+      "explanation": "增长循环创造可持续的增长动力"
+    },
+    {
+      "id": "defi_growth_junior_growth_strategy_051",
+      "originalId": 51,
+      "category": "增长策略",
+      "categoryKey": "growth_strategy",
+      "type": "single",
+      "question": "内容营销在DeFi中的作用是什么？",
+      "options": [
+        "教育用户并建立信任",
+        "直接销售",
+        "技术支持",
+        "客户服务"
+      ],
+      "answer": "教育用户并建立信任",
+      "explanation": "DeFi产品复杂，需要通过内容教育用户"
+    },
+    {
+      "id": "defi_growth_junior_growth_strategy_052",
+      "originalId": 52,
+      "category": "增长策略",
+      "categoryKey": "growth_strategy",
+      "type": "single",
+      "question": "什么是早期采用者？",
+      "options": [
+        "最先使用新产品的用户",
+        "最大的投资者",
+        "开发团队",
+        "市场分析师"
+      ],
+      "answer": "最先使用新产品的用户",
+      "explanation": "早期采用者对产品成功至关重要"
+    },
+    {
+      "id": "defi_growth_junior_growth_strategy_053",
+      "originalId": 53,
+      "category": "增长策略",
+      "categoryKey": "growth_strategy",
+      "type": "single",
+      "question": "KOL在Web3营销中指什么？",
+      "options": [
+        "关键意见领袖",
+        "知识在线学习",
+        "密钥操作语言",
+        "已知操作限制"
+      ],
+      "answer": "关键意见领袖",
+      "explanation": "KOL（Key Opinion Leader）在Web3社区有重要影响力"
+    },
+    {
+      "id": "defi_growth_junior_growth_strategy_054",
+      "originalId": 54,
+      "category": "增长策略",
+      "categoryKey": "growth_strategy",
+      "type": "single",
+      "question": "什么是激励相容？",
+      "options": [
+        "各方利益一致",
+        "激励冲突",
+        "零和博弈",
+        "利益对立"
+      ],
+      "answer": "各方利益一致",
+      "explanation": "DeFi协议设计需要考虑激励相容"
+    },
+    {
+      "id": "defi_growth_junior_growth_strategy_055",
+      "originalId": 55,
+      "category": "增长策略",
+      "categoryKey": "growth_strategy",
+      "type": "single",
+      "question": "任务平台(如Galxe)的优势是什么？",
+      "options": [
+        "精准获取目标用户",
+        "随机获客",
+        "批量发送",
+        "自动交易"
+      ],
+      "answer": "精准获取目标用户",
+      "explanation": "任务平台通过特定任务筛选真实用户"
+    },
+    {
+      "id": "defi_growth_junior_growth_strategy_056",
+      "originalId": 56,
+      "category": "增长策略",
+      "categoryKey": "growth_strategy",
+      "type": "multiple",
+      "question": "以下哪些是社区管理的要素？（多选）",
+      "options": [
+        "及时响应",
+        "透明沟通",
+        "定期活动",
+        "封闭管理"
+      ],
+      "answer": [
+        "及时响应",
+        "透明沟通",
+        "定期活动"
+      ],
+      "explanation": "良好的社区管理需要开放和互动"
+    },
+    {
+      "id": "defi_growth_junior_growth_strategy_057",
+      "originalId": 57,
+      "category": "增长策略",
+      "categoryKey": "growth_strategy",
+      "type": "single",
+      "question": "什么是PMF前的主要目标？",
+      "options": [
+        "验证产品价值",
+        "大规模营销",
+        "盈利",
+        "上市"
+      ],
+      "answer": "验证产品价值",
+      "explanation": "在达到PMF前，重点是验证产品是否满足需求"
+    },
+    {
+      "id": "defi_growth_junior_growth_strategy_058",
+      "originalId": 58,
+      "category": "增长策略",
+      "categoryKey": "growth_strategy",
+      "type": "single",
+      "question": "合作伙伴关系在DeFi增长中的作用？",
+      "options": [
+        "扩大生态系统和用户基础",
+        "减少竞争",
+        "垄断市场",
+        "控制价格"
+      ],
+      "answer": "扩大生态系统和用户基础",
+      "explanation": "DeFi项目通过合作实现共赢"
+    },
+    {
+      "id": "defi_growth_junior_growth_strategy_059",
+      "originalId": 59,
+      "category": "增长策略",
+      "categoryKey": "growth_strategy",
+      "type": "single",
+      "question": "什么是用户画像？",
+      "options": [
+        "目标用户的特征描述",
+        "用户头像",
+        "用户照片",
+        "用户签名"
+      ],
+      "answer": "目标用户的特征描述",
+      "explanation": "用户画像帮助精准定位目标群体"
+    },
+    {
+      "id": "defi_growth_junior_growth_strategy_060",
+      "originalId": 60,
+      "category": "增长策略",
+      "categoryKey": "growth_strategy",
+      "type": "single",
+      "question": "增长团队的核心能力是什么？",
+      "options": [
+        "数据分析和快速实验",
+        "编程能力",
+        "设计能力",
+        "财务管理"
+      ],
+      "answer": "数据分析和快速实验",
+      "explanation": "增长团队需要通过数据和实验驱动决策"
+    },
+    {
+      "id": "defi_growth_junior_web3_knowledge_061",
+      "originalId": 61,
+      "category": "Web3知识",
+      "categoryKey": "web3_knowledge",
+      "type": "single",
+      "question": "什么是钱包地址？",
+      "options": [
+        "区块链上的账户标识",
+        "物理钱包",
+        "银行账号",
+        "邮箱地址"
+      ],
+      "answer": "区块链上的账户标识",
+      "explanation": "钱包地址是用户在区块链上的唯一标识"
+    },
+    {
+      "id": "defi_growth_junior_web3_knowledge_062",
+      "originalId": 62,
+      "category": "Web3知识",
+      "categoryKey": "web3_knowledge",
+      "type": "single",
+      "question": "MetaMask是什么？",
+      "options": [
+        "浏览器加密钱包",
+        "交易所",
+        "区块链",
+        "编程语言"
+      ],
+      "answer": "浏览器加密钱包",
+      "explanation": "MetaMask是最流行的浏览器钱包之一"
+    },
+    {
+      "id": "defi_growth_junior_web3_knowledge_063",
+      "originalId": 63,
+      "category": "Web3知识",
+      "categoryKey": "web3_knowledge",
+      "type": "single",
+      "question": "什么是Layer 2？",
+      "options": [
+        "区块链扩容解决方案",
+        "第二层协议",
+        "双层加密",
+        "二级市场"
+      ],
+      "answer": "区块链扩容解决方案",
+      "explanation": "Layer 2提高了区块链的交易速度和降低成本"
+    },
+    {
+      "id": "defi_growth_junior_web3_knowledge_064",
+      "originalId": 64,
+      "category": "Web3知识",
+      "categoryKey": "web3_knowledge",
+      "type": "multiple",
+      "question": "以下哪些是以太坊的Layer 2解决方案？（多选）",
+      "options": [
+        "Arbitrum",
+        "Optimism",
+        "Polygon",
+        "Solana"
+      ],
+      "answer": [
+        "Arbitrum",
+        "Optimism",
+        "Polygon"
+      ],
+      "explanation": "Solana是独立的Layer 1区块链"
+    },
+    {
+      "id": "defi_growth_junior_web3_knowledge_065",
+      "originalId": 65,
+      "category": "Web3知识",
+      "categoryKey": "web3_knowledge",
+      "type": "single",
+      "question": "什么是跨链桥？",
+      "options": [
+        "连接不同区块链的协议",
+        "物理桥梁",
+        "网络连接",
+        "数据库连接"
+      ],
+      "answer": "连接不同区块链的协议",
+      "explanation": "跨链桥允许资产在不同区块链间转移"
+    },
+    {
+      "id": "defi_growth_junior_web3_knowledge_066",
+      "originalId": 66,
+      "category": "Web3知识",
+      "categoryKey": "web3_knowledge",
+      "type": "single",
+      "question": "NFT代表什么？",
+      "options": [
+        "Non-Fungible Token",
+        "New Finance Technology",
+        "Network File Transfer",
+        "Next Future Token"
+      ],
+      "answer": "Non-Fungible Token",
+      "explanation": "NFT是非同质化代币，每个都是独一无二的"
+    },
+    {
+      "id": "defi_growth_junior_web3_knowledge_067",
+      "originalId": 67,
+      "category": "Web3知识",
+      "categoryKey": "web3_knowledge",
+      "type": "single",
+      "question": "什么是Web3？",
+      "options": [
+        "去中心化的互联网",
+        "第三代网站",
+        "新的编程语言",
+        "3D网页"
+      ],
+      "answer": "去中心化的互联网",
+      "explanation": "Web3代表用户拥有数据和价值的互联网"
+    },
+    {
+      "id": "defi_growth_junior_web3_knowledge_068",
+      "originalId": 68,
+      "category": "Web3知识",
+      "categoryKey": "web3_knowledge",
+      "type": "single",
+      "question": "私钥的作用是什么？",
+      "options": [
+        "控制钱包资产",
+        "公开身份",
+        "加密通信",
+        "验证交易"
+      ],
+      "answer": "控制钱包资产",
+      "explanation": "私钥是控制加密资产的关键，必须安全保管"
+    },
+    {
+      "id": "defi_growth_junior_web3_knowledge_069",
+      "originalId": 69,
+      "category": "Web3知识",
+      "categoryKey": "web3_knowledge",
+      "type": "single",
+      "question": "什么是助记词？",
+      "options": [
+        "恢复钱包的词组",
+        "密码提示",
+        "用户名",
+        "交易备注"
+      ],
+      "answer": "恢复钱包的词组",
+      "explanation": "助记词通常是12或24个单词，用于恢复钱包"
+    },
+    {
+      "id": "defi_growth_junior_web3_knowledge_070",
+      "originalId": 70,
+      "category": "Web3知识",
+      "categoryKey": "web3_knowledge",
+      "type": "single",
+      "question": "什么是白名单？",
+      "options": [
+        "预批准的用户列表",
+        "黑客名单",
+        "代币列表",
+        "交易列表"
+      ],
+      "answer": "预批准的用户列表",
+      "explanation": "白名单用户通常享有优先权或特殊权限"
+    },
+    {
+      "id": "defi_growth_junior_web3_knowledge_071",
+      "originalId": 71,
+      "category": "Web3知识",
+      "categoryKey": "web3_knowledge",
+      "type": "single",
+      "question": "什么是IPFS？",
+      "options": [
+        "分布式文件存储系统",
+        "新的区块链",
+        "加密算法",
+        "交易协议"
+      ],
+      "answer": "分布式文件存储系统",
+      "explanation": "IPFS用于去中心化存储文件和数据"
+    },
+    {
+      "id": "defi_growth_junior_web3_knowledge_072",
+      "originalId": 72,
+      "category": "Web3知识",
+      "categoryKey": "web3_knowledge",
+      "type": "single",
+      "question": "什么是预言机(Oracle)？",
+      "options": [
+        "连接区块链与外部数据的服务",
+        "预测工具",
+        "数据库系统",
+        "智能合约"
+      ],
+      "answer": "连接区块链与外部数据的服务",
+      "explanation": "预言机为智能合约提供链外数据"
+    },
+    {
+      "id": "defi_growth_junior_web3_knowledge_073",
+      "originalId": 73,
+      "category": "Web3知识",
+      "categoryKey": "web3_knowledge",
+      "type": "multiple",
+      "question": "以下哪些是Web3的特征？（多选）",
+      "options": [
+        "去中心化",
+        "用户拥有数据",
+        "无需许可",
+        "完全匿名"
+      ],
+      "answer": [
+        "去中心化",
+        "用户拥有数据",
+        "无需许可"
+      ],
+      "explanation": "Web3强调去中心化和用户主权，但不一定完全匿名"
+    },
+    {
+      "id": "defi_growth_junior_web3_knowledge_074",
+      "originalId": 74,
+      "category": "Web3知识",
+      "categoryKey": "web3_knowledge",
+      "type": "single",
+      "question": "什么是ENS？",
+      "options": [
+        "以太坊域名服务",
+        "加密新闻服务",
+        "紧急通知系统",
+        "节点服务"
+      ],
+      "answer": "以太坊域名服务",
+      "explanation": "ENS将人类可读的名称映射到区块链地址"
+    },
+    {
+      "id": "defi_growth_junior_web3_knowledge_075",
+      "originalId": 75,
+      "category": "Web3知识",
+      "categoryKey": "web3_knowledge",
+      "type": "single",
+      "question": "什么是Sybil攻击？",
+      "options": [
+        "创建多个假身份攻击",
+        "DDoS攻击",
+        "钓鱼攻击",
+        "病毒攻击"
+      ],
+      "answer": "创建多个假身份攻击",
+      "explanation": "Sybil攻击通过创建多个假账户来操纵系统"
+    },
+    {
+      "id": "defi_growth_junior_web3_knowledge_076",
+      "originalId": 76,
+      "category": "Web3知识",
+      "categoryKey": "web3_knowledge",
+      "type": "single",
+      "question": "什么是ERC-20？",
+      "options": [
+        "以太坊代币标准",
+        "错误代码",
+        "网络协议",
+        "加密算法"
+      ],
+      "answer": "以太坊代币标准",
+      "explanation": "ERC-20是最常用的同质化代币标准"
+    },
+    {
+      "id": "defi_growth_junior_web3_knowledge_077",
+      "originalId": 77,
+      "category": "Web3知识",
+      "categoryKey": "web3_knowledge",
+      "type": "single",
+      "question": "什么是签名？",
+      "options": [
+        "使用私钥验证身份",
+        "手写签名",
+        "电子邮件签名",
+        "文件签名"
+      ],
+      "answer": "使用私钥验证身份",
+      "explanation": "数字签名证明交易来自私钥持有者"
+    },
+    {
+      "id": "defi_growth_junior_web3_knowledge_078",
+      "originalId": 78,
+      "category": "Web3知识",
+      "categoryKey": "web3_knowledge",
+      "type": "single",
+      "question": "什么是共识机制？",
+      "options": [
+        "区块链达成一致的方法",
+        "投票系统",
+        "会议决策",
+        "多数规则"
+      ],
+      "answer": "区块链达成一致的方法",
+      "explanation": "共识机制确保所有节点对区块链状态达成一致"
+    },
+    {
+      "id": "defi_growth_junior_web3_knowledge_079",
+      "originalId": 79,
+      "category": "Web3知识",
+      "categoryKey": "web3_knowledge",
+      "type": "single",
+      "question": "PoS代表什么？",
+      "options": [
+        "Proof of Stake",
+        "Point of Sale",
+        "Power of System",
+        "Protocol of Security"
+      ],
+      "answer": "Proof of Stake",
+      "explanation": "权益证明是一种节能的共识机制"
+    },
+    {
+      "id": "defi_growth_junior_web3_knowledge_080",
+      "originalId": 80,
+      "category": "Web3知识",
+      "categoryKey": "web3_knowledge",
+      "type": "single",
+      "question": "什么是区块链浏览器？",
+      "options": [
+        "查看区块链数据的工具",
+        "网页浏览器",
+        "文件浏览器",
+        "代码编辑器"
+      ],
+      "answer": "查看区块链数据的工具",
+      "explanation": "如Etherscan用于查看以太坊交易和地址信息"
+    },
+    {
+      "id": "defi_growth_junior_practical_app_081",
+      "originalId": 81,
+      "category": "实践应用",
+      "categoryKey": "practical_app",
+      "type": "single",
+      "question": "发现用户留存率低时，首先应该做什么？",
+      "options": [
+        "分析用户流失原因",
+        "增加营销预算",
+        "改变产品定位",
+        "裁员"
+      ],
+      "answer": "分析用户流失原因",
+      "explanation": "先诊断问题才能对症下药"
+    },
+    {
+      "id": "defi_growth_junior_practical_app_082",
+      "originalId": 82,
+      "category": "实践应用",
+      "categoryKey": "practical_app",
+      "type": "single",
+      "question": "如何提高DeFi产品的用户信任？",
+      "options": [
+        "进行安全审计并公开结果",
+        "隐藏技术细节",
+        "承诺高收益",
+        "限制提现"
+      ],
+      "answer": "进行安全审计并公开结果",
+      "explanation": "透明度和安全性是建立信任的基础"
+    },
+    {
+      "id": "defi_growth_junior_practical_app_083",
+      "originalId": 83,
+      "category": "实践应用",
+      "categoryKey": "practical_app",
+      "type": "multiple",
+      "question": "启动新DeFi产品时应该准备什么？（多选）",
+      "options": [
+        "安全审计报告",
+        "社区管理计划",
+        "流动性激励方案",
+        "垄断协议"
+      ],
+      "answer": [
+        "安全审计报告",
+        "社区管理计划",
+        "流动性激励方案"
+      ],
+      "explanation": "成功启动需要安全、社区和激励的综合准备"
+    },
+    {
+      "id": "defi_growth_junior_practical_app_084",
+      "originalId": 84,
+      "category": "实践应用",
+      "categoryKey": "practical_app",
+      "type": "single",
+      "question": "如何降低新用户的进入门槛？",
+      "options": [
+        "简化操作流程和提供教程",
+        "提高最低投资额",
+        "增加复杂功能",
+        "要求KYC"
+      ],
+      "answer": "简化操作流程和提供教程",
+      "explanation": "降低学习成本能吸引更多用户"
+    },
+    {
+      "id": "defi_growth_junior_practical_app_085",
+      "originalId": 85,
+      "category": "实践应用",
+      "categoryKey": "practical_app",
+      "type": "single",
+      "question": "发现竞争对手推出相似产品时应该？",
+      "options": [
+        "分析差异化优势",
+        "立即降价",
+        "停止开发",
+        "复制对方"
+      ],
+      "answer": "分析差异化优势",
+      "explanation": "找到自己的独特价值定位"
+    },
+    {
+      "id": "defi_growth_junior_practical_app_086",
+      "originalId": 86,
+      "category": "实践应用",
+      "categoryKey": "practical_app",
+      "type": "single",
+      "question": "如何处理社区的负面反馈？",
+      "options": [
+        "及时回应并改进",
+        "删除评论",
+        "忽视反馈",
+        "攻击批评者"
+      ],
+      "answer": "及时回应并改进",
+      "explanation": "积极处理负面反馈能提升社区信任"
+    },
+    {
+      "id": "defi_growth_junior_practical_app_087",
+      "originalId": 87,
+      "category": "实践应用",
+      "categoryKey": "practical_app",
+      "type": "single",
+      "question": "空投活动的关键成功因素是什么？",
+      "options": [
+        "防止女巫攻击和奖励真实用户",
+        "空投给所有地址",
+        "只空投给大户",
+        "随机分配"
+      ],
+      "answer": "防止女巫攻击和奖励真实用户",
+      "explanation": "公平有效的空投能最大化营销效果"
+    },
+    {
+      "id": "defi_growth_junior_practical_app_088",
+      "originalId": 88,
+      "category": "实践应用",
+      "categoryKey": "practical_app",
+      "type": "single",
+      "question": "如何提高Discord社区活跃度？",
+      "options": [
+        "定期举办AMA和活动",
+        "限制发言",
+        "只发公告",
+        "关闭社区"
+      ],
+      "answer": "定期举办AMA和活动",
+      "explanation": "互动活动能增强社区参与感"
+    },
+    {
+      "id": "defi_growth_junior_practical_app_089",
+      "originalId": 89,
+      "category": "实践应用",
+      "categoryKey": "practical_app",
+      "type": "multiple",
+      "question": "评估营销活动效果应该看哪些指标？（多选）",
+      "options": [
+        "用户获取成本",
+        "用户质量",
+        "留存率",
+        "团队规模"
+      ],
+      "answer": [
+        "用户获取成本",
+        "用户质量",
+        "留存率"
+      ],
+      "explanation": "综合评估获客成本和用户价值"
+    },
+    {
+      "id": "defi_growth_junior_practical_app_090",
+      "originalId": 90,
+      "category": "实践应用",
+      "categoryKey": "practical_app",
+      "type": "single",
+      "question": "如何选择合作的KOL？",
+      "options": [
+        "评估其受众质量和契合度",
+        "只看粉丝数量",
+        "选最便宜的",
+        "随机选择"
+      ],
+      "answer": "评估其受众质量和契合度",
+      "explanation": "KOL的受众质量比数量更重要"
+    },
+    {
+      "id": "defi_growth_junior_practical_app_091",
+      "originalId": 91,
+      "category": "实践应用",
+      "categoryKey": "practical_app",
+      "type": "single",
+      "question": "产品出现安全问题时应该？",
+      "options": [
+        "立即暂停协议并修复",
+        "隐瞒问题",
+        "继续运营",
+        "责怪用户"
+      ],
+      "answer": "立即暂停协议并修复",
+      "explanation": "用户资金安全是第一优先级"
+    },
+    {
+      "id": "defi_growth_junior_practical_app_092",
+      "originalId": 92,
+      "category": "实践应用",
+      "categoryKey": "practical_app",
+      "type": "single",
+      "question": "如何提高用户的交易频率？",
+      "options": [
+        "优化用户体验和降低费用",
+        "强制交易",
+        "提高费用",
+        "限制功能"
+      ],
+      "answer": "优化用户体验和降低费用",
+      "explanation": "降低交易摩擦能提高使用频率"
+    },
+    {
+      "id": "defi_growth_junior_practical_app_093",
+      "originalId": 93,
+      "category": "实践应用",
+      "categoryKey": "practical_app",
+      "type": "single",
+      "question": "建立合作伙伴关系的第一步是？",
+      "options": [
+        "明确双方价值交换",
+        "签署合同",
+        "支付费用",
+        "公开宣布"
+      ],
+      "answer": "明确双方价值交换",
+      "explanation": "成功的合作基于互利共赢"
+    },
+    {
+      "id": "defi_growth_junior_practical_app_094",
+      "originalId": 94,
+      "category": "实践应用",
+      "categoryKey": "practical_app",
+      "type": "single",
+      "question": "如何处理代币价格下跌对社区的影响？",
+      "options": [
+        "专注于产品价值和长期发展",
+        "承诺价格上涨",
+        "停止沟通",
+        "责怪市场"
+      ],
+      "answer": "专注于产品价值和长期发展",
+      "explanation": "引导社区关注基本面而非短期价格"
+    },
+    {
+      "id": "defi_growth_junior_practical_app_095",
+      "originalId": 95,
+      "category": "实践应用",
+      "categoryKey": "practical_app",
+      "type": "multiple",
+      "question": "推出新功能前应该做什么？（多选）",
+      "options": [
+        "用户调研",
+        "小范围测试",
+        "安全审计",
+        "直接上线"
+      ],
+      "answer": [
+        "用户调研",
+        "小范围测试",
+        "安全审计"
+      ],
+      "explanation": "充分准备能降低新功能的风险"
+    },
+    {
+      "id": "defi_growth_junior_practical_app_096",
+      "originalId": 96,
+      "category": "实践应用",
+      "categoryKey": "practical_app",
+      "type": "single",
+      "question": "如何提高治理参与度？",
+      "options": [
+        "简化投票流程和激励参与",
+        "增加投票门槛",
+        "减少投票机会",
+        "中心化决策"
+      ],
+      "answer": "简化投票流程和激励参与",
+      "explanation": "降低参与成本和提供激励能提高参与度"
+    },
+    {
+      "id": "defi_growth_junior_practical_app_097",
+      "originalId": 97,
+      "category": "实践应用",
+      "categoryKey": "practical_app",
+      "type": "single",
+      "question": "发现数据异常时应该？",
+      "options": [
+        "深入调查原因",
+        "忽略异常",
+        "修改数据",
+        "删除记录"
+      ],
+      "answer": "深入调查原因",
+      "explanation": "数据异常可能揭示重要问题或机会"
+    },
+    {
+      "id": "defi_growth_junior_practical_app_098",
+      "originalId": 98,
+      "category": "实践应用",
+      "categoryKey": "practical_app",
+      "type": "single",
+      "question": "如何优化用户获取成本？",
+      "options": [
+        "测试不同渠道并优化转化",
+        "只用一个渠道",
+        "增加所有预算",
+        "停止营销"
+      ],
+      "answer": "测试不同渠道并优化转化",
+      "explanation": "持续优化能找到最高效的获客渠道"
+    },
+    {
+      "id": "defi_growth_junior_practical_app_099",
+      "originalId": 99,
+      "category": "实践应用",
+      "categoryKey": "practical_app",
+      "type": "single",
+      "question": "如何建立用户忠诚度？",
+      "options": [
+        "提供持续价值和社区归属感",
+        "锁定用户资金",
+        "限制退出",
+        "频繁改变规则"
+      ],
+      "answer": "提供持续价值和社区归属感",
+      "explanation": "用户忠诚来自于价值认同和情感连接"
+    },
+    {
+      "id": "defi_growth_junior_practical_app_100",
+      "originalId": 100,
+      "category": "实践应用",
+      "categoryKey": "practical_app",
+      "type": "single",
+      "question": "增长经理最重要的能力是？",
+      "options": [
+        "数据驱动决策",
+        "编程能力",
+        "设计能力",
+        "公关能力"
+      ],
+      "answer": "数据驱动决策",
+      "explanation": "用数据说话是增长经理的核心能力"
+    }
+  ]
+}

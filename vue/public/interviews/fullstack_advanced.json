@@ -1,0 +1,1722 @@
+{
+  "meta": {
+    "jobType": "fullstack",
+    "jobTypeLabel": "全栈开发工程师",
+    "difficulty": "advanced",
+    "difficultyLabel": "高级",
+    "title": "深潮Techflow全栈工程师面试题库 - 高级篇",
+    "version": "1.0.0",
+    "description": "针对高级全栈工程师的100道面试题",
+    "totalQuestions": 100,
+    "categories": [
+      "前端架构",
+      "后端架构",
+      "数据架构",
+      "AI工程",
+      "系统设计"
+    ],
+    "generatedAt": "2025-09-05T13:41:25.708Z"
+  },
+  "questions": [
+    {
+      "id": "fullstack_advanced_前端架构_001",
+      "originalId": 1,
+      "category": "前端架构",
+      "categoryKey": "前端架构",
+      "type": "single",
+      "question": "如何设计一个支持千万级用户的前端架构？",
+      "options": [
+        "微前端、CDN、渐进式加载、边缘计算、性能监控",
+        "单体应用",
+        "增加服务器",
+        "优化代码"
+      ],
+      "answer": "微前端、CDN、渐进式加载、边缘计算、性能监控",
+      "explanation": "大规模应用需要综合架构策略"
+    },
+    {
+      "id": "fullstack_advanced_前端架构_002",
+      "originalId": 2,
+      "category": "前端架构",
+      "categoryKey": "前端架构",
+      "type": "multiple",
+      "question": "前端微服务化（微前端）的实现方案包括？（多选）",
+      "options": [
+        "Module Federation",
+        "qiankun",
+        "single-spa",
+        "iframe"
+      ],
+      "answer": [
+        "Module Federation",
+        "qiankun",
+        "single-spa",
+        "iframe"
+      ],
+      "explanation": "不同方案有各自的适用场景和权衡"
+    },
+    {
+      "id": "fullstack_advanced_前端架构_003",
+      "originalId": 3,
+      "category": "前端架构",
+      "categoryKey": "前端架构",
+      "type": "single",
+      "question": "如何实现前端的灰度发布和A/B测试？",
+      "options": [
+        "特征开关、用户分组、流量控制、数据收集分析",
+        "随机展示",
+        "全量发布",
+        "手动切换"
+      ],
+      "answer": "特征开关、用户分组、流量控制、数据收集分析",
+      "explanation": "科学的灰度策略降低发布风险"
+    },
+    {
+      "id": "fullstack_advanced_前端架构_004",
+      "originalId": 4,
+      "category": "前端架构",
+      "categoryKey": "前端架构",
+      "type": "single",
+      "question": "Web性能预算（Performance Budget）如何制定和执行？",
+      "options": [
+        "设定指标阈值、自动化检测、CI/CD集成、持续优化",
+        "主观判断",
+        "定期检查",
+        "用户反馈"
+      ],
+      "answer": "设定指标阈值、自动化检测、CI/CD集成、持续优化",
+      "explanation": "性能预算确保应用性能不退化"
+    },
+    {
+      "id": "fullstack_advanced_前端架构_005",
+      "originalId": 5,
+      "category": "前端架构",
+      "categoryKey": "前端架构",
+      "type": "single",
+      "question": "如何设计前端的错误监控和恢复系统？",
+      "options": [
+        "错误边界、上报机制、降级策略、自动恢复",
+        "console.log",
+        "try-catch",
+        "忽略错误"
+      ],
+      "answer": "错误边界、上报机制、降级策略、自动恢复",
+      "explanation": "完善的错误处理提高应用稳定性"
+    },
+    {
+      "id": "fullstack_advanced_前端架构_006",
+      "originalId": 6,
+      "category": "前端架构",
+      "categoryKey": "前端架构",
+      "type": "multiple",
+      "question": "现代前端构建优化策略包括？（多选）",
+      "options": [
+        "Tree Shaking",
+        "Code Splitting",
+        "Lazy Loading",
+        "Bundle分析"
+      ],
+      "answer": [
+        "Tree Shaking",
+        "Code Splitting",
+        "Lazy Loading",
+        "Bundle分析"
+      ],
+      "explanation": "多种优化技术结合减少包体积"
+    },
+    {
+      "id": "fullstack_advanced_前端架构_007",
+      "originalId": 7,
+      "category": "前端架构",
+      "categoryKey": "前端架构",
+      "type": "single",
+      "question": "如何设计跨平台的设计系统（Design System）？",
+      "options": [
+        "组件库、设计令牌、文档系统、版本管理",
+        "复制代码",
+        "统一样式",
+        "固定模板"
+      ],
+      "answer": "组件库、设计令牌、文档系统、版本管理",
+      "explanation": "设计系统确保产品一致性和开发效率"
+    },
+    {
+      "id": "fullstack_advanced_前端架构_008",
+      "originalId": 8,
+      "category": "前端架构",
+      "categoryKey": "前端架构",
+      "type": "single",
+      "question": "WebAssembly在前端的应用场景是什么？",
+      "options": [
+        "计算密集型任务、游戏引擎、图像处理、加密算法",
+        "所有场景",
+        "替代JavaScript",
+        "样式处理"
+      ],
+      "answer": "计算密集型任务、游戏引擎、图像处理、加密算法",
+      "explanation": "WebAssembly适合性能敏感的计算任务"
+    },
+    {
+      "id": "fullstack_advanced_前端架构_009",
+      "originalId": 9,
+      "category": "前端架构",
+      "categoryKey": "前端架构",
+      "type": "single",
+      "question": "如何优化首屏加载时间（FCP/LCP）？",
+      "options": [
+        "关键CSS内联、预加载、代码分割、SSR/SSG",
+        "增加缓存",
+        "压缩图片",
+        "减少请求"
+      ],
+      "answer": "关键CSS内联、预加载、代码分割、SSR/SSG",
+      "explanation": "综合策略优化用户感知性能"
+    },
+    {
+      "id": "fullstack_advanced_前端架构_010",
+      "originalId": 10,
+      "category": "前端架构",
+      "categoryKey": "前端架构",
+      "type": "single",
+      "question": "前端安全最佳实践包括什么？",
+      "options": [
+        "CSP、HTTPS、输入验证、依赖审计、子资源完整性",
+        "混淆代码",
+        "隐藏源码",
+        "加密传输"
+      ],
+      "answer": "CSP、HTTPS、输入验证、依赖审计、子资源完整性",
+      "explanation": "多层安全措施保护前端应用"
+    },
+    {
+      "id": "fullstack_advanced_前端架构_011",
+      "originalId": 11,
+      "category": "前端架构",
+      "categoryKey": "前端架构",
+      "type": "single",
+      "question": "如何实现前端的国际化架构？",
+      "options": [
+        "动态加载语言包、日期时间格式化、RTL支持、区域检测",
+        "硬编码文本",
+        "服务端翻译",
+        "自动翻译"
+      ],
+      "answer": "动态加载语言包、日期时间格式化、RTL支持、区域检测",
+      "explanation": "完整的i18n方案支持全球用户"
+    },
+    {
+      "id": "fullstack_advanced_前端架构_012",
+      "originalId": 12,
+      "category": "前端架构",
+      "categoryKey": "前端架构",
+      "type": "multiple",
+      "question": "PWA的核心技术包括？（多选）",
+      "options": [
+        "Service Worker",
+        "Web App Manifest",
+        "HTTPS",
+        "推送通知"
+      ],
+      "answer": [
+        "Service Worker",
+        "Web App Manifest",
+        "HTTPS",
+        "推送通知"
+      ],
+      "explanation": "PWA提供类原生应用体验"
+    },
+    {
+      "id": "fullstack_advanced_前端架构_013",
+      "originalId": 13,
+      "category": "前端架构",
+      "categoryKey": "前端架构",
+      "type": "single",
+      "question": "如何设计可扩展的状态管理架构？",
+      "options": [
+        "领域驱动、模块化、中间件系统、DevTools支持",
+        "全局状态",
+        "组件状态",
+        "混合管理"
+      ],
+      "answer": "领域驱动、模块化、中间件系统、DevTools支持",
+      "explanation": "良好的状态架构提高应用可维护性"
+    },
+    {
+      "id": "fullstack_advanced_前端架构_014",
+      "originalId": 14,
+      "category": "前端架构",
+      "categoryKey": "前端架构",
+      "type": "single",
+      "question": "前端性能监控的关键指标有哪些？",
+      "options": [
+        "Core Web Vitals、自定义指标、用户行为、错误率",
+        "页面大小",
+        "请求数量",
+        "加载时间"
+      ],
+      "answer": "Core Web Vitals、自定义指标、用户行为、错误率",
+      "explanation": "全面的指标反映真实用户体验"
+    },
+    {
+      "id": "fullstack_advanced_前端架构_015",
+      "originalId": 15,
+      "category": "前端架构",
+      "categoryKey": "前端架构",
+      "type": "single",
+      "question": "如何处理前端的内存泄漏？",
+      "options": [
+        "弱引用、及时清理、性能分析、自动化检测",
+        "增加内存",
+        "定期刷新",
+        "忽略问题"
+      ],
+      "answer": "弱引用、及时清理、性能分析、自动化检测",
+      "explanation": "内存管理确保应用长时间稳定运行"
+    },
+    {
+      "id": "fullstack_advanced_前端架构_016",
+      "originalId": 16,
+      "category": "前端架构",
+      "categoryKey": "前端架构",
+      "type": "single",
+      "question": "Monorepo在前端工程化中的优势是什么？",
+      "options": [
+        "代码共享、统一配置、原子提交、依赖管理",
+        "简单结构",
+        "独立开发",
+        "快速部署"
+      ],
+      "answer": "代码共享、统一配置、原子提交、依赖管理",
+      "explanation": "Monorepo适合大型项目和团队协作"
+    },
+    {
+      "id": "fullstack_advanced_前端架构_017",
+      "originalId": 17,
+      "category": "前端架构",
+      "categoryKey": "前端架构",
+      "type": "multiple",
+      "question": "前端自动化测试策略包括？（多选）",
+      "options": [
+        "单元测试",
+        "集成测试",
+        "E2E测试",
+        "视觉回归测试"
+      ],
+      "answer": [
+        "单元测试",
+        "集成测试",
+        "E2E测试",
+        "视觉回归测试"
+      ],
+      "explanation": "测试金字塔确保代码质量"
+    },
+    {
+      "id": "fullstack_advanced_前端架构_018",
+      "originalId": 18,
+      "category": "前端架构",
+      "categoryKey": "前端架构",
+      "type": "single",
+      "question": "如何实现前端的离线优先策略？",
+      "options": [
+        "Service Worker缓存、IndexedDB、同步策略、冲突解决",
+        "只用缓存",
+        "避免离线",
+        "服务端处理"
+      ],
+      "answer": "Service Worker缓存、IndexedDB、同步策略、冲突解决",
+      "explanation": "离线优先提供更好的用户体验"
+    },
+    {
+      "id": "fullstack_advanced_前端架构_019",
+      "originalId": 19,
+      "category": "前端架构",
+      "categoryKey": "前端架构",
+      "type": "single",
+      "question": "前端如何实现实时协作功能？",
+      "options": [
+        "WebSocket/WebRTC、CRDT、操作变换、冲突解决",
+        "轮询",
+        "长连接",
+        "定时同步"
+      ],
+      "answer": "WebSocket/WebRTC、CRDT、操作变换、冲突解决",
+      "explanation": "实时协作需要复杂的同步机制"
+    },
+    {
+      "id": "fullstack_advanced_前端架构_020",
+      "originalId": 20,
+      "category": "前端架构",
+      "categoryKey": "前端架构",
+      "type": "single",
+      "question": "如何设计前端的插件化架构？",
+      "options": [
+        "插件接口、沙箱隔离、生命周期、依赖注入",
+        "动态加载",
+        "模块导入",
+        "全局变量"
+      ],
+      "answer": "插件接口、沙箱隔离、生命周期、依赖注入",
+      "explanation": "插件化提高系统扩展性和灵活性"
+    },
+    {
+      "id": "fullstack_advanced_后端架构_021",
+      "originalId": 21,
+      "category": "后端架构",
+      "categoryKey": "后端架构",
+      "type": "single",
+      "question": "如何设计支持亿级请求的后端架构？",
+      "options": [
+        "分层架构、服务拆分、缓存策略、异步处理、弹性伸缩",
+        "垂直扩展",
+        "增加服务器",
+        "优化代码"
+      ],
+      "answer": "分层架构、服务拆分、缓存策略、异步处理、弹性伸缩",
+      "explanation": "大规模系统需要全方位架构设计"
+    },
+    {
+      "id": "fullstack_advanced_后端架构_022",
+      "originalId": 22,
+      "category": "后端架构",
+      "categoryKey": "后端架构",
+      "type": "multiple",
+      "question": "分布式系统的CAP理论权衡包括？（多选）",
+      "options": [
+        "一致性",
+        "可用性",
+        "分区容忍性",
+        "最终一致性"
+      ],
+      "answer": [
+        "一致性",
+        "可用性",
+        "分区容忍性",
+        "最终一致性"
+      ],
+      "explanation": "CAP理论指导分布式系统设计决策"
+    },
+    {
+      "id": "fullstack_advanced_后端架构_023",
+      "originalId": 23,
+      "category": "后端架构",
+      "categoryKey": "后端架构",
+      "type": "single",
+      "question": "如何设计分布式ID生成方案？",
+      "options": [
+        "雪花算法、数据库序列、UUID、Redis原子操作",
+        "自增ID",
+        "随机数",
+        "时间戳"
+      ],
+      "answer": "雪花算法、数据库序列、UUID、Redis原子操作",
+      "explanation": "分布式ID需要全局唯一性和性能"
+    },
+    {
+      "id": "fullstack_advanced_后端架构_024",
+      "originalId": 24,
+      "category": "后端架构",
+      "categoryKey": "后端架构",
+      "type": "single",
+      "question": "服务降级和熔断的区别是什么？",
+      "options": [
+        "降级是功能退化，熔断是暂停调用",
+        "相同概念",
+        "降级更严重",
+        "熔断更严重"
+      ],
+      "answer": "降级是功能退化，熔断是暂停调用",
+      "explanation": "两种机制配合保护系统稳定性"
+    },
+    {
+      "id": "fullstack_advanced_后端架构_025",
+      "originalId": 25,
+      "category": "后端架构",
+      "categoryKey": "后端架构",
+      "type": "single",
+      "question": "如何实现分布式锁？",
+      "options": [
+        "Redis SET NX、Zookeeper、数据库锁、Redlock",
+        "文件锁",
+        "内存锁",
+        "不需要锁"
+      ],
+      "answer": "Redis SET NX、Zookeeper、数据库锁、Redlock",
+      "explanation": "不同方案有不同的可靠性和性能特点"
+    },
+    {
+      "id": "fullstack_advanced_后端架构_026",
+      "originalId": 26,
+      "category": "后端架构",
+      "categoryKey": "后端架构",
+      "type": "multiple",
+      "question": "API网关的功能包括？（多选）",
+      "options": [
+        "路由转发",
+        "认证授权",
+        "限流熔断",
+        "协议转换"
+      ],
+      "answer": [
+        "路由转发",
+        "认证授权",
+        "限流熔断",
+        "协议转换"
+      ],
+      "explanation": "API网关是微服务的统一入口"
+    },
+    {
+      "id": "fullstack_advanced_后端架构_027",
+      "originalId": 27,
+      "category": "后端架构",
+      "categoryKey": "后端架构",
+      "type": "single",
+      "question": "如何设计分布式任务调度系统？",
+      "options": [
+        "任务分片、失败重试、监控告警、资源调度",
+        "定时执行",
+        "顺序执行",
+        "随机执行"
+      ],
+      "answer": "任务分片、失败重试、监控告警、资源调度",
+      "explanation": "分布式调度需要考虑可靠性和效率"
+    },
+    {
+      "id": "fullstack_advanced_后端架构_028",
+      "originalId": 28,
+      "category": "后端架构",
+      "categoryKey": "后端架构",
+      "type": "single",
+      "question": "什么是分布式追踪系统的作用？",
+      "options": [
+        "跟踪请求在微服务间的调用链路",
+        "日志收集",
+        "性能监控",
+        "错误追踪"
+      ],
+      "answer": "跟踪请求在微服务间的调用链路",
+      "explanation": "分布式追踪帮助定位性能瓶颈和故障"
+    },
+    {
+      "id": "fullstack_advanced_后端架构_029",
+      "originalId": 29,
+      "category": "后端架构",
+      "categoryKey": "后端架构",
+      "type": "single",
+      "question": "如何保证分布式系统的数据一致性？",
+      "options": [
+        "分布式事务、最终一致性、补偿机制、幂等设计",
+        "强一致性",
+        "不保证",
+        "人工处理"
+      ],
+      "answer": "分布式事务、最终一致性、补偿机制、幂等设计",
+      "explanation": "不同场景选择合适的一致性方案"
+    },
+    {
+      "id": "fullstack_advanced_后端架构_030",
+      "originalId": 30,
+      "category": "后端架构",
+      "categoryKey": "后端架构",
+      "type": "single",
+      "question": "负载均衡算法有哪些？",
+      "options": [
+        "轮询、加权轮询、最少连接、一致性哈希",
+        "随机选择",
+        "固定分配",
+        "手动分配"
+      ],
+      "answer": "轮询、加权轮询、最少连接、一致性哈希",
+      "explanation": "不同算法适用不同负载场景"
+    },
+    {
+      "id": "fullstack_advanced_后端架构_031",
+      "originalId": 31,
+      "category": "后端架构",
+      "categoryKey": "后端架构",
+      "type": "multiple",
+      "question": "消息队列的应用场景包括？（多选）",
+      "options": [
+        "异步处理",
+        "应用解耦",
+        "流量削峰",
+        "消息广播"
+      ],
+      "answer": [
+        "异步处理",
+        "应用解耦",
+        "流量削峰",
+        "消息广播"
+      ],
+      "explanation": "消息队列是分布式系统的重要组件"
+    },
+    {
+      "id": "fullstack_advanced_后端架构_032",
+      "originalId": 32,
+      "category": "后端架构",
+      "categoryKey": "后端架构",
+      "type": "single",
+      "question": "如何设计高可用的缓存架构？",
+      "options": [
+        "多级缓存、主从复制、故障转移、缓存预热",
+        "单点缓存",
+        "本地缓存",
+        "不用缓存"
+      ],
+      "answer": "多级缓存、主从复制、故障转移、缓存预热",
+      "explanation": "高可用缓存需要冗余和故障处理"
+    },
+    {
+      "id": "fullstack_advanced_后端架构_033",
+      "originalId": 33,
+      "category": "后端架构",
+      "categoryKey": "后端架构",
+      "type": "single",
+      "question": "什么是背压（Backpressure）处理策略？",
+      "options": [
+        "缓冲、丢弃、阻塞、采样",
+        "忽略",
+        "加速处理",
+        "增加资源"
+      ],
+      "answer": "缓冲、丢弃、阻塞、采样",
+      "explanation": "背压处理防止系统过载"
+    },
+    {
+      "id": "fullstack_advanced_后端架构_034",
+      "originalId": 34,
+      "category": "后端架构",
+      "categoryKey": "后端架构",
+      "type": "single",
+      "question": "如何设计多数据中心架构？",
+      "options": [
+        "数据同步、流量路由、故障切换、一致性保证",
+        "主备模式",
+        "单中心",
+        "手动切换"
+      ],
+      "answer": "数据同步、流量路由、故障切换、一致性保证",
+      "explanation": "多数据中心提供地理级别的高可用"
+    },
+    {
+      "id": "fullstack_advanced_后端架构_035",
+      "originalId": 35,
+      "category": "后端架构",
+      "categoryKey": "后端架构",
+      "type": "single",
+      "question": "服务发现机制有哪些实现方式？",
+      "options": [
+        "客户端发现、服务端发现、注册中心、DNS",
+        "硬编码",
+        "配置文件",
+        "手动配置"
+      ],
+      "answer": "客户端发现、服务端发现、注册中心、DNS",
+      "explanation": "服务发现是微服务的基础设施"
+    },
+    {
+      "id": "fullstack_advanced_后端架构_036",
+      "originalId": 36,
+      "category": "后端架构",
+      "categoryKey": "后端架构",
+      "type": "multiple",
+      "question": "限流算法包括？（多选）",
+      "options": [
+        "令牌桶",
+        "漏桶",
+        "滑动窗口",
+        "固定窗口"
+      ],
+      "answer": [
+        "令牌桶",
+        "漏桶",
+        "滑动窗口",
+        "固定窗口"
+      ],
+      "explanation": "不同算法有不同的流量控制特性"
+    },
+    {
+      "id": "fullstack_advanced_后端架构_037",
+      "originalId": 37,
+      "category": "后端架构",
+      "categoryKey": "后端架构",
+      "type": "single",
+      "question": "如何设计幂等性接口？",
+      "options": [
+        "唯一标识、状态机、乐观锁、去重表",
+        "重复检查",
+        "加锁",
+        "不处理"
+      ],
+      "answer": "唯一标识、状态机、乐观锁、去重表",
+      "explanation": "幂等性保证重复请求的安全性"
+    },
+    {
+      "id": "fullstack_advanced_后端架构_038",
+      "originalId": 38,
+      "category": "后端架构",
+      "categoryKey": "后端架构",
+      "type": "single",
+      "question": "分布式配置中心的核心功能是什么？",
+      "options": [
+        "配置管理、动态更新、版本控制、权限管理",
+        "存储配置",
+        "读取配置",
+        "修改配置"
+      ],
+      "answer": "配置管理、动态更新、版本控制、权限管理",
+      "explanation": "配置中心集中管理分布式系统配置"
+    },
+    {
+      "id": "fullstack_advanced_后端架构_039",
+      "originalId": 39,
+      "category": "后端架构",
+      "categoryKey": "后端架构",
+      "type": "single",
+      "question": "如何处理分布式系统的级联故障？",
+      "options": [
+        "隔离、限流、降级、超时控制",
+        "重启服务",
+        "增加资源",
+        "人工介入"
+      ],
+      "answer": "隔离、限流、降级、超时控制",
+      "explanation": "多重机制防止故障扩散"
+    },
+    {
+      "id": "fullstack_advanced_后端架构_040",
+      "originalId": 40,
+      "category": "后端架构",
+      "categoryKey": "后端架构",
+      "type": "single",
+      "question": "什么是Saga模式在分布式事务中的应用？",
+      "options": [
+        "长事务分解为本地事务序列",
+        "两阶段提交",
+        "三阶段提交",
+        "不使用事务"
+      ],
+      "answer": "长事务分解为本地事务序列",
+      "explanation": "Saga通过补偿机制实现最终一致性"
+    },
+    {
+      "id": "fullstack_advanced_数据架构_041",
+      "originalId": 41,
+      "category": "数据架构",
+      "categoryKey": "数据架构",
+      "type": "single",
+      "question": "如何设计数据湖架构？",
+      "options": [
+        "原始数据存储、元数据管理、数据治理、多引擎支持",
+        "数据仓库",
+        "关系数据库",
+        "文件系统"
+      ],
+      "answer": "原始数据存储、元数据管理、数据治理、多引擎支持",
+      "explanation": "数据湖支持多样化数据存储和分析"
+    },
+    {
+      "id": "fullstack_advanced_数据架构_042",
+      "originalId": 42,
+      "category": "数据架构",
+      "categoryKey": "数据架构",
+      "type": "multiple",
+      "question": "实时数据处理架构包括？（多选）",
+      "options": [
+        "Lambda架构",
+        "Kappa架构",
+        "流批一体",
+        "事件驱动"
+      ],
+      "answer": [
+        "Lambda架构",
+        "Kappa架构",
+        "流批一体",
+        "事件驱动"
+      ],
+      "explanation": "不同架构适用不同实时处理需求"
+    },
+    {
+      "id": "fullstack_advanced_数据架构_043",
+      "originalId": 43,
+      "category": "数据架构",
+      "categoryKey": "数据架构",
+      "type": "single",
+      "question": "如何设计多维数据分析系统？",
+      "options": [
+        "OLAP立方体、星型模型、雪花模型、列式存储",
+        "行式存储",
+        "文档存储",
+        "键值存储"
+      ],
+      "answer": "OLAP立方体、星型模型、雪花模型、列式存储",
+      "explanation": "多维分析需要特殊的数据模型和存储"
+    },
+    {
+      "id": "fullstack_advanced_数据架构_044",
+      "originalId": 44,
+      "category": "数据架构",
+      "categoryKey": "数据架构",
+      "type": "single",
+      "question": "什么是数据血缘（Data Lineage）？",
+      "options": [
+        "数据的来源、转换和去向追踪",
+        "数据备份",
+        "数据复制",
+        "数据加密"
+      ],
+      "answer": "数据的来源、转换和去向追踪",
+      "explanation": "数据血缘帮助理解数据流转和影响"
+    },
+    {
+      "id": "fullstack_advanced_数据架构_045",
+      "originalId": 45,
+      "category": "数据架构",
+      "categoryKey": "数据架构",
+      "type": "single",
+      "question": "如何实现跨数据源的联邦查询？",
+      "options": [
+        "查询路由、数据虚拟化、统一接口、优化器",
+        "数据复制",
+        "数据同步",
+        "手动查询"
+      ],
+      "answer": "查询路由、数据虚拟化、统一接口、优化器",
+      "explanation": "联邦查询避免数据移动实现统一访问"
+    },
+    {
+      "id": "fullstack_advanced_数据架构_046",
+      "originalId": 46,
+      "category": "数据架构",
+      "categoryKey": "数据架构",
+      "type": "multiple",
+      "question": "数据质量管理包括哪些方面？（多选）",
+      "options": [
+        "完整性",
+        "准确性",
+        "一致性",
+        "时效性"
+      ],
+      "answer": [
+        "完整性",
+        "准确性",
+        "一致性",
+        "时效性"
+      ],
+      "explanation": "高质量数据是决策的基础"
+    },
+    {
+      "id": "fullstack_advanced_数据架构_047",
+      "originalId": 47,
+      "category": "数据架构",
+      "categoryKey": "数据架构",
+      "type": "single",
+      "question": "如何设计时序数据存储架构？",
+      "options": [
+        "时间分区、压缩算法、降采样、聚合预计算",
+        "普通存储",
+        "关系模型",
+        "文档模型"
+      ],
+      "answer": "时间分区、压缩算法、降采样、聚合预计算",
+      "explanation": "时序数据有特殊的存储和查询需求"
+    },
+    {
+      "id": "fullstack_advanced_数据架构_048",
+      "originalId": 48,
+      "category": "数据架构",
+      "categoryKey": "数据架构",
+      "type": "single",
+      "question": "什么是CDC（Change Data Capture）？",
+      "options": [
+        "捕获数据变更进行同步",
+        "数据备份",
+        "数据恢复",
+        "数据压缩"
+      ],
+      "answer": "捕获数据变更进行同步",
+      "explanation": "CDC实现增量数据同步"
+    },
+    {
+      "id": "fullstack_advanced_数据架构_049",
+      "originalId": 49,
+      "category": "数据架构",
+      "categoryKey": "数据架构",
+      "type": "single",
+      "question": "如何设计数据归档策略？",
+      "options": [
+        "冷热分离、压缩存储、生命周期管理、访问控制",
+        "删除旧数据",
+        "全量备份",
+        "不归档"
+      ],
+      "answer": "冷热分离、压缩存储、生命周期管理、访问控制",
+      "explanation": "归档策略平衡成本和可访问性"
+    },
+    {
+      "id": "fullstack_advanced_数据架构_050",
+      "originalId": 50,
+      "category": "数据架构",
+      "categoryKey": "数据架构",
+      "type": "single",
+      "question": "分布式数据库的分片策略有哪些？",
+      "options": [
+        "范围分片、哈希分片、列表分片、复合分片",
+        "随机分片",
+        "不分片",
+        "手动分片"
+      ],
+      "answer": "范围分片、哈希分片、列表分片、复合分片",
+      "explanation": "不同分片策略适用不同数据特征"
+    },
+    {
+      "id": "fullstack_advanced_数据架构_051",
+      "originalId": 51,
+      "category": "数据架构",
+      "categoryKey": "数据架构",
+      "type": "multiple",
+      "question": "数据脱敏技术包括？（多选）",
+      "options": [
+        "掩码",
+        "加密",
+        "替换",
+        "打乱"
+      ],
+      "answer": [
+        "掩码",
+        "加密",
+        "替换",
+        "打乱"
+      ],
+      "explanation": "数据脱敏保护隐私安全"
+    },
+    {
+      "id": "fullstack_advanced_数据架构_052",
+      "originalId": 52,
+      "category": "数据架构",
+      "categoryKey": "数据架构",
+      "type": "single",
+      "question": "如何设计数据备份和恢复策略？",
+      "options": [
+        "3-2-1原则、增量备份、异地备份、定期演练",
+        "全量备份",
+        "本地备份",
+        "不备份"
+      ],
+      "answer": "3-2-1原则、增量备份、异地备份、定期演练",
+      "explanation": "完善的备份策略确保数据安全"
+    },
+    {
+      "id": "fullstack_advanced_数据架构_053",
+      "originalId": 53,
+      "category": "数据架构",
+      "categoryKey": "数据架构",
+      "type": "single",
+      "question": "什么是数据网格（Data Mesh）架构？",
+      "options": [
+        "去中心化的领域驱动数据架构",
+        "集中式数据仓库",
+        "数据湖",
+        "主数据管理"
+      ],
+      "answer": "去中心化的领域驱动数据架构",
+      "explanation": "数据网格强调领域所有权和自服务"
+    },
+    {
+      "id": "fullstack_advanced_数据架构_054",
+      "originalId": 54,
+      "category": "数据架构",
+      "categoryKey": "数据架构",
+      "type": "single",
+      "question": "如何优化大数据ETL流程？",
+      "options": [
+        "并行处理、增量抽取、内存计算、数据分区",
+        "顺序处理",
+        "全量处理",
+        "手动处理"
+      ],
+      "answer": "并行处理、增量抽取、内存计算、数据分区",
+      "explanation": "优化ETL提高数据处理效率"
+    },
+    {
+      "id": "fullstack_advanced_数据架构_055",
+      "originalId": 55,
+      "category": "数据架构",
+      "categoryKey": "数据架构",
+      "type": "single",
+      "question": "流式计算与批处理的主要区别是？",
+      "options": [
+        "实时处理vs延迟处理、事件驱动vs时间驱动",
+        "速度不同",
+        "数据量不同",
+        "没有区别"
+      ],
+      "answer": "实时处理vs延迟处理、事件驱动vs时间驱动",
+      "explanation": "两种模式适用不同的业务场景"
+    },
+    {
+      "id": "fullstack_advanced_数据架构_056",
+      "originalId": 56,
+      "category": "数据架构",
+      "categoryKey": "数据架构",
+      "type": "multiple",
+      "question": "数据仓库建模方法包括？（多选）",
+      "options": [
+        "维度建模",
+        "范式建模",
+        "Data Vault",
+        "Anchor建模"
+      ],
+      "answer": [
+        "维度建模",
+        "范式建模",
+        "Data Vault",
+        "Anchor建模"
+      ],
+      "explanation": "不同建模方法有各自的优缺点"
+    },
+    {
+      "id": "fullstack_advanced_数据架构_057",
+      "originalId": 57,
+      "category": "数据架构",
+      "categoryKey": "数据架构",
+      "type": "single",
+      "question": "如何实现数据的实时同步？",
+      "options": [
+        "CDC、消息队列、双写、触发器",
+        "定时同步",
+        "手动同步",
+        "批量同步"
+      ],
+      "answer": "CDC、消息队列、双写、触发器",
+      "explanation": "实时同步需要低延迟高可靠的方案"
+    },
+    {
+      "id": "fullstack_advanced_数据架构_058",
+      "originalId": 58,
+      "category": "数据架构",
+      "categoryKey": "数据架构",
+      "type": "single",
+      "question": "什么是数据虚拟化？",
+      "options": [
+        "提供统一数据访问层而不移动数据",
+        "数据复制",
+        "数据缓存",
+        "数据压缩"
+      ],
+      "answer": "提供统一数据访问层而不移动数据",
+      "explanation": "数据虚拟化简化异构数据源访问"
+    },
+    {
+      "id": "fullstack_advanced_数据架构_059",
+      "originalId": 59,
+      "category": "数据架构",
+      "categoryKey": "数据架构",
+      "type": "single",
+      "question": "如何设计GDPR合规的数据架构？",
+      "options": [
+        "数据最小化、隐私设计、删除权、审计日志",
+        "加密所有",
+        "禁止访问",
+        "数据本地化"
+      ],
+      "answer": "数据最小化、隐私设计、删除权、审计日志",
+      "explanation": "GDPR合规需要全面的技术和流程支持"
+    },
+    {
+      "id": "fullstack_advanced_数据架构_060",
+      "originalId": 60,
+      "category": "数据架构",
+      "categoryKey": "数据架构",
+      "type": "single",
+      "question": "什么是数据编排（Data Orchestration）？",
+      "options": [
+        "协调数据流转和处理的自动化流程",
+        "数据存储",
+        "数据查询",
+        "数据展示"
+      ],
+      "answer": "协调数据流转和处理的自动化流程",
+      "explanation": "数据编排自动化复杂的数据处理流程"
+    },
+    {
+      "id": "fullstack_advanced_ai工程_061",
+      "originalId": 61,
+      "category": "AI工程",
+      "categoryKey": "ai工程",
+      "type": "single",
+      "question": "如何设计生产级的RAG系统架构？",
+      "options": [
+        "多级检索、混合搜索、反馈学习、监控评估",
+        "简单检索",
+        "全文搜索",
+        "关键词匹配"
+      ],
+      "answer": "多级检索、混合搜索、反馈学习、监控评估",
+      "explanation": "生产RAG需要考虑准确性、延迟和成本"
+    },
+    {
+      "id": "fullstack_advanced_ai工程_062",
+      "originalId": 62,
+      "category": "AI工程",
+      "categoryKey": "ai工程",
+      "type": "multiple",
+      "question": "LLM应用的优化策略包括？（多选）",
+      "options": [
+        "模型量化",
+        "知识蒸馏",
+        "提示压缩",
+        "缓存策略"
+      ],
+      "answer": [
+        "模型量化",
+        "知识蒸馏",
+        "提示压缩",
+        "缓存策略"
+      ],
+      "explanation": "多种优化技术降低成本提高性能"
+    },
+    {
+      "id": "fullstack_advanced_ai工程_063",
+      "originalId": 63,
+      "category": "AI工程",
+      "categoryKey": "ai工程",
+      "type": "single",
+      "question": "如何设计多模态AI系统？",
+      "options": [
+        "统一表示、跨模态对齐、融合策略、任务适配",
+        "分别处理",
+        "单一模态",
+        "顺序处理"
+      ],
+      "answer": "统一表示、跨模态对齐、融合策略、任务适配",
+      "explanation": "多模态系统需要协调不同数据类型"
+    },
+    {
+      "id": "fullstack_advanced_ai工程_064",
+      "originalId": 64,
+      "category": "AI工程",
+      "categoryKey": "ai工程",
+      "type": "single",
+      "question": "什么是MLOps的核心实践？",
+      "options": [
+        "模型版本控制、自动化部署、监控、实验追踪",
+        "模型训练",
+        "数据收集",
+        "结果展示"
+      ],
+      "answer": "模型版本控制、自动化部署、监控、实验追踪",
+      "explanation": "MLOps确保ML系统的可靠性和可维护性"
+    },
+    {
+      "id": "fullstack_advanced_ai工程_065",
+      "originalId": 65,
+      "category": "AI工程",
+      "categoryKey": "ai工程",
+      "type": "single",
+      "question": "如何处理LLM的提示注入攻击？",
+      "options": [
+        "输入验证、输出过滤、沙箱执行、权限控制",
+        "忽略攻击",
+        "限制输入",
+        "关闭服务"
+      ],
+      "answer": "输入验证、输出过滤、沙箱执行、权限控制",
+      "explanation": "多层防护保护LLM应用安全"
+    },
+    {
+      "id": "fullstack_advanced_ai工程_066",
+      "originalId": 66,
+      "category": "AI工程",
+      "categoryKey": "ai工程",
+      "type": "multiple",
+      "question": "向量数据库选型考虑因素包括？（多选）",
+      "options": [
+        "性能",
+        "可扩展性",
+        "持久化",
+        "检索算法"
+      ],
+      "answer": [
+        "性能",
+        "可扩展性",
+        "持久化",
+        "检索算法"
+      ],
+      "explanation": "向量数据库是RAG系统的关键组件"
+    },
+    {
+      "id": "fullstack_advanced_ai工程_067",
+      "originalId": 67,
+      "category": "AI工程",
+      "categoryKey": "ai工程",
+      "type": "single",
+      "question": "如何实现LLM的连续学习？",
+      "options": [
+        "增量训练、记忆机制、适配器、动态提示",
+        "重新训练",
+        "固定模型",
+        "不更新"
+      ],
+      "answer": "增量训练、记忆机制、适配器、动态提示",
+      "explanation": "连续学习让模型适应新知识"
+    },
+    {
+      "id": "fullstack_advanced_ai工程_068",
+      "originalId": 68,
+      "category": "AI工程",
+      "categoryKey": "ai工程",
+      "type": "single",
+      "question": "什么是思维链（Chain-of-Thought）提示？",
+      "options": [
+        "引导模型展示推理过程",
+        "多个提示",
+        "提示模板",
+        "固定格式"
+      ],
+      "answer": "引导模型展示推理过程",
+      "explanation": "思维链提高复杂推理任务的准确性"
+    },
+    {
+      "id": "fullstack_advanced_ai工程_069",
+      "originalId": 69,
+      "category": "AI工程",
+      "categoryKey": "ai工程",
+      "type": "single",
+      "question": "如何评估RAG系统的质量？",
+      "options": [
+        "相关性、准确性、完整性、响应时间",
+        "只看准确率",
+        "用户反馈",
+        "随机评估"
+      ],
+      "answer": "相关性、准确性、完整性、响应时间",
+      "explanation": "多维度评估确保系统质量"
+    },
+    {
+      "id": "fullstack_advanced_ai工程_070",
+      "originalId": 70,
+      "category": "AI工程",
+      "categoryKey": "ai工程",
+      "type": "single",
+      "question": "LLM的few-shot和zero-shot的区别是？",
+      "options": [
+        "few-shot提供示例，zero-shot不提供",
+        "速度不同",
+        "准确率相同",
+        "没有区别"
+      ],
+      "answer": "few-shot提供示例，zero-shot不提供",
+      "explanation": "示例帮助模型理解任务要求"
+    },
+    {
+      "id": "fullstack_advanced_ai工程_071",
+      "originalId": 71,
+      "category": "AI工程",
+      "categoryKey": "ai工程",
+      "type": "multiple",
+      "question": "AI系统的可解释性技术包括？（多选）",
+      "options": [
+        "注意力可视化",
+        "特征重要性",
+        "反事实解释",
+        "规则提取"
+      ],
+      "answer": [
+        "注意力可视化",
+        "特征重要性",
+        "反事实解释",
+        "规则提取"
+      ],
+      "explanation": "可解释性增强AI系统的可信度"
+    },
+    {
+      "id": "fullstack_advanced_ai工程_072",
+      "originalId": 72,
+      "category": "AI工程",
+      "categoryKey": "ai工程",
+      "type": "single",
+      "question": "如何设计AI驱动的推荐系统？",
+      "options": [
+        "协同过滤、内容基础、深度学习、混合方法",
+        "随机推荐",
+        "热门推荐",
+        "固定推荐"
+      ],
+      "answer": "协同过滤、内容基础、深度学习、混合方法",
+      "explanation": "组合方法提高推荐质量"
+    },
+    {
+      "id": "fullstack_advanced_ai工程_073",
+      "originalId": 73,
+      "category": "AI工程",
+      "categoryKey": "ai工程",
+      "type": "single",
+      "question": "什么是模型漂移（Model Drift）？",
+      "options": [
+        "模型性能随时间下降",
+        "模型移动",
+        "参数变化",
+        "架构改变"
+      ],
+      "answer": "模型性能随时间下降",
+      "explanation": "数据分布变化导致模型性能退化"
+    },
+    {
+      "id": "fullstack_advanced_ai工程_074",
+      "originalId": 74,
+      "category": "AI工程",
+      "categoryKey": "ai工程",
+      "type": "single",
+      "question": "如何实现隐私保护的机器学习？",
+      "options": [
+        "联邦学习、差分隐私、同态加密、安全多方计算",
+        "数据加密",
+        "访问控制",
+        "数据脱敏"
+      ],
+      "answer": "联邦学习、差分隐私、同态加密、安全多方计算",
+      "explanation": "隐私计算技术保护数据安全"
+    },
+    {
+      "id": "fullstack_advanced_ai工程_075",
+      "originalId": 75,
+      "category": "AI工程",
+      "categoryKey": "ai工程",
+      "type": "single",
+      "question": "Agent系统的核心组件是什么？",
+      "options": [
+        "感知、规划、执行、记忆",
+        "输入输出",
+        "数据处理",
+        "结果展示"
+      ],
+      "answer": "感知、规划、执行、记忆",
+      "explanation": "Agent需要完整的认知循环"
+    },
+    {
+      "id": "fullstack_advanced_ai工程_076",
+      "originalId": 76,
+      "category": "AI工程",
+      "categoryKey": "ai工程",
+      "type": "multiple",
+      "question": "边缘AI的挑战包括？（多选）",
+      "options": [
+        "计算资源限制",
+        "模型压缩",
+        "实时性要求",
+        "功耗限制"
+      ],
+      "answer": [
+        "计算资源限制",
+        "模型压缩",
+        "实时性要求",
+        "功耗限制"
+      ],
+      "explanation": "边缘部署需要特殊优化"
+    },
+    {
+      "id": "fullstack_advanced_ai工程_077",
+      "originalId": 77,
+      "category": "AI工程",
+      "categoryKey": "ai工程",
+      "type": "single",
+      "question": "如何设计AI模型的A/B测试？",
+      "options": [
+        "流量分配、指标设计、统计检验、决策框架",
+        "随机测试",
+        "全量发布",
+        "主观判断"
+      ],
+      "answer": "流量分配、指标设计、统计检验、决策框架",
+      "explanation": "科学的A/B测试验证模型效果"
+    },
+    {
+      "id": "fullstack_advanced_ai工程_078",
+      "originalId": 78,
+      "category": "AI工程",
+      "categoryKey": "ai工程",
+      "type": "single",
+      "question": "什么是AutoML的主要功能？",
+      "options": [
+        "自动化模型选择、超参数优化、特征工程",
+        "自动训练",
+        "自动部署",
+        "自动监控"
+      ],
+      "answer": "自动化模型选择、超参数优化、特征工程",
+      "explanation": "AutoML降低机器学习门槛"
+    },
+    {
+      "id": "fullstack_advanced_ai工程_079",
+      "originalId": 79,
+      "category": "AI工程",
+      "categoryKey": "ai工程",
+      "type": "single",
+      "question": "如何构建知识图谱增强的LLM？",
+      "options": [
+        "实体识别、关系抽取、图嵌入、查询增强",
+        "直接连接",
+        "手动构建",
+        "不需要图谱"
+      ],
+      "answer": "实体识别、关系抽取、图嵌入、查询增强",
+      "explanation": "知识图谱提供结构化知识支持"
+    },
+    {
+      "id": "fullstack_advanced_ai工程_080",
+      "originalId": 80,
+      "category": "AI工程",
+      "categoryKey": "ai工程",
+      "type": "single",
+      "question": "LLM应用的成本优化策略是什么？",
+      "options": [
+        "模型选择、批处理、缓存、量化部署",
+        "使用最大模型",
+        "增加请求",
+        "不优化"
+      ],
+      "answer": "模型选择、批处理、缓存、量化部署",
+      "explanation": "合理的策略显著降低运营成本"
+    },
+    {
+      "id": "fullstack_advanced_系统设计_081",
+      "originalId": 81,
+      "category": "系统设计",
+      "categoryKey": "系统设计",
+      "type": "single",
+      "question": "设计一个类似TechFlow的媒体平台架构需要考虑什么？",
+      "options": [
+        "内容管理、个性化推荐、实时更新、多语言支持",
+        "只需要CMS",
+        "静态页面",
+        "单一功能"
+      ],
+      "answer": "内容管理、个性化推荐、实时更新、多语言支持",
+      "explanation": "媒体平台需要综合考虑内容和用户体验"
+    },
+    {
+      "id": "fullstack_advanced_系统设计_082",
+      "originalId": 82,
+      "category": "系统设计",
+      "categoryKey": "系统设计",
+      "type": "multiple",
+      "question": "技术债务管理策略包括？（多选）",
+      "options": [
+        "定期重构",
+        "技术雷达",
+        "债务量化",
+        "预算分配"
+      ],
+      "answer": [
+        "定期重构",
+        "技术雷达",
+        "债务量化",
+        "预算分配"
+      ],
+      "explanation": "主动管理技术债务保持系统健康"
+    },
+    {
+      "id": "fullstack_advanced_系统设计_083",
+      "originalId": 83,
+      "category": "系统设计",
+      "categoryKey": "系统设计",
+      "type": "single",
+      "question": "如何设计支持Web3的内容平台？",
+      "options": [
+        "去中心化存储、代币激励、DAO治理、NFT内容",
+        "传统架构",
+        "中心化管理",
+        "付费订阅"
+      ],
+      "answer": "去中心化存储、代币激励、DAO治理、NFT内容",
+      "explanation": "Web3平台需要新的架构和激励模式"
+    },
+    {
+      "id": "fullstack_advanced_系统设计_084",
+      "originalId": 84,
+      "category": "系统设计",
+      "categoryKey": "系统设计",
+      "type": "single",
+      "question": "云原生架构的核心原则是什么？",
+      "options": [
+        "容器化、微服务、DevOps、持续交付",
+        "虚拟机",
+        "单体应用",
+        "手动部署"
+      ],
+      "answer": "容器化、微服务、DevOps、持续交付",
+      "explanation": "云原生提高应用的可扩展性和弹性"
+    },
+    {
+      "id": "fullstack_advanced_系统设计_085",
+      "originalId": 85,
+      "category": "系统设计",
+      "categoryKey": "系统设计",
+      "type": "single",
+      "question": "如何进行技术选型决策？",
+      "options": [
+        "需求匹配、团队能力、社区生态、成本效益",
+        "选最新的",
+        "选最流行的",
+        "随机选择"
+      ],
+      "answer": "需求匹配、团队能力、社区生态、成本效益",
+      "explanation": "理性的技术选型确保项目成功"
+    },
+    {
+      "id": "fullstack_advanced_系统设计_086",
+      "originalId": 86,
+      "category": "系统设计",
+      "categoryKey": "系统设计",
+      "type": "multiple",
+      "question": "架构评审应该包括哪些方面？（多选）",
+      "options": [
+        "功能完整性",
+        "性能指标",
+        "安全性",
+        "可维护性"
+      ],
+      "answer": [
+        "功能完整性",
+        "性能指标",
+        "安全性",
+        "可维护性"
+      ],
+      "explanation": "全面的架构评审降低风险"
+    },
+    {
+      "id": "fullstack_advanced_系统设计_087",
+      "originalId": 87,
+      "category": "系统设计",
+      "categoryKey": "系统设计",
+      "type": "single",
+      "question": "什么是康威定律在架构设计中的体现？",
+      "options": [
+        "系统架构反映组织结构",
+        "技术决定架构",
+        "需求决定架构",
+        "随机演化"
+      ],
+      "answer": "系统架构反映组织结构",
+      "explanation": "组织结构影响系统架构设计"
+    },
+    {
+      "id": "fullstack_advanced_系统设计_088",
+      "originalId": 88,
+      "category": "系统设计",
+      "categoryKey": "系统设计",
+      "type": "single",
+      "question": "如何设计故障容错系统？",
+      "options": [
+        "冗余设计、故障检测、自动恢复、降级策略",
+        "避免故障",
+        "人工处理",
+        "重启系统"
+      ],
+      "answer": "冗余设计、故障检测、自动恢复、降级策略",
+      "explanation": "容错设计提高系统可靠性"
+    },
+    {
+      "id": "fullstack_advanced_系统设计_089",
+      "originalId": 89,
+      "category": "系统设计",
+      "categoryKey": "系统设计",
+      "type": "single",
+      "question": "领域驱动设计(DDD)的核心概念是什么？",
+      "options": [
+        "限界上下文、聚合、实体、值对象",
+        "数据模型",
+        "流程图",
+        "用例图"
+      ],
+      "answer": "限界上下文、聚合、实体、值对象",
+      "explanation": "DDD帮助设计复杂业务系统"
+    },
+    {
+      "id": "fullstack_advanced_系统设计_090",
+      "originalId": 90,
+      "category": "系统设计",
+      "categoryKey": "系统设计",
+      "type": "single",
+      "question": "如何评估架构的可演进性？",
+      "options": [
+        "模块化程度、接口稳定性、依赖管理、测试覆盖",
+        "代码量",
+        "功能数量",
+        "用户数量"
+      ],
+      "answer": "模块化程度、接口稳定性、依赖管理、测试覆盖",
+      "explanation": "可演进架构适应未来变化"
+    },
+    {
+      "id": "fullstack_advanced_系统设计_091",
+      "originalId": 91,
+      "category": "系统设计",
+      "categoryKey": "系统设计",
+      "type": "multiple",
+      "question": "混沌工程实践包括？（多选）",
+      "options": [
+        "故障注入",
+        "负载测试",
+        "恢复演练",
+        "监控验证"
+      ],
+      "answer": [
+        "故障注入",
+        "负载测试",
+        "恢复演练",
+        "监控验证"
+      ],
+      "explanation": "混沌工程提高系统韧性"
+    },
+    {
+      "id": "fullstack_advanced_系统设计_092",
+      "originalId": 92,
+      "category": "系统设计",
+      "categoryKey": "系统设计",
+      "type": "single",
+      "question": "如何设计零信任网络架构？",
+      "options": [
+        "身份验证、最小权限、加密通信、持续验证",
+        "防火墙",
+        "VPN",
+        "内网隔离"
+      ],
+      "answer": "身份验证、最小权限、加密通信、持续验证",
+      "explanation": "零信任假设没有可信边界"
+    },
+    {
+      "id": "fullstack_advanced_系统设计_093",
+      "originalId": 93,
+      "category": "系统设计",
+      "categoryKey": "系统设计",
+      "type": "single",
+      "question": "什么是架构适应度函数？",
+      "options": [
+        "量化架构特性的目标函数",
+        "性能测试",
+        "代码质量",
+        "用户满意度"
+      ],
+      "answer": "量化架构特性的目标函数",
+      "explanation": "适应度函数指导架构演进"
+    },
+    {
+      "id": "fullstack_advanced_系统设计_094",
+      "originalId": 94,
+      "category": "系统设计",
+      "categoryKey": "系统设计",
+      "type": "single",
+      "question": "如何平衡架构的复杂性和简单性？",
+      "options": [
+        "本质复杂性vs偶然复杂性、演进式设计",
+        "越简单越好",
+        "越复杂越好",
+        "不考虑"
+      ],
+      "answer": "本质复杂性vs偶然复杂性、演进式设计",
+      "explanation": "识别并消除不必要的复杂性"
+    },
+    {
+      "id": "fullstack_advanced_系统设计_095",
+      "originalId": 95,
+      "category": "系统设计",
+      "categoryKey": "系统设计",
+      "type": "single",
+      "question": "服务化改造的最佳实践是什么？",
+      "options": [
+        "渐进式拆分、接口先行、数据解耦、监控先行",
+        "一次性改造",
+        "重写系统",
+        "保持现状"
+      ],
+      "answer": "渐进式拆分、接口先行、数据解耦、监控先行",
+      "explanation": "渐进式改造降低风险"
+    },
+    {
+      "id": "fullstack_advanced_系统设计_096",
+      "originalId": 96,
+      "category": "系统设计",
+      "categoryKey": "系统设计",
+      "type": "multiple",
+      "question": "架构文档应该包括？（多选）",
+      "options": [
+        "架构决策记录",
+        "组件关系",
+        "部署视图",
+        "数据流图"
+      ],
+      "answer": [
+        "架构决策记录",
+        "组件关系",
+        "部署视图",
+        "数据流图"
+      ],
+      "explanation": "完整的文档帮助理解和维护系统"
+    },
+    {
+      "id": "fullstack_advanced_系统设计_097",
+      "originalId": 97,
+      "category": "系统设计",
+      "categoryKey": "系统设计",
+      "type": "single",
+      "question": "如何设计多租户SaaS架构？",
+      "options": [
+        "数据隔离策略、资源池化、配置管理、计费系统",
+        "独立部署",
+        "共享一切",
+        "不隔离"
+      ],
+      "answer": "数据隔离策略、资源池化、配置管理、计费系统",
+      "explanation": "多租户架构需要平衡隔离和效率"
+    },
+    {
+      "id": "fullstack_advanced_系统设计_098",
+      "originalId": 98,
+      "category": "系统设计",
+      "categoryKey": "系统设计",
+      "type": "single",
+      "question": "技术架构师最重要的能力是什么？",
+      "options": [
+        "全局思维、技术深度、沟通能力、决策能力",
+        "编码能力",
+        "管理能力",
+        "销售能力"
+      ],
+      "answer": "全局思维、技术深度、沟通能力、决策能力",
+      "explanation": "架构师需要技术和软技能的结合"
+    },
+    {
+      "id": "fullstack_advanced_系统设计_099",
+      "originalId": 99,
+      "category": "系统设计",
+      "categoryKey": "系统设计",
+      "type": "single",
+      "question": "如何建立架构决策机制？",
+      "options": [
+        "架构委员会、决策模板、评审流程、反馈机制",
+        "个人决定",
+        "投票决定",
+        "领导决定"
+      ],
+      "answer": "架构委员会、决策模板、评审流程、反馈机制",
+      "explanation": "规范的决策机制提高决策质量"
+    },
+    {
+      "id": "fullstack_advanced_系统设计_100",
+      "originalId": 100,
+      "category": "系统设计",
+      "categoryKey": "系统设计",
+      "type": "single",
+      "question": "优秀全栈架构师的核心价值是什么？",
+      "options": [
+        "将业务需求转化为可扩展的技术方案",
+        "写代码快",
+        "懂技术多",
+        "会管理"
+      ],
+      "answer": "将业务需求转化为可扩展的技术方案",
+      "explanation": "架构师是业务和技术的桥梁"
+    }
+  ]
+}

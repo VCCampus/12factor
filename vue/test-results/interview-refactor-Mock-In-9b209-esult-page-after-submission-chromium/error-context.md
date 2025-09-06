@@ -1,0 +1,86 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e5]:
+  - banner [ref=e6]:
+    - navigation [ref=e8]:
+      - generic [ref=e9]:
+        - generic [ref=e10]: 📚
+        - heading "3C数创学习平台" [level=1] [ref=e11]
+      - generic [ref=e12]:
+        - link "首页" [ref=e13] [cursor=pointer]:
+          - /url: /
+        - link "温度计" [ref=e14] [cursor=pointer]:
+          - /url: /thermometer
+        - link "原则" [ref=e15] [cursor=pointer]:
+          - /url: /principles
+        - link "模拟面试" [ref=e16] [cursor=pointer]:
+          - /url: /mock-interview
+  - main [ref=e17]:
+    - generic [ref=e18]:
+      - generic [ref=e19]:
+        - heading "🎉 测试完成！" [level=1] [ref=e20]
+        - generic [ref=e21]:
+          - paragraph [ref=e22]: DeFi增长经理 - 初级
+          - generic [ref=e23]: "92"
+          - paragraph [ref=e24]: 总分：100分
+        - generic [ref=e25]:
+          - generic [ref=e26]:
+            - paragraph [ref=e27]: 正确率
+            - paragraph [ref=e28]: 23/25
+          - generic [ref=e29]:
+            - paragraph [ref=e30]: 用时
+            - paragraph [ref=e31]: 0分钟
+          - generic [ref=e32]:
+            - paragraph [ref=e33]: 等级
+            - paragraph [ref=e34]: 🏆 优秀
+      - generic [ref=e35] [cursor=pointer]:
+        - heading "📊 能力分析" [level=2] [ref=e36] [cursor=pointer]
+        - generic [ref=e37] [cursor=pointer]:
+          - generic [ref=e39] [cursor=pointer]:
+            - generic [ref=e40] [cursor=pointer]: DeFi基础
+            - generic [ref=e41] [cursor=pointer]: 13/13
+          - generic [ref=e45] [cursor=pointer]:
+            - generic [ref=e46] [cursor=pointer]: 增长策略
+            - generic [ref=e47] [cursor=pointer]: 4/5
+          - generic [ref=e51] [cursor=pointer]:
+            - generic [ref=e52] [cursor=pointer]: 数据分析
+            - generic [ref=e53] [cursor=pointer]: 6/7
+      - generic [ref=e56]:
+        - heading "💡 学习建议" [level=2] [ref=e57]
+        - generic [ref=e58]:
+          - paragraph [ref=e59]: 表现优秀！建议挑战更高难度，进一步提升专业能力。
+          - link "前往原则学习 →" [ref=e60] [cursor=pointer]:
+            - /url: /principles
+      - generic [ref=e61]:
+        - heading "💬 分享你的成绩" [level=3] [ref=e62]
+        - paragraph [ref=e63]: 我在DeFi增长经理初级测试中获得92分！你也来试试？
+        - generic [ref=e64]:
+          - button "分享成绩" [ref=e65] [cursor=pointer]
+          - button "复制文本" [ref=e66] [cursor=pointer]
+      - generic [ref=e67]:
+        - button "查看错题解析 (2题)" [ref=e68] [cursor=pointer]
+        - button "重新测试" [ref=e69] [cursor=pointer]
+        - button "挑战其他难度" [ref=e70] [cursor=pointer]
+        - link "返回首页" [ref=e71] [cursor=pointer]:
+          - /url: /mock-interview
+  - contentinfo [ref=e72]:
+    - generic [ref=e74]:
+      - generic [ref=e75]:
+        - generic [ref=e76]:
+          - paragraph [ref=e77]:
+            - text: © 2024
+            - link "📚 CSS数创学习平台" [ref=e78] [cursor=pointer]:
+              - /url: /
+          - paragraph [ref=e79]: 基于CSS数创班8期知识体系
+        - generic [ref=e80]:
+          - paragraph [ref=e81]: 版本 v4.0.0 | Vue 3 + Vite
+          - paragraph [ref=e82]: 🚀 PWA离线支持
+      - generic [ref=e84]:
+        - generic [ref=e85]: 📊 数据管理：
+        - button "导出学习数据" [ref=e86] [cursor=pointer]
+        - generic [ref=e87]: "|"
+        - button "清除缓存" [ref=e88] [cursor=pointer]
+        - generic [ref=e89]: "|"
+        - generic [ref=e90]: "存储空间: 0 B"
+```
