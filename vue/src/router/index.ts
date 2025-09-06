@@ -11,28 +11,18 @@ const router = createRouter({
     },
     {
       path: '/principles',
-      component: () => import('@/views/PrinciplesView.vue'),
-      children: [
-        {
-          path: '',
-          redirect: '/principles/study'
-        },
-        {
-          path: 'study',
-          name: 'principles-study',
-          component: () => import('@/components/principles/StudyContent.vue')
-        },
-        {
-          path: 'flashcards',
-          name: 'principles-flashcards',
-          component: () => import('@/components/principles/FlashcardsContent.vue')
-        },
-        {
-          path: 'quiz',
-          name: 'principles-quiz',
-          component: () => import('@/components/principles/QuizContent.vue')
-        }
-      ]
+      name: 'principles',
+      component: () => import('@/views/GrowthPrinciplesView.vue')
+    },
+    {
+      path: '/flashcards',
+      name: 'flashcards', 
+      component: () => import('@/views/GrowthFlashcardsView.vue')
+    },
+    {
+      path: '/quiz',
+      name: 'quiz',
+      component: () => import('@/views/GrowthQuizView.vue')
     },
     {
       path: '/mock-interview',
@@ -78,22 +68,10 @@ const router = createRouter({
   ]
 })
 
-// 处理旧路由的重定向
+// 移动优先重构完成，移除旧路由重定向逻辑
 router.beforeEach((to, from, next) => {
-  const deprecatedRoutes: Record<string, string> = {
-    '/flashcards': '/principles/flashcards',
-    '/quiz': '/principles/quiz',
-    '/analytics': '/',
-    '/achievements': '/',
-    '/export': '/'
-  }
-  
-  if (deprecatedRoutes[to.path]) {
-    console.warn(`⚠️ 路由 ${to.path} 已废弃，已重定向到新路径`)
-    next(deprecatedRoutes[to.path])
-  } else {
-    next()
-  }
+  // 可以添加认证检查或其他路由守卫逻辑
+  next()
 })
 
 export default router
