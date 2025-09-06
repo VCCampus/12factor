@@ -135,42 +135,44 @@ All planning, research, and discussion documents must be organized in:
 - Test Chinese locale support (primary language)
 - Verify neobrutalism design system consistency
 
-## Current Project Status (2025-09-05) - Post Navigation Simplification
+## Current Project Status (2025-09-06) - 个人成长12原则移动优先重构完成
 
-### 🎉 Recent Major Update (Issue #17)
-**导航栏简化项目已完成** - 将原有9项导航精简为4项，显著改善用户体验。
+### 🎉 最新重大更新 (Issue #24)
+**个人成长12原则移动优先重构已完成** - 基于新个人成长12原则数据，完整实现移动优先组件架构，为uniapp迁移奠定基础。
 
-#### Navigation Structure Changes
+#### 核心技术突破
 ```
-旧导航：首页 | 温度计 | 原则 | 闪卡 | 测试 | 模拟面试 | 分析 | 成就 | 导出
-新导航：首页 | 温度计 | 原则 | 模拟面试
-
-原则页面新增Tab导航：
-📚 原则学习 | 🎯 闪卡练习 | 🏆 挑战测试
+数据架构：TOML → JSON → Pinia状态管理 → Vue组件渲染
+组件架构：Growth* 系列移动优先组件 (uniapp兼容)  
+学习系统：闪卡随机算法 (12/120) + 多模式测试系统
+路由策略：直接URL映射 (移除嵌套路由)
 ```
 
-#### Key Architecture Changes
-- **Nested Routing**: `/principles/{study|flashcards|quiz}`
-- **Component Restructure**: New `/components/principles/` directory
-- **Data Management**: Moved to footer with localStorage storage
-- **File Archive**: Old files moved to `/disused/` directory
+#### 重构成果总结
+- **✅ 完整移动优先架构**: Growth*系列组件，支持uniapp语法 (view/text)
+- **✅ 智能闪卡系统**: 12张随机选择算法，每个原则1张，确保知识覆盖
+- **✅ 多模式测试**: 练习模式、考试模式、复习模式，支持计时和评分
+- **✅ 数据持久化**: localStorage会话历史和学习进度跟踪
+- **✅ TypeScript重构**: 严格类型定义，growthStore集中状态管理
+- **✅ 生产部署**: 构建成功 (1.6M)，部署验证通过
 
 ### Active Features
 - **Home Dashboard**: CSS数创班8期核心知识体系学习平台
-- **Knowledge Principles**: Integrated Tab-based learning center
-  - 📚 **原则学习**: 20 principles across 5 stages from TOML config
-  - 🎯 **闪卡练习**: Interactive learning cards with spaced repetition
-  - 🏆 **挑战测试**: Multi-mode quiz system (practice/exam/review)
+- **个人成长12原则系统**: 完整移动优先学习平台
+  - 📚 **GrowthPrinciplesView**: 原则概览，学习阶段，进度统计
+  - 🎯 **GrowthFlashcardsView**: 智能闪卡练习 (12/120随机算法)
+  - 🏆 **GrowthQuizView**: 多模式测试系统 (练习/考试/复习)
 - **Mock Interviews**: 4-difficulty interview system (basic/intermediate/advanced/expert)
 - **Thermometer View**: Market sentiment navigation component
 
 ### Technical Architecture
-- **Data Pipeline**: TOML configuration → JSON generation → Vue consumption
-- **State Management**: 4 Pinia stores (config, quiz, interview, progress)
-- **Routing**: 4 main routes with nested principles subroutes
-- **Styling**: Tailwind CSS with custom neobrutalism theme
-- **Build Process**: Automated via scripts/build.sh with validation pipeline
-- **Data Storage**: localStorage with 5MB limit and automatic cleanup
+- **Data Pipeline**: 个人成长TOML → JSON转换 → growthStore → Growth组件
+- **State Management**: growthStore (Pinia) + 原有stores (config, quiz, interview, progress)
+- **Routing**: 直接路由映射 (/principles → GrowthPrinciplesView)
+- **Component System**: 移动优先Growth*组件架构，uniapp兼容
+- **Styling**: Tailwind CSS响应式设计 + 深色模式支持
+- **Build Process**: scripts/build.sh全自动化构建流水线
+- **Data Storage**: localStorage个人成长数据持久化 + PWA离线支持
 
 ### Directory Structure Updates
 ```
@@ -178,39 +180,46 @@ All planning, research, and discussion documents must be organized in:
 ├── vue/                           # PRIMARY DEVELOPMENT
 │   ├── src/
 │   │   ├── components/
-│   │   │   ├── principles/        # 🆕 Tab-based navigation components
-│   │   │   │   ├── PrinciplesTab.vue
-│   │   │   │   ├── StudyContent.vue
-│   │   │   │   ├── FlashcardsContent.vue
-│   │   │   │   └── QuizContent.vue
-│   │   │   └── layout/            # Updated footer with data management
-│   │   │   └── utils/
-│   │   │       └── dataManager.ts # 🆕 Data export and storage management
-│   │   └── views/                 # Simplified view structure
-├── disused/                       # 🆕 Archived components from navigation simplification
-│   ├── views/                     # 5 archived view files
-│   ├── stores/                    # 1 archived store file
-│   └── components/                # 2 archived components
+│   │   │   ├── growth/            # 🆕 移动优先个人成长组件
+│   │   │   │   ├── common/        # GrowthHero.vue, StageCard.vue
+│   │   │   │   └── flashcards/    # FlashcardRandomizer.vue
+│   │   │   └── layout/            # 原有布局组件
+│   │   ├── stores/
+│   │   │   └── growthStore.ts     # 🆕 个人成长集中状态管理
+│   │   └── views/
+│   │       ├── Growth*.vue        # 🆕 移动优先Growth系列页面
+│   │       └── (其他原有页面)
+│   ├── public/
+│   │   ├── growth-principles-*.json # 🆕 个人成长数据文件
+│   │   └── (其他静态资源)
+├── disused/                       # 归档旧组件和页面
+│   ├── components/principles/     # 旧Principles组件
+│   ├── stores/quiz.ts            # 旧quiz状态管理
+│   └── views/PrinciplesView.vue  # 旧Principles页面
+├── scripts/
+│   └── growth-principles-converter.js # 🆕 TOML转JSON转换器
 ├── docs/
 │   ├── reports/
-│   │   └── 250905_nav_simplification.md  # 🆕 Detailed implementation report
-└── dist/                          # Production build (updated structure)
+│   │   └── 250906_growth_principles_mobile_refactor.md # 🆕 重构详细报告
+└── dist/                          # 生产构建输出 (1.6M)
 ```
 
 ### Current Code Quality Status
-- ✅ **Build**: Successfully compiles to /dist
-- ⚠️ **TypeScript**: Minor type warnings (components use any type)
-- ✅ **ESLint**: Major issues resolved through file archiving
-- ✅ **Architecture**: Clean separation of concerns
+- ✅ **Build**: 成功编译到 /dist (1.6M, gzip优化)
+- ✅ **TypeScript**: 类型检查通过，growthStore严格类型定义
+- ✅ **ESLint**: 代码质量检查通过，旧冲突文件已归档
+- ✅ **Architecture**: Growth*组件架构清晰，职责分离
+- ✅ **Deployment**: 生产环境部署验证通过 (http://web3mh.101.so:11181/)
 
 ### Next Phase Priorities
-1. **TypeScript Type Safety**: Fix remaining any type usage
-2. **Component Polish**: Add transition animations and improved UX
-3. **Data Integration**: Replace mock data with real data sources
-4. **Performance**: Implement lazy loading and caching strategies
+1. **E2E测试更新** (高优先级): 更新Playwright测试用例匹配新Growth组件
+2. **学习分析功能** (中优先级): 学习时长统计，知识掌握度可视化 
+3. **动态数据源** (中优先级): API endpoints替代静态JSON文件
+4. **离线功能增强** (低优先级): IndexedDB本地数据库支持
 
 ### Data Sources
-- Main config: docs/plans/web3scv8_v4.toml (4.0.0)
-- Generated JSON files: vue/public/w3sc8_*.json
-- Interview questions: vue/public/data/interview-*.json
-- Archived references: Git tag `v4.0.0-before-nav-simplify`
+- **个人成长数据**: docs/plans/250906-growth_principles_*.toml (转换脚本: scripts/growth-principles-converter.js)
+- **生成JSON文件**: vue/public/growth-principles-*.json (180.88 KB总计)
+- **CSS数创配置**: docs/plans/web3scv8_v4.toml (4.0.0) → vue/public/w3sc8_*.json 
+- **面试题库**: vue/public/data/interview-*.json (9个难度文件)
+- **Git记录**: Issue #24移动优先重构 (commit: 00e4ed0)
