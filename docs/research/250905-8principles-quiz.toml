@@ -1,0 +1,1407 @@
+# 8原则测试题系统：新时代个人成长与创业评估
+# Version: 1.0
+# Format: TOML Quiz System
+# Created: 2025-01-06
+# Based on: 250905-8原则.md
+# Total: 80 Questions (56 Single Choice + 24 Multiple Choice)
+
+[metadata]
+title = "8原则测试题库"
+version = "1.0"
+total_questions = 80
+single_choice = 56
+multiple_choice = 24
+passing_score = 80
+time_limit_minutes = 90
+
+# ====================
+# 原则1：你就是最值得投资的生意（10题）
+# ====================
+
+[[questions]]
+id = "Q001"
+principle = "你就是生意"
+type = "single"
+difficulty = "基础"
+question = "对年轻人来说，最好的生意是什么？"
+options = [
+    "A. 追逐热门风口",
+    "B. 做自己，把经历和兴趣变成独特赛道",
+    "C. 投资股票基金",
+    "D. 开实体店"
+]
+answer = "B"
+explanation = "你的经历、兴趣、成长就是独一无二的'赛道'，创业就是把解决自己问题的方法，卖给'过去的自己'。"
+
+[[questions]]
+id = "Q002"
+principle = "你就是生意"
+type = "multiple"
+difficulty = "进阶"
+question = "高杠杆创业路径包括哪些步骤？"
+options = [
+    "A. 从内容创作开始",
+    "B. 提供1对1服务",
+    "C. 开发产品（课程/工具）",
+    "D. 建立公司和系统"
+]
+answer = ["A", "B", "C", "D"]
+explanation = "内容→服务→产品→公司，这是一个循序渐进的高杠杆路径。"
+
+[[questions]]
+id = "Q003"
+principle = "你就是生意"
+type = "single"
+difficulty = "应用"
+question = "执行'先定义理想生活，再找赚钱方式'的第一步是？"
+options = [
+    "A. 研究市场需求",
+    "B. 描绘理想的一天是什么样的",
+    "C. 学习赚钱技能",
+    "D. 寻找投资人"
+]
+answer = "B"
+explanation = "先有清晰的生活愿景，才能设计匹配的商业模式。"
+
+[[questions]]
+id = "Q004"
+principle = "你就是生意"
+type = "single"
+difficulty = "基础"
+question = "盲目跟风创业最可能导致什么结果？"
+options = [
+    "A. 快速成功",
+    "B. 变成'另一份996'，既累又赚不到自由",
+    "C. 获得投资",
+    "D. 建立品牌"
+]
+answer = "B"
+explanation = "没有独特优势和内在动力，只会陷入更累的打工状态。"
+
+[[questions]]
+id = "Q005"
+principle = "你就是生意"
+type = "multiple"
+difficulty = "应用"
+question = "把解决自己问题的方法产品化需要哪些步骤？"
+options = [
+    "A. 记录自己曾面临的问题",
+    "B. 详细记录解决过程",
+    "C. 总结成可复制的框架",
+    "D. 隐藏失败经历"
+]
+answer = ["A", "B", "C"]
+explanation = "真实的问题和解决方案是产品化的基础，包括失败经历都是宝贵素材。"
+
+[[questions]]
+id = "Q006"
+principle = "你就是生意"
+type = "single"
+difficulty = "进阶"
+question = "为什么说你的经历是'独一无二的赛道'？"
+options = [
+    "A. 每个人都很特别",
+    "B. 你的问题组合和解决方案无法被复制",
+    "C. 经历越多越好",
+    "D. 需要特殊才能"
+]
+answer = "B"
+explanation = "每个人的经历组合都是独特的，这种独特性就是你的护城河。"
+
+[[questions]]
+id = "Q007"
+principle = "你就是生意"
+type = "single"
+difficulty = "基础"
+question = "新型创业与传统创业的本质区别是？"
+options = [
+    "A. 需要的资金不同",
+    "B. 成长→分享→变现 vs 找项目→投资→赚钱",
+    "C. 风险大小不同",
+    "D. 速度快慢不同"
+]
+answer = "B"
+explanation = "新型创业是成为生意本身，而非寻找外部项目。"
+
+[[questions]]
+id = "Q008"
+principle = "你就是生意"
+type = "multiple"
+difficulty = "应用"
+question = "日常践行'你就是生意'的方法包括？"
+options = [
+    "A. 每天记录学到的知识点",
+    "B. 分享解决的问题",
+    "C. 保持神秘感",
+    "D. 连接有相似困扰的人"
+]
+answer = ["A", "B", "D"]
+explanation = "透明化成长过程，持续积累价值，建立连接。"
+
+[[questions]]
+id = "Q009"
+principle = "你就是生意"
+type = "single"
+difficulty = "进阶"
+question = "投资自己的最大优势是？"
+options = [
+    "A. 成本低",
+    "B. 见效快",
+    "C. 知识技能永远跟随你，不会被夺走",
+    "D. 容易获得认可"
+]
+answer = "C"
+explanation = "这是唯一不会贬值、不会被夺走的财富。"
+
+[[questions]]
+id = "Q010"
+principle = "你就是生意"
+type = "single"
+difficulty = "应用"
+question = "服务'过去的自己'的核心价值在于？"
+options = [
+    "A. 容易理解",
+    "B. 你最了解他们的痛点和所需的解决方案",
+    "C. 市场大",
+    "D. 竞争少"
+]
+answer = "B"
+explanation = "亲身经历让你成为最懂这个群体的人。"
+
+# ====================
+# 原则2：注意力 > 时间 > 金钱（10题）
+# ====================
+
+[[questions]]
+id = "Q011"
+principle = "注意力价值"
+type = "single"
+difficulty = "基础"
+question = "个人资源的正确价值排序是？"
+options = [
+    "A. 金钱 > 时间 > 注意力",
+    "B. 时间 > 注意力 > 金钱",
+    "C. 注意力 > 时间 > 金钱",
+    "D. 注意力 > 金钱 > 时间"
+]
+answer = "C"
+explanation = "注意力是最宝贵的资源，决定了人生走向。"
+
+[[questions]]
+id = "Q012"
+principle = "注意力价值"
+type = "single"
+difficulty = "进阶"
+question = "为什么注意力比时间更宝贵？"
+options = [
+    "A. 注意力更稀缺",
+    "B. 注意力决定了时间的使用质量和价值创造",
+    "C. 注意力可以买卖",
+    "D. 注意力容易管理"
+]
+answer = "B"
+explanation = "同样的时间，不同的注意力质量产出天差地别。"
+
+[[questions]]
+id = "Q013"
+principle = "注意力价值"
+type = "multiple"
+difficulty = "应用"
+question = "保护注意力的有效方法包括？"
+options = [
+    "A. 关闭无用App推送",
+    "B. 给注意力定价，用时薪衡量",
+    "C. 24小时在线",
+    "D. 屏蔽无用信息"
+]
+answer = ["A", "B", "D"]
+explanation = "主动掌控环境，量化价值，过滤干扰。"
+
+[[questions]]
+id = "Q014"
+principle = "注意力价值"
+type = "single"
+difficulty = "基础"
+question = "无法保持45分钟以上专注会导致什么？"
+options = [
+    "A. 工作效率低",
+    "B. 将被淘汰出价值创造的核心地带",
+    "C. 需要更多休息",
+    "D. 影响人际关系"
+]
+answer = "B"
+explanation = "深度工作能力是未来核心竞争力的基础。"
+
+[[questions]]
+id = "Q015"
+principle = "注意力价值"
+type = "single"
+difficulty = "进阶"
+question = "算法的目的和我们的对抗策略是？"
+options = [
+    "A. 提供信息；多使用",
+    "B. 最大化使用时长；主动设限，培养主动搜索习惯",
+    "C. 娱乐用户；适度使用",
+    "D. 连接世界；保持开放"
+]
+answer = "B"
+explanation = "认清算法本质，主动夺回注意力控制权。"
+
+[[questions]]
+id = "Q016"
+principle = "注意力价值"
+type = "multiple"
+difficulty = "应用"
+question = "注意力应该优先投资在哪些领域？"
+options = [
+    "A. 学习核心技能",
+    "B. 刷短视频了解动态",
+    "C. 创造作品内容",
+    "D. 建立深度关系"
+]
+answer = ["A", "C", "D"]
+explanation = "投资在有复利效应的高价值活动上。"
+
+[[questions]]
+id = "Q017"
+principle = "注意力价值"
+type = "single"
+difficulty = "基础"
+question = "被短视频和八卦劫持注意力的后果是？"
+options = [
+    "A. 获得更多信息",
+    "B. 失去创造价值的能力",
+    "C. 放松心情",
+    "D. 扩大社交圈"
+]
+answer = "B"
+explanation = "注意力被劫持等于人生被劫持。"
+
+[[questions]]
+id = "Q018"
+principle = "注意力价值"
+type = "single"
+difficulty = "应用"
+question = "如何给注意力定价？"
+options = [
+    "A. 根据心情决定",
+    "B. 计算时薪，评估投入产出比",
+    "C. 随机分配",
+    "D. 听从他人建议"
+]
+answer = "B"
+explanation = "用经济学思维管理注意力，确保高价值投入。"
+
+[[questions]]
+id = "Q019"
+principle = "注意力价值"
+type = "multiple"
+difficulty = "进阶"
+question = "哪些是隐形的注意力杀手？"
+options = [
+    "A. 无意义的会议",
+    "B. 过度信息收集而不行动",
+    "C. 深度阅读",
+    "D. 完美主义"
+]
+answer = ["A", "B", "D"]
+explanation = "看似有用实则消耗巨大的活动。"
+
+[[questions]]
+id = "Q020"
+principle = "注意力价值"
+type = "single"
+difficulty = "基础"
+question = "价值观在注意力管理中的作用是？"
+options = [
+    "A. 没有关系",
+    "B. 帮助聚焦长期重要的事",
+    "C. 限制选择",
+    "D. 增加负担"
+]
+answer = "B"
+explanation = "清晰的价值观是最好的注意力过滤器。"
+
+# ====================
+# 原则3：对自己的人生负100%责任（10题）
+# ====================
+
+[[questions]]
+id = "Q021"
+principle = "100%责任"
+type = "single"
+difficulty = "基础"
+question = "个人成长操作系统的底层信念是？"
+options = [
+    "A. 努力就会成功",
+    "B. 我，且只有我，对我的人生负100%责任",
+    "C. 机会是平等的",
+    "D. 知识改变命运"
+]
+answer = "B"
+explanation = "这是成长系统的底层信念，没有'抱怨'这个程序。"
+
+[[questions]]
+id = "Q022"
+principle = "100%责任"
+type = "single"
+difficulty = "进阶"
+question = "为什么说抱怨是'弱者病毒'？"
+options = [
+    "A. 浪费时间",
+    "B. 是承认自己无能为力，放弃改变可能性",
+    "C. 影响心情",
+    "D. 会传染他人"
+]
+answer = "B"
+explanation = "抱怨本质是思维懒惰，强化受害者心态。"
+
+[[questions]]
+id = "Q023"
+principle = "100%责任"
+type = "multiple"
+difficulty = "应用"
+question = "戒掉抱怨的有效方法包括？"
+options = [
+    "A. 觉察抱怨念头立即停止",
+    "B. 问'抱怨能解决问题吗？'",
+    "C. 转向'我能做什么'",
+    "D. 压抑所有负面情绪"
+]
+answer = ["A", "B", "C"]
+explanation = "把抱怨的能量转化为改变的动力，而非压抑情绪。"
+
+[[questions]]
+id = "Q024"
+principle = "100%责任"
+type = "single"
+difficulty = "基础"
+question = "向内求索的核心是？"
+options = [
+    "A. 自我批评",
+    "B. 把注意力转向自己能控制的部分",
+    "C. 否认外部因素",
+    "D. 独自承担一切"
+]
+answer = "B"
+explanation = "专注于自己能改变的，而非抱怨不能改变的。"
+
+[[questions]]
+id = "Q025"
+principle = "100%责任"
+type = "single"
+difficulty = "进阶"
+question = "主动进化思维的特征是？"
+options = [
+    "A. 等待机会",
+    "B. 预测未来需要的能力并提前培养",
+    "C. 跟随潮流",
+    "D. 保持现状"
+]
+answer = "B"
+explanation = "主动创造成长压力，成为变化的推动者。"
+
+[[questions]]
+id = "Q026"
+principle = "100%责任"
+type = "multiple"
+difficulty = "应用"
+question = "100%责任包含哪些方面？"
+options = [
+    "A. 我的健康",
+    "B. 别人的选择",
+    "C. 我的财务",
+    "D. 我的成长"
+]
+answer = ["A", "C", "D"]
+explanation = "对自己能控制的部分负全责，不包括他人的选择。"
+
+[[questions]]
+id = "Q027"
+principle = "100%责任"
+type = "single"
+difficulty = "基础"
+question = "抱怨会导致什么恶性循环？"
+options = [
+    "A. 抱怨→解决问题→满意",
+    "B. 抱怨→强化无力感→不愿行动→情况更糟→更多抱怨",
+    "C. 抱怨→获得同情→改善",
+    "D. 抱怨→引起重视→得到帮助"
+]
+answer = "B"
+explanation = "抱怨强化受害者心态，形成越来越糟的循环。"
+
+[[questions]]
+id = "Q028"
+principle = "100%责任"
+type = "single"
+difficulty = "应用"
+question = "将'为什么没人帮我'转换为？"
+options = [
+    "A. 我不需要帮助",
+    "B. 我能提供什么价值让他们愿意帮我",
+    "C. 他们都很自私",
+    "D. 我应该更努力"
+]
+answer = "B"
+explanation = "从索取思维转向价值交换思维。"
+
+[[questions]]
+id = "Q029"
+principle = "100%责任"
+type = "multiple"
+difficulty = "进阶"
+question = "承担责任与自我苛责的区别在于？"
+options = [
+    "A. 承担责任聚焦解决方案",
+    "B. 自我苛责沉溺于懊悔",
+    "C. 承担责任面向未来",
+    "D. 两者没有区别"
+]
+answer = ["A", "B", "C"]
+explanation = "承担责任是理性的成长工具，自我苛责是情绪化伤害。"
+
+[[questions]]
+id = "Q030"
+principle = "100%责任"
+type = "single"
+difficulty = "基础"
+question = "为什么说承担责任就是获得自由？"
+options = [
+    "A. 责任让人更忙碌",
+    "B. 承担责任获得掌控感和选择权",
+    "C. 责任带来压力",
+    "D. 责任限制选择"
+]
+answer = "B"
+explanation = "主动承担责任才能主动创造，获得真正的自由。"
+
+# ====================
+# 原则4：元认知是大脑的操作系统（10题）
+# ====================
+
+[[questions]]
+id = "Q031"
+principle = "元认知"
+type = "single"
+difficulty = "基础"
+question = "元认知的本质是什么？"
+options = [
+    "A. 提高记忆力",
+    "B. 觉察自己的思维过程",
+    "C. 快速学习",
+    "D. 情绪管理"
+]
+answer = "B"
+explanation = "元认知是'对思考过程的认知'，让你能审视自己的想法。"
+
+[[questions]]
+id = "Q032"
+principle = "元认知"
+type = "single"
+difficulty = "进阶"
+question = "为什么说没有元认知就是大脑的奴隶？"
+options = [
+    "A. 记忆力差",
+    "B. 被情绪和偏见驱动，无法做理性决策",
+    "C. 学习慢",
+    "D. 不够聪明"
+]
+answer = "B"
+explanation = "没有元认知，你的'思考'只是'情绪的自动反应'。"
+
+[[questions]]
+id = "Q033"
+principle = "元认知"
+type = "multiple"
+difficulty = "应用"
+question = "锻炼元认知的有效方法包括？"
+options = [
+    "A. 每天15-30分钟冥想",
+    "B. 记录决策逻辑并事后分析",
+    "C. 大量阅读",
+    "D. 通过写作梳理思维"
+]
+answer = ["A", "B", "D"]
+explanation = "冥想、反思、写作都直接锻炼元认知能力。"
+
+[[questions]]
+id = "Q034"
+principle = "元认知"
+type = "single"
+difficulty = "基础"
+question = "冥想如何帮助提升元认知？"
+options = [
+    "A. 让人放松",
+    "B. 训练监控和控制注意力的能力",
+    "C. 提高专注时长",
+    "D. 增强记忆"
+]
+answer = "B"
+explanation = "冥想是元认知的'健身房'，专门训练觉察能力。"
+
+[[questions]]
+id = "Q035"
+principle = "元认知"
+type = "single"
+difficulty = "进阶"
+question = "写作为什么是'思考的磨刀石'？"
+options = [
+    "A. 提高文笔",
+    "B. 强迫你将模糊想法条理化，发现思维漏洞",
+    "C. 获得认可",
+    "D. 记录生活"
+]
+answer = "B"
+explanation = "写作过程暴露并修正思维偏差。"
+
+[[questions]]
+id = "Q036"
+principle = "元认知"
+type = "multiple"
+difficulty = "应用"
+question = "日常生活中启动元认知的最佳时机包括？"
+options = [
+    "A. 做重要决策前",
+    "B. 失败或犯错后",
+    "C. 心情愉悦时",
+    "D. 与人争论时"
+]
+answer = ["A", "B", "D"]
+explanation = "关键时刻和情绪激动时最需要元认知介入。"
+
+[[questions]]
+id = "Q037"
+principle = "元认知"
+type = "single"
+difficulty = "基础"
+question = "缺乏元认知的最大问题是？"
+options = [
+    "A. 学习速度慢",
+    "B. 重复同样的错误，被本能控制",
+    "C. 社交能力弱",
+    "D. 缺乏创造力"
+]
+answer = "B"
+explanation = "无法从经验中学习，一直被本能和情绪驱动。"
+
+[[questions]]
+id = "Q038"
+principle = "元认知"
+type = "single"
+difficulty = "应用"
+question = "每日反思应该包含哪个核心问题？"
+options = [
+    "A. 今天做了什么",
+    "B. 决策时什么影响了我的判断",
+    "C. 明天的计划",
+    "D. 今天的收获"
+]
+answer = "B"
+explanation = "识别影响判断的因素是元认知的核心。"
+
+[[questions]]
+id = "Q039"
+principle = "元认知"
+type = "multiple"
+difficulty = "进阶"
+question = "元认知的层次包括？"
+options = [
+    "A. 觉察到自己的想法",
+    "B. 分析想法的来源和偏差",
+    "C. 记住更多信息",
+    "D. 主动设计更好的思维模式"
+]
+answer = ["A", "B", "D"]
+explanation = "从觉察到分析再到改造，逐层递进。"
+
+[[questions]]
+id = "Q040"
+principle = "元认知"
+type = "single"
+difficulty = "基础"
+question = "元认知让你能够？"
+options = [
+    "A. 变得更聪明",
+    "B. 升级心智'操作系统'",
+    "C. 记忆力更好",
+    "D. 反应更快"
+]
+answer = "B"
+explanation = "像升级软件一样不断优化思维模式。"
+
+# ====================
+# 原则5：创业哲学——先生活，后赚钱（10题）
+# ====================
+
+[[questions]]
+id = "Q041"
+principle = "创业哲学"
+type = "single"
+difficulty = "基础"
+question = "新时代创业的第一原则是？"
+options = [
+    "A. 找到赚钱的项目",
+    "B. 把理想生活放在第一位",
+    "C. 快速扩张",
+    "D. 降低成本"
+]
+answer = "B"
+explanation = "创业是为了过想要的生活，不是换个地方996。"
+
+[[questions]]
+id = "Q042"
+principle = "创业哲学"
+type = "single"
+difficulty = "进阶"
+question = "新型创业逻辑的正确顺序是？"
+options = [
+    "A. 找项目→投资→赚钱",
+    "B. 成长→分享→变现",
+    "C. 学技能→找工作→创业",
+    "D. 融资→开发→销售"
+]
+answer = "B"
+explanation = "工作与生活不分割，因为你靠'做自己'赚钱。"
+
+[[questions]]
+id = "Q043"
+principle = "创业哲学"
+type = "multiple"
+difficulty = "应用"
+question = "服务'过去的自己'包括哪些步骤？"
+options = [
+    "A. 回顾自己的问题和痛点",
+    "B. 记录解决方案",
+    "C. 免费分享给所有人",
+    "D. 打包成产品或服务"
+]
+answer = ["A", "B", "D"]
+explanation = "将自己的经历转化为产品，合理变现。"
+
+[[questions]]
+id = "Q044"
+principle = "创业哲学"
+type = "single"
+difficulty = "基础"
+question = "旧时代创业思维的最大陷阱是？"
+options = [
+    "A. 投资太少",
+    "B. 为了赚钱牺牲生活",
+    "C. 产品不够好",
+    "D. 市场太小"
+]
+answer = "B"
+explanation = "失去生活质量的创业违背了创业初衷。"
+
+[[questions]]
+id = "Q045"
+principle = "创业哲学"
+type = "single"
+difficulty = "进阶"
+question = "'T型内容'策略是指？"
+options = [
+    "A. 形状像T的内容",
+    "B. 专业深度（横）+ 个人特色（竖）的结合",
+    "C. 技术型内容",
+    "D. 团队型内容"
+]
+answer = "B"
+explanation = "80%专业内容建立权威，20%个人故事建立连接。"
+
+[[questions]]
+id = "Q046"
+principle = "创业哲学"
+type = "multiple"
+difficulty = "应用"
+question = "描绘理想生活应该包含哪些维度？"
+options = [
+    "A. 时间自由度",
+    "B. 地理位置灵活性",
+    "C. 收入越高越好",
+    "D. 工作内容和意义"
+]
+answer = ["A", "B", "D"]
+explanation = "理想生活是多维度平衡，不只是收入。"
+
+[[questions]]
+id = "Q047"
+principle = "创业哲学"
+type = "single"
+difficulty = "基础"
+question = "为什么要先定义生活再找赚钱方式？"
+options = [
+    "A. 更容易成功",
+    "B. 确保事业服务于生活而非相反",
+    "C. 降低风险",
+    "D. 获得投资"
+]
+answer = "B"
+explanation = "以终为始，避免南辕北辙。"
+
+[[questions]]
+id = "Q048"
+principle = "创业哲学"
+type = "single"
+difficulty = "应用"
+question = "最小成本验证创业想法的第一步是？"
+options = [
+    "A. 写商业计划书",
+    "B. 写10篇相关内容测试兴趣",
+    "C. 寻找投资",
+    "D. 组建团队"
+]
+answer = "B"
+explanation = "零成本起步，用内容验证兴趣和市场。"
+
+[[questions]]
+id = "Q049"
+principle = "创业哲学"
+type = "multiple"
+difficulty = "进阶"
+question = "避免创业侵蚀生活的原则包括？"
+options = [
+    "A. 设定工作边界",
+    "B. 保护个人时间",
+    "C. 24小时待命",
+    "D. 维持运动习惯"
+]
+answer = ["A", "B", "D"]
+explanation = "平衡和边界是可持续创业的关键。"
+
+[[questions]]
+id = "Q050"
+principle = "创业哲学"
+type = "single"
+difficulty = "基础"
+question = "创业的终极目标是？"
+options = [
+    "A. 赚很多钱",
+    "B. 获得时间主权和选择自由",
+    "C. 出名",
+    "D. 击败竞争对手"
+]
+answer = "B"
+explanation = "创业是为了成为想成为的人，过想过的生活。"
+
+# ====================
+# 原则6：个人商业模式要进化（10题）
+# ====================
+
+[[questions]]
+id = "Q051"
+principle = "商业进化"
+type = "single"
+difficulty = "基础"
+question = "财富自由的本质是？"
+options = [
+    "A. 拥有很多钱",
+    "B. 从卖时间到买时间的跃迁",
+    "C. 不用工作",
+    "D. 可以买任何东西"
+]
+answer = "B"
+explanation = "财富自由的核心是时间自主权。"
+
+[[questions]]
+id = "Q052"
+principle = "商业进化"
+type = "single"
+difficulty = "进阶"
+question = "个人商业模式进化的三部曲是？"
+options = [
+    "A. 学习→工作→退休",
+    "B. 卖时间→卖产品→买时间",
+    "C. 打工→创业→投资",
+    "D. 积累→爆发→自由"
+]
+answer = "B"
+explanation = "从单次出售到批量出售再到购买他人时间。"
+
+[[questions]]
+id = "Q053"
+principle = "商业进化"
+type = "multiple"
+difficulty = "应用"
+question = "在'卖时间'阶段应该重点关注什么？"
+options = [
+    "A. 学习核心技能",
+    "B. 追求最高薪水",
+    "C. 接近生产核心",
+    "D. 建立行业人脉"
+]
+answer = ["A", "C", "D"]
+explanation = "第一阶段是为成长打工，不只为薪水。"
+
+[[questions]]
+id = "Q054"
+principle = "商业进化"
+type = "single"
+difficulty = "基础"
+question = "什么是'睡后收入'？"
+options = [
+    "A. 睡觉时的收入",
+    "B. 一次创造多次销售的被动收入",
+    "C. 投资收益",
+    "D. 加班费"
+]
+answer = "B"
+explanation = "产品化让时间投入能重复产生收入。"
+
+[[questions]]
+id = "Q055"
+principle = "商业进化"
+type = "single"
+difficulty = "应用"
+question = "进入第二站（产品化）的信号是？"
+options = [
+    "A. 有100万存款",
+    "B. 掌握可教授的专业技能，时间成为瓶颈",
+    "C. 工作5年以上",
+    "D. 想要创业"
+]
+answer = "B"
+explanation = "技能成熟且时间瓶颈出现是产品化时机。"
+
+[[questions]]
+id = "Q056"
+principle = "商业进化"
+type = "multiple"
+difficulty = "进阶"
+question = "长期停留在'卖时间'模式的后果？"
+options = [
+    "A. 手停口停",
+    "B. 收入有天花板",
+    "C. 稳定安全",
+    "D. 无法积累复利"
+]
+answer = ["A", "B", "D"]
+explanation = "单次出售时间模式限制了财富积累。"
+
+[[questions]]
+id = "Q057"
+principle = "商业进化"
+type = "single"
+difficulty = "基础"
+question = "第三站'买时间'的方式包括？"
+options = [
+    "A. 加班加点",
+    "B. 组建团队让他人执行",
+    "C. 提高效率",
+    "D. 减少开支"
+]
+answer = "B"
+explanation = "通过组织或资本让他人的时间为你创造价值。"
+
+[[questions]]
+id = "Q058"
+principle = "商业进化"
+type = "single"
+difficulty = "应用"
+question = "如何平稳过渡到下一阶段？"
+options = [
+    "A. 立即辞职创业",
+    "B. 保持主业，副业试水验证",
+    "C. 等待完美时机",
+    "D. 借钱投资"
+]
+answer = "B"
+explanation = "渐进式过渡，降低风险。"
+
+[[questions]]
+id = "Q059"
+principle = "商业进化"
+type = "multiple"
+difficulty = "进阶"
+question = "产品化的路径包括？"
+options = [
+    "A. 电子书",
+    "B. 在线课程",
+    "C. 实体店",
+    "D. 模板工具"
+]
+answer = ["A", "B", "D"]
+explanation = "数字产品实现一次创造，多次销售。"
+
+[[questions]]
+id = "Q060"
+principle = "商业进化"
+type = "single"
+difficulty = "基础"
+question = "三个进化阶段中风险最高但潜力最大的是？"
+options = [
+    "A. 第一站（打工）",
+    "B. 第二站（产品化）",
+    "C. 第三站（创业/投资）",
+    "D. 都一样"
+]
+answer = "C"
+explanation = "第三站需要资本和经验，但能实现指数增长。"
+
+# ====================
+# 原则7：从建立受众开始（10题）
+# ====================
+
+[[questions]]
+id = "Q061"
+principle = "建立受众"
+type = "single"
+difficulty = "基础"
+question = "为什么说建立受众是最安全的创业起点？"
+options = [
+    "A. 可以成为网红",
+    "B. 零成本、零失败风险、高杠杆",
+    "C. 容易获得投资",
+    "D. 可以快速赚钱"
+]
+answer = "B"
+explanation = "这是风险最低、杠杆最高的创业方式。"
+
+[[questions]]
+id = "Q062"
+principle = "建立受众"
+type = "single"
+difficulty = "进阶"
+question = "建立受众的本质是？"
+options = [
+    "A. 增加粉丝数",
+    "B. 用内容积累信任",
+    "C. 打造个人IP",
+    "D. 社交媒体营销"
+]
+answer = "B"
+explanation = "受众的核心是信任关系，不是数量。"
+
+[[questions]]
+id = "Q063"
+principle = "建立受众"
+type = "multiple"
+difficulty = "应用"
+question = "建受众过程中能学到哪些核心技能？"
+options = [
+    "A. 营销",
+    "B. 写作",
+    "C. 编程",
+    "D. 心理学"
+]
+answer = ["A", "B", "D"]
+explanation = "内容创作自然锻炼营销、写作和用户心理理解。"
+
+[[questions]]
+id = "Q064"
+principle = "建立受众"
+type = "single"
+difficulty = "基础"
+question = "费曼学习法的核心是？"
+options = [
+    "A. 大量阅读",
+    "B. 通过教授他人发现知识盲区",
+    "C. 记笔记",
+    "D. 反复练习"
+]
+answer = "B"
+explanation = "教是最好的学，分享过程暴露盲区。"
+
+[[questions]]
+id = "Q065"
+principle = "建立受众"
+type = "single"
+difficulty = "应用"
+question = "受众规模小时的最佳变现策略是？"
+options = [
+    "A. 大规模广告",
+    "B. 深度服务少数人（1对1咨询）",
+    "C. 等待规模扩大",
+    "D. 免费服务"
+]
+answer = "B"
+explanation = "早期通过高客单价的深度服务变现。"
+
+[[questions]]
+id = "Q066"
+principle = "建立受众"
+type = "multiple"
+difficulty = "进阶"
+question = "没有受众就做电商的问题包括？"
+options = [
+    "A. 需要先投钱囤货",
+    "B. 没有信任基础",
+    "C. 容易成功",
+    "D. 获客成本高"
+]
+answer = ["A", "B", "D"]
+explanation = "无受众创业面临资金风险和信任缺失。"
+
+[[questions]]
+id = "Q067"
+principle = "建立受众"
+type = "single"
+difficulty = "基础"
+question = "建立受众的内容策略核心是？"
+options = [
+    "A. 追求完美",
+    "B. 价值优先，持续输出",
+    "C. 模仿大V",
+    "D. 追热点"
+]
+answer = "B"
+explanation = "持续提供价值比完美更重要。"
+
+[[questions]]
+id = "Q068"
+principle = "建立受众"
+type = "single"
+difficulty = "应用"
+question = "定义理想受众最简单的方法是？"
+options = [
+    "A. 市场调研",
+    "B. 把3-5年前的自己作为目标",
+    "C. 分析竞品",
+    "D. 问卷调查"
+]
+answer = "B"
+explanation = "你最了解过去的自己，这是最精准的定位。"
+
+[[questions]]
+id = "Q069"
+principle = "建立受众"
+type = "multiple"
+difficulty = "进阶"
+question = "受众的复利效应体现在？"
+options = [
+    "A. 内容会被持续发现",
+    "B. 信任不断加深",
+    "C. 需要持续投入",
+    "D. 口碑自动传播"
+]
+answer = ["A", "B", "D"]
+explanation = "时间越长，受众价值越大。"
+
+[[questions]]
+id = "Q070"
+principle = "建立受众"
+type = "single"
+difficulty = "基础"
+question = "为什么说受众是最重要的商业资产？"
+options = [
+    "A. 可以显示影响力",
+    "B. 零边际成本的分发渠道和稳定收入来源",
+    "C. 容易获得",
+    "D. 不需要维护"
+]
+answer = "B"
+explanation = "受众是所有未来项目的流量池和信任基础。"
+
+# ====================
+# 原则8：长期主义（10题）
+# ====================
+
+[[questions]]
+id = "Q071"
+principle = "长期主义"
+type = "single"
+difficulty = "基础"
+question = "长期主义的两大支柱是？"
+options = [
+    "A. 努力和天赋",
+    "B. 聪明模仿和定投成长",
+    "C. 资金和人脉",
+    "D. 速度和质量"
+]
+answer = "B"
+explanation = "模仿加速起步，定投确保终局。"
+
+[[questions]]
+id = "Q072"
+principle = "长期主义"
+type = "single"
+difficulty = "进阶"
+question = "聪明模仿的核心是？"
+options = [
+    "A. 完全复制成功案例",
+    "B. 模仿结构和框架，而非复制内容",
+    "C. 找最好的模仿",
+    "D. 快速复制"
+]
+answer = "B"
+explanation = "学习成功背后的逻辑，而非表面形式。"
+
+[[questions]]
+id = "Q073"
+principle = "长期主义"
+type = "multiple"
+difficulty = "应用"
+question = "建立素材库的步骤包括？"
+options = [
+    "A. 收集优秀案例",
+    "B. 分类整理",
+    "C. 完全照搬",
+    "D. 分析成功要素"
+]
+answer = ["A", "B", "D"]
+explanation = "素材库是学习和迭代的工具。"
+
+[[questions]]
+id = "Q074"
+principle = "长期主义"
+type = "single"
+difficulty = "基础"
+question = "'1000小时定律'是指？"
+options = [
+    "A. 每天工作1000小时",
+    "B. 锁定一门技能投入1000小时高密度注意力",
+    "C. 1000小时成为专家",
+    "D. 1000小时改变人生"
+]
+answer = "B"
+explanation = "深度投入是从入门到精通的必经之路。"
+
+[[questions]]
+id = "Q075"
+principle = "长期主义"
+type = "single"
+difficulty = "进阶"
+question = "定投思维应该应用在哪些领域？"
+options = [
+    "A. 只在金钱投资",
+    "B. 知识、技能、健康、关系等所有需要积累的领域",
+    "C. 只在学习",
+    "D. 只在工作"
+]
+answer = "B"
+explanation = "定投是普适的成长策略。"
+
+[[questions]]
+id = "Q076"
+principle = "长期主义"
+type = "multiple"
+difficulty = "应用"
+question = "追求速成的后果包括？"
+options = [
+    "A. 死在复利曲线的拐点前",
+    "B. 频繁切换一事无成",
+    "C. 快速成功",
+    "D. 违背价值积累规律"
+]
+answer = ["A", "B", "D"]
+explanation = "速成心态违背复利规律，导致无法积累。"
+
+[[questions]]
+id = "Q077"
+principle = "长期主义"
+type = "single"
+difficulty = "基础"
+question = "每天进步1%，一年后的效果是？"
+options = [
+    "A. 进步3.65倍",
+    "B. 进步37.8倍",
+    "C. 进步100倍",
+    "D. 进步10倍"
+]
+answer = "B"
+explanation = "1.01^365=37.8，这是复利的数学威力。"
+
+[[questions]]
+id = "Q078"
+principle = "长期主义"
+type = "single"
+difficulty = "应用"
+question = "如何度过复利曲线的拐点？"
+options = [
+    "A. 加快速度",
+    "B. 相信过程，记录微小进步，寻找支持",
+    "C. 改变策略",
+    "D. 暂时放弃"
+]
+answer = "B"
+explanation = "拐点需要信念和支持系统才能坚持。"
+
+[[questions]]
+id = "Q079"
+principle = "长期主义"
+type = "multiple"
+difficulty = "进阶"
+question = "个人成长定投计划应包括？"
+options = [
+    "A. 每天阅读30分钟",
+    "B. 每天练习核心技能",
+    "C. 偶尔运动",
+    "D. 每周深度连接一人"
+]
+answer = ["A", "B", "D"]
+explanation = "规律性和持续性是定投的关键。"
+
+[[questions]]
+id = "Q080"
+principle = "长期主义"
+type = "single"
+difficulty = "基础"
+question = "'微笑曲线'心态是指？"
+options = [
+    "A. 保持乐观",
+    "B. 把低谷看作以更低成本'买入'的机会",
+    "C. 微笑面对困难",
+    "D. U型增长"
+]
+answer = "B"
+explanation = "在低谷时反而应该加大投入。"
+
+# ====================
+# 测试配置
+# ====================
+
+[scoring]
+single_choice_points = 1
+multiple_choice_points = 2
+passing_percentage = 80
+
+[categories]
+principles = [
+    "你就是生意",
+    "注意力价值",
+    "100%责任",
+    "元认知",
+    "创业哲学",
+    "商业进化",
+    "建立受众",
+    "长期主义"
+]
+
+[statistics]
+by_principle = {
+    "你就是生意" = 10,
+    "注意力价值" = 10,
+    "100%责任" = 10,
+    "元认知" = 10,
+    "创业哲学" = 10,
+    "商业进化" = 10,
+    "建立受众" = 10,
+    "长期主义" = 10
+}
+
+by_type = {
+    "single" = 56,
+    "multiple" = 24
+}
+
+by_difficulty = {
+    "基础" = 32,
+    "进阶" = 24,
+    "应用" = 24
+}
+
+# ====================
+# 答题指南
+# ====================
+
+[instructions]
+title = "8原则测试说明"
+time_limit = "建议90分钟内完成"
+question_types = [
+    "单选题（56题）：每题1分，选择最佳答案",
+    "多选题（24题）：每题2分，选择所有正确答案"
+]
+scoring_rules = [
+    "总分：104分（56×1 + 24×2）",
+    "及格分：83分（80%）",
+    "多选题少选得1分，错选不得分"
+]
+tips = [
+    "仔细阅读题目，注意关键词",
+    "多选题注意'包括'、'都是'等提示词",
+    "基于8原则的原文理解作答",
+    "遇到综合题时，考虑原则间的关联"
+]
+
+# ====================
+# 难度等级说明
+# ====================
+
+[difficulty_levels]
+basic = {
+    description = "基础概念理解",
+    focus = "核心定义、基本原理、关键特征",
+    count = 32
+}
+advanced = {
+    description = "深度认知理解",
+    focus = "原理剖析、因果关系、底层逻辑",
+    count = 24
+}
+application = {
+    description = "实践应用能力",
+    focus = "具体方法、实操步骤、场景应用",
+    count = 24
+}
+
+# ====================
+# 评分标准
+# ====================
+
+[evaluation]
+excellent = {
+    score_range = "94-104",
+    percentage = "90-100%",
+    description = "深刻理解8原则精髓，具备系统思维和实践能力"
+}
+good = {
+    score_range = "83-93",
+    percentage = "80-89%",
+    description = "较好掌握核心原则，能够指导实践"
+}
+pass = {
+    score_range = "73-82",
+    percentage = "70-79%",
+    description = "基本理解主要概念，需要加强部分原则的学习"
+}
+need_improvement = {
+    score_range = "0-72",
+    percentage = "0-69%",
+    description = "建议系统复习8原则，重点关注薄弱环节"
+}
+
+# ====================
+# 复习重点提示
+# ====================
+
+[review_focus]
+principle_1 = [
+    "你的经历和兴趣是独一无二的赛道",
+    "先定义理想生活，再找赚钱方式",
+    "高杠杆路径：内容→服务→产品→公司"
+]
+principle_2 = [
+    "注意力>时间>金钱",
+    "注意力是创造价值的唯一杠杆",
+    "45分钟专注力是基本要求"
+]
+principle_3 = [
+    "100%为自己的人生负责",
+    "抱怨是'弱者病毒'",
+    "向内求索而非向外归因"
+]
+principle_4 = [
+    "元认知是觉察思维的能力",
+    "冥想是元认知的'健身房'",
+    "写作能发现思维漏洞"
+]
+principle_5 = [
+    "理想生活优先于赚钱",
+    "服务'过去的自己'",
+    "工作与生活融合"
+]
+principle_6 = [
+    "三步进化：卖时间→卖产品→买时间",
+    "财富自由本质是时间自主权",
+    "每个阶段有不同重点"
+]
+principle_7 = [
+    "零成本高杠杆起点",
+    "本质是积累信任",
+    "深度服务少数人"
+]
+principle_8 = [
+    "聪明模仿学框架",
+    "定投思维普适所有领域",
+    "复利需要度过拐点"
+]
