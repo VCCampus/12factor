@@ -8,7 +8,15 @@ import router from './router'
 import './styles/neobrutalism.css'
 import './styles/responsive.css'
 
+// Import uniapp compatibility components
+import UniView from './components/uniapp/UniView.vue'
+import UniText from './components/uniapp/UniText.vue'
+
 const app = createApp(App)
+
+// 全局注册uniapp兼容组件
+app.component('view', UniView)
+app.component('text', UniText)
 
 app.use(createPinia())
 app.use(router)

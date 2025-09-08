@@ -1,100 +1,106 @@
 <template>
-  <view class="growth-principles-page">
-    <!-- Hero区域 -->
-    <GrowthHero 
-      :show-progress="true"
-      @start-learning="handleStartLearning"
-      @check-progress="handleCheckProgress"
-    />
-
-    <!-- 学习阶段概览 -->
-    <view class="stages-section">
-      <text class="section-title">📚 学习阶段</text>
-      <view class="stages-grid">
-        <StageCard
-          v-for="stage in stages"
-          :key="stage.id"
-          :stage="stage"
-          :completed-count="getStageCompletedCount(stage.id)"
-          :total-count="getStageTotalCount(stage.id)"
-          @click="handleStageClick"
+  <AppLayout>
+    <!-- 桥接层：外层用标准HTML满足AppLayout，内层保持100% uniapp语法 -->
+    <div class="growth-neo-wrapper">
+      <view class="growth-principles-page">
+        <!-- Hero区域 -->
+        <GrowthHero 
+          :show-progress="true"
+          @start-learning="handleStartLearning"
+          @check-progress="handleCheckProgress"
         />
-      </view>
-    </view>
 
-    <!-- 原则概览 -->
-    <view class="principles-section">
-      <text class="section-title">📖 原则概览</text>
-      <view class="principles-grid">
-        <view
-          v-for="principle in principles"
-          :key="principle.id"
-          class="principle-card"
-          @tap="handlePrincipleClick(principle)"
-        >
-          <text class="principle-name">{{ principle.name }}</text>
-          <text class="principle-cards">{{ principle.total_cards }}张卡片</text>
-          <view class="principle-progress">
-            <view class="progress-bar">
-              <view 
-                class="progress-fill" 
-                :style="{ width: getPrincipleProgress(principle.id) + '%' }"
-              ></view>
-            </view>
-            <text class="progress-text">{{ getPrincipleProgress(principle.id) }}%</text>
+        <!-- 学习阶段概览 -->
+        <view class="stages-section">
+          <text class="section-title">📚 学习阶段</text>
+          <view class="stages-grid">
+            <StageCard
+              v-for="stage in stages"
+              :key="stage.id"
+              :stage="stage"
+              :completed-count="getStageCompletedCount(stage.id)"
+              :total-count="getStageTotalCount(stage.id)"
+              @click="handleStageClick"
+            />
           </view>
         </view>
-      </view>
-    </view>
 
-    <!-- 快速操作 -->
-    <view class="quick-actions">
-      <view class="action-card" @tap="goToFlashcards">
-        <text class="action-icon">🎯</text>
-        <text class="action-title">闪卡练习</text>
-        <text class="action-desc">随机12张卡片</text>
-      </view>
-      <view class="action-card" @tap="goToQuiz">
-        <text class="action-icon">📝</text>
-        <text class="action-title">测试评估</text>
-        <text class="action-desc">检验学习效果</text>
-      </view>
-    </view>
+        <!-- 原则概览 -->
+        <view class="principles-section">
+          <text class="section-title">📖 原则概览</text>
+          <view class="principles-grid">
+            <view
+              v-for="principle in principles"
+              :key="principle.id"
+              class="growth-neo-card principle-card"
+              @tap="handlePrincipleClick(principle)"
+            >
+              <text class="principle-name">{{ principle.name }}</text>
+              <text class="principle-cards">{{ principle.total_cards }}张卡片</text>
+              <view class="principle-progress">
+                <view class="progress-bar">
+                  <view 
+                    class="progress-fill" 
+                    :style="{ width: getPrincipleProgress(principle.id) + '%' }"
+                  ></view>
+                </view>
+                <text class="progress-text">{{ getPrincipleProgress(principle.id) }}%</text>
+              </view>
+            </view>
+          </view>
+        </view>
 
-    <!-- 学习统计 -->
-    <view class="stats-section" v-if="showStats">
-      <text class="section-title">📊 学习统计</text>
-      <view class="stats-grid">
-        <view class="stat-item">
-          <text class="stat-number">{{ flashcardHistory.length }}</text>
-          <text class="stat-label">练习次数</text>
+        <!-- 快速操作 -->
+        <view class="quick-actions">
+          <view class="growth-neo-card action-card" @tap="goToFlashcards">
+            <text class="action-icon">🎯</text>
+            <text class="action-title">闪卡练习</text>
+            <text class="action-desc">随机12张卡片</text>
+          </view>
+          <view class="growth-neo-card action-card" @tap="goToQuiz">
+            <text class="action-icon">📝</text>
+            <text class="action-title">测试评估</text>
+            <text class="action-desc">检验学习效果</text>
+          </view>
         </view>
-        <view class="stat-item">
-          <text class="stat-number">{{ testHistory.length }}</text>
-          <text class="stat-label">测试次数</text>
+
+        <!-- 学习统计 -->
+        <view class="stats-section" v-if="showStats">
+          <text class="section-title">📊 学习统计</text>
+          <view class="stats-grid">
+            <view class="growth-neo-stat stat-item">
+              <text class="stat-number">{{ flashcardHistory.length }}</text>
+              <text class="stat-label">练习次数</text>
+            </view>
+            <view class="growth-neo-stat stat-item">
+              <text class="stat-number">{{ testHistory.length }}</text>
+              <text class="stat-label">测试次数</text>
+            </view>
+            <view class="growth-neo-stat stat-item">
+              <text class="stat-number">{{ completedPrinciples }}</text>
+              <text class="stat-label">已掌握原则</text>
+            </view>
+            <view class="growth-neo-stat stat-item">
+              <text class="stat-number">{{ studyDays }}</text>
+              <text class="stat-label">学习天数</text>
+            </view>
+          </view>
         </view>
-        <view class="stat-item">
-          <text class="stat-number">{{ completedPrinciples }}</text>
-          <text class="stat-label">已掌握原则</text>
-        </view>
-        <view class="stat-item">
-          <text class="stat-number">{{ studyDays }}</text>
-          <text class="stat-label">学习天数</text>
+
+        <!-- 加载状态 -->
+        <view class="loading-overlay" v-if="loading">
+          <text class="loading-text">加载中...</text>
         </view>
       </view>
-    </view>
-
-    <!-- 加载状态 -->
-    <view class="loading-overlay" v-if="loading">
-      <text class="loading-text">加载中...</text>
-    </view>
-  </view>
+    </div>
+  </AppLayout>
 </template>
 
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { useGrowthStore, type LearningStage } from '@/stores/growthStore'
+import AppLayout from '@/components/layout/AppLayout.vue'
 import GrowthHero from '@/components/growth/common/GrowthHero.vue'
 import StageCard from '@/components/growth/common/StageCard.vue'
 
@@ -191,13 +197,45 @@ onMounted(async () => {
 </script>
 
 <style scoped>
+/* 桥接层样式 */
+.growth-neo-wrapper {
+  @apply w-full;
+}
+
+/* Growth页面基础样式 */
 .growth-principles-page {
-  @apply min-h-screen bg-gray-50;
+  @apply min-h-screen bg-white;
   @apply dark:bg-gray-900;
 }
 
+/* Neobrutalism风格卡片 - 命名空间隔离 */
+.growth-neo-card {
+  @apply bg-white border-black;
+  border-width: 3px;
+  box-shadow: 4px 4px 0px #000;
+  @apply transition-all duration-200;
+  @apply dark:bg-gray-800 dark:border-gray-100;
+}
+
+.growth-neo-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #000;
+}
+
+.growth-neo-card:active {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0px #000;
+}
+
+/* Neobrutalism统计卡片 */
+.growth-neo-stat {
+  @apply bg-gray-50 border-2 border-black p-4 text-center;
+  box-shadow: 2px 2px 0px #000;
+  @apply dark:bg-gray-700 dark:border-gray-300;
+}
+
 .section-title {
-  @apply block text-lg font-semibold text-gray-900 mb-4 px-4;
+  @apply block text-lg font-bold text-gray-900 mb-4 px-4;
   @apply md:text-xl;
   @apply dark:text-white;
 }
@@ -212,19 +250,18 @@ onMounted(async () => {
 }
 
 .principles-section {
-  @apply py-6 bg-white;
+  @apply py-6 bg-gray-50;
   @apply dark:bg-gray-800;
 }
 
 .principles-grid {
-  @apply grid grid-cols-2 gap-3 px-4;
+  @apply grid grid-cols-2 gap-4 px-4;
   @apply md:grid-cols-3 lg:grid-cols-4;
 }
 
 .principle-card {
-  @apply p-3 bg-gray-50 rounded-lg border border-gray-200;
-  @apply hover:shadow-md transition-shadow cursor-pointer;
-  @apply dark:bg-gray-700 dark:border-gray-600;
+  @apply p-4;
+  @apply cursor-pointer;
 }
 
 .principle-name {
@@ -258,17 +295,12 @@ onMounted(async () => {
 
 .quick-actions {
   @apply py-6 px-4;
-}
-
-.quick-actions {
   @apply grid grid-cols-2 gap-4;
 }
 
 .action-card {
-  @apply p-4 bg-white rounded-lg border border-gray-200;
-  @apply text-center cursor-pointer;
-  @apply hover:shadow-md transition-shadow;
-  @apply dark:bg-gray-800 dark:border-gray-700;
+  @apply p-4 text-center cursor-pointer;
+  /* Neobrutalism styles are applied via growth-neo-card class */
 }
 
 .action-icon {
