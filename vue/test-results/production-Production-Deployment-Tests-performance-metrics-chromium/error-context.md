@@ -1,0 +1,53 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e4]:
+  - banner [ref=e5] [cursor=pointer]:
+    - navigation [ref=e7] [cursor=pointer]:
+      - generic [ref=e8] [cursor=pointer]:
+        - generic [ref=e9] [cursor=pointer]: 📚
+        - heading "3C数创学习平台" [level=1] [ref=e10] [cursor=pointer]
+      - generic [ref=e11] [cursor=pointer]:
+        - link "首页" [ref=e12] [cursor=pointer]:
+          - /url: /
+        - link "温度计" [ref=e13] [cursor=pointer]:
+          - /url: /thermometer
+        - link "原则" [ref=e14] [cursor=pointer]:
+          - /url: /principles
+        - link "模拟面试" [ref=e15] [cursor=pointer]:
+          - /url: /mock-interview
+  - main [ref=e16]:
+    - generic [ref=e18]:
+      - img "Digital Venture - 数字创业学习平台" [ref=e20]
+      - generic [ref=e21]:
+        - link "市场温度计 - STOCKS & CRYPTO" [ref=e22] [cursor=pointer]:
+          - /url: /thermometer
+          - generic [ref=e23] [cursor=pointer]: 市场温度计 - STOCKS & CRYPTO
+        - link "学习中心 - FLASHCARDS & QUIZES" [ref=e24] [cursor=pointer]:
+          - /url: /principles
+          - generic [ref=e25] [cursor=pointer]: 学习中心 - FLASHCARDS & QUIZES
+        - link "模拟面试 - MOCK INTERVIEWS & RESUME BUILDER" [ref=e26] [cursor=pointer]:
+          - /url: /mock-interview
+          - generic [ref=e27] [cursor=pointer]: 模拟面试 - MOCK INTERVIEWS & RESUME BUILDER
+        - button "会员服务 - MEMBERSHIP" [ref=e28] [cursor=pointer]:
+          - generic [ref=e29] [cursor=pointer]: 会员服务 - MEMBERSHIP
+  - contentinfo [ref=e30]:
+    - generic [ref=e32]:
+      - generic [ref=e33]:
+        - generic [ref=e34]:
+          - paragraph [ref=e35]:
+            - text: © 2024
+            - link "📚 CSS数创学习平台" [ref=e36] [cursor=pointer]:
+              - /url: /
+          - paragraph [ref=e37]: 基于CSS数创班8期知识体系
+        - generic [ref=e38]:
+          - paragraph [ref=e39]: 版本 v4.0.0 | Vue 3 + Vite
+          - paragraph [ref=e40]: 🚀 PWA离线支持
+      - generic [ref=e42]:
+        - generic [ref=e43]: 📊 数据管理：
+        - button "导出学习数据" [ref=e44] [cursor=pointer]
+        - generic [ref=e45]: "|"
+        - button "清除缓存" [ref=e46] [cursor=pointer]
+        - generic [ref=e47]: "|"
+        - generic [ref=e48]: "存储空间: 0 B"
+```

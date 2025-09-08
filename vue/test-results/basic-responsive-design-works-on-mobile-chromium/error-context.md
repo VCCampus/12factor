@@ -1,0 +1,83 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e4]:
+  - banner [ref=e5]:
+    - navigation [ref=e7]:
+      - generic [ref=e8]:
+        - generic [ref=e9]: 📚
+        - heading "3C数创学习平台" [level=1] [ref=e10]
+      - button [ref=e11] [cursor=pointer]
+  - main [ref=e15]:
+    - generic [ref=e17]:
+      - img "Digital Venture Logo" [ref=e19]
+      - generic [ref=e20]:
+        - link "🌡️ MARKET TEMPERATURE STOCKS & CRYPTO 全球创新市场温度计，追踪股票与加密货币市场动态，把握投资时机。" [ref=e21] [cursor=pointer]:
+          - /url: /thermometer
+          - generic [ref=e22] [cursor=pointer]:
+            - generic [ref=e23] [cursor=pointer]:
+              - generic [ref=e24] [cursor=pointer]: 🌡️
+              - generic [ref=e25] [cursor=pointer]:
+                - heading "MARKET TEMPERATURE" [level=3] [ref=e26] [cursor=pointer]
+                - paragraph [ref=e27] [cursor=pointer]: STOCKS & CRYPTO
+            - paragraph [ref=e28] [cursor=pointer]: 全球创新市场温度计，追踪股票与加密货币市场动态，把握投资时机。
+        - link "🧠 AI & CRYPTO INDUSTRY MAP FLASHCARDS & QUIZES 全球创新知识地图，通过闪卡练习和测试掌握AI与加密货币行业核心概念。" [ref=e30] [cursor=pointer]:
+          - /url: /principles
+          - generic [ref=e31] [cursor=pointer]:
+            - generic [ref=e32] [cursor=pointer]:
+              - generic [ref=e33] [cursor=pointer]: 🧠
+              - generic [ref=e34] [cursor=pointer]:
+                - heading "AI & CRYPTO INDUSTRY MAP" [level=3] [ref=e35] [cursor=pointer]
+                - paragraph [ref=e36] [cursor=pointer]: FLASHCARDS & QUIZES
+            - paragraph [ref=e37] [cursor=pointer]: 全球创新知识地图，通过闪卡练习和测试掌握AI与加密货币行业核心概念。
+        - link "👨‍💼 VIRTUAL HIRING SIMULATOR MOCK INTERVIEWS & RESUME BUILDER 虚拟招聘模拟器，提供模拟面试训练和简历构建工具，提升求职竞争力。" [ref=e39] [cursor=pointer]:
+          - /url: /mock-interview
+          - generic [ref=e40] [cursor=pointer]:
+            - generic [ref=e41] [cursor=pointer]:
+              - generic [ref=e42] [cursor=pointer]: 👨‍💼
+              - generic [ref=e43] [cursor=pointer]:
+                - heading "VIRTUAL HIRING SIMULATOR" [level=3] [ref=e44] [cursor=pointer]
+                - paragraph [ref=e45] [cursor=pointer]: MOCK INTERVIEWS & RESUME BUILDER
+            - paragraph [ref=e46] [cursor=pointer]: 虚拟招聘模拟器，提供模拟面试训练和简历构建工具，提升求职竞争力。
+        - link "💎 MEMBERSHIP ¥99/YEAR (TBD) JOIN US! PRODUCT & MARKETING TEAM - 加入我们的产品和营销团队，获得专属会员权益。 ⏳ Coming Soon":
+          - /url: /#
+          - generic:
+            - generic:
+              - generic: 💎
+              - generic:
+                - heading "MEMBERSHIP" [level=3]
+                - paragraph: ¥99/YEAR (TBD)
+            - paragraph: JOIN US! PRODUCT & MARKETING TEAM - 加入我们的产品和营销团队，获得专属会员权益。
+            - generic:
+              - generic: ⏳
+              - text: Coming Soon
+  - contentinfo [ref=e48]:
+    - generic [ref=e50]:
+      - generic [ref=e51]:
+        - generic [ref=e52]:
+          - paragraph [ref=e53]:
+            - text: © 2024
+            - link "📚 CSS数创学习平台" [ref=e54] [cursor=pointer]:
+              - /url: /
+          - paragraph [ref=e55]: 基于CSS数创班8期知识体系
+        - generic [ref=e56]:
+          - paragraph [ref=e57]: 版本 v4.0.0 | Vue 3 + Vite
+          - paragraph [ref=e58]: 🚀 PWA离线支持
+      - generic [ref=e60]:
+        - generic [ref=e61]: 📊 数据管理：
+        - button "导出学习数据" [ref=e62] [cursor=pointer]
+        - generic [ref=e63]: "|"
+        - button "清除缓存" [ref=e64] [cursor=pointer]
+        - generic [ref=e65]: "|"
+        - generic [ref=e66]: "存储空间: 0 B"
+  - generic [ref=e68]:
+    - generic [ref=e69]:
+      - generic [ref=e70]:
+        - generic [ref=e71]: 📱
+        - heading "安装应用" [level=3] [ref=e72]
+      - button "✕" [ref=e73] [cursor=pointer]
+    - paragraph [ref=e74]: 安装CSS数创学习平台到你的设备，享受离线学习体验！
+    - generic [ref=e75]:
+      - button "立即安装" [ref=e76] [cursor=pointer]
+      - button "稍后" [ref=e77] [cursor=pointer]
+```

@@ -1,0 +1,104 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e4]:
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - generic [ref=e7]: 🧠 个人成长12原则
+      - generic [ref=e8]: 四阶段成长体系，系统化人生进化
+    - generic [ref=e9]:
+      - generic [ref=e11]: 开始学习
+      - generic [ref=e13]: 查看进度
+    - generic [ref=e15]: "总进度: 0%"
+  - generic [ref=e16]:
+    - generic [ref=e17]: 📚 学习阶段
+    - generic [ref=e18]:
+      - generic [ref=e19] [cursor=pointer]:
+        - generic [ref=e20] [cursor=pointer]:
+          - generic [ref=e21] [cursor=pointer]: 🧠
+          - generic [ref=e22] [cursor=pointer]:
+            - generic [ref=e23] [cursor=pointer]: 基础认知
+            - generic [ref=e24] [cursor=pointer]: 0/11
+        - generic [ref=e26] [cursor=pointer]: 0% 完成
+      - generic [ref=e27] [cursor=pointer]:
+        - generic [ref=e28] [cursor=pointer]:
+          - generic [ref=e29] [cursor=pointer]: 🚀
+          - generic [ref=e30] [cursor=pointer]:
+            - generic [ref=e31] [cursor=pointer]: 进阶应用
+            - generic [ref=e32] [cursor=pointer]: 0/11
+        - generic [ref=e34] [cursor=pointer]: 0% 完成
+      - generic [ref=e35] [cursor=pointer]:
+        - generic [ref=e36] [cursor=pointer]:
+          - generic [ref=e37] [cursor=pointer]: ⚡
+          - generic [ref=e38] [cursor=pointer]:
+            - generic [ref=e39] [cursor=pointer]: 实践应用
+            - generic [ref=e40] [cursor=pointer]: 0/11
+        - generic [ref=e42] [cursor=pointer]: 0% 完成
+      - generic [ref=e43] [cursor=pointer]:
+        - generic [ref=e44] [cursor=pointer]:
+          - generic [ref=e45] [cursor=pointer]: 💡
+          - generic [ref=e46] [cursor=pointer]:
+            - generic [ref=e47] [cursor=pointer]: 深度反思
+            - generic [ref=e48] [cursor=pointer]: 0/11
+        - generic [ref=e50] [cursor=pointer]: 0% 完成
+  - generic [ref=e51]:
+    - generic [ref=e52]: 📖 原则概览
+    - generic [ref=e53]:
+      - generic [ref=e54] [cursor=pointer]:
+        - generic [ref=e55] [cursor=pointer]: 元认知
+        - generic [ref=e56] [cursor=pointer]: 8张卡片
+        - generic [ref=e58] [cursor=pointer]: 0%
+      - generic [ref=e59] [cursor=pointer]:
+        - generic [ref=e60] [cursor=pointer]: 责任
+        - generic [ref=e61] [cursor=pointer]: 0张卡片
+        - generic [ref=e63] [cursor=pointer]: 0%
+      - generic [ref=e64] [cursor=pointer]:
+        - generic [ref=e65] [cursor=pointer]: 注意力
+        - generic [ref=e66] [cursor=pointer]: 8张卡片
+        - generic [ref=e68] [cursor=pointer]: 0%
+      - generic [ref=e69] [cursor=pointer]:
+        - generic [ref=e70] [cursor=pointer]: 复利
+        - generic [ref=e71] [cursor=pointer]: 8张卡片
+        - generic [ref=e73] [cursor=pointer]: 0%
+      - generic [ref=e74] [cursor=pointer]:
+        - generic [ref=e75] [cursor=pointer]: 理想生活
+        - generic [ref=e76] [cursor=pointer]: 8张卡片
+        - generic [ref=e78] [cursor=pointer]: 0%
+      - generic [ref=e79] [cursor=pointer]:
+        - generic [ref=e80] [cursor=pointer]: 商业进化
+        - generic [ref=e81] [cursor=pointer]: 8张卡片
+        - generic [ref=e83] [cursor=pointer]: 0%
+      - generic [ref=e84] [cursor=pointer]:
+        - generic [ref=e85] [cursor=pointer]: 建立受众
+        - generic [ref=e86] [cursor=pointer]: 8张卡片
+        - generic [ref=e88] [cursor=pointer]: 0%
+      - generic [ref=e89] [cursor=pointer]:
+        - generic [ref=e90] [cursor=pointer]: 模仿学习
+        - generic [ref=e91] [cursor=pointer]: 8张卡片
+        - generic [ref=e93] [cursor=pointer]: 0%
+      - generic [ref=e94] [cursor=pointer]:
+        - generic [ref=e95] [cursor=pointer]: 人际连接
+        - generic [ref=e96] [cursor=pointer]: 8张卡片
+        - generic [ref=e98] [cursor=pointer]: 0%
+      - generic [ref=e99] [cursor=pointer]:
+        - generic [ref=e100] [cursor=pointer]: 精力管理
+        - generic [ref=e101] [cursor=pointer]: 8张卡片
+        - generic [ref=e103] [cursor=pointer]: 0%
+      - generic [ref=e104] [cursor=pointer]:
+        - generic [ref=e105] [cursor=pointer]: 杠杆思维
+        - generic [ref=e106] [cursor=pointer]: 8张卡片
+        - generic [ref=e108] [cursor=pointer]: 0%
+      - generic [ref=e109] [cursor=pointer]:
+        - generic [ref=e110] [cursor=pointer]: 个人品牌
+        - generic [ref=e111] [cursor=pointer]: 8张卡片
+        - generic [ref=e113] [cursor=pointer]: 0%
+  - generic [ref=e114]:
+    - generic [ref=e115] [cursor=pointer]:
+      - generic [ref=e116] [cursor=pointer]: 🎯
+      - generic [ref=e117] [cursor=pointer]: 闪卡练习
+      - generic [ref=e118] [cursor=pointer]: 随机12张卡片
+    - generic [ref=e119] [cursor=pointer]:
+      - generic [ref=e120] [cursor=pointer]: 📝
+      - generic [ref=e121] [cursor=pointer]: 测试评估
+      - generic [ref=e122] [cursor=pointer]: 检验学习效果
+```

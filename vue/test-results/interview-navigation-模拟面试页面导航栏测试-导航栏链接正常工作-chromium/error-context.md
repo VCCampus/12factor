@@ -1,0 +1,95 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e5]:
+  - banner [ref=e6]:
+    - navigation [ref=e8]:
+      - generic [ref=e9]:
+        - generic [ref=e10]: 📚
+        - heading "3C数创学习平台" [level=1] [ref=e11]
+      - generic [ref=e12]:
+        - link "首页" [ref=e13] [cursor=pointer]:
+          - /url: /
+        - link "温度计" [ref=e14] [cursor=pointer]:
+          - /url: /thermometer
+        - link "原则" [ref=e15] [cursor=pointer]:
+          - /url: /principles
+        - link "模拟面试" [ref=e16] [cursor=pointer]:
+          - /url: /mock-interview
+  - main [ref=e17]:
+    - generic [ref=e18]:
+      - generic [ref=e19]:
+        - heading "🎯 模拟面试中心" [level=1] [ref=e20]
+        - paragraph [ref=e21]: 选择你想挑战的岗位，测试你的专业能力
+      - generic [ref=e22]:
+        - generic [ref=e23] [cursor=pointer]:
+          - generic [ref=e24] [cursor=pointer]:
+            - generic [ref=e25] [cursor=pointer]: 💼
+            - heading "DeFi增长经理" [level=3] [ref=e26] [cursor=pointer]
+          - generic [ref=e27] [cursor=pointer]:
+            - generic [ref=e28] [cursor=pointer]:
+              - generic [ref=e29] [cursor=pointer]: 📍 地点
+              - generic [ref=e30] [cursor=pointer]: 远程
+            - generic [ref=e31] [cursor=pointer]:
+              - generic [ref=e32] [cursor=pointer]: 💰 薪资
+              - generic [ref=e33] [cursor=pointer]: $55K-80K
+            - generic [ref=e34] [cursor=pointer]:
+              - generic [ref=e35] [cursor=pointer]: 🎓 经验
+              - generic [ref=e36] [cursor=pointer]: 2年+
+          - generic [ref=e38] [cursor=pointer]:
+            - paragraph [ref=e39] [cursor=pointer]: 未测试
+            - button "进入挑战 →" [ref=e40] [cursor=pointer]
+        - generic [ref=e41] [cursor=pointer]:
+          - generic [ref=e42] [cursor=pointer]:
+            - generic [ref=e43] [cursor=pointer]: 💻
+            - heading "全栈开发工程师" [level=3] [ref=e44] [cursor=pointer]
+          - generic [ref=e45] [cursor=pointer]:
+            - generic [ref=e46] [cursor=pointer]:
+              - generic [ref=e47] [cursor=pointer]: 📍 地点
+              - generic [ref=e48] [cursor=pointer]: 深圳
+            - generic [ref=e49] [cursor=pointer]:
+              - generic [ref=e50] [cursor=pointer]: 💰 薪资
+              - generic [ref=e51] [cursor=pointer]: ¥25-40K
+            - generic [ref=e52] [cursor=pointer]:
+              - generic [ref=e53] [cursor=pointer]: 🎓 经验
+              - generic [ref=e54] [cursor=pointer]: 3年+
+          - generic [ref=e56] [cursor=pointer]:
+            - paragraph [ref=e57] [cursor=pointer]: 未测试
+            - button "进入挑战 →" [ref=e58] [cursor=pointer]
+        - generic [ref=e59] [cursor=pointer]:
+          - generic [ref=e60] [cursor=pointer]:
+            - generic [ref=e61] [cursor=pointer]: 📈
+            - heading "SEO营销专家" [level=3] [ref=e62] [cursor=pointer]
+          - generic [ref=e63] [cursor=pointer]:
+            - generic [ref=e64] [cursor=pointer]:
+              - generic [ref=e65] [cursor=pointer]: 📍 地点
+              - generic [ref=e66] [cursor=pointer]: 北京
+            - generic [ref=e67] [cursor=pointer]:
+              - generic [ref=e68] [cursor=pointer]: 💰 薪资
+              - generic [ref=e69] [cursor=pointer]: ¥20-35K
+            - generic [ref=e70] [cursor=pointer]:
+              - generic [ref=e71] [cursor=pointer]: 🎓 经验
+              - generic [ref=e72] [cursor=pointer]: 2年+
+          - generic [ref=e74] [cursor=pointer]:
+            - paragraph [ref=e75] [cursor=pointer]: 未测试
+            - button "进入挑战 →" [ref=e76] [cursor=pointer]
+  - contentinfo [ref=e77]:
+    - generic [ref=e79]:
+      - generic [ref=e80]:
+        - generic [ref=e81]:
+          - paragraph [ref=e82]:
+            - text: © 2024
+            - link "📚 CSS数创学习平台" [ref=e83] [cursor=pointer]:
+              - /url: /
+          - paragraph [ref=e84]: 基于CSS数创班8期知识体系
+        - generic [ref=e85]:
+          - paragraph [ref=e86]: 版本 v4.0.0 | Vue 3 + Vite
+          - paragraph [ref=e87]: 🚀 PWA离线支持
+      - generic [ref=e89]:
+        - generic [ref=e90]: 📊 数据管理：
+        - button "导出学习数据" [ref=e91] [cursor=pointer]
+        - generic [ref=e92]: "|"
+        - button "清除缓存" [ref=e93] [cursor=pointer]
+        - generic [ref=e94]: "|"
+        - generic [ref=e95]: "存储空间: 0 B"
+```

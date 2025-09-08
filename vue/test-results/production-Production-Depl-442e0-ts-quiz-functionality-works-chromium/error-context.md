@@ -1,0 +1,41 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e4]:
+  - generic [ref=e5]:
+    - generic [ref=e6]: 📝 测试评估
+    - generic [ref=e7]: 多种模式，检验学习效果
+  - generic [ref=e8]:
+    - generic [ref=e9]: 选择测试模式
+    - generic [ref=e10]:
+      - generic [ref=e11] [cursor=pointer]:
+        - generic [ref=e12] [cursor=pointer]: 🎯
+        - generic [ref=e13] [cursor=pointer]: 练习模式
+        - generic [ref=e14] [cursor=pointer]: 无时间限制，适合初学
+        - generic [ref=e16] [cursor=pointer]: 📋 25题
+        - generic [ref=e18] [cursor=pointer]: 开始
+      - generic [ref=e19] [cursor=pointer]:
+        - generic [ref=e20] [cursor=pointer]: ⏱️
+        - generic [ref=e21] [cursor=pointer]: 限时模式
+        - generic [ref=e22] [cursor=pointer]: 每题30秒，模拟考试
+        - generic [ref=e23] [cursor=pointer]:
+          - generic [ref=e24] [cursor=pointer]: ⏱️ 30秒/题
+          - generic [ref=e25] [cursor=pointer]: 📋 25题
+        - generic [ref=e27] [cursor=pointer]: 开始
+      - generic [ref=e28] [cursor=pointer]:
+        - generic [ref=e29] [cursor=pointer]: 🔥
+        - generic [ref=e30] [cursor=pointer]: 挑战模式
+        - generic [ref=e31] [cursor=pointer]: 高难度题目，连对奖励
+        - generic [ref=e32] [cursor=pointer]:
+          - generic [ref=e33] [cursor=pointer]: ⏱️ 45秒/题
+          - generic [ref=e34] [cursor=pointer]: 📋 20题
+          - generic [ref=e35] [cursor=pointer]: 🎁 连对奖励
+        - generic [ref=e37] [cursor=pointer]: 开始
+      - generic [ref=e38] [cursor=pointer]:
+        - generic [ref=e39] [cursor=pointer]: 📚
+        - generic [ref=e40] [cursor=pointer]: 复习模式
+        - generic [ref=e41] [cursor=pointer]: 查看所有题目和答案
+        - generic [ref=e43] [cursor=pointer]: 👁️ 显示答案
+        - generic [ref=e45] [cursor=pointer]: 开始
+  - generic [ref=e48] [cursor=pointer]: ← 返回原则学习
+```

@@ -1,0 +1,60 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e4]:
+  - generic [ref=e6]:
+    - generic [ref=e7]: 📱
+    - generic [ref=e8]:
+      - strong [ref=e9]: 离线模式
+      - generic [ref=e10]: 正在使用缓存内容
+    - button "🔄" [ref=e11] [cursor=pointer]:
+      - generic [ref=e12] [cursor=pointer]: 🔄
+  - banner [ref=e13]:
+    - navigation [ref=e15]:
+      - generic [ref=e16]:
+        - generic [ref=e17]: 📚
+        - heading "3C数创学习平台" [level=1] [ref=e18]
+      - generic [ref=e19]:
+        - link "首页" [ref=e20] [cursor=pointer]:
+          - /url: /
+        - link "温度计" [ref=e21] [cursor=pointer]:
+          - /url: /thermometer
+        - link "原则" [ref=e22] [cursor=pointer]:
+          - /url: /principles
+        - link "模拟面试" [ref=e23] [cursor=pointer]:
+          - /url: /mock-interview
+  - main [ref=e24]:
+    - generic [ref=e26]:
+      - img "Digital Venture - 数字创业学习平台" [ref=e28]
+      - generic [ref=e29]:
+        - link "市场温度计 - STOCKS & CRYPTO" [ref=e30] [cursor=pointer]:
+          - /url: /thermometer
+          - generic [ref=e31] [cursor=pointer]: 市场温度计 - STOCKS & CRYPTO
+        - link "学习中心 - FLASHCARDS & QUIZES" [ref=e32] [cursor=pointer]:
+          - /url: /principles
+          - generic [ref=e33] [cursor=pointer]: 学习中心 - FLASHCARDS & QUIZES
+        - link "模拟面试 - MOCK INTERVIEWS & RESUME BUILDER" [ref=e34] [cursor=pointer]:
+          - /url: /mock-interview
+          - generic [ref=e35] [cursor=pointer]: 模拟面试 - MOCK INTERVIEWS & RESUME BUILDER
+        - button "会员服务 - MEMBERSHIP" [ref=e36] [cursor=pointer]:
+          - generic [ref=e37] [cursor=pointer]: 会员服务 - MEMBERSHIP
+  - contentinfo [ref=e38]:
+    - generic [ref=e40]:
+      - generic [ref=e41]:
+        - generic [ref=e42]:
+          - paragraph [ref=e43]:
+            - text: © 2024
+            - link "📚 CSS数创学习平台" [ref=e44] [cursor=pointer]:
+              - /url: /
+          - paragraph [ref=e45]: 基于CSS数创班8期知识体系
+        - generic [ref=e46]:
+          - paragraph [ref=e47]: 版本 v4.0.0 | Vue 3 + Vite
+          - paragraph [ref=e48]: 🚀 PWA离线支持
+      - generic [ref=e50]:
+        - generic [ref=e51]: 📊 数据管理：
+        - button "导出学习数据" [ref=e52] [cursor=pointer]
+        - generic [ref=e53]: "|"
+        - button "清除缓存" [ref=e54] [cursor=pointer]
+        - generic [ref=e55]: "|"
+        - generic [ref=e56]: "存储空间: 0 B"
+```

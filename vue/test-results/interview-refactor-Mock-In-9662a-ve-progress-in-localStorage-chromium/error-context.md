@@ -1,0 +1,91 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e5]:
+  - banner [ref=e6]:
+    - navigation [ref=e8]:
+      - generic [ref=e9]:
+        - generic [ref=e10]: 📚
+        - heading "3C数创学习平台" [level=1] [ref=e11]
+      - generic [ref=e12]:
+        - link "首页" [ref=e13] [cursor=pointer]:
+          - /url: /
+        - link "温度计" [ref=e14] [cursor=pointer]:
+          - /url: /thermometer
+        - link "原则" [ref=e15] [cursor=pointer]:
+          - /url: /principles
+        - link "模拟面试" [ref=e16] [cursor=pointer]:
+          - /url: /mock-interview
+  - main [ref=e17]:
+    - generic [ref=e18]:
+      - generic [ref=e20]:
+        - generic [ref=e21]:
+          - heading "DeFi增长经理 - 初级测试" [level=1] [ref=e22]
+          - paragraph [ref=e23]: 随机抽取25题，全面测试你的能力
+        - generic [ref=e24]:
+          - paragraph [ref=e25]: 题目 24/25
+          - paragraph [ref=e26]: ⏱️ 0:29
+      - generic [ref=e29] [cursor=pointer]:
+        - generic [ref=e30] [cursor=pointer]:
+          - generic [ref=e31] [cursor=pointer]:
+            - generic [ref=e32] [cursor=pointer]: DeFi基础
+            - generic [ref=e33] [cursor=pointer]: 多选题
+          - heading "以下哪些是常见的稳定币？（多选）" [level=2] [ref=e34] [cursor=pointer]
+        - generic [ref=e35] [cursor=pointer]:
+          - generic [ref=e37] [cursor=pointer]:
+            - img [ref=e40] [cursor=pointer]
+            - generic [ref=e42] [cursor=pointer]: USDT
+          - generic [ref=e47] [cursor=pointer]: USDC
+          - generic [ref=e52] [cursor=pointer]: DAI
+          - generic [ref=e57] [cursor=pointer]: BTC
+      - generic [ref=e58]:
+        - button "← 上一题" [ref=e59] [cursor=pointer]
+        - button "下一题 →" [ref=e61] [cursor=pointer]
+      - generic [ref=e62]:
+        - paragraph [ref=e63]: 答题进度
+        - generic [ref=e64]:
+          - button "1" [ref=e65] [cursor=pointer]
+          - button "2" [ref=e66] [cursor=pointer]
+          - button "3" [ref=e67] [cursor=pointer]
+          - button "4" [ref=e68] [cursor=pointer]
+          - button "5" [ref=e69] [cursor=pointer]
+          - button "6" [ref=e70] [cursor=pointer]
+          - button "7" [ref=e71] [cursor=pointer]
+          - button "8" [ref=e72] [cursor=pointer]
+          - button "9" [ref=e73] [cursor=pointer]
+          - button "10" [ref=e74] [cursor=pointer]
+          - button "11" [ref=e75] [cursor=pointer]
+          - button "12" [ref=e76] [cursor=pointer]
+          - button "13" [ref=e77] [cursor=pointer]
+          - button "14" [ref=e78] [cursor=pointer]
+          - button "15" [ref=e79] [cursor=pointer]
+          - button "16" [ref=e80] [cursor=pointer]
+          - button "17" [ref=e81] [cursor=pointer]
+          - button "18" [ref=e82] [cursor=pointer]
+          - button "19" [ref=e83] [cursor=pointer]
+          - button "20" [ref=e84] [cursor=pointer]
+          - button "21" [ref=e85] [cursor=pointer]
+          - button "22" [ref=e86] [cursor=pointer]
+          - button "23" [ref=e87] [cursor=pointer]
+          - button "24" [ref=e88] [cursor=pointer]
+          - button "25" [ref=e89] [cursor=pointer]
+  - contentinfo [ref=e90]:
+    - generic [ref=e92]:
+      - generic [ref=e93]:
+        - generic [ref=e94]:
+          - paragraph [ref=e95]:
+            - text: © 2024
+            - link "📚 CSS数创学习平台" [ref=e96] [cursor=pointer]:
+              - /url: /
+          - paragraph [ref=e97]: 基于CSS数创班8期知识体系
+        - generic [ref=e98]:
+          - paragraph [ref=e99]: 版本 v4.0.0 | Vue 3 + Vite
+          - paragraph [ref=e100]: 🚀 PWA离线支持
+      - generic [ref=e102]:
+        - generic [ref=e103]: 📊 数据管理：
+        - button "导出学习数据" [ref=e104] [cursor=pointer]
+        - generic [ref=e105]: "|"
+        - button "清除缓存" [ref=e106] [cursor=pointer]
+        - generic [ref=e107]: "|"
+        - generic [ref=e108]: "存储空间: 0 B"
+```

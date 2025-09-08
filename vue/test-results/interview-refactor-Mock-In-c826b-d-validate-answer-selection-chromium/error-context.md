@@ -1,0 +1,87 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e5]:
+  - banner [ref=e6]:
+    - navigation [ref=e8]:
+      - generic [ref=e9]:
+        - generic [ref=e10]: 📚
+        - heading "3C数创学习平台" [level=1] [ref=e11]
+      - generic [ref=e12]:
+        - link "首页" [ref=e13] [cursor=pointer]:
+          - /url: /
+        - link "温度计" [ref=e14] [cursor=pointer]:
+          - /url: /thermometer
+        - link "原则" [ref=e15] [cursor=pointer]:
+          - /url: /principles
+        - link "模拟面试" [ref=e16] [cursor=pointer]:
+          - /url: /mock-interview
+  - main [ref=e17]:
+    - generic [ref=e18]:
+      - generic [ref=e20]:
+        - generic [ref=e21]:
+          - heading "DeFi增长经理 - 初级测试" [level=1] [ref=e22]
+          - paragraph [ref=e23]: 随机抽取25题，全面测试你的能力
+        - generic [ref=e24]:
+          - paragraph [ref=e25]: 题目 2/25
+          - paragraph [ref=e26]: ⏱️ 0:00
+      - generic [ref=e29]:
+        - generic [ref=e30]:
+          - generic [ref=e32]: DeFi基础
+          - heading "治理代币的主要功能是什么？" [level=2] [ref=e33]
+        - generic [ref=e34]:
+          - generic [ref=e39] [cursor=pointer]: 参与协议决策投票
+          - generic [ref=e44] [cursor=pointer]: 支付手续费
+          - generic [ref=e49] [cursor=pointer]: 提供流动性
+          - generic [ref=e54] [cursor=pointer]: 挖矿奖励
+      - generic [ref=e55]:
+        - button "← 上一题" [ref=e56] [cursor=pointer]
+        - button "下一题 →" [active] [ref=e58] [cursor=pointer]
+      - generic [ref=e59]:
+        - paragraph [ref=e60]: 答题进度
+        - generic [ref=e61]:
+          - button "1" [ref=e62] [cursor=pointer]
+          - button "2" [ref=e63] [cursor=pointer]
+          - button "3" [ref=e64] [cursor=pointer]
+          - button "4" [ref=e65] [cursor=pointer]
+          - button "5" [ref=e66] [cursor=pointer]
+          - button "6" [ref=e67] [cursor=pointer]
+          - button "7" [ref=e68] [cursor=pointer]
+          - button "8" [ref=e69] [cursor=pointer]
+          - button "9" [ref=e70] [cursor=pointer]
+          - button "10" [ref=e71] [cursor=pointer]
+          - button "11" [ref=e72] [cursor=pointer]
+          - button "12" [ref=e73] [cursor=pointer]
+          - button "13" [ref=e74] [cursor=pointer]
+          - button "14" [ref=e75] [cursor=pointer]
+          - button "15" [ref=e76] [cursor=pointer]
+          - button "16" [ref=e77] [cursor=pointer]
+          - button "17" [ref=e78] [cursor=pointer]
+          - button "18" [ref=e79] [cursor=pointer]
+          - button "19" [ref=e80] [cursor=pointer]
+          - button "20" [ref=e81] [cursor=pointer]
+          - button "21" [ref=e82] [cursor=pointer]
+          - button "22" [ref=e83] [cursor=pointer]
+          - button "23" [ref=e84] [cursor=pointer]
+          - button "24" [ref=e85] [cursor=pointer]
+          - button "25" [ref=e86] [cursor=pointer]
+  - contentinfo [ref=e87]:
+    - generic [ref=e89]:
+      - generic [ref=e90]:
+        - generic [ref=e91]:
+          - paragraph [ref=e92]:
+            - text: © 2024
+            - link "📚 CSS数创学习平台" [ref=e93] [cursor=pointer]:
+              - /url: /
+          - paragraph [ref=e94]: 基于CSS数创班8期知识体系
+        - generic [ref=e95]:
+          - paragraph [ref=e96]: 版本 v4.0.0 | Vue 3 + Vite
+          - paragraph [ref=e97]: 🚀 PWA离线支持
+      - generic [ref=e99]:
+        - generic [ref=e100]: 📊 数据管理：
+        - button "导出学习数据" [ref=e101] [cursor=pointer]
+        - generic [ref=e102]: "|"
+        - button "清除缓存" [ref=e103] [cursor=pointer]
+        - generic [ref=e104]: "|"
+        - generic [ref=e105]: "存储空间: 0 B"
+```

@@ -1,0 +1,122 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e4]:
+  - banner [ref=e5]:
+    - navigation [ref=e7]:
+      - generic [ref=e8]:
+        - generic [ref=e9]: 📚
+        - heading "3C数创学习平台" [level=1] [ref=e10]
+      - button [ref=e11] [cursor=pointer]
+  - main [ref=e15]:
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - heading "市场情绪指数" [level=1] [ref=e18]
+        - paragraph [ref=e19]: 实时监控加密货币市场恐慌与贪婪情绪
+      - generic [ref=e20]:
+        - generic [ref=e21]:
+          - generic [ref=e24]: 数据过期
+          - generic [ref=e25]: "最后更新: 2天前"
+        - button "刷新数据" [ref=e26] [cursor=pointer]:
+          - img [ref=e27] [cursor=pointer]
+          - text: 刷新数据
+      - generic [ref=e29]:
+        - generic [ref=e30]:
+          - generic [ref=e31]:
+            - heading "有知有行市场温度" [level=3] [ref=e32]
+            - generic [ref=e33]: 数据正常
+          - generic [ref=e35]:
+            - generic [ref=e39]:
+              - generic [ref=e40]:
+                - generic:
+                  - generic:
+                    - generic: "100"
+                  - generic:
+                    - generic: "75"
+                  - generic:
+                    - generic: "50"
+                  - generic:
+                    - generic: "25"
+                  - generic:
+                    - generic: "0"
+              - generic [ref=e44]:
+                - generic [ref=e45]: "65"
+                - generic [ref=e46]: °
+              - generic [ref=e48]: 贪婪
+            - generic [ref=e49]:
+              - generic [ref=e50]: "65"
+              - generic [ref=e51]:
+                - text: 贪婪
+                - generic [ref=e52]: (Greed)
+              - generic [ref=e53]:
+                - img [ref=e55]
+                - generic [ref=e57]: "5.0"
+            - generic [ref=e59]:
+              - generic [ref=e60]: 7日趋势
+              - img [ref=e62]
+            - paragraph [ref=e71]: 市场温度：65，贪婪
+          - generic [ref=e73]:
+            - generic [ref=e74]: "来源: 有知有行"
+            - generic [ref=e75]: 09/04 12:00
+        - generic [ref=e76]:
+          - generic [ref=e77]:
+            - heading "CoinMarketCap恐慌贪婪指数" [level=3] [ref=e78]
+            - generic [ref=e79]: 数据正常
+          - generic [ref=e81]:
+            - generic [ref=e85]:
+              - generic [ref=e87]:
+                - generic [ref=e90]: "0"
+                - generic [ref=e93]: "25"
+                - generic [ref=e96]: "50"
+                - generic [ref=e99]: "75"
+                - generic [ref=e102]: "100"
+              - generic [ref=e112]:
+                - generic [ref=e113]: "72"
+                - generic [ref=e114]: /100
+              - generic [ref=e116]: Greed
+            - generic [ref=e117]:
+              - generic [ref=e118]: "72"
+              - generic [ref=e119]: Greed
+            - generic [ref=e121]:
+              - generic [ref=e122]: 7日趋势
+              - img [ref=e124]
+            - paragraph [ref=e133]: "Fear & Greed Index: 72 - Greed"
+          - generic [ref=e135]:
+            - generic [ref=e136]: "来源: CoinMarketCap"
+            - generic [ref=e137]: 09/04 12:00
+      - generic [ref=e138]:
+        - link "有知有行数据源" [ref=e139] [cursor=pointer]:
+          - /url: https://youzhiyouxing.cn/data
+          - generic [ref=e140] [cursor=pointer]: 有知有行数据源
+          - img [ref=e141] [cursor=pointer]
+        - link "CoinMarketCap数据源" [ref=e143] [cursor=pointer]:
+          - /url: https://coinmarketcap.com/charts/fear-and-greed-index/
+          - generic [ref=e144] [cursor=pointer]: CoinMarketCap数据源
+          - img [ref=e145] [cursor=pointer]
+      - generic [ref=e147]:
+        - heading "📊 指数说明" [level=2] [ref=e148]
+        - generic [ref=e149]:
+          - generic [ref=e152]: "0-25: 极度恐慌 (Extreme Fear)"
+          - generic [ref=e155]: "25-50: 恐慌 (Fear)"
+          - generic [ref=e158]: "50-75: 贪婪 (Greed)"
+          - generic [ref=e161]: "75-100: 极度贪婪 (Extreme Greed)"
+  - contentinfo [ref=e162]:
+    - generic [ref=e164]:
+      - generic [ref=e165]:
+        - generic [ref=e166]:
+          - paragraph [ref=e167]:
+            - text: © 2024
+            - link "📚 CSS数创学习平台" [ref=e168] [cursor=pointer]:
+              - /url: /
+          - paragraph [ref=e169]: 基于CSS数创班8期知识体系
+        - generic [ref=e170]:
+          - paragraph [ref=e171]: 版本 v4.0.0 | Vue 3 + Vite
+          - paragraph [ref=e172]: 🚀 PWA离线支持
+      - generic [ref=e174]:
+        - generic [ref=e175]: 📊 数据管理：
+        - button "导出学习数据" [ref=e176] [cursor=pointer]
+        - generic [ref=e177]: "|"
+        - button "清除缓存" [ref=e178] [cursor=pointer]
+        - generic [ref=e179]: "|"
+        - generic [ref=e180]: "存储空间: 0 B"
+```
