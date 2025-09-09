@@ -1,5 +1,8 @@
 <template>
-  <view class="growth-quiz-page">
+  <AppLayout>
+    <!-- 桥接层：外层用标准HTML满足AppLayout，内层保持100% uniapp语法 -->
+    <div class="growth-neo-wrapper">
+      <view class="growth-quiz-page">
     <!-- 页面标题 -->
     <view class="page-header">
       <text class="page-title">📝 测试评估</text>
@@ -13,7 +16,7 @@
         <view 
           v-for="mode in testModes"
           :key="mode.id"
-          class="mode-card"
+          class="growth-neo-card mode-card"
           @tap="startTest(mode.id)"
         >
           <text class="mode-icon">{{ getModeIcon(mode.id) }}</text>
@@ -162,12 +165,15 @@
       </view>
     </view>
   </view>
+    </div>
+  </AppLayout>
 </template>
 
 <script setup lang="ts">
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { useGrowthStore } from '@/stores/growthStore'
+import AppLayout from '@/components/layout/AppLayout.vue'
 
 const router = useRouter()
 const growthStore = useGrowthStore()
@@ -407,9 +413,34 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
+/* 桥接层样式 */
+.growth-neo-wrapper {
+  @apply w-full;
+}
+
+/* Growth页面基础样式 */
 .growth-quiz-page {
-  @apply min-h-screen bg-gray-50;
+  @apply min-h-screen bg-white;
   @apply dark:bg-gray-900;
+}
+
+/* Neobrutalism风格卡片 - 命名空间隔离 */
+.growth-neo-card {
+  @apply bg-white border-black;
+  border-width: 3px;
+  box-shadow: 4px 4px 0px #000;
+  @apply transition-all duration-200;
+  @apply dark:bg-gray-800 dark:border-gray-100;
+}
+
+.growth-neo-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #000;
+}
+
+.growth-neo-card:active {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0px #000;
 }
 
 .page-header {
@@ -431,7 +462,7 @@ onUnmounted(() => {
 }
 
 .section-title {
-  @apply block text-lg font-semibold text-gray-900 mb-4;
+  @apply block text-lg font-bold text-gray-900 mb-4;
   @apply dark:text-white;
 }
 
@@ -441,9 +472,8 @@ onUnmounted(() => {
 }
 
 .mode-card {
-  @apply p-4 bg-white rounded-lg border border-gray-200;
-  @apply hover:shadow-md transition-shadow cursor-pointer;
-  @apply dark:bg-gray-800 dark:border-gray-700;
+  @apply p-4 cursor-pointer;
+  /* Neobrutalism styles are applied via growth-neo-card class in template */
 }
 
 .mode-icon {

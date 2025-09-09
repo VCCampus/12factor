@@ -1,66 +1,72 @@
 <template>
-  <view class="growth-flashcards-page">
-    <!-- 页面标题 -->
-    <view class="page-header">
-      <text class="page-title">🎯 闪卡练习</text>
-      <text class="page-subtitle">每次随机12张 | 手动翻转学习</text>
-    </view>
+  <AppLayout>
+    <!-- 桥接层：外层用标准HTML满足AppLayout，内层保持100% uniapp语法 -->
+    <div class="growth-neo-wrapper">
+      <view class="growth-flashcards-page">
+        <!-- 页面标题 -->
+        <view class="page-header">
+          <text class="page-title">🎯 闪卡练习</text>
+          <text class="page-subtitle">每次随机12张 | 手动翻转学习</text>
+        </view>
 
-    <FlashcardRandomizer />
+        <FlashcardRandomizer />
 
-    <!-- 学习提示 -->
-    <view class="learning-tips">
-      <text class="tips-title">💡 学习提示</text>
-      <view class="tips-list">
-        <text class="tip-item">• 先仔细思考问题，再点击翻转查看答案</text>
-        <text class="tip-item">• 每次练习覆盖所有12个原则各1张卡片</text>
-        <text class="tip-item">• 不熟悉的内容可以多练习几轮</text>
-        <text class="tip-item">• 建议每日练习，加深记忆印象</text>
-      </view>
-    </view>
-
-    <!-- 练习历史 -->
-    <view class="history-section" v-if="flashcardHistory.length > 0">
-      <text class="section-title">📈 最近练习</text>
-      <view class="history-list">
-        <view 
-          v-for="(session, index) in recentHistory" 
-          :key="index"
-          class="history-item"
-        >
-          <view class="history-info">
-            <text class="history-date">{{ formatDate(session.timestamp) }}</text>
-            <text class="history-details">{{ session.totalCards }}张卡片</text>
+        <!-- 学习提示 -->
+        <view class="growth-neo-card learning-tips">
+          <text class="tips-title">💡 学习提示</text>
+          <view class="tips-list">
+            <text class="tip-item">• 先仔细思考问题，再点击翻转查看答案</text>
+            <text class="tip-item">• 每次练习覆盖所有12个原则各1张卡片</text>
+            <text class="tip-item">• 不熟悉的内容可以多练习几轮</text>
+            <text class="tip-item">• 建议每日练习，加深记忆印象</text>
           </view>
-          <view class="history-stats">
-            <view class="difficulty-tags">
-              <text 
-                v-for="difficulty in getSessionDifficulties(session)"
-                :key="difficulty"
-                class="difficulty-tag"
-                :class="difficulty"
-              >
-                {{ difficulty }}
-              </text>
+        </view>
+
+        <!-- 练习历史 -->
+        <view class="history-section" v-if="flashcardHistory.length > 0">
+          <text class="section-title">📈 最近练习</text>
+          <view class="history-list">
+            <view 
+              v-for="(session, index) in recentHistory" 
+              :key="index"
+              class="growth-neo-card history-item"
+            >
+              <view class="history-info">
+                <text class="history-date">{{ formatDate(session.timestamp) }}</text>
+                <text class="history-details">{{ session.totalCards }}张卡片</text>
+              </view>
+              <view class="history-stats">
+                <view class="difficulty-tags">
+                  <text 
+                    v-for="difficulty in getSessionDifficulties(session)"
+                    :key="difficulty"
+                    class="difficulty-tag"
+                    :class="difficulty"
+                  >
+                    {{ difficulty }}
+                  </text>
+                </view>
+              </view>
             </view>
           </view>
         </view>
-      </view>
-    </view>
 
-    <!-- 返回按钮 -->
-    <view class="back-section">
-      <view class="back-btn" @tap="goBack">
-        <text class="btn-text">← 返回原则学习</text>
+        <!-- 返回按钮 -->
+        <view class="back-section">
+          <view class="growth-neo-button back-btn" @tap="goBack">
+            <text class="btn-text">← 返回原则学习</text>
+          </view>
+        </view>
       </view>
-    </view>
-  </view>
+    </div>
+  </AppLayout>
 </template>
 
 <script setup lang="ts">
 import { computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { useGrowthStore } from '@/stores/growthStore'
+import AppLayout from '@/components/layout/AppLayout.vue'
 import FlashcardRandomizer from '@/components/growth/flashcards/FlashcardRandomizer.vue'
 
 interface FlashcardSession {
@@ -137,9 +143,47 @@ onMounted(async () => {
 </script>
 
 <style scoped>
+/* 桥接层样式 */
+.growth-neo-wrapper {
+  @apply w-full;
+}
+
+/* Growth页面基础样式 */
 .growth-flashcards-page {
-  @apply min-h-screen bg-gray-50;
+  @apply min-h-screen bg-white;
   @apply dark:bg-gray-900;
+}
+
+/* Neobrutalism风格卡片 - 命名空间隔离 */
+.growth-neo-card {
+  @apply bg-white border-black;
+  border-width: 3px;
+  box-shadow: 4px 4px 0px #000;
+  @apply transition-all duration-200;
+  @apply dark:bg-gray-800 dark:border-gray-100;
+}
+
+.growth-neo-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #000;
+}
+
+/* Neobrutalism按钮样式 */
+.growth-neo-button {
+  @apply bg-blue-500 text-white font-bold border-black;
+  border-width: 3px;
+  box-shadow: 4px 4px 0px #000;
+  @apply transition-all duration-200;
+}
+
+.growth-neo-button:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #000;
+}
+
+.growth-neo-button:active {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0px #000;
 }
 
 .page-header {
@@ -157,8 +201,7 @@ onMounted(async () => {
 }
 
 .learning-tips {
-  @apply p-4 m-4 bg-blue-50 rounded-lg border border-blue-200;
-  @apply dark:bg-blue-900 dark:border-blue-700;
+  @apply p-4 m-4;
 }
 
 .tips-title {
@@ -190,8 +233,6 @@ onMounted(async () => {
 
 .history-item {
   @apply flex items-center justify-between p-3;
-  @apply bg-white rounded-lg border border-gray-200;
-  @apply dark:bg-gray-800 dark:border-gray-700;
 }
 
 .history-info {
@@ -245,9 +286,7 @@ onMounted(async () => {
 }
 
 .back-btn {
-  @apply w-full py-3 bg-gray-200 rounded-lg text-center;
-  @apply hover:bg-gray-300 transition-colors cursor-pointer;
-  @apply dark:bg-gray-700 dark:hover:bg-gray-600;
+  @apply w-full py-3 text-center cursor-pointer;
 }
 
 .btn-text {

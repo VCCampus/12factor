@@ -135,26 +135,30 @@ All planning, research, and discussion documents must be organized in:
 - Test Chinese locale support (primary language)
 - Verify neobrutalism design system consistency
 
-## Current Project Status (2025-09-06) - 个人成长12原则移动优先重构完成
+## Current Project Status (2025-09-06) - Growth系列页面导航统一完成
 
-### 🎉 最新重大更新 (Issue #24)
-**个人成长12原则移动优先重构已完成** - 基于新个人成长12原则数据，完整实现移动优先组件架构，为uniapp迁移奠定基础。
+### 🎉 最新重大更新 (Issue #26 & #27)
+**Growth系列页面导航统一已完成** - 基于Issue #24的移动优先重构成果，进一步解决了导航缺失问题，实现了完整的用户体验统一。
 
-#### 核心技术突破
+#### 导航统一架构突破
 ```
-数据架构：TOML → JSON → Pinia状态管理 → Vue组件渲染
-组件架构：Growth* 系列移动优先组件 (uniapp兼容)  
-学习系统：闪卡随机算法 (12/120) + 多模式测试系统
-路由策略：直接URL映射 (移除嵌套路由)
+AppLayout集成：AppHeader + Growth组件 + AppFooter
+混合渲染策略：HTML桥接层 + uniapp语法内核
+兼容性方案：UniView/UniText全局组件 + 运行时判断
+样式系统：growth-neo-* 命名空间 + neobrutalism统一
 ```
 
-#### 重构成果总结
-- **✅ 完整移动优先架构**: Growth*系列组件，支持uniapp语法 (view/text)
-- **✅ 智能闪卡系统**: 12张随机选择算法，每个原则1张，确保知识覆盖
-- **✅ 多模式测试**: 练习模式、考试模式、复习模式，支持计时和评分
-- **✅ 数据持久化**: localStorage会话历史和学习进度跟踪
-- **✅ TypeScript重构**: 严格类型定义，growthStore集中状态管理
-- **✅ 生产部署**: 构建成功 (1.6M)，部署验证通过
+#### 完整成果总结  
+**Issue #24 - 移动优先重构**:
+- **✅ Growth*组件架构**: uniapp兼容的移动优先组件系统
+- **✅ 智能学习系统**: 闪卡随机算法 + 多模式测试
+- **✅ 数据持久化**: growthStore + localStorage会话管理
+
+**Issue #26/#27 - 导航统一**:
+- **✅ AppLayout完整集成**: 顶部导航栏 + 底部信息栏全覆盖
+- **✅ uniapp兼容架构**: 100%语法保留 + Web环境自动降级
+- **✅ Neobrutalism风格**: growth-neo-*统一设计语言
+- **✅ 用户体验一致性**: 三个Growth页面导航体验统一
 
 ### Active Features
 - **Home Dashboard**: CSS数创班8期核心知识体系学习平台
@@ -168,11 +172,12 @@ All planning, research, and discussion documents must be organized in:
 ### Technical Architecture
 - **Data Pipeline**: 个人成长TOML → JSON转换 → growthStore → Growth组件
 - **State Management**: growthStore (Pinia) + 原有stores (config, quiz, interview, progress)
-- **Routing**: 直接路由映射 (/principles → GrowthPrinciplesView)
-- **Component System**: 移动优先Growth*组件架构，uniapp兼容
-- **Styling**: Tailwind CSS响应式设计 + 深色模式支持
-- **Build Process**: scripts/build.sh全自动化构建流水线
+- **Routing**: 直接路由映射 (/principles → GrowthPrinciplesView) + AppLayout集成
+- **Component System**: 混合渲染架构 (AppLayout + Growth*组件 + uniapp兼容层)
+- **Styling**: Tailwind CSS + growth-neo-* neobrutalism设计系统
+- **Build Process**: scripts/build.sh全自动化构建流水线 + TypeScript严格模式
 - **Data Storage**: localStorage个人成长数据持久化 + PWA离线支持
+- **Compatibility**: UniView/UniText全局组件 + 运行时Web降级
 
 ### Directory Structure Updates
 ```
@@ -183,11 +188,14 @@ All planning, research, and discussion documents must be organized in:
 │   │   │   ├── growth/            # 🆕 移动优先个人成长组件
 │   │   │   │   ├── common/        # GrowthHero.vue, StageCard.vue
 │   │   │   │   └── flashcards/    # FlashcardRandomizer.vue
-│   │   │   └── layout/            # 原有布局组件
+│   │   │   ├── uniapp/            # 🆕 uniapp兼容组件
+│   │   │   │   ├── UniView.vue    # view标签Web兼容
+│   │   │   │   └── UniText.vue    # text标签Web兼容
+│   │   │   └── layout/            # AppLayout布局组件
 │   │   ├── stores/
 │   │   │   └── growthStore.ts     # 🆕 个人成长集中状态管理
 │   │   └── views/
-│   │       ├── Growth*.vue        # 🆕 移动优先Growth系列页面
+│   │       ├── Growth*.vue        # 🆕 AppLayout集成的Growth页面
 │   │       └── (其他原有页面)
 │   ├── public/
 │   │   ├── growth-principles-*.json # 🆕 个人成长数据文件
@@ -197,7 +205,8 @@ All planning, research, and discussion documents must be organized in:
 │   ├── stores/quiz.ts            # 旧quiz状态管理
 │   └── views/PrinciplesView.vue  # 旧Principles页面
 ├── scripts/
-│   └── growth-principles-converter.js # 🆕 TOML转JSON转换器
+│   ├── growth-principles-converter.js # 🆕 TOML转JSON转换器
+│   └── test-navigation.js        # 🆕 导航集成测试脚本
 ├── docs/
 │   ├── reports/
 │   │   └── 250906_growth_principles_mobile_refactor.md # 🆕 重构详细报告
@@ -205,21 +214,24 @@ All planning, research, and discussion documents must be organized in:
 ```
 
 ### Current Code Quality Status
-- ✅ **Build**: 成功编译到 /dist (1.6M, gzip优化)
-- ✅ **TypeScript**: 类型检查通过，growthStore严格类型定义
-- ✅ **ESLint**: 代码质量检查通过，旧冲突文件已归档
-- ✅ **Architecture**: Growth*组件架构清晰，职责分离
+- ✅ **Build**: 成功编译到 /dist (~1.6M, gzip优化)
+- ✅ **TypeScript**: 类型检查通过，新增uniapp兼容组件类型定义
+- ✅ **ESLint**: 代码质量检查通过，架构清晰无冲突
+- ✅ **Architecture**: AppLayout + Growth组件混合架构，职责分离清晰
 - ✅ **Deployment**: 生产环境部署验证通过 (http://web3mh.101.so:11181/)
+- ✅ **UX Consistency**: 三个Growth页面导航体验完全统一
+- ✅ **Compatibility**: 100% uniapp语法保留 + Web环境完美降级
 
 ### Next Phase Priorities
-1. **E2E测试更新** (高优先级): 更新Playwright测试用例匹配新Growth组件
-2. **学习分析功能** (中优先级): 学习时长统计，知识掌握度可视化 
-3. **动态数据源** (中优先级): API endpoints替代静态JSON文件
-4. **离线功能增强** (低优先级): IndexedDB本地数据库支持
+1. **E2E测试更新** (高优先级): 更新Playwright测试用例匹配新AppLayout架构
+2. **性能监控** (高优先级): 监控混合渲染性能，优化bundle size
+3. **设计系统标准化** (中优先级): 将growth-neo-*样式抽取为通用设计系统  
+4. **组件文档完善** (中优先级): 为uniapp兼容组件添加使用文档
+5. **学习分析功能** (低优先级): 学习时长统计，知识掌握度可视化
 
 ### Data Sources
 - **个人成长数据**: docs/plans/250906-growth_principles_*.toml (转换脚本: scripts/growth-principles-converter.js)
 - **生成JSON文件**: vue/public/growth-principles-*.json (180.88 KB总计)
 - **CSS数创配置**: docs/plans/web3scv8_v4.toml (4.0.0) → vue/public/w3sc8_*.json 
 - **面试题库**: vue/public/data/interview-*.json (9个难度文件)
-- **Git记录**: Issue #24移动优先重构 (commit: 00e4ed0)
+- **Git记录**: Issue #26/#27 导航统一完成 (commit: 458fe9a + 后续commits)
