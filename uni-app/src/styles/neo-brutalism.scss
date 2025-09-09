@@ -1,0 +1,255 @@
+/* Neobrutalism Design System for uni-app */
+:root {
+  /* 颜色系统 - Neobrutalism Color Palette */
+  --neo-black: #000000;
+  --neo-white: #FFFFFF;
+  --neo-primary: #FFBE0B;      /* 黄色 - 主色调 */
+  --neo-secondary: #FB5607;     /* 橙红 - 辅助色 */
+  --neo-accent: #FF006E;        /* 粉红 - 强调色 */
+  --neo-success: #8AC926;       /* 绿色 - 成功状态 */
+  --neo-info: #3A86FF;          /* 蓝色 - 信息提示 */
+  --neo-warning: #FFD23F;       /* 预警黄 */
+  --neo-error: #E63946;         /* 错误红 */
+  
+  /* 灰度系统 */
+  --neo-gray-100: #F8F9FA;
+  --neo-gray-200: #E9ECEF;
+  --neo-gray-300: #DEE2E6;
+  --neo-gray-400: #CED4DA;
+  --neo-gray-500: #ADB5BD;
+  --neo-gray-600: #6C757D;
+  --neo-gray-700: #495057;
+  --neo-gray-800: #343A40;
+  --neo-gray-900: #212529;
+  
+  /* 边框系统 - 硬边框特征 */
+  --neo-border-width: 3px;
+  --neo-border-width-thin: 2px;
+  --neo-border-width-thick: 4px;
+  --neo-border-radius: 0;       /* 特征：无圆角 */
+  --neo-border-color: var(--neo-black);
+  
+  /* 阴影系统 - 硬阴影特征 */
+  --neo-shadow-sm: 2px 2px 0 var(--neo-black);
+  --neo-shadow-md: 4px 4px 0 var(--neo-black);
+  --neo-shadow-lg: 6px 6px 0 var(--neo-black);
+  --neo-shadow-xl: 8px 8px 0 var(--neo-black);
+  
+  /* 动画系统 */
+  --neo-transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --neo-transition-slow: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* 字体系统 */
+  --neo-font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', sans-serif;
+  --neo-font-size-xs: 24rpx;    /* 12px */
+  --neo-font-size-sm: 28rpx;    /* 14px */
+  --neo-font-size-base: 32rpx;  /* 16px */
+  --neo-font-size-lg: 36rpx;    /* 18px */
+  --neo-font-size-xl: 40rpx;    /* 20px */
+  --neo-font-size-2xl: 48rpx;   /* 24px */
+  --neo-font-size-3xl: 60rpx;   /* 30px */
+  --neo-font-size-4xl: 72rpx;   /* 36px */
+  
+  /* 间距系统 (rpx for 小程序兼容) */
+  --neo-spacing-xs: 8rpx;       /* 4px */
+  --neo-spacing-sm: 16rpx;      /* 8px */
+  --neo-spacing-md: 24rpx;      /* 12px */
+  --neo-spacing-lg: 32rpx;      /* 16px */
+  --neo-spacing-xl: 48rpx;      /* 24px */
+  --neo-spacing-2xl: 64rpx;     /* 32px */
+  --neo-spacing-3xl: 96rpx;     /* 48px */
+  --neo-spacing-4xl: 128rpx;    /* 64px */
+}
+
+/* H5端使用px单位 */
+/* #ifdef H5 */
+:root {
+  --neo-font-size-xs: 12px;
+  --neo-font-size-sm: 14px;
+  --neo-font-size-base: 16px;
+  --neo-font-size-lg: 18px;
+  --neo-font-size-xl: 20px;
+  --neo-font-size-2xl: 24px;
+  --neo-font-size-3xl: 30px;
+  --neo-font-size-4xl: 36px;
+  
+  --neo-spacing-xs: 4px;
+  --neo-spacing-sm: 8px;
+  --neo-spacing-md: 12px;
+  --neo-spacing-lg: 16px;
+  --neo-spacing-xl: 24px;
+  --neo-spacing-2xl: 32px;
+  --neo-spacing-3xl: 48px;
+  --neo-spacing-4xl: 64px;
+}
+/* #endif */
+
+/* Neobrutalism 基础组件样式类 */
+.neo-card {
+  background: var(--neo-white);
+  border: var(--neo-border-width) solid var(--neo-border-color);
+  box-shadow: var(--neo-shadow-md);
+  transition: var(--neo-transition);
+}
+
+.neo-card--primary {
+  background: var(--neo-primary);
+}
+
+.neo-card--secondary {
+  background: var(--neo-secondary);
+}
+
+.neo-card--accent {
+  background: var(--neo-accent);
+}
+
+.neo-card--pressed {
+  transform: translate(2px, 2px);
+  box-shadow: var(--neo-shadow-sm);
+}
+
+.neo-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--neo-spacing-md) var(--neo-spacing-lg);
+  background: var(--neo-white);
+  border: var(--neo-border-width) solid var(--neo-border-color);
+  box-shadow: var(--neo-shadow-sm);
+  font-family: var(--neo-font-family);
+  font-size: var(--neo-font-size-base);
+  font-weight: 600;
+  color: var(--neo-black);
+  cursor: pointer;
+  transition: var(--neo-transition);
+  user-select: none;
+}
+
+.neo-button:hover {
+  background: var(--neo-gray-100);
+}
+
+.neo-button:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0 var(--neo-border-color);
+}
+
+.neo-button--primary {
+  background: var(--neo-primary);
+  color: var(--neo-black);
+}
+
+.neo-button--primary:hover {
+  background: #E6A409;
+}
+
+.neo-button--secondary {
+  background: var(--neo-secondary);
+  color: var(--neo-white);
+}
+
+.neo-button--accent {
+  background: var(--neo-accent);
+  color: var(--neo-white);
+}
+
+.neo-input {
+  display: block;
+  width: 100%;
+  padding: var(--neo-spacing-md);
+  background: var(--neo-white);
+  border: var(--neo-border-width) solid var(--neo-border-color);
+  box-shadow: inset var(--neo-shadow-sm);
+  font-family: var(--neo-font-family);
+  font-size: var(--neo-font-size-base);
+  color: var(--neo-black);
+  transition: var(--neo-transition);
+}
+
+.neo-input:focus {
+  outline: none;
+  box-shadow: inset var(--neo-shadow-md);
+  background: var(--neo-gray-100);
+}
+
+/* 响应式工具类 */
+/* #ifdef H5 */
+@media (max-width: 768px) {
+  .neo-desktop-only {
+    display: none !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .neo-mobile-only {
+    display: none !important;
+  }
+}
+/* #endif */
+
+/* 暗色模式支持 */
+/* #ifdef H5 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --neo-white: #1A1A1A;
+    --neo-black: #FFFFFF;
+    --neo-gray-100: #2D2D2D;
+    --neo-gray-200: #404040;
+    --neo-gray-300: #525252;
+  }
+}
+
+.dark-theme {
+  --neo-white: #1A1A1A;
+  --neo-black: #FFFFFF;
+  --neo-gray-100: #2D2D2D;
+  --neo-gray-200: #404040;
+  --neo-gray-300: #525252;
+}
+/* #endif */
+
+/* 小程序端暗色模式 */
+/* #ifdef MP-WEIXIN */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --neo-white: #1A1A1A;
+    --neo-black: #FFFFFF;
+    --neo-gray-100: #2D2D2D;
+  }
+}
+/* #endif */
+
+/* 动画效果类 */
+.neo-bounce {
+  animation: neoBounce 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes neoBounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05) translate(-1px, -1px);
+    box-shadow: var(--neo-shadow-lg);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.neo-shake {
+  animation: neoShake 0.5s ease-in-out;
+}
+
+@keyframes neoShake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-2px);
+  }
+  75% {
+    transform: translateX(2px);
+  }
+}
