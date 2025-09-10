@@ -1,12 +1,12 @@
 {
   "metadata": {
-    "title": "个人成长12原则测试题库",
+    "title": "8原则测试题库",
     "version": "1.0",
-    "total_questions": 100,
-    "single_choice": 70,
-    "multiple_choice": 30,
+    "total_questions": 80,
+    "single_choice": 56,
+    "multiple_choice": 24,
     "passing_score": 80,
-    "generated_at": "2025-09-06T07:43:22.552Z"
+    "generated_at": "2025-09-09T03:18:33.385Z"
   },
   "test_modes": [
     {
@@ -35,8 +35,8 @@
       "question_count": 20,
       "shuffle": true,
       "difficulty_filter": [
-        "进阶",
-        "应用"
+        "深度理解",
+        "实践应用"
       ],
       "bonus_system": true
     },
@@ -53,63 +53,400 @@
   "questions": [
     {
       "id": "Q001",
-      "principle": "元认知",
+      "principle": "你就是生意",
       "type": "single",
-      "difficulty": "基础",
-      "question": "元认知的本质是什么？",
+      "difficulty": "核心概念",
+      "question": "对年轻人来说，最好的生意是什么？",
       "options": "[",
       "answer": "B",
-      "explanation": "元认知是'对思考过程的认知'，像一个内置的监控程序，让你能从更高维度审视自己的想法。"
+      "explanation": "你的经历、兴趣、成长就是独一无二的'赛道'，创业就是把解决自己问题的方法，卖给'过去的自己'。"
     },
     {
       "id": "Q002",
-      "principle": "元认知",
+      "principle": "你就是生意",
       "type": "multiple",
-      "difficulty": "进阶",
-      "question": "以下哪些是锻炼元认知的有效方法？",
+      "difficulty": "深度理解",
+      "question": "高杠杆创业路径包括哪些步骤？",
+      "options": "[",
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "explanation": "内容→服务→产品→公司，这是一个循序渐进的高杠杆路径。"
+    },
+    {
+      "id": "Q003",
+      "principle": "你就是生意",
+      "type": "single",
+      "difficulty": "实践应用",
+      "question": "执行'先定义理想生活，再找赚钱方式'的第一步是？",
+      "options": "[",
+      "answer": "B",
+      "explanation": "先有清晰的生活愿景，才能设计匹配的商业模式。"
+    },
+    {
+      "id": "Q004",
+      "principle": "你就是生意",
+      "type": "single",
+      "difficulty": "核心概念",
+      "question": "盲目跟风创业最可能导致什么结果？",
+      "options": "[",
+      "answer": "B",
+      "explanation": "没有独特优势和内在动力，只会陷入更累的打工状态。"
+    },
+    {
+      "id": "Q005",
+      "principle": "你就是生意",
+      "type": "multiple",
+      "difficulty": "实践应用",
+      "question": "把解决自己问题的方法产品化需要哪些步骤？",
       "options": "[",
       "answer": [
         "A",
         "B",
         "C"
       ],
-      "explanation": "冥想、反思决策、写作都是直接锻炼元认知的方法。单纯阅读虽有益，但不直接锻炼元认知能力。"
-    },
-    {
-      "id": "Q003",
-      "principle": "元认知",
-      "type": "single",
-      "difficulty": "应用",
-      "question": "当你情绪激动想要争论时，元认知的正确应用是？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "元认知要求我们跳出情绪和立场，从更高维度审视思维过程。"
-    },
-    {
-      "id": "Q004",
-      "principle": "元认知",
-      "type": "single",
-      "difficulty": "基础",
-      "question": "缺乏元认知的最大问题是？",
-      "options": "[",
-      "answer": "C",
-      "explanation": "没有元认知，你的'思考'只是'情绪的自动反应'，无法做出理性决策。"
-    },
-    {
-      "id": "Q005",
-      "principle": "元认知",
-      "type": "single",
-      "difficulty": "进阶",
-      "question": "为什么说写作是'思考的磨刀石'？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "写作过程强制你组织逻辑、发现矛盾，是检验和提升思维质量的最佳工具。"
+      "explanation": "真实的问题和解决方案是产品化的基础，包括失败经历都是宝贵素材。"
     },
     {
       "id": "Q006",
+      "principle": "你就是生意",
+      "type": "single",
+      "difficulty": "深度理解",
+      "question": "为什么说你的经历是'独一无二的赛道'？",
+      "options": "[",
+      "answer": "B",
+      "explanation": "每个人的经历组合都是独特的，这种独特性就是你的护城河。"
+    },
+    {
+      "id": "Q007",
+      "principle": "你就是生意",
+      "type": "single",
+      "difficulty": "核心概念",
+      "question": "新型创业与传统创业的本质区别是？",
+      "options": "[",
+      "answer": "B",
+      "explanation": "新型创业是成为生意本身，而非寻找外部项目。"
+    },
+    {
+      "id": "Q008",
+      "principle": "你就是生意",
+      "type": "multiple",
+      "difficulty": "实践应用",
+      "question": "日常践行'你就是生意'的方法包括？",
+      "options": "[",
+      "answer": [
+        "A",
+        "B",
+        "D"
+      ],
+      "explanation": "透明化成长过程，持续积累价值，建立连接。"
+    },
+    {
+      "id": "Q009",
+      "principle": "你就是生意",
+      "type": "single",
+      "difficulty": "深度理解",
+      "question": "投资自己的最大优势是？",
+      "options": "[",
+      "answer": "C",
+      "explanation": "这是唯一不会贬值、不会被夺走的财富。"
+    },
+    {
+      "id": "Q010",
+      "principle": "你就是生意",
+      "type": "single",
+      "difficulty": "实践应用",
+      "question": "服务'过去的自己'的核心价值在于？",
+      "options": "[",
+      "answer": "B",
+      "explanation": "亲身经历让你成为最懂这个群体的人。"
+    },
+    {
+      "id": "Q011",
+      "principle": "注意力价值",
+      "type": "single",
+      "difficulty": "核心概念",
+      "question": "个人资源的正确价值排序是？",
+      "options": "[",
+      "answer": "C",
+      "explanation": "注意力是最宝贵的资源，决定了人生走向。"
+    },
+    {
+      "id": "Q012",
+      "principle": "注意力价值",
+      "type": "single",
+      "difficulty": "深度理解",
+      "question": "为什么注意力比时间更宝贵？",
+      "options": "[",
+      "answer": "B",
+      "explanation": "同样的时间，不同的注意力质量产出天差地别。"
+    },
+    {
+      "id": "Q013",
+      "principle": "注意力价值",
+      "type": "multiple",
+      "difficulty": "实践应用",
+      "question": "保护注意力的有效方法包括？",
+      "options": "[",
+      "answer": [
+        "A",
+        "B",
+        "D"
+      ],
+      "explanation": "主动掌控环境，量化价值，过滤干扰。"
+    },
+    {
+      "id": "Q014",
+      "principle": "注意力价值",
+      "type": "single",
+      "difficulty": "核心概念",
+      "question": "无法保持45分钟以上专注会导致什么？",
+      "options": "[",
+      "answer": "B",
+      "explanation": "深度工作能力是未来核心竞争力的基础。"
+    },
+    {
+      "id": "Q015",
+      "principle": "注意力价值",
+      "type": "single",
+      "difficulty": "深度理解",
+      "question": "算法的目的和我们的对抗策略是？",
+      "options": "[",
+      "answer": "B",
+      "explanation": "认清算法本质，主动夺回注意力控制权。"
+    },
+    {
+      "id": "Q016",
+      "principle": "注意力价值",
+      "type": "multiple",
+      "difficulty": "实践应用",
+      "question": "注意力应该优先投资在哪些领域？",
+      "options": "[",
+      "answer": [
+        "A",
+        "C",
+        "D"
+      ],
+      "explanation": "投资在有复利效应的高价值活动上。"
+    },
+    {
+      "id": "Q017",
+      "principle": "注意力价值",
+      "type": "single",
+      "difficulty": "核心概念",
+      "question": "被短视频和八卦劫持注意力的后果是？",
+      "options": "[",
+      "answer": "B",
+      "explanation": "注意力被劫持等于人生被劫持。"
+    },
+    {
+      "id": "Q018",
+      "principle": "注意力价值",
+      "type": "single",
+      "difficulty": "实践应用",
+      "question": "如何给注意力定价？",
+      "options": "[",
+      "answer": "B",
+      "explanation": "用经济学思维管理注意力，确保高价值投入。"
+    },
+    {
+      "id": "Q019",
+      "principle": "注意力价值",
+      "type": "multiple",
+      "difficulty": "深度理解",
+      "question": "哪些是隐形的注意力杀手？",
+      "options": "[",
+      "answer": [
+        "A",
+        "B",
+        "D"
+      ],
+      "explanation": "看似有用实则消耗巨大的活动。"
+    },
+    {
+      "id": "Q020",
+      "principle": "注意力价值",
+      "type": "single",
+      "difficulty": "核心概念",
+      "question": "价值观在注意力管理中的作用是？",
+      "options": "[",
+      "answer": "B",
+      "explanation": "清晰的价值观是最好的注意力过滤器。"
+    },
+    {
+      "id": "Q021",
+      "principle": "100%责任",
+      "type": "single",
+      "difficulty": "核心概念",
+      "question": "个人成长操作系统的底层信念是？",
+      "options": "[",
+      "answer": "B",
+      "explanation": "这是成长系统的底层信念，没有'抱怨'这个程序。"
+    },
+    {
+      "id": "Q022",
+      "principle": "100%责任",
+      "type": "single",
+      "difficulty": "深度理解",
+      "question": "为什么说抱怨是'弱者病毒'？",
+      "options": "[",
+      "answer": "B",
+      "explanation": "抱怨本质是思维懒惰，强化受害者心态。"
+    },
+    {
+      "id": "Q023",
+      "principle": "100%责任",
+      "type": "multiple",
+      "difficulty": "实践应用",
+      "question": "戒掉抱怨的有效方法包括？",
+      "options": "[",
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explanation": "把抱怨的能量转化为改变的动力，而非压抑情绪。"
+    },
+    {
+      "id": "Q024",
+      "principle": "100%责任",
+      "type": "single",
+      "difficulty": "核心概念",
+      "question": "向内求索的核心是？",
+      "options": "[",
+      "answer": "B",
+      "explanation": "专注于自己能改变的，而非抱怨不能改变的。"
+    },
+    {
+      "id": "Q025",
+      "principle": "100%责任",
+      "type": "single",
+      "difficulty": "深度理解",
+      "question": "主动进化思维的特征是？",
+      "options": "[",
+      "answer": "B",
+      "explanation": "主动创造成长压力，成为变化的推动者。"
+    },
+    {
+      "id": "Q026",
+      "principle": "100%责任",
+      "type": "multiple",
+      "difficulty": "实践应用",
+      "question": "100%责任包含哪些方面？",
+      "options": "[",
+      "answer": [
+        "A",
+        "C",
+        "D"
+      ],
+      "explanation": "对自己能控制的部分负全责，不包括他人的选择。"
+    },
+    {
+      "id": "Q027",
+      "principle": "100%责任",
+      "type": "single",
+      "difficulty": "核心概念",
+      "question": "抱怨会导致什么恶性循环？",
+      "options": "[",
+      "answer": "B",
+      "explanation": "抱怨强化受害者心态，形成越来越糟的循环。"
+    },
+    {
+      "id": "Q028",
+      "principle": "100%责任",
+      "type": "single",
+      "difficulty": "实践应用",
+      "question": "将'为什么没人帮我'转换为？",
+      "options": "[",
+      "answer": "B",
+      "explanation": "从索取思维转向价值交换思维。"
+    },
+    {
+      "id": "Q029",
+      "principle": "100%责任",
+      "type": "multiple",
+      "difficulty": "深度理解",
+      "question": "承担责任与自我苛责的区别在于？",
+      "options": "[",
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explanation": "承担责任是理性的成长工具，自我苛责是情绪化伤害。"
+    },
+    {
+      "id": "Q030",
+      "principle": "100%责任",
+      "type": "single",
+      "difficulty": "核心概念",
+      "question": "为什么说承担责任就是获得自由？",
+      "options": "[",
+      "answer": "B",
+      "explanation": "主动承担责任才能主动创造，获得真正的自由。"
+    },
+    {
+      "id": "Q031",
+      "principle": "元认知",
+      "type": "single",
+      "difficulty": "核心概念",
+      "question": "元认知的本质是什么？",
+      "options": "[",
+      "answer": "B",
+      "explanation": "元认知是'对思考过程的认知'，让你能审视自己的想法。"
+    },
+    {
+      "id": "Q032",
+      "principle": "元认知",
+      "type": "single",
+      "difficulty": "深度理解",
+      "question": "为什么说没有元认知就是大脑的奴隶？",
+      "options": "[",
+      "answer": "B",
+      "explanation": "没有元认知，你的'思考'只是'情绪的自动反应'。"
+    },
+    {
+      "id": "Q033",
       "principle": "元认知",
       "type": "multiple",
-      "difficulty": "应用",
+      "difficulty": "实践应用",
+      "question": "锻炼元认知的有效方法包括？",
+      "options": "[",
+      "answer": [
+        "A",
+        "B",
+        "D"
+      ],
+      "explanation": "冥想、反思、写作都直接锻炼元认知能力。"
+    },
+    {
+      "id": "Q034",
+      "principle": "元认知",
+      "type": "single",
+      "difficulty": "核心概念",
+      "question": "冥想如何帮助提升元认知？",
+      "options": "[",
+      "answer": "B",
+      "explanation": "冥想是元认知的'健身房'，专门训练觉察能力。"
+    },
+    {
+      "id": "Q035",
+      "principle": "元认知",
+      "type": "single",
+      "difficulty": "深度理解",
+      "question": "写作为什么是'思考的磨刀石'？",
+      "options": "[",
+      "answer": "B",
+      "explanation": "写作过程暴露并修正思维偏差。"
+    },
+    {
+      "id": "Q036",
+      "principle": "元认知",
+      "type": "multiple",
+      "difficulty": "实践应用",
       "question": "日常生活中启动元认知的最佳时机包括？",
       "options": "[",
       "answer": [
@@ -117,1107 +454,905 @@
         "B",
         "D"
       ],
-      "explanation": "决策、失败反思、学习都是需要元认知介入的关键时刻。心情愉悦时不是必需的触发点。"
-    },
-    {
-      "id": "Q007",
-      "principle": "元认知",
-      "type": "single",
-      "difficulty": "基础",
-      "question": "'坐享'（冥想）如何帮助提升元认知？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "冥想是元认知的'健身房'，专门训练觉察和控制思维的能力。"
-    },
-    {
-      "id": "Q008",
-      "principle": "元认知",
-      "type": "single",
-      "difficulty": "进阶",
-      "question": "元认知能力是人与人之间最根本的差距，因为它决定了？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "元认知决定了你能否主动升级心智'操作系统'，摆脱偏见和情绪的控制。"
-    },
-    {
-      "id": "Q009",
-      "principle": "承担责任",
-      "type": "single",
-      "difficulty": "基础",
-      "question": "个人成长操作系统的底层信念是？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "'我，且只有我，对我的人生负有100%的责任'是成长的底层信念。"
-    },
-    {
-      "id": "Q010",
-      "principle": "承担责任",
-      "type": "single",
-      "difficulty": "进阶",
-      "question": "为什么说抱怨是'弱者病毒'？",
-      "options": "[",
-      "answer": "C",
-      "explanation": "抱怨本质上是思维懒惰，放弃了'我能做什么'的可能性。"
-    },
-    {
-      "id": "Q011",
-      "principle": "承担责任",
-      "type": "multiple",
-      "difficulty": "应用",
-      "question": "将向外归因转为向内求索的正确做法包括？",
-      "options": "[",
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "向内求索是把注意力转向自己能控制的部分，而非被动接受。"
-    },
-    {
-      "id": "Q012",
-      "principle": "承担责任",
-      "type": "single",
-      "difficulty": "基础",
-      "question": "抱怨会导致什么恶性循环？",
-      "options": "[",
-      "answer": "A",
-      "explanation": "抱怨强化受害者心态，导致越来越不愿改变，形成恶性循环。"
-    },
-    {
-      "id": "Q013",
-      "principle": "承担责任",
-      "type": "single",
-      "difficulty": "应用",
-      "question": "想要抱怨时，应该问自己的第一个问题是？",
-      "options": "[",
-      "answer": "C",
-      "explanation": "启动元认知，评估抱怨是否有建设性，是阻止抱怨的第一步。"
-    },
-    {
-      "id": "Q014",
-      "principle": "承担责任",
-      "type": "multiple",
-      "difficulty": "进阶",
-      "question": "承担100%责任与自我苛责的区别在于？",
-      "options": "[",
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "承担责任是成长工具，自我苛责是情绪伤害，有本质区别。"
-    },
-    {
-      "id": "Q015",
-      "principle": "承担责任",
-      "type": "single",
-      "difficulty": "基础",
-      "question": "在个人成长操作系统里，没有哪个'程序'？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "抱怨这个'程序'在成长系统中应该被删除。"
-    },
-    {
-      "id": "Q016",
-      "principle": "承担责任",
-      "type": "single",
-      "difficulty": "应用",
-      "question": "'零抱怨挑战'的核心方法是？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "通过物理提醒和记录，逐步改变抱怨习惯。"
-    },
-    {
-      "id": "Q017",
-      "principle": "注意力",
-      "type": "single",
-      "difficulty": "基础",
-      "question": "个人资源的正确价值排序是？",
-      "options": "[",
-      "answer": "C",
-      "explanation": "注意力是唯一可完全掌控的、创造价值的入口，比时间和金钱更宝贵。"
-    },
-    {
-      "id": "Q018",
-      "principle": "注意力",
-      "type": "single",
-      "difficulty": "进阶",
-      "question": "为什么注意力比时间更宝贵？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "注意力是你创造价值的入口和杠杆，决定了时间的使用质量。"
-    },
-    {
-      "id": "Q019",
-      "principle": "注意力",
-      "type": "multiple",
-      "difficulty": "应用",
-      "question": "保护注意力的有效方法包括？",
-      "options": "[",
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "主动控制环境、量化价值、设备分离都是保护注意力的有效策略。"
-    },
-    {
-      "id": "Q020",
-      "principle": "注意力",
-      "type": "single",
-      "difficulty": "基础",
-      "question": "'专注是一种选择，而非能力'意味着？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "专注不是能力问题，而是价值选择问题。"
-    },
-    {
-      "id": "Q021",
-      "principle": "注意力",
-      "type": "single",
-      "difficulty": "进阶",
-      "question": "无法保持45分钟以上专注的人将面临什么？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "深度工作需要持续专注，这是创造核心价值的基础。"
-    },
-    {
-      "id": "Q022",
-      "principle": "注意力",
-      "type": "multiple",
-      "difficulty": "应用",
-      "question": "注意力应该优先投资在哪些'高价值活动'？",
-      "options": "[",
-      "answer": [
-        "A",
-        "C",
-        "D"
-      ],
-      "explanation": "学习、创造、关系都有复利效应，社交媒体多数是注意力黑洞。"
-    },
-    {
-      "id": "Q023",
-      "principle": "注意力",
-      "type": "single",
-      "difficulty": "基础",
-      "question": "将注意力浪费在凑热闹、随大流上等同于？",
-      "options": "[",
-      "answer": "C",
-      "explanation": "注意力是你最宝贵的生产资料，浪费它就是放弃创造价值的机会。"
-    },
-    {
-      "id": "Q024",
-      "principle": "注意力",
-      "type": "single",
-      "difficulty": "进阶",
-      "question": "算法的目的是什么？如何对抗？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "算法目标是劫持注意力，需要主动对抗，夺回控制权。"
-    },
-    {
-      "id": "Q025",
-      "principle": "复利",
-      "type": "single",
-      "difficulty": "基础",
-      "question": "定投策略的核心是？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "定投的本质是相信时间和复利的力量。"
-    },
-    {
-      "id": "Q026",
-      "principle": "复利",
-      "type": "multiple",
-      "difficulty": "应用",
-      "question": "定投思维应该应用在哪些领域？",
-      "options": "[",
-      "answer": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "explanation": "定投是一种普适的成长策略，适用于所有需要积累的领域。"
-    },
-    {
-      "id": "Q027",
-      "principle": "复利",
-      "type": "single",
-      "difficulty": "进阶",
-      "question": "什么是'微笑曲线'心态？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "在低谷时反而应该加大投入，因为'成本'更低。"
-    },
-    {
-      "id": "Q028",
-      "principle": "复利",
-      "type": "single",
-      "difficulty": "基础",
-      "question": "'1000小时定律'的含义是？",
-      "options": "[",
-      "answer": "C",
-      "explanation": "集中1000小时深度练习一项技能，是从入门到精通的基本要求。"
-    },
-    {
-      "id": "Q029",
-      "principle": "复利",
-      "type": "single",
-      "difficulty": "应用",
-      "question": "'生学硬练'为什么是最高效的学习方式？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "实践中的即时反馈是最好的老师。"
-    },
-    {
-      "id": "Q030",
-      "principle": "复利",
-      "type": "multiple",
-      "difficulty": "进阶",
-      "question": "追求速成的后果包括？",
-      "options": "[",
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "速成心态违背复利规律，导致无法积累真正的价值。"
-    },
-    {
-      "id": "Q031",
-      "principle": "复利",
-      "type": "single",
-      "difficulty": "基础",
-      "question": "每天进步1%，一年后的效果是？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "1.01^365 = 37.8，这就是复利的数学威力。"
-    },
-    {
-      "id": "Q032",
-      "principle": "复利",
-      "type": "single",
-      "difficulty": "应用",
-      "question": "如何度过复利曲线的拐点？",
-      "options": "[",
-      "answer": "C",
-      "explanation": "拐点是最容易放弃的时候，需要信念和支持系统。"
-    },
-    {
-      "id": "Q033",
-      "principle": "理想生活",
-      "type": "single",
-      "difficulty": "基础",
-      "question": "新时代创业的第一原则是？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "事业应该服务于生活，而不是相反。"
-    },
-    {
-      "id": "Q034",
-      "principle": "理想生活",
-      "type": "single",
-      "difficulty": "进阶",
-      "question": "正确的创业决策顺序是？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "以终为始，从理想生活倒推事业设计。"
-    },
-    {
-      "id": "Q035",
-      "principle": "理想生活",
-      "type": "multiple",
-      "difficulty": "应用",
-      "question": "'服务过去的自己'包含哪些步骤？",
-      "options": "[",
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "将自己的经历转化为产品，但不是免费，而是合理变现。"
-    },
-    {
-      "id": "Q036",
-      "principle": "理想生活",
-      "type": "single",
-      "difficulty": "基础",
-      "question": "高杠杆创业路径的起点是？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "从内容创作建立受众开始，是零成本高杠杆的起点。"
+      "explanation": "关键时刻和情绪激动时最需要元认知介入。"
     },
     {
       "id": "Q037",
-      "principle": "理想生活",
+      "principle": "元认知",
       "type": "single",
-      "difficulty": "进阶",
-      "question": "旧时代创业思维的最大陷阱是？",
+      "difficulty": "核心概念",
+      "question": "缺乏元认知的最大问题是？",
       "options": "[",
       "answer": "B",
-      "explanation": "失去生活质量的创业违背了创业的初衷。"
+      "explanation": "无法从经验中学习，一直被本能和情绪驱动。"
     },
     {
       "id": "Q038",
-      "principle": "理想生活",
+      "principle": "元认知",
+      "type": "single",
+      "difficulty": "实践应用",
+      "question": "每日反思应该包含哪个核心问题？",
+      "options": "[",
+      "answer": "B",
+      "explanation": "识别影响判断的因素是元认知的核心。"
+    },
+    {
+      "id": "Q039",
+      "principle": "元认知",
       "type": "multiple",
-      "difficulty": "应用",
+      "difficulty": "深度理解",
+      "question": "元认知的层次包括？",
+      "options": "[",
+      "answer": [
+        "A",
+        "B",
+        "D"
+      ],
+      "explanation": "从觉察到分析再到改造，逐层递进。"
+    },
+    {
+      "id": "Q040",
+      "principle": "元认知",
+      "type": "single",
+      "difficulty": "核心概念",
+      "question": "元认知让你能够？",
+      "options": "[",
+      "answer": "B",
+      "explanation": "像升级软件一样不断优化思维模式。"
+    },
+    {
+      "id": "Q041",
+      "principle": "创业哲学",
+      "type": "single",
+      "difficulty": "核心概念",
+      "question": "新时代创业的第一原则是？",
+      "options": "[",
+      "answer": "B",
+      "explanation": "创业是为了过想要的生活，不是换个地方996。"
+    },
+    {
+      "id": "Q042",
+      "principle": "创业哲学",
+      "type": "single",
+      "difficulty": "深度理解",
+      "question": "新型创业逻辑的正确顺序是？",
+      "options": "[",
+      "answer": "B",
+      "explanation": "工作与生活不分割，因为你靠'做自己'赚钱。"
+    },
+    {
+      "id": "Q043",
+      "principle": "创业哲学",
+      "type": "multiple",
+      "difficulty": "实践应用",
+      "question": "服务'过去的自己'包括哪些步骤？",
+      "options": "[",
+      "answer": [
+        "A",
+        "B",
+        "D"
+      ],
+      "explanation": "将自己的经历转化为产品，合理变现。"
+    },
+    {
+      "id": "Q044",
+      "principle": "创业哲学",
+      "type": "single",
+      "difficulty": "核心概念",
+      "question": "旧时代创业思维的最大陷阱是？",
+      "options": "[",
+      "answer": "B",
+      "explanation": "失去生活质量的创业违背了创业初衷。"
+    },
+    {
+      "id": "Q045",
+      "principle": "创业哲学",
+      "type": "single",
+      "difficulty": "深度理解",
+      "question": "'T型内容'策略是指？",
+      "options": "[",
+      "answer": "B",
+      "explanation": "80%专业内容建立权威，20%个人故事建立连接。"
+    },
+    {
+      "id": "Q046",
+      "principle": "创业哲学",
+      "type": "multiple",
+      "difficulty": "实践应用",
       "question": "描绘理想生活应该包含哪些维度？",
       "options": "[",
       "answer": [
         "A",
         "B",
-        "C"
+        "D"
       ],
-      "explanation": "理想生活是多维度的平衡，不只是收入。"
+      "explanation": "理想生活是多维度平衡，不只是收入。"
     },
     {
-      "id": "Q039",
-      "principle": "理想生活",
+      "id": "Q047",
+      "principle": "创业哲学",
       "type": "single",
-      "difficulty": "基础",
-      "question": "为什么将经历和兴趣融入事业能带来持续动力？",
+      "difficulty": "核心概念",
+      "question": "为什么要先定义生活再找赚钱方式？",
       "options": "[",
       "answer": "B",
-      "explanation": "内在驱动力远比外在激励更持久。"
+      "explanation": "以终为始，避免南辕北辙。"
     },
     {
-      "id": "Q040",
-      "principle": "理想生活",
+      "id": "Q048",
+      "principle": "创业哲学",
       "type": "single",
-      "difficulty": "应用",
-      "question": "如何确保事业与生活价值观对齐？",
+      "difficulty": "实践应用",
+      "question": "最小成本验证创业想法的第一步是？",
       "options": "[",
       "answer": "B",
-      "explanation": "需要定期复盘和调整，确保不偏离初心。"
+      "explanation": "零成本起步，用内容验证兴趣和市场。"
     },
     {
-      "id": "Q041",
-      "principle": "商业进化",
-      "type": "single",
-      "difficulty": "基础",
-      "question": "通往财富自由的三步进化路径是？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "这是个人商业模式的进化路径。"
-    },
-    {
-      "id": "Q042",
-      "principle": "商业进化",
-      "type": "single",
-      "difficulty": "进阶",
-      "question": "财富自由的本质是？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "财富自由的核心是时间自主权，而非金钱数量。"
-    },
-    {
-      "id": "Q043",
-      "principle": "商业进化",
+      "id": "Q049",
+      "principle": "创业哲学",
       "type": "multiple",
-      "difficulty": "应用",
-      "question": "在'单次出售时间'阶段，应该重点关注什么？",
+      "difficulty": "深度理解",
+      "question": "避免创业侵蚀生活的原则包括？",
       "options": "[",
       "answer": [
         "A",
         "B",
+        "D"
+      ],
+      "explanation": "平衡和边界是可持续创业的关键。"
+    },
+    {
+      "id": "Q050",
+      "principle": "创业哲学",
+      "type": "single",
+      "difficulty": "核心概念",
+      "question": "创业的终极目标是？",
+      "options": "[",
+      "answer": "B",
+      "explanation": "创业是为了成为想成为的人，过想过的生活。"
+    },
+    {
+      "id": "Q051",
+      "principle": "商业进化",
+      "type": "single",
+      "difficulty": "核心概念",
+      "question": "财富自由的本质是？",
+      "options": "[",
+      "answer": "B",
+      "explanation": "财富自由的核心是时间自主权。"
+    },
+    {
+      "id": "Q052",
+      "principle": "商业进化",
+      "type": "single",
+      "difficulty": "深度理解",
+      "question": "个人商业模式进化的三部曲是？",
+      "options": "[",
+      "answer": "B",
+      "explanation": "从单次出售到批量出售再到购买他人时间。"
+    },
+    {
+      "id": "Q053",
+      "principle": "商业进化",
+      "type": "multiple",
+      "difficulty": "实践应用",
+      "question": "在'卖时间'阶段应该重点关注什么？",
+      "options": "[",
+      "answer": [
+        "A",
+        "C",
         "D"
       ],
       "explanation": "第一阶段是为成长打工，不只为薪水。"
     },
     {
-      "id": "Q044",
+      "id": "Q054",
       "principle": "商业进化",
       "type": "single",
-      "difficulty": "基础",
+      "difficulty": "核心概念",
       "question": "什么是'睡后收入'？",
       "options": "[",
       "answer": "B",
-      "explanation": "产品化让你的时间投入能够重复产生收入。"
+      "explanation": "产品化让时间投入能重复产生收入。"
     },
     {
-      "id": "Q045",
+      "id": "Q055",
       "principle": "商业进化",
       "type": "single",
-      "difficulty": "应用",
+      "difficulty": "实践应用",
       "question": "进入第二站（产品化）的信号是？",
       "options": "[",
       "answer": "B",
-      "explanation": "技能成熟且时间瓶颈出现，是产品化的时机。"
+      "explanation": "技能成熟且时间瓶颈出现是产品化时机。"
     },
     {
-      "id": "Q046",
+      "id": "Q056",
       "principle": "商业进化",
       "type": "multiple",
-      "difficulty": "进阶",
-      "question": "长期停留在'单次出售时间'的后果？",
+      "difficulty": "深度理解",
+      "question": "长期停留在'卖时间'模式的后果？",
       "options": "[",
       "answer": [
         "A",
         "B",
         "D"
       ],
-      "explanation": "单次出售时间模式限制了财富积累和自由度。"
+      "explanation": "单次出售时间模式限制了财富积累。"
     },
     {
-      "id": "Q047",
+      "id": "Q057",
       "principle": "商业进化",
       "type": "single",
-      "difficulty": "基础",
-      "question": "第三站'购买他人时间'的方式包括？",
+      "difficulty": "核心概念",
+      "question": "第三站'买时间'的方式包括？",
       "options": "[",
-      "answer": "A",
+      "answer": "B",
       "explanation": "通过组织或资本让他人的时间为你创造价值。"
     },
     {
-      "id": "Q048",
+      "id": "Q058",
       "principle": "商业进化",
       "type": "single",
-      "difficulty": "应用",
-      "question": "三个进化阶段中，风险最高但增长潜力最大的是？",
-      "options": "[",
-      "answer": "C",
-      "explanation": "第三站需要资本和经验，风险高但能实现指数增长。"
-    },
-    {
-      "id": "Q049",
-      "principle": "建立受众",
-      "type": "single",
-      "difficulty": "基础",
-      "question": "为什么说所有创业都应该从建立受众开始？",
+      "difficulty": "实践应用",
+      "question": "如何平稳过渡到下一阶段？",
       "options": "[",
       "answer": "B",
-      "explanation": "建立受众是风险最低、杠杆最高的创业起点。"
+      "explanation": "渐进式过渡，降低风险。"
     },
     {
-      "id": "Q050",
-      "principle": "建立受众",
-      "type": "single",
-      "difficulty": "进阶",
-      "question": "'建受众'的本质是？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "核心是通过持续价值输出建立信任关系。"
-    },
-    {
-      "id": "Q051",
-      "principle": "建立受众",
+      "id": "Q059",
+      "principle": "商业进化",
       "type": "multiple",
-      "difficulty": "应用",
-      "question": "建受众过程中能免费学到哪些核心技能？",
+      "difficulty": "深度理解",
+      "question": "产品化的路径包括？",
       "options": "[",
       "answer": [
         "A",
         "B",
-        "C"
+        "D"
       ],
-      "explanation": "内容创作过程自然锻炼营销、写作、用户心理理解能力。"
+      "explanation": "数字产品实现一次创造，多次销售。"
     },
     {
-      "id": "Q052",
+      "id": "Q060",
+      "principle": "商业进化",
+      "type": "single",
+      "difficulty": "核心概念",
+      "question": "三个进化阶段中风险最高但潜力最大的是？",
+      "options": "[",
+      "answer": "C",
+      "explanation": "第三站需要资本和经验，但能实现指数增长。"
+    },
+    {
+      "id": "Q061",
       "principle": "建立受众",
       "type": "single",
-      "difficulty": "基础",
-      "question": "利用'费曼学习法'的核心是？",
+      "difficulty": "核心概念",
+      "question": "为什么说建立受众是最安全的创业起点？",
       "options": "[",
       "answer": "B",
-      "explanation": "教是最好的学，分享过程暴露知识盲区。"
+      "explanation": "这是风险最低、杠杆最高的创业方式。"
     },
     {
-      "id": "Q053",
+      "id": "Q062",
       "principle": "建立受众",
       "type": "single",
-      "difficulty": "应用",
+      "difficulty": "深度理解",
+      "question": "建立受众的本质是？",
+      "options": "[",
+      "answer": "B",
+      "explanation": "受众的核心是信任关系，不是数量。"
+    },
+    {
+      "id": "Q063",
+      "principle": "建立受众",
+      "type": "multiple",
+      "difficulty": "实践应用",
+      "question": "建受众过程中能学到哪些核心技能？",
+      "options": "[",
+      "answer": [
+        "A",
+        "B",
+        "D"
+      ],
+      "explanation": "内容创作自然锻炼营销、写作和用户心理理解。"
+    },
+    {
+      "id": "Q064",
+      "principle": "建立受众",
+      "type": "single",
+      "difficulty": "核心概念",
+      "question": "费曼学习法的核心是？",
+      "options": "[",
+      "answer": "B",
+      "explanation": "教是最好的学，分享过程暴露盲区。"
+    },
+    {
+      "id": "Q065",
+      "principle": "建立受众",
+      "type": "single",
+      "difficulty": "实践应用",
       "question": "受众规模小时的最佳变现策略是？",
       "options": "[",
       "answer": "B",
       "explanation": "早期通过高客单价的深度服务变现。"
     },
     {
-      "id": "Q054",
+      "id": "Q066",
       "principle": "建立受众",
       "type": "multiple",
-      "difficulty": "进阶",
+      "difficulty": "深度理解",
       "question": "没有受众就做电商的问题包括？",
       "options": "[",
       "answer": [
         "A",
         "B",
-        "C"
-      ],
-      "explanation": "无受众创业面临资金风险、信任缺失、学习成本高等问题。"
-    },
-    {
-      "id": "Q055",
-      "principle": "建立受众",
-      "type": "single",
-      "difficulty": "基础",
-      "question": "建立受众的内容策略核心是？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "持续提供价值比追求完美更重要。"
-    },
-    {
-      "id": "Q056",
-      "principle": "建立受众",
-      "type": "single",
-      "difficulty": "应用",
-      "question": "定义理想受众最简单的方法是？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "你最了解过去的自己，这是最精准的受众定位。"
-    },
-    {
-      "id": "Q057",
-      "principle": "模仿学习",
-      "type": "single",
-      "difficulty": "基础",
-      "question": "新手模仿的最大误区是？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "要研究成功者早期如何增长，而非现在如何维持。"
-    },
-    {
-      "id": "Q058",
-      "principle": "模仿学习",
-      "type": "single",
-      "difficulty": "进阶",
-      "question": "权威性如何影响内容策略？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "权威性决定了你能说什么类型的内容。"
-    },
-    {
-      "id": "Q059",
-      "principle": "模仿学习",
-      "type": "multiple",
-      "difficulty": "应用",
-      "question": "'考古'学习包括哪些步骤？",
-      "options": "[",
-      "answer": [
-        "A",
-        "B",
         "D"
       ],
-      "explanation": "学习的是模式和框架，不是复制内容。"
-    },
-    {
-      "id": "Q060",
-      "principle": "模仿学习",
-      "type": "single",
-      "difficulty": "基础",
-      "question": "新手内容应该有多少比例专注于解决问题？",
-      "options": "[",
-      "answer": "C",
-      "explanation": "新手80%的内容应该解决实际问题。"
-    },
-    {
-      "id": "Q061",
-      "principle": "模仿学习",
-      "type": "single",
-      "difficulty": "应用",
-      "question": "建立素材库的目的是？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "素材库是学习和迭代的工具，不是收藏夹。"
-    },
-    {
-      "id": "Q062",
-      "principle": "模仿学习",
-      "type": "single",
-      "difficulty": "进阶",
-      "question": "为什么新手发心灵鸡汤是'增长杀手'？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "无权威、无价值、无差异的内容无法吸引受众。"
-    },
-    {
-      "id": "Q063",
-      "principle": "模仿学习",
-      "type": "single",
-      "difficulty": "基础",
-      "question": "从'消费者'变成'研究者'的关键是？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "研究者关注的是'为什么'，而非'是什么'。"
-    },
-    {
-      "id": "Q064",
-      "principle": "模仿学习",
-      "type": "multiple",
-      "difficulty": "应用",
-      "question": "模仿和抄袭的区别在于？",
-      "options": "[",
-      "answer": [
-        "A",
-        "B",
-        "D"
-      ],
-      "explanation": "模仿是学习和创新，抄袭是偷窃。"
-    },
-    {
-      "id": "Q065",
-      "principle": "模仿学习",
-      "type": "single",
-      "difficulty": "进阶",
-      "question": "研究成功内容应该关注哪个方面？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "关注可复制的成功要素，而非表面现象。"
-    },
-    {
-      "id": "Q066",
-      "principle": "人际连接",
-      "type": "single",
-      "difficulty": "基础",
-      "question": "个人成长速度很大程度上取决于？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "你是你最常接触的5个人的平均值。"
+      "explanation": "无受众创业面临资金风险和信任缺失。"
     },
     {
       "id": "Q067",
-      "principle": "人际连接",
-      "type": "multiple",
-      "difficulty": "应用",
-      "question": "主动寻找导师的正确方法包括？",
+      "principle": "建立受众",
+      "type": "single",
+      "difficulty": "核心概念",
+      "question": "建立受众的内容策略核心是？",
       "options": "[",
-      "answer": [
-        "A",
-        "B",
-        "D"
-      ],
-      "explanation": "尊重导师时间，提供价值交换，认真执行建议。"
+      "answer": "B",
+      "explanation": "持续提供价值比完美更重要。"
     },
     {
       "id": "Q068",
-      "principle": "人际连接",
+      "principle": "建立受众",
       "type": "single",
-      "difficulty": "基础",
-      "question": "理想的'成长小组'规模是？",
+      "difficulty": "实践应用",
+      "question": "定义理想受众最简单的方法是？",
       "options": "[",
       "answer": "B",
-      "explanation": "3-5人既能深入交流，又有足够多样性。"
+      "explanation": "你最了解过去的自己，这是最精准的定位。"
     },
     {
       "id": "Q069",
-      "principle": "人际连接",
-      "type": "single",
-      "difficulty": "进阶",
-      "question": "践行利他主义的核心思维转换是？",
+      "principle": "建立受众",
+      "type": "multiple",
+      "difficulty": "深度理解",
+      "question": "受众的复利效应体现在？",
       "options": "[",
-      "answer": "A",
-      "explanation": "利他是最好的利己，先给予才能收获。"
+      "answer": [
+        "A",
+        "B",
+        "D"
+      ],
+      "explanation": "时间越长，受众价值越大。"
     },
     {
       "id": "Q070",
-      "principle": "人际连接",
-      "type": "multiple",
-      "difficulty": "应用",
-      "question": "闭门造车的代价包括？",
+      "principle": "建立受众",
+      "type": "single",
+      "difficulty": "核心概念",
+      "question": "为什么说受众是最重要的商业资产？",
       "options": "[",
-      "answer": [
-        "A",
-        "B",
-        "D"
-      ],
-      "explanation": "孤立会限制视野、反馈和机会。"
+      "answer": "B",
+      "explanation": "受众是所有未来项目的流量池和信任基础。"
     },
     {
       "id": "Q071",
-      "principle": "人际连接",
+      "principle": "长期主义",
       "type": "single",
-      "difficulty": "基础",
-      "question": "人际连接的最深层次是？",
+      "difficulty": "核心概念",
+      "question": "长期主义的两大支柱是？",
       "options": "[",
-      "answer": "C",
-      "explanation": "共创是最深度的连接，创造共同价值。"
+      "answer": "B",
+      "explanation": "模仿加速起步，定投确保终局。"
     },
     {
       "id": "Q072",
-      "principle": "人际连接",
+      "principle": "长期主义",
       "type": "single",
-      "difficulty": "进阶",
-      "question": "维护人际网络的核心原则是？",
+      "difficulty": "深度理解",
+      "question": "聪明模仿的核心是？",
       "options": "[",
       "answer": "B",
-      "explanation": "高质量的深度连接比表面社交更有价值。"
+      "explanation": "学习成功背后的逻辑，而非表面形式。"
     },
     {
       "id": "Q073",
-      "principle": "人际连接",
-      "type": "single",
-      "difficulty": "应用",
-      "question": "建立高质量连接的首要原则是？",
+      "principle": "长期主义",
+      "type": "multiple",
+      "difficulty": "实践应用",
+      "question": "建立素材库的步骤包括？",
       "options": "[",
-      "answer": "B",
-      "explanation": "真诚是建立信任和深度连接的基础。"
+      "answer": [
+        "A",
+        "B",
+        "D"
+      ],
+      "explanation": "素材库是学习和迭代的工具。"
     },
     {
       "id": "Q074",
-      "principle": "精力管理",
+      "principle": "长期主义",
       "type": "single",
-      "difficulty": "基础",
-      "question": "为什么说健康是最重要的投资？",
+      "difficulty": "核心概念",
+      "question": "'1000小时定律'是指？",
       "options": "[",
       "answer": "B",
-      "explanation": "身体是承载一切的容器，精力决定产出质量。"
+      "explanation": "深度投入是从入门到精通的必经之路。"
     },
     {
       "id": "Q075",
-      "principle": "精力管理",
+      "principle": "长期主义",
       "type": "single",
-      "difficulty": "进阶",
-      "question": "为什么精力比时间更重要？",
+      "difficulty": "深度理解",
+      "question": "定投思维应该应用在哪些领域？",
       "options": "[",
       "answer": "B",
-      "explanation": "同样的时间，不同精力状态产出天差地别。"
+      "explanation": "定投是普适的成长策略。"
     },
     {
       "id": "Q076",
-      "principle": "精力管理",
+      "principle": "长期主义",
       "type": "multiple",
-      "difficulty": "应用",
-      "question": "优化睡眠的方法包括？",
+      "difficulty": "实践应用",
+      "question": "追求速成的后果包括？",
       "options": "[",
       "answer": [
         "A",
         "B",
         "D"
       ],
-      "explanation": "规律、仪式、环境都重要，屏幕会干扰睡眠。"
+      "explanation": "速成心态违背复利规律，导致无法积累。"
     },
     {
       "id": "Q077",
-      "principle": "精力管理",
+      "principle": "长期主义",
       "type": "single",
-      "difficulty": "基础",
-      "question": "哪些食物会'偷走'精力？",
+      "difficulty": "核心概念",
+      "question": "每天进步1%，一年后的效果是？",
       "options": "[",
       "answer": "B",
-      "explanation": "高糖造成血糖波动，精加工食品增加消化负担。"
+      "explanation": "1.01^365=37.8，这是复利的数学威力。"
     },
     {
       "id": "Q078",
-      "principle": "精力管理",
+      "principle": "长期主义",
       "type": "single",
-      "difficulty": "应用",
-      "question": "将运动整合进日常的关键原则是？",
+      "difficulty": "实践应用",
+      "question": "如何度过复利曲线的拐点？",
       "options": "[",
       "answer": "B",
-      "explanation": "规律性比强度更重要，降低阻力持续执行。"
+      "explanation": "拐点需要信念和支持系统才能坚持。"
     },
     {
       "id": "Q079",
-      "principle": "精力管理",
+      "principle": "长期主义",
       "type": "multiple",
-      "difficulty": "进阶",
-      "question": "透支健康换事业的后果包括？",
+      "difficulty": "深度理解",
+      "question": "个人成长定投计划应包括？",
       "options": "[",
       "answer": [
         "A",
         "B",
         "D"
       ],
-      "explanation": "健康透支导致全方位能力下降，得不偿失。"
+      "explanation": "规律性和持续性是定投的关键。"
     },
     {
       "id": "Q080",
-      "principle": "精力管理",
+      "principle": "长期主义",
       "type": "single",
-      "difficulty": "基础",
-      "question": "精力管理的四大支柱是？",
+      "difficulty": "核心概念",
+      "question": "'微笑曲线'心态是指？",
       "options": "[",
       "answer": "B",
-      "explanation": "四个维度的精力需要平衡发展。"
-    },
-    {
-      "id": "Q081",
-      "principle": "精力管理",
-      "type": "single",
-      "difficulty": "应用",
-      "question": "如何利用精力节奏提高效率？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "顺应生物节律，合理分配任务类型。"
-    },
-    {
-      "id": "Q082",
-      "principle": "杠杆思维",
-      "type": "single",
-      "difficulty": "基础",
-      "question": "很多新手创业的结果是？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "无杠杆思维导致创业变成自我雇佣。"
-    },
-    {
-      "id": "Q083",
-      "principle": "杠杆思维",
-      "type": "single",
-      "difficulty": "进阶",
-      "question": "陷入'无杠杆陷阱'的根源是？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "像找工作一样选项目，而非从理想生活出发。"
-    },
-    {
-      "id": "Q084",
-      "principle": "杠杆思维",
-      "type": "multiple",
-      "difficulty": "应用",
-      "question": "商业模式中的杠杆类型包括？",
-      "options": "[",
-      "answer": [
-        "A",
-        "B",
-        "D"
-      ],
-      "explanation": "真正的杠杆让产出与投入不成正比。"
-    },
-    {
-      "id": "Q085",
-      "principle": "杠杆思维",
-      "type": "single",
-      "difficulty": "基础",
-      "question": "从服务升级到产品的目的是？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "产品化实现时间与收入脱钩。"
-    },
-    {
-      "id": "Q086",
-      "principle": "杠杆思维",
-      "type": "single",
-      "difficulty": "应用",
-      "question": "'以终为始'设计商业模式的第一步是？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "从理想生活倒推商业模式设计。"
-    },
-    {
-      "id": "Q087",
-      "principle": "杠杆思维",
-      "type": "multiple",
-      "difficulty": "进阶",
-      "question": "无杠杆生意的特征包括？",
-      "options": "[",
-      "answer": [
-        "A",
-        "B",
-        "D"
-      ],
-      "explanation": "无杠杆意味着线性增长和持续投入。"
-    },
-    {
-      "id": "Q088",
-      "principle": "杠杆思维",
-      "type": "single",
-      "difficulty": "基础",
-      "question": "评估杠杆潜力最重要的指标是？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "边际成本决定了规模化的可能性。"
-    },
-    {
-      "id": "Q089",
-      "principle": "杠杆思维",
-      "type": "single",
-      "difficulty": "应用",
-      "question": "有杠杆生意的典型例子是？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "在线课程一次制作，无限销售，边际成本接近零。"
-    },
-    {
-      "id": "Q090",
-      "principle": "杠杆思维",
-      "type": "single",
-      "difficulty": "进阶",
-      "question": "如何避免创业变成另一份工作？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "杠杆思维是避免自我雇佣的关键。"
-    },
-    {
-      "id": "Q091",
-      "principle": "个人品牌",
-      "type": "single",
-      "difficulty": "基础",
-      "question": "年轻人最值得投入的生意是？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "你的独特经历和成长就是最好的生意。"
-    },
-    {
-      "id": "Q092",
-      "principle": "个人品牌",
-      "type": "single",
-      "difficulty": "进阶",
-      "question": "新模式如何颠覆传统创业逻辑？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "不用选择领域，你本身就是独特领域。"
-    },
-    {
-      "id": "Q093",
-      "principle": "个人品牌",
-      "type": "multiple",
-      "difficulty": "应用",
-      "question": "把自身问题变成生意的步骤？",
-      "options": "[",
-      "answer": [
-        "A",
-        "B",
-        "D"
-      ],
-      "explanation": "真实经历（包括失败）都是产品素材。"
-    },
-    {
-      "id": "Q094",
-      "principle": "个人品牌",
-      "type": "single",
-      "difficulty": "基础",
-      "question": "'活成领域本身'意味着？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "人们关注的是你这个人，不只是内容。"
-    },
-    {
-      "id": "Q095",
-      "principle": "个人品牌",
-      "type": "single",
-      "difficulty": "进阶",
-      "question": "为什么小众不等于没市场？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "独特性带来精准受众和无法复制的优势。"
-    },
-    {
-      "id": "Q096",
-      "principle": "个人品牌",
-      "type": "single",
-      "difficulty": "应用",
-      "question": "Work-Life Integration的含义是？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "当事业就是做自己时，工作生活融为一体。"
-    },
-    {
-      "id": "Q097",
-      "principle": "个人品牌",
-      "type": "multiple",
-      "difficulty": "进阶",
-      "question": "'打工人思维'创业的问题？",
-      "options": "[",
-      "answer": [
-        "A",
-        "B",
-        "D"
-      ],
-      "explanation": "跟风创业缺乏内在动力和独特价值。"
-    },
-    {
-      "id": "Q098",
-      "principle": "个人品牌",
-      "type": "single",
-      "difficulty": "基础",
-      "question": "构建个人品牌最核心的要素是？",
-      "options": "[",
-      "answer": "B",
-      "explanation": "独特性和价值观是品牌的灵魂。"
-    },
-    {
-      "id": "Q099",
-      "principle": "综合应用",
-      "type": "multiple",
-      "difficulty": "进阶",
-      "question": "12条原则的底层逻辑包括？",
-      "options": "[",
-      "answer": [
-        "A",
-        "B",
-        "D"
-      ],
-      "explanation": "12原则相互支撑形成完整系统，不是独立的。"
-    },
-    {
-      "id": "Q100",
-      "principle": "综合应用",
-      "type": "multiple",
-      "difficulty": "应用",
-      "question": "面对重要选择时，应该考虑哪些原则？",
-      "options": "[",
-      "answer": [
-        "A",
-        "B",
-        "D"
-      ],
-      "explanation": "综合运用多个原则做决策，而非单一维度。"
+      "explanation": "在低谷时反而应该加大投入。"
     }
   ],
   "questions_by_principle": {
-    "元认知": [
+    "你就是生意": [
       {
         "id": "Q001",
-        "principle": "元认知",
+        "principle": "你就是生意",
         "type": "single",
-        "difficulty": "基础",
-        "question": "元认知的本质是什么？",
+        "difficulty": "核心概念",
+        "question": "对年轻人来说，最好的生意是什么？",
         "options": "[",
         "answer": "B",
-        "explanation": "元认知是'对思考过程的认知'，像一个内置的监控程序，让你能从更高维度审视自己的想法。"
+        "explanation": "你的经历、兴趣、成长就是独一无二的'赛道'，创业就是把解决自己问题的方法，卖给'过去的自己'。"
       },
       {
         "id": "Q002",
-        "principle": "元认知",
+        "principle": "你就是生意",
         "type": "multiple",
-        "difficulty": "进阶",
-        "question": "以下哪些是锻炼元认知的有效方法？",
+        "difficulty": "深度理解",
+        "question": "高杠杆创业路径包括哪些步骤？",
+        "options": "[",
+        "answer": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "explanation": "内容→服务→产品→公司，这是一个循序渐进的高杠杆路径。"
+      },
+      {
+        "id": "Q003",
+        "principle": "你就是生意",
+        "type": "single",
+        "difficulty": "实践应用",
+        "question": "执行'先定义理想生活，再找赚钱方式'的第一步是？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "先有清晰的生活愿景，才能设计匹配的商业模式。"
+      },
+      {
+        "id": "Q004",
+        "principle": "你就是生意",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "盲目跟风创业最可能导致什么结果？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "没有独特优势和内在动力，只会陷入更累的打工状态。"
+      },
+      {
+        "id": "Q005",
+        "principle": "你就是生意",
+        "type": "multiple",
+        "difficulty": "实践应用",
+        "question": "把解决自己问题的方法产品化需要哪些步骤？",
         "options": "[",
         "answer": [
           "A",
           "B",
           "C"
         ],
-        "explanation": "冥想、反思决策、写作都是直接锻炼元认知的方法。单纯阅读虽有益，但不直接锻炼元认知能力。"
-      },
-      {
-        "id": "Q003",
-        "principle": "元认知",
-        "type": "single",
-        "difficulty": "应用",
-        "question": "当你情绪激动想要争论时，元认知的正确应用是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "元认知要求我们跳出情绪和立场，从更高维度审视思维过程。"
-      },
-      {
-        "id": "Q004",
-        "principle": "元认知",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "缺乏元认知的最大问题是？",
-        "options": "[",
-        "answer": "C",
-        "explanation": "没有元认知，你的'思考'只是'情绪的自动反应'，无法做出理性决策。"
-      },
-      {
-        "id": "Q005",
-        "principle": "元认知",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "为什么说写作是'思考的磨刀石'？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "写作过程强制你组织逻辑、发现矛盾，是检验和提升思维质量的最佳工具。"
+        "explanation": "真实的问题和解决方案是产品化的基础，包括失败经历都是宝贵素材。"
       },
       {
         "id": "Q006",
+        "principle": "你就是生意",
+        "type": "single",
+        "difficulty": "深度理解",
+        "question": "为什么说你的经历是'独一无二的赛道'？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "每个人的经历组合都是独特的，这种独特性就是你的护城河。"
+      },
+      {
+        "id": "Q007",
+        "principle": "你就是生意",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "新型创业与传统创业的本质区别是？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "新型创业是成为生意本身，而非寻找外部项目。"
+      },
+      {
+        "id": "Q008",
+        "principle": "你就是生意",
+        "type": "multiple",
+        "difficulty": "实践应用",
+        "question": "日常践行'你就是生意'的方法包括？",
+        "options": "[",
+        "answer": [
+          "A",
+          "B",
+          "D"
+        ],
+        "explanation": "透明化成长过程，持续积累价值，建立连接。"
+      },
+      {
+        "id": "Q009",
+        "principle": "你就是生意",
+        "type": "single",
+        "difficulty": "深度理解",
+        "question": "投资自己的最大优势是？",
+        "options": "[",
+        "answer": "C",
+        "explanation": "这是唯一不会贬值、不会被夺走的财富。"
+      },
+      {
+        "id": "Q010",
+        "principle": "你就是生意",
+        "type": "single",
+        "difficulty": "实践应用",
+        "question": "服务'过去的自己'的核心价值在于？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "亲身经历让你成为最懂这个群体的人。"
+      }
+    ],
+    "注意力价值": [
+      {
+        "id": "Q011",
+        "principle": "注意力价值",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "个人资源的正确价值排序是？",
+        "options": "[",
+        "answer": "C",
+        "explanation": "注意力是最宝贵的资源，决定了人生走向。"
+      },
+      {
+        "id": "Q012",
+        "principle": "注意力价值",
+        "type": "single",
+        "difficulty": "深度理解",
+        "question": "为什么注意力比时间更宝贵？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "同样的时间，不同的注意力质量产出天差地别。"
+      },
+      {
+        "id": "Q013",
+        "principle": "注意力价值",
+        "type": "multiple",
+        "difficulty": "实践应用",
+        "question": "保护注意力的有效方法包括？",
+        "options": "[",
+        "answer": [
+          "A",
+          "B",
+          "D"
+        ],
+        "explanation": "主动掌控环境，量化价值，过滤干扰。"
+      },
+      {
+        "id": "Q014",
+        "principle": "注意力价值",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "无法保持45分钟以上专注会导致什么？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "深度工作能力是未来核心竞争力的基础。"
+      },
+      {
+        "id": "Q015",
+        "principle": "注意力价值",
+        "type": "single",
+        "difficulty": "深度理解",
+        "question": "算法的目的和我们的对抗策略是？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "认清算法本质，主动夺回注意力控制权。"
+      },
+      {
+        "id": "Q016",
+        "principle": "注意力价值",
+        "type": "multiple",
+        "difficulty": "实践应用",
+        "question": "注意力应该优先投资在哪些领域？",
+        "options": "[",
+        "answer": [
+          "A",
+          "C",
+          "D"
+        ],
+        "explanation": "投资在有复利效应的高价值活动上。"
+      },
+      {
+        "id": "Q017",
+        "principle": "注意力价值",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "被短视频和八卦劫持注意力的后果是？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "注意力被劫持等于人生被劫持。"
+      },
+      {
+        "id": "Q018",
+        "principle": "注意力价值",
+        "type": "single",
+        "difficulty": "实践应用",
+        "question": "如何给注意力定价？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "用经济学思维管理注意力，确保高价值投入。"
+      },
+      {
+        "id": "Q019",
+        "principle": "注意力价值",
+        "type": "multiple",
+        "difficulty": "深度理解",
+        "question": "哪些是隐形的注意力杀手？",
+        "options": "[",
+        "answer": [
+          "A",
+          "B",
+          "D"
+        ],
+        "explanation": "看似有用实则消耗巨大的活动。"
+      },
+      {
+        "id": "Q020",
+        "principle": "注意力价值",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "价值观在注意力管理中的作用是？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "清晰的价值观是最好的注意力过滤器。"
+      }
+    ],
+    "100%责任": [
+      {
+        "id": "Q021",
+        "principle": "100%责任",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "个人成长操作系统的底层信念是？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "这是成长系统的底层信念，没有'抱怨'这个程序。"
+      },
+      {
+        "id": "Q022",
+        "principle": "100%责任",
+        "type": "single",
+        "difficulty": "深度理解",
+        "question": "为什么说抱怨是'弱者病毒'？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "抱怨本质是思维懒惰，强化受害者心态。"
+      },
+      {
+        "id": "Q023",
+        "principle": "100%责任",
+        "type": "multiple",
+        "difficulty": "实践应用",
+        "question": "戒掉抱怨的有效方法包括？",
+        "options": "[",
+        "answer": [
+          "A",
+          "B",
+          "C"
+        ],
+        "explanation": "把抱怨的能量转化为改变的动力，而非压抑情绪。"
+      },
+      {
+        "id": "Q024",
+        "principle": "100%责任",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "向内求索的核心是？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "专注于自己能改变的，而非抱怨不能改变的。"
+      },
+      {
+        "id": "Q025",
+        "principle": "100%责任",
+        "type": "single",
+        "difficulty": "深度理解",
+        "question": "主动进化思维的特征是？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "主动创造成长压力，成为变化的推动者。"
+      },
+      {
+        "id": "Q026",
+        "principle": "100%责任",
+        "type": "multiple",
+        "difficulty": "实践应用",
+        "question": "100%责任包含哪些方面？",
+        "options": "[",
+        "answer": [
+          "A",
+          "C",
+          "D"
+        ],
+        "explanation": "对自己能控制的部分负全责，不包括他人的选择。"
+      },
+      {
+        "id": "Q027",
+        "principle": "100%责任",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "抱怨会导致什么恶性循环？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "抱怨强化受害者心态，形成越来越糟的循环。"
+      },
+      {
+        "id": "Q028",
+        "principle": "100%责任",
+        "type": "single",
+        "difficulty": "实践应用",
+        "question": "将'为什么没人帮我'转换为？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "从索取思维转向价值交换思维。"
+      },
+      {
+        "id": "Q029",
+        "principle": "100%责任",
+        "type": "multiple",
+        "difficulty": "深度理解",
+        "question": "承担责任与自我苛责的区别在于？",
+        "options": "[",
+        "answer": [
+          "A",
+          "B",
+          "C"
+        ],
+        "explanation": "承担责任是理性的成长工具，自我苛责是情绪化伤害。"
+      },
+      {
+        "id": "Q030",
+        "principle": "100%责任",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "为什么说承担责任就是获得自由？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "主动承担责任才能主动创造，获得真正的自由。"
+      }
+    ],
+    "元认知": [
+      {
+        "id": "Q031",
+        "principle": "元认知",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "元认知的本质是什么？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "元认知是'对思考过程的认知'，让你能审视自己的想法。"
+      },
+      {
+        "id": "Q032",
+        "principle": "元认知",
+        "type": "single",
+        "difficulty": "深度理解",
+        "question": "为什么说没有元认知就是大脑的奴隶？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "没有元认知，你的'思考'只是'情绪的自动反应'。"
+      },
+      {
+        "id": "Q033",
         "principle": "元认知",
         "type": "multiple",
-        "difficulty": "应用",
+        "difficulty": "实践应用",
+        "question": "锻炼元认知的有效方法包括？",
+        "options": "[",
+        "answer": [
+          "A",
+          "B",
+          "D"
+        ],
+        "explanation": "冥想、反思、写作都直接锻炼元认知能力。"
+      },
+      {
+        "id": "Q034",
+        "principle": "元认知",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "冥想如何帮助提升元认知？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "冥想是元认知的'健身房'，专门训练觉察能力。"
+      },
+      {
+        "id": "Q035",
+        "principle": "元认知",
+        "type": "single",
+        "difficulty": "深度理解",
+        "question": "写作为什么是'思考的磨刀石'？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "写作过程暴露并修正思维偏差。"
+      },
+      {
+        "id": "Q036",
+        "principle": "元认知",
+        "type": "multiple",
+        "difficulty": "实践应用",
         "question": "日常生活中启动元认知的最佳时机包括？",
         "options": "[",
         "answer": [
@@ -1225,1788 +1360,1250 @@
           "B",
           "D"
         ],
-        "explanation": "决策、失败反思、学习都是需要元认知介入的关键时刻。心情愉悦时不是必需的触发点。"
-      },
-      {
-        "id": "Q007",
-        "principle": "元认知",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "'坐享'（冥想）如何帮助提升元认知？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "冥想是元认知的'健身房'，专门训练觉察和控制思维的能力。"
-      },
-      {
-        "id": "Q008",
-        "principle": "元认知",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "元认知能力是人与人之间最根本的差距，因为它决定了？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "元认知决定了你能否主动升级心智'操作系统'，摆脱偏见和情绪的控制。"
-      }
-    ],
-    "承担责任": [
-      {
-        "id": "Q009",
-        "principle": "承担责任",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "个人成长操作系统的底层信念是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "'我，且只有我，对我的人生负有100%的责任'是成长的底层信念。"
-      },
-      {
-        "id": "Q010",
-        "principle": "承担责任",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "为什么说抱怨是'弱者病毒'？",
-        "options": "[",
-        "answer": "C",
-        "explanation": "抱怨本质上是思维懒惰，放弃了'我能做什么'的可能性。"
-      },
-      {
-        "id": "Q011",
-        "principle": "承担责任",
-        "type": "multiple",
-        "difficulty": "应用",
-        "question": "将向外归因转为向内求索的正确做法包括？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "C"
-        ],
-        "explanation": "向内求索是把注意力转向自己能控制的部分，而非被动接受。"
-      },
-      {
-        "id": "Q012",
-        "principle": "承担责任",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "抱怨会导致什么恶性循环？",
-        "options": "[",
-        "answer": "A",
-        "explanation": "抱怨强化受害者心态，导致越来越不愿改变，形成恶性循环。"
-      },
-      {
-        "id": "Q013",
-        "principle": "承担责任",
-        "type": "single",
-        "difficulty": "应用",
-        "question": "想要抱怨时，应该问自己的第一个问题是？",
-        "options": "[",
-        "answer": "C",
-        "explanation": "启动元认知，评估抱怨是否有建设性，是阻止抱怨的第一步。"
-      },
-      {
-        "id": "Q014",
-        "principle": "承担责任",
-        "type": "multiple",
-        "difficulty": "进阶",
-        "question": "承担100%责任与自我苛责的区别在于？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "C"
-        ],
-        "explanation": "承担责任是成长工具，自我苛责是情绪伤害，有本质区别。"
-      },
-      {
-        "id": "Q015",
-        "principle": "承担责任",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "在个人成长操作系统里，没有哪个'程序'？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "抱怨这个'程序'在成长系统中应该被删除。"
-      },
-      {
-        "id": "Q016",
-        "principle": "承担责任",
-        "type": "single",
-        "difficulty": "应用",
-        "question": "'零抱怨挑战'的核心方法是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "通过物理提醒和记录，逐步改变抱怨习惯。"
-      }
-    ],
-    "注意力": [
-      {
-        "id": "Q017",
-        "principle": "注意力",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "个人资源的正确价值排序是？",
-        "options": "[",
-        "answer": "C",
-        "explanation": "注意力是唯一可完全掌控的、创造价值的入口，比时间和金钱更宝贵。"
-      },
-      {
-        "id": "Q018",
-        "principle": "注意力",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "为什么注意力比时间更宝贵？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "注意力是你创造价值的入口和杠杆，决定了时间的使用质量。"
-      },
-      {
-        "id": "Q019",
-        "principle": "注意力",
-        "type": "multiple",
-        "difficulty": "应用",
-        "question": "保护注意力的有效方法包括？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "C"
-        ],
-        "explanation": "主动控制环境、量化价值、设备分离都是保护注意力的有效策略。"
-      },
-      {
-        "id": "Q020",
-        "principle": "注意力",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "'专注是一种选择，而非能力'意味着？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "专注不是能力问题，而是价值选择问题。"
-      },
-      {
-        "id": "Q021",
-        "principle": "注意力",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "无法保持45分钟以上专注的人将面临什么？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "深度工作需要持续专注，这是创造核心价值的基础。"
-      },
-      {
-        "id": "Q022",
-        "principle": "注意力",
-        "type": "multiple",
-        "difficulty": "应用",
-        "question": "注意力应该优先投资在哪些'高价值活动'？",
-        "options": "[",
-        "answer": [
-          "A",
-          "C",
-          "D"
-        ],
-        "explanation": "学习、创造、关系都有复利效应，社交媒体多数是注意力黑洞。"
-      },
-      {
-        "id": "Q023",
-        "principle": "注意力",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "将注意力浪费在凑热闹、随大流上等同于？",
-        "options": "[",
-        "answer": "C",
-        "explanation": "注意力是你最宝贵的生产资料，浪费它就是放弃创造价值的机会。"
-      },
-      {
-        "id": "Q024",
-        "principle": "注意力",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "算法的目的是什么？如何对抗？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "算法目标是劫持注意力，需要主动对抗，夺回控制权。"
-      }
-    ],
-    "复利": [
-      {
-        "id": "Q025",
-        "principle": "复利",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "定投策略的核心是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "定投的本质是相信时间和复利的力量。"
-      },
-      {
-        "id": "Q026",
-        "principle": "复利",
-        "type": "multiple",
-        "difficulty": "应用",
-        "question": "定投思维应该应用在哪些领域？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "explanation": "定投是一种普适的成长策略，适用于所有需要积累的领域。"
-      },
-      {
-        "id": "Q027",
-        "principle": "复利",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "什么是'微笑曲线'心态？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "在低谷时反而应该加大投入，因为'成本'更低。"
-      },
-      {
-        "id": "Q028",
-        "principle": "复利",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "'1000小时定律'的含义是？",
-        "options": "[",
-        "answer": "C",
-        "explanation": "集中1000小时深度练习一项技能，是从入门到精通的基本要求。"
-      },
-      {
-        "id": "Q029",
-        "principle": "复利",
-        "type": "single",
-        "difficulty": "应用",
-        "question": "'生学硬练'为什么是最高效的学习方式？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "实践中的即时反馈是最好的老师。"
-      },
-      {
-        "id": "Q030",
-        "principle": "复利",
-        "type": "multiple",
-        "difficulty": "进阶",
-        "question": "追求速成的后果包括？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "C"
-        ],
-        "explanation": "速成心态违背复利规律，导致无法积累真正的价值。"
-      },
-      {
-        "id": "Q031",
-        "principle": "复利",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "每天进步1%，一年后的效果是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "1.01^365 = 37.8，这就是复利的数学威力。"
-      },
-      {
-        "id": "Q032",
-        "principle": "复利",
-        "type": "single",
-        "difficulty": "应用",
-        "question": "如何度过复利曲线的拐点？",
-        "options": "[",
-        "answer": "C",
-        "explanation": "拐点是最容易放弃的时候，需要信念和支持系统。"
-      }
-    ],
-    "理想生活": [
-      {
-        "id": "Q033",
-        "principle": "理想生活",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "新时代创业的第一原则是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "事业应该服务于生活，而不是相反。"
-      },
-      {
-        "id": "Q034",
-        "principle": "理想生活",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "正确的创业决策顺序是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "以终为始，从理想生活倒推事业设计。"
-      },
-      {
-        "id": "Q035",
-        "principle": "理想生活",
-        "type": "multiple",
-        "difficulty": "应用",
-        "question": "'服务过去的自己'包含哪些步骤？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "C"
-        ],
-        "explanation": "将自己的经历转化为产品，但不是免费，而是合理变现。"
-      },
-      {
-        "id": "Q036",
-        "principle": "理想生活",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "高杠杆创业路径的起点是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "从内容创作建立受众开始，是零成本高杠杆的起点。"
+        "explanation": "关键时刻和情绪激动时最需要元认知介入。"
       },
       {
         "id": "Q037",
-        "principle": "理想生活",
+        "principle": "元认知",
         "type": "single",
-        "difficulty": "进阶",
-        "question": "旧时代创业思维的最大陷阱是？",
+        "difficulty": "核心概念",
+        "question": "缺乏元认知的最大问题是？",
         "options": "[",
         "answer": "B",
-        "explanation": "失去生活质量的创业违背了创业的初衷。"
+        "explanation": "无法从经验中学习，一直被本能和情绪驱动。"
       },
       {
         "id": "Q038",
-        "principle": "理想生活",
+        "principle": "元认知",
+        "type": "single",
+        "difficulty": "实践应用",
+        "question": "每日反思应该包含哪个核心问题？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "识别影响判断的因素是元认知的核心。"
+      },
+      {
+        "id": "Q039",
+        "principle": "元认知",
         "type": "multiple",
-        "difficulty": "应用",
+        "difficulty": "深度理解",
+        "question": "元认知的层次包括？",
+        "options": "[",
+        "answer": [
+          "A",
+          "B",
+          "D"
+        ],
+        "explanation": "从觉察到分析再到改造，逐层递进。"
+      },
+      {
+        "id": "Q040",
+        "principle": "元认知",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "元认知让你能够？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "像升级软件一样不断优化思维模式。"
+      }
+    ],
+    "创业哲学": [
+      {
+        "id": "Q041",
+        "principle": "创业哲学",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "新时代创业的第一原则是？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "创业是为了过想要的生活，不是换个地方996。"
+      },
+      {
+        "id": "Q042",
+        "principle": "创业哲学",
+        "type": "single",
+        "difficulty": "深度理解",
+        "question": "新型创业逻辑的正确顺序是？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "工作与生活不分割，因为你靠'做自己'赚钱。"
+      },
+      {
+        "id": "Q043",
+        "principle": "创业哲学",
+        "type": "multiple",
+        "difficulty": "实践应用",
+        "question": "服务'过去的自己'包括哪些步骤？",
+        "options": "[",
+        "answer": [
+          "A",
+          "B",
+          "D"
+        ],
+        "explanation": "将自己的经历转化为产品，合理变现。"
+      },
+      {
+        "id": "Q044",
+        "principle": "创业哲学",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "旧时代创业思维的最大陷阱是？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "失去生活质量的创业违背了创业初衷。"
+      },
+      {
+        "id": "Q045",
+        "principle": "创业哲学",
+        "type": "single",
+        "difficulty": "深度理解",
+        "question": "'T型内容'策略是指？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "80%专业内容建立权威，20%个人故事建立连接。"
+      },
+      {
+        "id": "Q046",
+        "principle": "创业哲学",
+        "type": "multiple",
+        "difficulty": "实践应用",
         "question": "描绘理想生活应该包含哪些维度？",
         "options": "[",
         "answer": [
           "A",
           "B",
-          "C"
+          "D"
         ],
-        "explanation": "理想生活是多维度的平衡，不只是收入。"
+        "explanation": "理想生活是多维度平衡，不只是收入。"
       },
       {
-        "id": "Q039",
-        "principle": "理想生活",
+        "id": "Q047",
+        "principle": "创业哲学",
         "type": "single",
-        "difficulty": "基础",
-        "question": "为什么将经历和兴趣融入事业能带来持续动力？",
+        "difficulty": "核心概念",
+        "question": "为什么要先定义生活再找赚钱方式？",
         "options": "[",
         "answer": "B",
-        "explanation": "内在驱动力远比外在激励更持久。"
+        "explanation": "以终为始，避免南辕北辙。"
       },
       {
-        "id": "Q040",
-        "principle": "理想生活",
+        "id": "Q048",
+        "principle": "创业哲学",
         "type": "single",
-        "difficulty": "应用",
-        "question": "如何确保事业与生活价值观对齐？",
+        "difficulty": "实践应用",
+        "question": "最小成本验证创业想法的第一步是？",
         "options": "[",
         "answer": "B",
-        "explanation": "需要定期复盘和调整，确保不偏离初心。"
+        "explanation": "零成本起步，用内容验证兴趣和市场。"
+      },
+      {
+        "id": "Q049",
+        "principle": "创业哲学",
+        "type": "multiple",
+        "difficulty": "深度理解",
+        "question": "避免创业侵蚀生活的原则包括？",
+        "options": "[",
+        "answer": [
+          "A",
+          "B",
+          "D"
+        ],
+        "explanation": "平衡和边界是可持续创业的关键。"
+      },
+      {
+        "id": "Q050",
+        "principle": "创业哲学",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "创业的终极目标是？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "创业是为了成为想成为的人，过想过的生活。"
       }
     ],
     "商业进化": [
       {
-        "id": "Q041",
+        "id": "Q051",
         "principle": "商业进化",
         "type": "single",
-        "difficulty": "基础",
-        "question": "通往财富自由的三步进化路径是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "这是个人商业模式的进化路径。"
-      },
-      {
-        "id": "Q042",
-        "principle": "商业进化",
-        "type": "single",
-        "difficulty": "进阶",
+        "difficulty": "核心概念",
         "question": "财富自由的本质是？",
         "options": "[",
         "answer": "B",
-        "explanation": "财富自由的核心是时间自主权，而非金钱数量。"
+        "explanation": "财富自由的核心是时间自主权。"
       },
       {
-        "id": "Q043",
+        "id": "Q052",
+        "principle": "商业进化",
+        "type": "single",
+        "difficulty": "深度理解",
+        "question": "个人商业模式进化的三部曲是？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "从单次出售到批量出售再到购买他人时间。"
+      },
+      {
+        "id": "Q053",
         "principle": "商业进化",
         "type": "multiple",
-        "difficulty": "应用",
-        "question": "在'单次出售时间'阶段，应该重点关注什么？",
+        "difficulty": "实践应用",
+        "question": "在'卖时间'阶段应该重点关注什么？",
         "options": "[",
         "answer": [
           "A",
-          "B",
+          "C",
           "D"
         ],
         "explanation": "第一阶段是为成长打工，不只为薪水。"
       },
       {
-        "id": "Q044",
+        "id": "Q054",
         "principle": "商业进化",
         "type": "single",
-        "difficulty": "基础",
+        "difficulty": "核心概念",
         "question": "什么是'睡后收入'？",
         "options": "[",
         "answer": "B",
-        "explanation": "产品化让你的时间投入能够重复产生收入。"
+        "explanation": "产品化让时间投入能重复产生收入。"
       },
       {
-        "id": "Q045",
+        "id": "Q055",
         "principle": "商业进化",
         "type": "single",
-        "difficulty": "应用",
+        "difficulty": "实践应用",
         "question": "进入第二站（产品化）的信号是？",
         "options": "[",
         "answer": "B",
-        "explanation": "技能成熟且时间瓶颈出现，是产品化的时机。"
+        "explanation": "技能成熟且时间瓶颈出现是产品化时机。"
       },
       {
-        "id": "Q046",
+        "id": "Q056",
         "principle": "商业进化",
         "type": "multiple",
-        "difficulty": "进阶",
-        "question": "长期停留在'单次出售时间'的后果？",
+        "difficulty": "深度理解",
+        "question": "长期停留在'卖时间'模式的后果？",
         "options": "[",
         "answer": [
           "A",
           "B",
           "D"
         ],
-        "explanation": "单次出售时间模式限制了财富积累和自由度。"
+        "explanation": "单次出售时间模式限制了财富积累。"
       },
       {
-        "id": "Q047",
+        "id": "Q057",
         "principle": "商业进化",
         "type": "single",
-        "difficulty": "基础",
-        "question": "第三站'购买他人时间'的方式包括？",
+        "difficulty": "核心概念",
+        "question": "第三站'买时间'的方式包括？",
         "options": "[",
-        "answer": "A",
+        "answer": "B",
         "explanation": "通过组织或资本让他人的时间为你创造价值。"
       },
       {
-        "id": "Q048",
+        "id": "Q058",
         "principle": "商业进化",
         "type": "single",
-        "difficulty": "应用",
-        "question": "三个进化阶段中，风险最高但增长潜力最大的是？",
-        "options": "[",
-        "answer": "C",
-        "explanation": "第三站需要资本和经验，风险高但能实现指数增长。"
-      }
-    ],
-    "建立受众": [
-      {
-        "id": "Q049",
-        "principle": "建立受众",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "为什么说所有创业都应该从建立受众开始？",
+        "difficulty": "实践应用",
+        "question": "如何平稳过渡到下一阶段？",
         "options": "[",
         "answer": "B",
-        "explanation": "建立受众是风险最低、杠杆最高的创业起点。"
+        "explanation": "渐进式过渡，降低风险。"
       },
       {
-        "id": "Q050",
-        "principle": "建立受众",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "'建受众'的本质是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "核心是通过持续价值输出建立信任关系。"
-      },
-      {
-        "id": "Q051",
-        "principle": "建立受众",
+        "id": "Q059",
+        "principle": "商业进化",
         "type": "multiple",
-        "difficulty": "应用",
-        "question": "建受众过程中能免费学到哪些核心技能？",
+        "difficulty": "深度理解",
+        "question": "产品化的路径包括？",
         "options": "[",
         "answer": [
           "A",
           "B",
-          "C"
+          "D"
         ],
-        "explanation": "内容创作过程自然锻炼营销、写作、用户心理理解能力。"
+        "explanation": "数字产品实现一次创造，多次销售。"
       },
       {
-        "id": "Q052",
+        "id": "Q060",
+        "principle": "商业进化",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "三个进化阶段中风险最高但潜力最大的是？",
+        "options": "[",
+        "answer": "C",
+        "explanation": "第三站需要资本和经验，但能实现指数增长。"
+      }
+    ],
+    "建立受众": [
+      {
+        "id": "Q061",
         "principle": "建立受众",
         "type": "single",
-        "difficulty": "基础",
-        "question": "利用'费曼学习法'的核心是？",
+        "difficulty": "核心概念",
+        "question": "为什么说建立受众是最安全的创业起点？",
         "options": "[",
         "answer": "B",
-        "explanation": "教是最好的学，分享过程暴露知识盲区。"
+        "explanation": "这是风险最低、杠杆最高的创业方式。"
       },
       {
-        "id": "Q053",
+        "id": "Q062",
         "principle": "建立受众",
         "type": "single",
-        "difficulty": "应用",
+        "difficulty": "深度理解",
+        "question": "建立受众的本质是？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "受众的核心是信任关系，不是数量。"
+      },
+      {
+        "id": "Q063",
+        "principle": "建立受众",
+        "type": "multiple",
+        "difficulty": "实践应用",
+        "question": "建受众过程中能学到哪些核心技能？",
+        "options": "[",
+        "answer": [
+          "A",
+          "B",
+          "D"
+        ],
+        "explanation": "内容创作自然锻炼营销、写作和用户心理理解。"
+      },
+      {
+        "id": "Q064",
+        "principle": "建立受众",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "费曼学习法的核心是？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "教是最好的学，分享过程暴露盲区。"
+      },
+      {
+        "id": "Q065",
+        "principle": "建立受众",
+        "type": "single",
+        "difficulty": "实践应用",
         "question": "受众规模小时的最佳变现策略是？",
         "options": "[",
         "answer": "B",
         "explanation": "早期通过高客单价的深度服务变现。"
       },
       {
-        "id": "Q054",
+        "id": "Q066",
         "principle": "建立受众",
         "type": "multiple",
-        "difficulty": "进阶",
+        "difficulty": "深度理解",
         "question": "没有受众就做电商的问题包括？",
         "options": "[",
         "answer": [
           "A",
           "B",
-          "C"
-        ],
-        "explanation": "无受众创业面临资金风险、信任缺失、学习成本高等问题。"
-      },
-      {
-        "id": "Q055",
-        "principle": "建立受众",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "建立受众的内容策略核心是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "持续提供价值比追求完美更重要。"
-      },
-      {
-        "id": "Q056",
-        "principle": "建立受众",
-        "type": "single",
-        "difficulty": "应用",
-        "question": "定义理想受众最简单的方法是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "你最了解过去的自己，这是最精准的受众定位。"
-      }
-    ],
-    "模仿学习": [
-      {
-        "id": "Q057",
-        "principle": "模仿学习",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "新手模仿的最大误区是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "要研究成功者早期如何增长，而非现在如何维持。"
-      },
-      {
-        "id": "Q058",
-        "principle": "模仿学习",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "权威性如何影响内容策略？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "权威性决定了你能说什么类型的内容。"
-      },
-      {
-        "id": "Q059",
-        "principle": "模仿学习",
-        "type": "multiple",
-        "difficulty": "应用",
-        "question": "'考古'学习包括哪些步骤？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
           "D"
         ],
-        "explanation": "学习的是模式和框架，不是复制内容。"
-      },
-      {
-        "id": "Q060",
-        "principle": "模仿学习",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "新手内容应该有多少比例专注于解决问题？",
-        "options": "[",
-        "answer": "C",
-        "explanation": "新手80%的内容应该解决实际问题。"
-      },
-      {
-        "id": "Q061",
-        "principle": "模仿学习",
-        "type": "single",
-        "difficulty": "应用",
-        "question": "建立素材库的目的是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "素材库是学习和迭代的工具，不是收藏夹。"
-      },
-      {
-        "id": "Q062",
-        "principle": "模仿学习",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "为什么新手发心灵鸡汤是'增长杀手'？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "无权威、无价值、无差异的内容无法吸引受众。"
-      },
-      {
-        "id": "Q063",
-        "principle": "模仿学习",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "从'消费者'变成'研究者'的关键是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "研究者关注的是'为什么'，而非'是什么'。"
-      },
-      {
-        "id": "Q064",
-        "principle": "模仿学习",
-        "type": "multiple",
-        "difficulty": "应用",
-        "question": "模仿和抄袭的区别在于？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "D"
-        ],
-        "explanation": "模仿是学习和创新，抄袭是偷窃。"
-      },
-      {
-        "id": "Q065",
-        "principle": "模仿学习",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "研究成功内容应该关注哪个方面？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "关注可复制的成功要素，而非表面现象。"
-      }
-    ],
-    "人际连接": [
-      {
-        "id": "Q066",
-        "principle": "人际连接",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "个人成长速度很大程度上取决于？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "你是你最常接触的5个人的平均值。"
+        "explanation": "无受众创业面临资金风险和信任缺失。"
       },
       {
         "id": "Q067",
-        "principle": "人际连接",
-        "type": "multiple",
-        "difficulty": "应用",
-        "question": "主动寻找导师的正确方法包括？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "D"
-        ],
-        "explanation": "尊重导师时间，提供价值交换，认真执行建议。"
-      },
-      {
-        "id": "Q068",
-        "principle": "人际连接",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "理想的'成长小组'规模是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "3-5人既能深入交流，又有足够多样性。"
-      },
-      {
-        "id": "Q069",
-        "principle": "人际连接",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "践行利他主义的核心思维转换是？",
-        "options": "[",
-        "answer": "A",
-        "explanation": "利他是最好的利己，先给予才能收获。"
-      },
-      {
-        "id": "Q070",
-        "principle": "人际连接",
-        "type": "multiple",
-        "difficulty": "应用",
-        "question": "闭门造车的代价包括？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "D"
-        ],
-        "explanation": "孤立会限制视野、反馈和机会。"
-      },
-      {
-        "id": "Q071",
-        "principle": "人际连接",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "人际连接的最深层次是？",
-        "options": "[",
-        "answer": "C",
-        "explanation": "共创是最深度的连接，创造共同价值。"
-      },
-      {
-        "id": "Q072",
-        "principle": "人际连接",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "维护人际网络的核心原则是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "高质量的深度连接比表面社交更有价值。"
-      },
-      {
-        "id": "Q073",
-        "principle": "人际连接",
-        "type": "single",
-        "difficulty": "应用",
-        "question": "建立高质量连接的首要原则是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "真诚是建立信任和深度连接的基础。"
-      }
-    ],
-    "精力管理": [
-      {
-        "id": "Q074",
-        "principle": "精力管理",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "为什么说健康是最重要的投资？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "身体是承载一切的容器，精力决定产出质量。"
-      },
-      {
-        "id": "Q075",
-        "principle": "精力管理",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "为什么精力比时间更重要？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "同样的时间，不同精力状态产出天差地别。"
-      },
-      {
-        "id": "Q076",
-        "principle": "精力管理",
-        "type": "multiple",
-        "difficulty": "应用",
-        "question": "优化睡眠的方法包括？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "D"
-        ],
-        "explanation": "规律、仪式、环境都重要，屏幕会干扰睡眠。"
-      },
-      {
-        "id": "Q077",
-        "principle": "精力管理",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "哪些食物会'偷走'精力？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "高糖造成血糖波动，精加工食品增加消化负担。"
-      },
-      {
-        "id": "Q078",
-        "principle": "精力管理",
-        "type": "single",
-        "difficulty": "应用",
-        "question": "将运动整合进日常的关键原则是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "规律性比强度更重要，降低阻力持续执行。"
-      },
-      {
-        "id": "Q079",
-        "principle": "精力管理",
-        "type": "multiple",
-        "difficulty": "进阶",
-        "question": "透支健康换事业的后果包括？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "D"
-        ],
-        "explanation": "健康透支导致全方位能力下降，得不偿失。"
-      },
-      {
-        "id": "Q080",
-        "principle": "精力管理",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "精力管理的四大支柱是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "四个维度的精力需要平衡发展。"
-      },
-      {
-        "id": "Q081",
-        "principle": "精力管理",
-        "type": "single",
-        "difficulty": "应用",
-        "question": "如何利用精力节奏提高效率？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "顺应生物节律，合理分配任务类型。"
-      }
-    ],
-    "杠杆思维": [
-      {
-        "id": "Q082",
-        "principle": "杠杆思维",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "很多新手创业的结果是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "无杠杆思维导致创业变成自我雇佣。"
-      },
-      {
-        "id": "Q083",
-        "principle": "杠杆思维",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "陷入'无杠杆陷阱'的根源是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "像找工作一样选项目，而非从理想生活出发。"
-      },
-      {
-        "id": "Q084",
-        "principle": "杠杆思维",
-        "type": "multiple",
-        "difficulty": "应用",
-        "question": "商业模式中的杠杆类型包括？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "D"
-        ],
-        "explanation": "真正的杠杆让产出与投入不成正比。"
-      },
-      {
-        "id": "Q085",
-        "principle": "杠杆思维",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "从服务升级到产品的目的是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "产品化实现时间与收入脱钩。"
-      },
-      {
-        "id": "Q086",
-        "principle": "杠杆思维",
-        "type": "single",
-        "difficulty": "应用",
-        "question": "'以终为始'设计商业模式的第一步是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "从理想生活倒推商业模式设计。"
-      },
-      {
-        "id": "Q087",
-        "principle": "杠杆思维",
-        "type": "multiple",
-        "difficulty": "进阶",
-        "question": "无杠杆生意的特征包括？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "D"
-        ],
-        "explanation": "无杠杆意味着线性增长和持续投入。"
-      },
-      {
-        "id": "Q088",
-        "principle": "杠杆思维",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "评估杠杆潜力最重要的指标是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "边际成本决定了规模化的可能性。"
-      },
-      {
-        "id": "Q089",
-        "principle": "杠杆思维",
-        "type": "single",
-        "difficulty": "应用",
-        "question": "有杠杆生意的典型例子是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "在线课程一次制作，无限销售，边际成本接近零。"
-      },
-      {
-        "id": "Q090",
-        "principle": "杠杆思维",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "如何避免创业变成另一份工作？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "杠杆思维是避免自我雇佣的关键。"
-      }
-    ],
-    "个人品牌": [
-      {
-        "id": "Q091",
-        "principle": "个人品牌",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "年轻人最值得投入的生意是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "你的独特经历和成长就是最好的生意。"
-      },
-      {
-        "id": "Q092",
-        "principle": "个人品牌",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "新模式如何颠覆传统创业逻辑？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "不用选择领域，你本身就是独特领域。"
-      },
-      {
-        "id": "Q093",
-        "principle": "个人品牌",
-        "type": "multiple",
-        "difficulty": "应用",
-        "question": "把自身问题变成生意的步骤？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "D"
-        ],
-        "explanation": "真实经历（包括失败）都是产品素材。"
-      },
-      {
-        "id": "Q094",
-        "principle": "个人品牌",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "'活成领域本身'意味着？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "人们关注的是你这个人，不只是内容。"
-      },
-      {
-        "id": "Q095",
-        "principle": "个人品牌",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "为什么小众不等于没市场？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "独特性带来精准受众和无法复制的优势。"
-      },
-      {
-        "id": "Q096",
-        "principle": "个人品牌",
-        "type": "single",
-        "difficulty": "应用",
-        "question": "Work-Life Integration的含义是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "当事业就是做自己时，工作生活融为一体。"
-      },
-      {
-        "id": "Q097",
-        "principle": "个人品牌",
-        "type": "multiple",
-        "difficulty": "进阶",
-        "question": "'打工人思维'创业的问题？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "D"
-        ],
-        "explanation": "跟风创业缺乏内在动力和独特价值。"
-      },
-      {
-        "id": "Q098",
-        "principle": "个人品牌",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "构建个人品牌最核心的要素是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "独特性和价值观是品牌的灵魂。"
-      }
-    ],
-    "综合应用": [
-      {
-        "id": "Q099",
-        "principle": "综合应用",
-        "type": "multiple",
-        "difficulty": "进阶",
-        "question": "12条原则的底层逻辑包括？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "D"
-        ],
-        "explanation": "12原则相互支撑形成完整系统，不是独立的。"
-      },
-      {
-        "id": "Q100",
-        "principle": "综合应用",
-        "type": "multiple",
-        "difficulty": "应用",
-        "question": "面对重要选择时，应该考虑哪些原则？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "D"
-        ],
-        "explanation": "综合运用多个原则做决策，而非单一维度。"
-      }
-    ]
-  },
-  "questions_by_difficulty": {
-    "基础": [
-      {
-        "id": "Q001",
-        "principle": "元认知",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "元认知的本质是什么？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "元认知是'对思考过程的认知'，像一个内置的监控程序，让你能从更高维度审视自己的想法。"
-      },
-      {
-        "id": "Q004",
-        "principle": "元认知",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "缺乏元认知的最大问题是？",
-        "options": "[",
-        "answer": "C",
-        "explanation": "没有元认知，你的'思考'只是'情绪的自动反应'，无法做出理性决策。"
-      },
-      {
-        "id": "Q007",
-        "principle": "元认知",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "'坐享'（冥想）如何帮助提升元认知？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "冥想是元认知的'健身房'，专门训练觉察和控制思维的能力。"
-      },
-      {
-        "id": "Q009",
-        "principle": "承担责任",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "个人成长操作系统的底层信念是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "'我，且只有我，对我的人生负有100%的责任'是成长的底层信念。"
-      },
-      {
-        "id": "Q012",
-        "principle": "承担责任",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "抱怨会导致什么恶性循环？",
-        "options": "[",
-        "answer": "A",
-        "explanation": "抱怨强化受害者心态，导致越来越不愿改变，形成恶性循环。"
-      },
-      {
-        "id": "Q015",
-        "principle": "承担责任",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "在个人成长操作系统里，没有哪个'程序'？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "抱怨这个'程序'在成长系统中应该被删除。"
-      },
-      {
-        "id": "Q017",
-        "principle": "注意力",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "个人资源的正确价值排序是？",
-        "options": "[",
-        "answer": "C",
-        "explanation": "注意力是唯一可完全掌控的、创造价值的入口，比时间和金钱更宝贵。"
-      },
-      {
-        "id": "Q020",
-        "principle": "注意力",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "'专注是一种选择，而非能力'意味着？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "专注不是能力问题，而是价值选择问题。"
-      },
-      {
-        "id": "Q023",
-        "principle": "注意力",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "将注意力浪费在凑热闹、随大流上等同于？",
-        "options": "[",
-        "answer": "C",
-        "explanation": "注意力是你最宝贵的生产资料，浪费它就是放弃创造价值的机会。"
-      },
-      {
-        "id": "Q025",
-        "principle": "复利",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "定投策略的核心是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "定投的本质是相信时间和复利的力量。"
-      },
-      {
-        "id": "Q028",
-        "principle": "复利",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "'1000小时定律'的含义是？",
-        "options": "[",
-        "answer": "C",
-        "explanation": "集中1000小时深度练习一项技能，是从入门到精通的基本要求。"
-      },
-      {
-        "id": "Q031",
-        "principle": "复利",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "每天进步1%，一年后的效果是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "1.01^365 = 37.8，这就是复利的数学威力。"
-      },
-      {
-        "id": "Q033",
-        "principle": "理想生活",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "新时代创业的第一原则是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "事业应该服务于生活，而不是相反。"
-      },
-      {
-        "id": "Q036",
-        "principle": "理想生活",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "高杠杆创业路径的起点是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "从内容创作建立受众开始，是零成本高杠杆的起点。"
-      },
-      {
-        "id": "Q039",
-        "principle": "理想生活",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "为什么将经历和兴趣融入事业能带来持续动力？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "内在驱动力远比外在激励更持久。"
-      },
-      {
-        "id": "Q041",
-        "principle": "商业进化",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "通往财富自由的三步进化路径是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "这是个人商业模式的进化路径。"
-      },
-      {
-        "id": "Q044",
-        "principle": "商业进化",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "什么是'睡后收入'？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "产品化让你的时间投入能够重复产生收入。"
-      },
-      {
-        "id": "Q047",
-        "principle": "商业进化",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "第三站'购买他人时间'的方式包括？",
-        "options": "[",
-        "answer": "A",
-        "explanation": "通过组织或资本让他人的时间为你创造价值。"
-      },
-      {
-        "id": "Q049",
         "principle": "建立受众",
         "type": "single",
-        "difficulty": "基础",
-        "question": "为什么说所有创业都应该从建立受众开始？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "建立受众是风险最低、杠杆最高的创业起点。"
-      },
-      {
-        "id": "Q052",
-        "principle": "建立受众",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "利用'费曼学习法'的核心是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "教是最好的学，分享过程暴露知识盲区。"
-      },
-      {
-        "id": "Q055",
-        "principle": "建立受众",
-        "type": "single",
-        "difficulty": "基础",
+        "difficulty": "核心概念",
         "question": "建立受众的内容策略核心是？",
         "options": "[",
         "answer": "B",
-        "explanation": "持续提供价值比追求完美更重要。"
-      },
-      {
-        "id": "Q057",
-        "principle": "模仿学习",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "新手模仿的最大误区是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "要研究成功者早期如何增长，而非现在如何维持。"
-      },
-      {
-        "id": "Q060",
-        "principle": "模仿学习",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "新手内容应该有多少比例专注于解决问题？",
-        "options": "[",
-        "answer": "C",
-        "explanation": "新手80%的内容应该解决实际问题。"
-      },
-      {
-        "id": "Q063",
-        "principle": "模仿学习",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "从'消费者'变成'研究者'的关键是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "研究者关注的是'为什么'，而非'是什么'。"
-      },
-      {
-        "id": "Q066",
-        "principle": "人际连接",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "个人成长速度很大程度上取决于？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "你是你最常接触的5个人的平均值。"
+        "explanation": "持续提供价值比完美更重要。"
       },
       {
         "id": "Q068",
-        "principle": "人际连接",
+        "principle": "建立受众",
         "type": "single",
-        "difficulty": "基础",
-        "question": "理想的'成长小组'规模是？",
+        "difficulty": "实践应用",
+        "question": "定义理想受众最简单的方法是？",
         "options": "[",
         "answer": "B",
-        "explanation": "3-5人既能深入交流，又有足够多样性。"
+        "explanation": "你最了解过去的自己，这是最精准的定位。"
       },
       {
-        "id": "Q071",
-        "principle": "人际连接",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "人际连接的最深层次是？",
+        "id": "Q069",
+        "principle": "建立受众",
+        "type": "multiple",
+        "difficulty": "深度理解",
+        "question": "受众的复利效应体现在？",
         "options": "[",
-        "answer": "C",
-        "explanation": "共创是最深度的连接，创造共同价值。"
+        "answer": [
+          "A",
+          "B",
+          "D"
+        ],
+        "explanation": "时间越长，受众价值越大。"
+      },
+      {
+        "id": "Q070",
+        "principle": "建立受众",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "为什么说受众是最重要的商业资产？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "受众是所有未来项目的流量池和信任基础。"
+      }
+    ],
+    "长期主义": [
+      {
+        "id": "Q071",
+        "principle": "长期主义",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "长期主义的两大支柱是？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "模仿加速起步，定投确保终局。"
+      },
+      {
+        "id": "Q072",
+        "principle": "长期主义",
+        "type": "single",
+        "difficulty": "深度理解",
+        "question": "聪明模仿的核心是？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "学习成功背后的逻辑，而非表面形式。"
+      },
+      {
+        "id": "Q073",
+        "principle": "长期主义",
+        "type": "multiple",
+        "difficulty": "实践应用",
+        "question": "建立素材库的步骤包括？",
+        "options": "[",
+        "answer": [
+          "A",
+          "B",
+          "D"
+        ],
+        "explanation": "素材库是学习和迭代的工具。"
       },
       {
         "id": "Q074",
-        "principle": "精力管理",
+        "principle": "长期主义",
         "type": "single",
-        "difficulty": "基础",
-        "question": "为什么说健康是最重要的投资？",
+        "difficulty": "核心概念",
+        "question": "'1000小时定律'是指？",
         "options": "[",
         "answer": "B",
-        "explanation": "身体是承载一切的容器，精力决定产出质量。"
+        "explanation": "深度投入是从入门到精通的必经之路。"
       },
       {
-        "id": "Q077",
-        "principle": "精力管理",
+        "id": "Q075",
+        "principle": "长期主义",
         "type": "single",
-        "difficulty": "基础",
-        "question": "哪些食物会'偷走'精力？",
+        "difficulty": "深度理解",
+        "question": "定投思维应该应用在哪些领域？",
         "options": "[",
         "answer": "B",
-        "explanation": "高糖造成血糖波动，精加工食品增加消化负担。"
+        "explanation": "定投是普适的成长策略。"
       },
       {
-        "id": "Q080",
-        "principle": "精力管理",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "精力管理的四大支柱是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "四个维度的精力需要平衡发展。"
-      },
-      {
-        "id": "Q082",
-        "principle": "杠杆思维",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "很多新手创业的结果是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "无杠杆思维导致创业变成自我雇佣。"
-      },
-      {
-        "id": "Q085",
-        "principle": "杠杆思维",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "从服务升级到产品的目的是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "产品化实现时间与收入脱钩。"
-      },
-      {
-        "id": "Q088",
-        "principle": "杠杆思维",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "评估杠杆潜力最重要的指标是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "边际成本决定了规模化的可能性。"
-      },
-      {
-        "id": "Q091",
-        "principle": "个人品牌",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "年轻人最值得投入的生意是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "你的独特经历和成长就是最好的生意。"
-      },
-      {
-        "id": "Q094",
-        "principle": "个人品牌",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "'活成领域本身'意味着？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "人们关注的是你这个人，不只是内容。"
-      },
-      {
-        "id": "Q098",
-        "principle": "个人品牌",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "构建个人品牌最核心的要素是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "独特性和价值观是品牌的灵魂。"
-      }
-    ],
-    "进阶": [
-      {
-        "id": "Q002",
-        "principle": "元认知",
+        "id": "Q076",
+        "principle": "长期主义",
         "type": "multiple",
-        "difficulty": "进阶",
-        "question": "以下哪些是锻炼元认知的有效方法？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "C"
-        ],
-        "explanation": "冥想、反思决策、写作都是直接锻炼元认知的方法。单纯阅读虽有益，但不直接锻炼元认知能力。"
-      },
-      {
-        "id": "Q005",
-        "principle": "元认知",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "为什么说写作是'思考的磨刀石'？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "写作过程强制你组织逻辑、发现矛盾，是检验和提升思维质量的最佳工具。"
-      },
-      {
-        "id": "Q008",
-        "principle": "元认知",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "元认知能力是人与人之间最根本的差距，因为它决定了？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "元认知决定了你能否主动升级心智'操作系统'，摆脱偏见和情绪的控制。"
-      },
-      {
-        "id": "Q010",
-        "principle": "承担责任",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "为什么说抱怨是'弱者病毒'？",
-        "options": "[",
-        "answer": "C",
-        "explanation": "抱怨本质上是思维懒惰，放弃了'我能做什么'的可能性。"
-      },
-      {
-        "id": "Q014",
-        "principle": "承担责任",
-        "type": "multiple",
-        "difficulty": "进阶",
-        "question": "承担100%责任与自我苛责的区别在于？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "C"
-        ],
-        "explanation": "承担责任是成长工具，自我苛责是情绪伤害，有本质区别。"
-      },
-      {
-        "id": "Q018",
-        "principle": "注意力",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "为什么注意力比时间更宝贵？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "注意力是你创造价值的入口和杠杆，决定了时间的使用质量。"
-      },
-      {
-        "id": "Q021",
-        "principle": "注意力",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "无法保持45分钟以上专注的人将面临什么？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "深度工作需要持续专注，这是创造核心价值的基础。"
-      },
-      {
-        "id": "Q024",
-        "principle": "注意力",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "算法的目的是什么？如何对抗？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "算法目标是劫持注意力，需要主动对抗，夺回控制权。"
-      },
-      {
-        "id": "Q027",
-        "principle": "复利",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "什么是'微笑曲线'心态？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "在低谷时反而应该加大投入，因为'成本'更低。"
-      },
-      {
-        "id": "Q030",
-        "principle": "复利",
-        "type": "multiple",
-        "difficulty": "进阶",
+        "difficulty": "实践应用",
         "question": "追求速成的后果包括？",
         "options": "[",
         "answer": [
           "A",
           "B",
-          "C"
+          "D"
         ],
-        "explanation": "速成心态违背复利规律，导致无法积累真正的价值。"
+        "explanation": "速成心态违背复利规律，导致无法积累。"
       },
       {
-        "id": "Q034",
-        "principle": "理想生活",
+        "id": "Q077",
+        "principle": "长期主义",
         "type": "single",
-        "difficulty": "进阶",
-        "question": "正确的创业决策顺序是？",
+        "difficulty": "核心概念",
+        "question": "每天进步1%，一年后的效果是？",
         "options": "[",
         "answer": "B",
-        "explanation": "以终为始，从理想生活倒推事业设计。"
+        "explanation": "1.01^365=37.8，这是复利的数学威力。"
       },
       {
-        "id": "Q037",
-        "principle": "理想生活",
+        "id": "Q078",
+        "principle": "长期主义",
         "type": "single",
-        "difficulty": "进阶",
-        "question": "旧时代创业思维的最大陷阱是？",
+        "difficulty": "实践应用",
+        "question": "如何度过复利曲线的拐点？",
         "options": "[",
         "answer": "B",
-        "explanation": "失去生活质量的创业违背了创业的初衷。"
+        "explanation": "拐点需要信念和支持系统才能坚持。"
       },
       {
-        "id": "Q042",
-        "principle": "商业进化",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "财富自由的本质是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "财富自由的核心是时间自主权，而非金钱数量。"
-      },
-      {
-        "id": "Q046",
-        "principle": "商业进化",
+        "id": "Q079",
+        "principle": "长期主义",
         "type": "multiple",
-        "difficulty": "进阶",
-        "question": "长期停留在'单次出售时间'的后果？",
+        "difficulty": "深度理解",
+        "question": "个人成长定投计划应包括？",
         "options": "[",
         "answer": [
           "A",
           "B",
           "D"
         ],
-        "explanation": "单次出售时间模式限制了财富积累和自由度。"
+        "explanation": "规律性和持续性是定投的关键。"
+      },
+      {
+        "id": "Q080",
+        "principle": "长期主义",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "'微笑曲线'心态是指？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "在低谷时反而应该加大投入。"
+      }
+    ]
+  },
+  "questions_by_difficulty": {
+    "核心概念": [
+      {
+        "id": "Q001",
+        "principle": "你就是生意",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "对年轻人来说，最好的生意是什么？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "你的经历、兴趣、成长就是独一无二的'赛道'，创业就是把解决自己问题的方法，卖给'过去的自己'。"
+      },
+      {
+        "id": "Q004",
+        "principle": "你就是生意",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "盲目跟风创业最可能导致什么结果？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "没有独特优势和内在动力，只会陷入更累的打工状态。"
+      },
+      {
+        "id": "Q007",
+        "principle": "你就是生意",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "新型创业与传统创业的本质区别是？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "新型创业是成为生意本身，而非寻找外部项目。"
+      },
+      {
+        "id": "Q011",
+        "principle": "注意力价值",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "个人资源的正确价值排序是？",
+        "options": "[",
+        "answer": "C",
+        "explanation": "注意力是最宝贵的资源，决定了人生走向。"
+      },
+      {
+        "id": "Q014",
+        "principle": "注意力价值",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "无法保持45分钟以上专注会导致什么？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "深度工作能力是未来核心竞争力的基础。"
+      },
+      {
+        "id": "Q017",
+        "principle": "注意力价值",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "被短视频和八卦劫持注意力的后果是？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "注意力被劫持等于人生被劫持。"
+      },
+      {
+        "id": "Q020",
+        "principle": "注意力价值",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "价值观在注意力管理中的作用是？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "清晰的价值观是最好的注意力过滤器。"
+      },
+      {
+        "id": "Q021",
+        "principle": "100%责任",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "个人成长操作系统的底层信念是？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "这是成长系统的底层信念，没有'抱怨'这个程序。"
+      },
+      {
+        "id": "Q024",
+        "principle": "100%责任",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "向内求索的核心是？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "专注于自己能改变的，而非抱怨不能改变的。"
+      },
+      {
+        "id": "Q027",
+        "principle": "100%责任",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "抱怨会导致什么恶性循环？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "抱怨强化受害者心态，形成越来越糟的循环。"
+      },
+      {
+        "id": "Q030",
+        "principle": "100%责任",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "为什么说承担责任就是获得自由？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "主动承担责任才能主动创造，获得真正的自由。"
+      },
+      {
+        "id": "Q031",
+        "principle": "元认知",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "元认知的本质是什么？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "元认知是'对思考过程的认知'，让你能审视自己的想法。"
+      },
+      {
+        "id": "Q034",
+        "principle": "元认知",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "冥想如何帮助提升元认知？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "冥想是元认知的'健身房'，专门训练觉察能力。"
+      },
+      {
+        "id": "Q037",
+        "principle": "元认知",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "缺乏元认知的最大问题是？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "无法从经验中学习，一直被本能和情绪驱动。"
+      },
+      {
+        "id": "Q040",
+        "principle": "元认知",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "元认知让你能够？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "像升级软件一样不断优化思维模式。"
+      },
+      {
+        "id": "Q041",
+        "principle": "创业哲学",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "新时代创业的第一原则是？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "创业是为了过想要的生活，不是换个地方996。"
+      },
+      {
+        "id": "Q044",
+        "principle": "创业哲学",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "旧时代创业思维的最大陷阱是？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "失去生活质量的创业违背了创业初衷。"
+      },
+      {
+        "id": "Q047",
+        "principle": "创业哲学",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "为什么要先定义生活再找赚钱方式？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "以终为始，避免南辕北辙。"
       },
       {
         "id": "Q050",
-        "principle": "建立受众",
+        "principle": "创业哲学",
         "type": "single",
-        "difficulty": "进阶",
-        "question": "'建受众'的本质是？",
+        "difficulty": "核心概念",
+        "question": "创业的终极目标是？",
         "options": "[",
         "answer": "B",
-        "explanation": "核心是通过持续价值输出建立信任关系。"
+        "explanation": "创业是为了成为想成为的人，过想过的生活。"
+      },
+      {
+        "id": "Q051",
+        "principle": "商业进化",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "财富自由的本质是？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "财富自由的核心是时间自主权。"
       },
       {
         "id": "Q054",
+        "principle": "商业进化",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "什么是'睡后收入'？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "产品化让时间投入能重复产生收入。"
+      },
+      {
+        "id": "Q057",
+        "principle": "商业进化",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "第三站'买时间'的方式包括？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "通过组织或资本让他人的时间为你创造价值。"
+      },
+      {
+        "id": "Q060",
+        "principle": "商业进化",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "三个进化阶段中风险最高但潜力最大的是？",
+        "options": "[",
+        "answer": "C",
+        "explanation": "第三站需要资本和经验，但能实现指数增长。"
+      },
+      {
+        "id": "Q061",
+        "principle": "建立受众",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "为什么说建立受众是最安全的创业起点？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "这是风险最低、杠杆最高的创业方式。"
+      },
+      {
+        "id": "Q064",
+        "principle": "建立受众",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "费曼学习法的核心是？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "教是最好的学，分享过程暴露盲区。"
+      },
+      {
+        "id": "Q067",
+        "principle": "建立受众",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "建立受众的内容策略核心是？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "持续提供价值比完美更重要。"
+      },
+      {
+        "id": "Q070",
+        "principle": "建立受众",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "为什么说受众是最重要的商业资产？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "受众是所有未来项目的流量池和信任基础。"
+      },
+      {
+        "id": "Q071",
+        "principle": "长期主义",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "长期主义的两大支柱是？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "模仿加速起步，定投确保终局。"
+      },
+      {
+        "id": "Q074",
+        "principle": "长期主义",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "'1000小时定律'是指？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "深度投入是从入门到精通的必经之路。"
+      },
+      {
+        "id": "Q077",
+        "principle": "长期主义",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "每天进步1%，一年后的效果是？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "1.01^365=37.8，这是复利的数学威力。"
+      },
+      {
+        "id": "Q080",
+        "principle": "长期主义",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "'微笑曲线'心态是指？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "在低谷时反而应该加大投入。"
+      }
+    ],
+    "深度理解": [
+      {
+        "id": "Q002",
+        "principle": "你就是生意",
+        "type": "multiple",
+        "difficulty": "深度理解",
+        "question": "高杠杆创业路径包括哪些步骤？",
+        "options": "[",
+        "answer": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "explanation": "内容→服务→产品→公司，这是一个循序渐进的高杠杆路径。"
+      },
+      {
+        "id": "Q006",
+        "principle": "你就是生意",
+        "type": "single",
+        "difficulty": "深度理解",
+        "question": "为什么说你的经历是'独一无二的赛道'？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "每个人的经历组合都是独特的，这种独特性就是你的护城河。"
+      },
+      {
+        "id": "Q009",
+        "principle": "你就是生意",
+        "type": "single",
+        "difficulty": "深度理解",
+        "question": "投资自己的最大优势是？",
+        "options": "[",
+        "answer": "C",
+        "explanation": "这是唯一不会贬值、不会被夺走的财富。"
+      },
+      {
+        "id": "Q012",
+        "principle": "注意力价值",
+        "type": "single",
+        "difficulty": "深度理解",
+        "question": "为什么注意力比时间更宝贵？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "同样的时间，不同的注意力质量产出天差地别。"
+      },
+      {
+        "id": "Q015",
+        "principle": "注意力价值",
+        "type": "single",
+        "difficulty": "深度理解",
+        "question": "算法的目的和我们的对抗策略是？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "认清算法本质，主动夺回注意力控制权。"
+      },
+      {
+        "id": "Q019",
+        "principle": "注意力价值",
+        "type": "multiple",
+        "difficulty": "深度理解",
+        "question": "哪些是隐形的注意力杀手？",
+        "options": "[",
+        "answer": [
+          "A",
+          "B",
+          "D"
+        ],
+        "explanation": "看似有用实则消耗巨大的活动。"
+      },
+      {
+        "id": "Q022",
+        "principle": "100%责任",
+        "type": "single",
+        "difficulty": "深度理解",
+        "question": "为什么说抱怨是'弱者病毒'？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "抱怨本质是思维懒惰，强化受害者心态。"
+      },
+      {
+        "id": "Q025",
+        "principle": "100%责任",
+        "type": "single",
+        "difficulty": "深度理解",
+        "question": "主动进化思维的特征是？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "主动创造成长压力，成为变化的推动者。"
+      },
+      {
+        "id": "Q029",
+        "principle": "100%责任",
+        "type": "multiple",
+        "difficulty": "深度理解",
+        "question": "承担责任与自我苛责的区别在于？",
+        "options": "[",
+        "answer": [
+          "A",
+          "B",
+          "C"
+        ],
+        "explanation": "承担责任是理性的成长工具，自我苛责是情绪化伤害。"
+      },
+      {
+        "id": "Q032",
+        "principle": "元认知",
+        "type": "single",
+        "difficulty": "深度理解",
+        "question": "为什么说没有元认知就是大脑的奴隶？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "没有元认知，你的'思考'只是'情绪的自动反应'。"
+      },
+      {
+        "id": "Q035",
+        "principle": "元认知",
+        "type": "single",
+        "difficulty": "深度理解",
+        "question": "写作为什么是'思考的磨刀石'？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "写作过程暴露并修正思维偏差。"
+      },
+      {
+        "id": "Q039",
+        "principle": "元认知",
+        "type": "multiple",
+        "difficulty": "深度理解",
+        "question": "元认知的层次包括？",
+        "options": "[",
+        "answer": [
+          "A",
+          "B",
+          "D"
+        ],
+        "explanation": "从觉察到分析再到改造，逐层递进。"
+      },
+      {
+        "id": "Q042",
+        "principle": "创业哲学",
+        "type": "single",
+        "difficulty": "深度理解",
+        "question": "新型创业逻辑的正确顺序是？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "工作与生活不分割，因为你靠'做自己'赚钱。"
+      },
+      {
+        "id": "Q045",
+        "principle": "创业哲学",
+        "type": "single",
+        "difficulty": "深度理解",
+        "question": "'T型内容'策略是指？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "80%专业内容建立权威，20%个人故事建立连接。"
+      },
+      {
+        "id": "Q049",
+        "principle": "创业哲学",
+        "type": "multiple",
+        "difficulty": "深度理解",
+        "question": "避免创业侵蚀生活的原则包括？",
+        "options": "[",
+        "answer": [
+          "A",
+          "B",
+          "D"
+        ],
+        "explanation": "平衡和边界是可持续创业的关键。"
+      },
+      {
+        "id": "Q052",
+        "principle": "商业进化",
+        "type": "single",
+        "difficulty": "深度理解",
+        "question": "个人商业模式进化的三部曲是？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "从单次出售到批量出售再到购买他人时间。"
+      },
+      {
+        "id": "Q056",
+        "principle": "商业进化",
+        "type": "multiple",
+        "difficulty": "深度理解",
+        "question": "长期停留在'卖时间'模式的后果？",
+        "options": "[",
+        "answer": [
+          "A",
+          "B",
+          "D"
+        ],
+        "explanation": "单次出售时间模式限制了财富积累。"
+      },
+      {
+        "id": "Q059",
+        "principle": "商业进化",
+        "type": "multiple",
+        "difficulty": "深度理解",
+        "question": "产品化的路径包括？",
+        "options": "[",
+        "answer": [
+          "A",
+          "B",
+          "D"
+        ],
+        "explanation": "数字产品实现一次创造，多次销售。"
+      },
+      {
+        "id": "Q062",
+        "principle": "建立受众",
+        "type": "single",
+        "difficulty": "深度理解",
+        "question": "建立受众的本质是？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "受众的核心是信任关系，不是数量。"
+      },
+      {
+        "id": "Q066",
         "principle": "建立受众",
         "type": "multiple",
-        "difficulty": "进阶",
+        "difficulty": "深度理解",
         "question": "没有受众就做电商的问题包括？",
         "options": "[",
         "answer": [
           "A",
           "B",
-          "C"
+          "D"
         ],
-        "explanation": "无受众创业面临资金风险、信任缺失、学习成本高等问题。"
-      },
-      {
-        "id": "Q058",
-        "principle": "模仿学习",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "权威性如何影响内容策略？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "权威性决定了你能说什么类型的内容。"
-      },
-      {
-        "id": "Q062",
-        "principle": "模仿学习",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "为什么新手发心灵鸡汤是'增长杀手'？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "无权威、无价值、无差异的内容无法吸引受众。"
-      },
-      {
-        "id": "Q065",
-        "principle": "模仿学习",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "研究成功内容应该关注哪个方面？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "关注可复制的成功要素，而非表面现象。"
+        "explanation": "无受众创业面临资金风险和信任缺失。"
       },
       {
         "id": "Q069",
-        "principle": "人际连接",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "践行利他主义的核心思维转换是？",
+        "principle": "建立受众",
+        "type": "multiple",
+        "difficulty": "深度理解",
+        "question": "受众的复利效应体现在？",
         "options": "[",
-        "answer": "A",
-        "explanation": "利他是最好的利己，先给予才能收获。"
+        "answer": [
+          "A",
+          "B",
+          "D"
+        ],
+        "explanation": "时间越长，受众价值越大。"
       },
       {
         "id": "Q072",
-        "principle": "人际连接",
+        "principle": "长期主义",
         "type": "single",
-        "difficulty": "进阶",
-        "question": "维护人际网络的核心原则是？",
+        "difficulty": "深度理解",
+        "question": "聪明模仿的核心是？",
         "options": "[",
         "answer": "B",
-        "explanation": "高质量的深度连接比表面社交更有价值。"
+        "explanation": "学习成功背后的逻辑，而非表面形式。"
       },
       {
         "id": "Q075",
-        "principle": "精力管理",
+        "principle": "长期主义",
         "type": "single",
-        "difficulty": "进阶",
-        "question": "为什么精力比时间更重要？",
+        "difficulty": "深度理解",
+        "question": "定投思维应该应用在哪些领域？",
         "options": "[",
         "answer": "B",
-        "explanation": "同样的时间，不同精力状态产出天差地别。"
+        "explanation": "定投是普适的成长策略。"
       },
       {
         "id": "Q079",
-        "principle": "精力管理",
+        "principle": "长期主义",
         "type": "multiple",
-        "difficulty": "进阶",
-        "question": "透支健康换事业的后果包括？",
+        "difficulty": "深度理解",
+        "question": "个人成长定投计划应包括？",
         "options": "[",
         "answer": [
           "A",
           "B",
           "D"
         ],
-        "explanation": "健康透支导致全方位能力下降，得不偿失。"
-      },
-      {
-        "id": "Q083",
-        "principle": "杠杆思维",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "陷入'无杠杆陷阱'的根源是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "像找工作一样选项目，而非从理想生活出发。"
-      },
-      {
-        "id": "Q087",
-        "principle": "杠杆思维",
-        "type": "multiple",
-        "difficulty": "进阶",
-        "question": "无杠杆生意的特征包括？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "D"
-        ],
-        "explanation": "无杠杆意味着线性增长和持续投入。"
-      },
-      {
-        "id": "Q090",
-        "principle": "杠杆思维",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "如何避免创业变成另一份工作？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "杠杆思维是避免自我雇佣的关键。"
-      },
-      {
-        "id": "Q092",
-        "principle": "个人品牌",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "新模式如何颠覆传统创业逻辑？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "不用选择领域，你本身就是独特领域。"
-      },
-      {
-        "id": "Q095",
-        "principle": "个人品牌",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "为什么小众不等于没市场？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "独特性带来精准受众和无法复制的优势。"
-      },
-      {
-        "id": "Q097",
-        "principle": "个人品牌",
-        "type": "multiple",
-        "difficulty": "进阶",
-        "question": "'打工人思维'创业的问题？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "D"
-        ],
-        "explanation": "跟风创业缺乏内在动力和独特价值。"
-      },
-      {
-        "id": "Q099",
-        "principle": "综合应用",
-        "type": "multiple",
-        "difficulty": "进阶",
-        "question": "12条原则的底层逻辑包括？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "D"
-        ],
-        "explanation": "12原则相互支撑形成完整系统，不是独立的。"
+        "explanation": "规律性和持续性是定投的关键。"
       }
     ],
-    "应用": [
+    "实践应用": [
       {
         "id": "Q003",
-        "principle": "元认知",
+        "principle": "你就是生意",
         "type": "single",
-        "difficulty": "应用",
-        "question": "当你情绪激动想要争论时，元认知的正确应用是？",
+        "difficulty": "实践应用",
+        "question": "执行'先定义理想生活，再找赚钱方式'的第一步是？",
         "options": "[",
         "answer": "B",
-        "explanation": "元认知要求我们跳出情绪和立场，从更高维度审视思维过程。"
+        "explanation": "先有清晰的生活愿景，才能设计匹配的商业模式。"
       },
       {
-        "id": "Q006",
+        "id": "Q005",
+        "principle": "你就是生意",
+        "type": "multiple",
+        "difficulty": "实践应用",
+        "question": "把解决自己问题的方法产品化需要哪些步骤？",
+        "options": "[",
+        "answer": [
+          "A",
+          "B",
+          "C"
+        ],
+        "explanation": "真实的问题和解决方案是产品化的基础，包括失败经历都是宝贵素材。"
+      },
+      {
+        "id": "Q008",
+        "principle": "你就是生意",
+        "type": "multiple",
+        "difficulty": "实践应用",
+        "question": "日常践行'你就是生意'的方法包括？",
+        "options": "[",
+        "answer": [
+          "A",
+          "B",
+          "D"
+        ],
+        "explanation": "透明化成长过程，持续积累价值，建立连接。"
+      },
+      {
+        "id": "Q010",
+        "principle": "你就是生意",
+        "type": "single",
+        "difficulty": "实践应用",
+        "question": "服务'过去的自己'的核心价值在于？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "亲身经历让你成为最懂这个群体的人。"
+      },
+      {
+        "id": "Q013",
+        "principle": "注意力价值",
+        "type": "multiple",
+        "difficulty": "实践应用",
+        "question": "保护注意力的有效方法包括？",
+        "options": "[",
+        "answer": [
+          "A",
+          "B",
+          "D"
+        ],
+        "explanation": "主动掌控环境，量化价值，过滤干扰。"
+      },
+      {
+        "id": "Q016",
+        "principle": "注意力价值",
+        "type": "multiple",
+        "difficulty": "实践应用",
+        "question": "注意力应该优先投资在哪些领域？",
+        "options": "[",
+        "answer": [
+          "A",
+          "C",
+          "D"
+        ],
+        "explanation": "投资在有复利效应的高价值活动上。"
+      },
+      {
+        "id": "Q018",
+        "principle": "注意力价值",
+        "type": "single",
+        "difficulty": "实践应用",
+        "question": "如何给注意力定价？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "用经济学思维管理注意力，确保高价值投入。"
+      },
+      {
+        "id": "Q023",
+        "principle": "100%责任",
+        "type": "multiple",
+        "difficulty": "实践应用",
+        "question": "戒掉抱怨的有效方法包括？",
+        "options": "[",
+        "answer": [
+          "A",
+          "B",
+          "C"
+        ],
+        "explanation": "把抱怨的能量转化为改变的动力，而非压抑情绪。"
+      },
+      {
+        "id": "Q026",
+        "principle": "100%责任",
+        "type": "multiple",
+        "difficulty": "实践应用",
+        "question": "100%责任包含哪些方面？",
+        "options": "[",
+        "answer": [
+          "A",
+          "C",
+          "D"
+        ],
+        "explanation": "对自己能控制的部分负全责，不包括他人的选择。"
+      },
+      {
+        "id": "Q028",
+        "principle": "100%责任",
+        "type": "single",
+        "difficulty": "实践应用",
+        "question": "将'为什么没人帮我'转换为？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "从索取思维转向价值交换思维。"
+      },
+      {
+        "id": "Q033",
         "principle": "元认知",
         "type": "multiple",
-        "difficulty": "应用",
+        "difficulty": "实践应用",
+        "question": "锻炼元认知的有效方法包括？",
+        "options": "[",
+        "answer": [
+          "A",
+          "B",
+          "D"
+        ],
+        "explanation": "冥想、反思、写作都直接锻炼元认知能力。"
+      },
+      {
+        "id": "Q036",
+        "principle": "元认知",
+        "type": "multiple",
+        "difficulty": "实践应用",
         "question": "日常生活中启动元认知的最佳时机包括？",
         "options": "[",
         "answer": [
@@ -3014,392 +2611,161 @@
           "B",
           "D"
         ],
-        "explanation": "决策、失败反思、学习都是需要元认知介入的关键时刻。心情愉悦时不是必需的触发点。"
-      },
-      {
-        "id": "Q011",
-        "principle": "承担责任",
-        "type": "multiple",
-        "difficulty": "应用",
-        "question": "将向外归因转为向内求索的正确做法包括？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "C"
-        ],
-        "explanation": "向内求索是把注意力转向自己能控制的部分，而非被动接受。"
-      },
-      {
-        "id": "Q013",
-        "principle": "承担责任",
-        "type": "single",
-        "difficulty": "应用",
-        "question": "想要抱怨时，应该问自己的第一个问题是？",
-        "options": "[",
-        "answer": "C",
-        "explanation": "启动元认知，评估抱怨是否有建设性，是阻止抱怨的第一步。"
-      },
-      {
-        "id": "Q016",
-        "principle": "承担责任",
-        "type": "single",
-        "difficulty": "应用",
-        "question": "'零抱怨挑战'的核心方法是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "通过物理提醒和记录，逐步改变抱怨习惯。"
-      },
-      {
-        "id": "Q019",
-        "principle": "注意力",
-        "type": "multiple",
-        "difficulty": "应用",
-        "question": "保护注意力的有效方法包括？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "C"
-        ],
-        "explanation": "主动控制环境、量化价值、设备分离都是保护注意力的有效策略。"
-      },
-      {
-        "id": "Q022",
-        "principle": "注意力",
-        "type": "multiple",
-        "difficulty": "应用",
-        "question": "注意力应该优先投资在哪些'高价值活动'？",
-        "options": "[",
-        "answer": [
-          "A",
-          "C",
-          "D"
-        ],
-        "explanation": "学习、创造、关系都有复利效应，社交媒体多数是注意力黑洞。"
-      },
-      {
-        "id": "Q026",
-        "principle": "复利",
-        "type": "multiple",
-        "difficulty": "应用",
-        "question": "定投思维应该应用在哪些领域？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "explanation": "定投是一种普适的成长策略，适用于所有需要积累的领域。"
-      },
-      {
-        "id": "Q029",
-        "principle": "复利",
-        "type": "single",
-        "difficulty": "应用",
-        "question": "'生学硬练'为什么是最高效的学习方式？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "实践中的即时反馈是最好的老师。"
-      },
-      {
-        "id": "Q032",
-        "principle": "复利",
-        "type": "single",
-        "difficulty": "应用",
-        "question": "如何度过复利曲线的拐点？",
-        "options": "[",
-        "answer": "C",
-        "explanation": "拐点是最容易放弃的时候，需要信念和支持系统。"
-      },
-      {
-        "id": "Q035",
-        "principle": "理想生活",
-        "type": "multiple",
-        "difficulty": "应用",
-        "question": "'服务过去的自己'包含哪些步骤？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "C"
-        ],
-        "explanation": "将自己的经历转化为产品，但不是免费，而是合理变现。"
+        "explanation": "关键时刻和情绪激动时最需要元认知介入。"
       },
       {
         "id": "Q038",
-        "principle": "理想生活",
+        "principle": "元认知",
+        "type": "single",
+        "difficulty": "实践应用",
+        "question": "每日反思应该包含哪个核心问题？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "识别影响判断的因素是元认知的核心。"
+      },
+      {
+        "id": "Q043",
+        "principle": "创业哲学",
         "type": "multiple",
-        "difficulty": "应用",
+        "difficulty": "实践应用",
+        "question": "服务'过去的自己'包括哪些步骤？",
+        "options": "[",
+        "answer": [
+          "A",
+          "B",
+          "D"
+        ],
+        "explanation": "将自己的经历转化为产品，合理变现。"
+      },
+      {
+        "id": "Q046",
+        "principle": "创业哲学",
+        "type": "multiple",
+        "difficulty": "实践应用",
         "question": "描绘理想生活应该包含哪些维度？",
         "options": "[",
         "answer": [
           "A",
           "B",
-          "C"
+          "D"
         ],
-        "explanation": "理想生活是多维度的平衡，不只是收入。"
+        "explanation": "理想生活是多维度平衡，不只是收入。"
       },
       {
-        "id": "Q040",
-        "principle": "理想生活",
+        "id": "Q048",
+        "principle": "创业哲学",
         "type": "single",
-        "difficulty": "应用",
-        "question": "如何确保事业与生活价值观对齐？",
+        "difficulty": "实践应用",
+        "question": "最小成本验证创业想法的第一步是？",
         "options": "[",
         "answer": "B",
-        "explanation": "需要定期复盘和调整，确保不偏离初心。"
+        "explanation": "零成本起步，用内容验证兴趣和市场。"
       },
       {
-        "id": "Q043",
+        "id": "Q053",
         "principle": "商业进化",
         "type": "multiple",
-        "difficulty": "应用",
-        "question": "在'单次出售时间'阶段，应该重点关注什么？",
+        "difficulty": "实践应用",
+        "question": "在'卖时间'阶段应该重点关注什么？",
+        "options": "[",
+        "answer": [
+          "A",
+          "C",
+          "D"
+        ],
+        "explanation": "第一阶段是为成长打工，不只为薪水。"
+      },
+      {
+        "id": "Q055",
+        "principle": "商业进化",
+        "type": "single",
+        "difficulty": "实践应用",
+        "question": "进入第二站（产品化）的信号是？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "技能成熟且时间瓶颈出现是产品化时机。"
+      },
+      {
+        "id": "Q058",
+        "principle": "商业进化",
+        "type": "single",
+        "difficulty": "实践应用",
+        "question": "如何平稳过渡到下一阶段？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "渐进式过渡，降低风险。"
+      },
+      {
+        "id": "Q063",
+        "principle": "建立受众",
+        "type": "multiple",
+        "difficulty": "实践应用",
+        "question": "建受众过程中能学到哪些核心技能？",
         "options": "[",
         "answer": [
           "A",
           "B",
           "D"
         ],
-        "explanation": "第一阶段是为成长打工，不只为薪水。"
+        "explanation": "内容创作自然锻炼营销、写作和用户心理理解。"
       },
       {
-        "id": "Q045",
-        "principle": "商业进化",
-        "type": "single",
-        "difficulty": "应用",
-        "question": "进入第二站（产品化）的信号是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "技能成熟且时间瓶颈出现，是产品化的时机。"
-      },
-      {
-        "id": "Q048",
-        "principle": "商业进化",
-        "type": "single",
-        "difficulty": "应用",
-        "question": "三个进化阶段中，风险最高但增长潜力最大的是？",
-        "options": "[",
-        "answer": "C",
-        "explanation": "第三站需要资本和经验，风险高但能实现指数增长。"
-      },
-      {
-        "id": "Q051",
-        "principle": "建立受众",
-        "type": "multiple",
-        "difficulty": "应用",
-        "question": "建受众过程中能免费学到哪些核心技能？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "C"
-        ],
-        "explanation": "内容创作过程自然锻炼营销、写作、用户心理理解能力。"
-      },
-      {
-        "id": "Q053",
+        "id": "Q065",
         "principle": "建立受众",
         "type": "single",
-        "difficulty": "应用",
+        "difficulty": "实践应用",
         "question": "受众规模小时的最佳变现策略是？",
         "options": "[",
         "answer": "B",
         "explanation": "早期通过高客单价的深度服务变现。"
       },
       {
-        "id": "Q056",
+        "id": "Q068",
         "principle": "建立受众",
         "type": "single",
-        "difficulty": "应用",
+        "difficulty": "实践应用",
         "question": "定义理想受众最简单的方法是？",
         "options": "[",
         "answer": "B",
-        "explanation": "你最了解过去的自己，这是最精准的受众定位。"
-      },
-      {
-        "id": "Q059",
-        "principle": "模仿学习",
-        "type": "multiple",
-        "difficulty": "应用",
-        "question": "'考古'学习包括哪些步骤？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "D"
-        ],
-        "explanation": "学习的是模式和框架，不是复制内容。"
-      },
-      {
-        "id": "Q061",
-        "principle": "模仿学习",
-        "type": "single",
-        "difficulty": "应用",
-        "question": "建立素材库的目的是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "素材库是学习和迭代的工具，不是收藏夹。"
-      },
-      {
-        "id": "Q064",
-        "principle": "模仿学习",
-        "type": "multiple",
-        "difficulty": "应用",
-        "question": "模仿和抄袭的区别在于？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "D"
-        ],
-        "explanation": "模仿是学习和创新，抄袭是偷窃。"
-      },
-      {
-        "id": "Q067",
-        "principle": "人际连接",
-        "type": "multiple",
-        "difficulty": "应用",
-        "question": "主动寻找导师的正确方法包括？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "D"
-        ],
-        "explanation": "尊重导师时间，提供价值交换，认真执行建议。"
-      },
-      {
-        "id": "Q070",
-        "principle": "人际连接",
-        "type": "multiple",
-        "difficulty": "应用",
-        "question": "闭门造车的代价包括？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "D"
-        ],
-        "explanation": "孤立会限制视野、反馈和机会。"
+        "explanation": "你最了解过去的自己，这是最精准的定位。"
       },
       {
         "id": "Q073",
-        "principle": "人际连接",
-        "type": "single",
-        "difficulty": "应用",
-        "question": "建立高质量连接的首要原则是？",
+        "principle": "长期主义",
+        "type": "multiple",
+        "difficulty": "实践应用",
+        "question": "建立素材库的步骤包括？",
         "options": "[",
-        "answer": "B",
-        "explanation": "真诚是建立信任和深度连接的基础。"
+        "answer": [
+          "A",
+          "B",
+          "D"
+        ],
+        "explanation": "素材库是学习和迭代的工具。"
       },
       {
         "id": "Q076",
-        "principle": "精力管理",
+        "principle": "长期主义",
         "type": "multiple",
-        "difficulty": "应用",
-        "question": "优化睡眠的方法包括？",
+        "difficulty": "实践应用",
+        "question": "追求速成的后果包括？",
         "options": "[",
         "answer": [
           "A",
           "B",
           "D"
         ],
-        "explanation": "规律、仪式、环境都重要，屏幕会干扰睡眠。"
+        "explanation": "速成心态违背复利规律，导致无法积累。"
       },
       {
         "id": "Q078",
-        "principle": "精力管理",
+        "principle": "长期主义",
         "type": "single",
-        "difficulty": "应用",
-        "question": "将运动整合进日常的关键原则是？",
+        "difficulty": "实践应用",
+        "question": "如何度过复利曲线的拐点？",
         "options": "[",
         "answer": "B",
-        "explanation": "规律性比强度更重要，降低阻力持续执行。"
-      },
-      {
-        "id": "Q081",
-        "principle": "精力管理",
-        "type": "single",
-        "difficulty": "应用",
-        "question": "如何利用精力节奏提高效率？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "顺应生物节律，合理分配任务类型。"
-      },
-      {
-        "id": "Q084",
-        "principle": "杠杆思维",
-        "type": "multiple",
-        "difficulty": "应用",
-        "question": "商业模式中的杠杆类型包括？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "D"
-        ],
-        "explanation": "真正的杠杆让产出与投入不成正比。"
-      },
-      {
-        "id": "Q086",
-        "principle": "杠杆思维",
-        "type": "single",
-        "difficulty": "应用",
-        "question": "'以终为始'设计商业模式的第一步是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "从理想生活倒推商业模式设计。"
-      },
-      {
-        "id": "Q089",
-        "principle": "杠杆思维",
-        "type": "single",
-        "difficulty": "应用",
-        "question": "有杠杆生意的典型例子是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "在线课程一次制作，无限销售，边际成本接近零。"
-      },
-      {
-        "id": "Q093",
-        "principle": "个人品牌",
-        "type": "multiple",
-        "difficulty": "应用",
-        "question": "把自身问题变成生意的步骤？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "D"
-        ],
-        "explanation": "真实经历（包括失败）都是产品素材。"
-      },
-      {
-        "id": "Q096",
-        "principle": "个人品牌",
-        "type": "single",
-        "difficulty": "应用",
-        "question": "Work-Life Integration的含义是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "当事业就是做自己时，工作生活融为一体。"
-      },
-      {
-        "id": "Q100",
-        "principle": "综合应用",
-        "type": "multiple",
-        "difficulty": "应用",
-        "question": "面对重要选择时，应该考虑哪些原则？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "D"
-        ],
-        "explanation": "综合运用多个原则做决策，而非单一维度。"
+        "explanation": "拐点需要信念和支持系统才能坚持。"
       }
     ]
   },
@@ -3407,765 +2773,712 @@
     "single": [
       {
         "id": "Q001",
-        "principle": "元认知",
+        "principle": "你就是生意",
         "type": "single",
-        "difficulty": "基础",
-        "question": "元认知的本质是什么？",
+        "difficulty": "核心概念",
+        "question": "对年轻人来说，最好的生意是什么？",
         "options": "[",
         "answer": "B",
-        "explanation": "元认知是'对思考过程的认知'，像一个内置的监控程序，让你能从更高维度审视自己的想法。"
+        "explanation": "你的经历、兴趣、成长就是独一无二的'赛道'，创业就是把解决自己问题的方法，卖给'过去的自己'。"
       },
       {
         "id": "Q003",
-        "principle": "元认知",
+        "principle": "你就是生意",
         "type": "single",
-        "difficulty": "应用",
-        "question": "当你情绪激动想要争论时，元认知的正确应用是？",
+        "difficulty": "实践应用",
+        "question": "执行'先定义理想生活，再找赚钱方式'的第一步是？",
         "options": "[",
         "answer": "B",
-        "explanation": "元认知要求我们跳出情绪和立场，从更高维度审视思维过程。"
+        "explanation": "先有清晰的生活愿景，才能设计匹配的商业模式。"
       },
       {
         "id": "Q004",
-        "principle": "元认知",
+        "principle": "你就是生意",
         "type": "single",
-        "difficulty": "基础",
-        "question": "缺乏元认知的最大问题是？",
-        "options": "[",
-        "answer": "C",
-        "explanation": "没有元认知，你的'思考'只是'情绪的自动反应'，无法做出理性决策。"
-      },
-      {
-        "id": "Q005",
-        "principle": "元认知",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "为什么说写作是'思考的磨刀石'？",
+        "difficulty": "核心概念",
+        "question": "盲目跟风创业最可能导致什么结果？",
         "options": "[",
         "answer": "B",
-        "explanation": "写作过程强制你组织逻辑、发现矛盾，是检验和提升思维质量的最佳工具。"
+        "explanation": "没有独特优势和内在动力，只会陷入更累的打工状态。"
+      },
+      {
+        "id": "Q006",
+        "principle": "你就是生意",
+        "type": "single",
+        "difficulty": "深度理解",
+        "question": "为什么说你的经历是'独一无二的赛道'？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "每个人的经历组合都是独特的，这种独特性就是你的护城河。"
       },
       {
         "id": "Q007",
-        "principle": "元认知",
+        "principle": "你就是生意",
         "type": "single",
-        "difficulty": "基础",
-        "question": "'坐享'（冥想）如何帮助提升元认知？",
+        "difficulty": "核心概念",
+        "question": "新型创业与传统创业的本质区别是？",
         "options": "[",
         "answer": "B",
-        "explanation": "冥想是元认知的'健身房'，专门训练觉察和控制思维的能力。"
-      },
-      {
-        "id": "Q008",
-        "principle": "元认知",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "元认知能力是人与人之间最根本的差距，因为它决定了？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "元认知决定了你能否主动升级心智'操作系统'，摆脱偏见和情绪的控制。"
+        "explanation": "新型创业是成为生意本身，而非寻找外部项目。"
       },
       {
         "id": "Q009",
-        "principle": "承担责任",
+        "principle": "你就是生意",
         "type": "single",
-        "difficulty": "基础",
-        "question": "个人成长操作系统的底层信念是？",
+        "difficulty": "深度理解",
+        "question": "投资自己的最大优势是？",
         "options": "[",
-        "answer": "B",
-        "explanation": "'我，且只有我，对我的人生负有100%的责任'是成长的底层信念。"
+        "answer": "C",
+        "explanation": "这是唯一不会贬值、不会被夺走的财富。"
       },
       {
         "id": "Q010",
-        "principle": "承担责任",
+        "principle": "你就是生意",
         "type": "single",
-        "difficulty": "进阶",
-        "question": "为什么说抱怨是'弱者病毒'？",
-        "options": "[",
-        "answer": "C",
-        "explanation": "抱怨本质上是思维懒惰，放弃了'我能做什么'的可能性。"
-      },
-      {
-        "id": "Q012",
-        "principle": "承担责任",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "抱怨会导致什么恶性循环？",
-        "options": "[",
-        "answer": "A",
-        "explanation": "抱怨强化受害者心态，导致越来越不愿改变，形成恶性循环。"
-      },
-      {
-        "id": "Q013",
-        "principle": "承担责任",
-        "type": "single",
-        "difficulty": "应用",
-        "question": "想要抱怨时，应该问自己的第一个问题是？",
-        "options": "[",
-        "answer": "C",
-        "explanation": "启动元认知，评估抱怨是否有建设性，是阻止抱怨的第一步。"
-      },
-      {
-        "id": "Q015",
-        "principle": "承担责任",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "在个人成长操作系统里，没有哪个'程序'？",
+        "difficulty": "实践应用",
+        "question": "服务'过去的自己'的核心价值在于？",
         "options": "[",
         "answer": "B",
-        "explanation": "抱怨这个'程序'在成长系统中应该被删除。"
+        "explanation": "亲身经历让你成为最懂这个群体的人。"
       },
       {
-        "id": "Q016",
-        "principle": "承担责任",
+        "id": "Q011",
+        "principle": "注意力价值",
         "type": "single",
-        "difficulty": "应用",
-        "question": "'零抱怨挑战'的核心方法是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "通过物理提醒和记录，逐步改变抱怨习惯。"
-      },
-      {
-        "id": "Q017",
-        "principle": "注意力",
-        "type": "single",
-        "difficulty": "基础",
+        "difficulty": "核心概念",
         "question": "个人资源的正确价值排序是？",
         "options": "[",
         "answer": "C",
-        "explanation": "注意力是唯一可完全掌控的、创造价值的入口，比时间和金钱更宝贵。"
+        "explanation": "注意力是最宝贵的资源，决定了人生走向。"
       },
       {
-        "id": "Q018",
-        "principle": "注意力",
+        "id": "Q012",
+        "principle": "注意力价值",
         "type": "single",
-        "difficulty": "进阶",
+        "difficulty": "深度理解",
         "question": "为什么注意力比时间更宝贵？",
         "options": "[",
         "answer": "B",
-        "explanation": "注意力是你创造价值的入口和杠杆，决定了时间的使用质量。"
+        "explanation": "同样的时间，不同的注意力质量产出天差地别。"
+      },
+      {
+        "id": "Q014",
+        "principle": "注意力价值",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "无法保持45分钟以上专注会导致什么？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "深度工作能力是未来核心竞争力的基础。"
+      },
+      {
+        "id": "Q015",
+        "principle": "注意力价值",
+        "type": "single",
+        "difficulty": "深度理解",
+        "question": "算法的目的和我们的对抗策略是？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "认清算法本质，主动夺回注意力控制权。"
+      },
+      {
+        "id": "Q017",
+        "principle": "注意力价值",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "被短视频和八卦劫持注意力的后果是？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "注意力被劫持等于人生被劫持。"
+      },
+      {
+        "id": "Q018",
+        "principle": "注意力价值",
+        "type": "single",
+        "difficulty": "实践应用",
+        "question": "如何给注意力定价？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "用经济学思维管理注意力，确保高价值投入。"
       },
       {
         "id": "Q020",
-        "principle": "注意力",
+        "principle": "注意力价值",
         "type": "single",
-        "difficulty": "基础",
-        "question": "'专注是一种选择，而非能力'意味着？",
+        "difficulty": "核心概念",
+        "question": "价值观在注意力管理中的作用是？",
         "options": "[",
         "answer": "B",
-        "explanation": "专注不是能力问题，而是价值选择问题。"
+        "explanation": "清晰的价值观是最好的注意力过滤器。"
       },
       {
         "id": "Q021",
-        "principle": "注意力",
+        "principle": "100%责任",
         "type": "single",
-        "difficulty": "进阶",
-        "question": "无法保持45分钟以上专注的人将面临什么？",
+        "difficulty": "核心概念",
+        "question": "个人成长操作系统的底层信念是？",
         "options": "[",
         "answer": "B",
-        "explanation": "深度工作需要持续专注，这是创造核心价值的基础。"
+        "explanation": "这是成长系统的底层信念，没有'抱怨'这个程序。"
       },
       {
-        "id": "Q023",
-        "principle": "注意力",
+        "id": "Q022",
+        "principle": "100%责任",
         "type": "single",
-        "difficulty": "基础",
-        "question": "将注意力浪费在凑热闹、随大流上等同于？",
+        "difficulty": "深度理解",
+        "question": "为什么说抱怨是'弱者病毒'？",
         "options": "[",
-        "answer": "C",
-        "explanation": "注意力是你最宝贵的生产资料，浪费它就是放弃创造价值的机会。"
+        "answer": "B",
+        "explanation": "抱怨本质是思维懒惰，强化受害者心态。"
       },
       {
         "id": "Q024",
-        "principle": "注意力",
+        "principle": "100%责任",
         "type": "single",
-        "difficulty": "进阶",
-        "question": "算法的目的是什么？如何对抗？",
+        "difficulty": "核心概念",
+        "question": "向内求索的核心是？",
         "options": "[",
         "answer": "B",
-        "explanation": "算法目标是劫持注意力，需要主动对抗，夺回控制权。"
+        "explanation": "专注于自己能改变的，而非抱怨不能改变的。"
       },
       {
         "id": "Q025",
-        "principle": "复利",
+        "principle": "100%责任",
         "type": "single",
-        "difficulty": "基础",
-        "question": "定投策略的核心是？",
+        "difficulty": "深度理解",
+        "question": "主动进化思维的特征是？",
         "options": "[",
         "answer": "B",
-        "explanation": "定投的本质是相信时间和复利的力量。"
+        "explanation": "主动创造成长压力，成为变化的推动者。"
       },
       {
         "id": "Q027",
-        "principle": "复利",
+        "principle": "100%责任",
         "type": "single",
-        "difficulty": "进阶",
-        "question": "什么是'微笑曲线'心态？",
+        "difficulty": "核心概念",
+        "question": "抱怨会导致什么恶性循环？",
         "options": "[",
         "answer": "B",
-        "explanation": "在低谷时反而应该加大投入，因为'成本'更低。"
+        "explanation": "抱怨强化受害者心态，形成越来越糟的循环。"
       },
       {
         "id": "Q028",
-        "principle": "复利",
+        "principle": "100%责任",
         "type": "single",
-        "difficulty": "基础",
-        "question": "'1000小时定律'的含义是？",
-        "options": "[",
-        "answer": "C",
-        "explanation": "集中1000小时深度练习一项技能，是从入门到精通的基本要求。"
-      },
-      {
-        "id": "Q029",
-        "principle": "复利",
-        "type": "single",
-        "difficulty": "应用",
-        "question": "'生学硬练'为什么是最高效的学习方式？",
+        "difficulty": "实践应用",
+        "question": "将'为什么没人帮我'转换为？",
         "options": "[",
         "answer": "B",
-        "explanation": "实践中的即时反馈是最好的老师。"
+        "explanation": "从索取思维转向价值交换思维。"
+      },
+      {
+        "id": "Q030",
+        "principle": "100%责任",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "为什么说承担责任就是获得自由？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "主动承担责任才能主动创造，获得真正的自由。"
       },
       {
         "id": "Q031",
-        "principle": "复利",
+        "principle": "元认知",
         "type": "single",
-        "difficulty": "基础",
-        "question": "每天进步1%，一年后的效果是？",
+        "difficulty": "核心概念",
+        "question": "元认知的本质是什么？",
         "options": "[",
         "answer": "B",
-        "explanation": "1.01^365 = 37.8，这就是复利的数学威力。"
+        "explanation": "元认知是'对思考过程的认知'，让你能审视自己的想法。"
       },
       {
         "id": "Q032",
-        "principle": "复利",
+        "principle": "元认知",
         "type": "single",
-        "difficulty": "应用",
-        "question": "如何度过复利曲线的拐点？",
-        "options": "[",
-        "answer": "C",
-        "explanation": "拐点是最容易放弃的时候，需要信念和支持系统。"
-      },
-      {
-        "id": "Q033",
-        "principle": "理想生活",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "新时代创业的第一原则是？",
+        "difficulty": "深度理解",
+        "question": "为什么说没有元认知就是大脑的奴隶？",
         "options": "[",
         "answer": "B",
-        "explanation": "事业应该服务于生活，而不是相反。"
+        "explanation": "没有元认知，你的'思考'只是'情绪的自动反应'。"
       },
       {
         "id": "Q034",
-        "principle": "理想生活",
+        "principle": "元认知",
         "type": "single",
-        "difficulty": "进阶",
-        "question": "正确的创业决策顺序是？",
+        "difficulty": "核心概念",
+        "question": "冥想如何帮助提升元认知？",
         "options": "[",
         "answer": "B",
-        "explanation": "以终为始，从理想生活倒推事业设计。"
+        "explanation": "冥想是元认知的'健身房'，专门训练觉察能力。"
       },
       {
-        "id": "Q036",
-        "principle": "理想生活",
+        "id": "Q035",
+        "principle": "元认知",
         "type": "single",
-        "difficulty": "基础",
-        "question": "高杠杆创业路径的起点是？",
+        "difficulty": "深度理解",
+        "question": "写作为什么是'思考的磨刀石'？",
         "options": "[",
         "answer": "B",
-        "explanation": "从内容创作建立受众开始，是零成本高杠杆的起点。"
+        "explanation": "写作过程暴露并修正思维偏差。"
       },
       {
         "id": "Q037",
-        "principle": "理想生活",
+        "principle": "元认知",
         "type": "single",
-        "difficulty": "进阶",
-        "question": "旧时代创业思维的最大陷阱是？",
+        "difficulty": "核心概念",
+        "question": "缺乏元认知的最大问题是？",
         "options": "[",
         "answer": "B",
-        "explanation": "失去生活质量的创业违背了创业的初衷。"
+        "explanation": "无法从经验中学习，一直被本能和情绪驱动。"
       },
       {
-        "id": "Q039",
-        "principle": "理想生活",
+        "id": "Q038",
+        "principle": "元认知",
         "type": "single",
-        "difficulty": "基础",
-        "question": "为什么将经历和兴趣融入事业能带来持续动力？",
+        "difficulty": "实践应用",
+        "question": "每日反思应该包含哪个核心问题？",
         "options": "[",
         "answer": "B",
-        "explanation": "内在驱动力远比外在激励更持久。"
+        "explanation": "识别影响判断的因素是元认知的核心。"
       },
       {
         "id": "Q040",
-        "principle": "理想生活",
+        "principle": "元认知",
         "type": "single",
-        "difficulty": "应用",
-        "question": "如何确保事业与生活价值观对齐？",
+        "difficulty": "核心概念",
+        "question": "元认知让你能够？",
         "options": "[",
         "answer": "B",
-        "explanation": "需要定期复盘和调整，确保不偏离初心。"
+        "explanation": "像升级软件一样不断优化思维模式。"
       },
       {
         "id": "Q041",
-        "principle": "商业进化",
+        "principle": "创业哲学",
         "type": "single",
-        "difficulty": "基础",
-        "question": "通往财富自由的三步进化路径是？",
+        "difficulty": "核心概念",
+        "question": "新时代创业的第一原则是？",
         "options": "[",
         "answer": "B",
-        "explanation": "这是个人商业模式的进化路径。"
+        "explanation": "创业是为了过想要的生活，不是换个地方996。"
       },
       {
         "id": "Q042",
-        "principle": "商业进化",
+        "principle": "创业哲学",
         "type": "single",
-        "difficulty": "进阶",
-        "question": "财富自由的本质是？",
+        "difficulty": "深度理解",
+        "question": "新型创业逻辑的正确顺序是？",
         "options": "[",
         "answer": "B",
-        "explanation": "财富自由的核心是时间自主权，而非金钱数量。"
+        "explanation": "工作与生活不分割，因为你靠'做自己'赚钱。"
       },
       {
         "id": "Q044",
-        "principle": "商业进化",
+        "principle": "创业哲学",
         "type": "single",
-        "difficulty": "基础",
-        "question": "什么是'睡后收入'？",
+        "difficulty": "核心概念",
+        "question": "旧时代创业思维的最大陷阱是？",
         "options": "[",
         "answer": "B",
-        "explanation": "产品化让你的时间投入能够重复产生收入。"
+        "explanation": "失去生活质量的创业违背了创业初衷。"
       },
       {
         "id": "Q045",
-        "principle": "商业进化",
+        "principle": "创业哲学",
         "type": "single",
-        "difficulty": "应用",
-        "question": "进入第二站（产品化）的信号是？",
+        "difficulty": "深度理解",
+        "question": "'T型内容'策略是指？",
         "options": "[",
         "answer": "B",
-        "explanation": "技能成熟且时间瓶颈出现，是产品化的时机。"
+        "explanation": "80%专业内容建立权威，20%个人故事建立连接。"
       },
       {
         "id": "Q047",
-        "principle": "商业进化",
+        "principle": "创业哲学",
         "type": "single",
-        "difficulty": "基础",
-        "question": "第三站'购买他人时间'的方式包括？",
+        "difficulty": "核心概念",
+        "question": "为什么要先定义生活再找赚钱方式？",
         "options": "[",
-        "answer": "A",
-        "explanation": "通过组织或资本让他人的时间为你创造价值。"
+        "answer": "B",
+        "explanation": "以终为始，避免南辕北辙。"
       },
       {
         "id": "Q048",
-        "principle": "商业进化",
+        "principle": "创业哲学",
         "type": "single",
-        "difficulty": "应用",
-        "question": "三个进化阶段中，风险最高但增长潜力最大的是？",
-        "options": "[",
-        "answer": "C",
-        "explanation": "第三站需要资本和经验，风险高但能实现指数增长。"
-      },
-      {
-        "id": "Q049",
-        "principle": "建立受众",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "为什么说所有创业都应该从建立受众开始？",
+        "difficulty": "实践应用",
+        "question": "最小成本验证创业想法的第一步是？",
         "options": "[",
         "answer": "B",
-        "explanation": "建立受众是风险最低、杠杆最高的创业起点。"
+        "explanation": "零成本起步，用内容验证兴趣和市场。"
       },
       {
         "id": "Q050",
-        "principle": "建立受众",
+        "principle": "创业哲学",
         "type": "single",
-        "difficulty": "进阶",
-        "question": "'建受众'的本质是？",
+        "difficulty": "核心概念",
+        "question": "创业的终极目标是？",
         "options": "[",
         "answer": "B",
-        "explanation": "核心是通过持续价值输出建立信任关系。"
+        "explanation": "创业是为了成为想成为的人，过想过的生活。"
+      },
+      {
+        "id": "Q051",
+        "principle": "商业进化",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "财富自由的本质是？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "财富自由的核心是时间自主权。"
       },
       {
         "id": "Q052",
-        "principle": "建立受众",
+        "principle": "商业进化",
         "type": "single",
-        "difficulty": "基础",
-        "question": "利用'费曼学习法'的核心是？",
+        "difficulty": "深度理解",
+        "question": "个人商业模式进化的三部曲是？",
         "options": "[",
         "answer": "B",
-        "explanation": "教是最好的学，分享过程暴露知识盲区。"
+        "explanation": "从单次出售到批量出售再到购买他人时间。"
       },
       {
-        "id": "Q053",
+        "id": "Q054",
+        "principle": "商业进化",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "什么是'睡后收入'？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "产品化让时间投入能重复产生收入。"
+      },
+      {
+        "id": "Q055",
+        "principle": "商业进化",
+        "type": "single",
+        "difficulty": "实践应用",
+        "question": "进入第二站（产品化）的信号是？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "技能成熟且时间瓶颈出现是产品化时机。"
+      },
+      {
+        "id": "Q057",
+        "principle": "商业进化",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "第三站'买时间'的方式包括？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "通过组织或资本让他人的时间为你创造价值。"
+      },
+      {
+        "id": "Q058",
+        "principle": "商业进化",
+        "type": "single",
+        "difficulty": "实践应用",
+        "question": "如何平稳过渡到下一阶段？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "渐进式过渡，降低风险。"
+      },
+      {
+        "id": "Q060",
+        "principle": "商业进化",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "三个进化阶段中风险最高但潜力最大的是？",
+        "options": "[",
+        "answer": "C",
+        "explanation": "第三站需要资本和经验，但能实现指数增长。"
+      },
+      {
+        "id": "Q061",
         "principle": "建立受众",
         "type": "single",
-        "difficulty": "应用",
+        "difficulty": "核心概念",
+        "question": "为什么说建立受众是最安全的创业起点？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "这是风险最低、杠杆最高的创业方式。"
+      },
+      {
+        "id": "Q062",
+        "principle": "建立受众",
+        "type": "single",
+        "difficulty": "深度理解",
+        "question": "建立受众的本质是？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "受众的核心是信任关系，不是数量。"
+      },
+      {
+        "id": "Q064",
+        "principle": "建立受众",
+        "type": "single",
+        "difficulty": "核心概念",
+        "question": "费曼学习法的核心是？",
+        "options": "[",
+        "answer": "B",
+        "explanation": "教是最好的学，分享过程暴露盲区。"
+      },
+      {
+        "id": "Q065",
+        "principle": "建立受众",
+        "type": "single",
+        "difficulty": "实践应用",
         "question": "受众规模小时的最佳变现策略是？",
         "options": "[",
         "answer": "B",
         "explanation": "早期通过高客单价的深度服务变现。"
       },
       {
-        "id": "Q055",
+        "id": "Q067",
         "principle": "建立受众",
         "type": "single",
-        "difficulty": "基础",
+        "difficulty": "核心概念",
         "question": "建立受众的内容策略核心是？",
         "options": "[",
         "answer": "B",
-        "explanation": "持续提供价值比追求完美更重要。"
-      },
-      {
-        "id": "Q056",
-        "principle": "建立受众",
-        "type": "single",
-        "difficulty": "应用",
-        "question": "定义理想受众最简单的方法是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "你最了解过去的自己，这是最精准的受众定位。"
-      },
-      {
-        "id": "Q057",
-        "principle": "模仿学习",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "新手模仿的最大误区是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "要研究成功者早期如何增长，而非现在如何维持。"
-      },
-      {
-        "id": "Q058",
-        "principle": "模仿学习",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "权威性如何影响内容策略？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "权威性决定了你能说什么类型的内容。"
-      },
-      {
-        "id": "Q060",
-        "principle": "模仿学习",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "新手内容应该有多少比例专注于解决问题？",
-        "options": "[",
-        "answer": "C",
-        "explanation": "新手80%的内容应该解决实际问题。"
-      },
-      {
-        "id": "Q061",
-        "principle": "模仿学习",
-        "type": "single",
-        "difficulty": "应用",
-        "question": "建立素材库的目的是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "素材库是学习和迭代的工具，不是收藏夹。"
-      },
-      {
-        "id": "Q062",
-        "principle": "模仿学习",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "为什么新手发心灵鸡汤是'增长杀手'？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "无权威、无价值、无差异的内容无法吸引受众。"
-      },
-      {
-        "id": "Q063",
-        "principle": "模仿学习",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "从'消费者'变成'研究者'的关键是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "研究者关注的是'为什么'，而非'是什么'。"
-      },
-      {
-        "id": "Q065",
-        "principle": "模仿学习",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "研究成功内容应该关注哪个方面？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "关注可复制的成功要素，而非表面现象。"
-      },
-      {
-        "id": "Q066",
-        "principle": "人际连接",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "个人成长速度很大程度上取决于？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "你是你最常接触的5个人的平均值。"
+        "explanation": "持续提供价值比完美更重要。"
       },
       {
         "id": "Q068",
-        "principle": "人际连接",
+        "principle": "建立受众",
         "type": "single",
-        "difficulty": "基础",
-        "question": "理想的'成长小组'规模是？",
+        "difficulty": "实践应用",
+        "question": "定义理想受众最简单的方法是？",
         "options": "[",
         "answer": "B",
-        "explanation": "3-5人既能深入交流，又有足够多样性。"
+        "explanation": "你最了解过去的自己，这是最精准的定位。"
       },
       {
-        "id": "Q069",
-        "principle": "人际连接",
+        "id": "Q070",
+        "principle": "建立受众",
         "type": "single",
-        "difficulty": "进阶",
-        "question": "践行利他主义的核心思维转换是？",
+        "difficulty": "核心概念",
+        "question": "为什么说受众是最重要的商业资产？",
         "options": "[",
-        "answer": "A",
-        "explanation": "利他是最好的利己，先给予才能收获。"
+        "answer": "B",
+        "explanation": "受众是所有未来项目的流量池和信任基础。"
       },
       {
         "id": "Q071",
-        "principle": "人际连接",
+        "principle": "长期主义",
         "type": "single",
-        "difficulty": "基础",
-        "question": "人际连接的最深层次是？",
+        "difficulty": "核心概念",
+        "question": "长期主义的两大支柱是？",
         "options": "[",
-        "answer": "C",
-        "explanation": "共创是最深度的连接，创造共同价值。"
+        "answer": "B",
+        "explanation": "模仿加速起步，定投确保终局。"
       },
       {
         "id": "Q072",
-        "principle": "人际连接",
+        "principle": "长期主义",
         "type": "single",
-        "difficulty": "进阶",
-        "question": "维护人际网络的核心原则是？",
+        "difficulty": "深度理解",
+        "question": "聪明模仿的核心是？",
         "options": "[",
         "answer": "B",
-        "explanation": "高质量的深度连接比表面社交更有价值。"
-      },
-      {
-        "id": "Q073",
-        "principle": "人际连接",
-        "type": "single",
-        "difficulty": "应用",
-        "question": "建立高质量连接的首要原则是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "真诚是建立信任和深度连接的基础。"
+        "explanation": "学习成功背后的逻辑，而非表面形式。"
       },
       {
         "id": "Q074",
-        "principle": "精力管理",
+        "principle": "长期主义",
         "type": "single",
-        "difficulty": "基础",
-        "question": "为什么说健康是最重要的投资？",
+        "difficulty": "核心概念",
+        "question": "'1000小时定律'是指？",
         "options": "[",
         "answer": "B",
-        "explanation": "身体是承载一切的容器，精力决定产出质量。"
+        "explanation": "深度投入是从入门到精通的必经之路。"
       },
       {
         "id": "Q075",
-        "principle": "精力管理",
+        "principle": "长期主义",
         "type": "single",
-        "difficulty": "进阶",
-        "question": "为什么精力比时间更重要？",
+        "difficulty": "深度理解",
+        "question": "定投思维应该应用在哪些领域？",
         "options": "[",
         "answer": "B",
-        "explanation": "同样的时间，不同精力状态产出天差地别。"
+        "explanation": "定投是普适的成长策略。"
       },
       {
         "id": "Q077",
-        "principle": "精力管理",
+        "principle": "长期主义",
         "type": "single",
-        "difficulty": "基础",
-        "question": "哪些食物会'偷走'精力？",
+        "difficulty": "核心概念",
+        "question": "每天进步1%，一年后的效果是？",
         "options": "[",
         "answer": "B",
-        "explanation": "高糖造成血糖波动，精加工食品增加消化负担。"
+        "explanation": "1.01^365=37.8，这是复利的数学威力。"
       },
       {
         "id": "Q078",
-        "principle": "精力管理",
+        "principle": "长期主义",
         "type": "single",
-        "difficulty": "应用",
-        "question": "将运动整合进日常的关键原则是？",
+        "difficulty": "实践应用",
+        "question": "如何度过复利曲线的拐点？",
         "options": "[",
         "answer": "B",
-        "explanation": "规律性比强度更重要，降低阻力持续执行。"
+        "explanation": "拐点需要信念和支持系统才能坚持。"
       },
       {
         "id": "Q080",
-        "principle": "精力管理",
+        "principle": "长期主义",
         "type": "single",
-        "difficulty": "基础",
-        "question": "精力管理的四大支柱是？",
+        "difficulty": "核心概念",
+        "question": "'微笑曲线'心态是指？",
         "options": "[",
         "answer": "B",
-        "explanation": "四个维度的精力需要平衡发展。"
-      },
-      {
-        "id": "Q081",
-        "principle": "精力管理",
-        "type": "single",
-        "difficulty": "应用",
-        "question": "如何利用精力节奏提高效率？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "顺应生物节律，合理分配任务类型。"
-      },
-      {
-        "id": "Q082",
-        "principle": "杠杆思维",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "很多新手创业的结果是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "无杠杆思维导致创业变成自我雇佣。"
-      },
-      {
-        "id": "Q083",
-        "principle": "杠杆思维",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "陷入'无杠杆陷阱'的根源是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "像找工作一样选项目，而非从理想生活出发。"
-      },
-      {
-        "id": "Q085",
-        "principle": "杠杆思维",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "从服务升级到产品的目的是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "产品化实现时间与收入脱钩。"
-      },
-      {
-        "id": "Q086",
-        "principle": "杠杆思维",
-        "type": "single",
-        "difficulty": "应用",
-        "question": "'以终为始'设计商业模式的第一步是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "从理想生活倒推商业模式设计。"
-      },
-      {
-        "id": "Q088",
-        "principle": "杠杆思维",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "评估杠杆潜力最重要的指标是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "边际成本决定了规模化的可能性。"
-      },
-      {
-        "id": "Q089",
-        "principle": "杠杆思维",
-        "type": "single",
-        "difficulty": "应用",
-        "question": "有杠杆生意的典型例子是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "在线课程一次制作，无限销售，边际成本接近零。"
-      },
-      {
-        "id": "Q090",
-        "principle": "杠杆思维",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "如何避免创业变成另一份工作？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "杠杆思维是避免自我雇佣的关键。"
-      },
-      {
-        "id": "Q091",
-        "principle": "个人品牌",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "年轻人最值得投入的生意是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "你的独特经历和成长就是最好的生意。"
-      },
-      {
-        "id": "Q092",
-        "principle": "个人品牌",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "新模式如何颠覆传统创业逻辑？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "不用选择领域，你本身就是独特领域。"
-      },
-      {
-        "id": "Q094",
-        "principle": "个人品牌",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "'活成领域本身'意味着？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "人们关注的是你这个人，不只是内容。"
-      },
-      {
-        "id": "Q095",
-        "principle": "个人品牌",
-        "type": "single",
-        "difficulty": "进阶",
-        "question": "为什么小众不等于没市场？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "独特性带来精准受众和无法复制的优势。"
-      },
-      {
-        "id": "Q096",
-        "principle": "个人品牌",
-        "type": "single",
-        "difficulty": "应用",
-        "question": "Work-Life Integration的含义是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "当事业就是做自己时，工作生活融为一体。"
-      },
-      {
-        "id": "Q098",
-        "principle": "个人品牌",
-        "type": "single",
-        "difficulty": "基础",
-        "question": "构建个人品牌最核心的要素是？",
-        "options": "[",
-        "answer": "B",
-        "explanation": "独特性和价值观是品牌的灵魂。"
+        "explanation": "在低谷时反而应该加大投入。"
       }
     ],
     "multiple": [
       {
         "id": "Q002",
-        "principle": "元认知",
+        "principle": "你就是生意",
         "type": "multiple",
-        "difficulty": "进阶",
-        "question": "以下哪些是锻炼元认知的有效方法？",
+        "difficulty": "深度理解",
+        "question": "高杠杆创业路径包括哪些步骤？",
+        "options": "[",
+        "answer": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "explanation": "内容→服务→产品→公司，这是一个循序渐进的高杠杆路径。"
+      },
+      {
+        "id": "Q005",
+        "principle": "你就是生意",
+        "type": "multiple",
+        "difficulty": "实践应用",
+        "question": "把解决自己问题的方法产品化需要哪些步骤？",
         "options": "[",
         "answer": [
           "A",
           "B",
           "C"
         ],
-        "explanation": "冥想、反思决策、写作都是直接锻炼元认知的方法。单纯阅读虽有益，但不直接锻炼元认知能力。"
+        "explanation": "真实的问题和解决方案是产品化的基础，包括失败经历都是宝贵素材。"
       },
       {
-        "id": "Q006",
+        "id": "Q008",
+        "principle": "你就是生意",
+        "type": "multiple",
+        "difficulty": "实践应用",
+        "question": "日常践行'你就是生意'的方法包括？",
+        "options": "[",
+        "answer": [
+          "A",
+          "B",
+          "D"
+        ],
+        "explanation": "透明化成长过程，持续积累价值，建立连接。"
+      },
+      {
+        "id": "Q013",
+        "principle": "注意力价值",
+        "type": "multiple",
+        "difficulty": "实践应用",
+        "question": "保护注意力的有效方法包括？",
+        "options": "[",
+        "answer": [
+          "A",
+          "B",
+          "D"
+        ],
+        "explanation": "主动掌控环境，量化价值，过滤干扰。"
+      },
+      {
+        "id": "Q016",
+        "principle": "注意力价值",
+        "type": "multiple",
+        "difficulty": "实践应用",
+        "question": "注意力应该优先投资在哪些领域？",
+        "options": "[",
+        "answer": [
+          "A",
+          "C",
+          "D"
+        ],
+        "explanation": "投资在有复利效应的高价值活动上。"
+      },
+      {
+        "id": "Q019",
+        "principle": "注意力价值",
+        "type": "multiple",
+        "difficulty": "深度理解",
+        "question": "哪些是隐形的注意力杀手？",
+        "options": "[",
+        "answer": [
+          "A",
+          "B",
+          "D"
+        ],
+        "explanation": "看似有用实则消耗巨大的活动。"
+      },
+      {
+        "id": "Q023",
+        "principle": "100%责任",
+        "type": "multiple",
+        "difficulty": "实践应用",
+        "question": "戒掉抱怨的有效方法包括？",
+        "options": "[",
+        "answer": [
+          "A",
+          "B",
+          "C"
+        ],
+        "explanation": "把抱怨的能量转化为改变的动力，而非压抑情绪。"
+      },
+      {
+        "id": "Q026",
+        "principle": "100%责任",
+        "type": "multiple",
+        "difficulty": "实践应用",
+        "question": "100%责任包含哪些方面？",
+        "options": "[",
+        "answer": [
+          "A",
+          "C",
+          "D"
+        ],
+        "explanation": "对自己能控制的部分负全责，不包括他人的选择。"
+      },
+      {
+        "id": "Q029",
+        "principle": "100%责任",
+        "type": "multiple",
+        "difficulty": "深度理解",
+        "question": "承担责任与自我苛责的区别在于？",
+        "options": "[",
+        "answer": [
+          "A",
+          "B",
+          "C"
+        ],
+        "explanation": "承担责任是理性的成长工具，自我苛责是情绪化伤害。"
+      },
+      {
+        "id": "Q033",
         "principle": "元认知",
         "type": "multiple",
-        "difficulty": "应用",
+        "difficulty": "实践应用",
+        "question": "锻炼元认知的有效方法包括？",
+        "options": "[",
+        "answer": [
+          "A",
+          "B",
+          "D"
+        ],
+        "explanation": "冥想、反思、写作都直接锻炼元认知能力。"
+      },
+      {
+        "id": "Q036",
+        "principle": "元认知",
+        "type": "multiple",
+        "difficulty": "实践应用",
         "question": "日常生活中启动元认知的最佳时机包括？",
         "options": "[",
         "answer": [
@@ -4173,344 +3486,189 @@
           "B",
           "D"
         ],
-        "explanation": "决策、失败反思、学习都是需要元认知介入的关键时刻。心情愉悦时不是必需的触发点。"
+        "explanation": "关键时刻和情绪激动时最需要元认知介入。"
       },
       {
-        "id": "Q011",
-        "principle": "承担责任",
+        "id": "Q039",
+        "principle": "元认知",
         "type": "multiple",
-        "difficulty": "应用",
-        "question": "将向外归因转为向内求索的正确做法包括？",
+        "difficulty": "深度理解",
+        "question": "元认知的层次包括？",
         "options": "[",
         "answer": [
           "A",
           "B",
-          "C"
-        ],
-        "explanation": "向内求索是把注意力转向自己能控制的部分，而非被动接受。"
-      },
-      {
-        "id": "Q014",
-        "principle": "承担责任",
-        "type": "multiple",
-        "difficulty": "进阶",
-        "question": "承担100%责任与自我苛责的区别在于？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "C"
-        ],
-        "explanation": "承担责任是成长工具，自我苛责是情绪伤害，有本质区别。"
-      },
-      {
-        "id": "Q019",
-        "principle": "注意力",
-        "type": "multiple",
-        "difficulty": "应用",
-        "question": "保护注意力的有效方法包括？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "C"
-        ],
-        "explanation": "主动控制环境、量化价值、设备分离都是保护注意力的有效策略。"
-      },
-      {
-        "id": "Q022",
-        "principle": "注意力",
-        "type": "multiple",
-        "difficulty": "应用",
-        "question": "注意力应该优先投资在哪些'高价值活动'？",
-        "options": "[",
-        "answer": [
-          "A",
-          "C",
           "D"
         ],
-        "explanation": "学习、创造、关系都有复利效应，社交媒体多数是注意力黑洞。"
+        "explanation": "从觉察到分析再到改造，逐层递进。"
       },
       {
-        "id": "Q026",
-        "principle": "复利",
+        "id": "Q043",
+        "principle": "创业哲学",
         "type": "multiple",
-        "difficulty": "应用",
-        "question": "定投思维应该应用在哪些领域？",
+        "difficulty": "实践应用",
+        "question": "服务'过去的自己'包括哪些步骤？",
         "options": "[",
         "answer": [
           "A",
           "B",
-          "C",
           "D"
         ],
-        "explanation": "定投是一种普适的成长策略，适用于所有需要积累的领域。"
+        "explanation": "将自己的经历转化为产品，合理变现。"
       },
       {
-        "id": "Q030",
-        "principle": "复利",
+        "id": "Q046",
+        "principle": "创业哲学",
         "type": "multiple",
-        "difficulty": "进阶",
-        "question": "追求速成的后果包括？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "C"
-        ],
-        "explanation": "速成心态违背复利规律，导致无法积累真正的价值。"
-      },
-      {
-        "id": "Q035",
-        "principle": "理想生活",
-        "type": "multiple",
-        "difficulty": "应用",
-        "question": "'服务过去的自己'包含哪些步骤？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "C"
-        ],
-        "explanation": "将自己的经历转化为产品，但不是免费，而是合理变现。"
-      },
-      {
-        "id": "Q038",
-        "principle": "理想生活",
-        "type": "multiple",
-        "difficulty": "应用",
+        "difficulty": "实践应用",
         "question": "描绘理想生活应该包含哪些维度？",
         "options": "[",
         "answer": [
           "A",
           "B",
-          "C"
+          "D"
         ],
-        "explanation": "理想生活是多维度的平衡，不只是收入。"
+        "explanation": "理想生活是多维度平衡，不只是收入。"
       },
       {
-        "id": "Q043",
-        "principle": "商业进化",
+        "id": "Q049",
+        "principle": "创业哲学",
         "type": "multiple",
-        "difficulty": "应用",
-        "question": "在'单次出售时间'阶段，应该重点关注什么？",
+        "difficulty": "深度理解",
+        "question": "避免创业侵蚀生活的原则包括？",
         "options": "[",
         "answer": [
           "A",
           "B",
+          "D"
+        ],
+        "explanation": "平衡和边界是可持续创业的关键。"
+      },
+      {
+        "id": "Q053",
+        "principle": "商业进化",
+        "type": "multiple",
+        "difficulty": "实践应用",
+        "question": "在'卖时间'阶段应该重点关注什么？",
+        "options": "[",
+        "answer": [
+          "A",
+          "C",
           "D"
         ],
         "explanation": "第一阶段是为成长打工，不只为薪水。"
       },
       {
-        "id": "Q046",
+        "id": "Q056",
         "principle": "商业进化",
         "type": "multiple",
-        "difficulty": "进阶",
-        "question": "长期停留在'单次出售时间'的后果？",
+        "difficulty": "深度理解",
+        "question": "长期停留在'卖时间'模式的后果？",
         "options": "[",
         "answer": [
           "A",
           "B",
           "D"
         ],
-        "explanation": "单次出售时间模式限制了财富积累和自由度。"
+        "explanation": "单次出售时间模式限制了财富积累。"
       },
       {
-        "id": "Q051",
-        "principle": "建立受众",
+        "id": "Q059",
+        "principle": "商业进化",
         "type": "multiple",
-        "difficulty": "应用",
-        "question": "建受众过程中能免费学到哪些核心技能？",
+        "difficulty": "深度理解",
+        "question": "产品化的路径包括？",
         "options": "[",
         "answer": [
           "A",
           "B",
-          "C"
+          "D"
         ],
-        "explanation": "内容创作过程自然锻炼营销、写作、用户心理理解能力。"
+        "explanation": "数字产品实现一次创造，多次销售。"
       },
       {
-        "id": "Q054",
+        "id": "Q063",
         "principle": "建立受众",
         "type": "multiple",
-        "difficulty": "进阶",
+        "difficulty": "实践应用",
+        "question": "建受众过程中能学到哪些核心技能？",
+        "options": "[",
+        "answer": [
+          "A",
+          "B",
+          "D"
+        ],
+        "explanation": "内容创作自然锻炼营销、写作和用户心理理解。"
+      },
+      {
+        "id": "Q066",
+        "principle": "建立受众",
+        "type": "multiple",
+        "difficulty": "深度理解",
         "question": "没有受众就做电商的问题包括？",
         "options": "[",
         "answer": [
           "A",
           "B",
-          "C"
+          "D"
         ],
-        "explanation": "无受众创业面临资金风险、信任缺失、学习成本高等问题。"
+        "explanation": "无受众创业面临资金风险和信任缺失。"
       },
       {
-        "id": "Q059",
-        "principle": "模仿学习",
+        "id": "Q069",
+        "principle": "建立受众",
         "type": "multiple",
-        "difficulty": "应用",
-        "question": "'考古'学习包括哪些步骤？",
+        "difficulty": "深度理解",
+        "question": "受众的复利效应体现在？",
         "options": "[",
         "answer": [
           "A",
           "B",
           "D"
         ],
-        "explanation": "学习的是模式和框架，不是复制内容。"
+        "explanation": "时间越长，受众价值越大。"
       },
       {
-        "id": "Q064",
-        "principle": "模仿学习",
+        "id": "Q073",
+        "principle": "长期主义",
         "type": "multiple",
-        "difficulty": "应用",
-        "question": "模仿和抄袭的区别在于？",
+        "difficulty": "实践应用",
+        "question": "建立素材库的步骤包括？",
         "options": "[",
         "answer": [
           "A",
           "B",
           "D"
         ],
-        "explanation": "模仿是学习和创新，抄袭是偷窃。"
-      },
-      {
-        "id": "Q067",
-        "principle": "人际连接",
-        "type": "multiple",
-        "difficulty": "应用",
-        "question": "主动寻找导师的正确方法包括？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "D"
-        ],
-        "explanation": "尊重导师时间，提供价值交换，认真执行建议。"
-      },
-      {
-        "id": "Q070",
-        "principle": "人际连接",
-        "type": "multiple",
-        "difficulty": "应用",
-        "question": "闭门造车的代价包括？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "D"
-        ],
-        "explanation": "孤立会限制视野、反馈和机会。"
+        "explanation": "素材库是学习和迭代的工具。"
       },
       {
         "id": "Q076",
-        "principle": "精力管理",
+        "principle": "长期主义",
         "type": "multiple",
-        "difficulty": "应用",
-        "question": "优化睡眠的方法包括？",
+        "difficulty": "实践应用",
+        "question": "追求速成的后果包括？",
         "options": "[",
         "answer": [
           "A",
           "B",
           "D"
         ],
-        "explanation": "规律、仪式、环境都重要，屏幕会干扰睡眠。"
+        "explanation": "速成心态违背复利规律，导致无法积累。"
       },
       {
         "id": "Q079",
-        "principle": "精力管理",
+        "principle": "长期主义",
         "type": "multiple",
-        "difficulty": "进阶",
-        "question": "透支健康换事业的后果包括？",
+        "difficulty": "深度理解",
+        "question": "个人成长定投计划应包括？",
         "options": "[",
         "answer": [
           "A",
           "B",
           "D"
         ],
-        "explanation": "健康透支导致全方位能力下降，得不偿失。"
-      },
-      {
-        "id": "Q084",
-        "principle": "杠杆思维",
-        "type": "multiple",
-        "difficulty": "应用",
-        "question": "商业模式中的杠杆类型包括？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "D"
-        ],
-        "explanation": "真正的杠杆让产出与投入不成正比。"
-      },
-      {
-        "id": "Q087",
-        "principle": "杠杆思维",
-        "type": "multiple",
-        "difficulty": "进阶",
-        "question": "无杠杆生意的特征包括？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "D"
-        ],
-        "explanation": "无杠杆意味着线性增长和持续投入。"
-      },
-      {
-        "id": "Q093",
-        "principle": "个人品牌",
-        "type": "multiple",
-        "difficulty": "应用",
-        "question": "把自身问题变成生意的步骤？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "D"
-        ],
-        "explanation": "真实经历（包括失败）都是产品素材。"
-      },
-      {
-        "id": "Q097",
-        "principle": "个人品牌",
-        "type": "multiple",
-        "difficulty": "进阶",
-        "question": "'打工人思维'创业的问题？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "D"
-        ],
-        "explanation": "跟风创业缺乏内在动力和独特价值。"
-      },
-      {
-        "id": "Q099",
-        "principle": "综合应用",
-        "type": "multiple",
-        "difficulty": "进阶",
-        "question": "12条原则的底层逻辑包括？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "D"
-        ],
-        "explanation": "12原则相互支撑形成完整系统，不是独立的。"
-      },
-      {
-        "id": "Q100",
-        "principle": "综合应用",
-        "type": "multiple",
-        "difficulty": "应用",
-        "question": "面对重要选择时，应该考虑哪些原则？",
-        "options": "[",
-        "answer": [
-          "A",
-          "B",
-          "D"
-        ],
-        "explanation": "综合运用多个原则做决策，而非单一维度。"
+        "explanation": "规律性和持续性是定投的关键。"
       }
     ]
   },

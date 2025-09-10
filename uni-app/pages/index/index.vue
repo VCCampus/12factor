@@ -19,7 +19,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, onLoad, onShow } from 'vue'
 import HeroImageMap from '@/components/home/HeroImageMap.vue'
 import MobileNavigationCards from '@/components/home/MobileNavigationCards.vue' 
 import MembershipModal from '@/components/home/MembershipModal.vue'
@@ -27,11 +27,18 @@ import MembershipModal from '@/components/home/MembershipModal.vue'
 // 响应式检测
 const isMobile = computed(() => {
   // #ifdef H5
-  return window.innerWidth <= 768
+  if (typeof window !== 'undefined') {
+    return window.innerWidth <= 768
+  }
+  return false
   // #endif
   
   // #ifdef MP-WEIXIN
   return true // 小程序端始终使用移动布局
+  // #endif
+  
+  // #ifndef H5 || MP-WEIXIN
+  return true // 其他端默认移动布局
   // #endif
 })
 
@@ -49,11 +56,11 @@ const closeMembershipModal = () => {
 
 // 页面生命周期
 onLoad(() => {
-  console.log('首页加载完成')
+  console.log('首页加载完成 - 热区导航已集成')
 })
 
 onShow(() => {
-  console.log('首页显示')
+  console.log('首页显示 - 检查响应式布局:', { isMobile: isMobile.value })
 })
 </script>
 

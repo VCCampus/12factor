@@ -133,6 +133,30 @@ function parseValue(value) {
 }
 
 /**
+ * 难度级别映射表
+ */
+const difficultyMapping = {
+  // 旧12原则 → 新8原则 
+  '基础': '核心概念',
+  '进阶': '深度理解',
+  '应用': '实践应用', 
+  '反思': '反思警示',
+  
+  // 如果已使用新标准，直接保持
+  '核心概念': '核心概念',
+  '深度理解': '深度理解',
+  '实践应用': '实践应用',
+  '反思警示': '反思警示'
+};
+
+/**
+ * 映射难度级别
+ */
+function mapDifficulty(oldDifficulty) {
+  return difficultyMapping[oldDifficulty] || '核心概念';
+}
+
+/**
  * 转换闪卡数据
  */
 function convertFlashcards(flashcardData) {
@@ -140,22 +164,29 @@ function convertFlashcards(flashcardData) {
     throw new Error('闪卡数据中未找到cards数组');
   }
 
-  // 按原则分组
+  // 按原则分组，同时映射难度级别
   const principleGroups = {};
   flashcardData.cards.forEach(card => {
     const principle = card.principle || '未知原则';
     if (!principleGroups[principle]) {
       principleGroups[principle] = [];
     }
-    principleGroups[principle].push(card);
+    
+    // 应用难度映射
+    const mappedCard = {
+      ...card,
+      difficulty: mapDifficulty(card.difficulty)
+    };
+    
+    principleGroups[principle].push(mappedCard);
   });
 
-  // 生成阶段映射（基于difficulty字段）
+  // 生成阶段映射（基于新的difficulty字段）
   const stageMapping = {
-    '基础': { id: 'foundation', name: '基础认知', icon: '🧠', order: 1 },
-    '进阶': { id: 'advanced', name: '进阶应用', icon: '🚀', order: 2 },
-    '应用': { id: 'application', name: '实践应用', icon: '⚡', order: 3 },
-    '反思': { id: 'reflection', name: '深度反思', icon: '💡', order: 4 }
+    '核心概念': { id: 'foundation', name: '核心概念', icon: '🧠', order: 1 },
+    '深度理解': { id: 'advanced', name: '深度理解', icon: '🚀', order: 2 },
+    '实践应用': { id: 'application', name: '实践应用', icon: '⚡', order: 3 },
+    '反思警示': { id: 'reflection', name: '反思警示', icon: '💡', order: 4 }
   };
 
   // 生成原则索引
@@ -163,10 +194,10 @@ function convertFlashcards(flashcardData) {
   const principlesWithStages = principles.map((principle, index) => {
     const cards = principleGroups[principle] || [];
     
-    // 统计各难度的卡片数量
+    // 统计各难度的卡片数量（使用映射后的难度）
     const difficultyStats = {};
     cards.forEach(card => {
-      const diff = card.difficulty || '基础';
+      const diff = card.difficulty || '核心概念';
       difficultyStats[diff] = (difficultyStats[diff] || 0) + 1;
     });
 
@@ -209,29 +240,39 @@ function convertQuiz(quizData) {
   const questionsByPrinciple = {};
   const questionsByDifficulty = {};
   const questionsByType = {};
+  const mappedQuestions = [];
 
   quizData.questions.forEach(question => {
     const principle = question.principle || '综合应用';
-    const difficulty = question.difficulty || '基础';
+    const mappedDifficulty = mapDifficulty(question.difficulty || '基础');
     const type = question.type || 'single';
+
+    // 应用难度映射
+    const mappedQuestion = {
+      ...question,
+      difficulty: mappedDifficulty
+    };
+
+    // 添加到映射后的问题数组
+    mappedQuestions.push(mappedQuestion);
 
     // 按原则分组
     if (!questionsByPrinciple[principle]) {
       questionsByPrinciple[principle] = [];
     }
-    questionsByPrinciple[principle].push(question);
+    questionsByPrinciple[principle].push(mappedQuestion);
 
-    // 按难度分组
-    if (!questionsByDifficulty[difficulty]) {
-      questionsByDifficulty[difficulty] = [];
+    // 按难度分组（使用映射后的难度）
+    if (!questionsByDifficulty[mappedDifficulty]) {
+      questionsByDifficulty[mappedDifficulty] = [];
     }
-    questionsByDifficulty[difficulty].push(question);
+    questionsByDifficulty[mappedDifficulty].push(mappedQuestion);
 
     // 按类型分组
     if (!questionsByType[type]) {
       questionsByType[type] = [];
     }
-    questionsByType[type].push(question);
+    questionsByType[type].push(mappedQuestion);
   });
 
   // 生成测试模式配置
@@ -261,7 +302,7 @@ function convertQuiz(quizData) {
       time_limit: 45,
       question_count: 20,
       shuffle: true,
-      difficulty_filter: ['进阶', '应用'],
+      difficulty_filter: ['深度理解', '实践应用'],
       bonus_system: true
     },
     {
@@ -286,7 +327,7 @@ function convertQuiz(quizData) {
       generated_at: new Date().toISOString()
     },
     test_modes: testModes,
-    questions: quizData.questions,
+    questions: mappedQuestions,
     questions_by_principle: questionsByPrinciple,
     questions_by_difficulty: questionsByDifficulty,
     questions_by_type: questionsByType,

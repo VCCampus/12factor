@@ -1,19 +1,35 @@
 <template>
   <div class="home-page">
-    <!-- Hero Section -->
+    <!-- 桌面端：热区图片导航 -->
+    <div v-if="!isMobile" class="desktop-hero">
+      <HeroImageMap @open-membership="openMembershipModal" />
+    </div>
+    
+    <!-- 移动端：卡片布局导航 -->
+    <div v-else class="mobile-hero">
+      <MobileNavigationCards @open-membership="openMembershipModal" />
+    </div>
+    
+    <!-- 会员服务模态弹窗 -->
+    <MembershipModal 
+      :is-open="membershipModalOpen"
+      @close="closeMembershipModal"
+    />
+    
+    <!-- Hero Section - 迁移状态展示 -->
     <div class="neo-card neo-card--primary">
       <div class="text-center">
-        <h1 class="text-4xl font-bold mb-4">CSS数创班8期</h1>
-        <p class="text-xl mb-6">uni-app 迁移演示版本</p>
+        <h2 class="text-3xl font-bold mb-4">🎉 Issue #25 完成！</h2>
+        <p class="text-xl mb-6">digital_venture_idx.png 热区导航已集成</p>
         <div class="flex flex-col gap-4 items-center">
           <div class="status-indicator status-indicator--success">
-            ✅ uni-app 架构迁移完成
+            ✅ HeroImageMap 热区导航组件
           </div>
           <div class="status-indicator status-indicator--success">
-            🎨 Neobrutalism 设计系统
+            📱 MobileNavigationCards 移动端适配
           </div>
           <div class="status-indicator status-indicator--success">
-            📱 跨平台兼容架构
+            🎯 响应式设计 + 降级处理
           </div>
         </div>
       </div>
@@ -175,20 +191,72 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue'
+import { ref, computed, onMounted } from 'vue'
+import HeroImageMap from '@/components/home/HeroImageMap.vue'
+import MobileNavigationCards from '@/components/home/MobileNavigationCards.vue'
+import MembershipModal from '@/components/home/MembershipModal.vue'
+
+// 响应式检测
+const isMobile = computed(() => {
+  if (typeof window !== 'undefined') {
+    return window.innerWidth <= 768
+  }
+  return false
+})
+
+// 模态弹窗状态
+const membershipModalOpen = ref(false)
+
+// 事件处理
+const openMembershipModal = () => {
+  membershipModalOpen.value = true
+}
+
+const closeMembershipModal = () => {
+  membershipModalOpen.value = false
+}
 
 onMounted(() => {
-  console.log('🏠 uni-app H5 演示版本加载完成')
-  console.log('✨ 迁移状态: 架构重构完成')
-  console.log('🎯 下一步: 完整功能实现和小程序端构建')
+  console.log('🏠 Issue #25 热区导航完成！')
+  console.log('✨ HeroImageMap + MobileNavigationCards 已集成')
+  console.log('🎯 响应式布局:', { isMobile: isMobile.value })
+  console.log('📱 支持桌面端热区 + 移动端卡片导航')
 })
 </script>
 
 <style scoped>
 .home-page {
+  min-height: 100vh;
+}
+
+/* 桌面端hero区域 */
+.desktop-hero {
+  background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* 移动端hero区域 */
+.mobile-hero {
+  background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
+  min-height: 100vh;
+  padding: 0;
+}
+
+/* 下方内容区域 */
+.home-page > .neo-card {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
+  margin: 2rem auto;
+  margin-top: 0;
+}
+
+.home-page {
+  max-width: none;
+  margin: 0;
+  padding: 0;
 }
 
 .modules-section,

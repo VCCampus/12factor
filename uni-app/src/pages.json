@@ -1,0 +1,106 @@
+{
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "CSS数创班8期",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/growth/principles/index",
+      "style": {
+        "navigationBarTitleText": "个人成长12原则",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/growth/flashcards/index",
+      "style": {
+        "navigationBarTitleText": "闪卡练习",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/growth/quiz/index",
+      "style": {
+        "navigationBarTitleText": "知识测试",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/interview/index",
+      "style": {
+        "navigationBarTitleText": "模拟面试",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/interview/quiz/index",
+      "style": {
+        "navigationBarTitleText": "面试答题",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/thermometer/index",
+      "style": {
+        "navigationBarTitleText": "市场情绪",
+        "enablePullDownRefresh": false
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "CSS数创班8期",
+    "navigationBarBackgroundColor": "#FFBE0B",
+    "backgroundColor": "#FFFFFF",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": false,
+    "onReachBottomDistance": 50,
+    "navigationStyle": "default"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#FF006E",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/icons/home.png",
+        "selectedIconPath": "static/icons/home-active.png"
+      },
+      {
+        "pagePath": "pages/growth/principles/index",
+        "text": "成长",
+        "iconPath": "static/icons/growth.png",
+        "selectedIconPath": "static/icons/growth-active.png"
+      },
+      {
+        "pagePath": "pages/interview/index",
+        "text": "面试",
+        "iconPath": "static/icons/interview.png",
+        "selectedIconPath": "static/icons/interview-active.png"
+      },
+      {
+        "pagePath": "pages/thermometer/index",
+        "text": "情绪",
+        "iconPath": "static/icons/thermometer.png",
+        "selectedIconPath": "static/icons/thermometer-active.png"
+      }
+    ]
+  },
+  "condition": {
+    "current": 0,
+    "list": []
+  },
+  "uniIdRouter": {},
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^u-(.*)": "uview-plus/components/u-$1/u-$1.vue"
+    }
+  }
+}

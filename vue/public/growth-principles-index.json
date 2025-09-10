@@ -7,93 +7,65 @@
       "flashcards",
       "quiz"
     ],
-    "total_principles": 12,
-    "generated_at": "2025-09-06T07:43:22.552Z"
+    "total_principles": 8,
+    "generated_at": "2025-09-09T03:18:33.385Z"
   },
   "principles_overview": [
     {
       "id": "principle_1",
-      "name": "元认知",
+      "name": "做自己",
       "order": 1,
-      "flashcard_count": 8,
-      "quiz_count": 8
+      "flashcard_count": 0,
+      "quiz_count": 0
     },
     {
       "id": "principle_2",
-      "name": "责任",
+      "name": "注意力管理",
       "order": 2,
       "flashcard_count": 0,
       "quiz_count": 0
     },
     {
       "id": "principle_3",
-      "name": "注意力",
+      "name": "100%责任",
       "order": 3,
-      "flashcard_count": 8,
-      "quiz_count": 8
+      "flashcard_count": 12,
+      "quiz_count": 10
     },
     {
       "id": "principle_4",
-      "name": "复利",
+      "name": "元认知",
       "order": 4,
-      "flashcard_count": 8,
-      "quiz_count": 8
+      "flashcard_count": 12,
+      "quiz_count": 10
     },
     {
       "id": "principle_5",
-      "name": "理想生活",
+      "name": "创业哲学",
       "order": 5,
-      "flashcard_count": 8,
-      "quiz_count": 8
+      "flashcard_count": 12,
+      "quiz_count": 10
     },
     {
       "id": "principle_6",
-      "name": "商业进化",
+      "name": "商业模式进化",
       "order": 6,
-      "flashcard_count": 8,
-      "quiz_count": 8
+      "flashcard_count": 0,
+      "quiz_count": 0
     },
     {
       "id": "principle_7",
       "name": "建立受众",
       "order": 7,
-      "flashcard_count": 8,
-      "quiz_count": 8
+      "flashcard_count": 12,
+      "quiz_count": 10
     },
     {
       "id": "principle_8",
-      "name": "模仿学习",
+      "name": "长期主义",
       "order": 8,
-      "flashcard_count": 8,
-      "quiz_count": 9
-    },
-    {
-      "id": "principle_9",
-      "name": "人际连接",
-      "order": 9,
-      "flashcard_count": 8,
-      "quiz_count": 8
-    },
-    {
-      "id": "principle_10",
-      "name": "精力管理",
-      "order": 10,
-      "flashcard_count": 8,
-      "quiz_count": 8
-    },
-    {
-      "id": "principle_11",
-      "name": "杠杆思维",
-      "order": 11,
-      "flashcard_count": 8,
-      "quiz_count": 9
-    },
-    {
-      "id": "principle_12",
-      "name": "个人品牌",
-      "order": 12,
-      "flashcard_count": 8,
-      "quiz_count": 8
+      "flashcard_count": 4,
+      "quiz_count": 10
     }
   ],
   "navigation": [
